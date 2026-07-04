@@ -1,0 +1,12 @@
+name = "model-compass"
+type = "javascript"
+
+[env.production]
+routes = [
+  { pattern = "models.optiqo.dev", zone_name = "optiqo.dev" }
+]
+
+[pages]
+build_command = ""
+output_dir = "/"
+compatibility_date = "2024-01-01"
