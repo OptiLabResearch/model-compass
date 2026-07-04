@@ -10,6 +10,8 @@ Three pages:
 > Real README, screenshots, self-hosting instructions, and data-source attribution
 > land in a later phase. This is a stub.
 
+Live at [models.optiqo.dev](https://models.optiqo.dev).
+
 ## Run locally
 
 ```
