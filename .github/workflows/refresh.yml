@@ -1,0 +1,34 @@
+name: Weekly data refresh
+
+on:
+  schedule:
+    # Sundays at 19:00 UTC — matches the previous local cron cadence.
+    - cron: "0 19 * * 0"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Scrape Artificial Analysis
+        run: python3 scripts/scrape_aa_models.py
+
+      - name: Export dated history CSV
+        run: python3 scripts/export_history_csv.py
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/models.json data/history/
+          git diff --staged --quiet || git commit -m "data: weekly refresh $(date -u +%Y-%m-%d)"
+          git push
