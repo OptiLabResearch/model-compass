@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+.DS_Store
+*.swp
+*.swo
+*~
+.env
+.venv
+env/
+venv/

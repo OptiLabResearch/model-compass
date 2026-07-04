@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><title>All Models — Model Compass</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+<style>
+body{font-family:var(--sans);margin:0;padding:16px;font-size:14px}
+header{padding:0 0 12px;border-bottom:1px solid var(--border);margin-bottom:12px}
+h1{font-family:var(--serif);font-size:22px;margin:0 0 4px;font-weight:600;letter-spacing:-0.2px}
+.meta{color:var(--text-muted);font-size:12px;margin-bottom:12px}
+.top-filters{display:flex;gap:12px;flex-wrap:wrap;align-items:center;font-size:12px}
+.top-filters input,.top-filters select{padding:5px 8px;font-size:12px;border:1px solid var(--border);border-radius:4px;background:var(--surface);color:var(--text);font-family:inherit}
+.top-filters input[type=text]{width:220px}
+.top-filters input[type=date]{width:140px}
+.top-filters label{color:var(--text-secondary)}
+.layout{display:flex;gap:16px;align-items:flex-start}
+aside.filters{flex:0 0 280px;position:sticky;top:calc(var(--nav-h) + 16px);background:var(--surface);border:1px solid var(--border);border-radius:6px;padding:12px;max-height:calc(100vh - var(--nav-h) - 32px);overflow-y:auto}
+aside.filters h2{font-size:13px;margin:0 0 10px;text-transform:uppercase;letter-spacing:0.5px;color:var(--text-secondary)}
+.filter-group{margin-bottom:14px;padding-bottom:10px;border-bottom:1px solid var(--border)}
+.filter-group:last-of-type{border-bottom:0;margin-bottom:10px}
+.filter-group h3{font-size:10px;text-transform:uppercase;color:var(--text-muted);margin:0 0 6px;letter-spacing:0.5px;font-weight:600}
+.filter-row{display:flex;align-items:center;gap:4px;margin-bottom:4px}
+.filter-row label{flex:0 0 80px;font-size:12px;color:var(--text)}
+.filter-row input{width:62px;padding:3px 5px;font-size:12px;border:1px solid var(--border);border-radius:3px;font-variant-numeric:tabular-nums;background:var(--surface);color:var(--text)}
+.filter-row input:focus{outline:0;border-color:var(--accent);box-shadow:0 0 0 2px var(--border-focus)}
+.filter-row .arrow{color:var(--text-muted);font-size:10px}
+#reset{width:100%;padding:7px;font-size:12px;background:var(--surface-2);border:1px solid var(--border);border-radius:4px;cursor:pointer;color:var(--text)}
+#reset:hover{background:var(--accent-bg)}
+main{flex:1;min-width:0;overflow-x:auto}
+table{border-collapse:collapse;width:100%;background:var(--surface);font-size:12px}
+th,td{border:1px solid var(--border);padding:6px 8px;text-align:right;white-space:nowrap}
+th{background:var(--surface-2);font-weight:600;position:sticky;top:0;cursor:pointer;user-select:none}
+th.l,td.l{text-align:left}
+tr:hover{background:var(--accent-bg)}
+.free td{background:var(--green-bg)}
+.free:hover td{background:var(--green-bg)!important;filter:brightness(0.96)}
+.num{font-variant-numeric:tabular-nums}
+@media (max-width:800px){
+  .layout{flex-direction:column}
+  aside.filters{position:static;flex:1 1 auto;width:100%;max-height:none}
+}
+@media (max-width:480px){
+  body{padding:10px}
+  .top-filters input[type=text]{width:100%}
+}
+</style></head>
+<body>
+<div id="site-nav"></div>
+<script src="assets/nav.js"></script>
+<header>
+  <h1>All Models — last 6 months, full benchmarks</h1>
+  <div id="staleness-banner" class="staleness-banner" hidden style="margin-bottom:12px">⚠️ <span id="staleness-text"></span></div>
+  <div class="meta" id="meta-line" data-scraped-at="">Loading…</div>
+  <div class="top-filters">
+    <input id="q" type="text" placeholder="Search name, creator, slug…">
+    <label>From <input id="from" type="date"></label>
+    <label>To <input id="to" type="date"></label>
+    <label><input id="free" type="checkbox"> Available via OpenRouter only</label>
+    <span id="count" style="color:var(--text-muted)"></span>
+  </div>
+</header>
+<div class="layout">
+  <aside class="filters">
+    <h2>Filters</h2>
+    <div class="filter-group"><h3>Cost ($/M tokens)</h3>
+      <div class="filter-row"><label>Input</label><input type="number" class="num-filter" data-stat="in_$/M" data-bound="min" placeholder="min" step="any"><span class="arrow">→</span><input type="number" class="num-filter" data-stat="in_$/M" data-bound="max" placeholder="max" step="any"></div>
+      <div class="filter-row"><label>Output</label><input type="number" class="num-filter" data-stat="out_$/M" data-bound="min" placeholder="min" step="any"><span class="arrow">→</span><input type="number" class="num-filter" data-stat="out_$/M" data-bound="max" placeholder="max" step="any"></div>
+      <div class="filter-row"><label>Blended</label><input type="number" class="num-filter" data-stat="blend_3to1_$/M" data-bound="min" placeholder="min" step="any"><span class="arrow">→</span><input type="number" class="num-filter" data-stat="blend_3to1_$/M" data-bound="max" placeholder="max" step="any"></div>
+    </div>
+    <div class="filter-group"><h3>Composite (0-100)</h3>
+      <div class="filter-row"><label>Intelligence</label><input type="number" class="num-filter" data-stat="intelligence" data-bound="min" placeholder="min" step="any"><span class="arrow">→</span><input type="number" class="num-filter" data-stat="intelligence" data-bound="max" placeholder="max" step="any"></div>
+      <div class="filter-row"><label>Coding</label><input type="number" class="num-filter" data-stat="coding" data-bound="min" placeholder="min" step="any"><span class="arrow">→</span><input type="number" class="num-filter" data-stat="coding" data-bound="max" placeholder="max" step="any"></div>
+      <div class="filter-row"><label>Math</label><input type="number" class="num-filter" data-stat="math" data-bound="min" placeholder="min" step="any"><span class="arrow">→</span><input type="number" class="num-filter" data-stat="math" data-bound="max" placeholder="max" step="any"></div>
+    </div>
+    <div class="filter-group"><h3>Reasoning / Science</h3>
+      <div class="filter-row"><label>GPQA %</label><input type="number" class="num-filter" data-stat="gpqa_%" data-bound="min" placeholder="min" step="any"><span class="arrow">→</span><input type="number" class="num-filter" data-stat="gpqa_%" data-bound="max" placeholder="max" step="any"></div>
+      <div class="filter-row"><label>HLE %</label><input type="number" class="num-filter" data-stat="hle_%" data-bound="min" placeholder="min" step="any"><span class="arrow">→</span><input type="number" class="num-filter" data-stat="hle_%" data-bound="max" placeholder="max" step="any"></div>
+      <div class="filter-row"><label>MMLU-Pro %</label><input type="number" class="num-filter" data-stat="mmlu_pro_%" data-bound="min" placeholder="min" step="any"><span class="arrow">→</span><input type="number" class="num-filter" data-stat="mmlu_pro_%" data-bound="max" placeholder="max" step="any"></div>
+    </div>
+    <div class="filter-group"><h3>Agentic / Long-context</h3>
+      <div class="filter-row"><label>IFBench %</label><input type="number" class="num-filter" data-stat="ifbench_%" data-bound="min" placeholder="min" step="any"><span class="arrow">→</span><input type="number" class="num-filter" data-stat="ifbench_%" data-bound="max" placeholder="max" step="any"></div>
+      <div class="filter-row"><label>LCR %</label><input type="number" class="num-filter" data-stat="lcr_%" data-bound="min" placeholder="min" step="any"><span class="arrow">→</span><input type="number" class="num-filter" data-stat="lcr_%" data-bound="max" placeholder="max" step="any"></div>
+      <div class="filter-row"><label>τ²-Bench %</label><input type="number" class="num-filter" data-stat="tau2_%" data-bound="min" placeholder="min" step="any"><span class="arrow">→</span><input type="number" class="num-filter" data-stat="tau2_%" data-bound="max" placeholder="max" step="any"></div>
+      <div class="filter-row"><label>τ³-Bench Banking % (v4.1)</label><input type="number" class="num-filter" data-stat="tau_banking_%" data-bound="min" placeholder="min" step="any"><span class="arrow">→</span><input type="number" class="num-filter" data-stat="tau_banking_%" data-bound="max" placeholder="max" step="any"></div>
+    </div>
+    <div class="filter-group"><h3>Coding benchmarks</h3>
+      <div class="filter-row"><label>LiveCodeBench %</label><input type="number" class="num-filter" data-stat="livecodebench_%" data-bound="min" placeholder="min" step="any"><span class="arrow">→</span><input type="number" class="num-filter" data-stat="livecodebench_%" data-bound="max" placeholder="max" step="any"></div>
+      <div class="filter-row"><label>Terminal-Bench Hard %</label><input type="number" class="num-filter" data-stat="terminalbench_hard_%" data-bound="min" placeholder="min" step="any"><span class="arrow">→</span><input type="number" class="num-filter" data-stat="terminalbench_hard_%" data-bound="max" placeholder="max" step="any"></div>
+      <div class="filter-row"><label>Terminal-Bench 2.1 % (v4.1)</label><input type="number" class="num-filter" data-stat="terminalbench_v2_1_%" data-bound="min" placeholder="min" step="any"><span class="arrow">→</span><input type="number" class="num-filter" data-stat="terminalbench_v2_1_%" data-bound="max" placeholder="max" step="any"></div>
+      <div class="filter-row"><label>SciCode %</label><input type="number" class="num-filter" data-stat="scicode_%" data-bound="min" placeholder="min" step="any"><span class="arrow">→</span><input type="number" class="num-filter" data-stat="scicode_%" data-bound="max" placeholder="max" step="any"></div>
+    </div>
+    <div class="filter-group"><h3>Math benchmarks</h3>
+      <div class="filter-row"><label>MATH-500 %</label><input type="number" class="num-filter" data-stat="math_500_%" data-bound="min" placeholder="min" step="any"><span class="arrow">→</span><input type="number" class="num-filter" data-stat="math_500_%" data-bound="max" placeholder="max" step="any"></div>
+      <div class="filter-row"><label>AIME %</label><input type="number" class="num-filter" data-stat="aime_%" data-bound="min" placeholder="min" step="any"><span class="arrow">→</span><input type="number" class="num-filter" data-stat="aime_%" data-bound="max" placeholder="max" step="any"></div>
+      <div class="filter-row"><label>AIME-25 %</label><input type="number" class="num-filter" data-stat="aime_25_%" data-bound="min" placeholder="min" step="any"><span class="arrow">→</span><input type="number" class="num-filter" data-stat="aime_25_%" data-bound="max" placeholder="max" step="any"></div>
+    </div>
+    <div class="filter-group"><h3>Performance</h3>
+      <div class="filter-row"><label>Speed t/s</label><input type="number" class="num-filter" data-stat="speed_tps" data-bound="min" placeholder="min" step="any"><span class="arrow">→</span><input type="number" class="num-filter" data-stat="speed_tps" data-bound="max" placeholder="max" step="any"></div>
+      <div class="filter-row"><label>TTFT s</label><input type="number" class="num-filter" data-stat="ttft_s" data-bound="min" placeholder="min" step="any"><span class="arrow">→</span><input type="number" class="num-filter" data-stat="ttft_s" data-bound="max" placeholder="max" step="any"></div>
+      <div class="filter-row"><label>TTFA s</label><input type="number" class="num-filter" data-stat="ttfa_s" data-bound="min" placeholder="min" step="any"><span class="arrow">→</span><input type="number" class="num-filter" data-stat="ttfa_s" data-bound="max" placeholder="max" step="any"></div>
+    </div>
+    <button id="reset">Reset range filters</button>
+  </aside>
+  <main>
+<table id="t"><thead><tr><th class="l" data-i="0" data-t="s">name</th><th class="l" data-i="1" data-t="s">creator</th><th data-i="2" data-t="d">release_date</th><th data-i="3" data-t="n">in_$/M</th><th data-i="4" data-t="n">out_$/M</th><th data-i="5" data-t="n">blend_3to1_$/M</th><th data-i="6" data-t="n">intelligence</th><th data-i="7" data-t="n">coding</th><th data-i="8" data-t="n">math</th><th data-i="9" data-t="n">gpqa_%</th><th data-i="10" data-t="n">hle_%</th><th data-i="11" data-t="n">mmlu_pro_%</th><th data-i="12" data-t="n">ifbench_%</th><th data-i="13" data-t="n">lcr_%</th><th data-i="14" data-t="n">tau2_%</th><th data-i="15" data-t="n">tau_banking_%</th><th data-i="16" data-t="n">livecodebench_%</th><th data-i="17" data-t="n">terminalbench_hard_%</th><th data-i="18" data-t="n">terminalbench_v2_1_%</th><th data-i="19" data-t="n">scicode_%</th><th data-i="20" data-t="n">math_500_%</th><th data-i="21" data-t="n">aime_%</th><th data-i="22" data-t="n">aime_25_%</th><th data-i="23" data-t="n">speed_tps</th><th data-i="24" data-t="n">ttft_s</th><th data-i="25" data-t="n">ttfa_s</th><th class="l" data-i="26" data-t="s">slug</th></tr></thead><tbody></tbody></table>
+</main>
+</div>
+<script>
+const tbody=document.querySelector('#t tbody');
+const q=document.getElementById('q'), fromI=document.getElementById('from'),
+      toI=document.getElementById('to'), freeI=document.getElementById('free'),
+      cnt=document.getElementById('count'),
+      numFilters=document.querySelectorAll('.num-filter');
+let sortI=null, sortAsc=true;
+
+function getRanges(){
+  const r={};
+  numFilters.forEach(inp=>{
+    if(inp.value==='') return;
+    const s=inp.dataset.stat, b=inp.dataset.bound;
+    (r[s]=r[s]||{})[b]=parseFloat(inp.value);
+  });
+  return r;
+}
+
+function applyFilter(){
+  const Q=q.value.toLowerCase(), from=fromI.value, to=toI.value, free=freeI.checked;
+  const ranges=getRanges();
+  let n=0;
+  tbody.querySelectorAll('tr').forEach(r=>{
+    const txt=r.innerText.toLowerCase();
+    const d=r.dataset.release||'';
+    let show=txt.includes(Q) && (!from||d>=from) && (!to||d<=to);
+    if(free && !r.classList.contains('free')) show=false;
+    if(show){
+      for(const[stat,bounds]of Object.entries(ranges)){
+        const cell=r.querySelector(`td[data-stat="${stat}"]`);
+        if(!cell){show=false;break;}
+        const v=parseFloat(cell.dataset.val);
+        if(isNaN(v)){show=false;break;}
+        if(bounds.min!==undefined && v<bounds.min){show=false;break;}
+        if(bounds.max!==undefined && v>bounds.max){show=false;break;}
+      }
+    }
+    r.style.display=show?'':'none';
+    if(show) n++;
+  });
+  cnt.textContent=`${n} of ${tbody.rows.length} rows`;
+}
+
+[q,fromI,toI,freeI].forEach(el=>el.addEventListener('input',applyFilter));
+numFilters.forEach(el=>el.addEventListener('input',applyFilter));
+
+document.getElementById('reset').addEventListener('click',()=>{
+  numFilters.forEach(i=>i.value='');
+  applyFilter();
+});
+
+document.querySelectorAll('th').forEach(th=>{
+  th.addEventListener('click',()=>{
+    const i=+th.dataset.i, t=th.dataset.t;
+    if(sortI===i) sortAsc=!sortAsc; else {sortI=i;sortAsc=true;}
+    const rows=Array.from(tbody.rows);
+    rows.sort((a,b)=>{
+      let av=a.cells[i].dataset.val||'', bv=b.cells[i].dataset.val||'';
+      if(t==='n') {av=parseFloat(av); bv=parseFloat(bv);
+        return (isNaN(av)?-Infinity:av)-(isNaN(bv)?-Infinity:bv);}
+      if(t==='d') return av< bv ? -1 : av> bv ? 1 : 0;
+      return av.localeCompare(bv);
+    });
+    if(!sortAsc) rows.reverse();
+    rows.forEach(r=>tbody.appendChild(r));
+  });
+});
+function fmt(v){ return (v===null||v===undefined) ? '' : v; }
+
+function buildRow(m){
+  const b=m.benchmarks||{}, c=m.composite||{}, p=m.pricing_per_m_tokens||{}, perf=m.performance||{};
+  const aaUrl=m.aa_url || (`https://artificialanalysis.ai/models/${m.slug}`);
+  const rowClass = m.openrouter_slug ? ' class="free"' : '';
+  function cell(stat, val){
+    const v=fmt(val);
+    return `<td class="num" data-stat="${stat}" data-val="${v}">${v===''?'—':v}</td>`;
+  }
+  return `<tr${rowClass} data-release="${m.released||''}" data-slug="${m.slug||''}">`+
+    `<td class="l" data-val="${(m.name||'').toLowerCase()}">${m.name||''}</td>`+
+    `<td class="l" data-val="${(m.creator||'').toLowerCase()}">${m.creator||''}</td>`+
+    `<td class="num" data-t="d" data-val="${m.released||''}">${m.released||''}</td>`+
+    cell('in_$/M', p.input)+
+    cell('out_$/M', p.output)+
+    cell('blend_3to1_$/M', p.blended_7_2_1)+
+    cell('intelligence', c.intelligence_index_v4_1)+
+    cell('coding', c.coding_index)+
+    cell('math', c.math_index)+
+    cell('gpqa_%', b.gpqa_diamond)+
+    cell('hle_%', b.hle)+
+    cell('mmlu_pro_%', b.mmlu_pro)+
+    cell('ifbench_%', b.ifbench)+
+    cell('lcr_%', b.lcr)+
+    cell('tau2_%', b.tau2_bench)+
+    cell('tau_banking_%', b.tau3_banking)+
+    cell('livecodebench_%', b.livecodebench)+
+    cell('terminalbench_hard_%', b.terminalbench_hard)+
+    cell('terminalbench_v2_1_%', b.terminalbench_v2_1)+
+    cell('scicode_%', b.scicode)+
+    cell('math_500_%', null)+
+    cell('aime_%', b.aime)+
+    cell('aime_25_%', b.aime25)+
+    cell('speed_tps', perf.output_speed_tps)+
+    cell('ttft_s', perf.ttft_seconds_total)+
+    cell('ttfa_s', perf.ttft_seconds_answer)+
+    `<td class="l" data-val="${m.slug||''}"><a href="${aaUrl}" target="_blank" style="color:var(--accent);text-decoration:none">${m.slug||''}</a></td>`+
+    `</tr>`;
+}
+
+async function loadModels(){
+  const metaEl=document.getElementById('meta-line');
+  try{
+    const res=await fetch('data/models.json');
+    const data=await res.json();
+    const models=(data.models||[]).slice().sort((a,b)=>
+      (b.composite.intelligence_index_v4_1||0)-(a.composite.intelligence_index_v4_1||0));
+    tbody.innerHTML=models.map(buildRow).join('\n');
+    if(models.length){
+      const dates=models.map(m=>m.released).filter(Boolean).sort();
+      fromI.value=dates[0]||'';
+      toI.value=dates[dates.length-1]||'';
+    }
+    metaEl.dataset.scrapedAt=data.scraped_at||'';
+    metaEl.textContent=`Last scrape: ${(data.scraped_at||'—').replace('T',' ').replace('Z','')} · `+
+      `released in the last ~6 months · sorted by intelligence desc · click headers to sort · `+
+      `${models.length} models · full benchmark set from artificialanalysis.ai (no API key required)`;
+  }catch(e){
+    metaEl.textContent=`⚠️ Could not load data/models.json: ${e.message}`;
+  }
+}
+
+loadModels().then(()=>{
+  applyFilter();
+  const scrapedAtEl=document.querySelector('.meta[data-scraped-at]');
+  if(scrapedAtEl && scrapedAtEl.dataset.scrapedAt) ModelCompassNav.checkStaleness(scrapedAtEl.dataset.scrapedAt);
+});
+</script>
+<div id="site-footer"></div>
+</body></html>

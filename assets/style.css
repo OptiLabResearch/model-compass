@@ -1,0 +1,85 @@
+/* Model Compass — shared design system.
+   Pages keep their own <style> block for page-specific components; this file
+   owns the theme (CSS variables), site nav/footer, and cross-page basics. */
+
+* { box-sizing: border-box; }
+
+:root {
+  --bg: #F5F4EE; --surface: #FAF9F5; --surface-2: #EFEDE4;
+  --border: rgba(25,25,25,0.10); --border-focus: rgba(217,119,87,0.45);
+  --text: #191919; --text-secondary: #5c5a53; --text-muted: #8a8778;
+  --accent: #D97757; --accent-bg: rgba(217,119,87,0.10);
+  --green-bg: #e3ecdd; --green-dark: #4c6b41;
+  --red-bg: #f3ded8; --red-dark: #a8492f;
+  --yellow-bg: #f6ead2; --yellow-dark: #b5792c;
+  --heat-1: #e3ecdd; --heat-2: #f6ead2; --heat-3: #f3ded8;
+  --serif: 'Source Serif 4', Georgia, serif;
+  --sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, monospace;
+  --nav-h: 48px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #1b1a17; --surface: #221f1a; --surface-2: #2a2621;
+    --border: rgba(255,255,255,0.12); --border-focus: rgba(224,138,103,0.55);
+    --text: #ECEAE2; --text-secondary: #b8b5a9; --text-muted: #8d8a7e;
+    --accent: #E08A67; --accent-bg: rgba(224,138,103,0.16);
+    --green-bg: #24361f; --green-dark: #8fbf7d;
+    --red-bg: #3a2119; --red-dark: #e08874;
+    --yellow-bg: #3a2f16; --yellow-dark: #e0b45c;
+    --heat-1: #24361f; --heat-2: #3a2f16; --heat-3: #3a2119;
+  }
+}
+
+html { scroll-padding-top: calc(var(--nav-h) + 12px); }
+body { background: var(--bg); color: var(--text); }
+code, .num { font-family: var(--mono); }
+a { color: var(--accent); }
+
+/* ---- Site nav (injected by assets/nav.js) ---- */
+#site-nav {
+  position: sticky; top: 0; z-index: 100;
+  display: flex; align-items: center; gap: 4px;
+  height: var(--nav-h); padding: 0 16px;
+  background: var(--surface); border-bottom: 1px solid var(--border);
+  font-family: var(--sans);
+}
+#site-nav .brand {
+  font-family: var(--serif); font-weight: 600; font-size: 16px;
+  margin-right: 14px; color: var(--text); text-decoration: none; white-space: nowrap;
+}
+#site-nav .tabs { display: flex; gap: 2px; flex-wrap: wrap; }
+#site-nav a.tab {
+  font-size: 13px; font-weight: 500; padding: 6px 12px; border-radius: 6px;
+  color: var(--text-secondary); text-decoration: none; white-space: nowrap;
+}
+#site-nav a.tab:hover { background: var(--surface-2); color: var(--text); }
+#site-nav a.tab.active { background: var(--accent-bg); color: var(--accent); }
+#site-nav .gh-link { margin-left: auto; font-size: 12px; color: var(--text-muted); text-decoration: none; white-space: nowrap; }
+#site-nav .gh-link:hover { color: var(--accent); }
+
+/* ---- Shared staleness banner (logic lives in nav.js, markup stays per-page) ---- */
+.staleness-banner {
+  background: var(--yellow-bg); color: var(--yellow-dark);
+  border: 1px solid var(--yellow-dark); border-radius: 6px;
+  padding: 8px 14px; font-size: 12px; font-weight: 600;
+}
+
+/* ---- Site footer (injected by assets/nav.js) ---- */
+#site-footer {
+  max-width: 1200px; margin: 28px auto 0; padding: 14px 16px 24px;
+  border-top: 1px solid var(--border); color: var(--text-muted);
+  font-family: var(--sans); font-size: 12px;
+  display: flex; flex-wrap: wrap; gap: 6px 16px; justify-content: space-between;
+}
+#site-footer a { color: var(--text-muted); text-decoration: underline; }
+#site-footer a:hover { color: var(--accent); }
+
+/* ---- Small-screen nav tightening (page-specific reflow lives in each page) ---- */
+@media (max-width: 480px) {
+  #site-nav { padding: 0 10px; }
+  #site-nav .brand { display: none; }
+  #site-nav a.tab { padding: 6px 8px; font-size: 12px; }
+  #site-footer { padding: 12px 10px 20px; }
+}

@@ -1,0 +1,1221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Model Picker — describe your task, get a model recommendation</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+<style>
+  body {
+    font-family: var(--sans);
+    margin: 0; padding: 24px; color: var(--text); background: var(--bg);
+    font-size: 14px; line-height: 1.5;
+  }
+  .container { max-width: 900px; margin: 0 auto; }
+  header { padding: 0 0 16px; border-bottom: 1px solid var(--border); margin-bottom: 20px; }
+  h1 { font-family: var(--serif); font-size: 26px; margin: 0 0 4px; font-weight: 600; letter-spacing: -0.2px; }
+  .subtitle { color: var(--text-muted); font-size: 13px; }
+  code, .cost-badge, .stat .value, .badge, .breakdown-row .bval { font-family: var(--mono); }
+
+  .input-panel { background: var(--surface); border: 1px solid var(--border);
+    border-radius: 12px; padding: 20px; margin-bottom: 16px; }
+  .input-panel label { display: block; font-size: 12px; font-weight: 500;
+    color: var(--text-secondary); margin-bottom: 6px; }
+  .input-panel textarea { width: 100%; padding: 12px; font-size: 15px; line-height: 1.5;
+    border: 1px solid var(--border); border-radius: 6px; background: var(--surface);
+    font-family: inherit; resize: vertical; min-height: 100px; }
+  .input-panel textarea:focus { outline: 0; border-color: var(--accent);
+    box-shadow: 0 0 0 2px var(--border-focus); }
+  .input-panel .hint { font-size: 12px; color: var(--text-muted); margin-top: 6px; }
+  .button { display: inline-block; padding: 10px 20px; font-size: 14px; font-weight: 600;
+    background: var(--accent); color: #fff; border: none; border-radius: 6px;
+    cursor: pointer; transition: opacity .15s; margin-top: 12px; }
+  .button:hover { opacity: 0.88; }
+  .button.secondary { background: var(--surface-2); color: var(--text-secondary); }
+  .button-row { display: flex; gap: 8px; align-items: center; }
+  .examples { margin-top: 12px; }
+  .examples-title { font-size: 11px; color: var(--text-muted); text-transform: uppercase;
+    letter-spacing: 0.5px; margin-bottom: 6px; }
+  .example-chip { display: inline-block; padding: 5px 10px; font-size: 12px;
+    border: 1px solid var(--border); border-radius: 14px; background: var(--surface-2);
+    color: var(--text-secondary); cursor: pointer; margin: 2px; user-select: none; }
+  .example-chip:hover { border-color: var(--accent); color: var(--accent); }
+
+  .results { background: var(--surface); border: 1px solid var(--border);
+    border-radius: 8px; padding: 24px; min-height: 200px; }
+  .empty { color: var(--text-muted); text-align: center; padding: 60px 20px; }
+
+  .top-pick { border: 1px solid var(--border); border-left: 3px solid var(--accent);
+    border-radius: 10px; padding: 22px; background: var(--surface); margin-bottom: 14px; }
+  .top-pick-label { font-size: 11px; font-weight: 700; color: var(--accent);
+    text-transform: uppercase; letter-spacing: 0.8px; margin-bottom: 6px; }
+  .top-pick-name { font-family: var(--serif); font-size: 26px; font-weight: 600; margin-bottom: 4px; }
+  .top-pick-score { font-family: var(--mono); font-size: 12px; color: var(--text-secondary); margin-bottom: 12px; }
+  .top-pick-rationale { font-size: 14px; line-height: 1.6; }
+  .top-pick-rationale strong { color: var(--text); }
+  .top-pick-rationale .why { color: var(--text-secondary); }
+  .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+    gap: 6px; margin: 10px 0 12px 0; }
+  .stat { background: var(--surface); padding: 6px 8px; border-radius: 4px; }
+  .stat .label { color: var(--text-muted); font-size: 10px; text-transform: uppercase; }
+  .stat .value { font-weight: 600; font-size: 14px; }
+  .badges { display: flex; gap: 4px; margin-bottom: 8px; }
+  .badge { font-size: 10px; font-weight: 600; padding: 2px 8px; border-radius: 10px; }
+  .badge.cron { background: var(--green-bg); color: var(--green-dark); }
+  .badge.budget { background: var(--yellow-bg); color: var(--yellow-dark); }
+  .badge.privacy { background: #e0e7ff; color: #3730a3; }
+  .badge.frontier { background: #fce7f3; color: #9d174d; }
+
+  .runner-up { border: 1px solid var(--border); border-radius: 8px; padding: 14px;
+    background: var(--surface-2); margin-bottom: 14px; }
+  .runner-up-label { font-size: 10px; font-weight: 700; color: var(--text-muted);
+    text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; }
+  .runner-up-name { font-size: 15px; font-weight: 600; }
+  .runner-up-why { font-size: 13px; color: var(--text-secondary); margin-top: 4px; }
+
+  .multi-step { border: 1px dashed var(--accent); border-radius: 8px; padding: 14px;
+    background: var(--surface); margin-bottom: 14px; }
+  .multi-step-label { font-size: 11px; font-weight: 700; color: var(--accent);
+    text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 8px; }
+  .step { padding: 8px 0; border-bottom: 1px dashed var(--border); }
+  .step:last-child { border-bottom: 0; }
+  .step-num { font-size: 11px; color: var(--text-muted); text-transform: uppercase; }
+  .step-name { font-size: 14px; font-weight: 600; margin: 2px 0; }
+  .step-why { font-size: 12px; color: var(--text-secondary); }
+
+  .fusion-card { background: var(--yellow-bg); border-left: 3px solid var(--yellow-dark);
+    padding: 12px 16px; margin-bottom: 14px; font-size: 13px; border-radius: 4px; }
+  .fusion-card .title { font-weight: 700; margin-bottom: 4px; }
+
+  .candidates { margin-top: 16px; }
+  .candidates summary { cursor: pointer; color: var(--text-muted); font-size: 12px; }
+  .candidates table { width: 100%; border-collapse: collapse; font-size: 12px; margin-top: 8px; }
+  .candidates th, .candidates td { padding: 5px 8px; text-align: right;
+    border-bottom: 1px solid var(--border); }
+  .candidates th { background: var(--surface-2); font-weight: 600; }
+  .candidates th.l, .candidates td.l { text-align: left; }
+  .candidates td.h1 { background: var(--heat-1); }
+  .candidates td.h2 { background: var(--heat-2); }
+  .candidates td.h3 { background: var(--heat-3); }
+
+  .meta { color: var(--text-muted); font-size: 11px; margin-top: 12px; }
+  .meta a { color: var(--accent); }
+  .toast { position: fixed; bottom: 20px; right: 20px; background: var(--text);
+    color: #fff; padding: 10px 16px; border-radius: 6px; font-size: 13px;
+    opacity: 0; transition: opacity .2s; pointer-events: none; }
+  .toast.show { opacity: 1; }
+
+  .tag { display: inline-block; font-size: 10px; padding: 2px 6px; border-radius: 8px;
+    background: var(--surface-2); color: var(--text-secondary); margin-left: 4px; }
+  details { margin-top: 8px; }
+  details summary { cursor: pointer; font-size: 11px; color: var(--text-muted); }
+
+  .breakdown { margin-top: 10px; }
+  .breakdown-row { display: grid; grid-template-columns: 130px 1fr 70px;
+    align-items: center; gap: 8px; font-size: 11px; padding: 3px 0; }
+  .breakdown-row .bkey { color: var(--text-secondary); }
+  .breakdown-row .bbar-track { background: var(--surface-2); border-radius: 3px;
+    height: 8px; overflow: hidden; }
+  .breakdown-row .bbar-fill { background: var(--accent); height: 100%; border-radius: 3px; }
+  .breakdown-row .bval { text-align: right; color: var(--text-muted); font-variant-numeric: tabular-nums; }
+
+  .cost-estimator { display: flex; gap: 10px; align-items: center; margin-top: 10px;
+    flex-wrap: wrap; }
+  .cost-estimator label { font-size: 11px; color: var(--text-secondary); }
+  .cost-estimator input[type="number"] { width: 90px; padding: 4px 6px; font-size: 12px;
+    border: 1px solid var(--border); border-radius: 4px; }
+  .cost-badge { font-size: 11px; color: var(--text-secondary); font-weight: 600; }
+
+  .audit-indicator { font-size: 10px; color: var(--text-muted); }
+
+  @media (max-width: 480px) {
+    body { padding: 12px; }
+    h1 { font-size: 22px; }
+    .input-panel, .results { padding: 14px; }
+    .button-row { flex-wrap: wrap; }
+    .cost-estimator { gap: 6px 10px; }
+  }
+</style>
+</head>
+<body>
+<div id="site-nav"></div>
+<script src="assets/nav.js"></script>
+<div class="container">
+  <header>
+    <h1>Model Picker</h1>
+    <div class="subtitle">Describe your task. Get a model recommendation. Reads from <code>data/models.json</code> (last scrape: <span id="scrape-time">—</span>). <a href="shortlist.html">Full table →</a></div>
+    <div id="staleness-banner" hidden style="background:var(--yellow-bg);color:var(--yellow-dark);border:1px solid var(--yellow-dark);border-radius:6px;padding:8px 14px;margin-top:8px;font-size:12px;font-weight:600">
+      ⚠️ <span id="staleness-text"></span>
+    </div>
+  </header>
+
+  <div class="input-panel">
+    <label for="task">What do you want done?</label>
+    <textarea id="task" placeholder="Examples:&#10;• Generate my morning check-in (asks about sleep, last session, supplements)&#10;• Debug a bash script that's failing on a cron job&#10;• Research the trade-offs of three different state management libraries&#10;• Architect a multi-tenant system for SaaS"></textarea>
+    <div class="hint">The model behind this picker will classify the task, apply hard gates, and recommend the best fit. If your task has multiple stages (compress → generate → verify), the picker may return a multi-step plan.</div>
+    <div class="cost-estimator">
+      <label for="est-input-tokens">Expected input tokens</label>
+      <input type="number" id="est-input-tokens" value="50000" min="0" step="1000">
+      <label for="est-output-tokens">Expected output tokens</label>
+      <input type="number" id="est-output-tokens" value="5000" min="0" step="1000">
+    </div>
+    <div class="examples">
+      <div class="examples-title">Try a quick example</div>
+      <span class="example-chip" data-ex="morning">Morning check-in: ask about sleep, training, supplements, mood</span>
+      <span class="example-chip" data-ex="cron">Cron debug: bash script fails at 3am, no human review</span>
+      <span class="example-chip" data-ex="research">Deep research: compare 3 state management libraries for React, with citations</span>
+      <span class="example-chip" data-ex="voice">Voice brief: summarize 3 articles for a 60-second voice read</span>
+      <span class="example-chip" data-ex="architect">Architect: design a multi-tenant SaaS with isolation, billing, and observability</span>
+    </div>
+    <div class="button-row">
+      <button class="button" id="pick-btn">Recommend model</button>
+      <button class="button secondary" id="clear-btn">Clear</button>
+    </div>
+    <details style="margin-top: 14px;">
+      <summary style="cursor: pointer; font-size: 11px; color: var(--text-muted);">
+        <span id="classifier-mode">⚡ Keyword classifier (no LLM cost)</span> — click to configure
+      </summary>
+      <div style="margin-top: 8px; padding: 10px; background: var(--surface-2); border-radius: 6px;">
+        <div style="font-size: 11px; color: var(--text-secondary); line-height: 1.5; margin-bottom: 8px;">
+          By default this page uses a free keyword classifier (no API calls). For more accurate
+          classification, paste an OpenRouter API key below — it's used only to classify your task
+          description, never sent anywhere else.
+        </div>
+        <label for="api-key" style="font-size: 11px; font-weight: 500; color: var(--text-secondary); display: block; margin-bottom: 4px;">
+          OpenRouter API key (optional)
+        </label>
+        <input type="password" id="api-key" placeholder="sk-or-v1-..." style="width: 100%; padding: 6px 8px; font-size: 12px; border: 1px solid var(--border); border-radius: 4px; font-family: monospace;">
+        <div class="hint" style="margin-top: 6px;">
+          With a fallback key, classification uses MiMo-V2.5 base (~¢/call, ~$0.0001 each).
+          Key is stored in localStorage and only sent to openrouter.ai.
+          <!-- Plaintext localStorage — fine for a personal-use local file, but don't paste a shared/org key here. -->
+          <strong>Note:</strong> stored in localStorage in plaintext (not encrypted).
+        </div>
+        <div style="display: flex; gap: 6px; margin-top: 8px;">
+          <button class="button secondary" id="save-key-btn" style="font-size: 11px; padding: 4px 10px; margin: 0;">Save key</button>
+          <button class="button secondary" id="clear-key-btn" style="font-size: 11px; padding: 4px 10px; margin: 0;">Remove key</button>
+        </div>
+      </div>
+    </details>
+  </div>
+
+  <div class="results" id="results">
+    <div class="empty">Describe your task above and click <strong>Recommend model</strong>.<br><br>The picker will classify the task, apply safety gates, and recommend the best model (or a multi-step plan if the task has stages).</div>
+  </div>
+</div>
+
+<div class="toast" id="toast">Saved</div>
+<div id="site-footer"></div>
+
+<script>
+/* ===========================================================
+ * Data loading
+ * =========================================================== */
+let MODELS = [];
+let META = {};
+// Fallback used if picker-config.json is missing or fails to load.
+let CONFIG = { classifier_model: 'xiaomi/mimo-v2-5' };
+
+async function loadData() {
+  try {
+    const res = await fetch('./data/models.json');
+    const data = await res.json();
+    MODELS = (data.models || []).filter(m => m.featured);
+    META = { scraped_at: data.scraped_at, source_url: data.source_url };
+    const ts = (data.scraped_at || '').replace('T', ' ').replace('Z', '');
+    document.getElementById('scrape-time').textContent = ts;
+    ModelCompassNav.checkStaleness(data.scraped_at);
+  } catch (e) {
+    document.getElementById('results').innerHTML =
+      '<div class="empty">⚠️ Could not load <code>data/models.json</code>. Make sure you\'re serving this site over HTTP (not opening the file directly) — see the README.<br><br>Error: ' + e.message + '</div>';
+  }
+  try {
+    const cfgRes = await fetch('./picker-config.json');
+    if (cfgRes.ok) CONFIG = Object.assign({}, CONFIG, await cfgRes.json());
+  } catch (e) {
+    // picker-config.json missing/unreachable — keep the hardcoded fallback above.
+  }
+}
+
+/* ===========================================================
+ * Task classification
+ * The model behind this picker (the browser, the user) decides
+ * the task type by reading the natural-language description.
+ * We expose this as `classifyTask()` which returns one or more
+ * task types plus their weights.
+ * =========================================================== */
+
+const TASK_KEYWORDS = {
+  coaching: {
+    weight: 1.0,
+    keywords: ['morning', 'check-in', 'checkin', 'journal', 'coaching', 'reminder',
+      'briefing', 'how was my day', 'reflect', 'mood', 'sleep last night',
+      'conversation', 'conversational', 'voice', 'mental health', 'wellness',
+      'habit', 'routine', 'mindfulness', 'affirmation', 'motivation', 'support',
+      'accountability', 'sit with me', 'talk to me', 'chat with me'],
+  },
+  coding: {
+    weight: 1.0,
+    keywords: ['debug', 'fix this bug', 'code', 'script', 'bash', 'python', 'typescript',
+      'javascript', 'function', 'class', 'api', 'endpoint', 'regex', 'compile',
+      'error', 'exception', 'stack trace', 'refactor', 'implement', 'write a',
+      'sql', 'dockerfile', 'yaml', 'toml', 'crontab', 'unit test', 'integration test',
+      'typescript', 'rust', 'golang', 'compile error', 'import', 'library',
+      'sdk', 'framework', 'dependency', 'package', 'npm', 'pip', 'cargo', 'go mod'],
+  },
+  agentic: {
+    weight: 1.0,
+    keywords: ['automate', 'cron', 'scheduled', 'pipeline', 'etl', 'workflow',
+      'tool use', 'api call', 'multi-step', 'orchestrate', 'agent', 'bot',
+      'unattended', 'no review', 'automatically', 'recurring', 'hook',
+      'webhook', 'integration', 'zapier', 'make.com', 'rpa', 'browser automation'],
+  },
+  research: {
+    weight: 1.0,
+    keywords: ['research', 'compare', 'literature review', 'sources', 'citations',
+      'survey', 'state of the art', 'comprehensive', 'investigate',
+      'multi-perspective', 'synthesis', 'pros and cons', 'tradeoffs',
+      'trade-offs', 'evidence', 'study', 'paper', 'arxiv', 'wikipedia',
+      'primary sources', 'verified facts', 'academic', 'deep dive'],
+  },
+  architecting: {
+    weight: 1.0,
+    keywords: ['architect', 'design', 'system design', 'schema', 'database schema',
+      'infrastructure', 'scale', 'scalability', 'high availability', 'ha',
+      'distributed', 'microservices', 'monolith', 'queue', 'event-driven',
+      'cqrs', 'event sourcing', 'observability', 'monitoring', 'ci/cd',
+      'multi-tenant', 'saas architecture', 'system architecture'],
+  },
+  advisor: {
+    weight: 1.0,
+    keywords: ['advise', 'advice', 'recommend', 'should i', 'what do you think',
+      'opinion', 'perspective', 'expert', 'consult', 'help me decide',
+      'compare options', 'evaluate', 'assess', 'pros and cons',
+      'best approach', 'strategy', 'direction', 'guidance'],
+  },
+  voice: {
+    weight: 1.0,
+    keywords: ['voice', 'speak', 'tts', 'text-to-speech', 'audio', 'narration',
+      'podcast', 'briefing audio', 'voice note', 'read aloud'],
+  },
+  vision: {
+    weight: 1.0,
+    keywords: ['image', 'picture', 'photo', 'screenshot', 'diagram', 'chart',
+      'graph', 'visual', 'multimodal', 'describe this image', 'ocr',
+      'extract text from', 'logo', 'ui mockup', 'wireframe'],
+  },
+  creative: {
+    weight: 1.0,
+    keywords: ['write a story', 'poem', 'lyrics', 'novel', 'fiction', 'narrative',
+      'brainstorm', 'ideas for', 'creative', 'imagine', 'worldbuilding',
+      'character', 'dialogue', 'screenplay', 'short story'],
+  },
+};
+
+const TASK_LABELS = {
+  coaching: 'Coaching',
+  coding: 'Coding',
+  agentic: 'Agentic',
+  research: 'Research',
+  architecting: 'Architecting',
+  advisor: 'Advisor',
+  voice: 'Voice',
+  vision: 'Vision',
+  creative: 'Creative',
+  general: 'General',
+};
+
+const SCENARIO_HINTS = {
+  unattended: ['cron', 'unattended', 'no review', 'automated', 'no human',
+    'automatically', 'recurring', 'nightly', 'background', 'scheduled',
+    'without me', 'no one will see', 'no oversight', 'no one checking'],
+  interactive: ['with me', 'i will review', 'i\'ll check', 'human review',
+    'we can iterate', 'let me read', 'i can see', 'interactive'],
+  high_stakes: ['medical', 'legal', 'financial advice', 'safety-critical',
+    'production', 'customer-facing', 'public', 'compliance', 'regulated'],
+  long_context: ['long', 'large file', 'big codebase', '100k', 'entire history',
+    'all my notes', 'multi-document', 'thousands of lines', 'ramblings'],
+  cost_sensitive: ['cheap', 'budget', 'minimize cost', 'low cost',
+    'frugal', 'every dollar', 'cost matters', 'price matters'],
+  low_latency: ['real-time', 'low latency', 'fast', 'instant', 'sub-second',
+    'responds in', 'live', 'streaming', 'voice', 'ttft'],
+};
+
+function classifyTask(text) {
+  const lower = text.toLowerCase();
+  const scores = {};
+
+  for (const [taskType, config] of Object.entries(TASK_KEYWORDS)) {
+    let s = 0;
+    for (const kw of config.keywords) {
+      if (lower.includes(kw)) s += 1;
+    }
+    if (s > 0) scores[taskType] = s;
+  }
+
+  if (Object.keys(scores).length === 0) {
+    return { type: 'general', scores: {}, confidence: 0, source: 'keyword' };
+  }
+
+  // Sort by score, take top 1 or 2
+  const sorted = Object.entries(scores).sort((a, b) => b[1] - a[1]);
+  const top = sorted[0];
+  const totalScore = sorted.reduce((s, [_, v]) => s + v, 0);
+
+  // If two tasks are close, return a multi-step recommendation
+  const second = sorted[1];
+  let multi = null;
+  if (second && second[1] >= top[1] * 0.7 && second[1] >= 2) {
+    multi = [top[0], second[0]];
+  }
+
+  return {
+    type: top[0],
+    scores,
+    confidence: top[1] / totalScore,
+    multi,
+    source: 'keyword',
+  };
+}
+
+/* ===========================================================
+ * LLM-based classifier (via OpenRouter)
+ * More accurate than keyword matching. Requires an OpenRouter API key.
+ * Set the key once via the UI; stored in localStorage (NOT sent anywhere
+ * except openrouter.ai). Costs ~$0.0001 per classification (MiMo-V2.5 base).
+ * =========================================================== */
+
+const CLASSIFIER_PROMPT = `You are a task classifier. Given a user's task description, return JSON with this exact shape:
+
+{
+  "type": "<one of: coaching, coding, agentic, research, architecting, advisor, voice, vision, creative, general>",
+  "confidence": <0.0-1.0>,
+  "scenarios": {
+    "unattended": <true if the task runs without human review (cron, automation, background, "no one will see it"). false otherwise.>,
+    "long_context": <true if input is likely >100K tokens, large codebase, multi-document>,
+    "low_latency": <true if real-time / voice / sub-second response matters>,
+    "high_stakes": <true if medical, legal, financial, customer-facing, production, compliance>,
+    "cost_sensitive": <true if user explicitly cares about cost being low>
+  },
+  "rationale": "<one short sentence: why you chose this type>",
+  "multi_step": [<secondary task type, if task has clearly distinct stages. e.g. ["research"] for "research then summarize", or [] if single task>]
+}
+
+Definitions:
+- coaching: check-ins, journaling, briefings, conversational support, habits
+- coding: write/debug/refactor code, scripts, debugging
+- agentic: multi-step automation, tool use, cron jobs, API orchestration
+- research: deep investigation, multi-source synthesis, comparisons with citations
+- architecting: system design, schema, infrastructure, scalability
+- advisor: asking for an opinion or recommendation on a decision
+- voice: text-to-speech, audio narration, voice brief
+- vision: image/screenshot/chart analysis
+- creative: storytelling, poetry, brainstorming ideas
+- general: anything that doesn't fit the above
+
+IMPORTANT:
+- Default to "interactive" (unattended: false) unless the task is clearly automation/cron/no-review
+- If the task has clear stages (e.g. "research X then summarize"), put the primary in "type" and secondary in "multi_step"
+- Be honest about confidence: 0.9+ for clear, 0.5-0.7 for ambiguous
+- Return ONLY the JSON object, no prose
+
+User task: """`;
+
+async function classifyWithLLM(text) {
+  const apiKey = localStorage.getItem('openrouter-api-key');
+  if (apiKey) {
+    const response = await fetch('https://openrouter.ai/api/v1/chat/completions', {
+      method: 'POST',
+      headers: {
+        'Authorization': `Bearer ${apiKey}`,
+        'Content-Type': 'application/json',
+        'HTTP-Referer': window.location.href,
+        'X-Title': 'Model Compass Picker',
+      },
+      body: JSON.stringify({
+        model: CONFIG.classifier_model,
+        messages: [
+          { role: 'system', content: 'You are a JSON-only classifier. Return only valid JSON.' },
+          { role: 'user', content: CLASSIFIER_PROMPT + text + '"""' },
+        ],
+        temperature: 0,
+        max_tokens: 200,
+        response_format: { type: 'json_object' },
+      }),
+    });
+
+    if (!response.ok) {
+      const err = await response.text();
+      throw new Error(`OpenRouter API error ${response.status}: ${err.slice(0, 200)}`);
+    }
+
+    const data = await response.json();
+    const content = data.choices?.[0]?.message?.content;
+    if (!content) throw new Error('Empty response from LLM');
+    const parsed = JSON.parse(content);
+    return validateAndShapeLLMResult(parsed, 'openrouter');
+  }
+
+  throw new Error('No OpenRouter API key set — paste one above, or clear it to use the free keyword classifier.');
+}
+
+function validateAndShapeLLMResult(parsed, source) {
+  const validTypes = Object.keys(TASK_LABELS);
+  if (!validTypes.includes(parsed.type)) {
+    throw new Error(`LLM returned invalid type: ${parsed.type}`);
+  }
+  return {
+    type: parsed.type,
+    scores: { [parsed.type]: parsed.confidence },
+    confidence: parsed.confidence,
+    multi: Array.isArray(parsed.multi_step) && parsed.multi_step.length > 0 ? parsed.multi_step : null,
+    scenarios: parsed.scenarios || {},
+    rationale: parsed.rationale,
+    source: source === 'proxy' ? 'llm' : `llm-${source}`,
+  };
+}
+
+async function classify(text) {
+  // Always try LLM first (proxy → OpenRouter → fail to keywords)
+  try {
+    return await classifyWithLLM(text);
+  } catch (e) {
+    console.warn('LLM classification failed, falling back to keywords:', e);
+    const result = classifyTask(text);
+    result.llm_error = e.message;
+    return result;
+  }
+}
+
+function detectScenarios(text) {
+  const lower = text.toLowerCase();
+  const found = {};
+  for (const [scenario, keywords] of Object.entries(SCENARIO_HINTS)) {
+    if (keywords.some(kw => lower.includes(kw))) {
+      found[scenario] = true;
+    }
+  }
+  // CRITICAL FIX: default to INTERACTIVE, not unattended.
+  // A user typing a task description in the picker is reviewing the output.
+  // "unattended" requires explicit signals (cron, no review, automated, recurring).
+  if (!found.unattended && !found.interactive) {
+    found.interactive = true; // safe default
+  }
+  return found;
+}
+
+/* ===========================================================
+ * Routing logic (mirrors model-router skill)
+ * =========================================================== */
+
+// Weighted components per task type. Each entry names a metric in the METRICS
+// registry (below); `path` is intentionally gone — the registry owns how each
+// metric is read and normalized. Weights within a task sum to 1.0.
+const TASK_WEIGHTS = {
+  coaching: [
+    { key: 'omniscience_non_halluc', weight: 0.50 },
+    { key: 'ifbench', weight: 0.20 },
+    { key: 'intelligence', weight: 0.20 },
+    { key: 'value_per_dollar', weight: 0.10 },
+  ],
+  coding: [
+    { key: 'terminalbench_v2_1', weight: 0.40 },
+    { key: 'omniscience_non_halluc', weight: 0.30 },
+    { key: 'scicode', weight: 0.20 },
+    { key: 'value_per_dollar', weight: 0.10 },
+  ],
+  agentic: [
+    { key: 'agentic_index', weight: 0.40 },
+    { key: 'omniscience_non_halluc', weight: 0.30 },
+    { key: 'tau3_banking', weight: 0.20 },
+    { key: 'value_per_dollar', weight: 0.10 },
+  ],
+  // Was: intelligence 0.35 + harness_diversity 0.25 + non_halluc 0.25 +
+  // context_tokens 0.15. That double-counted context (harness_diversity was
+  // literally context_tokens/1e6, so context carried 0.40 under two names).
+  // Merged into a single honest context_capacity 0.30; freed weight → intel/nh.
+  research: [
+    { key: 'intelligence', weight: 0.40 },
+    { key: 'omniscience_non_halluc', weight: 0.30 },
+    { key: 'context_capacity', weight: 0.30 },
+  ],
+  architecting: [
+    { key: 'intelligence', weight: 0.40 },
+    { key: 'hle', weight: 0.30 },
+    { key: 'gpqa_diamond', weight: 0.20 },
+    { key: 'value_per_dollar', weight: 0.10 },
+  ],
+  advisor: [
+    { key: 'omniscience_index', weight: 0.40 },
+    { key: 'omniscience_non_halluc', weight: 0.30 },
+    { key: 'intelligence', weight: 0.20 },
+    { key: 'value_per_dollar', weight: 0.10 },
+  ],
+  voice: [
+    // output_speed carries 0.40. NOTE: the strict natural-voice UX target is
+    // ~0.8s to first token; no tracked model is close yet (see the ttft<=5s
+    // hard gate below), so this weight is aspirational until models improve.
+    { key: 'output_speed_tps', weight: 0.40 },
+    { key: 'intelligence', weight: 0.30 },
+    { key: 'value_per_dollar', weight: 0.20 },
+    { key: 'omniscience_non_halluc', weight: 0.10 },
+  ],
+  vision: [
+    { key: 'mmmu_pro', weight: 0.50 },
+    { key: 'intelligence', weight: 0.30 },
+    { key: 'value_per_dollar', weight: 0.20 },
+  ],
+  // Was: intelligence 0.40 + harness_diversity 0.30 + non_halluc 0.30. Context
+  // capacity shouldn't drive creative writing at 30% — moved 15% to intelligence.
+  creative: [
+    { key: 'intelligence', weight: 0.55 },
+    { key: 'omniscience_non_halluc', weight: 0.30 },
+    { key: 'context_capacity', weight: 0.15 },
+  ],
+  general: [
+    { key: 'intelligence', weight: 0.40 },
+    { key: 'omniscience_non_halluc', weight: 0.30 },
+    { key: 'value_per_dollar', weight: 0.30 },
+  ],
+};
+
+const HARD_GATES = {
+  default: [],
+  unattended: [
+    { key: 'omniscience_non_halluc', op: 'gte', value: 70 },
+  ],
+  voice: [
+    // Hard gate: first answer token within 5s. Strict natural-voice UX wants
+    // ~0.8s; 5s is the loosest bar we'll still call "voice-capable". If no
+    // model passes, the "no model passed" path renders honestly instead of
+    // faking a pick.
+    { key: 'ttft_seconds', op: 'lte', value: 5 },
+  ],
+  high_stakes: [
+    { key: 'omniscience_non_halluc', op: 'gte', value: 80 },
+    { key: 'intelligence', op: 'gte', value: 45 },
+  ],
+};
+
+/* ---------------------------------------------------------------
+ * Metric registry + stable normalization.
+ *
+ * Each weighted metric knows (a) how to read itself from a model and (b) how
+ * to normalize to 0–1. Normalization ranges are computed over ALL models in
+ * MODELS — never over the gate-passing subset — so gating a model out never
+ * reshuffles the others' scores.
+ *
+ *   anchor01    — true 0–100 percentage benchmark; norm = value/100 (clamped).
+ *                 Absolute, never shifts with the population.
+ *   minmax      — index/derived/perf metric with no meaningful 0–100 ceiling
+ *                 in this set; norm against all-model min/max. Higher = better.
+ *   minmax_inv  — like minmax but lower is better (e.g. ttft).
+ * ------------------------------------------------------------- */
+const METRICS = {
+  // 0–100 percentage benchmarks → fixed anchors
+  omniscience_non_halluc: { get: m => m.benchmarks?.omniscience_non_halluc, norm: 'anchor01' },
+  ifbench:                { get: m => m.benchmarks?.ifbench,               norm: 'anchor01' },
+  scicode:                { get: m => m.benchmarks?.scicode,               norm: 'anchor01' },
+  hle:                    { get: m => m.benchmarks?.hle,                   norm: 'anchor01' },
+  gpqa_diamond:           { get: m => m.benchmarks?.gpqa_diamond,          norm: 'anchor01' },
+  mmmu_pro:               { get: m => m.benchmarks?.mmmu_pro,              norm: 'anchor01' },
+  tau3_banking:           { get: m => m.benchmarks?.tau3_banking,          norm: 'anchor01' },
+  terminalbench_v2_1:     { get: m => m.benchmarks?.terminalbench_v2_1,    norm: 'anchor01' },
+  // composite indices — no meaningful 0–100 ceiling here → population min/max
+  intelligence:           { get: m => m.composite?.intelligence_index_v4_1, norm: 'minmax' },
+  agentic_index:          { get: m => m.composite?.agentic_index,          norm: 'minmax' },
+  omniscience_index:      { get: m => m.composite?.omniscience_index,       norm: 'minmax' },
+  // derived / performance → population min/max
+  value_per_dollar:       { get: m => m.derived?.value_intelligence_per_dollar_blend, norm: 'minmax' },
+  output_speed_tps:       { get: m => m.performance?.output_speed_tps,      norm: 'minmax' },
+  ttft_seconds:           { get: m => m.performance?.ttft_seconds_answer,   norm: 'minmax_inv' },
+  // context capacity (formerly mislabeled "harness_diversity") → population min/max
+  context_capacity:       { get: m => m.context_tokens,                     norm: 'minmax' },
+};
+
+function metricValue(model, key) {
+  const spec = METRICS[key];
+  if (!spec) return null;
+  const v = spec.get(model);
+  return (v == null || isNaN(v)) ? null : v;
+}
+
+// Precompute min/max over ALL models for the minmax-style metrics in `keys`.
+function buildNormRanges(keys) {
+  const ranges = {};
+  for (const key of keys) {
+    const spec = METRICS[key];
+    if (!spec || spec.norm === 'anchor01') continue;
+    const vals = MODELS.map(m => metricValue(m, key)).filter(v => v != null);
+    if (vals.length) {
+      const mn = Math.min(...vals), mx = Math.max(...vals);
+      ranges[key] = { min: mn, max: mx, span: (mx - mn) || 1 };
+    }
+  }
+  return ranges;
+}
+
+function normMetric(key, value, ranges) {
+  const spec = METRICS[key];
+  if (!spec) return 0;
+  if (spec.norm === 'anchor01') return Math.max(0, Math.min(1, value / 100));
+  const r = ranges[key];
+  if (!r) return 0;
+  let n = (value - r.min) / r.span;
+  if (spec.norm === 'minmax_inv') n = 1 - n;
+  return Math.max(0, Math.min(1, n));
+}
+
+function checkGate(model, gate) {
+  if (gate.key === 'omniscience_non_halluc') {
+    const v = model.benchmarks?.omniscience_non_halluc;
+    if (v == null) return false;
+    return gate.op === 'gte' ? v >= gate.value : v <= gate.value;
+  }
+  if (gate.key === 'ttft_seconds') {
+    const v = model.performance?.ttft_seconds_answer;
+    if (v == null) return false;
+    return gate.op === 'lte' ? v <= gate.value : v >= gate.value;
+  }
+  if (gate.key === 'intelligence') {
+    const v = model.composite?.intelligence_index_v4_1;
+    if (v == null) return false;
+    return gate.op === 'gte' ? v >= gate.value : v <= gate.value;
+  }
+  return true;
+}
+
+function pickForTask(taskType, scenarios) {
+  // Determine which gate set to use
+  let gateSet = HARD_GATES.default;
+  if (scenarios.voice) gateSet = HARD_GATES.voice;
+  else if (scenarios.unattended && !scenarios.interactive) gateSet = HARD_GATES.unattended;
+  if (scenarios.high_stakes) gateSet = HARD_GATES.high_stakes;
+
+  // Filter by hard gates
+  const candidates = MODELS.filter(m => gateSet.every(g => checkGate(m, g)));
+
+  if (candidates.length === 0) {
+    return { error: 'No model passed the hard gates for this task.', taskType, scenarios };
+  }
+
+  // Score. Normalization ranges are built over ALL of MODELS (not just
+  // `candidates`) so gating a model out never reshuffles the survivors.
+  const weights = TASK_WEIGHTS[taskType] || TASK_WEIGHTS.general;
+  const ranges = buildNormRanges(weights.map(w => w.key));
+
+  const scored = candidates.map(m => {
+    let score = 0;
+    const breakdown = [];
+    for (const w of weights) {
+      const v = metricValue(m, w.key);
+      if (v == null) continue;
+      const norm = normMetric(w.key, v, ranges);
+      score += norm * w.weight;
+      breakdown.push({ key: w.key, weight: w.weight, value: v, norm });
+    }
+    return { model: m, score, breakdown };
+  });
+
+  scored.sort((a, b) => b.score - a.score);
+  return { candidates: scored, taskType, scenarios, gateSet };
+}
+
+/* ===========================================================
+ * Multi-step detection
+ * For research/architecting tasks, the picker may recommend
+ * a pipeline: cheap compress → smart generate → verify.
+ * =========================================================== */
+
+function shouldMultiStep(taskType, text) {
+  if (taskType === 'research') {
+    // Deep research benefits from fusion OR multi-step compress→generate
+    return /\b(deep|comprehensive|thorough|extensive|literature|state.of.the.art)\b/i.test(text)
+      || text.length > 200;
+  }
+  if (taskType === 'architecting') {
+    return /\b(scale|distributed|complex|production|large)\b/i.test(text);
+  }
+  return false;
+}
+
+// --- Multi-step helpers. All operate over the gate-passing candidates, not
+// --- raw MODELS, so every step in a plan already satisfies the task's gates.
+function highestIntelligence(cands, fallback) {
+  const withIntel = cands.filter(m => m.composite?.intelligence_index_v4_1 != null);
+  if (!withIntel.length) return fallback;
+  return withIntel.reduce((best, m) =>
+    m.composite.intelligence_index_v4_1 > best.composite.intelligence_index_v4_1 ? m : best);
+}
+
+// The "fast, cheap" gatherer: cheapest blended price among candidates faster
+// than the candidate-median output speed. Matches the step's rationale text.
+function cheapestFastModel(cands, fallback) {
+  const speeds = cands.map(m => m.performance?.output_speed_tps).filter(v => v != null).sort((a, b) => a - b);
+  if (!speeds.length) return fallback;
+  const median = speeds[Math.floor(speeds.length / 2)];
+  const fast = cands.filter(m =>
+    (m.performance?.output_speed_tps ?? 0) > median && m.pricing_per_m_tokens?.blended_7_2_1 != null);
+  if (!fast.length) return fallback;
+  return fast.reduce((best, m) =>
+    m.pricing_per_m_tokens.blended_7_2_1 < best.pricing_per_m_tokens.blended_7_2_1 ? m : best);
+}
+
+// Cross-model verifier: highest intelligence among candidates from a DIFFERENT
+// creator than the top pick, so verification isn't the same model checking
+// itself. Falls back to the top pick only if no other creator qualifies.
+function crossCreatorVerifier(cands, top, fallback) {
+  const others = cands.filter(m => m.creator && m.creator !== top.creator);
+  if (!others.length) return fallback;
+  return highestIntelligence(others, fallback);
+}
+
+function multiStepPlan(taskType, top, candidates) {
+  const cands = (candidates && candidates.length) ? candidates : [top];
+  if (taskType === 'research') {
+    return [
+      { step: 'Plan',
+        model: top,
+        why: 'Draft research questions and identify the 3-5 sources needed.' },
+      { step: 'Gather',
+        model: cheapestFastModel(cands, top),
+        why: 'Cheapest fast model fetches and compresses sources into a ~2K-token summary.' },
+      { step: 'Synthesize',
+        model: highestIntelligence(cands, top),
+        why: 'Highest-intelligence model writes the final synthesis with citations.' },
+    ];
+  }
+  if (taskType === 'architecting') {
+    return [
+      { step: 'Outline',
+        model: highestIntelligence(cands, top),
+        why: 'Map requirements, constraints, and tradeoffs.' },
+      { step: 'Detail',
+        model: top,
+        why: 'Generate the full design with schemas and call graphs.' },
+      { step: 'Verify',
+        model: crossCreatorVerifier(cands, top, top),
+        why: 'A different creator’s model challenges the design (avoid single-model bias).' },
+    ];
+  }
+  return null;
+}
+
+/* ===========================================================
+ * Rendering
+ * =========================================================== */
+
+function fmtPct(v) { return v == null ? '—' : `${Math.round(v)}%`; }
+function fmtDollar(v) { return v == null ? '—' : `$${v.toFixed(2)}`; }
+function fmtNum(v, d = 1) { return v == null ? '—' : (typeof v === 'number' ? v.toFixed(d) : v); }
+function fmtSec(v) { return v == null ? '—' : `${v.toFixed(1)}s`; }
+function fmtTPS(v) { return v == null ? '—' : `${Math.round(v)} tps`; }
+function fmtContext(v) { return v == null ? '—' : (v >= 1000000 ? '1M' : Math.round(v / 1000) + 'K'); }
+
+/* ===========================================================
+ * Per-task cost estimator (design doc F5)
+ * cost = in_tokens/1e6 * input_price + out_tokens/1e6 * output_price
+ * =========================================================== */
+function estimateCost(model, inputTokens, outputTokens) {
+  const inPrice = model.pricing_per_m_tokens?.input;
+  const outPrice = model.pricing_per_m_tokens?.output;
+  if (inPrice == null || outPrice == null) return null;
+  return (inputTokens / 1e6) * inPrice + (outputTokens / 1e6) * outPrice;
+}
+
+function getEstimatorInputs() {
+  const inEl = document.getElementById('est-input-tokens');
+  const outEl = document.getElementById('est-output-tokens');
+  const inputTokens = Number(inEl?.value) || 50000;
+  const outputTokens = Number(outEl?.value) || 5000;
+  return { inputTokens, outputTokens };
+}
+
+function fmtCostEstimate(model, inputTokens, outputTokens) {
+  const c = estimateCost(model, inputTokens, outputTokens);
+  return c == null ? '—' : `$${c.toFixed(2)} est.`;
+}
+
+/* ===========================================================
+ * Score breakdown bars — renders pickForTask()'s per-candidate
+ * breakdown (key, weight, value, norm) as horizontal bars whose
+ * fill width is norm * weight (each component's actual contribution).
+ * =========================================================== */
+function renderBreakdown(breakdown) {
+  if (!breakdown || !breakdown.length) return '';
+  return `
+    <div class="breakdown">
+      ${breakdown.map(b => {
+        const contribution = b.norm * b.weight; // 0..weight
+        const pctOfWeight = Math.round((contribution / b.weight) * 100);
+        return `
+          <div class="breakdown-row">
+            <div class="bkey">${b.key.replace(/_/g, ' ')} (${Math.round(b.weight * 100)}%)</div>
+            <div class="bbar-track"><div class="bbar-fill" style="width:${Math.round(contribution * 100)}%"></div></div>
+            <div class="bval">${fmtNum(b.value, 1)} · ${pctOfWeight}%</div>
+          </div>
+        `;
+      }).join('')}
+    </div>
+  `;
+}
+
+/* ===========================================================
+ * Routing audit log (design doc F4)
+ * Kept locally only (localStorage, keyed array, capped at 200 entries) —
+ * there's no server for a static site to log to.
+ * =========================================================== */
+const AUDIT_LOCAL_KEY = 'model-picker-audit-log';
+
+function saveAuditLocally(entry) {
+  let log = [];
+  try { log = JSON.parse(localStorage.getItem(AUDIT_LOCAL_KEY)) || []; } catch (e) { log = []; }
+  log.push(entry);
+  if (log.length > 200) log = log.slice(log.length - 200);
+  localStorage.setItem(AUDIT_LOCAL_KEY, JSON.stringify(log));
+}
+
+async function logRecommendation(entry) {
+  const indicator = document.getElementById('audit-indicator');
+  saveAuditLocally(entry);
+  if (indicator) indicator.textContent = 'local only';
+}
+
+function buildRationale(model, taskType, scenarios) {
+  const parts = [];
+  const nh = model.benchmarks?.omniscience_non_halluc;
+  if (nh != null) {
+    if (nh >= 80) parts.push(`strong non-halluc (${nh}%)`);
+    else if (nh >= 70) parts.push(`passes 70% non-halluc floor (${nh}%)`);
+  }
+  const cost = model.cost_per_intelligence_task_usd?.total;
+  if (cost != null) {
+    if (cost < 0.10) parts.push(`very cheap ($${cost.toFixed(3)}/task)`);
+    else if (cost < 0.30) parts.push(`affordable ($${cost.toFixed(2)}/task)`);
+    else parts.push(`$${cost.toFixed(2)}/task`);
+  }
+  if (model.performance?.output_speed_tps > 100) parts.push(`fast output (${Math.round(model.performance.output_speed_tps)} tps)`);
+  if (scenarios.low_latency && model.performance?.ttft_seconds_answer < 20) {
+    parts.push(`low TTFT (${model.performance.ttft_seconds_answer.toFixed(1)}s)`);
+  }
+  if (scenarios.long_context && model.context_tokens >= 1000000) parts.push('1M context');
+  if (model.is_open_weights) parts.push('open-weights');
+  return parts.length > 0 ? parts.join(', ') + '.' : `Best fit for ${TASK_LABELS[taskType] || taskType} with current constraints.`;
+}
+
+function renderResult(classification, text) {
+  const results = document.getElementById('results');
+  const { type: taskType, scores, multi, confidence, source, rationale, llm_error } = classification;
+  // Use LLM-returned scenarios if available, otherwise detect from text
+  const scenarios = (source === 'llm' && classification.scenarios)
+    ? classification.scenarios
+    : detectScenarios(text);
+
+  // Build pick for primary task
+  const result = pickForTask(taskType, scenarios);
+  if (result.error) {
+    results.innerHTML = `
+      <h2 style="margin-top:0">No model passed</h2>
+      <div class="top-pick" style="background: var(--red-bg); border-color: var(--red-dark);">
+        <div class="top-pick-name">⚠️ ${result.error}</div>
+        <div class="top-pick-rationale">Try a different task type, or relax the safety floor by reviewing outputs.</div>
+      </div>
+    `;
+    return;
+  }
+
+  const top = result.candidates[0];
+  const runnerUp = result.candidates[1];
+  const taskLabel = TASK_LABELS[taskType] || taskType;
+
+  // Confidence-aware output: if the top two are within 0.05, it's a toss-up —
+  // don't present a false clear winner.
+  const isTossup = runnerUp && (top.score - runnerUp.score) < 0.05;
+  const tossupHtml = isTossup ? `
+    <div class="fusion-card" style="background: var(--accent-bg); border-left-color: var(--accent);">
+      <div class="title">⚖️ Toss-up — either works</div>
+      <strong>${top.model.name}</strong> (${(top.score * 100).toFixed(0)}) and
+      <strong>${runnerUp.model.name}</strong> (${(runnerUp.score * 100).toFixed(0)}) score within
+      ${((top.score - runnerUp.score) * 100).toFixed(1)} points. Decide on secondary factors —
+      cost, speed, or which you already trust.
+    </div>
+  ` : '';
+
+  // Build badges
+  const badges = [];
+  if (top.model.is_open_weights) badges.push('<span class="badge privacy">🔓 OPEN</span>');
+  if (top.model.is_frontier) badges.push('<span class="badge frontier">🚀 FRONTIER</span>');
+
+  // Multi-step plan
+  let multiStepHtml = '';
+  if (shouldMultiStep(taskType, text)) {
+    const plan = multiStepPlan(taskType, top.model, result.candidates.map(c => c.model));
+    if (plan) {
+      multiStepHtml = `
+        <div class="multi-step">
+          <div class="multi-step-label">Recommended pipeline (multi-step)</div>
+          ${plan.map((s, i) => `
+            <div class="step">
+              <div class="step-num">Step ${i + 1}: ${s.step}</div>
+              <div class="step-name">${s.model.name} <span class="tag">${TASK_LABELS[taskType] || taskType}</span></div>
+              <div class="step-why">${s.why}</div>
+            </div>
+          `).join('')}
+        </div>
+      `;
+    }
+  } else if (multi && multi.length > 1) {
+    // User description suggests two task types
+    multiStepHtml = `
+      <div class="multi-step">
+        <div class="multi-step-label">Multi-task detected</div>
+        <div class="step">
+          <div class="step-num">Primary: ${TASK_LABELS[multi[0]]}</div>
+          <div class="step-name">${top.model.name}</div>
+          <div class="step-why">${buildRationale(top.model, multi[0], scenarios)}</div>
+        </div>
+        ${(() => {
+          const r2 = pickForTask(multi[1], scenarios);
+          if (r2.candidates && r2.candidates[0]) {
+            return `
+              <div class="step">
+                <div class="step-num">Secondary: ${TASK_LABELS[multi[1]]}</div>
+                <div class="step-name">${r2.candidates[0].model.name}</div>
+                <div class="step-why">${buildRationale(r2.candidates[0].model, multi[1], scenarios)}</div>
+              </div>
+            `;
+          }
+          return '';
+        })()}
+      </div>
+    `;
+  }
+
+  // Fusion callout for research
+  let fusionHtml = '';
+  if (taskType === 'research' && shouldMultiStep(taskType, text)) {
+    fusionHtml = `
+      <div class="fusion-card">
+        <div class="title">💡 Alternative: OpenRouter Fusion</div>
+        For deep research, Fusion (3-model panel + judge) outperforms every solo model.
+        A budget panel (Gemini Flash + Kimi K2.6 + DeepSeek V4 Pro) hit <strong>64.7% on DRACO</strong>
+        vs <strong>58.8% for solo Opus 4.8</strong>. Use <code>openrouter/fusion</code> with a budget panel.
+      </div>
+    `;
+  }
+
+  // Candidates table
+  const { inputTokens: estIn, outputTokens: estOut } = getEstimatorInputs();
+  const candidatesTable = `
+    <div class="candidates">
+      <details>
+        <summary>Show top ${Math.min(result.candidates.length, 8)} candidates with scores</summary>
+        <table>
+          <tr>
+            <th class="l">Model</th>
+            <th>Score</th>
+            <th>Intel</th>
+            <th>Non-Halluc</th>
+            <th>$/task</th>
+            <th>Est. cost</th>
+            <th>Speed</th>
+            <th>TTFT</th>
+            <th>Context</th>
+          </tr>
+          ${result.candidates.slice(0, 8).map(c => {
+            const heat = c.score > 0.7 ? 'h1' : c.score > 0.4 ? 'h2' : 'h3';
+            return `
+              <tr>
+                <td class="l"><strong>${c.model.name}</strong></td>
+                <td class="${heat}"><strong>${(c.score * 100).toFixed(0)}</strong></td>
+                <td>${fmtNum(c.model.composite?.intelligence_index_v4_1, 1)}</td>
+                <td>${fmtPct(c.model.benchmarks?.omniscience_non_halluc)}</td>
+                <td>${fmtDollar(c.model.cost_per_intelligence_task_usd?.total)}</td>
+                <td>${fmtCostEstimate(c.model, estIn, estOut)}</td>
+                <td>${fmtTPS(c.model.performance?.output_speed_tps)}</td>
+                <td>${fmtSec(c.model.performance?.ttft_seconds_answer)}</td>
+                <td>${fmtContext(c.model.context_tokens)}</td>
+              </tr>
+            `;
+          }).join('')}
+        </table>
+      </details>
+    </div>
+  `;
+
+  // Classified-as info
+  const classifiedAs = `
+    <div class="meta">
+      Classified as <strong>${taskLabel}</strong>${confidence ? ` (confidence ${(Math.min(confidence, 1) * 100).toFixed(0)}%)` : ''}
+      ${source === 'llm' ? ' · <span class="badge" style="background: #dbeafe; color: #1e40af;">🧠 LLM</span>' : ' · <span class="badge" style="background: var(--surface-2); color: var(--text-muted);">⚡ keyword</span>'}
+      ${Object.keys(scenarios).filter(s => scenarios[s] && s !== 'unattended' && s !== 'interactive').map(s => ` · ${s.replace(/_/g, ' ')}`).join('')}
+      ${rationale ? ` · <em>${rationale}</em>` : ''}
+      ${llm_error ? ` · <span style="color: var(--yellow-dark);">LLM fallback: ${llm_error}</span>` : ''}
+      · <a href="${top.model.aa_url}" target="_blank">view ${top.model.name} on AA →</a>
+      · <a href="shortlist.html#models=${result.candidates.slice(0, 8).map(c => c.model.slug).join(',')}">compare these ${Math.min(result.candidates.length, 8)} in the full table →</a>
+    </div>
+  `;
+
+  // Build runner-up
+  const runnerUpHtml = runnerUp ? `
+    <div class="runner-up">
+      <div class="runner-up-label">Runner-up</div>
+      <div class="runner-up-name">${runnerUp.model.name}</div>
+      <div class="runner-up-why">Score ${(runnerUp.score * 100).toFixed(0)}/100 · ${runnerUp.model.creator} · ${fmtDollar(runnerUp.model.cost_per_intelligence_task_usd?.total)}/task · ${fmtCostEstimate(runnerUp.model, estIn, estOut)}</div>
+      <details>
+        <summary>Show score breakdown</summary>
+        ${renderBreakdown(runnerUp.breakdown)}
+      </details>
+    </div>
+  ` : '';
+
+  results.innerHTML = `
+    <h2 style="margin-top:0">Recommendation</h2>
+    ${tossupHtml}
+    ${fusionHtml}
+    <div class="top-pick">
+      <div class="top-pick-label">Top pick · ${taskLabel}</div>
+      <div class="badges">${badges.join('')}</div>
+      <div class="top-pick-name">${top.model.name}</div>
+      <div class="top-pick-score">Score: ${(top.score * 100).toFixed(0)}/100 · ${top.model.creator}</div>
+      <div class="stats">
+        <div class="stat"><div class="label">Intel</div><div class="value">${fmtNum(top.model.composite?.intelligence_index_v4_1, 1)}</div></div>
+        <div class="stat"><div class="label">Non-Halluc</div><div class="value">${fmtPct(top.model.benchmarks?.omniscience_non_halluc)}</div></div>
+        <div class="stat"><div class="label">$/task</div><div class="value">${fmtDollar(top.model.cost_per_intelligence_task_usd?.total)}</div></div>
+        <div class="stat"><div class="label">Est. cost</div><div class="value">${fmtCostEstimate(top.model, estIn, estOut)}</div></div>
+        <div class="stat"><div class="label">Context</div><div class="value">${fmtContext(top.model.context_tokens)}</div></div>
+        <div class="stat"><div class="label">Speed</div><div class="value">${fmtTPS(top.model.performance?.output_speed_tps)}</div></div>
+        <div class="stat"><div class="label">TTFT</div><div class="value">${fmtSec(top.model.performance?.ttft_seconds_answer)}</div></div>
+      </div>
+      <div class="top-pick-rationale">
+        <span class="why">Why:</span> ${buildRationale(top.model, taskType, scenarios)}
+      </div>
+      <div class="breakdown">${renderBreakdown(top.breakdown)}</div>
+    </div>
+    ${multiStepHtml}
+    ${runnerUpHtml}
+    ${candidatesTable}
+    ${classifiedAs}
+    <div class="audit-indicator-row">Routing decision: <span class="audit-indicator" id="audit-indicator">logging…</span></div>
+  `;
+
+  logRecommendation({
+    timestamp: new Date().toISOString(),
+    task_text: text,
+    task_type: taskType,
+    scenarios,
+    pick: top.model.name,
+    runner_up: runnerUp ? runnerUp.model.name : null,
+    scores: result.candidates.slice(0, 8).map(c => ({ name: c.model.name, score: c.score })),
+    source,
+  });
+}
+
+function showToast(msg) {
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.classList.add('show');
+  setTimeout(() => t.classList.remove('show'), 1500);
+}
+
+/* ===========================================================
+ * Wire up
+ * =========================================================== */
+
+const EXAMPLES = {
+  morning: 'Generate my morning check-in: ask about sleep, last training session, supplements, and any open commitments.',
+  cron: 'Debug a bash script that fails on a nightly cron job with no human review. Need to find why /var/log/app.log is not getting rotated.',
+  research: 'Deep research: compare React, Vue, and Svelte for a new SaaS dashboard. Need citations to primary sources and trade-off analysis.',
+  voice: 'Voice brief: summarize 3 long articles on lucid dreaming into a 60-second audio script for my morning routine.',
+  architect: 'Architect: design a multi-tenant SaaS with row-level isolation, usage-based billing, and observability for a Sweden-based startup with 100-1000 customers.',
+};
+
+document.getElementById('pick-btn').addEventListener('click', async () => {
+  const text = document.getElementById('task').value.trim();
+  if (!text) {
+    showToast('Describe the task first');
+    return;
+  }
+  // Show loading state
+  const btn = document.getElementById('pick-btn');
+  const originalLabel = btn.textContent;
+  btn.textContent = 'Classifying…';
+  btn.disabled = true;
+  try {
+    const classification = await classify(text);
+    renderResult(classification, text);
+    localStorage.setItem('last-task', text);
+  } catch (e) {
+    showToast('Error: ' + e.message);
+  } finally {
+    btn.textContent = originalLabel;
+    btn.disabled = false;
+  }
+});
+
+document.getElementById('clear-btn').addEventListener('click', () => {
+  document.getElementById('task').value = '';
+  document.getElementById('results').innerHTML = '<div class="empty">Describe your task above and click <strong>Recommend model</strong>.</div>';
+  localStorage.removeItem('last-task');
+});
+
+/* API key handlers */
+async function updateClassifierMode() {
+  const mode = document.getElementById('classifier-mode');
+  if (!mode) return;
+  const hasKey = !!localStorage.getItem('openrouter-api-key');
+  if (hasKey) {
+    mode.textContent = '🧠 LLM classifier (MiMo-V2.5 base via OpenRouter, key in localStorage)';
+    mode.style.color = 'var(--text-secondary)';
+  } else {
+    mode.textContent = '⚡ Keyword classifier (no LLM) — paste an OpenRouter key for better accuracy';
+    mode.style.color = 'var(--text-muted)';
+  }
+}
+
+document.getElementById('save-key-btn').addEventListener('click', () => {
+  const key = document.getElementById('api-key').value.trim();
+  if (!key) {
+    showToast('Paste an OpenRouter API key first');
+    return;
+  }
+  if (!key.startsWith('sk-or-')) {
+    showToast('Key should start with sk-or-');
+    return;
+  }
+  localStorage.setItem('openrouter-api-key', key);
+  document.getElementById('api-key').value = '';
+  void updateClassifierMode();
+  showToast('API key saved');
+});
+
+document.getElementById('clear-key-btn').addEventListener('click', () => {
+  localStorage.removeItem('openrouter-api-key');
+  document.getElementById('api-key').value = '';
+  void updateClassifierMode();
+  showToast('API key removed — back to keyword mode');
+});
+
+// Restore API key indicator
+if (localStorage.getItem('openrouter-api-key')) {
+  document.getElementById('api-key').placeholder = '•••••••• (saved — paste to replace)';
+}
+void updateClassifierMode();
+
+document.querySelectorAll('.example-chip').forEach(chip => {
+  chip.addEventListener('click', () => {
+    document.getElementById('task').value = EXAMPLES[chip.dataset.ex];
+    document.getElementById('task').focus();
+  });
+});
+
+// Restore last input
+const last = localStorage.getItem('last-task');
+if (last) document.getElementById('task').value = last;
+
+loadData();
+</script>
+</body>
+</html>
