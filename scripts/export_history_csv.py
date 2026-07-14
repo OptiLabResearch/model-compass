@@ -20,12 +20,16 @@ REPO_ROOT = Path(__file__).resolve().parent.parent
 MODELS_JSON = REPO_ROOT / "data" / "models.json"
 HISTORY_DIR = REPO_ROOT / "data" / "history"
 
+# Mirrors the All Models table column order. AA stopped publishing MMLU-Pro,
+# LiveCodeBench, MATH-500, AIME and the math index — those columns were all "—"
+# and were dropped in favour of metrics AA does still report. Snapshots written
+# before 2026-07-14 use the older, wider header.
 HEADER = [
     "name", "creator", "release_date", "in_$/M", "out_$/M", "blend_3to1_$/M",
-    "intelligence", "coding", "math", "gpqa_%", "hle_%", "mmlu_pro_%",
-    "ifbench_%", "lcr_%", "tau2_%", "tau_banking_%", "livecodebench_%",
-    "terminalbench_hard_%", "terminalbench_v2_1_%", "scicode_%", "math_500_%",
-    "aime_%", "aime_25_%", "speed_tps", "ttft_s", "ttfa_s", "slug",
+    "intelligence", "coding", "agentic", "omniscience", "gpqa_%", "hle_%",
+    "critpt_%", "non_halluc_%", "ifbench_%", "lcr_%", "tau2_%", "tau_banking_%",
+    "gdpval_%", "terminalbench_hard_%", "terminalbench_v2_1_%", "scicode_%",
+    "mmmu_pro_%", "speed_tps", "ttft_s", "ttfa_s", "slug",
 ]
 
 
@@ -47,23 +51,25 @@ def to_row(m):
         fmt(pricing.get("blended_3_1")),
         fmt(composite.get("intelligence_index_v4_1")),
         fmt(composite.get("coding_index")),
-        fmt(composite.get("math_index")),
+        fmt(composite.get("agentic_index")),
+        fmt(composite.get("omniscience_index")),
         fmt(bench.get("gpqa_diamond")),
         fmt(bench.get("hle")),
-        fmt(bench.get("mmlu_pro")),
+        fmt(bench.get("critpt")),
+        fmt(bench.get("omniscience_non_halluc")),
         fmt(bench.get("ifbench")),
         fmt(bench.get("lcr")),
         fmt(bench.get("tau2_bench")),
         fmt(bench.get("tau3_banking")),
-        fmt(bench.get("livecodebench")),
+        fmt(bench.get("gdpval_v2")),
         fmt(bench.get("terminalbench_hard")),
         fmt(bench.get("terminalbench_v2_1")),
         fmt(bench.get("scicode")),
-        fmt(bench.get("math_500")),
-        fmt(bench.get("aime")),
-        fmt(bench.get("aime25")),
+        fmt(bench.get("mmmu_pro")),
         fmt(perf.get("output_speed_tps")),
-        fmt(perf.get("ttft_seconds_thinking")),
+        # AA no longer reports a separate time-to-first-reasoning-chunk, so this
+        # is time to first chunk of any kind, matching the All Models table.
+        fmt(perf.get("ttft_seconds_total")),
         fmt(perf.get("ttft_seconds_answer")),
         m.get("slug"),
     ]

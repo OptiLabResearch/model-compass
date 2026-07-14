@@ -192,17 +192,22 @@
       </summary>
       <div style="margin-top: 8px; padding: 10px; background: var(--surface-2); border-radius: 6px;">
         <div style="font-size: 11px; color: var(--text-secondary); line-height: 1.5; margin-bottom: 8px;">
-          By default this page uses a free keyword classifier (no API calls). For more accurate
-          classification, paste an OpenRouter API key below — it's used only to classify your task
-          description, never sent anywhere else.
+          This page asks an LLM to read the benchmark table and pick a model for your task,
+          citing the numbers. It runs on the server — you don't need a key. The hard safety
+          gates are enforced in code afterwards, so the LLM can advise but cannot talk its way
+          past a non-hallucination floor.
+          <br><br>
+          If the recommender is rate-limited or unreachable, the page falls back to its weighted
+          formula and tells you so. You can optionally paste an OpenRouter key below to have
+          <em>your</em> key classify the task in that case; the ranking still comes from the formula.
         </div>
         <label for="api-key" style="font-size: 11px; font-weight: 500; color: var(--text-secondary); display: block; margin-bottom: 4px;">
-          OpenRouter API key (optional)
+          OpenRouter API key (optional fallback)
         </label>
         <input type="password" id="api-key" placeholder="sk-or-v1-..." style="width: 100%; padding: 6px 8px; font-size: 12px; border: 1px solid var(--border); border-radius: 4px; font-family: monospace; background: var(--surface); color: var(--text);">
         <div class="hint" style="margin-top: 6px;">
-          With a fallback key, classification uses MiMo-V2.5 base (~¢/call, ~$0.0001 each).
-          Key is stored in localStorage and only sent to openrouter.ai.
+          Only used if the server recommender is unavailable. Stored in localStorage,
+          sent only to openrouter.ai.
           <!-- Plaintext localStorage — fine for a personal-use local file, but don't paste a shared/org key here. -->
           <strong>Note:</strong> stored in localStorage in plaintext (not encrypted).
         </div>
@@ -505,15 +510,103 @@ function validateAndShapeLLMResult(parsed, source) {
   };
 }
 
+/* ===========================================================
+ * LLM recommender (via the /api/recommend Pages Function)
+ *
+ * The proxy holds the API key server-side, so this works for every visitor
+ * with no key to paste. Unlike the classifier above, the LLM here reads the
+ * actual benchmark rows and picks a model, which lets it weigh tradeoffs the
+ * fixed TASK_WEIGHTS formula cannot express.
+ *
+ * It does NOT get the last word. renderResult() re-applies the hard gates to
+ * whatever it returns, using the task type and scenarios it reported, and
+ * discards a pick that fails one. The LLM advises; the gates decide.
+ * =========================================================== */
+
+// The rows the LLM reasons over. Flat and short-keyed — the model reads these far
+// more reliably than the nested schema.
+//
+// The field list is deliberately lean. Groq's free tier allows 8000 tokens per
+// minute, counting prompt + completion, so every field here is paid for out of a
+// budget that also has to cover the model's reasoning. Redundant metrics are left
+// out (terminalbench_hard duplicates v2_1, tau2 duplicates tau3), values are
+// rounded, and nulls are dropped — an absent key reads as "untested" just as well
+// as an explicit null, at a fraction of the tokens.
+function candidateRow(m) {
+  const r1 = v => (typeof v === 'number' ? Math.round(v * 10) / 10 : null);
+  const row = {
+    slug: m.slug,
+    name: m.name,
+    creator: m.creator,
+    intelligence: r1(m.composite?.intelligence_index_v4_1),
+    coding_index: r1(m.composite?.coding_index),
+    agentic_index: r1(m.composite?.agentic_index),
+    non_halluc: r1(m.benchmarks?.omniscience_non_halluc),
+    omniscience_accuracy: r1(m.benchmarks?.omniscience_accuracy),
+    gpqa: r1(m.benchmarks?.gpqa_diamond),
+    hle: r1(m.benchmarks?.hle),
+    scicode: r1(m.benchmarks?.scicode),
+    ifbench: r1(m.benchmarks?.ifbench),
+    lcr_long_context: r1(m.benchmarks?.lcr),
+    tau3_banking: r1(m.benchmarks?.tau3_banking),
+    terminalbench: r1(m.benchmarks?.terminalbench_v2_1),
+    mmmu_pro_vision: r1(m.benchmarks?.mmmu_pro),
+    context_tokens: m.context_tokens ?? null,
+    cost_per_task_usd: m.cost_per_intelligence_task_usd?.total ?? null,
+    price_out_per_m: m.pricing_per_m_tokens?.output ?? null,
+    output_speed_tps: r1(m.performance?.output_speed_tps),
+    ttft_seconds: r1(m.performance?.ttft_seconds_answer),
+  };
+  for (const k of Object.keys(row)) {
+    if (row[k] === null || row[k] === undefined) delete row[k];
+  }
+  return row;
+}
+
+async function recommendWithProxy(text) {
+  const res = await fetch('/api/recommend', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ task: text, candidates: MODELS.map(candidateRow) }),
+  });
+
+  if (!res.ok) {
+    const body = await res.json().catch(() => ({}));
+    throw new Error(body.error || `Recommender returned ${res.status}`);
+  }
+
+  const r = await res.json();
+  return {
+    type: r.type,
+    scores: { [r.type]: r.confidence },
+    confidence: r.confidence,
+    scenarios: r.scenarios || {},
+    multi: Array.isArray(r.multi_step) && r.multi_step.length > 0 ? r.multi_step : null,
+    rationale: r.rationale,
+    tradeoff: r.tradeoff,
+    llm_pick: r.pick,
+    llm_runner_up: r.runner_up,
+    source: 'llm',
+  };
+}
+
 async function classify(text) {
-  // Always try LLM first (proxy → OpenRouter → fail to keywords)
+  // Proxy (server-held key, picks a model) → user's own OpenRouter key
+  // (classifies only) → keyword matching (classifies only). Each step down
+  // still produces a usable recommendation, just a less informed one.
   try {
-    return await classifyWithLLM(text);
-  } catch (e) {
-    console.warn('LLM classification failed, falling back to keywords:', e);
-    const result = classifyTask(text);
-    result.llm_error = e.message;
-    return result;
+    return await recommendWithProxy(text);
+  } catch (proxyError) {
+    console.warn('LLM recommender unavailable:', proxyError);
+    try {
+      const result = await classifyWithLLM(text);
+      result.llm_error = `Recommender unavailable (${proxyError.message}) — classified with your OpenRouter key, ranked by formula.`;
+      return result;
+    } catch (e) {
+      const result = classifyTask(text);
+      result.llm_error = `${proxyError.message} — fell back to the keyword classifier.`;
+      return result;
+    }
   }
 }
 
@@ -716,9 +809,16 @@ function checkGate(model, gate) {
 }
 
 function pickForTask(taskType, scenarios) {
-  // Determine which gate set to use
+  // Determine which gate set to use.
+  //
+  // The latency gate keys off the task type and low_latency, NOT a `scenarios.voice`
+  // flag: neither classifier has ever emitted one (SCENARIO_HINTS has no `voice`
+  // key, and the LLM's schema reports low_latency instead), so the gate sat dead
+  // and voice tasks were being answered by 30-seconds-to-first-token models.
+  const needsLowLatency = taskType === 'voice' || scenarios.voice || scenarios.low_latency;
+
   let gateSet = HARD_GATES.default;
-  if (scenarios.voice) gateSet = HARD_GATES.voice;
+  if (needsLowLatency) gateSet = HARD_GATES.voice;
   else if (scenarios.unattended && !scenarios.interactive) gateSet = HARD_GATES.unattended;
   if (scenarios.high_stakes) gateSet = HARD_GATES.high_stakes;
 
@@ -944,30 +1044,90 @@ function renderResult(classification, text) {
   // Build pick for primary task
   const result = pickForTask(taskType, scenarios);
   if (result.error) {
+    // Nothing cleared the bar. Say so plainly and name the bar — then still show
+    // how close the field gets, because "no answer" is not an answer. Notably no
+    // tracked model reaches 5s to first token, so every voice task lands here.
+    const gateText = scenarios.high_stakes
+      ? 'high-stakes work needs ≥80% non-hallucination and ≥45 intelligence'
+      : (taskType === 'voice' || scenarios.low_latency)
+        ? 'a real-time/voice task needs ≤5s to the first answer token — no tracked model is there yet'
+        : 'unattended work needs ≥70% non-hallucination';
+
+    const closest = pickForTask(taskType, {}).candidates.slice(0, 5);
     results.innerHTML = `
       <h2 style="margin-top:0">No model passed</h2>
       <div class="top-pick" style="background: var(--red-bg); border-color: var(--red-dark);">
-        <div class="top-pick-name">⚠️ ${result.error}</div>
-        <div class="top-pick-rationale">Try a different task type, or relax the safety floor by reviewing outputs.</div>
+        <div class="top-pick-name">⚠️ Nothing clears the bar for this task</div>
+        <div class="top-pick-rationale">
+          The hard gate is not negotiable: ${gateText}.
+          Rather than hand you a model that fails it, here is the closest the field gets — with
+          the caveat that using any of them means accepting the risk the gate exists to prevent.
+        </div>
+      </div>
+      <div class="candidates">
+        <table>
+          <tr><th class="l">Model</th><th>Score</th><th>Non-halluc</th><th>TTFT</th><th>Intel</th></tr>
+          ${closest.map(c => `
+            <tr>
+              <td class="l"><strong>${c.model.name}</strong></td>
+              <td>${(c.score * 100).toFixed(0)}</td>
+              <td>${fmtPct(c.model.benchmarks?.omniscience_non_halluc)}</td>
+              <td>${fmtSec(c.model.performance?.ttft_seconds_answer)}</td>
+              <td>${fmtNum(c.model.composite?.intelligence_index_v4_1, 1)}</td>
+            </tr>`).join('')}
+        </table>
       </div>
     `;
     return;
   }
 
-  const top = result.candidates[0];
-  const runnerUp = result.candidates[1];
+  // The LLM advises; the gates decide. `result.candidates` is already filtered by
+  // the hard gates for the scenarios the LLM itself reported, so a pick that is
+  // absent from it failed a gate (e.g. it chose a model below the non-hallucination
+  // floor for unattended work). In that case we keep the deterministic pick and say so.
+  let top = result.candidates[0];
+  let runnerUp = result.candidates[1];
+  let gateOverride = null;
+
+  if (classification.llm_pick) {
+    const chosen = result.candidates.find(c => c.model.slug === classification.llm_pick);
+    if (chosen) {
+      top = chosen;
+      const named = result.candidates.find(c => c.model.slug === classification.llm_runner_up);
+      runnerUp = (named && named !== chosen)
+        ? named
+        : result.candidates.find(c => c !== chosen);
+    } else {
+      gateOverride = classification.llm_pick;
+    }
+  }
+
   const taskLabel = TASK_LABELS[taskType] || taskType;
 
   // Confidence-aware output: if the top two are within 0.05, it's a toss-up —
   // don't present a false clear winner.
-  const isTossup = runnerUp && (top.score - runnerUp.score) < 0.05;
+  // Math.abs: when the LLM promotes a model the formula ranked lower, the gap is
+  // negative — still a toss-up, not a landslide.
+  const isTossup = runnerUp && Math.abs(top.score - runnerUp.score) < 0.05;
   const tossupHtml = isTossup ? `
     <div class="fusion-card" style="background: var(--accent-bg); border-left-color: var(--accent);">
       <div class="title">⚖️ Toss-up — either works</div>
       <strong>${top.model.name}</strong> (${(top.score * 100).toFixed(0)}) and
       <strong>${runnerUp.model.name}</strong> (${(runnerUp.score * 100).toFixed(0)}) score within
-      ${((top.score - runnerUp.score) * 100).toFixed(1)} points. Decide on secondary factors —
+      ${(Math.abs(top.score - runnerUp.score) * 100).toFixed(1)} points. Decide on secondary factors —
       cost, speed, or which you already trust.
+    </div>
+  ` : '';
+
+  // A gate veto is worth surfacing loudly: it's the safety floor doing its job.
+  const gateOverrideHtml = gateOverride ? `
+    <div class="fusion-card" style="background: var(--yellow-bg); border-left-color: var(--yellow-dark);">
+      <div class="title">🛡️ Safety gate overrode the LLM</div>
+      The recommender chose <strong>${gateOverride}</strong>, which fails the hard gate for this
+      task${scenarios.high_stakes ? ' (high-stakes: needs ≥80% non-hallucination and ≥45 intelligence)'
+        : scenarios.unattended ? ' (unattended: needs ≥70% non-hallucination)'
+        : scenarios.voice ? ' (voice: needs ≤5s to first token)' : ''}.
+      Showing the highest-scoring model that passes instead.
     </div>
   ` : '';
 
@@ -1099,8 +1259,19 @@ function renderResult(classification, text) {
     </div>
   ` : '';
 
+  // Prefer the LLM's reasoning — it cites real numbers against this specific
+  // task. buildRationale() is the template-based fallback.
+  const whyHtml = (source === 'llm' && classification.rationale && !gateOverride)
+    ? classification.rationale
+    : buildRationale(top.model, taskType, scenarios);
+  const tradeoffHtml = (classification.tradeoff && !gateOverride) ? `
+      <div class="top-pick-rationale" style="border-top:1px solid var(--border); margin-top:8px; padding-top:8px;">
+        <span class="why">Tradeoff:</span> ${classification.tradeoff}
+      </div>` : '';
+
   results.innerHTML = `
     <h2 style="margin-top:0">Recommendation</h2>
+    ${gateOverrideHtml}
     ${tossupHtml}
     ${fusionHtml}
     <div class="top-pick">
@@ -1118,8 +1289,9 @@ function renderResult(classification, text) {
         <div class="stat"><div class="label">TTFT</div><div class="value">${fmtSec(top.model.performance?.ttft_seconds_answer)}</div></div>
       </div>
       <div class="top-pick-rationale">
-        <span class="why">Why:</span> ${buildRationale(top.model, taskType, scenarios)}
+        <span class="why">Why:</span> ${whyHtml}
       </div>
+      ${tradeoffHtml}
       <div class="breakdown">${renderBreakdown(top.breakdown)}</div>
     </div>
     ${multiStepHtml}
@@ -1169,7 +1341,7 @@ document.getElementById('pick-btn').addEventListener('click', async () => {
   // Show loading state
   const btn = document.getElementById('pick-btn');
   const originalLabel = btn.textContent;
-  btn.textContent = 'Classifying…';
+  btn.textContent = PROXY_AVAILABLE ? 'Reading benchmarks…' : 'Classifying…';
   btn.disabled = true;
   try {
     const classification = await classify(text);
@@ -1190,12 +1362,32 @@ document.getElementById('clear-btn').addEventListener('click', () => {
 });
 
 /* API key handlers */
+
+// Is the server-side recommender live and holding a key? Probed once on load.
+// Under `python3 -m http.server` there is no Functions runtime, so this 404s and
+// the page quietly presents itself as the keyword-classifier build.
+let PROXY_AVAILABLE = null;
+
+async function probeProxy() {
+  try {
+    const res = await fetch('/api/recommend');
+    PROXY_AVAILABLE = res.ok && (await res.json()).configured === true;
+  } catch {
+    PROXY_AVAILABLE = false;
+  }
+  void updateClassifierMode();
+}
+
 async function updateClassifierMode() {
   const mode = document.getElementById('classifier-mode');
   if (!mode) return;
   const hasKey = !!localStorage.getItem('openrouter-api-key');
-  if (hasKey) {
-    mode.textContent = '🧠 LLM classifier (MiMo-V2.5 base via OpenRouter, key in localStorage)';
+
+  if (PROXY_AVAILABLE) {
+    mode.textContent = '🧠 LLM recommender (reads the benchmarks and picks — no API key needed)';
+    mode.style.color = 'var(--text-secondary)';
+  } else if (hasKey) {
+    mode.textContent = '🧠 LLM classifier (via your OpenRouter key; ranked by formula)';
     mode.style.color = 'var(--text-secondary)';
   } else {
     mode.textContent = '⚡ Keyword classifier (no LLM) — paste an OpenRouter key for better accuracy';
@@ -1231,6 +1423,7 @@ if (localStorage.getItem('openrouter-api-key')) {
   document.getElementById('api-key').placeholder = '•••••••• (saved — paste to replace)';
 }
 void updateClassifierMode();
+void probeProxy();
 
 document.querySelectorAll('.example-chip').forEach(chip => {
   chip.addEventListener('click', () => {
