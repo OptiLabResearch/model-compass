@@ -4,9 +4,9 @@
    ModelCompassNav.checkStaleness(scrapedAtISOString). */
 (function () {
   const PAGES = [
-    { href: 'index.html', label: 'Picker' },
-    { href: 'shortlist.html', label: 'Shortlist' },
-    { href: 'models.html', label: 'All Models' },
+    { href: 'index.html', label: 'Picker', sub: 'Describe a task, get a model' },
+    { href: 'shortlist.html', label: 'Shortlist', sub: 'Curated top models' },
+    { href: 'models.html', label: 'All Models', sub: 'Full benchmark table' },
   ];
 
   function currentFile() {
@@ -18,12 +18,26 @@
     const mount = document.getElementById('site-nav');
     if (!mount) return;
     const current = currentFile();
+    const currentPage = PAGES.find(p => p.href === current) || PAGES[0];
     mount.innerHTML =
-      '<a class="brand" href="index.html">Model Compass</a>' +
-      '<div class="tabs">' +
+      '<a class="brand" href="index.html">' +
+        '<span class="brand-tile" aria-hidden="true">🧭</span>' +
+        '<span class="brand-text">' +
+          '<span class="brand-name">Model Compass</span>' +
+          '<span class="brand-sub">' + currentPage.sub + '</span>' +
+        '</span>' +
+      '</a>' +
+      '<nav class="tabs">' +
       PAGES.map(p => '<a class="tab' + (p.href === current ? ' active' : '') + '" href="' + p.href + '">' + p.label + '</a>').join('') +
-      '</div>' +
-      '<a class="gh-link" href="https://github.com/" target="_blank" rel="noopener">GitHub ↗</a>';
+      '</nav>' +
+      '<div class="nav-actions">' +
+        '<a class="btn btn-ghost" href="https://github.com/" target="_blank" rel="noopener">GitHub ↗</a>' +
+        '<button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch theme" title="Switch theme"></button>' +
+      '</div>';
+
+    applyTheme(currentTheme());
+    const btn = document.getElementById('theme-toggle');
+    if (btn) btn.addEventListener('click', toggleTheme);
   }
 
   function renderFooter() {
@@ -66,6 +80,28 @@
     if (!scrapedAtISO) return;
     lastScrapedAt = scrapedAtISO;
     applyStaleness();
+  }
+
+  /* ---- Theme toggle: 2-state light <-> dark, seeded from OS, sticky once clicked ---- */
+  const THEME_KEY = 'mc-theme';
+
+  function systemTheme() {
+    return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+  }
+  // The stored value wins; absent one, we are following the OS.
+  function currentTheme() {
+    try { return localStorage.getItem(THEME_KEY) || systemTheme(); }
+    catch (e) { return systemTheme(); }
+  }
+  function applyTheme(theme) {
+    document.documentElement.setAttribute('data-theme', theme);
+    const btn = document.getElementById('theme-toggle');
+    if (btn) btn.textContent = theme === 'dark' ? '☀' : '☾'; // show the destination
+  }
+  function toggleTheme() {
+    const next = currentTheme() === 'dark' ? 'light' : 'dark';
+    try { localStorage.setItem(THEME_KEY, next); } catch (e) {}
+    applyTheme(next);
   }
 
   window.ModelCompassNav = { checkStaleness };

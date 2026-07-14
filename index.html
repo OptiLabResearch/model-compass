@@ -3,6 +3,14 @@
 <head>
 <meta charset="utf-8">
 <title>Model Picker — describe your task, get a model recommendation</title>
+<script>
+  (function () {
+    try {
+      var t = localStorage.getItem('mc-theme');
+      if (t === 'dark' || t === 'light') document.documentElement.setAttribute('data-theme', t);
+    } catch (e) {}
+  })();
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -13,38 +21,36 @@
     margin: 0; padding: 24px; color: var(--text); background: var(--bg);
     font-size: 14px; line-height: 1.5;
   }
-  .container { max-width: 900px; margin: 0 auto; }
+  .container { max-width: 1100px; margin: 0 auto; }
   header { padding: 0 0 16px; border-bottom: 1px solid var(--border); margin-bottom: 20px; }
   h1 { font-family: var(--serif); font-size: 26px; margin: 0 0 4px; font-weight: 600; letter-spacing: -0.2px; }
   .subtitle { color: var(--text-muted); font-size: 13px; }
   code, .cost-badge, .stat .value, .badge, .breakdown-row .bval { font-family: var(--mono); }
 
-  .input-panel { background: var(--surface); border: 1px solid var(--border);
-    border-radius: 12px; padding: 20px; margin-bottom: 16px; }
+  .input-panel { border-radius: var(--r-lg); padding: 24px; margin-bottom: 16px; }
   .input-panel label { display: block; font-size: 12px; font-weight: 500;
     color: var(--text-secondary); margin-bottom: 6px; }
   .input-panel textarea { width: 100%; padding: 12px; font-size: 15px; line-height: 1.5;
-    border: 1px solid var(--border); border-radius: 6px; background: var(--surface);
+    border: 1px solid var(--border); border-radius: var(--r-sm); background: var(--surface); color: var(--text);
     font-family: inherit; resize: vertical; min-height: 100px; }
   .input-panel textarea:focus { outline: 0; border-color: var(--accent);
     box-shadow: 0 0 0 2px var(--border-focus); }
   .input-panel .hint { font-size: 12px; color: var(--text-muted); margin-top: 6px; }
-  .button { display: inline-block; padding: 10px 20px; font-size: 14px; font-weight: 600;
-    background: var(--accent); color: #fff; border: none; border-radius: 6px;
-    cursor: pointer; transition: opacity .15s; margin-top: 12px; }
-  .button:hover { opacity: 0.88; }
+  .button { display: inline-flex; align-items: center; gap: 6px; padding: 10px 20px;
+    font-size: 14px; font-weight: 600; background: var(--accent); color: var(--accent-fg);
+    border: none; border-radius: var(--r-pill); cursor: pointer; transition: background .15s; margin-top: 12px; }
+  .button:hover { background: var(--accent-hover); }
   .button.secondary { background: var(--surface-2); color: var(--text-secondary); }
   .button-row { display: flex; gap: 8px; align-items: center; }
   .examples { margin-top: 12px; }
   .examples-title { font-size: 11px; color: var(--text-muted); text-transform: uppercase;
     letter-spacing: 0.5px; margin-bottom: 6px; }
   .example-chip { display: inline-block; padding: 5px 10px; font-size: 12px;
-    border: 1px solid var(--border); border-radius: 14px; background: var(--surface-2);
+    border: 1px solid var(--border); border-radius: var(--r-pill); background: var(--surface-2);
     color: var(--text-secondary); cursor: pointer; margin: 2px; user-select: none; }
   .example-chip:hover { border-color: var(--accent); color: var(--accent); }
 
-  .results { background: var(--surface); border: 1px solid var(--border);
-    border-radius: 8px; padding: 24px; min-height: 200px; }
+  .results { border-radius: var(--r-lg); padding: 24px; min-height: 200px; }
   .empty { color: var(--text-muted); text-align: center; padding: 60px 20px; }
 
   .top-pick { border: 1px solid var(--border); border-left: 3px solid var(--accent);
@@ -65,8 +71,8 @@
   .badge { font-size: 10px; font-weight: 600; padding: 2px 8px; border-radius: 10px; }
   .badge.cron { background: var(--green-bg); color: var(--green-dark); }
   .badge.budget { background: var(--yellow-bg); color: var(--yellow-dark); }
-  .badge.privacy { background: #e0e7ff; color: #3730a3; }
-  .badge.frontier { background: #fce7f3; color: #9d174d; }
+  .badge.privacy { background: var(--blue-bg); color: var(--blue-dark); }
+  .badge.frontier { background: var(--pink-bg); color: var(--pink-dark); }
 
   .runner-up { border: 1px solid var(--border); border-radius: 8px; padding: 14px;
     background: var(--surface-2); margin-bottom: 14px; }
@@ -102,8 +108,8 @@
 
   .meta { color: var(--text-muted); font-size: 11px; margin-top: 12px; }
   .meta a { color: var(--accent); }
-  .toast { position: fixed; bottom: 20px; right: 20px; background: var(--text);
-    color: #fff; padding: 10px 16px; border-radius: 6px; font-size: 13px;
+  .toast { position: fixed; bottom: 20px; right: 20px; background: var(--tooltip-bg);
+    color: var(--tooltip-fg); padding: 10px 16px; border-radius: var(--r-sm); font-size: 13px;
     opacity: 0; transition: opacity .2s; pointer-events: none; }
   .toast.show { opacity: 1; }
 
@@ -125,7 +131,7 @@
     flex-wrap: wrap; }
   .cost-estimator label { font-size: 11px; color: var(--text-secondary); }
   .cost-estimator input[type="number"] { width: 90px; padding: 4px 6px; font-size: 12px;
-    border: 1px solid var(--border); border-radius: 4px; }
+    border: 1px solid var(--border); border-radius: var(--r-sm); background: var(--surface); color: var(--text); }
   .cost-badge { font-size: 11px; color: var(--text-secondary); font-weight: 600; }
 
   .audit-indicator { font-size: 10px; color: var(--text-muted); }
@@ -146,12 +152,19 @@
   <header>
     <h1>Model Picker</h1>
     <div class="subtitle">Describe your task. Get a model recommendation. Reads from <code>data/models.json</code> (last scrape: <span id="scrape-time">—</span>). <a href="shortlist.html">Full table →</a></div>
-    <div id="staleness-banner" hidden style="background:var(--yellow-bg);color:var(--yellow-dark);border:1px solid var(--yellow-dark);border-radius:6px;padding:8px 14px;margin-top:8px;font-size:12px;font-weight:600">
+    <div id="staleness-banner" class="staleness-banner" hidden style="margin-top:8px">
       ⚠️ <span id="staleness-text"></span>
     </div>
   </header>
 
-  <div class="input-panel">
+  <div class="stat-strip" id="stat-strip">
+    <div class="card stat-tile"><div class="label">Models Tracked</div><div class="value" id="stat-models">—</div></div>
+    <div class="card stat-tile"><div class="label">Creators</div><div class="value" id="stat-creators">—</div></div>
+    <div class="card stat-tile"><div class="label">Median Blended</div><div class="value" id="stat-median-blend">—<span class="unit">/M</span></div></div>
+    <div class="card stat-tile"><div class="label">Last Scrape</div><div class="value" id="stat-scrape-date" style="font-size:22px">—</div></div>
+  </div>
+
+  <div class="input-panel card">
     <label for="task">What do you want done?</label>
     <textarea id="task" placeholder="Examples:&#10;• Generate my morning check-in (asks about sleep, last session, supplements)&#10;• Debug a bash script that's failing on a cron job&#10;• Research the trade-offs of three different state management libraries&#10;• Architect a multi-tenant system for SaaS"></textarea>
     <div class="hint">The model behind this picker will classify the task, apply hard gates, and recommend the best fit. If your task has multiple stages (compress → generate → verify), the picker may return a multi-step plan.</div>
@@ -186,7 +199,7 @@
         <label for="api-key" style="font-size: 11px; font-weight: 500; color: var(--text-secondary); display: block; margin-bottom: 4px;">
           OpenRouter API key (optional)
         </label>
-        <input type="password" id="api-key" placeholder="sk-or-v1-..." style="width: 100%; padding: 6px 8px; font-size: 12px; border: 1px solid var(--border); border-radius: 4px; font-family: monospace;">
+        <input type="password" id="api-key" placeholder="sk-or-v1-..." style="width: 100%; padding: 6px 8px; font-size: 12px; border: 1px solid var(--border); border-radius: 4px; font-family: monospace; background: var(--surface); color: var(--text);">
         <div class="hint" style="margin-top: 6px;">
           With a fallback key, classification uses MiMo-V2.5 base (~¢/call, ~$0.0001 each).
           Key is stored in localStorage and only sent to openrouter.ai.
@@ -201,7 +214,7 @@
     </details>
   </div>
 
-  <div class="results" id="results">
+  <div class="results card" id="results">
     <div class="empty">Describe your task above and click <strong>Recommend model</strong>.<br><br>The picker will classify the task, apply safety gates, and recommend the best model (or a multi-step plan if the task has stages).</div>
   </div>
 </div>
@@ -218,6 +231,20 @@ let META = {};
 // Fallback used if picker-config.json is missing or fails to load.
 let CONFIG = { classifier_model: 'xiaomi/mimo-v2-5' };
 
+function updateStatStrip(scrapedAt) {
+  const modelsEl = document.getElementById('stat-models');
+  if (modelsEl) modelsEl.textContent = MODELS.length;
+  const creators = new Set(MODELS.map(m => m.creator).filter(Boolean));
+  const creatorsEl = document.getElementById('stat-creators');
+  if (creatorsEl) creatorsEl.textContent = creators.size;
+  const blends = MODELS.map(m => m.pricing_per_m_tokens?.blended_7_2_1).filter(v => v != null).sort((a, b) => a - b);
+  const median = blends.length ? blends[Math.floor(blends.length / 2)] : null;
+  const medianEl = document.getElementById('stat-median-blend');
+  if (medianEl) medianEl.innerHTML = (median != null ? `$${median.toFixed(2)}` : '—') + '<span class="unit">/M</span>';
+  const dateEl = document.getElementById('stat-scrape-date');
+  if (dateEl) dateEl.textContent = scrapedAt ? scrapedAt.slice(0, 10) : '—';
+}
+
 async function loadData() {
   try {
     const res = await fetch('./data/models.json');
@@ -227,6 +254,7 @@ async function loadData() {
     const ts = (data.scraped_at || '').replace('T', ' ').replace('Z', '');
     document.getElementById('scrape-time').textContent = ts;
     ModelCompassNav.checkStaleness(data.scraped_at);
+    updateStatStrip(data.scraped_at);
   } catch (e) {
     document.getElementById('results').innerHTML =
       '<div class="empty">⚠️ Could not load <code>data/models.json</code>. Make sure you\'re serving this site over HTTP (not opening the file directly) — see the README.<br><br>Error: ' + e.message + '</div>';
@@ -1049,7 +1077,7 @@ function renderResult(classification, text) {
   const classifiedAs = `
     <div class="meta">
       Classified as <strong>${taskLabel}</strong>${confidence ? ` (confidence ${(Math.min(confidence, 1) * 100).toFixed(0)}%)` : ''}
-      ${source === 'llm' ? ' · <span class="badge" style="background: #dbeafe; color: #1e40af;">🧠 LLM</span>' : ' · <span class="badge" style="background: var(--surface-2); color: var(--text-muted);">⚡ keyword</span>'}
+      ${source === 'llm' ? ' · <span class="badge" style="background: var(--blue-bg); color: var(--blue-dark);">🧠 LLM</span>' : ' · <span class="badge" style="background: var(--surface-2); color: var(--text-muted);">⚡ keyword</span>'}
       ${Object.keys(scenarios).filter(s => scenarios[s] && s !== 'unattended' && s !== 'interactive').map(s => ` · ${s.replace(/_/g, ' ')}`).join('')}
       ${rationale ? ` · <em>${rationale}</em>` : ''}
       ${llm_error ? ` · <span style="color: var(--yellow-dark);">LLM fallback: ${llm_error}</span>` : ''}
