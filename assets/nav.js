@@ -104,7 +104,46 @@
     applyTheme(next);
   }
 
-  window.ModelCompassNav = { checkStaleness };
+  function escapeHtml(value) {
+    return String(value == null ? '' : value)
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;')
+      .replace(/'/g, '&#39;');
+  }
+
+  // Only allow absolute https URLs on known hosts, or same-origin relative paths.
+  const URL_HOST_ALLOWLIST = new Set([
+    'artificialanalysis.ai',
+    'www.artificialanalysis.ai',
+    'github.com',
+    'www.github.com',
+    'openrouter.ai',
+  ]);
+
+  function safeUrl(value, fallback) {
+    const fb = fallback == null ? '#' : fallback;
+    if (value == null || value === '') return fb;
+    const raw = String(value).trim();
+    if (!raw || /^javascript:/i.test(raw) || /^data:/i.test(raw) || /^vbscript:/i.test(raw)) {
+      return fb;
+    }
+    if (raw.startsWith('/') || raw.startsWith('./') || raw.startsWith('../') || /^[a-zA-Z0-9_.-]+\.html(?:[?#].*)?$/.test(raw)) {
+      return raw;
+    }
+    try {
+      const u = new URL(raw, location.origin);
+      if (u.protocol !== 'https:') return fb;
+      if (u.origin === location.origin) return u.pathname + u.search + u.hash;
+      if (!URL_HOST_ALLOWLIST.has(u.hostname)) return fb;
+      return u.href;
+    } catch (e) {
+      return fb;
+    }
+  }
+
+  window.ModelCompassNav = { checkStaleness, escapeHtml, safeUrl };
 
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', function () { renderNav(); renderFooter(); });

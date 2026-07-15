@@ -7,11 +7,12 @@ Usage:
     python3 scripts/export_history_csv.py [--date YYYY-MM-DD]
 
 Writes data/history/<date>.csv (UTC today by default). Intended to run right
-after scripts/scrape_aa_models.py in the weekly refresh workflow.
+after scripts/fetch_aa_models.py in the weekly refresh workflow.
 """
 
 import csv
 import json
+import os
 import argparse
 from datetime import datetime, timezone
 from pathlib import Path
@@ -85,11 +86,15 @@ def main():
 
     HISTORY_DIR.mkdir(parents=True, exist_ok=True)
     out_path = HISTORY_DIR / f"{date_str}.csv"
-    with open(out_path, "w", newline="") as f:
+    tmp_path = out_path.with_suffix(out_path.suffix + ".tmp")
+    with open(tmp_path, "w", newline="") as f:
         w = csv.writer(f)
         w.writerow(HEADER)
         for m in data["models"]:
             w.writerow(to_row(m))
+        f.flush()
+        os.fsync(f.fileno())
+    os.replace(tmp_path, out_path)
 
     print(f"Wrote {out_path} ({len(data['models'])} models)")
 

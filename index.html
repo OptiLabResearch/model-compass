@@ -211,9 +211,16 @@
           <!-- Plaintext localStorage — fine for a personal-use local file, but don't paste a shared/org key here. -->
           <strong>Note:</strong> stored in localStorage in plaintext (not encrypted).
         </div>
-        <div style="display: flex; gap: 6px; margin-top: 8px;">
+          <div style="display: flex; gap: 6px; margin-top: 8px;">
           <button class="button secondary" id="save-key-btn" style="font-size: 11px; padding: 4px 10px; margin: 0;">Save key</button>
           <button class="button secondary" id="clear-key-btn" style="font-size: 11px; padding: 4px 10px; margin: 0;">Remove key</button>
+        </div>
+        <div style="margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--border);">
+          <label style="font-size: 11px; color: var(--text-secondary); display: flex; gap: 6px; align-items: flex-start; cursor: pointer;">
+            <input type="checkbox" id="audit-consent" style="margin-top: 2px;">
+            <span>Store routing decisions locally for 30 days (task text truncated to 280 chars; never sent to a server). Off by default.</span>
+          </label>
+          <button class="button secondary" id="clear-history-btn" style="font-size: 11px; padding: 4px 10px; margin: 8px 0 0;">Clear local history</button>
         </div>
       </div>
     </details>
@@ -242,10 +249,17 @@ function updateStatStrip(scrapedAt) {
   const creators = new Set(MODELS.map(m => m.creator).filter(Boolean));
   const creatorsEl = document.getElementById('stat-creators');
   if (creatorsEl) creatorsEl.textContent = creators.size;
-  const blends = MODELS.map(m => m.pricing_per_m_tokens?.blended_7_2_1).filter(v => v != null).sort((a, b) => a - b);
+  const blends = MODELS.map(m => m.pricing_per_m_tokens?.blended_3_1).filter(v => v != null).sort((a, b) => a - b);
   const median = blends.length ? blends[Math.floor(blends.length / 2)] : null;
   const medianEl = document.getElementById('stat-median-blend');
-  if (medianEl) medianEl.innerHTML = (median != null ? `$${median.toFixed(2)}` : '—') + '<span class="unit">/M</span>';
+  if (medianEl) {
+    medianEl.textContent = '';
+    medianEl.appendChild(document.createTextNode(median != null ? `$${median.toFixed(2)}` : '—'));
+    const unit = document.createElement('span');
+    unit.className = 'unit';
+    unit.textContent = '/M';
+    medianEl.appendChild(unit);
+  }
   const dateEl = document.getElementById('stat-scrape-date');
   if (dateEl) dateEl.textContent = scrapedAt ? scrapedAt.slice(0, 10) : '—';
 }
@@ -261,8 +275,15 @@ async function loadData() {
     ModelCompassNav.checkStaleness(data.scraped_at);
     updateStatStrip(data.scraped_at);
   } catch (e) {
-    document.getElementById('results').innerHTML =
-      '<div class="empty">⚠️ Could not load <code>data/models.json</code>. Make sure you\'re serving this site over HTTP (not opening the file directly) — see the README.<br><br>Error: ' + e.message + '</div>';
+    const results = document.getElementById('results');
+    results.textContent = '';
+    const empty = document.createElement('div');
+    empty.className = 'empty';
+    empty.appendChild(document.createTextNode('⚠️ Could not load data/models.json. Make sure you\'re serving this site over HTTP (not opening the file directly) — see the README.'));
+    empty.appendChild(document.createElement('br'));
+    empty.appendChild(document.createElement('br'));
+    empty.appendChild(document.createTextNode('Error: ' + (e && e.message ? e.message : String(e))));
+    results.appendChild(empty);
   }
   try {
     const cfgRes = await fetch('./picker-config.json');
@@ -285,7 +306,7 @@ const TASK_KEYWORDS = {
     weight: 1.0,
     keywords: ['morning', 'check-in', 'checkin', 'journal', 'coaching', 'reminder',
       'briefing', 'how was my day', 'reflect', 'mood', 'sleep last night',
-      'conversation', 'conversational', 'voice', 'mental health', 'wellness',
+      'conversation', 'conversational', 'mental health', 'wellness',
       'habit', 'routine', 'mindfulness', 'affirmation', 'motivation', 'support',
       'accountability', 'sit with me', 'talk to me', 'chat with me'],
   },
@@ -392,8 +413,17 @@ function classifyTask(text) {
     return { type: 'general', scores: {}, confidence: 0, source: 'keyword' };
   }
 
-  // Sort by score, take top 1 or 2
-  const sorted = Object.entries(scores).sort((a, b) => b[1] - a[1]);
+  // Sort by score, then by specificity. Specialized types beat coaching/general
+  // on ties so "voice brief for my morning routine" does not land on coaching
+  // just because morning/routine also match coaching keywords.
+  const TYPE_PRIORITY = {
+    voice: 10, vision: 10, coding: 9, agentic: 8, research: 7,
+    architecting: 7, creative: 6, advisor: 5, coaching: 3, general: 1,
+  };
+  const sorted = Object.entries(scores).sort((a, b) => {
+    if (b[1] !== a[1]) return b[1] - a[1];
+    return (TYPE_PRIORITY[b[0]] || 0) - (TYPE_PRIORITY[a[0]] || 0);
+  });
   const top = sorted[0];
   const totalScore = sorted.reduce((s, [_, v]) => s + v, 0);
 
@@ -494,6 +524,10 @@ async function classifyWithLLM(text) {
   throw new Error('No OpenRouter API key set — paste one above, or clear it to use the free keyword classifier.');
 }
 
+function isLlmSource(source) {
+  return source === 'llm' || (typeof source === 'string' && source.startsWith('llm-'));
+}
+
 function validateAndShapeLLMResult(parsed, source) {
   const validTypes = Object.keys(TASK_LABELS);
   if (!validTypes.includes(parsed.type)) {
@@ -505,7 +539,7 @@ function validateAndShapeLLMResult(parsed, source) {
     confidence: parsed.confidence,
     multi: Array.isArray(parsed.multi_step) && parsed.multi_step.length > 0 ? parsed.multi_step : null,
     scenarios: parsed.scenarios || {},
-    rationale: parsed.rationale,
+    rationale: typeof parsed.rationale === 'string' ? parsed.rationale : '',
     source: source === 'proxy' ? 'llm' : `llm-${source}`,
   };
 }
@@ -808,19 +842,52 @@ function checkGate(model, gate) {
   return true;
 }
 
-function pickForTask(taskType, scenarios) {
-  // Determine which gate set to use.
-  //
-  // The latency gate keys off the task type and low_latency, NOT a `scenarios.voice`
-  // flag: neither classifier has ever emitted one (SCENARIO_HINTS has no `voice`
-  // key, and the LLM's schema reports low_latency instead), so the gate sat dead
-  // and voice tasks were being answered by 30-seconds-to-first-token models.
-  const needsLowLatency = taskType === 'voice' || scenarios.voice || scenarios.low_latency;
+// Compose every applicable hard gate. Stricter thresholds win when the same
+// metric appears more than once (higher floor for gte, lower ceiling for lte).
+function composeGateSet(taskType, scenarios) {
+  const byKey = new Map();
+  function add(gates) {
+    for (const g of gates) {
+      const k = g.key + '|' + g.op;
+      const prev = byKey.get(k);
+      if (!prev) {
+        byKey.set(k, { ...g });
+        continue;
+      }
+      if (g.op === 'gte' && g.value > prev.value) byKey.set(k, { ...g });
+      if (g.op === 'lte' && g.value < prev.value) byKey.set(k, { ...g });
+    }
+  }
 
-  let gateSet = HARD_GATES.default;
-  if (needsLowLatency) gateSet = HARD_GATES.voice;
-  else if (scenarios.unattended && !scenarios.interactive) gateSet = HARD_GATES.unattended;
-  if (scenarios.high_stakes) gateSet = HARD_GATES.high_stakes;
+  const needsLowLatency = taskType === 'voice' || scenarios.voice || scenarios.low_latency;
+  if (needsLowLatency) add(HARD_GATES.voice);
+  if (scenarios.unattended && !scenarios.interactive) add(HARD_GATES.unattended);
+  if (scenarios.high_stakes) add(HARD_GATES.high_stakes);
+  return Array.from(byKey.values());
+}
+
+// Deterministic keyword detection is authoritative: the LLM may add a safety
+// flag, but must not clear one (conservative OR). Interactive is only set when
+// neither source marked unattended.
+function mergeScenarios(detected, llmScenarios) {
+  const out = { ...(detected || {}) };
+  const llm = llmScenarios && typeof llmScenarios === 'object' ? llmScenarios : {};
+  const boolKeys = ['unattended', 'long_context', 'low_latency', 'high_stakes', 'cost_sensitive', 'voice'];
+  for (const k of boolKeys) {
+    if (llm[k] === true) out[k] = true;
+  }
+  if (out.unattended) {
+    delete out.interactive;
+  } else if (!out.interactive) {
+    out.interactive = true;
+  }
+  return out;
+}
+
+function pickForTask(taskType, scenarios) {
+  // The latency gate keys off the task type and low_latency/voice scenario flags.
+  // Compose all applicable gates so voice + high-stakes (or unattended) stack.
+  const gateSet = composeGateSet(taskType, scenarios);
 
   // Filter by hard gates
   const candidates = MODELS.filter(m => gateSet.every(g => checkGate(m, g)));
@@ -885,10 +952,10 @@ function cheapestFastModel(cands, fallback) {
   if (!speeds.length) return fallback;
   const median = speeds[Math.floor(speeds.length / 2)];
   const fast = cands.filter(m =>
-    (m.performance?.output_speed_tps ?? 0) > median && m.pricing_per_m_tokens?.blended_7_2_1 != null);
+    (m.performance?.output_speed_tps ?? 0) > median && m.pricing_per_m_tokens?.blended_3_1 != null);
   if (!fast.length) return fallback;
   return fast.reduce((best, m) =>
-    m.pricing_per_m_tokens.blended_7_2_1 < best.pricing_per_m_tokens.blended_7_2_1 ? m : best);
+    m.pricing_per_m_tokens.blended_3_1 < best.pricing_per_m_tokens.blended_3_1 ? m : best);
 }
 
 // Cross-model verifier: highest intelligence among candidates from a DIFFERENT
@@ -992,23 +1059,68 @@ function renderBreakdown(breakdown) {
 
 /* ===========================================================
  * Routing audit log (design doc F4)
- * Kept locally only (localStorage, keyed array, capped at 200 entries) —
- * there's no server for a static site to log to.
+ * Kept locally only (localStorage, keyed array, capped at 50 entries,
+ * 30-day expiry). Full task text is truncated. Clear removes history.
  * =========================================================== */
 const AUDIT_LOCAL_KEY = 'model-picker-audit-log';
+const AUDIT_CONSENT_KEY = 'model-picker-audit-consent';
+const AUDIT_MAX_ENTRIES = 50;
+const AUDIT_MAX_TASK_CHARS = 280;
+const AUDIT_TTL_MS = 30 * 24 * 60 * 60 * 1000;
+
+function pruneAuditLog(log) {
+  const cutoff = Date.now() - AUDIT_TTL_MS;
+  return (Array.isArray(log) ? log : [])
+    .filter(e => e && e.timestamp && Date.parse(e.timestamp) >= cutoff)
+    .slice(-AUDIT_MAX_ENTRIES);
+}
 
 function saveAuditLocally(entry) {
+  if (localStorage.getItem(AUDIT_CONSENT_KEY) !== '1') return;
   let log = [];
   try { log = JSON.parse(localStorage.getItem(AUDIT_LOCAL_KEY)) || []; } catch (e) { log = []; }
-  log.push(entry);
-  if (log.length > 200) log = log.slice(log.length - 200);
+  const safe = {
+    timestamp: entry.timestamp,
+    task_text: String(entry.task_text || '').slice(0, AUDIT_MAX_TASK_CHARS),
+    task_type: entry.task_type,
+    scenarios: entry.scenarios,
+    pick: entry.pick,
+    runner_up: entry.runner_up,
+    scores: entry.scores,
+    source: entry.source,
+  };
+  log.push(safe);
+  log = pruneAuditLog(log);
   localStorage.setItem(AUDIT_LOCAL_KEY, JSON.stringify(log));
+}
+
+function clearAuditHistory() {
+  localStorage.removeItem(AUDIT_LOCAL_KEY);
+  localStorage.removeItem(AUDIT_CONSENT_KEY);
 }
 
 async function logRecommendation(entry) {
   const indicator = document.getElementById('audit-indicator');
+  if (localStorage.getItem(AUDIT_CONSENT_KEY) !== '1') {
+    if (indicator) indicator.textContent = 'not stored (enable in settings)';
+    return;
+  }
   saveAuditLocally(entry);
-  if (indicator) indicator.textContent = 'local only';
+  if (indicator) indicator.textContent = 'local only · expires in 30 days';
+}
+
+function esc(v) {
+  return (window.ModelCompassNav && ModelCompassNav.escapeHtml)
+    ? ModelCompassNav.escapeHtml(v)
+    : String(v == null ? '' : v)
+      .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;').replace(/'/g, '&#39;');
+}
+
+function safeHref(v, fallback) {
+  return (window.ModelCompassNav && ModelCompassNav.safeUrl)
+    ? ModelCompassNav.safeUrl(v, fallback || '#')
+    : (fallback || '#');
 }
 
 function buildRationale(model, taskType, scenarios) {
@@ -1036,10 +1148,12 @@ function buildRationale(model, taskType, scenarios) {
 function renderResult(classification, text) {
   const results = document.getElementById('results');
   const { type: taskType, scores, multi, confidence, source, rationale, llm_error } = classification;
-  // Use LLM-returned scenarios if available, otherwise detect from text
-  const scenarios = (source === 'llm' && classification.scenarios)
-    ? classification.scenarios
-    : detectScenarios(text);
+  // Deterministic detection is authoritative. LLM scenarios may only add flags
+  // (conservative OR) — never clear a safety classification.
+  const detected = detectScenarios(text);
+  const scenarios = isLlmSource(source) && classification.scenarios
+    ? mergeScenarios(detected, classification.scenarios)
+    : detected;
 
   // Build pick for primary task
   const result = pickForTask(taskType, scenarios);
@@ -1047,11 +1161,13 @@ function renderResult(classification, text) {
     // Nothing cleared the bar. Say so plainly and name the bar — then still show
     // how close the field gets, because "no answer" is not an answer. Notably no
     // tracked model reaches 5s to first token, so every voice task lands here.
-    const gateText = scenarios.high_stakes
-      ? 'high-stakes work needs ≥80% non-hallucination and ≥45 intelligence'
-      : (taskType === 'voice' || scenarios.low_latency)
-        ? 'a real-time/voice task needs ≤5s to the first answer token — no tracked model is there yet'
-        : 'unattended work needs ≥70% non-hallucination';
+    const gateParts = [];
+    if (scenarios.high_stakes) gateParts.push('high-stakes work needs ≥80% non-hallucination and ≥45 intelligence');
+    if (scenarios.unattended && !scenarios.interactive) gateParts.push('unattended work needs ≥70% non-hallucination');
+    if (taskType === 'voice' || scenarios.low_latency || scenarios.voice) {
+      gateParts.push('a real-time/voice task needs ≤5s to the first answer token — no tracked model is there yet');
+    }
+    const gateText = gateParts.length ? gateParts.join('; ') : 'the applicable hard gates for this task';
 
     const closest = pickForTask(taskType, {}).candidates.slice(0, 5);
     results.innerHTML = `
@@ -1059,7 +1175,7 @@ function renderResult(classification, text) {
       <div class="top-pick" style="background: var(--red-bg); border-color: var(--red-dark);">
         <div class="top-pick-name">⚠️ Nothing clears the bar for this task</div>
         <div class="top-pick-rationale">
-          The hard gate is not negotiable: ${gateText}.
+          The hard gate is not negotiable: ${esc(gateText)}.
           Rather than hand you a model that fails it, here is the closest the field gets — with
           the caveat that using any of them means accepting the risk the gate exists to prevent.
         </div>
@@ -1069,11 +1185,11 @@ function renderResult(classification, text) {
           <tr><th class="l">Model</th><th>Score</th><th>Non-halluc</th><th>TTFT</th><th>Intel</th></tr>
           ${closest.map(c => `
             <tr>
-              <td class="l"><strong>${c.model.name}</strong></td>
+              <td class="l"><strong>${esc(c.model.name)}</strong></td>
               <td>${(c.score * 100).toFixed(0)}</td>
-              <td>${fmtPct(c.model.benchmarks?.omniscience_non_halluc)}</td>
-              <td>${fmtSec(c.model.performance?.ttft_seconds_answer)}</td>
-              <td>${fmtNum(c.model.composite?.intelligence_index_v4_1, 1)}</td>
+              <td>${esc(fmtPct(c.model.benchmarks?.omniscience_non_halluc))}</td>
+              <td>${esc(fmtSec(c.model.performance?.ttft_seconds_answer))}</td>
+              <td>${esc(fmtNum(c.model.composite?.intelligence_index_v4_1, 1))}</td>
             </tr>`).join('')}
         </table>
       </div>
@@ -1112,21 +1228,23 @@ function renderResult(classification, text) {
   const tossupHtml = isTossup ? `
     <div class="fusion-card" style="background: var(--accent-bg); border-left-color: var(--accent);">
       <div class="title">⚖️ Toss-up — either works</div>
-      <strong>${top.model.name}</strong> (${(top.score * 100).toFixed(0)}) and
-      <strong>${runnerUp.model.name}</strong> (${(runnerUp.score * 100).toFixed(0)}) score within
+      <strong>${esc(top.model.name)}</strong> (${(top.score * 100).toFixed(0)}) and
+      <strong>${esc(runnerUp.model.name)}</strong> (${(runnerUp.score * 100).toFixed(0)}) score within
       ${(Math.abs(top.score - runnerUp.score) * 100).toFixed(1)} points. Decide on secondary factors —
       cost, speed, or which you already trust.
     </div>
   ` : '';
 
   // A gate veto is worth surfacing loudly: it's the safety floor doing its job.
+  const gateReasons = [];
+  if (scenarios.high_stakes) gateReasons.push('high-stakes: needs ≥80% non-hallucination and ≥45 intelligence');
+  if (scenarios.unattended && !scenarios.interactive) gateReasons.push('unattended: needs ≥70% non-hallucination');
+  if (taskType === 'voice' || scenarios.voice || scenarios.low_latency) gateReasons.push('voice: needs ≤5s to first token');
   const gateOverrideHtml = gateOverride ? `
     <div class="fusion-card" style="background: var(--yellow-bg); border-left-color: var(--yellow-dark);">
       <div class="title">🛡️ Safety gate overrode the LLM</div>
-      The recommender chose <strong>${gateOverride}</strong>, which fails the hard gate for this
-      task${scenarios.high_stakes ? ' (high-stakes: needs ≥80% non-hallucination and ≥45 intelligence)'
-        : scenarios.unattended ? ' (unattended: needs ≥70% non-hallucination)'
-        : scenarios.voice ? ' (voice: needs ≤5s to first token)' : ''}.
+      The recommender chose <strong>${esc(gateOverride)}</strong>, which fails the hard gate for this
+      task${gateReasons.length ? ' (' + esc(gateReasons.join('; ')) + ')' : ''}.
       Showing the highest-scoring model that passes instead.
     </div>
   ` : '';
@@ -1146,9 +1264,9 @@ function renderResult(classification, text) {
           <div class="multi-step-label">Recommended pipeline (multi-step)</div>
           ${plan.map((s, i) => `
             <div class="step">
-              <div class="step-num">Step ${i + 1}: ${s.step}</div>
-              <div class="step-name">${s.model.name} <span class="tag">${TASK_LABELS[taskType] || taskType}</span></div>
-              <div class="step-why">${s.why}</div>
+              <div class="step-num">Step ${i + 1}: ${esc(s.step)}</div>
+              <div class="step-name">${esc(s.model.name)} <span class="tag">${esc(TASK_LABELS[taskType] || taskType)}</span></div>
+              <div class="step-why">${esc(s.why)}</div>
             </div>
           `).join('')}
         </div>
@@ -1160,18 +1278,18 @@ function renderResult(classification, text) {
       <div class="multi-step">
         <div class="multi-step-label">Multi-task detected</div>
         <div class="step">
-          <div class="step-num">Primary: ${TASK_LABELS[multi[0]]}</div>
-          <div class="step-name">${top.model.name}</div>
-          <div class="step-why">${buildRationale(top.model, multi[0], scenarios)}</div>
+          <div class="step-num">Primary: ${esc(TASK_LABELS[multi[0]] || multi[0])}</div>
+          <div class="step-name">${esc(top.model.name)}</div>
+          <div class="step-why">${esc(buildRationale(top.model, multi[0], scenarios))}</div>
         </div>
         ${(() => {
           const r2 = pickForTask(multi[1], scenarios);
           if (r2.candidates && r2.candidates[0]) {
             return `
               <div class="step">
-                <div class="step-num">Secondary: ${TASK_LABELS[multi[1]]}</div>
-                <div class="step-name">${r2.candidates[0].model.name}</div>
-                <div class="step-why">${buildRationale(r2.candidates[0].model, multi[1], scenarios)}</div>
+                <div class="step-num">Secondary: ${esc(TASK_LABELS[multi[1]] || multi[1])}</div>
+                <div class="step-name">${esc(r2.candidates[0].model.name)}</div>
+                <div class="step-why">${esc(buildRationale(r2.candidates[0].model, multi[1], scenarios))}</div>
               </div>
             `;
           }
@@ -1216,15 +1334,15 @@ function renderResult(classification, text) {
             const heat = c.score > 0.7 ? 'h1' : c.score > 0.4 ? 'h2' : 'h3';
             return `
               <tr>
-                <td class="l"><strong>${c.model.name}</strong></td>
+                <td class="l"><strong>${esc(c.model.name)}</strong></td>
                 <td class="${heat}"><strong>${(c.score * 100).toFixed(0)}</strong></td>
-                <td>${fmtNum(c.model.composite?.intelligence_index_v4_1, 1)}</td>
-                <td>${fmtPct(c.model.benchmarks?.omniscience_non_halluc)}</td>
-                <td>${fmtDollar(c.model.cost_per_intelligence_task_usd?.total)}</td>
-                <td>${fmtCostEstimate(c.model, estIn, estOut)}</td>
-                <td>${fmtTPS(c.model.performance?.output_speed_tps)}</td>
-                <td>${fmtSec(c.model.performance?.ttft_seconds_answer)}</td>
-                <td>${fmtContext(c.model.context_tokens)}</td>
+                <td>${esc(fmtNum(c.model.composite?.intelligence_index_v4_1, 1))}</td>
+                <td>${esc(fmtPct(c.model.benchmarks?.omniscience_non_halluc))}</td>
+                <td>${esc(fmtDollar(c.model.cost_per_intelligence_task_usd?.total))}</td>
+                <td>${esc(fmtCostEstimate(c.model, estIn, estOut))}</td>
+                <td>${esc(fmtTPS(c.model.performance?.output_speed_tps))}</td>
+                <td>${esc(fmtSec(c.model.performance?.ttft_seconds_answer))}</td>
+                <td>${esc(fmtContext(c.model.context_tokens))}</td>
               </tr>
             `;
           }).join('')}
@@ -1233,16 +1351,21 @@ function renderResult(classification, text) {
     </div>
   `;
 
+  const llmBadge = isLlmSource(source)
+    ? ' · <span class="badge" style="background: var(--blue-bg); color: var(--blue-dark);">🧠 LLM</span>'
+    : ' · <span class="badge" style="background: var(--surface-2); color: var(--text-muted);">⚡ keyword</span>';
+  const aaHref = safeHref(top.model.aa_url, 'https://artificialanalysis.ai/models/' + encodeURIComponent(top.model.slug || ''));
+  const compareHref = 'shortlist.html#models=' + result.candidates.slice(0, 8).map(c => encodeURIComponent(c.model.slug || '')).join(',');
   // Classified-as info
   const classifiedAs = `
     <div class="meta">
-      Classified as <strong>${taskLabel}</strong>${confidence ? ` (confidence ${(Math.min(confidence, 1) * 100).toFixed(0)}%)` : ''}
-      ${source === 'llm' ? ' · <span class="badge" style="background: var(--blue-bg); color: var(--blue-dark);">🧠 LLM</span>' : ' · <span class="badge" style="background: var(--surface-2); color: var(--text-muted);">⚡ keyword</span>'}
-      ${Object.keys(scenarios).filter(s => scenarios[s] && s !== 'unattended' && s !== 'interactive').map(s => ` · ${s.replace(/_/g, ' ')}`).join('')}
-      ${rationale ? ` · <em>${rationale}</em>` : ''}
-      ${llm_error ? ` · <span style="color: var(--yellow-dark);">LLM fallback: ${llm_error}</span>` : ''}
-      · <a href="${top.model.aa_url}" target="_blank">view ${top.model.name} on AA →</a>
-      · <a href="shortlist.html#models=${result.candidates.slice(0, 8).map(c => c.model.slug).join(',')}">compare these ${Math.min(result.candidates.length, 8)} in the full table →</a>
+      Classified as <strong>${esc(taskLabel)}</strong>${confidence ? ` (confidence ${(Math.min(confidence, 1) * 100).toFixed(0)}%)` : ''}
+      ${llmBadge}
+      ${Object.keys(scenarios).filter(s => scenarios[s] && s !== 'unattended' && s !== 'interactive').map(s => ` · ${esc(s.replace(/_/g, ' '))}`).join('')}
+      ${rationale ? ` · <em>${esc(rationale)}</em>` : ''}
+      ${llm_error ? ` · <span style="color: var(--yellow-dark);">LLM fallback: ${esc(llm_error)}</span>` : ''}
+      · <a href="${esc(aaHref)}" target="_blank" rel="noopener">view ${esc(top.model.name)} on AA →</a>
+      · <a href="${esc(compareHref)}">compare these ${Math.min(result.candidates.length, 8)} in the full table →</a>
     </div>
   `;
 
@@ -1250,8 +1373,8 @@ function renderResult(classification, text) {
   const runnerUpHtml = runnerUp ? `
     <div class="runner-up">
       <div class="runner-up-label">Runner-up</div>
-      <div class="runner-up-name">${runnerUp.model.name}</div>
-      <div class="runner-up-why">Score ${(runnerUp.score * 100).toFixed(0)}/100 · ${runnerUp.model.creator} · ${fmtDollar(runnerUp.model.cost_per_intelligence_task_usd?.total)}/task · ${fmtCostEstimate(runnerUp.model, estIn, estOut)}</div>
+      <div class="runner-up-name">${esc(runnerUp.model.name)}</div>
+      <div class="runner-up-why">Score ${(runnerUp.score * 100).toFixed(0)}/100 · ${esc(runnerUp.model.creator)} · ${esc(fmtDollar(runnerUp.model.cost_per_intelligence_task_usd?.total))}/task · ${esc(fmtCostEstimate(runnerUp.model, estIn, estOut))}</div>
       <details>
         <summary>Show score breakdown</summary>
         ${renderBreakdown(runnerUp.breakdown)}
@@ -1260,13 +1383,14 @@ function renderResult(classification, text) {
   ` : '';
 
   // Prefer the LLM's reasoning — it cites real numbers against this specific
-  // task. buildRationale() is the template-based fallback.
-  const whyHtml = (source === 'llm' && classification.rationale && !gateOverride)
-    ? classification.rationale
-    : buildRationale(top.model, taskType, scenarios);
+  // task. buildRationale() is the template-based fallback. Always escape:
+  // rationale/tradeoff are untrusted LLM strings.
+  const whyHtml = (isLlmSource(source) && classification.rationale && !gateOverride)
+    ? esc(classification.rationale)
+    : esc(buildRationale(top.model, taskType, scenarios));
   const tradeoffHtml = (classification.tradeoff && !gateOverride) ? `
       <div class="top-pick-rationale" style="border-top:1px solid var(--border); margin-top:8px; padding-top:8px;">
-        <span class="why">Tradeoff:</span> ${classification.tradeoff}
+        <span class="why">Tradeoff:</span> ${esc(classification.tradeoff)}
       </div>` : '';
 
   results.innerHTML = `
@@ -1275,18 +1399,18 @@ function renderResult(classification, text) {
     ${tossupHtml}
     ${fusionHtml}
     <div class="top-pick">
-      <div class="top-pick-label">Top pick · ${taskLabel}</div>
+      <div class="top-pick-label">Top pick · ${esc(taskLabel)}</div>
       <div class="badges">${badges.join('')}</div>
-      <div class="top-pick-name">${top.model.name}</div>
-      <div class="top-pick-score">Score: ${(top.score * 100).toFixed(0)}/100 · ${top.model.creator}</div>
+      <div class="top-pick-name">${esc(top.model.name)}</div>
+      <div class="top-pick-score">Score: ${(top.score * 100).toFixed(0)}/100 · ${esc(top.model.creator)}</div>
       <div class="stats">
-        <div class="stat"><div class="label">Intel</div><div class="value">${fmtNum(top.model.composite?.intelligence_index_v4_1, 1)}</div></div>
-        <div class="stat"><div class="label">Non-Halluc</div><div class="value">${fmtPct(top.model.benchmarks?.omniscience_non_halluc)}</div></div>
-        <div class="stat"><div class="label">$/task</div><div class="value">${fmtDollar(top.model.cost_per_intelligence_task_usd?.total)}</div></div>
-        <div class="stat"><div class="label">Est. cost</div><div class="value">${fmtCostEstimate(top.model, estIn, estOut)}</div></div>
-        <div class="stat"><div class="label">Context</div><div class="value">${fmtContext(top.model.context_tokens)}</div></div>
-        <div class="stat"><div class="label">Speed</div><div class="value">${fmtTPS(top.model.performance?.output_speed_tps)}</div></div>
-        <div class="stat"><div class="label">TTFT</div><div class="value">${fmtSec(top.model.performance?.ttft_seconds_answer)}</div></div>
+        <div class="stat"><div class="label">Intel</div><div class="value">${esc(fmtNum(top.model.composite?.intelligence_index_v4_1, 1))}</div></div>
+        <div class="stat"><div class="label">Non-Halluc</div><div class="value">${esc(fmtPct(top.model.benchmarks?.omniscience_non_halluc))}</div></div>
+        <div class="stat"><div class="label">$/task</div><div class="value">${esc(fmtDollar(top.model.cost_per_intelligence_task_usd?.total))}</div></div>
+        <div class="stat"><div class="label">Est. cost</div><div class="value">${esc(fmtCostEstimate(top.model, estIn, estOut))}</div></div>
+        <div class="stat"><div class="label">Context</div><div class="value">${esc(fmtContext(top.model.context_tokens))}</div></div>
+        <div class="stat"><div class="label">Speed</div><div class="value">${esc(fmtTPS(top.model.performance?.output_speed_tps))}</div></div>
+        <div class="stat"><div class="label">TTFT</div><div class="value">${esc(fmtSec(top.model.performance?.ttft_seconds_answer))}</div></div>
       </div>
       <div class="top-pick-rationale">
         <span class="why">Why:</span> ${whyHtml}
@@ -1359,6 +1483,26 @@ document.getElementById('clear-btn').addEventListener('click', () => {
   document.getElementById('task').value = '';
   document.getElementById('results').innerHTML = '<div class="empty">Describe your task above and click <strong>Recommend model</strong>.</div>';
   localStorage.removeItem('last-task');
+});
+
+const auditConsentEl = document.getElementById('audit-consent');
+if (auditConsentEl) {
+  auditConsentEl.checked = localStorage.getItem(AUDIT_CONSENT_KEY) === '1';
+  auditConsentEl.addEventListener('change', () => {
+    if (auditConsentEl.checked) {
+      localStorage.setItem(AUDIT_CONSENT_KEY, '1');
+      showToast('Local routing log enabled (30-day expiry)');
+    } else {
+      localStorage.removeItem(AUDIT_CONSENT_KEY);
+      showToast('Local routing log disabled');
+    }
+  });
+}
+document.getElementById('clear-history-btn').addEventListener('click', () => {
+  clearAuditHistory();
+  localStorage.removeItem('last-task');
+  if (auditConsentEl) auditConsentEl.checked = false;
+  showToast('Local history cleared');
 });
 
 /* API key handlers */

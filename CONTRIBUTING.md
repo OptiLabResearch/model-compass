@@ -13,16 +13,25 @@ python3 -m http.server 8000
 # Visit http://localhost:8000
 ```
 
-## Running the Scraper
+The LLM recommender (`/api/recommend`) only runs under Cloudflare Pages Functions.
+Locally it falls back to the keyword classifier (or your optional OpenRouter key).
+To exercise the full stack:
+
+```bash
+npx wrangler pages dev . --binding GROQ_API_KEY="$GROQ_API_KEY"
+```
+
+## Refreshing Model Data
 
 The weekly model data refresh is automated via GitHub Actions, but you can run it manually:
 
 ```bash
-python3 scripts/scrape_aa_models.py
-# Outputs: data/models.json and a dated CSV in data/history/
+AA_API_KEY=... python3 scripts/fetch_aa_models.py
+python3 scripts/export_history_csv.py
+# Outputs: data/models.json, data/enrichment_cache.json, and a dated CSV in data/history/
 ```
 
-The scraper fetches data from the Artificial Analysis free API (no auth required).
+`fetch_aa_models.py` uses the Artificial Analysis API and requires an `AA_API_KEY`.
 
 ## Making Changes
 

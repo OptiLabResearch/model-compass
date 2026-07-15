@@ -122,11 +122,39 @@ RELEASE_WINDOW_DAYS = 183  # ~6 months
 # Source 1 — the official API
 # ---------------------------------------------------------------------------
 
+MAX_RESPONSE_BYTES = 25 * 1024 * 1024  # 25 MB hard cap on upstream bodies
+
+
+def _read_limited(resp, limit: int = MAX_RESPONSE_BYTES) -> bytes:
+    chunks = []
+    total = 0
+    while True:
+        chunk = resp.read(1024 * 1024)
+        if not chunk:
+            break
+        total += len(chunk)
+        if total > limit:
+            raise RuntimeError(f"Upstream response exceeded {limit} bytes")
+        chunks.append(chunk)
+    return b''.join(chunks)
+
+
+def _atomic_write_json(path, obj) -> None:
+    path = path if hasattr(path, 'write_text') else path
+    path.parent.mkdir(parents=True, exist_ok=True)
+    tmp = path.with_suffix(path.suffix + '.tmp')
+    with open(tmp, 'w') as f:
+        json.dump(obj, f, indent=2)
+        f.flush()
+        os.fsync(f.fileno())
+    os.replace(tmp, path)
+
+
 def fetch_api_models(api_key: str) -> list:
     req = Request(API_URL, headers={'x-api-key': api_key, 'User-Agent': USER_AGENT})
     try:
         with urlopen(req, timeout=90) as r:
-            payload = json.loads(r.read().decode('utf-8'))
+            payload = json.loads(_read_limited(r).decode('utf-8'))
     except HTTPError as e:
         raise RuntimeError(f"AA API returned HTTP {e.code}: {e.read()[:200]!r}") from e
     except URLError as e:
@@ -198,8 +226,8 @@ def fetch_page_enrichment() -> dict:
     req = Request(PAGE_URL, headers={'User-Agent': USER_AGENT})
     try:
         with urlopen(req, timeout=90) as r:
-            html = r.read().decode('utf-8', errors='replace')
-    except (HTTPError, URLError) as e:
+            html = _read_limited(r).decode('utf-8', errors='replace')
+    except (HTTPError, URLError, RuntimeError) as e:
         print(f"  WARNING: could not fetch {PAGE_URL}: {e}", file=sys.stderr)
         return {}
 
@@ -434,8 +462,9 @@ def build_model_entry(api_m: dict, rich: dict | None) -> dict:
 def build_derived(entry: dict) -> dict:
     """Metrics the Picker would otherwise recompute in the browser on every keystroke."""
     intel = entry['composite']['intelligence_index_v4_1']
-    blend = entry['pricing_per_m_tokens']['blended_7_2_1'] \
-        or entry['pricing_per_m_tokens']['blended_3_1']
+    # Prefer the 3:1 blend (matches table column / real-world mix); fall back to 7:2:1.
+    blend = entry['pricing_per_m_tokens']['blended_3_1'] \
+        or entry['pricing_per_m_tokens']['blended_7_2_1']
     cpt_total = entry['cost_per_intelligence_task_usd']['total']
     nh = entry['benchmarks']['omniscience_non_halluc']
     speed = entry['performance']['output_speed_tps']
@@ -526,19 +555,17 @@ def save_cache(cache: dict, entries: list, today: str) -> None:
         snap['_name'] = e.get('name')
         cache[e['slug']] = snap
 
-    ENRICHMENT_CACHE.parent.mkdir(parents=True, exist_ok=True)
-    with open(ENRICHMENT_CACHE, 'w') as f:
-        json.dump({
-            "description": (
-                "Last-known-good values for metrics the AA API does not expose "
-                "(omniscience/non-hallucination, agentic index, GDPval, CritPt, "
-                "MMMU-Pro, context window). Written by scripts/fetch_aa_models.py. "
-                "Each entry records the date it was observed; fresh page data "
-                "always overrides these."
-            ),
-            "updated_at": today,
-            "models": dict(sorted(cache.items())),
-        }, f, indent=2)
+    _atomic_write_json(ENRICHMENT_CACHE, {
+        "description": (
+            "Last-known-good values for metrics the AA API does not expose "
+            "(omniscience/non-hallucination, agentic index, GDPval, CritPt, "
+            "MMMU-Pro, context window). Written by scripts/fetch_aa_models.py. "
+            "Each entry records the date it was observed; fresh page data "
+            "always overrides these."
+        ),
+        "updated_at": today,
+        "models": dict(sorted(cache.items())),
+    })
 
 
 def check_featured_slugs(api_models: list) -> list:
@@ -656,9 +683,7 @@ def main():
         },
     }
 
-    args.output.parent.mkdir(parents=True, exist_ok=True)
-    with open(args.output, 'w') as f:
-        json.dump(out, f, indent=2)
+    _atomic_write_json(args.output, out)
     print(f"  Saved {args.output} ({args.output.stat().st_size} bytes)")
     return 0
 

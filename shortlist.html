@@ -270,9 +270,8 @@ td.empty-data{opacity:0.25}
     <div style="border:1px solid var(--border);border-radius:8px;padding:14px;background:var(--bg)">
       <h3 style="font-size:14px;margin:0 0 8px;font-weight:600">🖥️ Best Coding</h3>
       <p style="font-size:11px;color:var(--text-muted);margin:0 0 8px">Complex refactors, unfamiliar codebases, architecture-level code review</p>
-      <ol style="font-size:12px;line-height:1.9;padding-left:18px;margin:0">
-        <li><strong>Claude Fable 5</strong> — $2.75/task · <span style="color:var(--green-dark)">coding 76</span> · highest coding score tracked · pair with a second opinion given the non-halluc caveat above</li>
-        <li><strong>GPT-5.5 (xhigh)</strong> — <span style="color:var(--green-dark)">$1.03/task</span> · coding 75 · <em style="color:var(--text-muted)">14% non-halluc — interactive/reviewed use only</em></li>
+      <ol id="rec-best-coding" style="font-size:12px;line-height:1.9;padding-left:18px;margin:0">
+        <li>Loading from models.json…</li>
       </ol>
     </div>
   </div>
@@ -282,15 +281,14 @@ td.empty-data{opacity:0.25}
 <div style="margin-bottom:20px">
   <div style="display:flex;align-items:center;gap:8px;margin-bottom:12px">
     <span style="background:var(--accent);color:var(--accent-fg);font-size:11px;font-weight:700;padding:3px 10px;border-radius:12px;text-transform:uppercase;letter-spacing:0.5px">Standard</span>
-    <span style="font-size:12px;color:var(--text-muted)">Best quality, cost secondary · v4.1 per-task metrics (AA Index v4.1, 2026-06-16)</span>
+    <span style="font-size:12px;color:var(--text-muted)">Best quality, cost secondary · v4.1 per-task metrics (AA Index v4.1, <span id="rec-benchmark-date">—</span>)</span>
   </div>
   <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
     <div style="border:1px solid var(--border);border-radius:8px;padding:14px;background:var(--bg)">
       <h3 style="font-size:14px;margin:0 0 8px;font-weight:600">🧠 Coaching & Daily Ops</h3>
       <p style="font-size:11px;color:var(--text-muted);margin:0 0 8px">Check-ins, briefings, reminders, conversational coaching</p>
-      <ol style="font-size:12px;line-height:1.9;padding-left:18px;margin:0">
-        <li><strong>MiniMax M3</strong> — <span style="color:var(--green-dark)">$0.18/task</span> · 7.1 min/task · intel 44 · <span style="color:var(--green-dark)">84% non-halluc</span> · your current cron default</li>
-        <li><strong>Qwen3.7 Plus</strong> — <span style="color:var(--text-muted)">(paid-tier stats pending)</span> · intel 39 · strong all-rounder with vision</li>
+      <ol id="rec-standard-coaching" style="font-size:12px;line-height:1.9;padding-left:18px;margin:0">
+        <li>Loading from models.json…</li>
       </ol>
     </div>
     <div style="border:1px solid var(--border);border-radius:8px;padding:14px;background:var(--bg)">
@@ -350,7 +348,7 @@ td.empty-data{opacity:0.25}
 <div style="font-size:12px;line-height:1.9;color:var(--text-secondary)">
   <div style="padding:6px 0;border-bottom:1px solid var(--border)"><strong style="color:var(--text)">Quick factual / "what is X?"</strong> → <span style="color:var(--green-dark);font-weight:600">Gemini 3.5 Flash</span> — free, fastest</div>
   <div style="padding:6px 0;border-bottom:1px solid var(--border)"><strong style="color:var(--text)">Deep reasoning / "explain why"</strong> → <span style="color:var(--green-dark);font-weight:600">Claude Sonnet 4.6</span> — best nuanced analysis</div>
-  <div style="padding:6px 0;border-bottom:1px solid var(--border)"><strong style="color:var(--text)">Code review / "review this PR"</strong> → <span style="color:var(--green-dark);font-weight:600">GPT-5.5 (xhigh)</span> — highest coding score (59.1)</div>
+  <div style="padding:6px 0;border-bottom:1px solid var(--border)"><strong style="color:var(--text)">Code review / "review this PR"</strong> → <span style="color:var(--green-dark);font-weight:600" id="rec-chat-coding-score">Loading…</span></div>
   <div style="padding:6px 0;border-bottom:1px solid var(--border)"><strong style="color:var(--text)">Creative writing / brainstorming</strong> → <span style="color:var(--green-dark);font-weight:600">Claude Sonnet 4.6</span> — most natural prose</div>
   <div style="padding:6px 0;border-bottom:1px solid var(--border)"><strong style="color:var(--text)">Real-time news / opinions</strong> → <span style="color:var(--green-dark);font-weight:600">Grok</span> — least filtered, fastest trending access</div>
   <div style="padding:6px 0;border-bottom:1px solid var(--border)"><strong style="color:var(--text)">Image / video / multimodal</strong> → <span style="color:var(--green-dark);font-weight:600">Gemini 3.1 Pro</span> — best multimodal reasoning</div>
@@ -516,7 +514,14 @@ function updateStatStrip(){
   }).filter(function(v){return !isNaN(v)}).sort(function(a,b){return a-b});
   var median=blends.length?blends[Math.floor(blends.length/2)]:null;
   var medianEl=document.getElementById('stat-median-blend');
-  if(medianEl) medianEl.innerHTML=(median!=null?'$'+median.toFixed(2):'—')+'<span class="unit">/M</span>';
+  if(medianEl){
+    medianEl.textContent='';
+    medianEl.appendChild(document.createTextNode(median!=null?'$'+median.toFixed(2):'—'));
+    var unit=document.createElement('span');
+    unit.className='unit';
+    unit.textContent='/M';
+    medianEl.appendChild(unit);
+  }
   var intels=visible.map(function(r){
     var c=r.querySelector('td[data-stat="intelligence"]');
     return c?parseFloat(c.dataset.val):NaN;
@@ -619,7 +624,14 @@ document.querySelectorAll('th').forEach(function(th){
     });
     th.classList.add('sorted');
     var sortStateEl=document.getElementById('table-sort-state');
-    if(sortStateEl) sortStateEl.innerHTML='Sorted: <b>'+th.textContent.trim()+'</b> '+(sortAsc?'↑':'↓');
+    if(sortStateEl){
+      sortStateEl.textContent='';
+      sortStateEl.appendChild(document.createTextNode('Sorted: '));
+      var b=document.createElement('b');
+      b.textContent=th.textContent.trim();
+      sortStateEl.appendChild(b);
+      sortStateEl.appendChild(document.createTextNode(' '+(sortAsc?'↑':'↓')));
+    }
     var arrow=document.createElement('span');
     arrow.className='sort-arrow';
     arrow.textContent=sortAsc?' ↑':' ↓';
@@ -636,7 +648,7 @@ var presetConfigs=[
   {id:'coding',filters:{coding:{min:45}}},
   {id:'reasoning',filters:{intelligence:{min:50},'gpqa_%':{min:90}}},
   {id:'cheapest',filters:{'blend_3to1_$/M':{max:0.6}}},
-  {id:'agentic',filters:{agentic:{min:65}}}
+  {id:'agentic',filters:{agentic:{min:40}}}
 ];
 
 document.querySelectorAll('.preset-btn').forEach(function(btn){
@@ -793,6 +805,17 @@ function checkStaleness(){
 function fmtNum(v){ return (v===null||v===undefined) ? '' : (Math.abs(v)<10 ? v.toFixed(1) : Math.round(v)); }
 function fmtDollar(v){ return (v===null||v===undefined) ? '' : v; }
 
+function esc(v){
+  return (window.ModelCompassNav && ModelCompassNav.escapeHtml)
+    ? ModelCompassNav.escapeHtml(v)
+    : String(v==null?'':v).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;');
+}
+function safeHref(v, fallback){
+  return (window.ModelCompassNav && ModelCompassNav.safeUrl)
+    ? ModelCompassNav.safeUrl(v, fallback||'#')
+    : (fallback||'#');
+}
+
 /* Stable dot color per creator, so a creator keeps its color across renders. */
 var DOTS=['--dot-1','--dot-2','--dot-3','--dot-4','--dot-5','--dot-6'];
 function dotFor(s){
@@ -804,21 +827,22 @@ function dotFor(s){
 function buildRow(m, rank){
   var b=m.benchmarks||{}, c=m.composite||{}, p=m.pricing_per_m_tokens||{}, d=m.derived||{};
   var ctx=m.context_tokens ? Math.round(m.context_tokens/1000)+'K' : '';
-  var aaUrl=m.aa_url || ('https://artificialanalysis.ai/models/'+m.slug);
+  var aaUrl=safeHref(m.aa_url, 'https://artificialanalysis.ai/models/'+encodeURIComponent(m.slug||''));
   var rowClass = m.openrouter_slug ? ' class="free"' : '';
   function cell(stat, val, fmt){
     var v = (val===null||val===undefined) ? '' : val;
-    return '<td class="num" data-stat="'+stat+'" data-val="'+v+'">'+(v===''?'—':(fmt?fmt(v):v))+'</td>';
+    var shown = v===''?'—':(fmt?fmt(v):v);
+    return '<td class="num" data-stat="'+esc(stat)+'" data-val="'+esc(v)+'">'+esc(shown)+'</td>';
   }
-  return '<tr'+rowClass+' data-release="'+(m.released||'')+'" data-slug="'+m.slug+'">'+
+  return '<tr'+rowClass+' data-release="'+esc(m.released||'')+'" data-slug="'+esc(m.slug||'')+'">'+
     '<td class="num rnk" data-rank>'+rank+'</td>'+
     '<td class="cb-col"><input type="checkbox" class="compare-cb" data-model-row></td>'+
-    '<td class="l name-col" data-val="'+(m.name||'').toLowerCase()+'"><div class="cell-title">'+m.name+'</div><div class="cell-sub">'+m.slug+'</div></td>'+
-    '<td class="l" data-creator="'+(m.creator||'')+'" data-val="'+(m.creator||'').toLowerCase()+'"><span class="dot-badge" style="--dot-color:var('+dotFor(m.creator||'')+')">'+(m.creator||'')+'</span></td>'+
-    '<td class="num" data-t="d" data-val="'+(m.released||'')+'">'+(m.released||'')+'</td>'+
+    '<td class="l name-col" data-val="'+esc((m.name||'').toLowerCase())+'"><div class="cell-title">'+esc(m.name||'')+'</div><div class="cell-sub">'+esc(m.slug||'')+'</div></td>'+
+    '<td class="l" data-creator="'+esc(m.creator||'')+'" data-val="'+esc((m.creator||'').toLowerCase())+'"><span class="dot-badge" style="--dot-color:var('+dotFor(m.creator||'')+')">'+esc(m.creator||'')+'</span></td>'+
+    '<td class="num" data-t="d" data-val="'+esc(m.released||'')+'">'+esc(m.released||'')+'</td>'+
     cell('in_$/M', p.input, fmtNum)+
     cell('out_$/M', p.output, fmtNum)+
-    cell('blend_3to1_$/M', p.blended_7_2_1, fmtNum)+
+    cell('blend_3to1_$/M', p.blended_3_1, fmtNum)+
     cell('intelligence', c.intelligence_index_v4_1, fmtNum)+
     cell('coding', c.coding_index, fmtNum)+
     cell('agentic', c.agentic_index, fmtNum)+
@@ -832,14 +856,79 @@ function buildRow(m, rank){
     cell('terminalbench_%', b.terminalbench_v2_1, fmtNum)+
     cell('omni_acc_%', b.omniscience_accuracy, fmtNum)+
     cell('omni_nh_%', b.omniscience_non_halluc, fmtNum)+
-    '<td class="num" data-stat="context" data-val="'+ctx+'">'+(ctx||'—')+'</td>'+
+    '<td class="num" data-stat="context" data-val="'+esc(ctx)+'">'+(ctx?esc(ctx):'—')+'</td>'+
     cell('value_intel_$_blend', d.value_intelligence_per_dollar_blend, fmtNum)+
     cell('safety_composite', d.safety_composite, fmtNum)+
     cell('speed_tier', d.speed_tier, fmtNum)+
     cell('latency_tier', d.latency_tier, fmtNum)+
     '<td class="num" data-stat="is_frontier" data-val="'+(m.is_frontier?1:0)+'">'+(m.is_frontier?'Yes':'No')+'</td>'+
-    '<td class="l" data-val="'+m.slug+'"><a href="'+aaUrl+'" target="_blank" style="color:var(--accent);text-decoration:none">'+m.slug+'</a></td>'+
+    '<td class="l" data-val="'+esc(m.slug||'')+'"><a href="'+esc(aaUrl)+'" target="_blank" rel="noopener" style="color:var(--accent);text-decoration:none">'+esc(m.slug||'')+'</a></td>'+
     '</tr>';
+}
+
+function shortName(name){
+  return String(name||'').replace(/\s*\(.*?\)\s*/g,' ').replace(/\s+/g,' ').trim();
+}
+
+function updateStaticRecommendations(models, scrapedAt){
+  var dateEl=document.getElementById('rec-benchmark-date');
+  if(dateEl) dateEl.textContent=scrapedAt?scrapedAt.slice(0,10):'—';
+
+  function byCoding(a,b){return ((b.composite||{}).coding_index||0)-((a.composite||{}).coding_index||0);}
+  function byNh(a,b){return ((b.benchmarks||{}).omniscience_non_halluc||0)-((a.benchmarks||{}).omniscience_non_halluc||0);}
+  function costStr(m){
+    var t=(m.cost_per_intelligence_task_usd||{}).total;
+    if(t==null){
+      var p=m.pricing_per_m_tokens||{};
+      if(p.input!=null&&p.output!=null) return '$'+p.input+'/$'+p.output+' per M';
+      return 'price pending';
+    }
+    return '$'+Number(t).toFixed(2)+'/task';
+  }
+  function codingStr(m){
+    var v=(m.composite||{}).coding_index;
+    return v==null?'—':String(Math.round(v));
+  }
+  function nhStr(m){
+    var v=(m.benchmarks||{}).omniscience_non_halluc;
+    return v==null?'—':String(Math.round(v));
+  }
+  function intelStr(m){
+    var v=(m.composite||{}).intelligence_index_v4_1;
+    return v==null?'—':String(Math.round(v));
+  }
+
+  var codingSorted=models.slice().sort(byCoding);
+  var topCoding=codingSorted[0];
+  var secondCoding=codingSorted[1];
+  var codingEl=document.getElementById('rec-best-coding');
+  if(codingEl&&topCoding){
+    codingEl.innerHTML=
+      '<li><strong>'+esc(shortName(topCoding.name))+'</strong> — '+esc(costStr(topCoding))+
+      ' · <span style="color:var(--green-dark)">coding '+esc(codingStr(topCoding))+'</span> · highest coding score tracked</li>'+
+      (secondCoding
+        ? '<li><strong>'+esc(shortName(secondCoding.name))+'</strong> — '+esc(costStr(secondCoding))+
+          ' · coding '+esc(codingStr(secondCoding))+
+          ' · <em style="color:var(--text-muted)">'+esc(nhStr(secondCoding))+'% non-halluc</em></li>'
+        : '');
+  }
+
+  var chatCoding=document.getElementById('rec-chat-coding-score');
+  if(chatCoding&&topCoding){
+    chatCoding.textContent=shortName(topCoding.name)+' — highest coding score ('+codingStr(topCoding)+')';
+  }
+
+  var safe=models.filter(function(m){return ((m.benchmarks||{}).omniscience_non_halluc||0)>=70;}).sort(byNh);
+  var coachEl=document.getElementById('rec-standard-coaching');
+  if(coachEl&&safe[0]){
+    var m0=safe[0], m1=safe[1];
+    coachEl.innerHTML=
+      '<li><strong>'+esc(shortName(m0.name))+'</strong> — <span style="color:var(--green-dark)">'+esc(costStr(m0))+'</span> · intel '+esc(intelStr(m0))+
+      ' · <span style="color:var(--green-dark)">'+esc(nhStr(m0))+'% non-halluc</span></li>'+
+      (m1
+        ? '<li><strong>'+esc(shortName(m1.name))+'</strong> — '+esc(costStr(m1))+' · intel '+esc(intelStr(m1))+' · '+esc(nhStr(m1))+'% non-halluc</li>'
+        : '');
+  }
 }
 
 async function loadModels(){
@@ -856,14 +945,23 @@ async function loadModels(){
     tbody.innerHTML=rows;
     var viaOpenrouter=models.filter(function(m){return !!m.openrouter_slug}).length;
     metaEl.dataset.scrapedAt=data.scraped_at||'';
-    metaEl.innerHTML='JSON-backed · Source: <code>data/models.json</code> · Auto-scraped from '+
-      '<a href="https://artificialanalysis.ai/models">artificialanalysis.ai/models</a> · '+
-      '<strong>Last scrape:</strong> '+(data.scraped_at||'—')+' · <strong>'+models.length+' models</strong> · '+
-      'Available via OpenRouter: '+viaOpenrouter+'/'+models.length+' (rest are direct-API-only, e.g. OpenAI/Anthropic/Google). · '+
-      '<a href="index.html">Model Picker →</a>';
+    metaEl.textContent='';
+    metaEl.appendChild(document.createTextNode('JSON-backed · Source: data/models.json · Auto-scraped from '));
+    var aa=document.createElement('a');
+    aa.href='https://artificialanalysis.ai/models';
+    aa.target='_blank';
+    aa.rel='noopener';
+    aa.textContent='artificialanalysis.ai/models';
+    metaEl.appendChild(aa);
+    metaEl.appendChild(document.createTextNode(' · Last scrape: '+(data.scraped_at||'—')+' · '+models.length+' models · Available via OpenRouter: '+viaOpenrouter+'/'+models.length+' · '));
+    var pick=document.createElement('a');
+    pick.href='index.html';
+    pick.textContent='Model Picker →';
+    metaEl.appendChild(pick);
     countEl.textContent=models.length+' models';
+    updateStaticRecommendations(models, data.scraped_at);
   }catch(e){
-    metaEl.textContent='⚠️ Could not load data/models.json: '+e.message;
+    metaEl.textContent='⚠️ Could not load data/models.json: '+(e&&e.message?e.message:String(e));
   }
 }
 

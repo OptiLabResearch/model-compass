@@ -11,7 +11,7 @@
  *      cannot invent or hallucinate a model.
  *   2. In the page: the hard gates (non-hallucination floors for unattended and
  *      high-stakes work, the voice latency ceiling) are re-applied to the LLM's
- *      answer using the very task type and scenarios it reported. A pick that
+ *      answer using the task type and scenarios it reported. A pick that
  *      violates a gate is overridden by the deterministic one. The gates cannot
  *      be talked out of, which is the entire point of having them.
  *
@@ -46,6 +46,27 @@ const TASK_TYPES = [
 
 const MAX_TASK_CHARS = 4000;
 const MAX_CANDIDATES = 30;
+const MAX_BODY_BYTES = 64 * 1024; // 64 KB total request body
+const MAX_CANDIDATE_JSON_CHARS = 40 * 1024;
+const MAX_RATIONALE_CHARS = 2000;
+const MAX_TRADEOFF_CHARS = 500;
+const MAX_NAME_CHARS = 120;
+const MAX_SLUG_CHARS = 80;
+const REQUEST_TIMEOUT_MS = 25000;
+const RATE_LIMIT_WINDOW_MS = 60 * 1000;
+const RATE_LIMIT_MAX = 8; // per IP per window
+
+// In-memory rate buckets. Fine for a single Workers isolate; Cloudflare may
+// reset them on cold start, which is acceptable for free-tier abuse damping.
+const rateBuckets = new Map();
+
+const CANDIDATE_NUMBER_KEYS = [
+  'intelligence', 'coding_index', 'agentic_index', 'non_halluc',
+  'omniscience_accuracy', 'gpqa', 'hle', 'scicode', 'ifbench',
+  'lcr_long_context', 'tau3_banking', 'terminalbench', 'mmmu_pro_vision',
+  'context_tokens', 'cost_per_task_usd', 'price_out_per_m',
+  'output_speed_tps', 'ttft_seconds',
+];
 
 const SYSTEM_PROMPT = `You are the recommendation engine for Model Compass, a tool that picks the right LLM for a task using Artificial Analysis benchmark data.
 
@@ -107,38 +128,141 @@ function json(body, status = 200) {
   });
 }
 
+function clientIp(request) {
+  return request.headers.get('CF-Connecting-IP')
+    || request.headers.get('x-forwarded-for')?.split(',')[0]?.trim()
+    || 'unknown';
+}
+
+function checkRateLimit(ip) {
+  const now = Date.now();
+  let bucket = rateBuckets.get(ip);
+  if (!bucket || now - bucket.windowStart >= RATE_LIMIT_WINDOW_MS) {
+    bucket = { windowStart: now, count: 0 };
+    rateBuckets.set(ip, bucket);
+  }
+  bucket.count += 1;
+  // Opportunistic cleanup so the map does not grow without bound.
+  if (rateBuckets.size > 5000) {
+    for (const [k, v] of rateBuckets) {
+      if (now - v.windowStart >= RATE_LIMIT_WINDOW_MS) rateBuckets.delete(k);
+    }
+  }
+  return bucket.count <= RATE_LIMIT_MAX;
+}
+
+function finiteNumberOrNull(v) {
+  if (v == null || v === '') return null;
+  if (typeof v !== 'number' || !Number.isFinite(v)) return null;
+  return v;
+}
+
+function sanitizeCandidate(raw) {
+  if (!raw || typeof raw !== 'object' || Array.isArray(raw)) return null;
+  const slug = typeof raw.slug === 'string' ? raw.slug.trim() : '';
+  if (!slug || slug.length > MAX_SLUG_CHARS || !/^[a-zA-Z0-9][a-zA-Z0-9._-]*$/.test(slug)) {
+    return null;
+  }
+  const name = typeof raw.name === 'string' ? raw.name.trim().slice(0, MAX_NAME_CHARS) : slug;
+  const creator = typeof raw.creator === 'string' ? raw.creator.trim().slice(0, MAX_NAME_CHARS) : undefined;
+  const row = { slug, name };
+  if (creator) row.creator = creator;
+  for (const key of CANDIDATE_NUMBER_KEYS) {
+    const n = finiteNumberOrNull(raw[key]);
+    if (n != null) row[key] = n;
+  }
+  return row;
+}
+
+function sanitizeScenarios(raw) {
+  const out = {};
+  if (!raw || typeof raw !== 'object' || Array.isArray(raw)) return out;
+  for (const key of ['unattended', 'long_context', 'low_latency', 'high_stakes', 'cost_sensitive', 'interactive', 'voice']) {
+    if (raw[key] === true) out[key] = true;
+    else if (raw[key] === false) out[key] = false;
+  }
+  return out;
+}
+
+function clampString(v, max) {
+  return String(v == null ? '' : v).slice(0, max);
+}
+
 export async function onRequestPost({ request, env }) {
   if (!env.GROQ_API_KEY) {
     return json({ error: 'Recommender not configured: GROQ_API_KEY is not set.' }, 503);
   }
 
+  const ip = clientIp(request);
+  if (!checkRateLimit(ip)) {
+    return json({
+      error: 'Too many recommendation requests. Ranked by the formula instead — try again in a minute.',
+    }, 429);
+  }
+
+  const contentLength = request.headers.get('content-length');
+  if (contentLength && Number(contentLength) > MAX_BODY_BYTES) {
+    return json({ error: `Request too large (max ${MAX_BODY_BYTES} bytes).` }, 413);
+  }
+
+  let rawText;
+  try {
+    rawText = await request.text();
+  } catch {
+    return json({ error: 'Could not read request body.' }, 400);
+  }
+  if (rawText.length > MAX_BODY_BYTES) {
+    return json({ error: `Request too large (max ${MAX_BODY_BYTES} bytes).` }, 413);
+  }
+
   let body;
   try {
-    body = await request.json();
+    body = JSON.parse(rawText);
   } catch {
     return json({ error: 'Body must be JSON.' }, 400);
   }
+  if (!body || typeof body !== 'object' || Array.isArray(body)) {
+    return json({ error: 'Body must be a JSON object.' }, 400);
+  }
 
   const task = typeof body.task === 'string' ? body.task.trim() : '';
-  const candidates = Array.isArray(body.candidates) ? body.candidates : [];
+  const candidatesIn = Array.isArray(body.candidates) ? body.candidates : null;
 
   if (!task) return json({ error: 'Missing "task".' }, 400);
   if (task.length > MAX_TASK_CHARS) {
     return json({ error: `Task too long (max ${MAX_TASK_CHARS} characters).` }, 400);
   }
-  if (!candidates.length) return json({ error: 'Missing "candidates".' }, 400);
+  if (!candidatesIn || !candidatesIn.length) return json({ error: 'Missing "candidates".' }, 400);
+  if (candidatesIn.length > MAX_CANDIDATES) {
+    return json({ error: `Too many candidates (max ${MAX_CANDIDATES}).` }, 400);
+  }
 
-  const shortlist = candidates.slice(0, MAX_CANDIDATES);
-  const allowed = new Set(shortlist.map(c => c.slug));
+  const shortlist = [];
+  const allowed = new Set();
+  for (const raw of candidatesIn) {
+    const c = sanitizeCandidate(raw);
+    if (!c) continue;
+    if (allowed.has(c.slug)) continue;
+    allowed.add(c.slug);
+    shortlist.push(c);
+  }
+  if (!shortlist.length) {
+    return json({ error: 'No valid candidates (each needs a slug matching [a-zA-Z0-9._-]+).' }, 400);
+  }
 
   // Compact, not pretty-printed: indentation is pure token cost against the
   // per-minute budget, and the model reads it identically either way. An absent
   // key means the metric is untested.
+  const candidatesJson = JSON.stringify(shortlist);
+  if (candidatesJson.length > MAX_CANDIDATE_JSON_CHARS) {
+    return json({ error: 'Candidates payload too large after sanitization.' }, 413);
+  }
+
   const userPrompt = [
     `USER TASK:\n"""${task}"""`,
     '',
     'CANDIDATE MODELS (benchmarks are percentages; a missing key means untested, not zero):',
-    JSON.stringify(shortlist),
+    candidatesJson,
     '',
     'Classify the task and pick the best model for it. Return only the JSON object.',
   ].join('\n');
@@ -148,15 +272,18 @@ export async function onRequestPost({ request, env }) {
     { role: 'user', content: userPrompt },
   ];
 
-  // Walk the chain: a rate-limited or oversized request moves to the next model's
-  // separate quota. Anything else (bad key, malformed output) is a real failure
-  // and stops here — retrying it on another model would just burn the fallbacks.
+  // Walk the chain: a rate-limited request moves to the next model's separate
+  // quota. Oversized prompts (413) must NOT cascade — they amplify one abusive
+  // request across every fallback. Anything else (bad key, malformed output)
+  // is a real failure and stops here.
   let content = null;
   let usedModel = null;
   let lastError = null;
 
   for (const { id, budget } of MODELS) {
     let res;
+    const controller = new AbortController();
+    const timer = setTimeout(() => controller.abort(), REQUEST_TIMEOUT_MS);
     try {
       res = await fetch(GROQ_URL, {
         method: 'POST',
@@ -175,13 +302,25 @@ export async function onRequestPost({ request, env }) {
           max_tokens: budget,
           response_format: { type: 'json_object' },
         }),
+        signal: controller.signal,
       });
     } catch (e) {
-      lastError = `Could not reach the recommender: ${e.message}`;
+      clearTimeout(timer);
+      lastError = e.name === 'AbortError'
+        ? 'recommender timed out'
+        : `Could not reach the recommender: ${e.message}`;
       continue;
     }
+    clearTimeout(timer);
 
-    if (res.status === 429 || res.status === 413) {
+    // Oversized prompt: fail closed, do not burn fallback quotas.
+    if (res.status === 413) {
+      return json({
+        error: 'Recommendation prompt too large for the upstream model.',
+      }, 413);
+    }
+
+    if (res.status === 429) {
       lastError = 'rate-limited';
       continue;
     }
@@ -218,32 +357,46 @@ export async function onRequestPost({ request, env }) {
   } catch {
     return json({ error: 'Recommender returned malformed JSON.' }, 502);
   }
+  if (!parsed || typeof parsed !== 'object' || Array.isArray(parsed)) {
+    return json({ error: 'Recommender returned non-object JSON.' }, 502);
+  }
 
   // Validate against the candidates we actually sent. A hallucinated slug is a
   // failure, not something to paper over — the page falls back to the
   // deterministic pick and tells the user the LLM step didn't work.
-  if (!allowed.has(parsed.pick)) {
+  const pick = typeof parsed.pick === 'string' ? parsed.pick.trim() : '';
+  if (!pick || !allowed.has(pick)) {
     return json({
-      error: `Recommender chose a model that was not a candidate: ${parsed.pick}`,
+      error: `Recommender chose a model that was not a candidate: ${pick || '(missing)'}`,
     }, 502);
   }
-  if (parsed.runner_up && !allowed.has(parsed.runner_up)) {
-    parsed.runner_up = '';
-  }
-  if (!TASK_TYPES.includes(parsed.type)) {
-    parsed.type = 'general';
-    parsed.confidence = Math.min(parsed.confidence ?? 0.5, 0.5);
+
+  let runnerUp = typeof parsed.runner_up === 'string' ? parsed.runner_up.trim() : '';
+  if (runnerUp && !allowed.has(runnerUp)) runnerUp = '';
+  if (runnerUp === pick) runnerUp = '';
+
+  let type = typeof parsed.type === 'string' ? parsed.type : 'general';
+  let confidence = typeof parsed.confidence === 'number' && Number.isFinite(parsed.confidence)
+    ? Math.max(0, Math.min(1, parsed.confidence))
+    : 0.7;
+  if (!TASK_TYPES.includes(type)) {
+    type = 'general';
+    confidence = Math.min(confidence, 0.5);
   }
 
+  const multiStep = Array.isArray(parsed.multi_step)
+    ? parsed.multi_step.filter(t => typeof t === 'string' && TASK_TYPES.includes(t)).slice(0, 5)
+    : [];
+
   return json({
-    type: parsed.type,
-    confidence: typeof parsed.confidence === 'number' ? parsed.confidence : 0.7,
-    scenarios: parsed.scenarios && typeof parsed.scenarios === 'object' ? parsed.scenarios : {},
-    pick: parsed.pick,
-    runner_up: parsed.runner_up || '',
-    rationale: String(parsed.rationale || ''),
-    tradeoff: String(parsed.tradeoff || ''),
-    multi_step: Array.isArray(parsed.multi_step) ? parsed.multi_step : [],
+    type,
+    confidence,
+    scenarios: sanitizeScenarios(parsed.scenarios),
+    pick,
+    runner_up: runnerUp,
+    rationale: clampString(parsed.rationale, MAX_RATIONALE_CHARS),
+    tradeoff: clampString(parsed.tradeoff, MAX_TRADEOFF_CHARS),
+    multi_step: multiStep,
     source: 'llm',
     model: usedModel,
   });

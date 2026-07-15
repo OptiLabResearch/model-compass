@@ -185,22 +185,32 @@ document.querySelectorAll('th').forEach(th=>{
   });
 });
 function fmt(v){ return (v===null||v===undefined) ? '' : v; }
+function esc(v){
+  return (window.ModelCompassNav && ModelCompassNav.escapeHtml)
+    ? ModelCompassNav.escapeHtml(v)
+    : String(v==null?'':v).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;');
+}
+function safeHref(v, fallback){
+  return (window.ModelCompassNav && ModelCompassNav.safeUrl)
+    ? ModelCompassNav.safeUrl(v, fallback||'#')
+    : (fallback||'#');
+}
 
 function buildRow(m){
   const b=m.benchmarks||{}, c=m.composite||{}, p=m.pricing_per_m_tokens||{}, perf=m.performance||{};
-  const aaUrl=m.aa_url || (`https://artificialanalysis.ai/models/${m.slug}`);
+  const aaUrl=safeHref(m.aa_url, `https://artificialanalysis.ai/models/${encodeURIComponent(m.slug||'')}`);
   const rowClass = m.openrouter_slug ? ' class="free"' : '';
   function cell(stat, val){
     const v=fmt(val);
-    return `<td class="num" data-stat="${stat}" data-val="${v}">${v===''?'—':v}</td>`;
+    return `<td class="num" data-stat="${esc(stat)}" data-val="${esc(v)}">${v===''?'—':esc(v)}</td>`;
   }
-  return `<tr${rowClass} data-release="${m.released||''}" data-slug="${m.slug||''}">`+
-    `<td class="l" data-val="${(m.name||'').toLowerCase()}">${m.name||''}</td>`+
-    `<td class="l" data-val="${(m.creator||'').toLowerCase()}">${m.creator||''}</td>`+
-    `<td class="num" data-t="d" data-val="${m.released||''}">${m.released||''}</td>`+
+  return `<tr${rowClass} data-release="${esc(m.released||'')}" data-slug="${esc(m.slug||'')}">`+
+    `<td class="l" data-val="${esc((m.name||'').toLowerCase())}">${esc(m.name||'')}</td>`+
+    `<td class="l" data-val="${esc((m.creator||'').toLowerCase())}">${esc(m.creator||'')}</td>`+
+    `<td class="num" data-t="d" data-val="${esc(m.released||'')}">${esc(m.released||'')}</td>`+
     cell('in_$/M', p.input)+
     cell('out_$/M', p.output)+
-    cell('blend_3to1_$/M', p.blended_7_2_1)+
+    cell('blend_3to1_$/M', p.blended_3_1)+
     cell('intelligence', c.intelligence_index_v4_1)+
     cell('coding', c.coding_index)+
     cell('agentic', c.agentic_index)+
@@ -221,7 +231,7 @@ function buildRow(m){
     cell('speed_tps', perf.output_speed_tps)+
     cell('ttft_s', perf.ttft_seconds_total)+
     cell('ttfa_s', perf.ttft_seconds_answer)+
-    `<td class="l" data-val="${m.slug||''}"><a href="${aaUrl}" target="_blank" style="color:var(--accent);text-decoration:none">${m.slug||''}</a></td>`+
+    `<td class="l" data-val="${esc(m.slug||'')}"><a href="${esc(aaUrl)}" target="_blank" rel="noopener" style="color:var(--accent);text-decoration:none">${esc(m.slug||'')}</a></td>`+
     `</tr>`;
 }
 
