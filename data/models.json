@@ -1,6 +1,6 @@
 {
   "version": "4.1",
-  "scraped_at": "2026-07-21T20:04:00Z",
+  "scraped_at": "2026-07-21T20:04:32Z",
   "source_url": "https://artificialanalysis.ai/models",
   "scrape_method": "AA official API (all models, 17 evaluations) + /models page payload (full metric set, top models only)",
   "intelligence_index_methodology": "AA Intelligence Index v4.1 = composite of 9 evaluations: GDPval-AA v2, \u03c4\u00b3-Banking, Terminal-Bench v2.1, SciCode, HLE, GPQA Diamond, CritPt, AA-Omniscience, AA-LCR",
