@@ -14,7 +14,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/style.css">
 <style>
-body{font-family:var(--sans);margin:0;padding:16px;color:var(--text);background:var(--bg);font-size:14px}
+body{font-family:var(--sans);color:var(--text);font-size:14px}
 header{padding:0 0 12px;border-bottom:1px solid var(--border);margin-bottom:16px}
 .header-top{display:flex;align-items:center;gap:10px;margin-bottom:6px;flex-wrap:wrap}
 h1{font-family:var(--serif);font-size:24px;margin:0;font-weight:600;letter-spacing:-0.2px}
@@ -69,23 +69,24 @@ aside.filters h2 .btn-text{margin-left:auto;font-size:12px;font-weight:600;color
 .filter-row input{width:62px;padding:3px 5px;font-size:12px;border-radius:3px;font-variant-numeric:tabular-nums}
 .filter-row .arrow{color:var(--text-muted);font-size:11px}
 main{flex:1;min-width:0}
-table{border-collapse:collapse;width:100%;background:var(--surface);font-size:12px}
+table{border-collapse:separate;border-spacing:0;width:100%;background:var(--surface);font-size:12px}
 th,td{padding:14px 12px;text-align:right;white-space:nowrap;border-bottom:1px solid var(--border)}
-th{background:var(--surface);font-weight:600;font-size:11px;text-transform:uppercase;letter-spacing:0.6px;color:var(--text-muted);position:sticky;top:var(--nav-h);cursor:pointer;user-select:none;z-index:10}
+th{font-weight:600;font-size:11px;text-transform:uppercase;letter-spacing:0.6px;color:var(--text-muted);cursor:pointer;user-select:none}
 th.l,td.l{text-align:left}
 tr:hover td{background:var(--row-hover)}
 tr:hover td.cb-col,tr:hover td.rnk,tr:hover td.name-col{background-color:var(--surface);background-image:linear-gradient(var(--row-hover),var(--row-hover))}
 tr:hover td:first-child{box-shadow:inset 3px 0 0 var(--accent)}
 .num{font-variant-numeric:tabular-nums}
 
+/* Corner sticky cells: above body rows, under or with thead */
 th.cb-col,td.cb-col{position:sticky;left:0;z-index:8;width:30px;padding:8px}
-th.cb-col{z-index:12;background:var(--surface)}
+th.cb-col{z-index:30;background:var(--surface)}
 td.cb-col{background:var(--surface)}
 th.rnk,td.rnk{position:sticky;left:30px;z-index:8;text-align:center;width:36px;font-weight:700;font-size:11px;color:var(--text-muted);padding:8px 6px}
-th.rnk{background:var(--surface);z-index:12;border-right:1px solid var(--border)}
+th.rnk{background:var(--surface);z-index:30;border-right:1px solid var(--border)}
 td.rnk{background:var(--surface);border-right:1px solid var(--border)}
 td.name-col{position:sticky;left:66px;z-index:8;background:var(--surface);border-right:1px solid var(--border);white-space:normal}
-th.name-col{position:sticky;left:66px;z-index:12;background:var(--surface);border-right:1px solid var(--border)}
+th.name-col{position:sticky;left:66px;z-index:30;background:var(--surface);border-right:1px solid var(--border)}
 .cell-title{font-family:var(--sans);font-weight:600;color:var(--text)}
 .cell-sub{font-family:var(--mono);font-size:11px;color:var(--text-muted);margin-top:2px}
 .heat-1{background:var(--heat-1) !important}
@@ -116,13 +117,14 @@ td.empty-data{opacity:0.25}
   aside.filters{position:static;flex:1 1 auto;width:100%;max-height:none}
 }
 @media (max-width:480px){
-  body{padding:10px}
+  .page{padding:12px 10px 20px}
   .top-filters input[type=text]{width:100%}
 }
 </style></head>
 <body>
 <div id="site-nav"></div>
 <script src="assets/nav.js"></script>
+<div class="page">
 <header>
   <div class="header-top">
     <h1>Top Models</h1>
@@ -131,13 +133,6 @@ td.empty-data{opacity:0.25}
   <button class="meta-toggle" onclick="this.nextElementSibling.toggleAttribute('hidden');this.textContent=this.nextElementSibling.hidden?'▸ Show details':'▾ Hide details'">▾ Hide details</button>
   <div id="staleness-banner" class="staleness-banner" hidden style="margin-bottom:12px">⚠️ <span id="staleness-text"></span></div>
   <div class="meta" id="meta-line" data-scraped-at="">Loading… · Source: <code>data/models.json</code> · Auto-scraped from <a href="https://artificialanalysis.ai/models">artificialanalysis.ai/models</a> · <a href="index.html">Model Picker →</a></div>
-
-  <div class="stat-strip" id="stat-strip">
-    <div class="card stat-tile"><div class="label">Models</div><div class="value" id="stat-models">—</div></div>
-    <div class="card stat-tile"><div class="label">Median Blended</div><div class="value" id="stat-median-blend">—<span class="unit">/M</span></div></div>
-    <div class="card stat-tile"><div class="label">Top Intelligence</div><div class="value" id="stat-top-intel">—</div></div>
-    <div class="card stat-tile"><div class="label">Creators</div><div class="value" id="stat-creators">—</div></div>
-  </div>
 
   <div class="top-filters">
     <div class="search-wrap"><span class="icon">🔍</span><input id="q" type="text" placeholder="Search name, creator, slug…"></div>
@@ -357,6 +352,7 @@ td.empty-data{opacity:0.25}
 </div>
 
 <div id="tip"></div>
+</div><!-- /.page -->
 <div id="site-footer"></div>
 <script>
 /* Tooltip */
@@ -500,40 +496,7 @@ if(activeCreators.size>0){
   if(tableCountN) tableCountN.textContent=n;
   updateRanks();
   updateActiveFilterUI();
-  updateStatStrip();
   updateHash();
-}
-
-function updateStatStrip(){
-  var visible=Array.from(tbody.querySelectorAll('tr')).filter(function(r){return r.style.display!=='none'});
-  var modelsEl=document.getElementById('stat-models');
-  if(modelsEl) modelsEl.textContent=visible.length;
-  var blends=visible.map(function(r){
-    var c=r.querySelector('td[data-stat="blend_3to1_$/M"]');
-    return c?parseFloat(c.dataset.val):NaN;
-  }).filter(function(v){return !isNaN(v)}).sort(function(a,b){return a-b});
-  var median=blends.length?blends[Math.floor(blends.length/2)]:null;
-  var medianEl=document.getElementById('stat-median-blend');
-  if(medianEl){
-    medianEl.textContent='';
-    medianEl.appendChild(document.createTextNode(median!=null?'$'+median.toFixed(2):'—'));
-    var unit=document.createElement('span');
-    unit.className='unit';
-    unit.textContent='/M';
-    medianEl.appendChild(unit);
-  }
-  var intels=visible.map(function(r){
-    var c=r.querySelector('td[data-stat="intelligence"]');
-    return c?parseFloat(c.dataset.val):NaN;
-  }).filter(function(v){return !isNaN(v)});
-  var intelEl=document.getElementById('stat-top-intel');
-  if(intelEl) intelEl.textContent=intels.length?Math.max.apply(null,intels).toFixed(0):'—';
-  var creators=new Set(visible.map(function(r){
-    var c=r.querySelector('td[data-creator]');
-    return c?c.dataset.creator:'';
-  }).filter(Boolean));
-  var creatorsEl=document.getElementById('stat-creators');
-  if(creatorsEl) creatorsEl.textContent=creators.size;
 }
 
 q.addEventListener('input',applyFilter);
@@ -716,7 +679,6 @@ cmpGo.addEventListener('click',function(){
   cnt.textContent=visN+' of '+tbody.rows.length+' rows';
   var tableCountN=document.getElementById('table-count-n');
   if(tableCountN) tableCountN.textContent=visN;
-  updateStatStrip();
 });
 
 cmpClear.addEventListener('click',function(){

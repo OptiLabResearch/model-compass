@@ -13,7 +13,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/style.css">
 <style>
-body{font-family:var(--sans);margin:0;padding:16px;font-size:14px}
+body{font-family:var(--sans);font-size:14px}
 header{padding:0 0 12px;border-bottom:1px solid var(--border);margin-bottom:12px}
 h1{font-family:var(--serif);font-size:22px;margin:0 0 4px;font-weight:600;letter-spacing:-0.2px}
 .meta{color:var(--text-muted);font-size:12px;margin-bottom:12px}
@@ -35,9 +35,9 @@ aside.filters h2{font-size:14px;margin:0 0 10px;font-weight:600;display:flex;ali
 #reset{width:100%;padding:7px;font-size:12px;background:var(--surface-2);border:1px solid var(--border);border-radius:var(--r-sm);cursor:pointer;color:var(--text)}
 #reset:hover{background:var(--accent-bg)}
 main{flex:1;min-width:0}
-table{border-collapse:collapse;width:100%;background:var(--surface);font-size:12px}
+table{border-collapse:separate;border-spacing:0;width:100%;background:var(--surface);font-size:12px}
 th,td{border-bottom:1px solid var(--border);padding:14px 12px;text-align:right;white-space:nowrap}
-th{background:var(--surface);font-weight:600;font-size:11px;text-transform:uppercase;letter-spacing:0.6px;color:var(--text-muted);position:sticky;top:var(--nav-h);cursor:pointer;user-select:none}
+th{font-weight:600;font-size:11px;text-transform:uppercase;letter-spacing:0.6px;color:var(--text-muted);cursor:pointer;user-select:none}
 th.l,td.l{text-align:left}
 tr:hover td{background:var(--row-hover)}
 .free td{background:var(--green-bg)}
@@ -48,13 +48,14 @@ tr:hover td{background:var(--row-hover)}
   aside.filters{position:static;flex:1 1 auto;width:100%;max-height:none}
 }
 @media (max-width:480px){
-  body{padding:10px}
+  .page{padding:12px 10px 20px}
   .top-filters input[type=text]{width:100%}
 }
 </style></head>
 <body>
 <div id="site-nav"></div>
 <script src="assets/nav.js"></script>
+<div class="page">
 <header>
   <h1>All Models — last 6 months, full benchmarks</h1>
   <div id="staleness-banner" class="staleness-banner" hidden style="margin-bottom:12px">⚠️ <span id="staleness-text"></span></div>
@@ -263,5 +264,6 @@ loadModels().then(()=>{
   if(scrapedAtEl && scrapedAtEl.dataset.scrapedAt) ModelCompassNav.checkStaleness(scrapedAtEl.dataset.scrapedAt);
 });
 </script>
+</div><!-- /.page -->
 <div id="site-footer"></div>
 </body></html>

@@ -6,26 +6,26 @@
 
 :root {
   color-scheme: light;
-  /* --- light --- */
-  --bg: #F5F4EE; --surface: #FAF9F5; --surface-2: #EFEDE4;
-  --border: rgba(25,25,25,0.10); --border-strong: rgba(25,25,25,0.16);
+  /* --- light: cool neutrals (not warm/brown paper) --- */
+  --bg: #F4F4F5; --surface: #FFFFFF; --surface-2: #EBEBED;
+  --border: rgba(24,24,27,0.10); --border-strong: rgba(24,24,27,0.16);
   --border-focus: rgba(217,119,87,0.45);
-  --text: #191919; --text-secondary: #5c5a53; --text-muted: #8a8778;
+  --text: #18181B; --text-secondary: #52525B; --text-muted: #71717A;
   --accent: #D97757; --accent-bg: rgba(217,119,87,0.10);
   --accent-fg: #ffffff;
   --accent-hover: #c96745;
-  --row-hover: rgba(217,119,87,0.045);
-  --shadow-sm: 0 1px 2px rgba(25,25,25,0.04);
-  --shadow-md: 0 1px 3px rgba(25,25,25,0.06), 0 4px 12px rgba(25,25,25,0.04);
-  --tooltip-bg: #191919; --tooltip-fg: #ffffff;
-  --green-bg: #e3ecdd; --green-dark: #4c6b41;
-  --red-bg: #f3ded8;   --red-dark: #a8492f;
-  --yellow-bg: #f6ead2; --yellow-dark: #b5792c;
-  --blue-bg: #e0e7ff;  --blue-dark: #3730a3;
+  --row-hover: rgba(217,119,87,0.06);
+  --shadow-sm: 0 1px 2px rgba(24,24,27,0.04);
+  --shadow-md: 0 1px 3px rgba(24,24,27,0.06), 0 4px 12px rgba(24,24,27,0.04);
+  --tooltip-bg: #18181B; --tooltip-fg: #ffffff;
+  --green-bg: #e8f0e4; --green-dark: #3f6b35;
+  --red-bg: #f8e8e4;   --red-dark: #a8492f;
+  --yellow-bg: #f8f0dc; --yellow-dark: #a16207;
+  --blue-bg: #e8ecff;  --blue-dark: #3730a3;
   --pink-bg: #fce7f3;  --pink-dark: #9d174d;
-  --heat-1: #e3ecdd; --heat-2: #f6ead2; --heat-3: #f3ded8;
-  --dot-1: #D97757; --dot-2: #4c6b41; --dot-3: #3730a3;
-  --dot-4: #9d174d; --dot-5: #b5792c; --dot-6: #5c5a53;
+  --heat-1: #e8f0e4; --heat-2: #f8f0dc; --heat-3: #f8e8e4;
+  --dot-1: #D97757; --dot-2: #3f6b35; --dot-3: #3730a3;
+  --dot-4: #9d174d; --dot-5: #a16207; --dot-6: #52525B;
   --r-sm: 8px; --r-md: 12px; --r-lg: 16px; --r-pill: 999px;
   --serif: 'Source Serif 4', Georgia, serif;
   --sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
@@ -84,9 +84,15 @@
 }
 
 html { scroll-padding-top: calc(var(--nav-h) + 12px); }
-body { background: var(--bg); color: var(--text); }
+body { margin: 0; background: var(--bg); color: var(--text); }
 code, .num { font-family: var(--mono); }
 a { color: var(--accent); }
+
+/* Content below the sticky nav — keeps titles/tables clear of the header. */
+.page {
+  padding: 20px 16px 28px;
+  max-width: 100%;
+}
 
 /* ---- Site nav (injected by assets/nav.js) ---- */
 #site-nav {
@@ -95,6 +101,8 @@ a { color: var(--accent); }
   height: var(--nav-h); padding: 0 20px;
   background: var(--surface); border-bottom: 1px solid var(--border);
   font-family: var(--sans);
+  /* Full-bleed: never sit inside body padding (that caused title-under-nav overlap). */
+  width: 100%;
 }
 #site-nav .brand { display: flex; align-items: center; gap: 10px; text-decoration: none; }
 #site-nav .brand-tile {
@@ -208,8 +216,22 @@ a { color: var(--accent); }
 .table-caption .sort-state { color: var(--text-muted); }
 .table-caption .sort-state b { color: var(--text); font-weight: 600; }
 
-.table-card { overflow: hidden; }
-.table-card > .scroll { overflow-x: auto; }
+/* overflow:hidden on the card breaks position:sticky for thead. Keep the
+   radius via the card; let .scroll own both axes so column headers stick. */
+.table-card { overflow: visible; }
+.table-card > .scroll {
+  overflow: auto;
+  max-height: calc(100vh - var(--nav-h) - 100px);
+  border-radius: inherit;
+  -webkit-overflow-scrolling: touch;
+}
+.table-card thead th {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: var(--surface);
+  box-shadow: 0 1px 0 var(--border);
+}
 
 /* ---- Shared staleness banner (logic lives in nav.js, markup stays per-page) ---- */
 .staleness-banner {
