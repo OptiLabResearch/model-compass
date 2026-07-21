@@ -87,12 +87,23 @@ CACHED_TOP_LEVEL = [
 # Featured models are exempt from the RELEASE_WINDOW_DAYS cutoff: curation, not
 # age, decides the shortlist. A featured slug that vanishes upstream is a hard
 # error, not a silent drop — see check_featured_slugs().
+# Curated 2026-07-21 from AA intel/coding/non-hallucination + value.
+# Swaps: gpt-5-5→gpt-5-6-{sol,terra,luna}, sonnet-4-6→sonnet-5, k2→k3,
+# grok-4-3→4-5, gemini-3-5-flash→3-6-flash; add muse-spark-1-1; drop
+# gpt-5-5-pro (no scores) and deepseek-v4-flash (nh≈4%, gates always fail).
 FEATURED_SLUGS = {
-    'gpt-5-5', 'gpt-5-5-pro', 'gemini-3-1-pro-preview', 'gemini-3-5-flash',
-    'claude-sonnet-4-6-adaptive', 'claude-opus-4-8', 'claude-fable-5',
-    'deepseek-v4-pro', 'deepseek-v4-flash', 'grok-4-3', 'minimax-m3',
-    'kimi-k2-6', 'kimi-k2-7-code', 'mimo-v2-5-pro', 'mimo-v2-5-0424',
-    'glm-5-2', 'qwen3-7-max', 'qwen3-7-plus',
+    # Frontier
+    'claude-fable-5', 'claude-opus-4-8', 'claude-sonnet-5',
+    'gpt-5-6-sol', 'gpt-5-6-terra', 'gpt-5-6-luna',
+    'kimi-k3', 'grok-4-5',
+    # Strong mid / reliability
+    'glm-5-2', 'muse-spark-1-1',
+    'gemini-3-6-flash', 'gemini-3-1-pro-preview',
+    'qwen3-7-max',
+    # Budget / specialized
+    'minimax-m3', 'qwen3-7-plus',
+    'mimo-v2-5-pro', 'mimo-v2-5-0424',
+    'deepseek-v4-pro',
 }
 
 # OpenRouter routing slug for models that are available through it (i.e. not
@@ -100,19 +111,22 @@ FEATURED_SLUGS = {
 # via OpenRouter" filter in the UI — optional, purely informational.
 OPENROUTER_SLUGS = {
     'deepseek-v4-pro': 'deepseek/deepseek-v4-pro',
-    'deepseek-v4-flash': 'deepseek/deepseek-v4-flash',
     'minimax-m3': 'minimax/minimax-m3',
-    'kimi-k2-6': 'moonshotai/kimi-k2.6',
-    'kimi-k2-7-code': 'moonshotai/kimi-k2.7-code',
+    'kimi-k3': 'moonshotai/kimi-k3',
     'mimo-v2-5-pro': 'xiaomi/mimo-v2.5-pro',
     'mimo-v2-5-0424': 'xiaomi/mimo-v2-5',
     'glm-5-2': 'z-ai/glm-5.2',
     'qwen3-7-max': 'qwen/qwen3.7-max',
     'qwen3-7-plus': 'qwen/qwen3.7-plus',
+    'muse-spark-1-1': 'meta-llama/muse-spark-1.1',
+    'grok-4-5': 'x-ai/grok-4.5',
 }
 
 NOTES = {
     'mimo-v2-5-0424': 'Non-reasoning budget pick',
+    'gpt-5-6-luna': 'OpenAI value tier (cheapest of the 5.6 line)',
+    'deepseek-v4-pro': 'Cheap coding; fails unattended/high-stakes nh gates',
+    'minimax-m3': 'Best non-hallucination per dollar on the shortlist',
 }
 
 RELEASE_WINDOW_DAYS = 183  # ~6 months

@@ -71,9 +71,14 @@ Two secrets:
 
 ## Run locally
 
+The ignored local `.env` path is already connected to the Hermes credential store on the development machine. Do not overwrite it with `.env.example`; on another machine, create `.env` from that example and fill it locally.
+
+Load the environment in the shell before running commands that need credentials:
+
 The picker's recommender is a Pages Function, so it needs the Functions runtime:
 
 ```
+set -a; source .env; set +a
 npx wrangler pages dev . --binding GROQ_API_KEY="$GROQ_API_KEY"
 ```
 
@@ -83,7 +88,8 @@ presents itself as the keyword-classifier build.
 Refresh the data by hand with:
 
 ```
-AA_API_KEY=... python3 scripts/fetch_aa_models.py
+set -a; source .env; set +a
+python3 scripts/fetch_aa_models.py
 python3 scripts/export_history_csv.py
 ```
 
