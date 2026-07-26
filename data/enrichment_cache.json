@@ -1,6 +1,6 @@
 {
   "description": "Last-known-good values for metrics the AA API does not expose (omniscience/non-hallucination, agentic index, GDPval, CritPt, MMMU-Pro, context window). Written by scripts/fetch_aa_models.py. Each entry records the date it was observed; fresh page data always overrides these.",
-  "updated_at": "2026-07-21",
+  "updated_at": "2026-07-26",
   "models": {
     "claude-fable-5": {
       "composite": {
@@ -8,7 +8,7 @@
         "omniscience_index": 40.1
       },
       "benchmarks": {
-        "gdpval_v2": 62.4,
+        "gdpval_v2": 62.3,
         "critpt": 28.6,
         "omniscience_accuracy": 61.4,
         "omniscience_hallucination_rate": 54.9,
@@ -30,7 +30,7 @@
         "audio": false,
         "video": false
       },
-      "_as_of": "2026-07-21",
+      "_as_of": "2026-07-26",
       "_name": "Claude Fable 5 (Adaptive Reasoning, Max Effort, Opus 4.8 Fallback)"
     },
     "claude-opus-4-6": {
@@ -164,7 +164,7 @@
         "omniscience_index": 27.4
       },
       "benchmarks": {
-        "gdpval_v2": 54.7,
+        "gdpval_v2": 54.6,
         "critpt": 20.9,
         "omniscience_accuracy": 46.6,
         "omniscience_hallucination_rate": 35.9,
@@ -186,8 +186,40 @@
         "audio": false,
         "video": false
       },
-      "_as_of": "2026-07-21",
+      "_as_of": "2026-07-26",
       "_name": "Claude Opus 4.8 (Adaptive Reasoning, Max Effort)"
+    },
+    "claude-opus-5": {
+      "composite": {
+        "agentic_index": 55.26,
+        "omniscience_index": 31.3
+      },
+      "benchmarks": {
+        "gdpval_v2": 68.0,
+        "critpt": 29.1,
+        "mmmu_pro": 84.7,
+        "omniscience_accuracy": 54.2,
+        "omniscience_hallucination_rate": 50.1,
+        "omniscience_non_halluc": 49.9
+      },
+      "context_tokens": 1000000,
+      "is_reasoning": true,
+      "is_open_weights": false,
+      "size_class": "large",
+      "input_modalities": {
+        "text": true,
+        "image": true,
+        "audio": false,
+        "video": false
+      },
+      "output_modalities": {
+        "text": true,
+        "image": false,
+        "audio": false,
+        "video": false
+      },
+      "_as_of": "2026-07-26",
+      "_name": "Claude Opus 5 (Adaptive Reasoning, Max Effort)"
     },
     "claude-sonnet-4-6": {
       "composite": {
@@ -289,7 +321,7 @@
         "omniscience_index": 15.3
       },
       "benchmarks": {
-        "gdpval_v2": 55.4,
+        "gdpval_v2": 55.2,
         "critpt": 16.9,
         "mmmu_pro": 77.3,
         "omniscience_accuracy": 38.3,
@@ -312,7 +344,7 @@
         "audio": false,
         "video": false
       },
-      "_as_of": "2026-07-21",
+      "_as_of": "2026-07-26",
       "_name": "Claude Sonnet 5 (Adaptive Reasoning, Max Effort)"
     },
     "claude-sonnet-5-non-reasoning": {
@@ -353,7 +385,7 @@
         "omniscience_index": -4.0
       },
       "benchmarks": {
-        "gdpval_v2": 10.7,
+        "gdpval_v2": 10.9,
         "critpt": 0.3,
         "mmmu_pro": 63.2,
         "omniscience_accuracy": 8.8,
@@ -381,7 +413,7 @@
         "audio": false,
         "video": false
       },
-      "_as_of": "2026-07-21",
+      "_as_of": "2026-07-26",
       "_name": "Command A+"
     },
     "deepseek-v4-flash": {
@@ -418,7 +450,7 @@
         "audio": false,
         "video": false
       },
-      "_as_of": "2026-07-21",
+      "_as_of": "2026-07-26",
       "_name": "DeepSeek V4 Flash (Reasoning, Max Effort)"
     },
     "deepseek-v4-flash-high": {
@@ -495,7 +527,7 @@
         "omniscience_index": -10.0
       },
       "benchmarks": {
-        "gdpval_v2": 40.4,
+        "gdpval_v2": 40.3,
         "critpt": 12.9,
         "apex_agents_aa": 24.3,
         "it_bench_sre": 38.3,
@@ -524,7 +556,7 @@
         "audio": false,
         "video": false
       },
-      "_as_of": "2026-07-21",
+      "_as_of": "2026-07-26",
       "_name": "DeepSeek V4 Pro (Reasoning, Max Effort)"
     },
     "deepseek-v4-pro-high": {
@@ -808,7 +840,7 @@
         "omniscience_index": 6.9
       },
       "benchmarks": {
-        "gdpval_v2": 32.0,
+        "gdpval_v2": 31.9,
         "critpt": 0,
         "mmmu_pro": 79.0,
         "omniscience_accuracy": 30.3,
@@ -831,7 +863,7 @@
         "audio": false,
         "video": false
       },
-      "_as_of": "2026-07-21",
+      "_as_of": "2026-07-26",
       "_name": "Gemini 3.5 Flash-Lite"
     },
     "gemini-3-5-flash-medium": {
@@ -900,7 +932,7 @@
         "omniscience_index": 23.5
       },
       "benchmarks": {
-        "gdpval_v2": 46.1,
+        "gdpval_v2": 46.2,
         "critpt": 10.6,
         "mmmu_pro": 83.2,
         "omniscience_accuracy": 50.2,
@@ -923,7 +955,7 @@
         "audio": false,
         "video": false
       },
-      "_as_of": "2026-07-21",
+      "_as_of": "2026-07-26",
       "_name": "Gemini 3.6 Flash (high)"
     },
     "gemma-4-12b": {
@@ -1075,7 +1107,7 @@
         "omniscience_index": -45.4
       },
       "benchmarks": {
-        "gdpval_v2": 15.2,
+        "gdpval_v2": 15.5,
         "critpt": 1.4,
         "mmmu_pro": 73.4,
         "it_bench_sre": 37.3,
@@ -1103,7 +1135,7 @@
         "audio": false,
         "video": false
       },
-      "_as_of": "2026-07-21",
+      "_as_of": "2026-07-26",
       "_name": "Gemma 4 31B (Reasoning)"
     },
     "gemma-4-31b-non-reasoning": {
@@ -1461,7 +1493,7 @@
         "omniscience_index": 4.0
       },
       "benchmarks": {
-        "gdpval_v2": 50.7,
+        "gdpval_v2": 50.5,
         "critpt": 20.9,
         "apex_agents_aa": 33.7,
         "it_bench_sre": 42.7,
@@ -1490,7 +1522,7 @@
         "audio": false,
         "video": false
       },
-      "_as_of": "2026-07-21",
+      "_as_of": "2026-07-26",
       "_name": "GLM-5.2 (max)"
     },
     "glm-5-non-reasoning": {
@@ -2151,7 +2183,7 @@
         "audio": false,
         "video": false
       },
-      "_as_of": "2026-07-21",
+      "_as_of": "2026-07-26",
       "_name": "GPT-5.5 Pro (xhigh)"
     },
     "gpt-5-6-luna": {
@@ -2160,7 +2192,7 @@
         "omniscience_index": -11.2
       },
       "benchmarks": {
-        "gdpval_v2": 54.2,
+        "gdpval_v2": 54.1,
         "critpt": 20.6,
         "mmmu_pro": 78.6,
         "apex_agents_aa": 35.8,
@@ -2185,7 +2217,7 @@
         "audio": false,
         "video": false
       },
-      "_as_of": "2026-07-21",
+      "_as_of": "2026-07-26",
       "_name": "GPT-5.6 Luna (max)"
     },
     "gpt-5-6-sol": {
@@ -2218,7 +2250,7 @@
         "audio": false,
         "video": false
       },
-      "_as_of": "2026-07-21",
+      "_as_of": "2026-07-26",
       "_name": "GPT-5.6 Sol (max)"
     },
     "gpt-5-6-terra": {
@@ -2252,7 +2284,7 @@
         "audio": false,
         "video": false
       },
-      "_as_of": "2026-07-21",
+      "_as_of": "2026-07-26",
       "_name": "GPT-5.6 Terra (max)"
     },
     "granite-4-1-30b": {
@@ -2612,7 +2644,7 @@
         "omniscience_index": 26.4
       },
       "benchmarks": {
-        "gdpval_v2": 51.7,
+        "gdpval_v2": 51.4,
         "critpt": 15.4,
         "mmmu_pro": 80.4,
         "omniscience_accuracy": 52.0,
@@ -2635,7 +2667,7 @@
         "audio": false,
         "video": false
       },
-      "_as_of": "2026-07-21",
+      "_as_of": "2026-07-26",
       "_name": "Grok 4.5 (high)"
     },
     "hy3": {
@@ -2746,7 +2778,7 @@
         "omniscience_index": 2.0
       },
       "benchmarks": {
-        "gdpval_v2": 36.9,
+        "gdpval_v2": 36.8,
         "critpt": 5.4,
         "mmmu_pro": 73.5,
         "omniscience_accuracy": 40.0,
@@ -2774,7 +2806,7 @@
         "audio": false,
         "video": false
       },
-      "_as_of": "2026-07-21",
+      "_as_of": "2026-07-26",
       "_name": "Inkling (xhigh)"
     },
     "jt-35b-flash": {
@@ -3050,7 +3082,7 @@
         "omniscience_index": 18.4
       },
       "benchmarks": {
-        "gdpval_v2": 59.0,
+        "gdpval_v2": 59.3,
         "critpt": 23.4,
         "mmmu_pro": 80.5,
         "apex_agents_aa": 41.3,
@@ -3076,7 +3108,7 @@
         "audio": false,
         "video": false
       },
-      "_as_of": "2026-07-21",
+      "_as_of": "2026-07-26",
       "_name": "Kimi K3"
     },
     "lfm2-24b-a2b": {
@@ -3452,7 +3484,7 @@
         "audio": false,
         "video": false
       },
-      "_as_of": "2026-07-21",
+      "_as_of": "2026-07-26",
       "_name": "MiMo-V2.5-Pro"
     },
     "mimo-v2-5-pro-non-reasoning": {
@@ -3756,7 +3788,7 @@
         "omniscience_index": 1.4
       },
       "benchmarks": {
-        "gdpval_v2": 44.7,
+        "gdpval_v2": 44.5,
         "critpt": 3.7,
         "mmmu_pro": 78.6,
         "omniscience_accuracy": 15.0,
@@ -3784,7 +3816,7 @@
         "audio": false,
         "video": false
       },
-      "_as_of": "2026-07-21",
+      "_as_of": "2026-07-26",
       "_name": "MiniMax-M3"
     },
     "mistral-medium-3-5": {
@@ -3793,7 +3825,7 @@
         "omniscience_index": -36.3
       },
       "benchmarks": {
-        "gdpval_v2": 21.4,
+        "gdpval_v2": 21.6,
         "critpt": 0,
         "mmmu_pro": 64.9,
         "omniscience_accuracy": 25.1,
@@ -3820,7 +3852,7 @@
         "audio": false,
         "video": false
       },
-      "_as_of": "2026-07-21",
+      "_as_of": "2026-07-26",
       "_name": "Mistral Medium 3.5"
     },
     "mistral-small-4": {
@@ -3932,7 +3964,7 @@
         "omniscience_index": 18
       },
       "benchmarks": {
-        "gdpval_v2": 43.7,
+        "gdpval_v2": 43.8,
         "critpt": 15.1,
         "omniscience_accuracy": 40.6,
         "omniscience_hallucination_rate": 38.1,
@@ -3954,7 +3986,7 @@
         "audio": false,
         "video": false
       },
-      "_as_of": "2026-07-21",
+      "_as_of": "2026-07-26",
       "_name": "Muse Spark 1.1 (xhigh)"
     },
     "nanbeige4-1-3b": {
@@ -4209,7 +4241,7 @@
         "omniscience_index": -0.8
       },
       "benchmarks": {
-        "gdpval_v2": 33.2,
+        "gdpval_v2": 33.1,
         "critpt": 3.1,
         "omniscience_accuracy": 21.6,
         "omniscience_hallucination_rate": 28.5,
@@ -4236,7 +4268,7 @@
         "audio": false,
         "video": false
       },
-      "_as_of": "2026-07-21",
+      "_as_of": "2026-07-26",
       "_name": "Nemotron 3 Ultra 550B A55B (Reasoning)"
     },
     "olmo-3-1-32b-instruct": {
@@ -5117,7 +5149,7 @@
         "omniscience_index": 14.1
       },
       "benchmarks": {
-        "gdpval_v2": 38.7,
+        "gdpval_v2": 38.6,
         "critpt": 13.4,
         "it_bench_sre": 42.5,
         "omniscience_accuracy": 30.1,
@@ -5140,7 +5172,7 @@
         "audio": false,
         "video": false
       },
-      "_as_of": "2026-07-21",
+      "_as_of": "2026-07-26",
       "_name": "Qwen3.7 Max"
     },
     "qwen3-7-plus": {
