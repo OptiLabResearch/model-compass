@@ -20,19 +20,21 @@ code,.num,td,th,input{font-family:var(--mono),var(--sans)}
 .model-count{background:var(--accent-bg);color:var(--accent);font-size:12px;font-weight:600;padding:3px 10px;border-radius:var(--r-pill)}
 .meta{color:var(--text-muted);font-size:12px;margin-bottom:12px;line-height:1.6}
 
-.top-filters{display:flex;gap:10px;flex-wrap:wrap;align-items:center;font-size:13px;margin-top:16px}
-.top-filters select{padding:7px 10px;font-size:13px;border:1px solid var(--border);border-radius:var(--r-sm);background:var(--surface);color:var(--text);font-family:inherit}
-.top-filters .search-wrap{flex:0 1 220px;min-width:160px;max-width:260px}
-.top-filters input[type=text]{width:100%;height:36px}
-.top-filters input[type=date]{width:130px;height:36px}
-.top-filters label[for="from"]{display:inline-flex;align-items:center;gap:6px;color:var(--text-secondary);font-size:13px;white-space:nowrap;height:36px}
+.top-filters{display:flex;gap:12px;flex-wrap:wrap;align-items:center;font-size:13px;margin-top:16px}
+.top-filters .search-wrap{position:relative;flex:1 1 240px;max-width:320px;min-width:180px}
+.top-filters .search-wrap .icon{position:absolute;left:10px;top:50%;transform:translateY(-50%);color:var(--text-muted);font-size:13px;pointer-events:none}
+.top-filters .search-wrap input{width:100%;height:38px;padding:0 10px 0 30px;font-size:13px;border:1px solid var(--border);border-radius:var(--r-sm);background:var(--surface);color:var(--text);box-sizing:border-box;outline:none}
 
 .creator-dropdown-wrap{position:relative;display:inline-block;flex:0 0 auto}
-.creator-btn{padding:0 12px;height:36px;font-size:13px;border:1px solid var(--border);border-radius:var(--r-sm);background:var(--surface);color:var(--text);font-family:inherit;cursor:pointer;display:flex;align-items:center;gap:8px;min-width:130px;justify-content:space-between;transition:all .15s}
+.creator-btn{height:38px;padding:0 12px;font-size:13px;border:1px solid var(--border);border-radius:var(--r-sm);background:var(--surface);color:var(--text);font-family:inherit;cursor:pointer;display:inline-flex;align-items:center;gap:8px;min-width:140px;justify-content:space-between;box-sizing:border-box;transition:all .15s}
 .creator-btn:hover{border-color:var(--accent)}
 .creator-btn .arrow{font-size:10px;opacity:0.6;transition:transform .15s}
 .creator-dropdown-wrap.open .creator-btn .arrow{transform:rotate(180deg)}
 .creator-menu{position:absolute;top:calc(100% + 4px);left:0;min-width:180px;max-height:260px;overflow-y:auto;background:var(--surface);border:1px solid var(--border-strong);border-radius:var(--r-sm);box-shadow:var(--shadow-md);z-index:100;padding:4px 0}
+
+.date-filter-wrap{display:inline-flex;align-items:center;gap:8px;height:38px;flex:0 0 auto}
+.date-filter-wrap .date-label{font-size:13px;color:var(--text-secondary);font-weight:500;white-space:nowrap}
+.date-filter-wrap .date-input{height:38px;width:135px;padding:0 8px;font-size:13px;font-family:var(--sans);border:1px solid var(--border);border-radius:var(--r-sm);background:var(--surface);color:var(--text);box-sizing:border-box;outline:none}
 .creator-opt{display:flex;align-items:center;gap:8px;padding:6px 12px;font-size:12px;cursor:pointer;user-select:none;color:var(--text);transition:background .1s}
 .creator-opt:hover{background:var(--accent-bg);color:var(--accent)}
 .creator-opt input[type=checkbox]{accent-color:var(--accent);cursor:pointer}
@@ -142,9 +144,10 @@ td.empty-data{opacity:0.25}
 @media (max-width:640px){
   .top-filters{gap:8px}
   .top-filters .search-wrap{flex:1 1 100%;max-width:100%}
-  .top-filters .creator-dropdown-wrap{flex:1 1 auto}
-  .top-filters label[for="from"]{display:inline-flex;align-items:center;gap:4px;font-size:12px;flex:1 1 auto}
-  .top-filters input[type=date]{width:100%}
+  .creator-dropdown-wrap{flex:1 1 calc(50% - 4px);min-width:130px}
+  .creator-btn{width:100%}
+  .date-filter-wrap{flex:1 1 calc(50% - 4px);min-width:130px}
+  .date-filter-wrap .date-input{width:100%;flex:1}
   
   th.cb-col,td.cb-col{width:24px;padding:6px 2px}
   th.rnk,td.rnk{left:24px;width:28px;padding:6px 2px;font-size:10px}
@@ -217,7 +220,11 @@ td.empty-data{opacity:0.25}
         <label class="creator-opt" for="creator-Z_AI"><input type="checkbox" value="Z AI" class="creator-cb" id="creator-Z_AI" name="creator-Z_AI"> Z AI</label>
         <label class="creator-opt" for="creator-xAI"><input type="checkbox" value="xAI" class="creator-cb" id="creator-xAI" name="creator-xAI"> xAI</label>
       </div>
-    <label for="from">From <input id="from" name="from" type="date"></label>
+    </div>
+    <div class="date-filter-wrap">
+      <label for="from" class="date-label">From</label>
+      <input id="from" name="from" type="date" class="date-input">
+    </div>
   </div>
 </header>
 <div class="layout">
