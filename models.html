@@ -79,8 +79,6 @@ th.l,td.l{text-align:left}
 tr:hover td{background:var(--row-hover)}
 tr:hover td.cb-col,tr:hover td.rnk,tr:hover td.name-col{background-color:var(--surface);background-image:linear-gradient(var(--row-hover),var(--row-hover))}
 tr:hover td:first-child{box-shadow:inset 3px 0 0 var(--accent)}
-.free td{background:var(--green-bg)}
-.free:hover td{background:var(--green-bg)!important;filter:brightness(0.96)}
 .num{font-variant-numeric:tabular-nums}
 
 /* Corner sticky cells */
@@ -450,7 +448,7 @@ document.querySelectorAll('.quick-btn').forEach(function(btn){
 
 /* Presets */
 var presetConfigs=[
-  {id:'best-overall',filters:{intelligence:{min:50}}},
+  {id:'best-overall',filters:{intelligence:{min:55}}},
   {id:'best-value',filters:{'blend_3to1_$/M':{max:1},intelligence:{min:35}}},
   {id:'coding',filters:{coding:{min:65}}},
   {id:'reasoning',filters:{intelligence:{min:50},'gpqa_%':{min:80}}},
