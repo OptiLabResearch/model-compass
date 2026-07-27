@@ -25,9 +25,6 @@
           '<span class="brand-sub">' + currentPage.sub + '</span>' +
         '</span>' +
       '</a>' +
-      '<nav class="tabs">' +
-      PAGES.map(p => '<a class="tab' + (p.href === current ? ' active' : '') + '" href="' + p.href + '">' + p.label + '</a>').join('') +
-      '</nav>' +
       '<div class="nav-actions">' +
         '<a class="btn btn-ghost" href="https://github.com/" target="_blank" rel="noopener">GitHub ↗</a>' +
         '<button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch theme" title="Switch theme"></button>' +

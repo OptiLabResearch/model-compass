@@ -128,39 +128,6 @@ td.empty-data{opacity:0.25}
     <h1>All Models</h1>
     <span class="model-count" id="model-count">— models</span>
   </div>
-  <div id="staleness-banner" class="staleness-banner" hidden style="margin-bottom:12px">⚠️ <span id="staleness-text"></span></div>
-
-  <div class="top-filters">
-    <div class="search-wrap"><span class="icon">🔍</span><input id="q" type="text" placeholder="Search name, creator, slug…"></div>
-    <label>From <input id="from" type="date"></label>
-    <label>To <input id="to" type="date"></label>
-    <label><input id="free" type="checkbox"> Available via OpenRouter only</label>
-    <span id="count" style="color:var(--text-muted)"></span>
-  </div>
-
-  <!-- Access Quick Filters -->
-  <div class="quick-filters">
-    <span class="creator-filters-label">Access:</span>
-    <button class="quick-btn all active" data-scope="all">All</button>
-    <button class="quick-btn outside-h" data-scope="outside">Outside</button>
-    <button class="quick-btn inside-h" data-scope="inside">Inside</button>
-  </div>
-
-  <!-- Creator Filter Pills -->
-  <div class="creator-filters">
-    <span class="creator-filters-label">Creator:</span>
-    <button class="creator-pill active" data-creator="all">All</button>
-    <button class="creator-pill" data-creator="Alibaba">Alibaba</button>
-    <button class="creator-pill" data-creator="Anthropic">Anthropic</button>
-    <button class="creator-pill" data-creator="DeepSeek">DeepSeek</button>
-    <button class="creator-pill" data-creator="Google">Google</button>
-    <button class="creator-pill" data-creator="Kimi">Kimi</button>
-    <button class="creator-pill" data-creator="MiniMax">MiniMax</button>
-    <button class="creator-pill" data-creator="OpenAI">OpenAI</button>
-    <button class="creator-pill" data-creator="Xiaomi">Xiaomi</button>
-    <button class="creator-pill" data-creator="Z AI">Z AI</button>
-    <button class="creator-pill" data-creator="xAI">xAI</button>
-  </div>
 
   <!-- Presets -->
   <div class="presets">
@@ -170,6 +137,28 @@ td.empty-data{opacity:0.25}
     <button class="preset-btn" data-preset="reasoning">🧠 Reasoning</button>
     <button class="preset-btn" data-preset="cheapest">💸 Cheapest</button>
     <button class="preset-btn" data-preset="agentic">🤖 Agentic</button>
+  </div>
+
+  <div id="staleness-banner" class="staleness-banner" hidden style="margin-bottom:12px;margin-top:10px">⚠️ <span id="staleness-text"></span></div>
+
+  <div class="top-filters">
+    <div class="search-wrap"><span class="icon">🔍</span><input id="q" type="text" placeholder="Search name, creator, slug…"></div>
+    <select id="creator-select">
+      <option value="all">All Creators</option>
+      <option value="Alibaba">Alibaba</option>
+      <option value="Anthropic">Anthropic</option>
+      <option value="DeepSeek">DeepSeek</option>
+      <option value="Google">Google</option>
+      <option value="Kimi">Kimi</option>
+      <option value="MiniMax">MiniMax</option>
+      <option value="OpenAI">OpenAI</option>
+      <option value="Xiaomi">Xiaomi</option>
+      <option value="Z AI">Z AI</option>
+      <option value="xAI">xAI</option>
+    </select>
+    <label>From <input id="from" type="date"></label>
+    <label>To <input id="to" type="date"></label>
+    <span id="count" style="color:var(--text-muted)"></span>
   </div>
 </header>
 <div class="layout">
@@ -276,17 +265,13 @@ document.querySelectorAll('th[data-tip]').forEach(function(th){
 });
 
 const tbody=document.querySelector('#t tbody');
-const q=document.getElementById('q'), fromI=document.getElementById('from'),
-      toI=document.getElementById('to'), freeI=document.getElementById('free'),
+const q=document.getElementById('q'), creatorSelect=document.getElementById('creator-select'),
+      fromI=document.getElementById('from'), toI=document.getElementById('to'),
       cnt=document.getElementById('count');
 const filterCountBadge=document.getElementById('filter-count-badge');
 const filterRows=document.querySelectorAll('.filter-row[data-stat]');
 
 let sortI=null, sortAsc=true;
-
-var outsideCreators=['OpenAI','Anthropic','Google'];
-var activeCreators=new Set();
-var activeScope='all';
 
 /* Compare mode */
 var cmpBar=document.getElementById('compare-bar'),
@@ -333,7 +318,8 @@ function updateActiveFilterUI(){
 }
 
 function applyFilter(){
-  const Q=q.value.toLowerCase(), from=fromI.value, to=toI.value, free=freeI.checked;
+  const Q=q.value.toLowerCase(), from=fromI.value, to=toI.value;
+  const selectedCreator=creatorSelect?creatorSelect.value:'all';
   const ranges=getRanges();
   let n=0;
 
@@ -348,21 +334,11 @@ function applyFilter(){
     const txt=r.innerText.toLowerCase();
     const d=r.dataset.release||'';
     let show=txt.includes(Q) && (!from||(d&&d>=from)) && (!to||(d&&d<=to));
-    if(free && !r.classList.contains('free')) show=false;
 
     /* Creator filter */
-    if(show && activeCreators.size>0){
+    if(show && selectedCreator!=='all'){
       var creatorCell=r.querySelector('td[data-creator]');
-      if(!creatorCell || !activeCreators.has(creatorCell.dataset.creator)) show=false;
-    }
-
-    /* Scope filter (outside/inside) */
-    if(show && activeScope!=='all'){
-      var creatorCell2=r.querySelector('td[data-creator]');
-      var creator=creatorCell2?creatorCell2.dataset.creator:'';
-      var isOutside=outsideCreators.indexOf(creator)!==-1;
-      if(activeScope==='outside' && !isOutside) show=false;
-      if(activeScope==='inside' && isOutside) show=false;
+      if(!creatorCell || creatorCell.dataset.creator!==selectedCreator) show=false;
     }
 
     if(show){
@@ -389,60 +365,21 @@ function applyFilter(){
   updateHash();
 }
 
-[q,fromI,toI,freeI].forEach(el=>el.addEventListener('input',applyFilter));
+[q,creatorSelect,fromI,toI].forEach(el=>{
+  if(!el) return;
+  el.addEventListener('input',applyFilter);
+  if(el.tagName==='SELECT') el.addEventListener('change',applyFilter);
+});
 document.querySelectorAll('.num-filter').forEach(el=>el.addEventListener('input',applyFilter));
 
 document.getElementById('reset').addEventListener('click',()=>{
   document.querySelectorAll('.num-filter').forEach(i=>i.value='');
-  activeCreators.clear();
-  activeScope='all';
-  document.querySelectorAll('.creator-pill').forEach(function(b){b.classList.remove('active')});
-  document.querySelector('.creator-pill[data-creator="all"]').classList.add('active');
-  document.querySelectorAll('.quick-btn').forEach(function(b){b.classList.remove('active')});
-  document.querySelector('.quick-btn[data-scope="all"]').classList.add('active');
+  if(q) q.value='';
+  if(fromI) fromI.value='';
+  if(toI) toI.value='';
+  if(creatorSelect) creatorSelect.value='all';
   document.querySelectorAll('.preset-btn').forEach(function(b){b.classList.remove('active')});
   applyFilter();
-});
-
-/* Creator pills - multi-select */
-document.querySelectorAll('.creator-pill').forEach(function(pill){
-  pill.addEventListener('click',function(){
-    var c=pill.dataset.creator;
-    if(c==='all'){
-      activeCreators.clear();
-      document.querySelectorAll('.creator-pill').forEach(function(b){b.classList.remove('active')});
-      pill.classList.add('active');
-    } else {
-      document.querySelector('.creator-pill[data-creator="all"]').classList.remove('active');
-      if(activeCreators.has(c)){
-        activeCreators.delete(c);
-        pill.classList.remove('active');
-      } else {
-        activeCreators.add(c);
-        pill.classList.add('active');
-      }
-      if(activeCreators.size===0){
-        document.querySelector('.creator-pill[data-creator="all"]').classList.add('active');
-      }
-    }
-    activeScope='all';
-    document.querySelectorAll('.quick-btn').forEach(function(b){b.classList.remove('active')});
-    document.querySelector('.quick-btn[data-scope="all"]').classList.add('active');
-    applyFilter();
-  });
-});
-
-/* Quick scope filters */
-document.querySelectorAll('.quick-btn').forEach(function(btn){
-  btn.addEventListener('click',function(){
-    activeScope=btn.dataset.scope;
-    document.querySelectorAll('.quick-btn').forEach(function(b){b.classList.remove('active')});
-    btn.classList.add('active');
-    activeCreators.clear();
-    document.querySelectorAll('.creator-pill').forEach(function(b){b.classList.remove('active')});
-    document.querySelector('.creator-pill[data-creator="all"]').classList.add('active');
-    applyFilter();
-  });
 });
 
 /* Presets */
@@ -550,8 +487,7 @@ function encodeHashState(){
   var parts=[];
   var activePresetBtn=document.querySelector('.preset-btn.active');
   if(activePresetBtn) parts.push('preset='+encodeURIComponent(activePresetBtn.dataset.preset));
-  if(activeScope!=='all') parts.push('scope='+encodeURIComponent(activeScope));
-  if(activeCreators.size>0) parts.push('creator='+encodeURIComponent(Array.from(activeCreators).join(',')));
+  if(creatorSelect && creatorSelect.value!=='all') parts.push('creator='+encodeURIComponent(creatorSelect.value));
   document.querySelectorAll('.num-filter').forEach(function(inp){
     if(inp.value==='') return;
     parts.push(inp.dataset.stat+'.'+inp.dataset.bound+'='+encodeURIComponent(inp.value));
@@ -584,18 +520,8 @@ function applyHashState(){
     var btn=document.querySelector('.preset-btn[data-preset="'+params.preset+'"]');
     if(btn) btn.click();
   }
-  if(params.scope){
-    activeScope=params.scope;
-    document.querySelectorAll('.quick-btn').forEach(function(b){
-      b.classList.toggle('active', b.dataset.scope===params.scope);
-    });
-  }
-  if(params.creator){
-    var list=params.creator.split(',');
-    activeCreators=new Set(list);
-    document.querySelectorAll('.creator-pill').forEach(function(b){
-      b.classList.toggle('active', list.indexOf(b.dataset.creator)!==-1);
-    });
+  if(params.creator && creatorSelect){
+    creatorSelect.value=params.creator;
   }
   Object.keys(params).forEach(function(k){
     if(k==='scope'||k==='creator'||k==='preset') return;
@@ -760,16 +686,8 @@ function resetAllFilterInputs(){
   if(q) q.value='';
   if(fromI) fromI.value='';
   if(toI) toI.value='';
-  if(freeI) freeI.checked=false;
+  if(creatorSelect) creatorSelect.value='all';
   document.querySelectorAll('.num-filter').forEach(function(i){i.value=''});
-  activeCreators.clear();
-  activeScope='all';
-  document.querySelectorAll('.creator-pill').forEach(function(b){b.classList.remove('active')});
-  var allPill=document.querySelector('.creator-pill[data-creator="all"]');
-  if(allPill) allPill.classList.add('active');
-  document.querySelectorAll('.quick-btn').forEach(function(b){b.classList.remove('active')});
-  var allScope=document.querySelector('.quick-btn[data-scope="all"]');
-  if(allScope) allScope.classList.add('active');
   document.querySelectorAll('.preset-btn').forEach(function(b){b.classList.remove('active')});
 }
 
