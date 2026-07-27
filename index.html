@@ -20,15 +20,15 @@ code,.num,td,th,input{font-family:var(--mono),var(--sans)}
 .model-count{background:var(--accent-bg);color:var(--accent);font-size:12px;font-weight:600;padding:3px 10px;border-radius:var(--r-pill)}
 .meta{color:var(--text-muted);font-size:12px;margin-bottom:12px;line-height:1.6}
 
-.top-filters{display:flex;gap:12px;flex-wrap:wrap;align-items:center;font-size:13px;margin-top:16px}
-.top-filters select{padding:8px 10px;font-size:13px;border:1px solid var(--border);border-radius:var(--r-sm);background:var(--surface);color:var(--text);font-family:inherit}
-.top-filters .search-wrap{flex:1 1 240px;max-width:320px}
-.top-filters input[type=text]{width:100%}
-.top-filters input[type=date]{width:140px}
-.top-filters label[for="from"]{display:inline-flex;align-items:center;gap:6px;color:var(--text-secondary);font-size:13px}
+.top-filters{display:flex;gap:10px;flex-wrap:wrap;align-items:center;font-size:13px;margin-top:16px}
+.top-filters select{padding:7px 10px;font-size:13px;border:1px solid var(--border);border-radius:var(--r-sm);background:var(--surface);color:var(--text);font-family:inherit}
+.top-filters .search-wrap{flex:0 1 220px;min-width:160px;max-width:260px}
+.top-filters input[type=text]{width:100%;height:36px}
+.top-filters input[type=date]{width:130px;height:36px}
+.top-filters label[for="from"]{display:inline-flex;align-items:center;gap:6px;color:var(--text-secondary);font-size:13px;white-space:nowrap;height:36px}
 
-.creator-dropdown-wrap{position:relative;display:inline-block}
-.creator-btn{padding:8px 12px;font-size:13px;border:1px solid var(--border);border-radius:var(--r-sm);background:var(--surface);color:var(--text);font-family:inherit;cursor:pointer;display:flex;align-items:center;gap:8px;min-width:140px;justify-content:space-between;transition:all .15s}
+.creator-dropdown-wrap{position:relative;display:inline-block;flex:0 0 auto}
+.creator-btn{padding:0 12px;height:36px;font-size:13px;border:1px solid var(--border);border-radius:var(--r-sm);background:var(--surface);color:var(--text);font-family:inherit;cursor:pointer;display:flex;align-items:center;gap:8px;min-width:130px;justify-content:space-between;transition:all .15s}
 .creator-btn:hover{border-color:var(--accent)}
 .creator-btn .arrow{font-size:10px;opacity:0.6;transition:transform .15s}
 .creator-dropdown-wrap.open .creator-btn .arrow{transform:rotate(180deg)}
