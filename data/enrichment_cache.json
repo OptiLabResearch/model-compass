@@ -195,7 +195,7 @@
         "omniscience_index": 31.3
       },
       "benchmarks": {
-        "gdpval_v2": 68.0,
+        "gdpval_v2": 68.1,
         "critpt": 29.1,
         "mmmu_pro": 84.7,
         "omniscience_accuracy": 54.2,
@@ -3093,9 +3093,13 @@
       },
       "context_tokens": 1048576,
       "is_reasoning": true,
-      "is_open_weights": false,
+      "is_open_weights": true,
+      "license": "Kimi K3 License",
+      "license_url": "https://huggingface.co/moonshotai/Kimi-K3/blob/main/LICENSE",
+      "commercial_allowed": true,
       "size_class": "large",
       "parameters_billions": 2800,
+      "active_params_billions": 104,
       "input_modalities": {
         "text": true,
         "image": true,

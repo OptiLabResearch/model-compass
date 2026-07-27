@@ -13,14 +13,6 @@ python3 -m http.server 8000
 # Visit http://localhost:8000
 ```
 
-The LLM recommender (`/api/recommend`) only runs under Cloudflare Pages Functions.
-Locally it falls back to the keyword classifier (or your optional OpenRouter key).
-To exercise the full stack:
-
-```bash
-npx wrangler pages dev . --binding GROQ_API_KEY="$GROQ_API_KEY"
-```
-
 ## Refreshing Model Data
 
 The weekly model data refresh is automated via GitHub Actions, but you can run it manually:

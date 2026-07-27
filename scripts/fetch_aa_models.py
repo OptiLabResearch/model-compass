@@ -11,12 +11,11 @@ Two sources, merged:
 
   2. The /models page's server-rendered payload. Best-effort. Carries the full
      metric set, but only for the ~28 models AA renders by default. This is the
-     only public source for omniscience / non-hallucination, which the Picker's
-     hard gates depend on.
+     only public source for omniscience / non-hallucination.
 
 The API is the base; the page enriches it where it can. If the page scrape
 breaks (AA has been actively restructuring it), the site still builds from the
-API alone — the Picker's gates just degrade, and this script says so loudly.
+API alone, and this script says so loudly.
 
 Usage:
     AA_API_KEY=... python3 scripts/fetch_aa_models.py
@@ -25,7 +24,7 @@ Usage:
 
 Exits non-zero if AA_API_KEY is unset, if the API call fails, or if a
 FEATURED_SLUGS entry has no match upstream (a silent rename would otherwise
-empty the Picker and Shortlist with no error at all).
+empty the dataset with no error at all).
 """
 
 import os
@@ -51,8 +50,8 @@ DEFAULT_OUTPUT = REPO_ROOT / "data" / "models.json"
 
 # Last-known-good store for the metrics only the page can provide. AA renders
 # ~28 models richly; everything else it has ever rendered is remembered here, so
-# a model dropping off AA's front page doesn't silently strip the Picker of the
-# non-hallucination gates it depends on.
+# a model dropping off AA's front page doesn't silently strip the non-hallucination
+# metrics.
 #
 # Safe because these are properties of a *released* model: a frozen checkpoint's
 # GPQA score doesn't drift. It is not free, though — AA does re-run evals and
@@ -80,12 +79,12 @@ CACHED_TOP_LEVEL = [
     "input_modalities", "output_modalities",
 ]
 
-# Models highlighted on the Picker and Shortlist pages (a curated subset of
-# whatever AA is currently tracking). Everything else still appears on the
-# All Models page. Add/remove slugs here to change the curated set.
+# Featured models (a curated subset of whatever AA is currently tracking).
+# Everything else still appears on the All Models page. Add/remove slugs here
+# to change the curated set.
 #
 # Featured models are exempt from the RELEASE_WINDOW_DAYS cutoff: curation, not
-# age, decides the shortlist. A featured slug that vanishes upstream is a hard
+# age, decides exemption. A featured slug that vanishes upstream is a hard
 # error, not a silent drop — see check_featured_slugs().
 # Curated 2026-07-21 from AA intel/coding/non-hallucination + value.
 # Swaps: gpt-5-5→gpt-5-6-{sol,terra,luna}, sonnet-4-6→sonnet-5, k2→k3,
@@ -249,8 +248,7 @@ def fetch_page_enrichment() -> dict:
     rich = _grab_array(blob, 'initialModels')
     if not rich:
         print("  WARNING: 'initialModels' not found in the page payload — AA has "
-              "changed the page again. Falling back to API-only data; the Picker's "
-              "non-hallucination gates will be inactive until this is fixed.",
+              "changed the page again. Falling back to API-only data.",
               file=sys.stderr)
         return {}
     return {m['slug']: m for m in rich if m.get('slug')}
@@ -278,8 +276,7 @@ def perf(v, digits=2):
 
     The AA API reports 0 — not null — for models it has never benchmarked for
     speed (50 of them at time of writing, including gpt-5-5-pro). A 0s time to
-    first token is not instant, it is missing, and left as 0 it sails through the
-    Picker's ≤5s voice latency gate and wins every low-latency recommendation.
+    first token is not instant, it is missing.
     """
     if isinstance(v, (int, float)) and v > 0:
         return round(v, digits)
@@ -431,7 +428,7 @@ def build_model_entry(api_m: dict, rich: dict | None) -> dict:
             "it_bench_sre": pct(rich.get('itBenchSre')),
             "omniscience_accuracy": pct(ob.get('accuracy')),
             "omniscience_hallucination_rate": pct(halluc),
-            # AA reports the hallucination rate; the Picker gates on its complement.
+            # AA reports the hallucination rate; models store non_halluc as its complement.
             "omniscience_non_halluc": (
                 round(100 - halluc * 100, 1) if isinstance(halluc, (int, float)) else None
             ),
@@ -507,7 +504,7 @@ def build_model_entry(api_m: dict, rich: dict | None) -> dict:
 
 
 def build_derived(entry: dict) -> dict:
-    """Metrics the Picker would otherwise recompute in the browser on every keystroke."""
+    """Metrics precomputed for table display efficiency."""
     intel = entry['composite']['intelligence_index_v4_1']
     # Prefer the 3:1 blend (matches table column / real-world mix); fall back to 7:2:1.
     blend = entry['pricing_per_m_tokens']['blended_3_1'] \
@@ -671,7 +668,7 @@ def main():
             + "\n".join(f"  - {s}" for s in missing)
             + "\n\nAA has most likely renamed or retired them. Update FEATURED_SLUGS "
               "(and OPENROUTER_SLUGS / NOTES) in this script. Refusing to write a "
-              "models.json that would silently drop them from the Picker and Shortlist.",
+              "models.json that would silently drop them.",
             file=sys.stderr,
         )
         return 1
@@ -705,8 +702,7 @@ def main():
 
     if featured_no_rich:
         print("\n  NOTE: these featured models have no omniscience/non-hallucination "
-              "data, so the Picker's unattended and high-stakes gates will exclude "
-              "them:\n" + "\n".join(f"    - {s}" for s in featured_no_rich))
+              "data:\n" + "\n".join(f"    - {s}" for s in featured_no_rich))
 
     out = {
         "version": "4.1",

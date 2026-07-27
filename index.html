@@ -1,8 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<title>Model Picker — describe your task, get a model recommendation</title>
+<html><head><meta charset="utf-8"><title>All Models — Model Compass</title>
 <script>
   (function () {
     try {
@@ -16,1571 +13,769 @@
 <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/style.css">
 <style>
-  body {
-    font-family: var(--sans);
-    color: var(--text);
-    font-size: 14px; line-height: 1.5;
-  }
-  .container { max-width: 1100px; margin: 0 auto; padding: 20px 16px 28px; }
-  header { padding: 0 0 16px; border-bottom: 1px solid var(--border); margin-bottom: 20px; }
-  h1 { font-family: var(--serif); font-size: 26px; margin: 0 0 4px; font-weight: 600; letter-spacing: -0.2px; }
-  .subtitle { color: var(--text-muted); font-size: 13px; }
-  code, .cost-badge, .stat .value, .badge, .breakdown-row .bval { font-family: var(--mono); }
+body{font-family:var(--sans);color:var(--text);font-size:14px}
+header{padding:0 0 12px;border-bottom:1px solid var(--border);margin-bottom:16px}
+.header-top{display:flex;align-items:center;gap:10px;margin-bottom:6px;flex-wrap:wrap}
+h1{font-family:var(--serif);font-size:24px;margin:0;font-weight:600;letter-spacing:-0.2px}
+code,.num,td,th,input{font-family:var(--mono),var(--sans)}
+.model-count{background:var(--accent-bg);color:var(--accent);font-size:12px;font-weight:600;padding:3px 10px;border-radius:var(--r-pill)}
+.meta{color:var(--text-muted);font-size:12px;margin-bottom:12px;line-height:1.6}
 
-  .input-panel { border-radius: var(--r-lg); padding: 24px; margin-bottom: 16px; }
-  .input-panel label { display: block; font-size: 12px; font-weight: 500;
-    color: var(--text-secondary); margin-bottom: 6px; }
-  .input-panel textarea { width: 100%; padding: 12px; font-size: 15px; line-height: 1.5;
-    border: 1px solid var(--border); border-radius: var(--r-sm); background: var(--surface); color: var(--text);
-    font-family: inherit; resize: vertical; min-height: 100px; }
-  .input-panel textarea:focus { outline: 0; border-color: var(--accent);
-    box-shadow: 0 0 0 2px var(--border-focus); }
-  .input-panel .hint { font-size: 12px; color: var(--text-muted); margin-top: 6px; }
-  .button { display: inline-flex; align-items: center; gap: 6px; padding: 10px 20px;
-    font-size: 14px; font-weight: 600; background: var(--accent); color: var(--accent-fg);
-    border: none; border-radius: var(--r-pill); cursor: pointer; transition: background .15s; margin-top: 12px; }
-  .button:hover { background: var(--accent-hover); }
-  .button.secondary { background: var(--surface-2); color: var(--text-secondary); }
-  .button-row { display: flex; gap: 8px; align-items: center; }
-  .examples { margin-top: 12px; }
-  .examples-title { font-size: 11px; color: var(--text-muted); text-transform: uppercase;
-    letter-spacing: 0.5px; margin-bottom: 6px; }
-  .example-chip { display: inline-block; padding: 5px 10px; font-size: 12px;
-    border: 1px solid var(--border); border-radius: var(--r-pill); background: var(--surface-2);
-    color: var(--text-secondary); cursor: pointer; margin: 2px; user-select: none; }
-  .example-chip:hover { border-color: var(--accent); color: var(--accent); }
+.top-filters{display:flex;gap:12px;flex-wrap:wrap;align-items:center;font-size:12px}
+.top-filters select{padding:8px 10px;font-size:13px;border:1px solid var(--border);border-radius:var(--r-sm);background:var(--surface);color:var(--text);font-family:inherit}
+.top-filters input[type=text]{width:220px}
+.top-filters input[type=date]{width:140px}
+.top-filters label{color:var(--text-secondary)}
 
-  .results { border-radius: var(--r-lg); padding: 24px; min-height: 200px; }
-  .empty { color: var(--text-muted); text-align: center; padding: 60px 20px; }
+/* Presets */
+.presets{display:flex;gap:6px;flex-wrap:wrap;margin:10px 0 0}
+.preset-btn{padding:4px 12px;font-size:12px;font-weight:500;border:1px solid var(--border);border-radius:var(--r-pill);background:var(--surface);color:var(--text-secondary);cursor:pointer;transition:all .15s}
+.preset-btn:hover{border-color:var(--accent);color:var(--accent);background:var(--accent-bg)}
+.preset-btn.active{border-color:var(--accent);color:var(--accent-fg);background:var(--accent)}
 
-  .top-pick { border: 1px solid var(--border); border-left: 3px solid var(--accent);
-    border-radius: 10px; padding: 22px; background: var(--surface); margin-bottom: 14px; }
-  .top-pick-label { font-size: 11px; font-weight: 700; color: var(--accent);
-    text-transform: uppercase; letter-spacing: 0.8px; margin-bottom: 6px; }
-  .top-pick-name { font-family: var(--serif); font-size: 26px; font-weight: 600; margin-bottom: 4px; }
-  .top-pick-score { font-family: var(--mono); font-size: 12px; color: var(--text-secondary); margin-bottom: 12px; }
-  .top-pick-rationale { font-size: 14px; line-height: 1.6; }
-  .top-pick-rationale strong { color: var(--text); }
-  .top-pick-rationale .why { color: var(--text-secondary); }
-  .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
-    gap: 6px; margin: 10px 0 12px 0; }
-  .stat { background: var(--surface); padding: 6px 8px; border-radius: 4px; }
-  .stat .label { color: var(--text-muted); font-size: 10px; text-transform: uppercase; }
-  .stat .value { font-weight: 600; font-size: 14px; }
-  .badges { display: flex; gap: 4px; margin-bottom: 8px; }
-  .badge { font-size: 10px; font-weight: 600; padding: 2px 8px; border-radius: 10px; }
-  .badge.cron { background: var(--green-bg); color: var(--green-dark); }
-  .badge.budget { background: var(--yellow-bg); color: var(--yellow-dark); }
-  .badge.privacy { background: var(--blue-bg); color: var(--blue-dark); }
-  .badge.frontier { background: var(--pink-bg); color: var(--pink-dark); }
+/* Creator filter pills */
+.creator-filters{display:flex;gap:6px;flex-wrap:wrap;margin:10px 0 0;align-items:center}
+.creator-filters-label{font-size:11px;color:var(--text-muted);font-weight:600;text-transform:uppercase;letter-spacing:0.5px;margin-right:4px}
+.creator-pill{padding:3px 10px;font-size:11px;font-weight:500;border:1px solid var(--border);border-radius:var(--r-pill);background:var(--surface);color:var(--text-secondary);cursor:pointer;transition:all .15s}
+.creator-pill:hover{border-color:var(--accent);color:var(--accent)}
+.creator-pill.active{border-color:var(--accent);color:var(--accent-fg);background:var(--accent)}
+.creator-pill.outside{border-color:var(--red-dark);color:var(--red-dark)}
+.creator-pill.outside.active{background:var(--red-dark);color:var(--accent-fg);border-color:var(--red-dark)}
+.creator-pill.inside{border-color:var(--green-dark);color:var(--green-dark)}
+.creator-pill.inside.active{background:var(--green-dark);color:var(--accent-fg);border-color:var(--green-dark)}
 
-  .runner-up { border: 1px solid var(--border); border-radius: 8px; padding: 14px;
-    background: var(--surface-2); margin-bottom: 14px; }
-  .runner-up-label { font-size: 10px; font-weight: 700; color: var(--text-muted);
-    text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; }
-  .runner-up-name { font-size: 15px; font-weight: 600; }
-  .runner-up-why { font-size: 13px; color: var(--text-secondary); margin-top: 4px; }
+/* Quick filter toggles */
+.quick-filters{display:flex;gap:6px;align-items:center;margin:8px 0 0}
+.quick-btn{padding:3px 10px;font-size:11px;font-weight:600;border-radius:var(--r-pill);background:var(--surface);cursor:pointer;transition:all .15s;border:1px solid var(--border)}
+.quick-btn:hover{opacity:0.8}
+.quick-btn.all{color:var(--text-secondary)}
+.quick-btn.all.active{background:var(--text-secondary);color:var(--accent-fg);border-color:var(--text-secondary)}
+.quick-btn.outside-h{color:var(--red-dark);border-color:var(--red-dark)}
+.quick-btn.outside-h.active{background:var(--red-dark);color:var(--accent-fg)}
+.quick-btn.inside-h{color:var(--green-dark);border-color:var(--green-dark)}
+.quick-btn.inside-h.active{background:var(--green-dark);color:var(--accent-fg)}
 
-  .multi-step { border: 1px dashed var(--accent); border-radius: 8px; padding: 14px;
-    background: var(--surface); margin-bottom: 14px; }
-  .multi-step-label { font-size: 11px; font-weight: 700; color: var(--accent);
-    text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 8px; }
-  .step { padding: 8px 0; border-bottom: 1px dashed var(--border); }
-  .step:last-child { border-bottom: 0; }
-  .step-num { font-size: 11px; color: var(--text-muted); text-transform: uppercase; }
-  .step-name { font-size: 14px; font-weight: 600; margin: 2px 0; }
-  .step-why { font-size: 12px; color: var(--text-secondary); }
+.layout{display:flex;gap:16px;align-items:flex-start}
+aside.filters{flex:0 0 280px;position:sticky;top:calc(var(--nav-h) + 16px);border-radius:var(--r-lg);padding:20px;max-height:calc(100vh - var(--nav-h) - 32px);overflow-y:auto}
+aside.filters h2{font-size:14px;margin:0 0 10px;font-weight:600;display:flex;align-items:center;gap:6px}
+aside.filters h2 .btn-text{margin-left:auto;font-size:12px;font-weight:600;color:var(--accent);background:none;border:0;cursor:pointer;padding:0}
+.filter-count{background:var(--accent);color:var(--accent-fg);font-size:10px;font-weight:700;padding:1px 6px;border-radius:var(--r-pill);display:none}
+.filter-count.visible{display:inline}
+.filter-group{margin-bottom:14px;padding-bottom:10px;border-bottom:1px solid var(--border)}
+.filter-group:last-of-type{border-bottom:0;margin-bottom:10px}
+.filter-group h3{font-size:10px;text-transform:uppercase;color:var(--text-muted);margin:0 0 6px;letter-spacing:0.5px;font-weight:600}
+.filter-row{display:flex;align-items:center;gap:4px;margin-bottom:4px;padding-left:8px}
+.filter-row label{flex:0 0 80px;font-size:12px;color:var(--text)}
+.filter-row.has-filter{border-left:2px solid var(--accent)}
+.filter-row input{width:62px;padding:3px 5px;font-size:12px;border-radius:3px;font-variant-numeric:tabular-nums}
+.filter-row .arrow{color:var(--text-muted);font-size:10px}
+#reset{width:100%;padding:7px;font-size:12px;background:var(--surface-2);border:1px solid var(--border);border-radius:var(--r-sm);cursor:pointer;color:var(--text)}
+#reset:hover{background:var(--accent-bg)}
+main{flex:1;min-width:0}
+table{border-collapse:separate;border-spacing:0;width:100%;background:var(--surface);font-size:12px}
+th,td{padding:14px 12px;text-align:right;white-space:nowrap;border-bottom:1px solid var(--border)}
+th{font-weight:600;font-size:11px;text-transform:uppercase;letter-spacing:0.6px;color:var(--text-muted);cursor:pointer;user-select:none}
+th.l,td.l{text-align:left}
+tr:hover td{background:var(--row-hover)}
+tr:hover td.cb-col,tr:hover td.rnk,tr:hover td.name-col{background-color:var(--surface);background-image:linear-gradient(var(--row-hover),var(--row-hover))}
+tr:hover td:first-child{box-shadow:inset 3px 0 0 var(--accent)}
+.num{font-variant-numeric:tabular-nums}
 
-  .fusion-card { background: var(--yellow-bg); border-left: 3px solid var(--yellow-dark);
-    padding: 12px 16px; margin-bottom: 14px; font-size: 13px; border-radius: 4px; }
-  .fusion-card .title { font-weight: 700; margin-bottom: 4px; }
+/* Corner sticky cells */
+th.cb-col,td.cb-col{position:sticky;left:0;z-index:8;width:30px;padding:8px}
+th.cb-col{z-index:30;background:var(--surface)}
+td.cb-col{background:var(--surface)}
+th.rnk,td.rnk{position:sticky;left:30px;z-index:8;text-align:center;width:36px;font-weight:700;font-size:11px;color:var(--text-muted);padding:8px 6px}
+th.rnk{background:var(--surface);z-index:30;border-right:1px solid var(--border)}
+td.rnk{background:var(--surface);border-right:1px solid var(--border)}
+td.name-col{position:sticky;left:66px;z-index:8;background:var(--surface);border-right:1px solid var(--border);white-space:nowrap !important;max-width:260px;overflow:hidden;text-overflow:ellipsis}
+th.name-col{position:sticky;left:66px;z-index:30;background:var(--surface);border-right:1px solid var(--border);white-space:nowrap !important}
+.cell-title{font-family:var(--sans);font-weight:600;color:var(--text);white-space:nowrap !important;display:inline-block}
+.sort-arrow{font-size:10px;margin-left:3px;opacity:0.4}
+th.sorted .sort-arrow{opacity:1;color:var(--accent)}
+td.empty-data{opacity:0.25}
+.compare-cb{width:15px;height:15px;cursor:pointer;accent-color:var(--accent)}
+#compare-bar{display:none;align-items:center;gap:8px;margin:10px 0;padding:8px 12px;background:var(--accent-bg);border:1px solid var(--border-focus);border-radius:var(--r-sm);font-size:12px}
+#compare-bar.visible{display:flex}
+#compare-bar button{padding:4px 12px;font-size:11px;font-weight:600;border-radius:4px;border:1px solid var(--border);cursor:pointer;transition:all .15s}
+#cmp-go{background:var(--accent);color:var(--accent-fg);border-color:var(--accent)}
+#cmp-go:hover{background:var(--accent-hover)}
+#cmp-clear{background:var(--surface);color:var(--text-secondary)}
+#cmp-clear:hover{background:var(--surface-2)}
+#cmp-count{color:var(--accent);font-weight:600}
 
-  .candidates { margin-top: 16px; }
-  .candidates summary { cursor: pointer; color: var(--text-muted); font-size: 12px; }
-  .candidates table { width: 100%; border-collapse: collapse; font-size: 12px; margin-top: 8px; }
-  .candidates th, .candidates td { padding: 5px 8px; text-align: right;
-    border-bottom: 1px solid var(--border); }
-  .candidates th { background: var(--surface-2); font-weight: 600; }
-  .candidates th.l, .candidates td.l { text-align: left; }
-  .candidates td.h1 { background: var(--heat-1); }
-  .candidates td.h2 { background: var(--heat-2); }
-  .candidates td.h3 { background: var(--heat-3); }
+/* Tooltip container */
+#tip{position:fixed;background:var(--surface) !important;color:var(--text) !important;border:1px solid var(--border-strong) !important;font-size:11px;font-weight:400;
+  padding:8px 10px;border-radius:6px;line-height:1.5;pointer-events:none;
+  white-space:normal;width:280px;box-shadow:var(--shadow-md);z-index:9999;
+  display:none}
 
-  .meta { color: var(--text-muted); font-size: 11px; margin-top: 12px; }
-  .meta a { color: var(--accent); }
-  .toast { position: fixed; bottom: 20px; right: 20px; background: var(--tooltip-bg);
-    color: var(--tooltip-fg); padding: 10px 16px; border-radius: var(--r-sm); font-size: 13px;
-    opacity: 0; transition: opacity .2s; pointer-events: none; }
-  .toast.show { opacity: 1; }
-
-  .tag { display: inline-block; font-size: 10px; padding: 2px 6px; border-radius: 8px;
-    background: var(--surface-2); color: var(--text-secondary); margin-left: 4px; }
-  details { margin-top: 8px; }
-  details summary { cursor: pointer; font-size: 11px; color: var(--text-muted); }
-
-  .breakdown { margin-top: 10px; }
-  .breakdown-row { display: grid; grid-template-columns: 130px 1fr 70px;
-    align-items: center; gap: 8px; font-size: 11px; padding: 3px 0; }
-  .breakdown-row .bkey { color: var(--text-secondary); }
-  .breakdown-row .bbar-track { background: var(--surface-2); border-radius: 3px;
-    height: 8px; overflow: hidden; }
-  .breakdown-row .bbar-fill { background: var(--accent); height: 100%; border-radius: 3px; }
-  .breakdown-row .bval { text-align: right; color: var(--text-muted); font-variant-numeric: tabular-nums; }
-
-  .cost-estimator { display: flex; gap: 10px; align-items: center; margin-top: 10px;
-    flex-wrap: wrap; }
-  .cost-estimator label { font-size: 11px; color: var(--text-secondary); }
-  .cost-estimator input[type="number"] { width: 90px; padding: 4px 6px; font-size: 12px;
-    border: 1px solid var(--border); border-radius: var(--r-sm); background: var(--surface); color: var(--text); }
-  .cost-badge { font-size: 11px; color: var(--text-secondary); font-weight: 600; }
-
-  .audit-indicator { font-size: 10px; color: var(--text-muted); }
-
-  @media (max-width: 480px) {
-    body { padding: 12px; }
-    h1 { font-size: 22px; }
-    .input-panel, .results { padding: 14px; }
-    .button-row { flex-wrap: wrap; }
-    .cost-estimator { gap: 6px 10px; }
-  }
-</style>
-</head>
+@media (max-width:800px){
+  .layout{flex-direction:column}
+  aside.filters{position:static;flex:1 1 auto;width:100%;max-height:none}
+}
+@media (max-width:480px){
+  .page{padding:12px 10px 20px}
+  .top-filters input[type=text]{width:100%}
+}
+</style></head>
 <body>
 <div id="site-nav"></div>
 <script src="assets/nav.js"></script>
-<div class="container">
-  <header>
-    <h1>Model Picker</h1>
-    <div class="subtitle">Describe your task. Get a model recommendation. Reads from <code>data/models.json</code> (last scrape: <span id="scrape-time">—</span>). <a href="shortlist.html">Full table →</a></div>
-    <div id="staleness-banner" class="staleness-banner" hidden style="margin-top:8px">
-      ⚠️ <span id="staleness-text"></span>
-    </div>
-  </header>
+<div class="page">
+<header>
+  <div class="header-top">
+    <h1>All Models</h1>
+    <span class="model-count" id="model-count">— models</span>
+  </div>
+  <div id="staleness-banner" class="staleness-banner" hidden style="margin-bottom:12px">⚠️ <span id="staleness-text"></span></div>
 
-  <div class="stat-strip" id="stat-strip">
-    <div class="card stat-tile"><div class="label">Models Tracked</div><div class="value" id="stat-models">—</div></div>
-    <div class="card stat-tile"><div class="label">Creators</div><div class="value" id="stat-creators">—</div></div>
-    <div class="card stat-tile"><div class="label">Median Blended</div><div class="value" id="stat-median-blend">—<span class="unit">/M</span></div></div>
-    <div class="card stat-tile"><div class="label">Last Scrape</div><div class="value" id="stat-scrape-date" style="font-size:22px">—</div></div>
+  <div class="top-filters">
+    <div class="search-wrap"><span class="icon">🔍</span><input id="q" type="text" placeholder="Search name, creator, slug…"></div>
+    <label>From <input id="from" type="date"></label>
+    <label>To <input id="to" type="date"></label>
+    <label><input id="free" type="checkbox"> Available via OpenRouter only</label>
+    <span id="count" style="color:var(--text-muted)"></span>
   </div>
 
-  <div class="input-panel card">
-    <label for="task">What do you want done?</label>
-    <textarea id="task" placeholder="Examples:&#10;• Generate my morning check-in (asks about sleep, last session, supplements)&#10;• Debug a bash script that's failing on a cron job&#10;• Research the trade-offs of three different state management libraries&#10;• Architect a multi-tenant system for SaaS"></textarea>
-    <div class="hint">The model behind this picker will classify the task, apply hard gates, and recommend the best fit. If your task has multiple stages (compress → generate → verify), the picker may return a multi-step plan.</div>
-    <div class="cost-estimator">
-      <label for="est-input-tokens">Expected input tokens</label>
-      <input type="number" id="est-input-tokens" value="50000" min="0" step="1000">
-      <label for="est-output-tokens">Expected output tokens</label>
-      <input type="number" id="est-output-tokens" value="5000" min="0" step="1000">
-    </div>
-    <div class="examples">
-      <div class="examples-title">Try a quick example</div>
-      <span class="example-chip" data-ex="morning">Morning check-in: ask about sleep, training, supplements, mood</span>
-      <span class="example-chip" data-ex="cron">Cron debug: bash script fails at 3am, no human review</span>
-      <span class="example-chip" data-ex="research">Deep research: compare 3 state management libraries for React, with citations</span>
-      <span class="example-chip" data-ex="voice">Voice brief: summarize 3 articles for a 60-second voice read</span>
-      <span class="example-chip" data-ex="architect">Architect: design a multi-tenant SaaS with isolation, billing, and observability</span>
-    </div>
-    <div class="button-row">
-      <button class="button" id="pick-btn">Recommend model</button>
-      <button class="button secondary" id="clear-btn">Clear</button>
-    </div>
-    <details style="margin-top: 14px;">
-      <summary style="cursor: pointer; font-size: 11px; color: var(--text-muted);">
-        <span id="classifier-mode">⚡ Keyword classifier (no LLM cost)</span> — click to configure
-      </summary>
-      <div style="margin-top: 8px; padding: 10px; background: var(--surface-2); border-radius: 6px;">
-        <div style="font-size: 11px; color: var(--text-secondary); line-height: 1.5; margin-bottom: 8px;">
-          This page asks an LLM to read the benchmark table and pick a model for your task,
-          citing the numbers. It runs on the server — you don't need a key. The hard safety
-          gates are enforced in code afterwards, so the LLM can advise but cannot talk its way
-          past a non-hallucination floor.
-          <br><br>
-          If the recommender is rate-limited or unreachable, the page falls back to its weighted
-          formula and tells you so. You can optionally paste an OpenRouter key below to have
-          <em>your</em> key classify the task in that case; the ranking still comes from the formula.
-        </div>
-        <label for="api-key" style="font-size: 11px; font-weight: 500; color: var(--text-secondary); display: block; margin-bottom: 4px;">
-          OpenRouter API key (optional fallback)
-        </label>
-        <input type="password" id="api-key" placeholder="sk-or-v1-..." style="width: 100%; padding: 6px 8px; font-size: 12px; border: 1px solid var(--border); border-radius: 4px; font-family: monospace; background: var(--surface); color: var(--text);">
-        <div class="hint" style="margin-top: 6px;">
-          Only used if the server recommender is unavailable. Stored in localStorage,
-          sent only to openrouter.ai.
-          <!-- Plaintext localStorage — fine for a personal-use local file, but don't paste a shared/org key here. -->
-          <strong>Note:</strong> stored in localStorage in plaintext (not encrypted).
-        </div>
-          <div style="display: flex; gap: 6px; margin-top: 8px;">
-          <button class="button secondary" id="save-key-btn" style="font-size: 11px; padding: 4px 10px; margin: 0;">Save key</button>
-          <button class="button secondary" id="clear-key-btn" style="font-size: 11px; padding: 4px 10px; margin: 0;">Remove key</button>
-        </div>
-        <div style="margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--border);">
-          <label style="font-size: 11px; color: var(--text-secondary); display: flex; gap: 6px; align-items: flex-start; cursor: pointer;">
-            <input type="checkbox" id="audit-consent" style="margin-top: 2px;">
-            <span>Store routing decisions locally for 30 days (task text truncated to 280 chars; never sent to a server). Off by default.</span>
-          </label>
-          <button class="button secondary" id="clear-history-btn" style="font-size: 11px; padding: 4px 10px; margin: 8px 0 0;">Clear local history</button>
-        </div>
-      </div>
-    </details>
+  <!-- Access Quick Filters -->
+  <div class="quick-filters">
+    <span class="creator-filters-label">Access:</span>
+    <button class="quick-btn all active" data-scope="all">All</button>
+    <button class="quick-btn outside-h" data-scope="outside">Outside</button>
+    <button class="quick-btn inside-h" data-scope="inside">Inside</button>
   </div>
 
-  <div class="results card" id="results">
-    <div class="empty">Describe your task above and click <strong>Recommend model</strong>.<br><br>The picker will classify the task, apply safety gates, and recommend the best model (or a multi-step plan if the task has stages).</div>
+  <!-- Creator Filter Pills -->
+  <div class="creator-filters">
+    <span class="creator-filters-label">Creator:</span>
+    <button class="creator-pill active" data-creator="all">All</button>
+    <button class="creator-pill" data-creator="Alibaba">Alibaba</button>
+    <button class="creator-pill" data-creator="Anthropic">Anthropic</button>
+    <button class="creator-pill" data-creator="DeepSeek">DeepSeek</button>
+    <button class="creator-pill" data-creator="Google">Google</button>
+    <button class="creator-pill" data-creator="Kimi">Kimi</button>
+    <button class="creator-pill" data-creator="MiniMax">MiniMax</button>
+    <button class="creator-pill" data-creator="OpenAI">OpenAI</button>
+    <button class="creator-pill" data-creator="Xiaomi">Xiaomi</button>
+    <button class="creator-pill" data-creator="Z AI">Z AI</button>
+    <button class="creator-pill" data-creator="xAI">xAI</button>
   </div>
+
+  <!-- Presets -->
+  <div class="presets">
+    <button class="preset-btn" data-preset="best-overall">🏆 Best Overall</button>
+    <button class="preset-btn" data-preset="best-value">💰 Best Value</button>
+    <button class="preset-btn" data-preset="coding">💻 Coding</button>
+    <button class="preset-btn" data-preset="reasoning">🧠 Reasoning</button>
+    <button class="preset-btn" data-preset="cheapest">💸 Cheapest</button>
+    <button class="preset-btn" data-preset="agentic">🤖 Agentic</button>
+  </div>
+</header>
+<div class="layout">
+  <aside class="filters card">
+    <h2>Filters <span class="filter-count" id="filter-count-badge">0</span><button class="btn-text" id="reset">Reset</button></h2>
+    <div class="filter-group"><h3>Cost ($/M tokens)</h3>
+      <div class="filter-row" data-stat="in_$/M"><label>Input</label><input type="number" class="num-filter" data-stat="in_$/M" data-bound="min" placeholder="min" step="any"><span class="arrow">→</span><input type="number" class="num-filter" data-stat="in_$/M" data-bound="max" placeholder="max" step="any"></div>
+      <div class="filter-row" data-stat="out_$/M"><label>Output</label><input type="number" class="num-filter" data-stat="out_$/M" data-bound="min" placeholder="min" step="any"><span class="arrow">→</span><input type="number" class="num-filter" data-stat="out_$/M" data-bound="max" placeholder="max" step="any"></div>
+      <div class="filter-row" data-stat="blend_3to1_$/M"><label>Blended</label><input type="number" class="num-filter" data-stat="blend_3to1_$/M" data-bound="min" placeholder="min" step="any"><span class="arrow">→</span><input type="number" class="num-filter" data-stat="blend_3to1_$/M" data-bound="max" placeholder="max" step="any"></div>
+    </div>
+    <div class="filter-group"><h3>Composite (0-100)</h3>
+      <div class="filter-row" data-stat="intelligence"><label>Intelligence</label><input type="number" class="num-filter" data-stat="intelligence" data-bound="min" placeholder="min" step="any"><span class="arrow">→</span><input type="number" class="num-filter" data-stat="intelligence" data-bound="max" placeholder="max" step="any"></div>
+      <div class="filter-row" data-stat="coding"><label>Coding</label><input type="number" class="num-filter" data-stat="coding" data-bound="min" placeholder="min" step="any"><span class="arrow">→</span><input type="number" class="num-filter" data-stat="coding" data-bound="max" placeholder="max" step="any"></div>
+      <div class="filter-row" data-stat="agentic"><label>Agentic</label><input type="number" class="num-filter" data-stat="agentic" data-bound="min" placeholder="min" step="any"><span class="arrow">→</span><input type="number" class="num-filter" data-stat="agentic" data-bound="max" placeholder="max" step="any"></div>
+      <div class="filter-row" data-stat="omniscience"><label>Omniscience</label><input type="number" class="num-filter" data-stat="omniscience" data-bound="min" placeholder="min" step="any"><span class="arrow">→</span><input type="number" class="num-filter" data-stat="omniscience" data-bound="max" placeholder="max" step="any"></div>
+    </div>
+    <div class="filter-group"><h3>Reasoning / Science</h3>
+      <div class="filter-row" data-stat="gpqa_%"><label>GPQA %</label><input type="number" class="num-filter" data-stat="gpqa_%" data-bound="min" placeholder="min" step="any"><span class="arrow">→</span><input type="number" class="num-filter" data-stat="gpqa_%" data-bound="max" placeholder="max" step="any"></div>
+      <div class="filter-row" data-stat="hle_%"><label>HLE %</label><input type="number" class="num-filter" data-stat="hle_%" data-bound="min" placeholder="min" step="any"><span class="arrow">→</span><input type="number" class="num-filter" data-stat="hle_%" data-bound="max" placeholder="max" step="any"></div>
+      <div class="filter-row" data-stat="critpt_%"><label>CritPt %</label><input type="number" class="num-filter" data-stat="critpt_%" data-bound="min" placeholder="min" step="any"><span class="arrow">→</span><input type="number" class="num-filter" data-stat="critpt_%" data-bound="max" placeholder="max" step="any"></div>
+    </div>
+    <div class="filter-group"><h3>Reliability</h3>
+      <div class="filter-row" data-stat="non_halluc_%"><label>Non-hallucination %</label><input type="number" class="num-filter" data-stat="non_halluc_%" data-bound="min" placeholder="min" step="any"><span class="arrow">→</span><input type="number" class="num-filter" data-stat="non_halluc_%" data-bound="max" placeholder="max" step="any"></div>
+      <div class="filter-row" data-stat="ifbench_%"><label>IFBench %</label><input type="number" class="num-filter" data-stat="ifbench_%" data-bound="min" placeholder="min" step="any"><span class="arrow">→</span><input type="number" class="num-filter" data-stat="ifbench_%" data-bound="max" placeholder="max" step="any"></div>
+    </div>
+    <div class="filter-group"><h3>Agentic / Long-context</h3>
+      <div class="filter-row" data-stat="lcr_%"><label>LCR %</label><input type="number" class="num-filter" data-stat="lcr_%" data-bound="min" placeholder="min" step="any"><span class="arrow">→</span><input type="number" class="num-filter" data-stat="lcr_%" data-bound="max" placeholder="max" step="any"></div>
+      <div class="filter-row" data-stat="tau2_%"><label>τ²-Bench %</label><input type="number" class="num-filter" data-stat="tau2_%" data-bound="min" placeholder="min" step="any"><span class="arrow">→</span><input type="number" class="num-filter" data-stat="tau2_%" data-bound="max" placeholder="max" step="any"></div>
+      <div class="filter-row" data-stat="tau_banking_%"><label>τ³-Bench Banking % (v4.1)</label><input type="number" class="num-filter" data-stat="tau_banking_%" data-bound="min" placeholder="min" step="any"><span class="arrow">→</span><input type="number" class="num-filter" data-stat="tau_banking_%" data-bound="max" placeholder="max" step="any"></div>
+      <div class="filter-row" data-stat="gdpval_%"><label>GDPval %</label><input type="number" class="num-filter" data-stat="gdpval_%" data-bound="min" placeholder="min" step="any"><span class="arrow">→</span><input type="number" class="num-filter" data-stat="gdpval_%" data-bound="max" placeholder="max" step="any"></div>
+    </div>
+    <div class="filter-group"><h3>Coding benchmarks</h3>
+      <div class="filter-row" data-stat="terminalbench_hard_%"><label>Terminal-Bench Hard %</label><input type="number" class="num-filter" data-stat="terminalbench_hard_%" data-bound="min" placeholder="min" step="any"><span class="arrow">→</span><input type="number" class="num-filter" data-stat="terminalbench_hard_%" data-bound="max" placeholder="max" step="any"></div>
+      <div class="filter-row" data-stat="terminalbench_v2_1_%"><label>Terminal-Bench 2.1 % (v4.1)</label><input type="number" class="num-filter" data-stat="terminalbench_v2_1_%" data-bound="min" placeholder="min" step="any"><span class="arrow">→</span><input type="number" class="num-filter" data-stat="terminalbench_v2_1_%" data-bound="max" placeholder="max" step="any"></div>
+      <div class="filter-row" data-stat="scicode_%"><label>SciCode %</label><input type="number" class="num-filter" data-stat="scicode_%" data-bound="min" placeholder="min" step="any"><span class="arrow">→</span><input type="number" class="num-filter" data-stat="scicode_%" data-bound="max" placeholder="max" step="any"></div>
+    </div>
+    <div class="filter-group"><h3>Vision</h3>
+      <div class="filter-row" data-stat="mmmu_pro_%"><label>MMMU-Pro %</label><input type="number" class="num-filter" data-stat="mmmu_pro_%" data-bound="min" placeholder="min" step="any"><span class="arrow">→</span><input type="number" class="num-filter" data-stat="mmmu_pro_%" data-bound="max" placeholder="max" step="any"></div>
+    </div>
+    <div class="filter-group"><h3>Performance</h3>
+      <div class="filter-row" data-stat="speed_tps"><label>Speed t/s</label><input type="number" class="num-filter" data-stat="speed_tps" data-bound="min" placeholder="min" step="any"><span class="arrow">→</span><input type="number" class="num-filter" data-stat="speed_tps" data-bound="max" placeholder="max" step="any"></div>
+      <div class="filter-row" data-stat="ttft_s"><label>TTFT s</label><input type="number" class="num-filter" data-stat="ttft_s" data-bound="min" placeholder="min" step="any"><span class="arrow">→</span><input type="number" class="num-filter" data-stat="ttft_s" data-bound="max" placeholder="max" step="any"></div>
+      <div class="filter-row" data-stat="ttfa_s"><label>TTFA s</label><input type="number" class="num-filter" data-stat="ttfa_s" data-bound="min" placeholder="min" step="any"><span class="arrow">→</span><input type="number" class="num-filter" data-stat="ttfa_s" data-bound="max" placeholder="max" step="any"></div>
+    </div>
+    <div id="compare-bar">
+      <span id="cmp-count">0</span> selected
+      <button id="cmp-go">Compare</button>
+      <button id="cmp-clear">Show All</button>
+    </div>
+  </aside>
+  <main>
+<div class="table-caption"><span class="count" id="table-count"><strong id="table-count-n">0</strong> models</span><span class="sort-state" id="table-sort-state">Sorted: <b>—</b></span></div>
+<div class="card table-card"><div class="scroll">
+<table id="t"><thead><tr>
+  <th class="l rnk" data-i="0" data-t="n" data-tip="Rank sorted by current sort column">#</th>
+  <th class="cb-col"><input type="checkbox" id="check-all" class="compare-cb" title="Select all"></th>
+  <th class="l name-col" data-i="1" data-t="s" data-tip="Model name">Name</th>
+  <th class="l" data-i="2" data-t="s" data-tip="Model creator / organization">Creator</th>
+  <th data-i="3" data-t="d" data-tip="Release date">Released</th>
+  <th data-i="4" data-t="n" data-tip="Input cost per 1M tokens in USD">In $/M</th>
+  <th data-i="5" data-t="n" data-tip="Output cost per 1M tokens in USD">Out $/M</th>
+  <th data-i="6" data-t="n" data-tip="Blended cost = input × 0.75 + output × 0.25 per million tokens">Blended</th>
+  <th data-i="7" data-t="n" data-tip="Composite intelligence index (v4.1) averaging GPQA, HLE, and IFBench">Intelligence</th>
+  <th data-i="8" data-t="n" data-tip="Average of SciCode and TerminalBench v2.1. Measures ability to write correct code">Coding</th>
+  <th data-i="9" data-t="n" data-tip="Average of τ²-Bench, LCR, and GDPval v2 for workflow automation">Agentic</th>
+  <th data-i="10" data-t="n" data-tip="Broad factual accuracy score across diverse knowledge domains">Omniscience</th>
+  <th data-i="11" data-t="n" data-tip="Graduate-level Google-Proof Q&A science benchmark">GPQA %</th>
+  <th data-i="12" data-t="n" data-tip="Humanity's Last Exam — hardest unsolvable benchmark questions">HLE %</th>
+  <th data-i="13" data-t="n" data-tip="Critical reasoning and scientific hypothesis evaluation">CritPt %</th>
+  <th data-i="14" data-t="n" data-tip="Percentage of outputs without hallucinated or fabricated facts">Non-halluc %</th>
+  <th data-i="15" data-t="n" data-tip="Instruction Following Benchmark for complex formatting rules">IFBench %</th>
+  <th data-i="16" data-t="n" data-tip="Long-Context Retrieval accuracy finding specific facts in 100K+ token documents">LCR %</th>
+  <th data-i="17" data-t="n" data-tip="Agent tool-use benchmark testing state tracking and API calls">τ²-Bench %</th>
+  <th data-i="18" data-t="n" data-tip="τ³-Bench Banking domain multi-step agent benchmark">τ³-Banking %</th>
+  <th data-i="19" data-t="n" data-tip="General Domain Proficiency real-world task completion">GDPval %</th>
+  <th data-i="20" data-t="n" data-tip="TerminalBench Hard — hard system administration tasks">TermBench H%</th>
+  <th data-i="21" data-t="n" data-tip="TerminalBench v2.1 — shell scripting & DevOps tasks">TermBench 2.1%</th>
+  <th data-i="22" data-t="n" data-tip="Scientific computing & numerical Python code execution">SciCode %</th>
+  <th data-i="23" data-t="n" data-tip="Expert visual & multimodal reasoning benchmark">MMMU-Pro %</th>
+  <th data-i="24" data-t="n" data-tip="Median output generation speed in tokens per second">Spd t/s</th>
+  <th data-i="25" data-t="n" data-tip="Median Time To First Token in seconds (latency)">TTFT s</th>
+  <th data-i="26" data-t="n" data-tip="Median Time To First Answer token in seconds">TTFA s</th>
+  <th class="l" data-i="27" data-t="s" data-tip="Model URL identifier on Artificial Analysis">Slug</th>
+</tr></thead><tbody></tbody></table>
+</div></div>
+</main>
 </div>
 
-<div class="toast" id="toast">Saved</div>
-<div id="site-footer"></div>
+<div id="tip"></div>
+</div><!-- /.page -->
 
 <script>
-/* ===========================================================
- * Data loading
- * =========================================================== */
-let MODELS = [];
-let META = {};
-// Fallback used if picker-config.json is missing or fails to load.
-let CONFIG = { classifier_model: 'xiaomi/mimo-v2-5' };
-
-function updateStatStrip(scrapedAt) {
-  const modelsEl = document.getElementById('stat-models');
-  if (modelsEl) modelsEl.textContent = MODELS.length;
-  const creators = new Set(MODELS.map(m => m.creator).filter(Boolean));
-  const creatorsEl = document.getElementById('stat-creators');
-  if (creatorsEl) creatorsEl.textContent = creators.size;
-  const blends = MODELS.map(m => m.pricing_per_m_tokens?.blended_3_1).filter(v => v != null).sort((a, b) => a - b);
-  const median = blends.length ? blends[Math.floor(blends.length / 2)] : null;
-  const medianEl = document.getElementById('stat-median-blend');
-  if (medianEl) {
-    medianEl.textContent = '';
-    medianEl.appendChild(document.createTextNode(median != null ? `$${median.toFixed(2)}` : '—'));
-    const unit = document.createElement('span');
-    unit.className = 'unit';
-    unit.textContent = '/M';
-    medianEl.appendChild(unit);
-  }
-  const dateEl = document.getElementById('stat-scrape-date');
-  if (dateEl) dateEl.textContent = scrapedAt ? scrapedAt.slice(0, 10) : '—';
-}
-
-async function loadData() {
-  try {
-    const res = await fetch('./data/models.json');
-    const data = await res.json();
-    MODELS = (data.models || []).filter(m => m.featured);
-    META = { scraped_at: data.scraped_at, source_url: data.source_url };
-    const ts = (data.scraped_at || '').replace('T', ' ').replace('Z', '');
-    document.getElementById('scrape-time').textContent = ts;
-    ModelCompassNav.checkStaleness(data.scraped_at);
-    updateStatStrip(data.scraped_at);
-  } catch (e) {
-    const results = document.getElementById('results');
-    results.textContent = '';
-    const empty = document.createElement('div');
-    empty.className = 'empty';
-    empty.appendChild(document.createTextNode('⚠️ Could not load data/models.json. Make sure you\'re serving this site over HTTP (not opening the file directly) — see the README.'));
-    empty.appendChild(document.createElement('br'));
-    empty.appendChild(document.createElement('br'));
-    empty.appendChild(document.createTextNode('Error: ' + (e && e.message ? e.message : String(e))));
-    results.appendChild(empty);
-  }
-  try {
-    const cfgRes = await fetch('./picker-config.json');
-    if (cfgRes.ok) CONFIG = Object.assign({}, CONFIG, await cfgRes.json());
-  } catch (e) {
-    // picker-config.json missing/unreachable — keep the hardcoded fallback above.
-  }
-}
-
-/* ===========================================================
- * Task classification
- * The model behind this picker (the browser, the user) decides
- * the task type by reading the natural-language description.
- * We expose this as `classifyTask()` which returns one or more
- * task types plus their weights.
- * =========================================================== */
-
-const TASK_KEYWORDS = {
-  coaching: {
-    weight: 1.0,
-    keywords: ['morning', 'check-in', 'checkin', 'journal', 'coaching', 'reminder',
-      'briefing', 'how was my day', 'reflect', 'mood', 'sleep last night',
-      'conversation', 'conversational', 'mental health', 'wellness',
-      'habit', 'routine', 'mindfulness', 'affirmation', 'motivation', 'support',
-      'accountability', 'sit with me', 'talk to me', 'chat with me'],
-  },
-  coding: {
-    weight: 1.0,
-    keywords: ['debug', 'fix this bug', 'code', 'script', 'bash', 'python', 'typescript',
-      'javascript', 'function', 'class', 'api', 'endpoint', 'regex', 'compile',
-      'error', 'exception', 'stack trace', 'refactor', 'implement', 'write a',
-      'sql', 'dockerfile', 'yaml', 'toml', 'crontab', 'unit test', 'integration test',
-      'typescript', 'rust', 'golang', 'compile error', 'import', 'library',
-      'sdk', 'framework', 'dependency', 'package', 'npm', 'pip', 'cargo', 'go mod'],
-  },
-  agentic: {
-    weight: 1.0,
-    keywords: ['automate', 'cron', 'scheduled', 'pipeline', 'etl', 'workflow',
-      'tool use', 'api call', 'multi-step', 'orchestrate', 'agent', 'bot',
-      'unattended', 'no review', 'automatically', 'recurring', 'hook',
-      'webhook', 'integration', 'zapier', 'make.com', 'rpa', 'browser automation'],
-  },
-  research: {
-    weight: 1.0,
-    keywords: ['research', 'compare', 'literature review', 'sources', 'citations',
-      'survey', 'state of the art', 'comprehensive', 'investigate',
-      'multi-perspective', 'synthesis', 'pros and cons', 'tradeoffs',
-      'trade-offs', 'evidence', 'study', 'paper', 'arxiv', 'wikipedia',
-      'primary sources', 'verified facts', 'academic', 'deep dive'],
-  },
-  architecting: {
-    weight: 1.0,
-    keywords: ['architect', 'design', 'system design', 'schema', 'database schema',
-      'infrastructure', 'scale', 'scalability', 'high availability', 'ha',
-      'distributed', 'microservices', 'monolith', 'queue', 'event-driven',
-      'cqrs', 'event sourcing', 'observability', 'monitoring', 'ci/cd',
-      'multi-tenant', 'saas architecture', 'system architecture'],
-  },
-  advisor: {
-    weight: 1.0,
-    keywords: ['advise', 'advice', 'recommend', 'should i', 'what do you think',
-      'opinion', 'perspective', 'expert', 'consult', 'help me decide',
-      'compare options', 'evaluate', 'assess', 'pros and cons',
-      'best approach', 'strategy', 'direction', 'guidance'],
-  },
-  voice: {
-    weight: 1.0,
-    keywords: ['voice', 'speak', 'tts', 'text-to-speech', 'audio', 'narration',
-      'podcast', 'briefing audio', 'voice note', 'read aloud'],
-  },
-  vision: {
-    weight: 1.0,
-    keywords: ['image', 'picture', 'photo', 'screenshot', 'diagram', 'chart',
-      'graph', 'visual', 'multimodal', 'describe this image', 'ocr',
-      'extract text from', 'logo', 'ui mockup', 'wireframe'],
-  },
-  creative: {
-    weight: 1.0,
-    keywords: ['write a story', 'poem', 'lyrics', 'novel', 'fiction', 'narrative',
-      'brainstorm', 'ideas for', 'creative', 'imagine', 'worldbuilding',
-      'character', 'dialogue', 'screenplay', 'short story'],
-  },
-};
-
-const TASK_LABELS = {
-  coaching: 'Coaching',
-  coding: 'Coding',
-  agentic: 'Agentic',
-  research: 'Research',
-  architecting: 'Architecting',
-  advisor: 'Advisor',
-  voice: 'Voice',
-  vision: 'Vision',
-  creative: 'Creative',
-  general: 'General',
-};
-
-const SCENARIO_HINTS = {
-  unattended: ['cron', 'unattended', 'no review', 'automated', 'no human',
-    'automatically', 'recurring', 'nightly', 'background', 'scheduled',
-    'without me', 'no one will see', 'no oversight', 'no one checking'],
-  interactive: ['with me', 'i will review', 'i\'ll check', 'human review',
-    'we can iterate', 'let me read', 'i can see', 'interactive'],
-  high_stakes: ['medical', 'legal', 'financial advice', 'safety-critical',
-    'production', 'customer-facing', 'public', 'compliance', 'regulated'],
-  long_context: ['long', 'large file', 'big codebase', '100k', 'entire history',
-    'all my notes', 'multi-document', 'thousands of lines', 'ramblings'],
-  cost_sensitive: ['cheap', 'budget', 'minimize cost', 'low cost',
-    'frugal', 'every dollar', 'cost matters', 'price matters'],
-  low_latency: ['real-time', 'low latency', 'fast', 'instant', 'sub-second',
-    'responds in', 'live', 'streaming', 'voice', 'ttft'],
-};
-
-function classifyTask(text) {
-  const lower = text.toLowerCase();
-  const scores = {};
-
-  for (const [taskType, config] of Object.entries(TASK_KEYWORDS)) {
-    let s = 0;
-    for (const kw of config.keywords) {
-      if (lower.includes(kw)) s += 1;
-    }
-    if (s > 0) scores[taskType] = s;
-  }
-
-  if (Object.keys(scores).length === 0) {
-    return { type: 'general', scores: {}, confidence: 0, source: 'keyword' };
-  }
-
-  // Sort by score, then by specificity. Specialized types beat coaching/general
-  // on ties so "voice brief for my morning routine" does not land on coaching
-  // just because morning/routine also match coaching keywords.
-  const TYPE_PRIORITY = {
-    voice: 10, vision: 10, coding: 9, agentic: 8, research: 7,
-    architecting: 7, creative: 6, advisor: 5, coaching: 3, general: 1,
-  };
-  const sorted = Object.entries(scores).sort((a, b) => {
-    if (b[1] !== a[1]) return b[1] - a[1];
-    return (TYPE_PRIORITY[b[0]] || 0) - (TYPE_PRIORITY[a[0]] || 0);
+/* Tooltip handler */
+var tipEl=document.getElementById('tip');
+document.querySelectorAll('th[data-tip]').forEach(function(th){
+  th.addEventListener('mouseenter',function(e){
+    tipEl.textContent=th.dataset.tip;
+    tipEl.style.display='block';
+    var r=th.getBoundingClientRect();
+    tipEl.style.left=Math.max(8,Math.min(r.left+r.width/2-140,window.innerWidth-296))+'px';
+    tipEl.style.top=(r.top-tipEl.offsetHeight-8)+'px';
   });
-  const top = sorted[0];
-  const totalScore = sorted.reduce((s, [_, v]) => s + v, 0);
+  th.addEventListener('mouseleave',function(){tipEl.style.display='none'});
+});
 
-  // If two tasks are close, return a multi-step recommendation
-  const second = sorted[1];
-  let multi = null;
-  if (second && second[1] >= top[1] * 0.7 && second[1] >= 2) {
-    multi = [top[0], second[0]];
-  }
+const tbody=document.querySelector('#t tbody');
+const q=document.getElementById('q'), fromI=document.getElementById('from'),
+      toI=document.getElementById('to'), freeI=document.getElementById('free'),
+      cnt=document.getElementById('count');
+const filterCountBadge=document.getElementById('filter-count-badge');
+const filterRows=document.querySelectorAll('.filter-row[data-stat]');
 
-  return {
-    type: top[0],
-    scores,
-    confidence: top[1] / totalScore,
-    multi,
-    source: 'keyword',
-  };
-}
+let sortI=null, sortAsc=true;
 
-/* ===========================================================
- * LLM-based classifier (via OpenRouter)
- * More accurate than keyword matching. Requires an OpenRouter API key.
- * Set the key once via the UI; stored in localStorage (NOT sent anywhere
- * except openrouter.ai). Costs ~$0.0001 per classification (MiMo-V2.5 base).
- * =========================================================== */
+var outsideCreators=['OpenAI','Anthropic','Google'];
+var activeCreators=new Set();
+var activeScope='all';
 
-const CLASSIFIER_PROMPT = `You are a task classifier. Given a user's task description, return JSON with this exact shape:
+/* Compare mode */
+var cmpBar=document.getElementById('compare-bar'),
+    cmpCount=document.getElementById('cmp-count'),
+    cmpGo=document.getElementById('cmp-go'),
+    cmpClear=document.getElementById('cmp-clear'),
+    checkAll=document.getElementById('check-all');
+var cmpActive=false;
 
-{
-  "type": "<one of: coaching, coding, agentic, research, architecting, advisor, voice, vision, creative, general>",
-  "confidence": <0.0-1.0>,
-  "scenarios": {
-    "unattended": <true if the task runs without human review (cron, automation, background, "no one will see it"). false otherwise.>,
-    "long_context": <true if input is likely >100K tokens, large codebase, multi-document>,
-    "low_latency": <true if real-time / voice / sub-second response matters>,
-    "high_stakes": <true if medical, legal, financial, customer-facing, production, compliance>,
-    "cost_sensitive": <true if user explicitly cares about cost being low>
-  },
-  "rationale": "<one short sentence: why you chose this type>",
-  "multi_step": [<secondary task type, if task has clearly distinct stages. e.g. ["research"] for "research then summarize", or [] if single task>]
-}
-
-Definitions:
-- coaching: check-ins, journaling, briefings, conversational support, habits
-- coding: write/debug/refactor code, scripts, debugging
-- agentic: multi-step automation, tool use, cron jobs, API orchestration
-- research: deep investigation, multi-source synthesis, comparisons with citations
-- architecting: system design, schema, infrastructure, scalability
-- advisor: asking for an opinion or recommendation on a decision
-- voice: text-to-speech, audio narration, voice brief
-- vision: image/screenshot/chart analysis
-- creative: storytelling, poetry, brainstorming ideas
-- general: anything that doesn't fit the above
-
-IMPORTANT:
-- Default to "interactive" (unattended: false) unless the task is clearly automation/cron/no-review
-- If the task has clear stages (e.g. "research X then summarize"), put the primary in "type" and secondary in "multi_step"
-- Be honest about confidence: 0.9+ for clear, 0.5-0.7 for ambiguous
-- Return ONLY the JSON object, no prose
-
-User task: """`;
-
-async function classifyWithLLM(text) {
-  const apiKey = localStorage.getItem('openrouter-api-key');
-  if (apiKey) {
-    const response = await fetch('https://openrouter.ai/api/v1/chat/completions', {
-      method: 'POST',
-      headers: {
-        'Authorization': `Bearer ${apiKey}`,
-        'Content-Type': 'application/json',
-        'HTTP-Referer': window.location.href,
-        'X-Title': 'Model Compass Picker',
-      },
-      body: JSON.stringify({
-        model: CONFIG.classifier_model,
-        messages: [
-          { role: 'system', content: 'You are a JSON-only classifier. Return only valid JSON.' },
-          { role: 'user', content: CLASSIFIER_PROMPT + text + '"""' },
-        ],
-        temperature: 0,
-        max_tokens: 200,
-        response_format: { type: 'json_object' },
-      }),
-    });
-
-    if (!response.ok) {
-      const err = await response.text();
-      throw new Error(`OpenRouter API error ${response.status}: ${err.slice(0, 200)}`);
-    }
-
-    const data = await response.json();
-    const content = data.choices?.[0]?.message?.content;
-    if (!content) throw new Error('Empty response from LLM');
-    const parsed = JSON.parse(content);
-    return validateAndShapeLLMResult(parsed, 'openrouter');
-  }
-
-  throw new Error('No OpenRouter API key set — paste one above, or clear it to use the free keyword classifier.');
-}
-
-function isLlmSource(source) {
-  return source === 'llm' || (typeof source === 'string' && source.startsWith('llm-'));
-}
-
-function validateAndShapeLLMResult(parsed, source) {
-  const validTypes = Object.keys(TASK_LABELS);
-  if (!validTypes.includes(parsed.type)) {
-    throw new Error(`LLM returned invalid type: ${parsed.type}`);
-  }
-  return {
-    type: parsed.type,
-    scores: { [parsed.type]: parsed.confidence },
-    confidence: parsed.confidence,
-    multi: Array.isArray(parsed.multi_step) && parsed.multi_step.length > 0 ? parsed.multi_step : null,
-    scenarios: parsed.scenarios || {},
-    rationale: typeof parsed.rationale === 'string' ? parsed.rationale : '',
-    source: source === 'proxy' ? 'llm' : `llm-${source}`,
-  };
-}
-
-/* ===========================================================
- * LLM recommender (via the /api/recommend Pages Function)
- *
- * The proxy holds the API key server-side, so this works for every visitor
- * with no key to paste. Unlike the classifier above, the LLM here reads the
- * actual benchmark rows and picks a model, which lets it weigh tradeoffs the
- * fixed TASK_WEIGHTS formula cannot express.
- *
- * It does NOT get the last word. renderResult() re-applies the hard gates to
- * whatever it returns, using the task type and scenarios it reported, and
- * discards a pick that fails one. The LLM advises; the gates decide.
- * =========================================================== */
-
-// The rows the LLM reasons over. Flat and short-keyed — the model reads these far
-// more reliably than the nested schema.
-//
-// The field list is deliberately lean. Groq's free tier allows 8000 tokens per
-// minute, counting prompt + completion, so every field here is paid for out of a
-// budget that also has to cover the model's reasoning. Redundant metrics are left
-// out (terminalbench_hard duplicates v2_1, tau2 duplicates tau3), values are
-// rounded, and nulls are dropped — an absent key reads as "untested" just as well
-// as an explicit null, at a fraction of the tokens.
-function candidateRow(m) {
-  const r1 = v => (typeof v === 'number' ? Math.round(v * 10) / 10 : null);
-  const row = {
-    slug: m.slug,
-    name: m.name,
-    creator: m.creator,
-    intelligence: r1(m.composite?.intelligence_index_v4_1),
-    coding_index: r1(m.composite?.coding_index),
-    agentic_index: r1(m.composite?.agentic_index),
-    non_halluc: r1(m.benchmarks?.omniscience_non_halluc),
-    omniscience_accuracy: r1(m.benchmarks?.omniscience_accuracy),
-    gpqa: r1(m.benchmarks?.gpqa_diamond),
-    hle: r1(m.benchmarks?.hle),
-    scicode: r1(m.benchmarks?.scicode),
-    ifbench: r1(m.benchmarks?.ifbench),
-    lcr_long_context: r1(m.benchmarks?.lcr),
-    tau3_banking: r1(m.benchmarks?.tau3_banking),
-    terminalbench: r1(m.benchmarks?.terminalbench_v2_1),
-    mmmu_pro_vision: r1(m.benchmarks?.mmmu_pro),
-    context_tokens: m.context_tokens ?? null,
-    cost_per_task_usd: m.cost_per_intelligence_task_usd?.total ?? null,
-    price_out_per_m: m.pricing_per_m_tokens?.output ?? null,
-    output_speed_tps: r1(m.performance?.output_speed_tps),
-    ttft_seconds: r1(m.performance?.ttft_seconds_answer),
-  };
-  for (const k of Object.keys(row)) {
-    if (row[k] === null || row[k] === undefined) delete row[k];
-  }
-  return row;
-}
-
-async function recommendWithProxy(text) {
-  const res = await fetch('/api/recommend', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ task: text, candidates: MODELS.map(candidateRow) }),
+function updateRanks(){
+  var rank=0;
+  tbody.querySelectorAll('tr').forEach(function(r){
+    if(r.style.display==='none') return;
+    rank++;
+    var cell=r.querySelector('td.rnk');
+    if(cell) cell.textContent=rank;
   });
-
-  if (!res.ok) {
-    const body = await res.json().catch(() => ({}));
-    throw new Error(body.error || `Recommender returned ${res.status}`);
-  }
-
-  const r = await res.json();
-  return {
-    type: r.type,
-    scores: { [r.type]: r.confidence },
-    confidence: r.confidence,
-    scenarios: r.scenarios || {},
-    multi: Array.isArray(r.multi_step) && r.multi_step.length > 0 ? r.multi_step : null,
-    rationale: r.rationale,
-    tradeoff: r.tradeoff,
-    llm_pick: r.pick,
-    llm_runner_up: r.runner_up,
-    source: 'llm',
-  };
 }
 
-async function classify(text) {
-  // Proxy (server-held key, picks a model) → user's own OpenRouter key
-  // (classifies only) → keyword matching (classifies only). Each step down
-  // still produces a usable recommendation, just a less informed one.
-  try {
-    return await recommendWithProxy(text);
-  } catch (proxyError) {
-    console.warn('LLM recommender unavailable:', proxyError);
-    try {
-      const result = await classifyWithLLM(text);
-      result.llm_error = `Recommender unavailable (${proxyError.message}) — classified with your OpenRouter key, ranked by formula.`;
-      return result;
-    } catch (e) {
-      const result = classifyTask(text);
-      result.llm_error = `${proxyError.message} — fell back to the keyword classifier.`;
-      return result;
+function updateCmpCount(){
+  var n=tbody.querySelectorAll('input.compare-cb:checked').length;
+  cmpCount.textContent=n;
+  cmpBar.classList.toggle('visible',n>0);
+}
+
+function getRanges(){
+  const r={};
+  document.querySelectorAll('.num-filter').forEach(inp=>{
+    if(inp.value==='') return;
+    const s=inp.dataset.stat, b=inp.dataset.bound;
+    (r[s]=r[s]||{})[b]=parseFloat(inp.value);
+  });
+  return r;
+}
+
+function updateActiveFilterUI(){
+  var ranges=getRanges();
+  var activeStats=Object.keys(ranges);
+  filterRows.forEach(function(fr){
+    fr.classList.toggle('has-filter', activeStats.indexOf(fr.dataset.stat)!==-1);
+  });
+  filterCountBadge.textContent=activeStats.length;
+  filterCountBadge.classList.toggle('visible',activeStats.length>0);
+}
+
+function applyFilter(){
+  const Q=q.value.toLowerCase(), from=fromI.value, to=toI.value, free=freeI.checked;
+  const ranges=getRanges();
+  let n=0;
+
+  tbody.querySelectorAll('tr').forEach(r=>{
+    if(cmpActive){
+      var cb=r.querySelector('input.compare-cb');
+      r.style.display=(cb&&cb.checked)?'':'none';
+      if(r.style.display!=='none') n++;
+      return;
     }
-  }
-}
 
-function detectScenarios(text) {
-  const lower = text.toLowerCase();
-  const found = {};
-  for (const [scenario, keywords] of Object.entries(SCENARIO_HINTS)) {
-    if (keywords.some(kw => lower.includes(kw))) {
-      found[scenario] = true;
+    const txt=r.innerText.toLowerCase();
+    const d=r.dataset.release||'';
+    let show=txt.includes(Q) && (!from||(d&&d>=from)) && (!to||(d&&d<=to));
+    if(free && !r.classList.contains('free')) show=false;
+
+    /* Creator filter */
+    if(show && activeCreators.size>0){
+      var creatorCell=r.querySelector('td[data-creator]');
+      if(!creatorCell || !activeCreators.has(creatorCell.dataset.creator)) show=false;
     }
-  }
-  // CRITICAL FIX: default to INTERACTIVE, not unattended.
-  // A user typing a task description in the picker is reviewing the output.
-  // "unattended" requires explicit signals (cron, no review, automated, recurring).
-  if (!found.unattended && !found.interactive) {
-    found.interactive = true; // safe default
-  }
-  return found;
-}
 
-/* ===========================================================
- * Routing logic (mirrors model-router skill)
- * =========================================================== */
-
-// Weighted components per task type. Each entry names a metric in the METRICS
-// registry (below); `path` is intentionally gone — the registry owns how each
-// metric is read and normalized. Weights within a task sum to 1.0.
-const TASK_WEIGHTS = {
-  coaching: [
-    { key: 'omniscience_non_halluc', weight: 0.50 },
-    { key: 'ifbench', weight: 0.20 },
-    { key: 'intelligence', weight: 0.20 },
-    { key: 'value_per_dollar', weight: 0.10 },
-  ],
-  coding: [
-    { key: 'terminalbench_v2_1', weight: 0.40 },
-    { key: 'omniscience_non_halluc', weight: 0.30 },
-    { key: 'scicode', weight: 0.20 },
-    { key: 'value_per_dollar', weight: 0.10 },
-  ],
-  agentic: [
-    { key: 'agentic_index', weight: 0.40 },
-    { key: 'omniscience_non_halluc', weight: 0.30 },
-    { key: 'tau3_banking', weight: 0.20 },
-    { key: 'value_per_dollar', weight: 0.10 },
-  ],
-  // Was: intelligence 0.35 + harness_diversity 0.25 + non_halluc 0.25 +
-  // context_tokens 0.15. That double-counted context (harness_diversity was
-  // literally context_tokens/1e6, so context carried 0.40 under two names).
-  // Merged into a single honest context_capacity 0.30; freed weight → intel/nh.
-  research: [
-    { key: 'intelligence', weight: 0.40 },
-    { key: 'omniscience_non_halluc', weight: 0.30 },
-    { key: 'context_capacity', weight: 0.30 },
-  ],
-  architecting: [
-    { key: 'intelligence', weight: 0.40 },
-    { key: 'hle', weight: 0.30 },
-    { key: 'gpqa_diamond', weight: 0.20 },
-    { key: 'value_per_dollar', weight: 0.10 },
-  ],
-  advisor: [
-    { key: 'omniscience_index', weight: 0.40 },
-    { key: 'omniscience_non_halluc', weight: 0.30 },
-    { key: 'intelligence', weight: 0.20 },
-    { key: 'value_per_dollar', weight: 0.10 },
-  ],
-  voice: [
-    // output_speed carries 0.40. NOTE: the strict natural-voice UX target is
-    // ~0.8s to first token; no tracked model is close yet (see the ttft<=5s
-    // hard gate below), so this weight is aspirational until models improve.
-    { key: 'output_speed_tps', weight: 0.40 },
-    { key: 'intelligence', weight: 0.30 },
-    { key: 'value_per_dollar', weight: 0.20 },
-    { key: 'omniscience_non_halluc', weight: 0.10 },
-  ],
-  vision: [
-    { key: 'mmmu_pro', weight: 0.50 },
-    { key: 'intelligence', weight: 0.30 },
-    { key: 'value_per_dollar', weight: 0.20 },
-  ],
-  // Was: intelligence 0.40 + harness_diversity 0.30 + non_halluc 0.30. Context
-  // capacity shouldn't drive creative writing at 30% — moved 15% to intelligence.
-  creative: [
-    { key: 'intelligence', weight: 0.55 },
-    { key: 'omniscience_non_halluc', weight: 0.30 },
-    { key: 'context_capacity', weight: 0.15 },
-  ],
-  general: [
-    { key: 'intelligence', weight: 0.40 },
-    { key: 'omniscience_non_halluc', weight: 0.30 },
-    { key: 'value_per_dollar', weight: 0.30 },
-  ],
-};
-
-const HARD_GATES = {
-  default: [],
-  unattended: [
-    { key: 'omniscience_non_halluc', op: 'gte', value: 70 },
-  ],
-  voice: [
-    // Hard gate: first answer token within 5s. Strict natural-voice UX wants
-    // ~0.8s; 5s is the loosest bar we'll still call "voice-capable". If no
-    // model passes, the "no model passed" path renders honestly instead of
-    // faking a pick.
-    { key: 'ttft_seconds', op: 'lte', value: 5 },
-  ],
-  high_stakes: [
-    { key: 'omniscience_non_halluc', op: 'gte', value: 80 },
-    { key: 'intelligence', op: 'gte', value: 45 },
-  ],
-};
-
-/* ---------------------------------------------------------------
- * Metric registry + stable normalization.
- *
- * Each weighted metric knows (a) how to read itself from a model and (b) how
- * to normalize to 0–1. Normalization ranges are computed over ALL models in
- * MODELS — never over the gate-passing subset — so gating a model out never
- * reshuffles the others' scores.
- *
- *   anchor01    — true 0–100 percentage benchmark; norm = value/100 (clamped).
- *                 Absolute, never shifts with the population.
- *   minmax      — index/derived/perf metric with no meaningful 0–100 ceiling
- *                 in this set; norm against all-model min/max. Higher = better.
- *   minmax_inv  — like minmax but lower is better (e.g. ttft).
- * ------------------------------------------------------------- */
-const METRICS = {
-  // 0–100 percentage benchmarks → fixed anchors
-  omniscience_non_halluc: { get: m => m.benchmarks?.omniscience_non_halluc, norm: 'anchor01' },
-  ifbench:                { get: m => m.benchmarks?.ifbench,               norm: 'anchor01' },
-  scicode:                { get: m => m.benchmarks?.scicode,               norm: 'anchor01' },
-  hle:                    { get: m => m.benchmarks?.hle,                   norm: 'anchor01' },
-  gpqa_diamond:           { get: m => m.benchmarks?.gpqa_diamond,          norm: 'anchor01' },
-  mmmu_pro:               { get: m => m.benchmarks?.mmmu_pro,              norm: 'anchor01' },
-  tau3_banking:           { get: m => m.benchmarks?.tau3_banking,          norm: 'anchor01' },
-  terminalbench_v2_1:     { get: m => m.benchmarks?.terminalbench_v2_1,    norm: 'anchor01' },
-  // composite indices — no meaningful 0–100 ceiling here → population min/max
-  intelligence:           { get: m => m.composite?.intelligence_index_v4_1, norm: 'minmax' },
-  agentic_index:          { get: m => m.composite?.agentic_index,          norm: 'minmax' },
-  omniscience_index:      { get: m => m.composite?.omniscience_index,       norm: 'minmax' },
-  // derived / performance → population min/max
-  value_per_dollar:       { get: m => m.derived?.value_intelligence_per_dollar_blend, norm: 'minmax' },
-  output_speed_tps:       { get: m => m.performance?.output_speed_tps,      norm: 'minmax' },
-  ttft_seconds:           { get: m => m.performance?.ttft_seconds_answer,   norm: 'minmax_inv' },
-  // context capacity (formerly mislabeled "harness_diversity") → population min/max
-  context_capacity:       { get: m => m.context_tokens,                     norm: 'minmax' },
-};
-
-function metricValue(model, key) {
-  const spec = METRICS[key];
-  if (!spec) return null;
-  const v = spec.get(model);
-  return (v == null || isNaN(v)) ? null : v;
-}
-
-// Precompute min/max over ALL models for the minmax-style metrics in `keys`.
-function buildNormRanges(keys) {
-  const ranges = {};
-  for (const key of keys) {
-    const spec = METRICS[key];
-    if (!spec || spec.norm === 'anchor01') continue;
-    const vals = MODELS.map(m => metricValue(m, key)).filter(v => v != null);
-    if (vals.length) {
-      const mn = Math.min(...vals), mx = Math.max(...vals);
-      ranges[key] = { min: mn, max: mx, span: (mx - mn) || 1 };
+    /* Scope filter (outside/inside) */
+    if(show && activeScope!=='all'){
+      var creatorCell2=r.querySelector('td[data-creator]');
+      var creator=creatorCell2?creatorCell2.dataset.creator:'';
+      var isOutside=outsideCreators.indexOf(creator)!==-1;
+      if(activeScope==='outside' && !isOutside) show=false;
+      if(activeScope==='inside' && isOutside) show=false;
     }
-  }
-  return ranges;
-}
 
-function normMetric(key, value, ranges) {
-  const spec = METRICS[key];
-  if (!spec) return 0;
-  if (spec.norm === 'anchor01') return Math.max(0, Math.min(1, value / 100));
-  const r = ranges[key];
-  if (!r) return 0;
-  let n = (value - r.min) / r.span;
-  if (spec.norm === 'minmax_inv') n = 1 - n;
-  return Math.max(0, Math.min(1, n));
-}
-
-function checkGate(model, gate) {
-  if (gate.key === 'omniscience_non_halluc') {
-    const v = model.benchmarks?.omniscience_non_halluc;
-    if (v == null) return false;
-    return gate.op === 'gte' ? v >= gate.value : v <= gate.value;
-  }
-  if (gate.key === 'ttft_seconds') {
-    const v = model.performance?.ttft_seconds_answer;
-    if (v == null) return false;
-    return gate.op === 'lte' ? v <= gate.value : v >= gate.value;
-  }
-  if (gate.key === 'intelligence') {
-    const v = model.composite?.intelligence_index_v4_1;
-    if (v == null) return false;
-    return gate.op === 'gte' ? v >= gate.value : v <= gate.value;
-  }
-  return true;
-}
-
-// Compose every applicable hard gate. Stricter thresholds win when the same
-// metric appears more than once (higher floor for gte, lower ceiling for lte).
-function composeGateSet(taskType, scenarios) {
-  const byKey = new Map();
-  function add(gates) {
-    for (const g of gates) {
-      const k = g.key + '|' + g.op;
-      const prev = byKey.get(k);
-      if (!prev) {
-        byKey.set(k, { ...g });
-        continue;
+    if(show){
+      for(const[stat,bounds]of Object.entries(ranges)){
+        const cell=r.querySelector(`td[data-stat="${stat}"]`);
+        if(!cell){show=false;break;}
+        const raw=cell.dataset.val;
+        if(raw==='' || raw==='—' || raw===undefined){show=false;break;}
+        const v=parseFloat(raw);
+        if(isNaN(v)){show=false;break;}
+        if(bounds.min!==undefined && v<bounds.min){show=false;break;}
+        if(bounds.max!==undefined && v>bounds.max){show=false;break;}
       }
-      if (g.op === 'gte' && g.value > prev.value) byKey.set(k, { ...g });
-      if (g.op === 'lte' && g.value < prev.value) byKey.set(k, { ...g });
     }
-  }
-
-  const needsLowLatency = taskType === 'voice' || scenarios.voice || scenarios.low_latency;
-  if (needsLowLatency) add(HARD_GATES.voice);
-  if (scenarios.unattended && !scenarios.interactive) add(HARD_GATES.unattended);
-  if (scenarios.high_stakes) add(HARD_GATES.high_stakes);
-  return Array.from(byKey.values());
-}
-
-// Deterministic keyword detection is authoritative: the LLM may add a safety
-// flag, but must not clear one (conservative OR). Interactive is only set when
-// neither source marked unattended.
-function mergeScenarios(detected, llmScenarios) {
-  const out = { ...(detected || {}) };
-  const llm = llmScenarios && typeof llmScenarios === 'object' ? llmScenarios : {};
-  const boolKeys = ['unattended', 'long_context', 'low_latency', 'high_stakes', 'cost_sensitive', 'voice'];
-  for (const k of boolKeys) {
-    if (llm[k] === true) out[k] = true;
-  }
-  if (out.unattended) {
-    delete out.interactive;
-  } else if (!out.interactive) {
-    out.interactive = true;
-  }
-  return out;
-}
-
-function pickForTask(taskType, scenarios) {
-  // The latency gate keys off the task type and low_latency/voice scenario flags.
-  // Compose all applicable gates so voice + high-stakes (or unattended) stack.
-  const gateSet = composeGateSet(taskType, scenarios);
-
-  // Filter by hard gates
-  const candidates = MODELS.filter(m => gateSet.every(g => checkGate(m, g)));
-
-  if (candidates.length === 0) {
-    return { error: 'No model passed the hard gates for this task.', taskType, scenarios };
-  }
-
-  // Score. Normalization ranges are built over ALL of MODELS (not just
-  // `candidates`) so gating a model out never reshuffles the survivors.
-  const weights = TASK_WEIGHTS[taskType] || TASK_WEIGHTS.general;
-  const ranges = buildNormRanges(weights.map(w => w.key));
-
-  const scored = candidates.map(m => {
-    let score = 0;
-    const breakdown = [];
-    for (const w of weights) {
-      const v = metricValue(m, w.key);
-      if (v == null) continue;
-      const norm = normMetric(w.key, v, ranges);
-      score += norm * w.weight;
-      breakdown.push({ key: w.key, weight: w.weight, value: v, norm });
-    }
-    return { model: m, score, breakdown };
+    r.style.display=show?'':'none';
+    if(show) n++;
   });
 
-  scored.sort((a, b) => b.score - a.score);
-  return { candidates: scored, taskType, scenarios, gateSet };
+  cnt.textContent=`${n} of ${tbody.rows.length} rows`;
+  var tableCountN=document.getElementById('table-count-n');
+  if(tableCountN) tableCountN.textContent=n;
+  updateRanks();
+  updateActiveFilterUI();
+  updateHash();
 }
 
-/* ===========================================================
- * Multi-step detection
- * For research/architecting tasks, the picker may recommend
- * a pipeline: cheap compress → smart generate → verify.
- * =========================================================== */
+[q,fromI,toI,freeI].forEach(el=>el.addEventListener('input',applyFilter));
+document.querySelectorAll('.num-filter').forEach(el=>el.addEventListener('input',applyFilter));
 
-function shouldMultiStep(taskType, text) {
-  if (taskType === 'research') {
-    // Deep research benefits from fusion OR multi-step compress→generate
-    return /\b(deep|comprehensive|thorough|extensive|literature|state.of.the.art)\b/i.test(text)
-      || text.length > 200;
+document.getElementById('reset').addEventListener('click',()=>{
+  document.querySelectorAll('.num-filter').forEach(i=>i.value='');
+  activeCreators.clear();
+  activeScope='all';
+  document.querySelectorAll('.creator-pill').forEach(function(b){b.classList.remove('active')});
+  document.querySelector('.creator-pill[data-creator="all"]').classList.add('active');
+  document.querySelectorAll('.quick-btn').forEach(function(b){b.classList.remove('active')});
+  document.querySelector('.quick-btn[data-scope="all"]').classList.add('active');
+  document.querySelectorAll('.preset-btn').forEach(function(b){b.classList.remove('active')});
+  applyFilter();
+});
+
+/* Creator pills - multi-select */
+document.querySelectorAll('.creator-pill').forEach(function(pill){
+  pill.addEventListener('click',function(){
+    var c=pill.dataset.creator;
+    if(c==='all'){
+      activeCreators.clear();
+      document.querySelectorAll('.creator-pill').forEach(function(b){b.classList.remove('active')});
+      pill.classList.add('active');
+    } else {
+      document.querySelector('.creator-pill[data-creator="all"]').classList.remove('active');
+      if(activeCreators.has(c)){
+        activeCreators.delete(c);
+        pill.classList.remove('active');
+      } else {
+        activeCreators.add(c);
+        pill.classList.add('active');
+      }
+      if(activeCreators.size===0){
+        document.querySelector('.creator-pill[data-creator="all"]').classList.add('active');
+      }
+    }
+    activeScope='all';
+    document.querySelectorAll('.quick-btn').forEach(function(b){b.classList.remove('active')});
+    document.querySelector('.quick-btn[data-scope="all"]').classList.add('active');
+    applyFilter();
+  });
+});
+
+/* Quick scope filters */
+document.querySelectorAll('.quick-btn').forEach(function(btn){
+  btn.addEventListener('click',function(){
+    activeScope=btn.dataset.scope;
+    document.querySelectorAll('.quick-btn').forEach(function(b){b.classList.remove('active')});
+    btn.classList.add('active');
+    activeCreators.clear();
+    document.querySelectorAll('.creator-pill').forEach(function(b){b.classList.remove('active')});
+    document.querySelector('.creator-pill[data-creator="all"]').classList.add('active');
+    applyFilter();
+  });
+});
+
+/* Presets */
+var presetConfigs=[
+  {id:'best-overall',filters:{intelligence:{min:55}}},
+  {id:'best-value',filters:{'blend_3to1_$/M':{max:1},intelligence:{min:35}}},
+  {id:'coding',filters:{coding:{min:65}}},
+  {id:'reasoning',filters:{intelligence:{min:50},'gpqa_%':{min:80}}},
+  {id:'cheapest',filters:{'blend_3to1_$/M':{max:0.4}}},
+  {id:'agentic',filters:{agentic:{min:40}}}
+];
+
+document.querySelectorAll('.preset-btn').forEach(function(btn){
+  btn.addEventListener('click',function(){
+    var pid=btn.dataset.preset;
+    
+    // Clear all inputs first
+    document.querySelectorAll('.num-filter').forEach(function(i){i.value=''});
+    q.value='';
+    
+    if(btn.classList.contains('active')){
+      btn.classList.remove('active');
+      applyFilter();
+      return;
+    }
+    
+    document.querySelectorAll('.preset-btn').forEach(function(b){b.classList.remove('active')});
+    btn.classList.add('active');
+    
+    var cfg=presetConfigs.find(function(p){return p.id===pid});
+    if(cfg){
+      Object.keys(cfg.filters).forEach(function(stat){
+        var bounds=cfg.filters[stat];
+        document.querySelectorAll('.num-filter[data-stat="'+stat+'"]').forEach(function(inp){
+          if(bounds.min!==undefined && inp.dataset.bound==='min') inp.value=bounds.min;
+          if(bounds.max!==undefined && inp.dataset.bound==='max') inp.value=bounds.max;
+        });
+      });
+    }
+    applyFilter();
+  });
+});
+
+/* Compare actions */
+cmpGo.addEventListener('click',function(){
+  cmpActive=true;
+  applyFilter();
+});
+
+cmpClear.addEventListener('click',function(){
+  cmpActive=false;
+  tbody.querySelectorAll('input.compare-cb').forEach(function(c){c.checked=false});
+  if(checkAll) checkAll.checked=false;
+  updateCmpCount();
+  applyFilter();
+});
+
+/* Sorting */
+document.querySelectorAll('th').forEach(th=>{
+  if(th.dataset.i === undefined || th.dataset.i === null) return;
+  th.addEventListener('click',()=>{
+    const i=+th.dataset.i + 1, t=th.dataset.t; // +1 offset for checkbox column
+    if(sortI===i) sortAsc=!sortAsc; else {sortI=i;sortAsc=(t==='s'); if(t==='d') sortAsc=false;}
+    const rows=Array.from(tbody.rows);
+    rows.sort((a,b)=>{
+      let av=a.cells[i].dataset.val||a.cells[i].textContent||'',
+          bv=b.cells[i].dataset.val||b.cells[i].textContent||'';
+      if(t==='n') {av=parseFloat(av); bv=parseFloat(bv);
+        return (isNaN(av)?-Infinity:av)-(isNaN(bv)?-Infinity:bv);}
+      if(t==='d'){
+        var ad=Date.parse(av), bd=Date.parse(bv);
+        if(!isNaN(ad)&&!isNaN(bd)) return ad-bd;
+        return av<bv?-1:av>bv?1:0;
+      }
+      return av.localeCompare(bv);
+    });
+    if(!sortAsc) rows.reverse();
+    rows.forEach(r=>tbody.appendChild(r));
+
+    document.querySelectorAll('th').forEach(function(h){
+      h.classList.remove('sorted');
+      var arrow=h.querySelector('.sort-arrow');
+      if(arrow) arrow.remove();
+    });
+    th.classList.add('sorted');
+    var sortStateEl=document.getElementById('table-sort-state');
+    if(sortStateEl){
+      sortStateEl.textContent='';
+      sortStateEl.appendChild(document.createTextNode('Sorted: '));
+      var b=document.createElement('b');
+      b.textContent=th.textContent.trim();
+      sortStateEl.appendChild(b);
+      sortStateEl.appendChild(document.createTextNode(' '+(sortAsc?'↑':'↓')));
+    }
+    var arrow=document.createElement('span');
+    arrow.className='sort-arrow';
+    arrow.textContent=sortAsc?' ↑':' ↓';
+    th.appendChild(arrow);
+    applyFilter();
+  });
+});
+
+/* Hash state */
+function encodeHashState(){
+  var parts=[];
+  var activePresetBtn=document.querySelector('.preset-btn.active');
+  if(activePresetBtn) parts.push('preset='+encodeURIComponent(activePresetBtn.dataset.preset));
+  if(activeScope!=='all') parts.push('scope='+encodeURIComponent(activeScope));
+  if(activeCreators.size>0) parts.push('creator='+encodeURIComponent(Array.from(activeCreators).join(',')));
+  document.querySelectorAll('.num-filter').forEach(function(inp){
+    if(inp.value==='') return;
+    parts.push(inp.dataset.stat+'.'+inp.dataset.bound+'='+encodeURIComponent(inp.value));
+  });
+  return parts.join('&');
+}
+
+function updateHash(){
+  var h=encodeHashState();
+  history.replaceState(null,'',h?('#'+h):(location.pathname+location.search));
+}
+
+function parseHash(){
+  var hash=location.hash.slice(1);
+  if(!hash) return {};
+  var params={};
+  hash.split('&').forEach(function(kv){
+    var eq=kv.indexOf('=');
+    if(eq<0) return;
+    params[decodeURIComponent(kv.slice(0,eq))]=decodeURIComponent(kv.slice(eq+1));
+  });
+  return params;
+}
+
+function applyHashState(){
+  var params=parseHash();
+  if(Object.keys(params).length===0){ resetAllFilterInputs(); applyFilter(); return; }
+
+  if(params.preset){
+    var btn=document.querySelector('.preset-btn[data-preset="'+params.preset+'"]');
+    if(btn) btn.click();
   }
-  if (taskType === 'architecting') {
-    return /\b(scale|distributed|complex|production|large)\b/i.test(text);
+  if(params.scope){
+    activeScope=params.scope;
+    document.querySelectorAll('.quick-btn').forEach(function(b){
+      b.classList.toggle('active', b.dataset.scope===params.scope);
+    });
   }
-  return false;
-}
-
-// --- Multi-step helpers. All operate over the gate-passing candidates, not
-// --- raw MODELS, so every step in a plan already satisfies the task's gates.
-function highestIntelligence(cands, fallback) {
-  const withIntel = cands.filter(m => m.composite?.intelligence_index_v4_1 != null);
-  if (!withIntel.length) return fallback;
-  return withIntel.reduce((best, m) =>
-    m.composite.intelligence_index_v4_1 > best.composite.intelligence_index_v4_1 ? m : best);
-}
-
-// The "fast, cheap" gatherer: cheapest blended price among candidates faster
-// than the candidate-median output speed. Matches the step's rationale text.
-function cheapestFastModel(cands, fallback) {
-  const speeds = cands.map(m => m.performance?.output_speed_tps).filter(v => v != null).sort((a, b) => a - b);
-  if (!speeds.length) return fallback;
-  const median = speeds[Math.floor(speeds.length / 2)];
-  const fast = cands.filter(m =>
-    (m.performance?.output_speed_tps ?? 0) > median && m.pricing_per_m_tokens?.blended_3_1 != null);
-  if (!fast.length) return fallback;
-  return fast.reduce((best, m) =>
-    m.pricing_per_m_tokens.blended_3_1 < best.pricing_per_m_tokens.blended_3_1 ? m : best);
-}
-
-// Cross-model verifier: highest intelligence among candidates from a DIFFERENT
-// creator than the top pick, so verification isn't the same model checking
-// itself. Falls back to the top pick only if no other creator qualifies.
-function crossCreatorVerifier(cands, top, fallback) {
-  const others = cands.filter(m => m.creator && m.creator !== top.creator);
-  if (!others.length) return fallback;
-  return highestIntelligence(others, fallback);
-}
-
-function multiStepPlan(taskType, top, candidates) {
-  const cands = (candidates && candidates.length) ? candidates : [top];
-  if (taskType === 'research') {
-    return [
-      { step: 'Plan',
-        model: top,
-        why: 'Draft research questions and identify the 3-5 sources needed.' },
-      { step: 'Gather',
-        model: cheapestFastModel(cands, top),
-        why: 'Cheapest fast model fetches and compresses sources into a ~2K-token summary.' },
-      { step: 'Synthesize',
-        model: highestIntelligence(cands, top),
-        why: 'Highest-intelligence model writes the final synthesis with citations.' },
-    ];
+  if(params.creator){
+    var list=params.creator.split(',');
+    activeCreators=new Set(list);
+    document.querySelectorAll('.creator-pill').forEach(function(b){
+      b.classList.toggle('active', list.indexOf(b.dataset.creator)!==-1);
+    });
   }
-  if (taskType === 'architecting') {
-    return [
-      { step: 'Outline',
-        model: highestIntelligence(cands, top),
-        why: 'Map requirements, constraints, and tradeoffs.' },
-      { step: 'Detail',
-        model: top,
-        why: 'Generate the full design with schemas and call graphs.' },
-      { step: 'Verify',
-        model: crossCreatorVerifier(cands, top, top),
-        why: 'A different creator’s model challenges the design (avoid single-model bias).' },
-    ];
-  }
-  return null;
+  Object.keys(params).forEach(function(k){
+    if(k==='scope'||k==='creator'||k==='preset') return;
+    var dot=k.lastIndexOf('.');
+    if(dot<0) return;
+    var stat=k.slice(0,dot), bound=k.slice(dot+1);
+    document.querySelectorAll('.num-filter').forEach(function(inp){
+      if(inp.dataset.stat===stat && inp.dataset.bound===bound) inp.value=params[k];
+    });
+  });
+  applyFilter();
 }
 
-/* ===========================================================
- * Rendering
- * =========================================================== */
 
-function fmtPct(v) { return v == null ? '—' : `${Math.round(v)}%`; }
-function fmtDollar(v) { return v == null ? '—' : `$${v.toFixed(2)}`; }
-function fmtNum(v, d = 1) { return v == null ? '—' : (typeof v === 'number' ? v.toFixed(d) : v); }
-function fmtSec(v) { return v == null ? '—' : `${v.toFixed(1)}s`; }
-function fmtTPS(v) { return v == null ? '—' : `${Math.round(v)} tps`; }
-function fmtContext(v) { return v == null ? '—' : (v >= 1000000 ? '1M' : Math.round(v / 1000) + 'K'); }
-
-/* ===========================================================
- * Per-task cost estimator (design doc F5)
- * cost = in_tokens/1e6 * input_price + out_tokens/1e6 * output_price
- * =========================================================== */
-function estimateCost(model, inputTokens, outputTokens) {
-  const inPrice = model.pricing_per_m_tokens?.input;
-  const outPrice = model.pricing_per_m_tokens?.output;
-  if (inPrice == null || outPrice == null) return null;
-  return (inputTokens / 1e6) * inPrice + (outputTokens / 1e6) * outPrice;
-}
-
-function getEstimatorInputs() {
-  const inEl = document.getElementById('est-input-tokens');
-  const outEl = document.getElementById('est-output-tokens');
-  const inputTokens = Number(inEl?.value) || 50000;
-  const outputTokens = Number(outEl?.value) || 5000;
-  return { inputTokens, outputTokens };
-}
-
-function fmtCostEstimate(model, inputTokens, outputTokens) {
-  const c = estimateCost(model, inputTokens, outputTokens);
-  return c == null ? '—' : `$${c.toFixed(2)} est.`;
-}
-
-/* ===========================================================
- * Score breakdown bars — renders pickForTask()'s per-candidate
- * breakdown (key, weight, value, norm) as horizontal bars whose
- * fill width is norm * weight (each component's actual contribution).
- * =========================================================== */
-function renderBreakdown(breakdown) {
-  if (!breakdown || !breakdown.length) return '';
-  return `
-    <div class="breakdown">
-      ${breakdown.map(b => {
-        const contribution = b.norm * b.weight; // 0..weight
-        const pctOfWeight = Math.round((contribution / b.weight) * 100);
-        return `
-          <div class="breakdown-row">
-            <div class="bkey">${b.key.replace(/_/g, ' ')} (${Math.round(b.weight * 100)}%)</div>
-            <div class="bbar-track"><div class="bbar-fill" style="width:${Math.round(contribution * 100)}%"></div></div>
-            <div class="bval">${fmtNum(b.value, 1)} · ${pctOfWeight}%</div>
-          </div>
-        `;
-      }).join('')}
-    </div>
-  `;
-}
-
-/* ===========================================================
- * Routing audit log (design doc F4)
- * Kept locally only (localStorage, keyed array, capped at 50 entries,
- * 30-day expiry). Full task text is truncated. Clear removes history.
- * =========================================================== */
-const AUDIT_LOCAL_KEY = 'model-picker-audit-log';
-const AUDIT_CONSENT_KEY = 'model-picker-audit-consent';
-const AUDIT_MAX_ENTRIES = 50;
-const AUDIT_MAX_TASK_CHARS = 280;
-const AUDIT_TTL_MS = 30 * 24 * 60 * 60 * 1000;
-
-function pruneAuditLog(log) {
-  const cutoff = Date.now() - AUDIT_TTL_MS;
-  return (Array.isArray(log) ? log : [])
-    .filter(e => e && e.timestamp && Date.parse(e.timestamp) >= cutoff)
-    .slice(-AUDIT_MAX_ENTRIES);
-}
-
-function saveAuditLocally(entry) {
-  if (localStorage.getItem(AUDIT_CONSENT_KEY) !== '1') return;
-  let log = [];
-  try { log = JSON.parse(localStorage.getItem(AUDIT_LOCAL_KEY)) || []; } catch (e) { log = []; }
-  const safe = {
-    timestamp: entry.timestamp,
-    task_text: String(entry.task_text || '').slice(0, AUDIT_MAX_TASK_CHARS),
-    task_type: entry.task_type,
-    scenarios: entry.scenarios,
-    pick: entry.pick,
-    runner_up: entry.runner_up,
-    scores: entry.scores,
-    source: entry.source,
-  };
-  log.push(safe);
-  log = pruneAuditLog(log);
-  localStorage.setItem(AUDIT_LOCAL_KEY, JSON.stringify(log));
-}
-
-function clearAuditHistory() {
-  localStorage.removeItem(AUDIT_LOCAL_KEY);
-  localStorage.removeItem(AUDIT_CONSENT_KEY);
-}
-
-async function logRecommendation(entry) {
-  const indicator = document.getElementById('audit-indicator');
-  if (localStorage.getItem(AUDIT_CONSENT_KEY) !== '1') {
-    if (indicator) indicator.textContent = 'not stored (enable in settings)';
-    return;
-  }
-  saveAuditLocally(entry);
-  if (indicator) indicator.textContent = 'local only · expires in 30 days';
-}
-
-function esc(v) {
+function fmt(v){ return (v===null||v===undefined) ? '' : v; }
+function esc(v){
   return (window.ModelCompassNav && ModelCompassNav.escapeHtml)
     ? ModelCompassNav.escapeHtml(v)
-    : String(v == null ? '' : v)
-      .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
-      .replace(/"/g, '&quot;').replace(/'/g, '&#39;');
+    : String(v==null?'':v).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;');
 }
-
-function safeHref(v, fallback) {
+function safeHref(v, fallback){
   return (window.ModelCompassNav && ModelCompassNav.safeUrl)
-    ? ModelCompassNav.safeUrl(v, fallback || '#')
-    : (fallback || '#');
+    ? ModelCompassNav.safeUrl(v, fallback||'#')
+    : (fallback||'#');
 }
 
-function buildRationale(model, taskType, scenarios) {
-  const parts = [];
-  const nh = model.benchmarks?.omniscience_non_halluc;
-  if (nh != null) {
-    if (nh >= 80) parts.push(`strong non-halluc (${nh}%)`);
-    else if (nh >= 70) parts.push(`passes 70% non-halluc floor (${nh}%)`);
-  }
-  const cost = model.cost_per_intelligence_task_usd?.total;
-  if (cost != null) {
-    if (cost < 0.10) parts.push(`very cheap ($${cost.toFixed(3)}/task)`);
-    else if (cost < 0.30) parts.push(`affordable ($${cost.toFixed(2)}/task)`);
-    else parts.push(`$${cost.toFixed(2)}/task`);
-  }
-  if (model.performance?.output_speed_tps > 100) parts.push(`fast output (${Math.round(model.performance.output_speed_tps)} tps)`);
-  if (scenarios.low_latency && model.performance?.ttft_seconds_answer < 20) {
-    parts.push(`low TTFT (${model.performance.ttft_seconds_answer.toFixed(1)}s)`);
-  }
-  if (scenarios.long_context && model.context_tokens >= 1000000) parts.push('1M context');
-  if (model.is_open_weights) parts.push('open-weights');
-  return parts.length > 0 ? parts.join(', ') + '.' : `Best fit for ${TASK_LABELS[taskType] || taskType} with current constraints.`;
+var DOTS=['--dot-1','--dot-2','--dot-3','--dot-4','--dot-5','--dot-6'];
+function dotFor(s){
+  var h=7;
+  for(var i=0;i<s.length;i++) h=(h*31+s.charCodeAt(i))|0;
+  return DOTS[Math.abs(h)%DOTS.length];
 }
 
-function renderResult(classification, text) {
-  const results = document.getElementById('results');
-  const { type: taskType, scores, multi, confidence, source, rationale, llm_error } = classification;
-  // Deterministic detection is authoritative. LLM scenarios may only add flags
-  // (conservative OR) — never clear a safety classification.
-  const detected = detectScenarios(text);
-  const scenarios = isLlmSource(source) && classification.scenarios
-    ? mergeScenarios(detected, classification.scenarios)
-    : detected;
+function shortName(name){
+  if(!name) return '';
+  function _repl(match){
+    if(/max/i.test(match)) return '(Max)';
+    if(/xhigh/i.test(match)) return '(Xhigh)';
+    if(/high/i.test(match)) return '(High)';
+    if(/medium/i.test(match)) return '(Medium)';
+    if(/low/i.test(match)) return '(Low)';
+    return match;
+  }
+  var n = String(name).replace(/\((?:Adaptive\s+)?Reasoning,\s*(?:Max|High|Medium|Low|Xhigh)\s*Effort(?:,\s*Opus\s*[\d.]+\s*Fallback)?\)/gi, _repl);
+  n = n.replace(/\(Non-reasoning,\s*(High|Low|Medium|Max)\s*Effort\)/gi, '($1)');
+  return n.trim();
+}
 
-  // Build pick for primary task
-  const result = pickForTask(taskType, scenarios);
-  if (result.error) {
-    // Nothing cleared the bar. Say so plainly and name the bar — then still show
-    // how close the field gets, because "no answer" is not an answer. Notably no
-    // tracked model reaches 5s to first token, so every voice task lands here.
-    const gateParts = [];
-    if (scenarios.high_stakes) gateParts.push('high-stakes work needs ≥80% non-hallucination and ≥45 intelligence');
-    if (scenarios.unattended && !scenarios.interactive) gateParts.push('unattended work needs ≥70% non-hallucination');
-    if (taskType === 'voice' || scenarios.low_latency || scenarios.voice) {
-      gateParts.push('a real-time/voice task needs ≤5s to the first answer token — no tracked model is there yet');
+function buildRow(m, rank){
+  const b=m.benchmarks||{}, c=m.composite||{}, p=m.pricing_per_m_tokens||{}, perf=m.performance||{};
+  const aaUrl=safeHref(m.aa_url, `https://artificialanalysis.ai/models/${encodeURIComponent(m.slug||'')}`);
+  const rowClass = m.openrouter_slug ? ' class="free"' : '';
+  const displayName = shortName(m.name || '');
+
+  function cell(stat, val, isPrice){
+    const raw=(val===null||val===undefined)?'':val;
+    if(raw==='') return `<td class="num" data-stat="${esc(stat)}" data-val="">—</td>`;
+    let disp=raw;
+    if(typeof raw==='number' || (!isNaN(parseFloat(raw)) && isFinite(raw))){
+      const num=parseFloat(raw);
+      if(isPrice){
+        disp=(num<1)?num.toFixed(2):(num%1===0?num.toFixed(0):num.toFixed(2));
+      } else {
+        disp=Math.round(num);
+      }
     }
-    const gateText = gateParts.length ? gateParts.join('; ') : 'the applicable hard gates for this task';
-
-    const closest = pickForTask(taskType, {}).candidates.slice(0, 5);
-    results.innerHTML = `
-      <h2 style="margin-top:0">No model passed</h2>
-      <div class="top-pick" style="background: var(--red-bg); border-color: var(--red-dark);">
-        <div class="top-pick-name">⚠️ Nothing clears the bar for this task</div>
-        <div class="top-pick-rationale">
-          The hard gate is not negotiable: ${esc(gateText)}.
-          Rather than hand you a model that fails it, here is the closest the field gets — with
-          the caveat that using any of them means accepting the risk the gate exists to prevent.
-        </div>
-      </div>
-      <div class="candidates">
-        <table>
-          <tr><th class="l">Model</th><th>Score</th><th>Non-halluc</th><th>TTFT</th><th>Intel</th></tr>
-          ${closest.map(c => `
-            <tr>
-              <td class="l"><strong>${esc(c.model.name)}</strong></td>
-              <td>${(c.score * 100).toFixed(0)}</td>
-              <td>${esc(fmtPct(c.model.benchmarks?.omniscience_non_halluc))}</td>
-              <td>${esc(fmtSec(c.model.performance?.ttft_seconds_answer))}</td>
-              <td>${esc(fmtNum(c.model.composite?.intelligence_index_v4_1, 1))}</td>
-            </tr>`).join('')}
-        </table>
-      </div>
-    `;
-    return;
+    return `<td class="num" data-stat="${esc(stat)}" data-val="${esc(raw)}">${esc(disp)}</td>`;
   }
+  return `<tr${rowClass} data-release="${esc(m.released||'')}" data-slug="${esc(m.slug||'')}">`+
+    `<td class="num rnk" data-rank>${rank}</td>`+
+    `<td class="cb-col"><input type="checkbox" class="compare-cb" data-model-row></td>`+
+    `<td class="l name-col" title="${esc(displayName)}" data-val="${esc(displayName.toLowerCase())}"><span class="cell-title">${esc(displayName)}</span></td>`+
+    `<td class="l" data-creator="${esc(m.creator||'')}" data-val="${esc((m.creator||'').toLowerCase())}"><span class="dot-badge" style="--dot-color:var(${dotFor(m.creator||'')})">${esc(m.creator||'')}</span></td>`+
+    `<td class="num" data-t="d" data-val="${esc(m.released||'')}">${esc(m.released||'')}</td>`+
+    cell('in_$/M', p.input, true)+
+    cell('out_$/M', p.output, true)+
+    cell('blend_3to1_$/M', p.blended_3_1, true)+
+    cell('intelligence', c.intelligence_index_v4_1)+
+    cell('coding', c.coding_index)+
+    cell('agentic', c.agentic_index)+
+    cell('omniscience', c.omniscience_index)+
+    cell('gpqa_%', b.gpqa_diamond)+
+    cell('hle_%', b.hle)+
+    cell('critpt_%', b.critpt)+
+    cell('non_halluc_%', b.omniscience_non_halluc)+
+    cell('ifbench_%', b.ifbench)+
+    cell('lcr_%', b.lcr)+
+    cell('tau2_%', b.tau2_bench)+
+    cell('tau_banking_%', b.tau3_banking)+
+    cell('gdpval_%', b.gdpval_v2)+
+    cell('terminalbench_hard_%', b.terminalbench_hard)+
+    cell('terminalbench_v2_1_%', b.terminalbench_v2_1)+
+    cell('scicode_%', b.scicode)+
+    cell('mmmu_pro_%', b.mmmu_pro)+
+    cell('speed_tps', perf.output_speed_tps)+
+    cell('ttft_s', perf.ttft_seconds_total, true)+
+    cell('ttfa_s', perf.ttft_seconds_answer, true)+
+    `<td class="l" data-val="${esc(m.slug||'')}"><a href="${esc(aaUrl)}" target="_blank" rel="noopener" style="color:var(--accent);text-decoration:none">${esc(m.slug||'')}</a></td>`+
+    `</tr>`;
+}
 
-  // The LLM advises; the gates decide. `result.candidates` is already filtered by
-  // the hard gates for the scenarios the LLM itself reported, so a pick that is
-  // absent from it failed a gate (e.g. it chose a model below the non-hallucination
-  // floor for unattended work). In that case we keep the deterministic pick and say so.
-  let top = result.candidates[0];
-  let runnerUp = result.candidates[1];
-  let gateOverride = null;
-
-  if (classification.llm_pick) {
-    const chosen = result.candidates.find(c => c.model.slug === classification.llm_pick);
-    if (chosen) {
-      top = chosen;
-      const named = result.candidates.find(c => c.model.slug === classification.llm_runner_up);
-      runnerUp = (named && named !== chosen)
-        ? named
-        : result.candidates.find(c => c !== chosen);
-    } else {
-      gateOverride = classification.llm_pick;
-    }
-  }
-
-  const taskLabel = TASK_LABELS[taskType] || taskType;
-
-  // Confidence-aware output: if the top two are within 0.05, it's a toss-up —
-  // don't present a false clear winner.
-  // Math.abs: when the LLM promotes a model the formula ranked lower, the gap is
-  // negative — still a toss-up, not a landslide.
-  const isTossup = runnerUp && Math.abs(top.score - runnerUp.score) < 0.05;
-  const tossupHtml = isTossup ? `
-    <div class="fusion-card" style="background: var(--accent-bg); border-left-color: var(--accent);">
-      <div class="title">⚖️ Toss-up — either works</div>
-      <strong>${esc(top.model.name)}</strong> (${(top.score * 100).toFixed(0)}) and
-      <strong>${esc(runnerUp.model.name)}</strong> (${(runnerUp.score * 100).toFixed(0)}) score within
-      ${(Math.abs(top.score - runnerUp.score) * 100).toFixed(1)} points. Decide on secondary factors —
-      cost, speed, or which you already trust.
-    </div>
-  ` : '';
-
-  // A gate veto is worth surfacing loudly: it's the safety floor doing its job.
-  const gateReasons = [];
-  if (scenarios.high_stakes) gateReasons.push('high-stakes: needs ≥80% non-hallucination and ≥45 intelligence');
-  if (scenarios.unattended && !scenarios.interactive) gateReasons.push('unattended: needs ≥70% non-hallucination');
-  if (taskType === 'voice' || scenarios.voice || scenarios.low_latency) gateReasons.push('voice: needs ≤5s to first token');
-  const gateOverrideHtml = gateOverride ? `
-    <div class="fusion-card" style="background: var(--yellow-bg); border-left-color: var(--yellow-dark);">
-      <div class="title">🛡️ Safety gate overrode the LLM</div>
-      The recommender chose <strong>${esc(gateOverride)}</strong>, which fails the hard gate for this
-      task${gateReasons.length ? ' (' + esc(gateReasons.join('; ')) + ')' : ''}.
-      Showing the highest-scoring model that passes instead.
-    </div>
-  ` : '';
-
-  // Build badges
-  const badges = [];
-  if (top.model.is_open_weights) badges.push('<span class="badge privacy">🔓 OPEN</span>');
-  if (top.model.is_frontier) badges.push('<span class="badge frontier">🚀 FRONTIER</span>');
-
-  // Multi-step plan
-  let multiStepHtml = '';
-  if (shouldMultiStep(taskType, text)) {
-    const plan = multiStepPlan(taskType, top.model, result.candidates.map(c => c.model));
-    if (plan) {
-      multiStepHtml = `
-        <div class="multi-step">
-          <div class="multi-step-label">Recommended pipeline (multi-step)</div>
-          ${plan.map((s, i) => `
-            <div class="step">
-              <div class="step-num">Step ${i + 1}: ${esc(s.step)}</div>
-              <div class="step-name">${esc(s.model.name)} <span class="tag">${esc(TASK_LABELS[taskType] || taskType)}</span></div>
-              <div class="step-why">${esc(s.why)}</div>
-            </div>
-          `).join('')}
-        </div>
-      `;
-    }
-  } else if (multi && multi.length > 1) {
-    // User description suggests two task types
-    multiStepHtml = `
-      <div class="multi-step">
-        <div class="multi-step-label">Multi-task detected</div>
-        <div class="step">
-          <div class="step-num">Primary: ${esc(TASK_LABELS[multi[0]] || multi[0])}</div>
-          <div class="step-name">${esc(top.model.name)}</div>
-          <div class="step-why">${esc(buildRationale(top.model, multi[0], scenarios))}</div>
-        </div>
-        ${(() => {
-          const r2 = pickForTask(multi[1], scenarios);
-          if (r2.candidates && r2.candidates[0]) {
-            return `
-              <div class="step">
-                <div class="step-num">Secondary: ${esc(TASK_LABELS[multi[1]] || multi[1])}</div>
-                <div class="step-name">${esc(r2.candidates[0].model.name)}</div>
-                <div class="step-why">${esc(buildRationale(r2.candidates[0].model, multi[1], scenarios))}</div>
-              </div>
-            `;
-          }
-          return '';
-        })()}
-      </div>
-    `;
-  }
-
-  // Fusion callout for research
-  let fusionHtml = '';
-  if (taskType === 'research' && shouldMultiStep(taskType, text)) {
-    fusionHtml = `
-      <div class="fusion-card">
-        <div class="title">💡 Alternative: OpenRouter Fusion</div>
-        For deep research, Fusion (3-model panel + judge) outperforms every solo model.
-        A budget panel (Gemini Flash + Kimi K2.6 + DeepSeek V4 Pro) hit <strong>64.7% on DRACO</strong>
-        vs <strong>58.8% for solo Opus 4.8</strong>. Use <code>openrouter/fusion</code> with a budget panel.
-      </div>
-    `;
-  }
-
-  // Candidates table
-  const { inputTokens: estIn, outputTokens: estOut } = getEstimatorInputs();
-  const candidatesTable = `
-    <div class="candidates">
-      <details>
-        <summary>Show top ${Math.min(result.candidates.length, 8)} candidates with scores</summary>
-        <table>
-          <tr>
-            <th class="l">Model</th>
-            <th>Score</th>
-            <th>Intel</th>
-            <th>Non-Halluc</th>
-            <th>$/task</th>
-            <th>Est. cost</th>
-            <th>Speed</th>
-            <th>TTFT</th>
-            <th>Context</th>
-          </tr>
-          ${result.candidates.slice(0, 8).map(c => {
-            const heat = c.score > 0.7 ? 'h1' : c.score > 0.4 ? 'h2' : 'h3';
-            return `
-              <tr>
-                <td class="l"><strong>${esc(c.model.name)}</strong></td>
-                <td class="${heat}"><strong>${(c.score * 100).toFixed(0)}</strong></td>
-                <td>${esc(fmtNum(c.model.composite?.intelligence_index_v4_1, 1))}</td>
-                <td>${esc(fmtPct(c.model.benchmarks?.omniscience_non_halluc))}</td>
-                <td>${esc(fmtDollar(c.model.cost_per_intelligence_task_usd?.total))}</td>
-                <td>${esc(fmtCostEstimate(c.model, estIn, estOut))}</td>
-                <td>${esc(fmtTPS(c.model.performance?.output_speed_tps))}</td>
-                <td>${esc(fmtSec(c.model.performance?.ttft_seconds_answer))}</td>
-                <td>${esc(fmtContext(c.model.context_tokens))}</td>
-              </tr>
-            `;
-          }).join('')}
-        </table>
-      </details>
-    </div>
-  `;
-
-  const llmBadge = isLlmSource(source)
-    ? ' · <span class="badge" style="background: var(--blue-bg); color: var(--blue-dark);">🧠 LLM</span>'
-    : ' · <span class="badge" style="background: var(--surface-2); color: var(--text-muted);">⚡ keyword</span>';
-  const aaHref = safeHref(top.model.aa_url, 'https://artificialanalysis.ai/models/' + encodeURIComponent(top.model.slug || ''));
-  const compareHref = 'shortlist.html#models=' + result.candidates.slice(0, 8).map(c => encodeURIComponent(c.model.slug || '')).join(',');
-  // Classified-as info
-  const classifiedAs = `
-    <div class="meta">
-      Classified as <strong>${esc(taskLabel)}</strong>${confidence ? ` (confidence ${(Math.min(confidence, 1) * 100).toFixed(0)}%)` : ''}
-      ${llmBadge}
-      ${Object.keys(scenarios).filter(s => scenarios[s] && s !== 'unattended' && s !== 'interactive').map(s => ` · ${esc(s.replace(/_/g, ' '))}`).join('')}
-      ${rationale ? ` · <em>${esc(rationale)}</em>` : ''}
-      ${llm_error ? ` · <span style="color: var(--yellow-dark);">LLM fallback: ${esc(llm_error)}</span>` : ''}
-      · <a href="${esc(aaHref)}" target="_blank" rel="noopener">view ${esc(top.model.name)} on AA →</a>
-      · <a href="${esc(compareHref)}">compare these ${Math.min(result.candidates.length, 8)} in the full table →</a>
-    </div>
-  `;
-
-  // Build runner-up
-  const runnerUpHtml = runnerUp ? `
-    <div class="runner-up">
-      <div class="runner-up-label">Runner-up</div>
-      <div class="runner-up-name">${esc(runnerUp.model.name)}</div>
-      <div class="runner-up-why">Score ${(runnerUp.score * 100).toFixed(0)}/100 · ${esc(runnerUp.model.creator)} · ${esc(fmtDollar(runnerUp.model.cost_per_intelligence_task_usd?.total))}/task · ${esc(fmtCostEstimate(runnerUp.model, estIn, estOut))}</div>
-      <details>
-        <summary>Show score breakdown</summary>
-        ${renderBreakdown(runnerUp.breakdown)}
-      </details>
-    </div>
-  ` : '';
-
-  // Prefer the LLM's reasoning — it cites real numbers against this specific
-  // task. buildRationale() is the template-based fallback. Always escape:
-  // rationale/tradeoff are untrusted LLM strings.
-  const whyHtml = (isLlmSource(source) && classification.rationale && !gateOverride)
-    ? esc(classification.rationale)
-    : esc(buildRationale(top.model, taskType, scenarios));
-  const tradeoffHtml = (classification.tradeoff && !gateOverride) ? `
-      <div class="top-pick-rationale" style="border-top:1px solid var(--border); margin-top:8px; padding-top:8px;">
-        <span class="why">Tradeoff:</span> ${esc(classification.tradeoff)}
-      </div>` : '';
-
-  results.innerHTML = `
-    <h2 style="margin-top:0">Recommendation</h2>
-    ${gateOverrideHtml}
-    ${tossupHtml}
-    ${fusionHtml}
-    <div class="top-pick">
-      <div class="top-pick-label">Top pick · ${esc(taskLabel)}</div>
-      <div class="badges">${badges.join('')}</div>
-      <div class="top-pick-name">${esc(top.model.name)}</div>
-      <div class="top-pick-score">Score: ${(top.score * 100).toFixed(0)}/100 · ${esc(top.model.creator)}</div>
-      <div class="stats">
-        <div class="stat"><div class="label">Intel</div><div class="value">${esc(fmtNum(top.model.composite?.intelligence_index_v4_1, 1))}</div></div>
-        <div class="stat"><div class="label">Non-Halluc</div><div class="value">${esc(fmtPct(top.model.benchmarks?.omniscience_non_halluc))}</div></div>
-        <div class="stat"><div class="label">$/task</div><div class="value">${esc(fmtDollar(top.model.cost_per_intelligence_task_usd?.total))}</div></div>
-        <div class="stat"><div class="label">Est. cost</div><div class="value">${esc(fmtCostEstimate(top.model, estIn, estOut))}</div></div>
-        <div class="stat"><div class="label">Context</div><div class="value">${esc(fmtContext(top.model.context_tokens))}</div></div>
-        <div class="stat"><div class="label">Speed</div><div class="value">${esc(fmtTPS(top.model.performance?.output_speed_tps))}</div></div>
-        <div class="stat"><div class="label">TTFT</div><div class="value">${esc(fmtSec(top.model.performance?.ttft_seconds_answer))}</div></div>
-      </div>
-      <div class="top-pick-rationale">
-        <span class="why">Why:</span> ${whyHtml}
-      </div>
-      ${tradeoffHtml}
-      <div class="breakdown">${renderBreakdown(top.breakdown)}</div>
-    </div>
-    ${multiStepHtml}
-    ${runnerUpHtml}
-    ${candidatesTable}
-    ${classifiedAs}
-    <div class="audit-indicator-row">Routing decision: <span class="audit-indicator" id="audit-indicator">logging…</span></div>
-  `;
-
-  logRecommendation({
-    timestamp: new Date().toISOString(),
-    task_text: text,
-    task_type: taskType,
-    scenarios,
-    pick: top.model.name,
-    runner_up: runnerUp ? runnerUp.model.name : null,
-    scores: result.candidates.slice(0, 8).map(c => ({ name: c.model.name, score: c.score })),
-    source,
+function bindCheckboxEvents(){
+  tbody.querySelectorAll('input.compare-cb').forEach(function(cb){
+    cb.addEventListener('change',function(){
+      updateCmpCount();
+    });
   });
 }
 
-function showToast(msg) {
-  const t = document.getElementById('toast');
-  t.textContent = msg;
-  t.classList.add('show');
-  setTimeout(() => t.classList.remove('show'), 1500);
+if(checkAll){
+  checkAll.addEventListener('change',function(){
+    tbody.querySelectorAll('input.compare-cb').forEach(function(c){c.checked=checkAll.checked});
+    updateCmpCount();
+  });
 }
 
-/* ===========================================================
- * Wire up
- * =========================================================== */
+async function loadModels(){
+  const countEl=document.getElementById('model-count');
+  try{
+    const res=await fetch('data/models.json');
+    const data=await res.json();
+    const models=(data.models||[]).slice().sort((a,b)=>
+      (b.composite.intelligence_index_v4_1||0)-(a.composite.intelligence_index_v4_1||0));
+    tbody.innerHTML=models.map((m, i)=>buildRow(m, i+1)).join('\n');
 
-const EXAMPLES = {
-  morning: 'Generate my morning check-in: ask about sleep, last training session, supplements, and any open commitments.',
-  cron: 'Debug a bash script that fails on a nightly cron job with no human review. Need to find why /var/log/app.log is not getting rotated.',
-  research: 'Deep research: compare React, Vue, and Svelte for a new SaaS dashboard. Need citations to primary sources and trade-off analysis.',
-  voice: 'Voice brief: summarize 3 long articles on lucid dreaming into a 60-second audio script for my morning routine.',
-  architect: 'Architect: design a multi-tenant SaaS with row-level isolation, usage-based billing, and observability for a Sweden-based startup with 100-1000 customers.',
-};
-
-document.getElementById('pick-btn').addEventListener('click', async () => {
-  const text = document.getElementById('task').value.trim();
-  if (!text) {
-    showToast('Describe the task first');
-    return;
-  }
-  // Show loading state
-  const btn = document.getElementById('pick-btn');
-  const originalLabel = btn.textContent;
-  btn.textContent = PROXY_AVAILABLE ? 'Reading benchmarks…' : 'Classifying…';
-  btn.disabled = true;
-  try {
-    const classification = await classify(text);
-    renderResult(classification, text);
-    localStorage.setItem('last-task', text);
-  } catch (e) {
-    showToast('Error: ' + e.message);
-  } finally {
-    btn.textContent = originalLabel;
-    btn.disabled = false;
-  }
-});
-
-document.getElementById('clear-btn').addEventListener('click', () => {
-  document.getElementById('task').value = '';
-  document.getElementById('results').innerHTML = '<div class="empty">Describe your task above and click <strong>Recommend model</strong>.</div>';
-  localStorage.removeItem('last-task');
-});
-
-const auditConsentEl = document.getElementById('audit-consent');
-if (auditConsentEl) {
-  auditConsentEl.checked = localStorage.getItem(AUDIT_CONSENT_KEY) === '1';
-  auditConsentEl.addEventListener('change', () => {
-    if (auditConsentEl.checked) {
-      localStorage.setItem(AUDIT_CONSENT_KEY, '1');
-      showToast('Local routing log enabled (30-day expiry)');
-    } else {
-      localStorage.removeItem(AUDIT_CONSENT_KEY);
-      showToast('Local routing log disabled');
+    countEl.textContent=`${models.length} models`;
+    if(data.scraped_at && window.ModelCompassNav){
+      ModelCompassNav.checkStaleness(data.scraped_at);
     }
-  });
-}
-document.getElementById('clear-history-btn').addEventListener('click', () => {
-  clearAuditHistory();
-  localStorage.removeItem('last-task');
-  if (auditConsentEl) auditConsentEl.checked = false;
-  showToast('Local history cleared');
-});
+    bindCheckboxEvents();
 
-/* API key handlers */
-
-// Is the server-side recommender live and holding a key? Probed once on load.
-// Under `python3 -m http.server` there is no Functions runtime, so this 404s and
-// the page quietly presents itself as the keyword-classifier build.
-let PROXY_AVAILABLE = null;
-
-async function probeProxy() {
-  try {
-    const res = await fetch('/api/recommend');
-    PROXY_AVAILABLE = res.ok && (await res.json()).configured === true;
-  } catch {
-    PROXY_AVAILABLE = false;
-  }
-  void updateClassifierMode();
-}
-
-async function updateClassifierMode() {
-  const mode = document.getElementById('classifier-mode');
-  if (!mode) return;
-  const hasKey = !!localStorage.getItem('openrouter-api-key');
-
-  if (PROXY_AVAILABLE) {
-    mode.textContent = '🧠 LLM recommender (reads the benchmarks and picks — no API key needed)';
-    mode.style.color = 'var(--text-secondary)';
-  } else if (hasKey) {
-    mode.textContent = '🧠 LLM classifier (via your OpenRouter key; ranked by formula)';
-    mode.style.color = 'var(--text-secondary)';
-  } else {
-    mode.textContent = '⚡ Keyword classifier (no LLM) — paste an OpenRouter key for better accuracy';
-    mode.style.color = 'var(--text-muted)';
+    sortI = 8;
+    sortAsc = false;
+    var intelTh = document.querySelector('th[data-i="7"]');
+    if(intelTh){
+      document.querySelectorAll('th').forEach(function(h){
+        h.classList.remove('sorted');
+        var arrow=h.querySelector('.sort-arrow');
+        if(arrow) arrow.remove();
+      });
+      intelTh.classList.add('sorted');
+      var arrow=document.createElement('span');
+      arrow.className='sort-arrow';
+      arrow.textContent=' ↓';
+      intelTh.appendChild(arrow);
+    }
+    var sortStateEl=document.getElementById('table-sort-state');
+    if(sortStateEl){
+      sortStateEl.textContent='';
+      sortStateEl.appendChild(document.createTextNode('Sorted: '));
+      var b=document.createElement('b');
+      b.textContent='Intelligence';
+      sortStateEl.appendChild(b);
+      sortStateEl.appendChild(document.createTextNode(' ↓'));
+    }
+  }catch(e){
+    console.error('Could not load data/models.json:', e);
   }
 }
 
-document.getElementById('save-key-btn').addEventListener('click', () => {
-  const key = document.getElementById('api-key').value.trim();
-  if (!key) {
-    showToast('Paste an OpenRouter API key first');
-    return;
-  }
-  if (!key.startsWith('sk-or-')) {
-    showToast('Key should start with sk-or-');
-    return;
-  }
-  localStorage.setItem('openrouter-api-key', key);
-  document.getElementById('api-key').value = '';
-  void updateClassifierMode();
-  showToast('API key saved');
-});
-
-document.getElementById('clear-key-btn').addEventListener('click', () => {
-  localStorage.removeItem('openrouter-api-key');
-  document.getElementById('api-key').value = '';
-  void updateClassifierMode();
-  showToast('API key removed — back to keyword mode');
-});
-
-// Restore API key indicator
-if (localStorage.getItem('openrouter-api-key')) {
-  document.getElementById('api-key').placeholder = '•••••••• (saved — paste to replace)';
+function resetAllFilterInputs(){
+  if(q) q.value='';
+  if(fromI) fromI.value='';
+  if(toI) toI.value='';
+  if(freeI) freeI.checked=false;
+  document.querySelectorAll('.num-filter').forEach(function(i){i.value=''});
+  activeCreators.clear();
+  activeScope='all';
+  document.querySelectorAll('.creator-pill').forEach(function(b){b.classList.remove('active')});
+  var allPill=document.querySelector('.creator-pill[data-creator="all"]');
+  if(allPill) allPill.classList.add('active');
+  document.querySelectorAll('.quick-btn').forEach(function(b){b.classList.remove('active')});
+  var allScope=document.querySelector('.quick-btn[data-scope="all"]');
+  if(allScope) allScope.classList.add('active');
+  document.querySelectorAll('.preset-btn').forEach(function(b){b.classList.remove('active')});
 }
-void updateClassifierMode();
-void probeProxy();
 
-document.querySelectorAll('.example-chip').forEach(chip => {
-  chip.addEventListener('click', () => {
-    document.getElementById('task').value = EXAMPLES[chip.dataset.ex];
-    document.getElementById('task').focus();
-  });
+loadModels().then(()=>{
+  if(location.hash) applyHashState(); else { resetAllFilterInputs(); applyFilter(); }
 });
-
-// Restore last input
-const last = localStorage.getItem('last-task');
-if (last) document.getElementById('task').value = last;
-
-loadData();
 </script>
-</body>
-</html>
+<div id="site-footer"></div>
+</body></html>

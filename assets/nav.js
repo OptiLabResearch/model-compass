@@ -1,12 +1,10 @@
-/* Shared site nav + footer + staleness-banner logic for all three pages.
+/* Shared site nav + footer + staleness-banner logic.
    Each page mounts <div id="site-nav"></div> / <div id="site-footer"></div>
    and, once it knows its data's scrape timestamp, calls
    ModelCompassNav.checkStaleness(scrapedAtISOString). */
 (function () {
   const PAGES = [
-    { href: 'index.html', label: 'Picker', sub: 'Describe a task, get a model' },
-    { href: 'shortlist.html', label: 'Shortlist', sub: 'Curated top models' },
-    { href: 'models.html', label: 'All Models', sub: 'Full benchmark table' },
+    { href: 'index.html', label: 'All Models', sub: 'Full benchmark table' },
   ];
 
   function currentFile() {
