@@ -129,7 +129,7 @@ a { color: var(--accent); }
   background: var(--surface); color: var(--text); font-weight: 600;
   box-shadow: var(--shadow-sm);
 }
-#site-nav .nav-actions { display: flex; align-items: center; gap: 8px; }
+#site-nav .nav-actions { display: flex; align-items: center; gap: 8px; margin-left: auto; }
 
 /* ---- Theme toggle ---- */
 .theme-toggle {

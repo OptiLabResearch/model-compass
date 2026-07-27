@@ -106,7 +106,7 @@ th.name-col{position:sticky;left:66px;z-index:30;background:var(--surface);borde
 th.sorted .sort-arrow{opacity:1;color:var(--accent)}
 td.empty-data{opacity:0.25}
 .compare-cb{width:15px;height:15px;cursor:pointer;accent-color:var(--accent)}
-#compare-bar{display:none;align-items:center;gap:8px;margin:10px 0;padding:8px 12px;background:var(--accent-bg);border:1px solid var(--border-focus);border-radius:var(--r-sm);font-size:12px}
+#compare-bar{display:none;align-items:center;gap:8px;padding:4px 10px;background:var(--accent-bg);border:1px solid var(--border-focus);border-radius:var(--r-sm);font-size:12px;margin-left:auto}
 #compare-bar.visible{display:flex}
 #compare-bar button{padding:4px 12px;font-size:11px;font-weight:600;border-radius:4px;border:1px solid var(--border);cursor:pointer;transition:all .15s}
 #cmp-go{background:var(--accent);color:var(--accent-fg);border-color:var(--accent)}
@@ -114,6 +114,7 @@ td.empty-data{opacity:0.25}
 #cmp-clear{background:var(--surface);color:var(--text-secondary)}
 #cmp-clear:hover{background:var(--surface-2)}
 #cmp-count{color:var(--accent);font-weight:600}
+.table-caption{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:8px;min-height:32px}
 
 /* Tooltip container */
 #tip{position:fixed;background:var(--surface) !important;color:var(--text) !important;border:1px solid var(--border-strong) !important;font-size:11px;font-weight:400;
@@ -221,15 +222,19 @@ td.empty-data{opacity:0.25}
       <div class="filter-row" data-stat="ttft_s"><label>TTFT s</label><input type="number" class="num-filter" data-stat="ttft_s" data-bound="min" placeholder="min" step="any"><span class="arrow">→</span><input type="number" class="num-filter" data-stat="ttft_s" data-bound="max" placeholder="max" step="any"></div>
       <div class="filter-row" data-stat="ttfa_s"><label>TTFA s</label><input type="number" class="num-filter" data-stat="ttfa_s" data-bound="min" placeholder="min" step="any"><span class="arrow">→</span><input type="number" class="num-filter" data-stat="ttfa_s" data-bound="max" placeholder="max" step="any"></div>
     </div>
-    <div id="compare-bar">
-      <span id="cmp-count">0</span> selected
-      <button id="cmp-go">Compare</button>
-      <button id="cmp-copy-md" title="Copy selected models table as Markdown">📋 Copy MD</button>
-      <button id="cmp-clear">Show All</button>
     </div>
   </aside>
   <main>
-<div class="table-caption"><span class="count" id="table-count"><strong id="table-count-n">0</strong> models</span><span class="sort-state" id="table-sort-state">Sorted: <b>—</b></span></div>
+<div class="table-caption">
+  <span class="count" id="table-count"><strong id="table-count-n">0</strong> models</span>
+  <span class="sort-state" id="table-sort-state">Sorted: <b>—</b></span>
+  <div id="compare-bar">
+    <span id="cmp-count">0</span> selected
+    <button id="cmp-go">Compare</button>
+    <button id="cmp-copy-md" title="Copy selected models table as Markdown">📋 Copy MD</button>
+    <button id="cmp-clear">Show All</button>
+  </div>
+</div>
 <div class="card table-card"><div class="scroll">
 <table id="t"><thead><tr>
   <th class="l rnk" data-i="0" data-t="n" data-tip="Rank sorted by current sort column">#</th>
