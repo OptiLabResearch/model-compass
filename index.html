@@ -21,11 +21,22 @@ code,.num,td,th,input{font-family:var(--mono),var(--sans)}
 .model-count{background:var(--accent-bg);color:var(--accent);font-size:12px;font-weight:600;padding:3px 10px;border-radius:var(--r-pill)}
 .meta{color:var(--text-muted);font-size:12px;margin-bottom:12px;line-height:1.6}
 
-.top-filters{display:flex;gap:12px;flex-wrap:wrap;align-items:center;font-size:12px}
+.top-filters{display:flex;gap:12px;flex-wrap:wrap;align-items:center;font-size:12px;margin-top:16px}
 .top-filters select{padding:8px 10px;font-size:13px;border:1px solid var(--border);border-radius:var(--r-sm);background:var(--surface);color:var(--text);font-family:inherit}
 .top-filters input[type=text]{width:220px}
 .top-filters input[type=date]{width:140px}
 .top-filters label{color:var(--text-secondary)}
+
+.creator-dropdown-wrap{position:relative;display:inline-block}
+.creator-btn{padding:8px 12px;font-size:13px;border:1px solid var(--border);border-radius:var(--r-sm);background:var(--surface);color:var(--text);font-family:inherit;cursor:pointer;display:flex;align-items:center;gap:8px;min-width:140px;justify-content:space-between;transition:all .15s}
+.creator-btn:hover{border-color:var(--accent)}
+.creator-btn .arrow{font-size:10px;opacity:0.6;transition:transform .15s}
+.creator-dropdown-wrap.open .creator-btn .arrow{transform:rotate(180deg)}
+.creator-menu{position:absolute;top:calc(100% + 4px);left:0;min-width:180px;max-height:260px;overflow-y:auto;background:var(--surface);border:1px solid var(--border-strong);border-radius:var(--r-sm);box-shadow:var(--shadow-md);z-index:100;padding:4px 0}
+.creator-opt{display:flex;align-items:center;gap:8px;padding:6px 12px;font-size:12px;cursor:pointer;user-select:none;color:var(--text);transition:background .1s}
+.creator-opt:hover{background:var(--accent-bg);color:var(--accent)}
+.creator-opt input[type=checkbox]{accent-color:var(--accent);cursor:pointer}
+.creator-divider{height:1px;background:var(--border);margin:4px 0}
 
 /* Presets */
 .presets{display:flex;gap:6px;flex-wrap:wrap;margin:10px 0 0}
@@ -143,19 +154,26 @@ td.empty-data{opacity:0.25}
 
   <div class="top-filters">
     <div class="search-wrap"><span class="icon">🔍</span><input id="q" type="text" placeholder="Search name, creator, slug…"></div>
-    <select id="creator-select">
-      <option value="all">All Creators</option>
-      <option value="Alibaba">Alibaba</option>
-      <option value="Anthropic">Anthropic</option>
-      <option value="DeepSeek">DeepSeek</option>
-      <option value="Google">Google</option>
-      <option value="Kimi">Kimi</option>
-      <option value="MiniMax">MiniMax</option>
-      <option value="OpenAI">OpenAI</option>
-      <option value="Xiaomi">Xiaomi</option>
-      <option value="Z AI">Z AI</option>
-      <option value="xAI">xAI</option>
-    </select>
+    <div class="creator-dropdown-wrap">
+      <button type="button" id="creator-btn" class="creator-btn">
+        <span id="creator-btn-label">All Creators</span>
+        <span class="arrow">▾</span>
+      </button>
+      <div id="creator-menu" class="creator-menu" hidden>
+        <label class="creator-opt"><input type="checkbox" value="all" id="creator-all" checked> <b>All Creators</b></label>
+        <div class="creator-divider"></div>
+        <label class="creator-opt"><input type="checkbox" value="Alibaba" class="creator-cb"> Alibaba</label>
+        <label class="creator-opt"><input type="checkbox" value="Anthropic" class="creator-cb"> Anthropic</label>
+        <label class="creator-opt"><input type="checkbox" value="DeepSeek" class="creator-cb"> DeepSeek</label>
+        <label class="creator-opt"><input type="checkbox" value="Google" class="creator-cb"> Google</label>
+        <label class="creator-opt"><input type="checkbox" value="Kimi" class="creator-cb"> Kimi</label>
+        <label class="creator-opt"><input type="checkbox" value="MiniMax" class="creator-cb"> MiniMax</label>
+        <label class="creator-opt"><input type="checkbox" value="OpenAI" class="creator-cb"> OpenAI</label>
+        <label class="creator-opt"><input type="checkbox" value="Xiaomi" class="creator-cb"> Xiaomi</label>
+        <label class="creator-opt"><input type="checkbox" value="Z AI" class="creator-cb"> Z AI</label>
+        <label class="creator-opt"><input type="checkbox" value="xAI" class="creator-cb"> xAI</label>
+      </div>
+    </div>
     <label>From <input id="from" type="date"></label>
     <label>To <input id="to" type="date"></label>
     <span id="count" style="color:var(--text-muted)"></span>
@@ -206,6 +224,7 @@ td.empty-data{opacity:0.25}
     <div id="compare-bar">
       <span id="cmp-count">0</span> selected
       <button id="cmp-go">Compare</button>
+      <button id="cmp-copy-md" title="Copy selected models table as Markdown">📋 Copy MD</button>
       <button id="cmp-clear">Show All</button>
     </div>
   </aside>
@@ -265,11 +284,82 @@ document.querySelectorAll('th[data-tip]').forEach(function(th){
 });
 
 const tbody=document.querySelector('#t tbody');
-const q=document.getElementById('q'), creatorSelect=document.getElementById('creator-select'),
+const q=document.getElementById('q'),
       fromI=document.getElementById('from'), toI=document.getElementById('to'),
       cnt=document.getElementById('count');
 const filterCountBadge=document.getElementById('filter-count-badge');
 const filterRows=document.querySelectorAll('.filter-row[data-stat]');
+
+/* Multi-select Creator Dropdown */
+var creatorBtn = document.getElementById('creator-btn'),
+    creatorMenu = document.getElementById('creator-menu'),
+    creatorBtnLabel = document.getElementById('creator-btn-label'),
+    creatorAllCb = document.getElementById('creator-all'),
+    creatorCbs = document.querySelectorAll('.creator-cb');
+
+if (creatorBtn && creatorMenu) {
+  creatorBtn.addEventListener('click', function (e) {
+    e.stopPropagation();
+    var isOpen = !creatorMenu.hidden;
+    creatorMenu.hidden = isOpen;
+    creatorBtn.parentElement.classList.toggle('open', !isOpen);
+  });
+
+  document.addEventListener('click', function (e) {
+    if (!creatorMenu.contains(e.target) && !creatorBtn.contains(e.target)) {
+      creatorMenu.hidden = true;
+      creatorBtn.parentElement.classList.remove('open');
+    }
+  });
+
+  if (creatorAllCb) {
+    creatorAllCb.addEventListener('change', function () {
+      if (creatorAllCb.checked) {
+        creatorCbs.forEach(function (cb) { cb.checked = false; });
+      } else {
+        var anyChecked = Array.from(creatorCbs).some(function (cb) { return cb.checked; });
+        if (!anyChecked) creatorAllCb.checked = true;
+      }
+      updateCreatorBtnLabel();
+      applyFilter();
+    });
+  }
+
+  creatorCbs.forEach(function (cb) {
+    cb.addEventListener('change', function () {
+      var checkedCount = Array.from(creatorCbs).filter(function (c) { return c.checked; }).length;
+      if (checkedCount > 0) {
+        if (creatorAllCb) creatorAllCb.checked = false;
+      } else {
+        if (creatorAllCb) creatorAllCb.checked = true;
+      }
+      updateCreatorBtnLabel();
+      applyFilter();
+    });
+  });
+}
+
+function getSelectedCreators() {
+  if (creatorAllCb && creatorAllCb.checked) return new Set();
+  var selected = new Set();
+  creatorCbs.forEach(function (cb) {
+    if (cb.checked) selected.add(cb.value);
+  });
+  return selected;
+}
+
+function updateCreatorBtnLabel() {
+  var selected = getSelectedCreators();
+  if (selected.size === 0) {
+    creatorBtnLabel.textContent = 'All Creators';
+  } else if (selected.size === 1) {
+    creatorBtnLabel.textContent = Array.from(selected)[0];
+  } else if (selected.size <= 2) {
+    creatorBtnLabel.textContent = Array.from(selected).join(', ');
+  } else {
+    creatorBtnLabel.textContent = selected.size + ' Creators';
+  }
+}
 
 let sortI=null, sortAsc=true;
 
@@ -277,6 +367,7 @@ let sortI=null, sortAsc=true;
 var cmpBar=document.getElementById('compare-bar'),
     cmpCount=document.getElementById('cmp-count'),
     cmpGo=document.getElementById('cmp-go'),
+    cmpCopyMd=document.getElementById('cmp-copy-md'),
     cmpClear=document.getElementById('cmp-clear'),
     checkAll=document.getElementById('check-all');
 var cmpActive=false;
@@ -319,7 +410,7 @@ function updateActiveFilterUI(){
 
 function applyFilter(){
   const Q=q.value.toLowerCase(), from=fromI.value, to=toI.value;
-  const selectedCreator=creatorSelect?creatorSelect.value:'all';
+  const selectedCreators=getSelectedCreators();
   const ranges=getRanges();
   let n=0;
 
@@ -335,10 +426,10 @@ function applyFilter(){
     const d=r.dataset.release||'';
     let show=txt.includes(Q) && (!from||(d&&d>=from)) && (!to||(d&&d<=to));
 
-    /* Creator filter */
-    if(show && selectedCreator!=='all'){
+    /* Multi-select Creator filter */
+    if(show && selectedCreators.size>0){
       var creatorCell=r.querySelector('td[data-creator]');
-      if(!creatorCell || creatorCell.dataset.creator!==selectedCreator) show=false;
+      if(!creatorCell || !selectedCreators.has(creatorCell.dataset.creator)) show=false;
     }
 
     if(show){
@@ -365,10 +456,9 @@ function applyFilter(){
   updateHash();
 }
 
-[q,creatorSelect,fromI,toI].forEach(el=>{
+[q,fromI,toI].forEach(el=>{
   if(!el) return;
   el.addEventListener('input',applyFilter);
-  if(el.tagName==='SELECT') el.addEventListener('change',applyFilter);
 });
 document.querySelectorAll('.num-filter').forEach(el=>el.addEventListener('input',applyFilter));
 
@@ -377,7 +467,9 @@ document.getElementById('reset').addEventListener('click',()=>{
   if(q) q.value='';
   if(fromI) fromI.value='';
   if(toI) toI.value='';
-  if(creatorSelect) creatorSelect.value='all';
+  if(creatorAllCb) creatorAllCb.checked=true;
+  if(creatorCbs) creatorCbs.forEach(function(c){c.checked=false});
+  updateCreatorBtnLabel();
   document.querySelectorAll('.preset-btn').forEach(function(b){b.classList.remove('active')});
   applyFilter();
 });
@@ -428,6 +520,45 @@ cmpGo.addEventListener('click',function(){
   cmpActive=true;
   applyFilter();
 });
+
+if(cmpCopyMd){
+  cmpCopyMd.addEventListener('click',function(){
+    var checkedRows=Array.from(tbody.querySelectorAll('tr')).filter(function(r){
+      var cb=r.querySelector('input.compare-cb');
+      return (cb&&cb.checked)||(cmpActive&&r.style.display!=='none');
+    });
+    if(checkedRows.length===0) return;
+
+    var headerThs=Array.from(document.querySelectorAll('#t thead th')).slice(2); // Skip # and checkbox
+    var headers=headerThs.map(function(th){
+      return th.textContent.replace(/[\u2191\u2193]/g,'').trim();
+    });
+
+    var mdLines=[];
+    mdLines.push('| ' + headers.join(' | ') + ' |');
+    mdLines.push('| ' + headers.map(function(h, idx){
+      return (idx > 1 && idx < headers.length - 1) ? '---:' : '---';
+    }).join(' | ') + ' |');
+
+    checkedRows.forEach(function(r){
+      var cells=Array.from(r.children).slice(2);
+      var vals=cells.map(function(c){
+        var txt=c.textContent.trim();
+        return txt || '—';
+      });
+      mdLines.push('| ' + vals.join(' | ') + ' |');
+    });
+
+    var mdText=mdLines.join('\n');
+    navigator.clipboard.writeText(mdText).then(function(){
+      var origText=cmpCopyMd.textContent;
+      cmpCopyMd.textContent='✓ Copied!';
+      setTimeout(function(){ cmpCopyMd.textContent=origText; }, 2000);
+    }).catch(function(err){
+      console.error('Failed to copy markdown:', err);
+    });
+  });
+}
 
 cmpClear.addEventListener('click',function(){
   cmpActive=false;
@@ -487,7 +618,8 @@ function encodeHashState(){
   var parts=[];
   var activePresetBtn=document.querySelector('.preset-btn.active');
   if(activePresetBtn) parts.push('preset='+encodeURIComponent(activePresetBtn.dataset.preset));
-  if(creatorSelect && creatorSelect.value!=='all') parts.push('creator='+encodeURIComponent(creatorSelect.value));
+  var selected=getSelectedCreators();
+  if(selected.size>0) parts.push('creator='+encodeURIComponent(Array.from(selected).join(',')));
   document.querySelectorAll('.num-filter').forEach(function(inp){
     if(inp.value==='') return;
     parts.push(inp.dataset.stat+'.'+inp.dataset.bound+'='+encodeURIComponent(inp.value));
@@ -520,8 +652,12 @@ function applyHashState(){
     var btn=document.querySelector('.preset-btn[data-preset="'+params.preset+'"]');
     if(btn) btn.click();
   }
-  if(params.creator && creatorSelect){
-    creatorSelect.value=params.creator;
+  if(params.creator){
+    var list=params.creator.split(',');
+    var setList=new Set(list);
+    creatorCbs.forEach(function(cb){ cb.checked=setList.has(cb.value); });
+    if(creatorAllCb) creatorAllCb.checked = (list.length===0);
+    updateCreatorBtnLabel();
   }
   Object.keys(params).forEach(function(k){
     if(k==='scope'||k==='creator'||k==='preset') return;
