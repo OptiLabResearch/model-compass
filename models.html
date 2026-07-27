@@ -713,7 +713,25 @@ async function loadModels(){
   }
 }
 
+function resetAllFilterInputs(){
+  if(q) q.value='';
+  if(fromI) fromI.value='';
+  if(toI) toI.value='';
+  if(freeI) freeI.checked=false;
+  document.querySelectorAll('.num-filter').forEach(function(i){i.value=''});
+  activeCreators.clear();
+  activeScope='all';
+  document.querySelectorAll('.creator-pill').forEach(function(b){b.classList.remove('active')});
+  var allPill=document.querySelector('.creator-pill[data-creator="all"]');
+  if(allPill) allPill.classList.add('active');
+  document.querySelectorAll('.quick-btn').forEach(function(b){b.classList.remove('active')});
+  var allScope=document.querySelector('.quick-btn[data-scope="all"]');
+  if(allScope) allScope.classList.add('active');
+  document.querySelectorAll('.preset-btn').forEach(function(b){b.classList.remove('active')});
+}
+
 loadModels().then(()=>{
+  if(!location.hash) resetAllFilterInputs();
   applyFilter();
   const scrapedAtEl=document.querySelector('.meta[data-scraped-at]');
   if(scrapedAtEl && scrapedAtEl.dataset.scrapedAt) ModelCompassNav.checkStaleness(scrapedAtEl.dataset.scrapedAt);

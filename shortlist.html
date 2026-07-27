@@ -951,12 +951,26 @@ async function loadModels(){
   }
 }
 
+function resetAllFilterInputs(){
+  if(q) q.value='';
+  document.querySelectorAll('.num-filter').forEach(function(i){i.value=''});
+  activeCreators.clear();
+  activeScope='all';
+  document.querySelectorAll('.creator-pill').forEach(function(b){b.classList.remove('active')});
+  var allPill=document.querySelector('.creator-pill[data-creator="all"]');
+  if(allPill) allPill.classList.add('active');
+  document.querySelectorAll('.quick-btn').forEach(function(b){b.classList.remove('active')});
+  var allScope=document.querySelector('.quick-btn[data-scope="all"]');
+  if(allScope) allScope.classList.add('active');
+  document.querySelectorAll('.preset-btn').forEach(function(b){b.classList.remove('active')});
+}
+
 /* INIT */
 loadModels().then(function(){
   applyHeatMap();
   markEmptyData();
   checkStaleness();
-  if(location.hash) applyHashState(); else applyFilter();
+  if(location.hash){ applyHashState(); } else { resetAllFilterInputs(); applyFilter(); }
   var intelTh = document.querySelector('th[data-i="7"]');
   if(intelTh) intelTh.click();
 });
