@@ -565,6 +565,52 @@ function updateHash(){
   history.replaceState(null,'',h?('#'+h):(location.pathname+location.search));
 }
 
+function parseHash(){
+  var hash=location.hash.slice(1);
+  if(!hash) return {};
+  var params={};
+  hash.split('&').forEach(function(kv){
+    var eq=kv.indexOf('=');
+    if(eq<0) return;
+    params[decodeURIComponent(kv.slice(0,eq))]=decodeURIComponent(kv.slice(eq+1));
+  });
+  return params;
+}
+
+function applyHashState(){
+  var params=parseHash();
+  if(Object.keys(params).length===0){ resetAllFilterInputs(); applyFilter(); return; }
+
+  if(params.preset){
+    var btn=document.querySelector('.preset-btn[data-preset="'+params.preset+'"]');
+    if(btn) btn.click();
+  }
+  if(params.scope){
+    activeScope=params.scope;
+    document.querySelectorAll('.quick-btn').forEach(function(b){
+      b.classList.toggle('active', b.dataset.scope===params.scope);
+    });
+  }
+  if(params.creator){
+    var list=params.creator.split(',');
+    activeCreators=new Set(list);
+    document.querySelectorAll('.creator-pill').forEach(function(b){
+      b.classList.toggle('active', list.indexOf(b.dataset.creator)!==-1);
+    });
+  }
+  Object.keys(params).forEach(function(k){
+    if(k==='scope'||k==='creator'||k==='preset') return;
+    var dot=k.lastIndexOf('.');
+    if(dot<0) return;
+    var stat=k.slice(0,dot), bound=k.slice(dot+1);
+    document.querySelectorAll('.num-filter').forEach(function(inp){
+      if(inp.dataset.stat===stat && inp.dataset.bound===bound) inp.value=params[k];
+    });
+  });
+  applyFilter();
+}
+
+
 function fmt(v){ return (v===null||v===undefined) ? '' : v; }
 function esc(v){
   return (window.ModelCompassNav && ModelCompassNav.escapeHtml)
@@ -619,7 +665,7 @@ function buildRow(m, rank){
     }
     return `<td class="num" data-stat="${esc(stat)}" data-val="${esc(raw)}">${esc(disp)}</td>`;
   }
-  return `<tr${rowClass} data-release="${esc(m.released||'')}" data-slug="${esc(m.slug||')}">`+
+  return `<tr${rowClass} data-release="${esc(m.released||'')}" data-slug="${esc(m.slug||'')}">`+
     `<td class="num rnk" data-rank>${rank}</td>`+
     `<td class="cb-col"><input type="checkbox" class="compare-cb" data-model-row></td>`+
     `<td class="l name-col" title="${esc(displayName)}" data-val="${esc(displayName.toLowerCase())}"><span class="cell-title">${esc(displayName)}</span></td>`+
@@ -731,8 +777,7 @@ function resetAllFilterInputs(){
 }
 
 loadModels().then(()=>{
-  if(!location.hash) resetAllFilterInputs();
-  applyFilter();
+  if(location.hash) applyHashState(); else { resetAllFilterInputs(); applyFilter(); }
   const scrapedAtEl=document.querySelector('.meta[data-scraped-at]');
   if(scrapedAtEl && scrapedAtEl.dataset.scrapedAt) ModelCompassNav.checkStaleness(scrapedAtEl.dataset.scrapedAt);
 });
