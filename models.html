@@ -605,19 +605,29 @@ function buildRow(m, rank){
   const rowClass = m.openrouter_slug ? ' class="free"' : '';
   const displayName = shortName(m.name || '');
 
-  function cell(stat, val){
-    const v=fmt(val);
-    return `<td class="num" data-stat="${esc(stat)}" data-val="${esc(v)}">${v===''?'—':esc(v)}</td>`;
+  function cell(stat, val, isPrice){
+    const raw=(val===null||val===undefined)?'':val;
+    if(raw==='') return `<td class="num" data-stat="${esc(stat)}" data-val="">—</td>`;
+    let disp=raw;
+    if(typeof raw==='number' || (!isNaN(parseFloat(raw)) && isFinite(raw))){
+      const num=parseFloat(raw);
+      if(isPrice){
+        disp=(num<1)?num.toFixed(2):(num%1===0?num.toFixed(0):num.toFixed(2));
+      } else {
+        disp=Math.round(num);
+      }
+    }
+    return `<td class="num" data-stat="${esc(stat)}" data-val="${esc(raw)}">${esc(disp)}</td>`;
   }
-  return `<tr${rowClass} data-release="${esc(m.released||'')}" data-slug="${esc(m.slug||'')}">`+
+  return `<tr${rowClass} data-release="${esc(m.released||'')}" data-slug="${esc(m.slug||')}">`+
     `<td class="num rnk" data-rank>${rank}</td>`+
     `<td class="cb-col"><input type="checkbox" class="compare-cb" data-model-row></td>`+
     `<td class="l name-col" title="${esc(displayName)}" data-val="${esc(displayName.toLowerCase())}"><span class="cell-title">${esc(displayName)}</span></td>`+
     `<td class="l" data-creator="${esc(m.creator||'')}" data-val="${esc((m.creator||'').toLowerCase())}"><span class="dot-badge" style="--dot-color:var(${dotFor(m.creator||'')})">${esc(m.creator||'')}</span></td>`+
     `<td class="num" data-t="d" data-val="${esc(m.released||'')}">${esc(m.released||'')}</td>`+
-    cell('in_$/M', p.input)+
-    cell('out_$/M', p.output)+
-    cell('blend_3to1_$/M', p.blended_3_1)+
+    cell('in_$/M', p.input, true)+
+    cell('out_$/M', p.output, true)+
+    cell('blend_3to1_$/M', p.blended_3_1, true)+
     cell('intelligence', c.intelligence_index_v4_1)+
     cell('coding', c.coding_index)+
     cell('agentic', c.agentic_index)+
@@ -636,8 +646,8 @@ function buildRow(m, rank){
     cell('scicode_%', b.scicode)+
     cell('mmmu_pro_%', b.mmmu_pro)+
     cell('speed_tps', perf.output_speed_tps)+
-    cell('ttft_s', perf.ttft_seconds_total)+
-    cell('ttfa_s', perf.ttft_seconds_answer)+
+    cell('ttft_s', perf.ttft_seconds_total, true)+
+    cell('ttfa_s', perf.ttft_seconds_answer, true)+
     `<td class="l" data-val="${esc(m.slug||'')}"><a href="${esc(aaUrl)}" target="_blank" rel="noopener" style="color:var(--accent);text-decoration:none">${esc(m.slug||'')}</a></td>`+
     `</tr>`;
 }
@@ -677,6 +687,31 @@ async function loadModels(){
       `released in the last ~6 months · sorted by intelligence desc · click headers to sort · `+
       `${models.length} models · full benchmark set from artificialanalysis.ai (no API key required)`;
     bindCheckboxEvents();
+
+    sortI = 8;
+    sortAsc = false;
+    var intelTh = document.querySelector('th[data-i="7"]');
+    if(intelTh){
+      document.querySelectorAll('th').forEach(function(h){
+        h.classList.remove('sorted');
+        var arrow=h.querySelector('.sort-arrow');
+        if(arrow) arrow.remove();
+      });
+      intelTh.classList.add('sorted');
+      var arrow=document.createElement('span');
+      arrow.className='sort-arrow';
+      arrow.textContent=' ↓';
+      intelTh.appendChild(arrow);
+    }
+    var sortStateEl=document.getElementById('table-sort-state');
+    if(sortStateEl){
+      sortStateEl.textContent='';
+      sortStateEl.appendChild(document.createTextNode('Sorted: '));
+      var b=document.createElement('b');
+      b.textContent='Intelligence';
+      sortStateEl.appendChild(b);
+      sortStateEl.appendChild(document.createTextNode(' ↓'));
+    }
   }catch(e){
     metaEl.textContent=`⚠️ Could not load data/models.json: ${e.message}`;
   }

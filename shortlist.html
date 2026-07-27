@@ -764,7 +764,15 @@ function checkStaleness(){
   if(metaEl && metaEl.dataset.scrapedAt) ModelCompassNav.checkStaleness(metaEl.dataset.scrapedAt);
 }
 
-function fmtNum(v){ return (v===null||v===undefined) ? '' : (Math.abs(v)<10 ? v.toFixed(1) : Math.round(v)); }
+function fmtNum(v, isPrice){
+  if(v===null||v===undefined||v==='') return '';
+  var num=parseFloat(v);
+  if(isNaN(num)) return v;
+  if(isPrice){
+    return (num<1)?num.toFixed(2):(num%1===0?num.toFixed(0):num.toFixed(2));
+  }
+  return Math.round(num);
+}
 function fmtDollar(v){ return (v===null||v===undefined) ? '' : v; }
 
 function esc(v){
@@ -792,9 +800,9 @@ function buildRow(m, rank){
   var aaUrl=safeHref(m.aa_url, 'https://artificialanalysis.ai/models/'+encodeURIComponent(m.slug||''));
   var rowClass = m.openrouter_slug ? ' class="free"' : '';
   var displayName = shortenModelName(m.name || '');
-  function cell(stat, val, fmt){
+  function cell(stat, val, isPrice){
     var v = (val===null||val===undefined) ? '' : val;
-    var shown = v===''?'—':(fmt?fmt(v):v);
+    var shown = v===''?'—':fmtNum(v, isPrice);
     return '<td class="num" data-stat="'+esc(stat)+'" data-val="'+esc(v)+'">'+esc(shown)+'</td>';
   }
   return '<tr'+rowClass+' data-release="'+esc(m.released||'')+'" data-slug="'+esc(m.slug||'')+'">'+
@@ -803,27 +811,27 @@ function buildRow(m, rank){
     '<td class="l name-col" title="'+esc(displayName)+'" data-val="'+esc(displayName.toLowerCase())+'"><span class="cell-title">'+esc(displayName)+'</span></td>'+
     '<td class="l" data-creator="'+esc(m.creator||'')+'" data-val="'+esc((m.creator||'').toLowerCase())+'"><span class="dot-badge" style="--dot-color:var('+dotFor(m.creator||'')+')">'+esc(m.creator||'')+'</span></td>'+
     '<td class="num" data-t="d" data-val="'+esc(m.released||'')+'">'+esc(m.released||'')+'</td>'+
-    cell('in_$/M', p.input, fmtNum)+
-    cell('out_$/M', p.output, fmtNum)+
-    cell('blend_3to1_$/M', p.blended_3_1, fmtNum)+
-    cell('intelligence', c.intelligence_index_v4_1, fmtNum)+
-    cell('coding', c.coding_index, fmtNum)+
-    cell('agentic', c.agentic_index, fmtNum)+
-    cell('gpqa_%', b.gpqa_diamond, fmtNum)+
-    cell('hle_%', b.hle, fmtNum)+
-    cell('ifbench_%', b.ifbench, fmtNum)+
-    cell('tau2_%', b.tau2_bench, fmtNum)+
-    cell('lcr_%', b.lcr, fmtNum)+
-    cell('gdpval_%', b.gdpval_v2, fmtNum)+
-    cell('scicode_%', b.scicode, fmtNum)+
-    cell('terminalbench_%', b.terminalbench_v2_1, fmtNum)+
-    cell('omni_acc_%', b.omniscience_accuracy, fmtNum)+
-    cell('omni_nh_%', b.omniscience_non_halluc, fmtNum)+
+    cell('in_$/M', p.input, true)+
+    cell('out_$/M', p.output, true)+
+    cell('blend_3to1_$/M', p.blended_3_1, true)+
+    cell('intelligence', c.intelligence_index_v4_1)+
+    cell('coding', c.coding_index)+
+    cell('agentic', c.agentic_index)+
+    cell('gpqa_%', b.gpqa_diamond)+
+    cell('hle_%', b.hle)+
+    cell('ifbench_%', b.ifbench)+
+    cell('tau2_%', b.tau2_bench)+
+    cell('lcr_%', b.lcr)+
+    cell('gdpval_%', b.gdpval_v2)+
+    cell('scicode_%', b.scicode)+
+    cell('terminalbench_%', b.terminalbench_v2_1)+
+    cell('omni_acc_%', b.omniscience_accuracy)+
+    cell('omni_nh_%', b.omniscience_non_halluc)+
     '<td class="num" data-stat="context" data-val="'+esc(ctx)+'">'+(ctx?esc(ctx):'—')+'</td>'+
-    cell('value_intel_$_blend', d.value_intelligence_per_dollar_blend, fmtNum)+
-    cell('safety_composite', d.safety_composite, fmtNum)+
-    cell('speed_tier', d.speed_tier, fmtNum)+
-    cell('latency_tier', d.latency_tier, fmtNum)+
+    cell('value_intel_$_blend', d.value_intelligence_per_dollar_blend)+
+    cell('safety_composite', d.safety_composite)+
+    cell('speed_tier', d.speed_tier)+
+    cell('latency_tier', d.latency_tier)+
     '<td class="num" data-stat="is_frontier" data-val="'+(m.is_frontier?1:0)+'">'+(m.is_frontier?'Yes':'No')+'</td>'+
     '<td class="l" data-val="'+esc(m.slug||'')+'"><a href="'+esc(aaUrl)+'" target="_blank" rel="noopener" style="color:var(--accent);text-decoration:none">'+esc(m.slug||'')+'</a></td>'+
     '</tr>';
@@ -949,7 +957,8 @@ loadModels().then(function(){
   markEmptyData();
   checkStaleness();
   if(location.hash) applyHashState(); else applyFilter();
-  document.querySelector('th[data-i="10"]').click();
+  var intelTh = document.querySelector('th[data-i="7"]');
+  if(intelTh) intelTh.click();
 });
 </script>
 </body></html>
