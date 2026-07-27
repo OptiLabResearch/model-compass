@@ -90,10 +90,9 @@ td.cb-col{background:var(--surface)}
 th.rnk,td.rnk{position:sticky;left:30px;z-index:8;text-align:center;width:36px;font-weight:700;font-size:11px;color:var(--text-muted);padding:8px 6px}
 th.rnk{background:var(--surface);z-index:30;border-right:1px solid var(--border)}
 td.rnk{background:var(--surface);border-right:1px solid var(--border)}
-td.name-col{position:sticky;left:66px;z-index:8;background:var(--surface);border-right:1px solid var(--border);white-space:normal}
+td.name-col{position:sticky;left:66px;z-index:8;background:var(--surface);border-right:1px solid var(--border);white-space:nowrap;max-width:240px;overflow:hidden;text-overflow:ellipsis}
 th.name-col{position:sticky;left:66px;z-index:30;background:var(--surface);border-right:1px solid var(--border)}
-.cell-title{font-family:var(--sans);font-weight:600;color:var(--text)}
-.cell-sub{font-family:var(--mono);font-size:11px;color:var(--text-muted);margin-top:2px}
+.cell-title{font-family:var(--sans);font-weight:600;color:var(--text);white-space:nowrap}
 .sort-arrow{font-size:10px;margin-left:3px;opacity:0.4}
 th.sorted .sort-arrow{opacity:1;color:var(--accent)}
 td.empty-data{opacity:0.25}
@@ -108,7 +107,7 @@ td.empty-data{opacity:0.25}
 #cmp-count{color:var(--accent);font-weight:600}
 
 /* Tooltip container */
-#tip{position:fixed;background:var(--tooltip-bg);color:var(--tooltip-fg);font-size:11px;font-weight:400;
+#tip{position:fixed;background:var(--tooltip-bg);color:var(--tooltip-fg);border:1px solid var(--border-strong);font-size:11px;font-weight:400;
   padding:8px 10px;border-radius:6px;line-height:1.5;pointer-events:none;
   white-space:normal;width:280px;box-shadow:var(--shadow-md);z-index:9999;
   display:none}
@@ -228,35 +227,35 @@ td.empty-data{opacity:0.25}
 <div class="table-caption"><span class="count" id="table-count"><strong id="table-count-n">0</strong> models</span><span class="sort-state" id="table-sort-state">Sorted: <b>—</b></span></div>
 <div class="card table-card"><div class="scroll">
 <table id="t"><thead><tr>
-  <th class="l rnk" data-i="0" data-t="n">#</th>
+  <th class="l rnk" data-i="0" data-t="n" data-tip="Rank sorted by current sort column">#</th>
   <th class="cb-col"><input type="checkbox" id="check-all" class="compare-cb" title="Select all"></th>
-  <th class="l name-col" data-i="1" data-t="s" title="model">Name</th>
-  <th class="l" data-i="2" data-t="s" title="creator">Creator</th>
-  <th data-i="3" data-t="d" title="release_date">Released</th>
-  <th data-i="4" data-t="n" title="in_$/M">In $/M</th>
-  <th data-i="5" data-t="n" title="out_$/M">Out $/M</th>
-  <th data-i="6" data-t="n" title="blend_3to1_$/M" data-tip="Blended cost = input × 0.75 + output × 0.25 per million tokens.">Blended</th>
-  <th data-i="7" data-t="n" title="intelligence" data-tip="Composite intelligence score averaging GPQA, HLE, and IFBench results.">Intelligence</th>
-  <th data-i="8" data-t="n" title="coding" data-tip="Average of SciCode + TerminalBench. Measures ability to write correct code.">Coding</th>
-  <th data-i="9" data-t="n" title="agentic" data-tip="Average of τ²-Bench + LCR + GDPval. Key metric for tool use and workflow automation.">Agentic</th>
-  <th data-i="10" data-t="n" title="omniscience">Omniscience</th>
-  <th data-i="11" data-t="n" title="gpqa_%">GPQA %</th>
-  <th data-i="12" data-t="n" title="hle_%">HLE %</th>
-  <th data-i="13" data-t="n" title="critpt_%">CritPt %</th>
-  <th data-i="14" data-t="n" title="non_halluc_%">Non-halluc %</th>
-  <th data-i="15" data-t="n" title="ifbench_%">IFBench %</th>
-  <th data-i="16" data-t="n" title="lcr_%">LCR %</th>
-  <th data-i="17" data-t="n" title="tau2_%">τ²-Bench %</th>
-  <th data-i="18" data-t="n" title="tau_banking_%">τ³-Banking %</th>
-  <th data-i="19" data-t="n" title="gdpval_%">GDPval %</th>
-  <th data-i="20" data-t="n" title="terminalbench_hard_%">TermBench H%</th>
-  <th data-i="21" data-t="n" title="terminalbench_v2_1_%">TermBench 2.1%</th>
-  <th data-i="22" data-t="n" title="scicode_%">SciCode %</th>
-  <th data-i="23" data-t="n" title="mmmu_pro_%">MMMU-Pro %</th>
-  <th data-i="24" data-t="n" title="speed_tps">Spd t/s</th>
-  <th data-i="25" data-t="n" title="ttft_s">TTFT s</th>
-  <th data-i="26" data-t="n" title="ttfa_s">TTFA s</th>
-  <th class="l" data-i="27" data-t="s" title="slug">Slug</th>
+  <th class="l name-col" data-i="1" data-t="s" data-tip="Model name">Name</th>
+  <th class="l" data-i="2" data-t="s" data-tip="Model creator / organization">Creator</th>
+  <th data-i="3" data-t="d" data-tip="Release date">Released</th>
+  <th data-i="4" data-t="n" data-tip="Input cost per 1M tokens in USD">In $/M</th>
+  <th data-i="5" data-t="n" data-tip="Output cost per 1M tokens in USD">Out $/M</th>
+  <th data-i="6" data-t="n" data-tip="Blended cost = input × 0.75 + output × 0.25 per million tokens">Blended</th>
+  <th data-i="7" data-t="n" data-tip="Composite intelligence index (v4.1) averaging GPQA, HLE, and IFBench">Intelligence</th>
+  <th data-i="8" data-t="n" data-tip="Average of SciCode and TerminalBench v2.1. Measures ability to write correct code">Coding</th>
+  <th data-i="9" data-t="n" data-tip="Average of τ²-Bench, LCR, and GDPval v2 for workflow automation">Agentic</th>
+  <th data-i="10" data-t="n" data-tip="Broad factual accuracy score across diverse knowledge domains">Omniscience</th>
+  <th data-i="11" data-t="n" data-tip="Graduate-level Google-Proof Q&A science benchmark">GPQA %</th>
+  <th data-i="12" data-t="n" data-tip="Humanity's Last Exam — hardest unsolvable benchmark questions">HLE %</th>
+  <th data-i="13" data-t="n" data-tip="Critical reasoning and scientific hypothesis evaluation">CritPt %</th>
+  <th data-i="14" data-t="n" data-tip="Percentage of outputs without hallucinated or fabricated facts">Non-halluc %</th>
+  <th data-i="15" data-t="n" data-tip="Instruction Following Benchmark for complex formatting rules">IFBench %</th>
+  <th data-i="16" data-t="n" data-tip="Long-Context Retrieval accuracy finding specific facts in 100K+ token documents">LCR %</th>
+  <th data-i="17" data-t="n" data-tip="Agent tool-use benchmark testing state tracking and API calls">τ²-Bench %</th>
+  <th data-i="18" data-t="n" data-tip="τ³-Bench Banking domain multi-step agent benchmark">τ³-Banking %</th>
+  <th data-i="19" data-t="n" data-tip="General Domain Proficiency real-world task completion">GDPval %</th>
+  <th data-i="20" data-t="n" data-tip="TerminalBench Hard — hard system administration tasks">TermBench H%</th>
+  <th data-i="21" data-t="n" data-tip="TerminalBench v2.1 — shell scripting & DevOps tasks">TermBench 2.1%</th>
+  <th data-i="22" data-t="n" data-tip="Scientific computing & numerical Python code execution">SciCode %</th>
+  <th data-i="23" data-t="n" data-tip="Expert visual & multimodal reasoning benchmark">MMMU-Pro %</th>
+  <th data-i="24" data-t="n" data-tip="Median output generation speed in tokens per second">Spd t/s</th>
+  <th data-i="25" data-t="n" data-tip="Median Time To First Token in seconds (latency)">TTFT s</th>
+  <th data-i="26" data-t="n" data-tip="Median Time To First Answer token in seconds">TTFA s</th>
+  <th class="l" data-i="27" data-t="s" data-tip="Model URL identifier on Artificial Analysis">Slug</th>
 </tr></thead><tbody></tbody></table>
 </div></div>
 </main>
@@ -266,7 +265,7 @@ td.empty-data{opacity:0.25}
 </div><!-- /.page -->
 
 <script>
-/* Tooltip */
+/* Tooltip handler */
 var tipEl=document.getElementById('tip');
 document.querySelectorAll('th[data-tip]').forEach(function(th){
   th.addEventListener('mouseenter',function(e){
@@ -282,8 +281,7 @@ document.querySelectorAll('th[data-tip]').forEach(function(th){
 const tbody=document.querySelector('#t tbody');
 const q=document.getElementById('q'), fromI=document.getElementById('from'),
       toI=document.getElementById('to'), freeI=document.getElementById('free'),
-      cnt=document.getElementById('count'),
-      numFilters=document.querySelectorAll('.num-filter');
+      cnt=document.getElementById('count');
 const filterCountBadge=document.getElementById('filter-count-badge');
 const filterRows=document.querySelectorAll('.filter-row[data-stat]');
 
@@ -319,7 +317,7 @@ function updateCmpCount(){
 
 function getRanges(){
   const r={};
-  numFilters.forEach(inp=>{
+  document.querySelectorAll('.num-filter').forEach(inp=>{
     if(inp.value==='') return;
     const s=inp.dataset.stat, b=inp.dataset.bound;
     (r[s]=r[s]||{})[b]=parseFloat(inp.value);
@@ -395,10 +393,10 @@ function applyFilter(){
 }
 
 [q,fromI,toI,freeI].forEach(el=>el.addEventListener('input',applyFilter));
-numFilters.forEach(el=>el.addEventListener('input',applyFilter));
+document.querySelectorAll('.num-filter').forEach(el=>el.addEventListener('input',applyFilter));
 
 document.getElementById('reset').addEventListener('click',()=>{
-  numFilters.forEach(i=>i.value='');
+  document.querySelectorAll('.num-filter').forEach(i=>i.value='');
   activeCreators.clear();
   activeScope='all';
   document.querySelectorAll('.creator-pill').forEach(function(b){b.classList.remove('active')});
@@ -455,7 +453,7 @@ var presetConfigs=[
   {id:'best-overall',filters:{intelligence:{min:50}}},
   {id:'best-value',filters:{'blend_3to1_$/M':{max:1},intelligence:{min:45}}},
   {id:'coding',filters:{coding:{min:45}}},
-  {id:'reasoning',filters:{intelligence:{min:50},'gpqa_%':{min:90}}},
+  {id:'reasoning',filters:{intelligence:{min:50},'gpqa_%':{min:80}}},
   {id:'cheapest',filters:{'blend_3to1_$/M':{max:0.6}}},
   {id:'agentic',filters:{agentic:{min:40}}}
 ];
@@ -463,26 +461,27 @@ var presetConfigs=[
 document.querySelectorAll('.preset-btn').forEach(function(btn){
   btn.addEventListener('click',function(){
     var pid=btn.dataset.preset;
+    
+    // Clear all inputs first
+    document.querySelectorAll('.num-filter').forEach(function(i){i.value=''});
+    q.value='';
+    
     if(btn.classList.contains('active')){
       btn.classList.remove('active');
-      numFilters.forEach(function(i){i.value=''});
       applyFilter();
       return;
     }
+    
     document.querySelectorAll('.preset-btn').forEach(function(b){b.classList.remove('active')});
     btn.classList.add('active');
-    numFilters.forEach(function(i){i.value=''});
-    q.value='';
+    
     var cfg=presetConfigs.find(function(p){return p.id===pid});
     if(cfg){
-      var stats=Object.keys(cfg.filters);
-      stats.forEach(function(stat){
+      Object.keys(cfg.filters).forEach(function(stat){
         var bounds=cfg.filters[stat];
-        numFilters.forEach(function(inp){
-          if(inp.dataset.stat===stat){
-            if(bounds.min!==undefined && inp.dataset.bound==='min') inp.value=bounds.min;
-            if(bounds.max!==undefined && inp.dataset.bound==='max') inp.value=bounds.max;
-          }
+        document.querySelectorAll('.num-filter[data-stat="'+stat+'"]').forEach(function(inp){
+          if(bounds.min!==undefined && inp.dataset.bound==='min') inp.value=bounds.min;
+          if(bounds.max!==undefined && inp.dataset.bound==='max') inp.value=bounds.max;
         });
       });
     }
@@ -556,7 +555,7 @@ function encodeHashState(){
   if(activePresetBtn) parts.push('preset='+encodeURIComponent(activePresetBtn.dataset.preset));
   if(activeScope!=='all') parts.push('scope='+encodeURIComponent(activeScope));
   if(activeCreators.size>0) parts.push('creator='+encodeURIComponent(Array.from(activeCreators).join(',')));
-  numFilters.forEach(function(inp){
+  document.querySelectorAll('.num-filter').forEach(function(inp){
     if(inp.value==='') return;
     parts.push(inp.dataset.stat+'.'+inp.dataset.bound+'='+encodeURIComponent(inp.value));
   });
@@ -615,7 +614,7 @@ function buildRow(m, rank){
   return `<tr${rowClass} data-release="${esc(m.released||'')}" data-slug="${esc(m.slug||'')}">`+
     `<td class="num rnk" data-rank>${rank}</td>`+
     `<td class="cb-col"><input type="checkbox" class="compare-cb" data-model-row></td>`+
-    `<td class="l name-col" data-val="${esc(displayName.toLowerCase())}"><div class="cell-title">${esc(displayName)}</div><div class="cell-sub">${esc(m.slug||'')}</div></td>`+
+    `<td class="l name-col" title="${esc(displayName)}" data-val="${esc(displayName.toLowerCase())}"><span class="cell-title">${esc(displayName)}</span></td>`+
     `<td class="l" data-creator="${esc(m.creator||'')}" data-val="${esc((m.creator||'').toLowerCase())}"><span class="dot-badge" style="--dot-color:var(${dotFor(m.creator||'')})">${esc(m.creator||'')}</span></td>`+
     `<td class="num" data-t="d" data-val="${esc(m.released||'')}">${esc(m.released||'')}</td>`+
     cell('in_$/M', p.input)+

@@ -17,7 +17,7 @@
   --row-hover: rgba(217,119,87,0.06);
   --shadow-sm: 0 1px 2px rgba(24,24,27,0.04);
   --shadow-md: 0 1px 3px rgba(24,24,27,0.06), 0 4px 12px rgba(24,24,27,0.04);
-  --tooltip-bg: #18181B; --tooltip-fg: #ffffff;
+  --tooltip-bg: #FFFFFF; --tooltip-fg: #18181B;
   --green-bg: #e8f0e4; --green-dark: #3f6b35;
   --red-bg: #f8e8e4;   --red-dark: #a8492f;
   --yellow-bg: #f8f0dc; --yellow-dark: #a16207;

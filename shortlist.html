@@ -800,7 +800,7 @@ function buildRow(m, rank){
   return '<tr'+rowClass+' data-release="'+esc(m.released||'')+'" data-slug="'+esc(m.slug||'')+'">'+
     '<td class="num rnk" data-rank>'+rank+'</td>'+
     '<td class="cb-col"><input type="checkbox" class="compare-cb" data-model-row></td>'+
-    '<td class="l name-col" data-val="'+esc(displayName.toLowerCase())+'"><div class="cell-title">'+esc(displayName)+'</div><div class="cell-sub">'+esc(m.slug||'')+'</div></td>'+
+    '<td class="l name-col" title="'+esc(displayName)+'" data-val="'+esc(displayName.toLowerCase())+'"><span class="cell-title">'+esc(displayName)+'</span></td>'+
     '<td class="l" data-creator="'+esc(m.creator||'')+'" data-val="'+esc((m.creator||'').toLowerCase())+'"><span class="dot-badge" style="--dot-color:var('+dotFor(m.creator||'')+')">'+esc(m.creator||'')+'</span></td>'+
     '<td class="num" data-t="d" data-val="'+esc(m.released||'')+'">'+esc(m.released||'')+'</td>'+
     cell('in_$/M', p.input, fmtNum)+
