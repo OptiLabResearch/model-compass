@@ -13,36 +13,106 @@
 <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/style.css">
 <style>
-body{font-family:var(--sans);font-size:14px}
-header{padding:0 0 12px;border-bottom:1px solid var(--border);margin-bottom:12px}
-h1{font-family:var(--serif);font-size:22px;margin:0 0 4px;font-weight:600;letter-spacing:-0.2px}
-.meta{color:var(--text-muted);font-size:12px;margin-bottom:12px}
+body{font-family:var(--sans);color:var(--text);font-size:14px}
+header{padding:0 0 12px;border-bottom:1px solid var(--border);margin-bottom:16px}
+.header-top{display:flex;align-items:center;gap:10px;margin-bottom:6px;flex-wrap:wrap}
+h1{font-family:var(--serif);font-size:24px;margin:0;font-weight:600;letter-spacing:-0.2px}
+code,.num,td,th,input{font-family:var(--mono),var(--sans)}
+.model-count{background:var(--accent-bg);color:var(--accent);font-size:12px;font-weight:600;padding:3px 10px;border-radius:var(--r-pill)}
+.meta{color:var(--text-muted);font-size:12px;margin-bottom:12px;line-height:1.6}
+
 .top-filters{display:flex;gap:12px;flex-wrap:wrap;align-items:center;font-size:12px}
 .top-filters select{padding:8px 10px;font-size:13px;border:1px solid var(--border);border-radius:var(--r-sm);background:var(--surface);color:var(--text);font-family:inherit}
 .top-filters input[type=text]{width:220px}
 .top-filters input[type=date]{width:140px}
 .top-filters label{color:var(--text-secondary)}
+
+/* Presets */
+.presets{display:flex;gap:6px;flex-wrap:wrap;margin:10px 0 0}
+.preset-btn{padding:4px 12px;font-size:12px;font-weight:500;border:1px solid var(--border);border-radius:var(--r-pill);background:var(--surface);color:var(--text-secondary);cursor:pointer;transition:all .15s}
+.preset-btn:hover{border-color:var(--accent);color:var(--accent);background:var(--accent-bg)}
+.preset-btn.active{border-color:var(--accent);color:var(--accent-fg);background:var(--accent)}
+
+/* Creator filter pills */
+.creator-filters{display:flex;gap:6px;flex-wrap:wrap;margin:10px 0 0;align-items:center}
+.creator-filters-label{font-size:11px;color:var(--text-muted);font-weight:600;text-transform:uppercase;letter-spacing:0.5px;margin-right:4px}
+.creator-pill{padding:3px 10px;font-size:11px;font-weight:500;border:1px solid var(--border);border-radius:var(--r-pill);background:var(--surface);color:var(--text-secondary);cursor:pointer;transition:all .15s}
+.creator-pill:hover{border-color:var(--accent);color:var(--accent)}
+.creator-pill.active{border-color:var(--accent);color:var(--accent-fg);background:var(--accent)}
+.creator-pill.outside{border-color:var(--red-dark);color:var(--red-dark)}
+.creator-pill.outside.active{background:var(--red-dark);color:var(--accent-fg);border-color:var(--red-dark)}
+.creator-pill.inside{border-color:var(--green-dark);color:var(--green-dark)}
+.creator-pill.inside.active{background:var(--green-dark);color:var(--accent-fg);border-color:var(--green-dark)}
+
+/* Quick filter toggles */
+.quick-filters{display:flex;gap:6px;align-items:center;margin:8px 0 0}
+.quick-btn{padding:3px 10px;font-size:11px;font-weight:600;border-radius:var(--r-pill);background:var(--surface);cursor:pointer;transition:all .15s;border:1px solid var(--border)}
+.quick-btn:hover{opacity:0.8}
+.quick-btn.all{color:var(--text-secondary)}
+.quick-btn.all.active{background:var(--text-secondary);color:var(--accent-fg);border-color:var(--text-secondary)}
+.quick-btn.outside-h{color:var(--red-dark);border-color:var(--red-dark)}
+.quick-btn.outside-h.active{background:var(--red-dark);color:var(--accent-fg)}
+.quick-btn.inside-h{color:var(--green-dark);border-color:var(--green-dark)}
+.quick-btn.inside-h.active{background:var(--green-dark);color:var(--accent-fg)}
+
 .layout{display:flex;gap:16px;align-items:flex-start}
 aside.filters{flex:0 0 280px;position:sticky;top:calc(var(--nav-h) + 16px);border-radius:var(--r-lg);padding:20px;max-height:calc(100vh - var(--nav-h) - 32px);overflow-y:auto}
 aside.filters h2{font-size:14px;margin:0 0 10px;font-weight:600;display:flex;align-items:center;gap:6px}
+aside.filters h2 .btn-text{margin-left:auto;font-size:12px;font-weight:600;color:var(--accent);background:none;border:0;cursor:pointer;padding:0}
+.filter-count{background:var(--accent);color:var(--accent-fg);font-size:10px;font-weight:700;padding:1px 6px;border-radius:var(--r-pill);display:none}
+.filter-count.visible{display:inline}
 .filter-group{margin-bottom:14px;padding-bottom:10px;border-bottom:1px solid var(--border)}
 .filter-group:last-of-type{border-bottom:0;margin-bottom:10px}
 .filter-group h3{font-size:10px;text-transform:uppercase;color:var(--text-muted);margin:0 0 6px;letter-spacing:0.5px;font-weight:600}
-.filter-row{display:flex;align-items:center;gap:4px;margin-bottom:4px}
+.filter-row{display:flex;align-items:center;gap:4px;margin-bottom:4px;padding-left:8px}
 .filter-row label{flex:0 0 80px;font-size:12px;color:var(--text)}
+.filter-row.has-filter{border-left:2px solid var(--accent)}
 .filter-row input{width:62px;padding:3px 5px;font-size:12px;border-radius:3px;font-variant-numeric:tabular-nums}
 .filter-row .arrow{color:var(--text-muted);font-size:10px}
 #reset{width:100%;padding:7px;font-size:12px;background:var(--surface-2);border:1px solid var(--border);border-radius:var(--r-sm);cursor:pointer;color:var(--text)}
 #reset:hover{background:var(--accent-bg)}
 main{flex:1;min-width:0}
 table{border-collapse:separate;border-spacing:0;width:100%;background:var(--surface);font-size:12px}
-th,td{border-bottom:1px solid var(--border);padding:14px 12px;text-align:right;white-space:nowrap}
+th,td{padding:14px 12px;text-align:right;white-space:nowrap;border-bottom:1px solid var(--border)}
 th{font-weight:600;font-size:11px;text-transform:uppercase;letter-spacing:0.6px;color:var(--text-muted);cursor:pointer;user-select:none}
 th.l,td.l{text-align:left}
 tr:hover td{background:var(--row-hover)}
+tr:hover td.cb-col,tr:hover td.rnk,tr:hover td.name-col{background-color:var(--surface);background-image:linear-gradient(var(--row-hover),var(--row-hover))}
+tr:hover td:first-child{box-shadow:inset 3px 0 0 var(--accent)}
 .free td{background:var(--green-bg)}
 .free:hover td{background:var(--green-bg)!important;filter:brightness(0.96)}
 .num{font-variant-numeric:tabular-nums}
+
+/* Corner sticky cells */
+th.cb-col,td.cb-col{position:sticky;left:0;z-index:8;width:30px;padding:8px}
+th.cb-col{z-index:30;background:var(--surface)}
+td.cb-col{background:var(--surface)}
+th.rnk,td.rnk{position:sticky;left:30px;z-index:8;text-align:center;width:36px;font-weight:700;font-size:11px;color:var(--text-muted);padding:8px 6px}
+th.rnk{background:var(--surface);z-index:30;border-right:1px solid var(--border)}
+td.rnk{background:var(--surface);border-right:1px solid var(--border)}
+td.name-col{position:sticky;left:66px;z-index:8;background:var(--surface);border-right:1px solid var(--border);white-space:normal}
+th.name-col{position:sticky;left:66px;z-index:30;background:var(--surface);border-right:1px solid var(--border)}
+.cell-title{font-family:var(--sans);font-weight:600;color:var(--text)}
+.cell-sub{font-family:var(--mono);font-size:11px;color:var(--text-muted);margin-top:2px}
+.sort-arrow{font-size:10px;margin-left:3px;opacity:0.4}
+th.sorted .sort-arrow{opacity:1;color:var(--accent)}
+td.empty-data{opacity:0.25}
+.compare-cb{width:15px;height:15px;cursor:pointer;accent-color:var(--accent)}
+#compare-bar{display:none;align-items:center;gap:8px;margin:10px 0;padding:8px 12px;background:var(--accent-bg);border:1px solid var(--border-focus);border-radius:var(--r-sm);font-size:12px}
+#compare-bar.visible{display:flex}
+#compare-bar button{padding:4px 12px;font-size:11px;font-weight:600;border-radius:4px;border:1px solid var(--border);cursor:pointer;transition:all .15s}
+#cmp-go{background:var(--accent);color:var(--accent-fg);border-color:var(--accent)}
+#cmp-go:hover{background:var(--accent-hover)}
+#cmp-clear{background:var(--surface);color:var(--text-secondary)}
+#cmp-clear:hover{background:var(--surface-2)}
+#cmp-count{color:var(--accent);font-weight:600}
+
+/* Tooltip container */
+#tip{position:fixed;background:var(--tooltip-bg);color:var(--tooltip-fg);font-size:11px;font-weight:400;
+  padding:8px 10px;border-radius:6px;line-height:1.5;pointer-events:none;
+  white-space:normal;width:280px;box-shadow:var(--shadow-md);z-index:9999;
+  display:none}
+
 @media (max-width:800px){
   .layout{flex-direction:column}
   aside.filters{position:static;flex:1 1 auto;width:100%;max-height:none}
@@ -57,9 +127,13 @@ tr:hover td{background:var(--row-hover)}
 <script src="assets/nav.js"></script>
 <div class="page">
 <header>
-  <h1>All Models — last 6 months, full benchmarks</h1>
+  <div class="header-top">
+    <h1>All Models</h1>
+    <span class="model-count" id="model-count">— models</span>
+  </div>
   <div id="staleness-banner" class="staleness-banner" hidden style="margin-bottom:12px">⚠️ <span id="staleness-text"></span></div>
   <div class="meta" id="meta-line" data-scraped-at="">Loading…</div>
+
   <div class="top-filters">
     <div class="search-wrap"><span class="icon">🔍</span><input id="q" type="text" placeholder="Search name, creator, slug…"></div>
     <label>From <input id="from" type="date"></label>
@@ -67,64 +141,181 @@ tr:hover td{background:var(--row-hover)}
     <label><input id="free" type="checkbox"> Available via OpenRouter only</label>
     <span id="count" style="color:var(--text-muted)"></span>
   </div>
+
+  <!-- Access Quick Filters -->
+  <div class="quick-filters">
+    <span class="creator-filters-label">Access:</span>
+    <button class="quick-btn all active" data-scope="all">All</button>
+    <button class="quick-btn outside-h" data-scope="outside">Outside</button>
+    <button class="quick-btn inside-h" data-scope="inside">Inside</button>
+  </div>
+
+  <!-- Creator Filter Pills -->
+  <div class="creator-filters">
+    <span class="creator-filters-label">Creator:</span>
+    <button class="creator-pill active" data-creator="all">All</button>
+    <button class="creator-pill" data-creator="Alibaba">Alibaba</button>
+    <button class="creator-pill" data-creator="Anthropic">Anthropic</button>
+    <button class="creator-pill" data-creator="DeepSeek">DeepSeek</button>
+    <button class="creator-pill" data-creator="Google">Google</button>
+    <button class="creator-pill" data-creator="Kimi">Kimi</button>
+    <button class="creator-pill" data-creator="MiniMax">MiniMax</button>
+    <button class="creator-pill" data-creator="OpenAI">OpenAI</button>
+    <button class="creator-pill" data-creator="Xiaomi">Xiaomi</button>
+    <button class="creator-pill" data-creator="Z AI">Z AI</button>
+    <button class="creator-pill" data-creator="xAI">xAI</button>
+  </div>
+
+  <!-- Presets -->
+  <div class="presets">
+    <button class="preset-btn" data-preset="best-overall">🏆 Best Overall</button>
+    <button class="preset-btn" data-preset="best-value">💰 Best Value</button>
+    <button class="preset-btn" data-preset="coding">💻 Coding</button>
+    <button class="preset-btn" data-preset="reasoning">🧠 Reasoning</button>
+    <button class="preset-btn" data-preset="cheapest">💸 Cheapest</button>
+    <button class="preset-btn" data-preset="agentic">🤖 Agentic</button>
+  </div>
 </header>
 <div class="layout">
   <aside class="filters card">
-    <h2>Filters</h2>
+    <h2>Filters <span class="filter-count" id="filter-count-badge">0</span><button class="btn-text" id="reset">Reset</button></h2>
     <div class="filter-group"><h3>Cost ($/M tokens)</h3>
-      <div class="filter-row"><label>Input</label><input type="number" class="num-filter" data-stat="in_$/M" data-bound="min" placeholder="min" step="any"><span class="arrow">→</span><input type="number" class="num-filter" data-stat="in_$/M" data-bound="max" placeholder="max" step="any"></div>
-      <div class="filter-row"><label>Output</label><input type="number" class="num-filter" data-stat="out_$/M" data-bound="min" placeholder="min" step="any"><span class="arrow">→</span><input type="number" class="num-filter" data-stat="out_$/M" data-bound="max" placeholder="max" step="any"></div>
-      <div class="filter-row"><label>Blended</label><input type="number" class="num-filter" data-stat="blend_3to1_$/M" data-bound="min" placeholder="min" step="any"><span class="arrow">→</span><input type="number" class="num-filter" data-stat="blend_3to1_$/M" data-bound="max" placeholder="max" step="any"></div>
+      <div class="filter-row" data-stat="in_$/M"><label>Input</label><input type="number" class="num-filter" data-stat="in_$/M" data-bound="min" placeholder="min" step="any"><span class="arrow">→</span><input type="number" class="num-filter" data-stat="in_$/M" data-bound="max" placeholder="max" step="any"></div>
+      <div class="filter-row" data-stat="out_$/M"><label>Output</label><input type="number" class="num-filter" data-stat="out_$/M" data-bound="min" placeholder="min" step="any"><span class="arrow">→</span><input type="number" class="num-filter" data-stat="out_$/M" data-bound="max" placeholder="max" step="any"></div>
+      <div class="filter-row" data-stat="blend_3to1_$/M"><label>Blended</label><input type="number" class="num-filter" data-stat="blend_3to1_$/M" data-bound="min" placeholder="min" step="any"><span class="arrow">→</span><input type="number" class="num-filter" data-stat="blend_3to1_$/M" data-bound="max" placeholder="max" step="any"></div>
     </div>
     <div class="filter-group"><h3>Composite (0-100)</h3>
-      <div class="filter-row"><label>Intelligence</label><input type="number" class="num-filter" data-stat="intelligence" data-bound="min" placeholder="min" step="any"><span class="arrow">→</span><input type="number" class="num-filter" data-stat="intelligence" data-bound="max" placeholder="max" step="any"></div>
-      <div class="filter-row"><label>Coding</label><input type="number" class="num-filter" data-stat="coding" data-bound="min" placeholder="min" step="any"><span class="arrow">→</span><input type="number" class="num-filter" data-stat="coding" data-bound="max" placeholder="max" step="any"></div>
-      <div class="filter-row"><label>Agentic</label><input type="number" class="num-filter" data-stat="agentic" data-bound="min" placeholder="min" step="any"><span class="arrow">→</span><input type="number" class="num-filter" data-stat="agentic" data-bound="max" placeholder="max" step="any"></div>
-      <div class="filter-row"><label>Omniscience</label><input type="number" class="num-filter" data-stat="omniscience" data-bound="min" placeholder="min" step="any"><span class="arrow">→</span><input type="number" class="num-filter" data-stat="omniscience" data-bound="max" placeholder="max" step="any"></div>
+      <div class="filter-row" data-stat="intelligence"><label>Intelligence</label><input type="number" class="num-filter" data-stat="intelligence" data-bound="min" placeholder="min" step="any"><span class="arrow">→</span><input type="number" class="num-filter" data-stat="intelligence" data-bound="max" placeholder="max" step="any"></div>
+      <div class="filter-row" data-stat="coding"><label>Coding</label><input type="number" class="num-filter" data-stat="coding" data-bound="min" placeholder="min" step="any"><span class="arrow">→</span><input type="number" class="num-filter" data-stat="coding" data-bound="max" placeholder="max" step="any"></div>
+      <div class="filter-row" data-stat="agentic"><label>Agentic</label><input type="number" class="num-filter" data-stat="agentic" data-bound="min" placeholder="min" step="any"><span class="arrow">→</span><input type="number" class="num-filter" data-stat="agentic" data-bound="max" placeholder="max" step="any"></div>
+      <div class="filter-row" data-stat="omniscience"><label>Omniscience</label><input type="number" class="num-filter" data-stat="omniscience" data-bound="min" placeholder="min" step="any"><span class="arrow">→</span><input type="number" class="num-filter" data-stat="omniscience" data-bound="max" placeholder="max" step="any"></div>
     </div>
     <div class="filter-group"><h3>Reasoning / Science</h3>
-      <div class="filter-row"><label>GPQA %</label><input type="number" class="num-filter" data-stat="gpqa_%" data-bound="min" placeholder="min" step="any"><span class="arrow">→</span><input type="number" class="num-filter" data-stat="gpqa_%" data-bound="max" placeholder="max" step="any"></div>
-      <div class="filter-row"><label>HLE %</label><input type="number" class="num-filter" data-stat="hle_%" data-bound="min" placeholder="min" step="any"><span class="arrow">→</span><input type="number" class="num-filter" data-stat="hle_%" data-bound="max" placeholder="max" step="any"></div>
-      <div class="filter-row"><label>CritPt %</label><input type="number" class="num-filter" data-stat="critpt_%" data-bound="min" placeholder="min" step="any"><span class="arrow">→</span><input type="number" class="num-filter" data-stat="critpt_%" data-bound="max" placeholder="max" step="any"></div>
+      <div class="filter-row" data-stat="gpqa_%"><label>GPQA %</label><input type="number" class="num-filter" data-stat="gpqa_%" data-bound="min" placeholder="min" step="any"><span class="arrow">→</span><input type="number" class="num-filter" data-stat="gpqa_%" data-bound="max" placeholder="max" step="any"></div>
+      <div class="filter-row" data-stat="hle_%"><label>HLE %</label><input type="number" class="num-filter" data-stat="hle_%" data-bound="min" placeholder="min" step="any"><span class="arrow">→</span><input type="number" class="num-filter" data-stat="hle_%" data-bound="max" placeholder="max" step="any"></div>
+      <div class="filter-row" data-stat="critpt_%"><label>CritPt %</label><input type="number" class="num-filter" data-stat="critpt_%" data-bound="min" placeholder="min" step="any"><span class="arrow">→</span><input type="number" class="num-filter" data-stat="critpt_%" data-bound="max" placeholder="max" step="any"></div>
     </div>
     <div class="filter-group"><h3>Reliability</h3>
-      <div class="filter-row"><label>Non-hallucination %</label><input type="number" class="num-filter" data-stat="non_halluc_%" data-bound="min" placeholder="min" step="any"><span class="arrow">→</span><input type="number" class="num-filter" data-stat="non_halluc_%" data-bound="max" placeholder="max" step="any"></div>
-      <div class="filter-row"><label>IFBench %</label><input type="number" class="num-filter" data-stat="ifbench_%" data-bound="min" placeholder="min" step="any"><span class="arrow">→</span><input type="number" class="num-filter" data-stat="ifbench_%" data-bound="max" placeholder="max" step="any"></div>
+      <div class="filter-row" data-stat="non_halluc_%"><label>Non-hallucination %</label><input type="number" class="num-filter" data-stat="non_halluc_%" data-bound="min" placeholder="min" step="any"><span class="arrow">→</span><input type="number" class="num-filter" data-stat="non_halluc_%" data-bound="max" placeholder="max" step="any"></div>
+      <div class="filter-row" data-stat="ifbench_%"><label>IFBench %</label><input type="number" class="num-filter" data-stat="ifbench_%" data-bound="min" placeholder="min" step="any"><span class="arrow">→</span><input type="number" class="num-filter" data-stat="ifbench_%" data-bound="max" placeholder="max" step="any"></div>
     </div>
     <div class="filter-group"><h3>Agentic / Long-context</h3>
-      <div class="filter-row"><label>LCR %</label><input type="number" class="num-filter" data-stat="lcr_%" data-bound="min" placeholder="min" step="any"><span class="arrow">→</span><input type="number" class="num-filter" data-stat="lcr_%" data-bound="max" placeholder="max" step="any"></div>
-      <div class="filter-row"><label>τ²-Bench %</label><input type="number" class="num-filter" data-stat="tau2_%" data-bound="min" placeholder="min" step="any"><span class="arrow">→</span><input type="number" class="num-filter" data-stat="tau2_%" data-bound="max" placeholder="max" step="any"></div>
-      <div class="filter-row"><label>τ³-Bench Banking % (v4.1)</label><input type="number" class="num-filter" data-stat="tau_banking_%" data-bound="min" placeholder="min" step="any"><span class="arrow">→</span><input type="number" class="num-filter" data-stat="tau_banking_%" data-bound="max" placeholder="max" step="any"></div>
-      <div class="filter-row"><label>GDPval %</label><input type="number" class="num-filter" data-stat="gdpval_%" data-bound="min" placeholder="min" step="any"><span class="arrow">→</span><input type="number" class="num-filter" data-stat="gdpval_%" data-bound="max" placeholder="max" step="any"></div>
+      <div class="filter-row" data-stat="lcr_%"><label>LCR %</label><input type="number" class="num-filter" data-stat="lcr_%" data-bound="min" placeholder="min" step="any"><span class="arrow">→</span><input type="number" class="num-filter" data-stat="lcr_%" data-bound="max" placeholder="max" step="any"></div>
+      <div class="filter-row" data-stat="tau2_%"><label>τ²-Bench %</label><input type="number" class="num-filter" data-stat="tau2_%" data-bound="min" placeholder="min" step="any"><span class="arrow">→</span><input type="number" class="num-filter" data-stat="tau2_%" data-bound="max" placeholder="max" step="any"></div>
+      <div class="filter-row" data-stat="tau_banking_%"><label>τ³-Bench Banking % (v4.1)</label><input type="number" class="num-filter" data-stat="tau_banking_%" data-bound="min" placeholder="min" step="any"><span class="arrow">→</span><input type="number" class="num-filter" data-stat="tau_banking_%" data-bound="max" placeholder="max" step="any"></div>
+      <div class="filter-row" data-stat="gdpval_%"><label>GDPval %</label><input type="number" class="num-filter" data-stat="gdpval_%" data-bound="min" placeholder="min" step="any"><span class="arrow">→</span><input type="number" class="num-filter" data-stat="gdpval_%" data-bound="max" placeholder="max" step="any"></div>
     </div>
     <div class="filter-group"><h3>Coding benchmarks</h3>
-      <div class="filter-row"><label>Terminal-Bench Hard %</label><input type="number" class="num-filter" data-stat="terminalbench_hard_%" data-bound="min" placeholder="min" step="any"><span class="arrow">→</span><input type="number" class="num-filter" data-stat="terminalbench_hard_%" data-bound="max" placeholder="max" step="any"></div>
-      <div class="filter-row"><label>Terminal-Bench 2.1 % (v4.1)</label><input type="number" class="num-filter" data-stat="terminalbench_v2_1_%" data-bound="min" placeholder="min" step="any"><span class="arrow">→</span><input type="number" class="num-filter" data-stat="terminalbench_v2_1_%" data-bound="max" placeholder="max" step="any"></div>
-      <div class="filter-row"><label>SciCode %</label><input type="number" class="num-filter" data-stat="scicode_%" data-bound="min" placeholder="min" step="any"><span class="arrow">→</span><input type="number" class="num-filter" data-stat="scicode_%" data-bound="max" placeholder="max" step="any"></div>
+      <div class="filter-row" data-stat="terminalbench_hard_%"><label>Terminal-Bench Hard %</label><input type="number" class="num-filter" data-stat="terminalbench_hard_%" data-bound="min" placeholder="min" step="any"><span class="arrow">→</span><input type="number" class="num-filter" data-stat="terminalbench_hard_%" data-bound="max" placeholder="max" step="any"></div>
+      <div class="filter-row" data-stat="terminalbench_v2_1_%"><label>Terminal-Bench 2.1 % (v4.1)</label><input type="number" class="num-filter" data-stat="terminalbench_v2_1_%" data-bound="min" placeholder="min" step="any"><span class="arrow">→</span><input type="number" class="num-filter" data-stat="terminalbench_v2_1_%" data-bound="max" placeholder="max" step="any"></div>
+      <div class="filter-row" data-stat="scicode_%"><label>SciCode %</label><input type="number" class="num-filter" data-stat="scicode_%" data-bound="min" placeholder="min" step="any"><span class="arrow">→</span><input type="number" class="num-filter" data-stat="scicode_%" data-bound="max" placeholder="max" step="any"></div>
     </div>
     <div class="filter-group"><h3>Vision</h3>
-      <div class="filter-row"><label>MMMU-Pro %</label><input type="number" class="num-filter" data-stat="mmmu_pro_%" data-bound="min" placeholder="min" step="any"><span class="arrow">→</span><input type="number" class="num-filter" data-stat="mmmu_pro_%" data-bound="max" placeholder="max" step="any"></div>
+      <div class="filter-row" data-stat="mmmu_pro_%"><label>MMMU-Pro %</label><input type="number" class="num-filter" data-stat="mmmu_pro_%" data-bound="min" placeholder="min" step="any"><span class="arrow">→</span><input type="number" class="num-filter" data-stat="mmmu_pro_%" data-bound="max" placeholder="max" step="any"></div>
     </div>
     <div class="filter-group"><h3>Performance</h3>
-      <div class="filter-row"><label>Speed t/s</label><input type="number" class="num-filter" data-stat="speed_tps" data-bound="min" placeholder="min" step="any"><span class="arrow">→</span><input type="number" class="num-filter" data-stat="speed_tps" data-bound="max" placeholder="max" step="any"></div>
-      <div class="filter-row"><label>TTFT s</label><input type="number" class="num-filter" data-stat="ttft_s" data-bound="min" placeholder="min" step="any"><span class="arrow">→</span><input type="number" class="num-filter" data-stat="ttft_s" data-bound="max" placeholder="max" step="any"></div>
-      <div class="filter-row"><label>TTFA s</label><input type="number" class="num-filter" data-stat="ttfa_s" data-bound="min" placeholder="min" step="any"><span class="arrow">→</span><input type="number" class="num-filter" data-stat="ttfa_s" data-bound="max" placeholder="max" step="any"></div>
+      <div class="filter-row" data-stat="speed_tps"><label>Speed t/s</label><input type="number" class="num-filter" data-stat="speed_tps" data-bound="min" placeholder="min" step="any"><span class="arrow">→</span><input type="number" class="num-filter" data-stat="speed_tps" data-bound="max" placeholder="max" step="any"></div>
+      <div class="filter-row" data-stat="ttft_s"><label>TTFT s</label><input type="number" class="num-filter" data-stat="ttft_s" data-bound="min" placeholder="min" step="any"><span class="arrow">→</span><input type="number" class="num-filter" data-stat="ttft_s" data-bound="max" placeholder="max" step="any"></div>
+      <div class="filter-row" data-stat="ttfa_s"><label>TTFA s</label><input type="number" class="num-filter" data-stat="ttfa_s" data-bound="min" placeholder="min" step="any"><span class="arrow">→</span><input type="number" class="num-filter" data-stat="ttfa_s" data-bound="max" placeholder="max" step="any"></div>
     </div>
-    <button id="reset">Reset range filters</button>
+    <div id="compare-bar">
+      <span id="cmp-count">0</span> selected
+      <button id="cmp-go">Compare</button>
+      <button id="cmp-clear">Show All</button>
+    </div>
   </aside>
   <main>
+<div class="table-caption"><span class="count" id="table-count"><strong id="table-count-n">0</strong> models</span><span class="sort-state" id="table-sort-state">Sorted: <b>—</b></span></div>
 <div class="card table-card"><div class="scroll">
-<table id="t"><thead><tr><th class="l" data-i="0" data-t="s">name</th><th class="l" data-i="1" data-t="s">creator</th><th data-i="2" data-t="d">release_date</th><th data-i="3" data-t="n">in_$/M</th><th data-i="4" data-t="n">out_$/M</th><th data-i="5" data-t="n">blend_3to1_$/M</th><th data-i="6" data-t="n">intelligence</th><th data-i="7" data-t="n">coding</th><th data-i="8" data-t="n">agentic</th><th data-i="9" data-t="n">omniscience</th><th data-i="10" data-t="n">gpqa_%</th><th data-i="11" data-t="n">hle_%</th><th data-i="12" data-t="n">critpt_%</th><th data-i="13" data-t="n">non_halluc_%</th><th data-i="14" data-t="n">ifbench_%</th><th data-i="15" data-t="n">lcr_%</th><th data-i="16" data-t="n">tau2_%</th><th data-i="17" data-t="n">tau_banking_%</th><th data-i="18" data-t="n">gdpval_%</th><th data-i="19" data-t="n">terminalbench_hard_%</th><th data-i="20" data-t="n">terminalbench_v2_1_%</th><th data-i="21" data-t="n">scicode_%</th><th data-i="22" data-t="n">mmmu_pro_%</th><th data-i="23" data-t="n">speed_tps</th><th data-i="24" data-t="n">ttft_s</th><th data-i="25" data-t="n">ttfa_s</th><th class="l" data-i="26" data-t="s">slug</th></tr></thead><tbody></tbody></table>
+<table id="t"><thead><tr>
+  <th class="l rnk" data-i="0" data-t="n">#</th>
+  <th class="cb-col"><input type="checkbox" id="check-all" class="compare-cb" title="Select all"></th>
+  <th class="l name-col" data-i="1" data-t="s" title="model">Name</th>
+  <th class="l" data-i="2" data-t="s" title="creator">Creator</th>
+  <th data-i="3" data-t="d" title="release_date">Released</th>
+  <th data-i="4" data-t="n" title="in_$/M">In $/M</th>
+  <th data-i="5" data-t="n" title="out_$/M">Out $/M</th>
+  <th data-i="6" data-t="n" title="blend_3to1_$/M" data-tip="Blended cost = input × 0.75 + output × 0.25 per million tokens.">Blended</th>
+  <th data-i="7" data-t="n" title="intelligence" data-tip="Composite intelligence score averaging GPQA, HLE, and IFBench results.">Intelligence</th>
+  <th data-i="8" data-t="n" title="coding" data-tip="Average of SciCode + TerminalBench. Measures ability to write correct code.">Coding</th>
+  <th data-i="9" data-t="n" title="agentic" data-tip="Average of τ²-Bench + LCR + GDPval. Key metric for tool use and workflow automation.">Agentic</th>
+  <th data-i="10" data-t="n" title="omniscience">Omniscience</th>
+  <th data-i="11" data-t="n" title="gpqa_%">GPQA %</th>
+  <th data-i="12" data-t="n" title="hle_%">HLE %</th>
+  <th data-i="13" data-t="n" title="critpt_%">CritPt %</th>
+  <th data-i="14" data-t="n" title="non_halluc_%">Non-halluc %</th>
+  <th data-i="15" data-t="n" title="ifbench_%">IFBench %</th>
+  <th data-i="16" data-t="n" title="lcr_%">LCR %</th>
+  <th data-i="17" data-t="n" title="tau2_%">τ²-Bench %</th>
+  <th data-i="18" data-t="n" title="tau_banking_%">τ³-Banking %</th>
+  <th data-i="19" data-t="n" title="gdpval_%">GDPval %</th>
+  <th data-i="20" data-t="n" title="terminalbench_hard_%">TermBench H%</th>
+  <th data-i="21" data-t="n" title="terminalbench_v2_1_%">TermBench 2.1%</th>
+  <th data-i="22" data-t="n" title="scicode_%">SciCode %</th>
+  <th data-i="23" data-t="n" title="mmmu_pro_%">MMMU-Pro %</th>
+  <th data-i="24" data-t="n" title="speed_tps">Spd t/s</th>
+  <th data-i="25" data-t="n" title="ttft_s">TTFT s</th>
+  <th data-i="26" data-t="n" title="ttfa_s">TTFA s</th>
+  <th class="l" data-i="27" data-t="s" title="slug">Slug</th>
+</tr></thead><tbody></tbody></table>
 </div></div>
 </main>
 </div>
+
+<div id="tip"></div>
+</div><!-- /.page -->
+
 <script>
+/* Tooltip */
+var tipEl=document.getElementById('tip');
+document.querySelectorAll('th[data-tip]').forEach(function(th){
+  th.addEventListener('mouseenter',function(e){
+    tipEl.textContent=th.dataset.tip;
+    tipEl.style.display='block';
+    var r=th.getBoundingClientRect();
+    tipEl.style.left=Math.max(8,Math.min(r.left+r.width/2-140,window.innerWidth-296))+'px';
+    tipEl.style.top=(r.top-tipEl.offsetHeight-8)+'px';
+  });
+  th.addEventListener('mouseleave',function(){tipEl.style.display='none'});
+});
+
 const tbody=document.querySelector('#t tbody');
 const q=document.getElementById('q'), fromI=document.getElementById('from'),
       toI=document.getElementById('to'), freeI=document.getElementById('free'),
       cnt=document.getElementById('count'),
       numFilters=document.querySelectorAll('.num-filter');
+const filterCountBadge=document.getElementById('filter-count-badge');
+const filterRows=document.querySelectorAll('.filter-row[data-stat]');
+
 let sortI=null, sortAsc=true;
+
+var outsideCreators=['OpenAI','Anthropic','Google'];
+var activeCreators=new Set();
+var activeScope='all';
+
+/* Compare mode */
+var cmpBar=document.getElementById('compare-bar'),
+    cmpCount=document.getElementById('cmp-count'),
+    cmpGo=document.getElementById('cmp-go'),
+    cmpClear=document.getElementById('cmp-clear'),
+    checkAll=document.getElementById('check-all');
+var cmpActive=false;
+
+function updateRanks(){
+  var rank=0;
+  tbody.querySelectorAll('tr').forEach(function(r){
+    if(r.style.display==='none') return;
+    rank++;
+    var cell=r.querySelector('td.rnk');
+    if(cell) cell.textContent=rank;
+  });
+}
+
+function updateCmpCount(){
+  var n=tbody.querySelectorAll('input.compare-cb:checked').length;
+  cmpCount.textContent=n;
+  cmpBar.classList.toggle('visible',n>0);
+}
 
 function getRanges(){
   const r={};
@@ -136,20 +327,56 @@ function getRanges(){
   return r;
 }
 
+function updateActiveFilterUI(){
+  var ranges=getRanges();
+  var activeStats=Object.keys(ranges);
+  filterRows.forEach(function(fr){
+    fr.classList.toggle('has-filter', activeStats.indexOf(fr.dataset.stat)!==-1);
+  });
+  filterCountBadge.textContent=activeStats.length;
+  filterCountBadge.classList.toggle('visible',activeStats.length>0);
+}
+
 function applyFilter(){
   const Q=q.value.toLowerCase(), from=fromI.value, to=toI.value, free=freeI.checked;
   const ranges=getRanges();
   let n=0;
+
   tbody.querySelectorAll('tr').forEach(r=>{
+    if(cmpActive){
+      var cb=r.querySelector('input.compare-cb');
+      r.style.display=(cb&&cb.checked)?'':'none';
+      if(r.style.display!=='none') n++;
+      return;
+    }
+
     const txt=r.innerText.toLowerCase();
     const d=r.dataset.release||'';
     let show=txt.includes(Q) && (!from||d>=from) && (!to||d<=to);
     if(free && !r.classList.contains('free')) show=false;
+
+    /* Creator filter */
+    if(show && activeCreators.size>0){
+      var creatorCell=r.querySelector('td[data-creator]');
+      if(!creatorCell || !activeCreators.has(creatorCell.dataset.creator)) show=false;
+    }
+
+    /* Scope filter (outside/inside) */
+    if(show && activeScope!=='all'){
+      var creatorCell2=r.querySelector('td[data-creator]');
+      var creator=creatorCell2?creatorCell2.dataset.creator:'';
+      var isOutside=outsideCreators.indexOf(creator)!==-1;
+      if(activeScope==='outside' && !isOutside) show=false;
+      if(activeScope==='inside' && isOutside) show=false;
+    }
+
     if(show){
       for(const[stat,bounds]of Object.entries(ranges)){
         const cell=r.querySelector(`td[data-stat="${stat}"]`);
         if(!cell){show=false;break;}
-        const v=parseFloat(cell.dataset.val);
+        const raw=cell.dataset.val;
+        if(raw==='' || raw==='—' || raw===undefined){show=false;break;}
+        const v=parseFloat(raw);
         if(isNaN(v)){show=false;break;}
         if(bounds.min!==undefined && v<bounds.min){show=false;break;}
         if(bounds.max!==undefined && v>bounds.max){show=false;break;}
@@ -158,7 +385,13 @@ function applyFilter(){
     r.style.display=show?'':'none';
     if(show) n++;
   });
+
   cnt.textContent=`${n} of ${tbody.rows.length} rows`;
+  var tableCountN=document.getElementById('table-count-n');
+  if(tableCountN) tableCountN.textContent=n;
+  updateRanks();
+  updateActiveFilterUI();
+  updateHash();
 }
 
 [q,fromI,toI,freeI].forEach(el=>el.addEventListener('input',applyFilter));
@@ -166,25 +399,175 @@ numFilters.forEach(el=>el.addEventListener('input',applyFilter));
 
 document.getElementById('reset').addEventListener('click',()=>{
   numFilters.forEach(i=>i.value='');
+  activeCreators.clear();
+  activeScope='all';
+  document.querySelectorAll('.creator-pill').forEach(function(b){b.classList.remove('active')});
+  document.querySelector('.creator-pill[data-creator="all"]').classList.add('active');
+  document.querySelectorAll('.quick-btn').forEach(function(b){b.classList.remove('active')});
+  document.querySelector('.quick-btn[data-scope="all"]').classList.add('active');
+  document.querySelectorAll('.preset-btn').forEach(function(b){b.classList.remove('active')});
   applyFilter();
 });
 
+/* Creator pills - multi-select */
+document.querySelectorAll('.creator-pill').forEach(function(pill){
+  pill.addEventListener('click',function(){
+    var c=pill.dataset.creator;
+    if(c==='all'){
+      activeCreators.clear();
+      document.querySelectorAll('.creator-pill').forEach(function(b){b.classList.remove('active')});
+      pill.classList.add('active');
+    } else {
+      document.querySelector('.creator-pill[data-creator="all"]').classList.remove('active');
+      if(activeCreators.has(c)){
+        activeCreators.delete(c);
+        pill.classList.remove('active');
+      } else {
+        activeCreators.add(c);
+        pill.classList.add('active');
+      }
+      if(activeCreators.size===0){
+        document.querySelector('.creator-pill[data-creator="all"]').classList.add('active');
+      }
+    }
+    activeScope='all';
+    document.querySelectorAll('.quick-btn').forEach(function(b){b.classList.remove('active')});
+    document.querySelector('.quick-btn[data-scope="all"]').classList.add('active');
+    applyFilter();
+  });
+});
+
+/* Quick scope filters */
+document.querySelectorAll('.quick-btn').forEach(function(btn){
+  btn.addEventListener('click',function(){
+    activeScope=btn.dataset.scope;
+    document.querySelectorAll('.quick-btn').forEach(function(b){b.classList.remove('active')});
+    btn.classList.add('active');
+    activeCreators.clear();
+    document.querySelectorAll('.creator-pill').forEach(function(b){b.classList.remove('active')});
+    document.querySelector('.creator-pill[data-creator="all"]').classList.add('active');
+    applyFilter();
+  });
+});
+
+/* Presets */
+var presetConfigs=[
+  {id:'best-overall',filters:{intelligence:{min:50}}},
+  {id:'best-value',filters:{'blend_3to1_$/M':{max:1},intelligence:{min:45}}},
+  {id:'coding',filters:{coding:{min:45}}},
+  {id:'reasoning',filters:{intelligence:{min:50},'gpqa_%':{min:90}}},
+  {id:'cheapest',filters:{'blend_3to1_$/M':{max:0.6}}},
+  {id:'agentic',filters:{agentic:{min:40}}}
+];
+
+document.querySelectorAll('.preset-btn').forEach(function(btn){
+  btn.addEventListener('click',function(){
+    var pid=btn.dataset.preset;
+    if(btn.classList.contains('active')){
+      btn.classList.remove('active');
+      numFilters.forEach(function(i){i.value=''});
+      applyFilter();
+      return;
+    }
+    document.querySelectorAll('.preset-btn').forEach(function(b){b.classList.remove('active')});
+    btn.classList.add('active');
+    numFilters.forEach(function(i){i.value=''});
+    q.value='';
+    var cfg=presetConfigs.find(function(p){return p.id===pid});
+    if(cfg){
+      var stats=Object.keys(cfg.filters);
+      stats.forEach(function(stat){
+        var bounds=cfg.filters[stat];
+        numFilters.forEach(function(inp){
+          if(inp.dataset.stat===stat){
+            if(bounds.min!==undefined && inp.dataset.bound==='min') inp.value=bounds.min;
+            if(bounds.max!==undefined && inp.dataset.bound==='max') inp.value=bounds.max;
+          }
+        });
+      });
+    }
+    applyFilter();
+  });
+});
+
+/* Compare actions */
+cmpGo.addEventListener('click',function(){
+  cmpActive=true;
+  applyFilter();
+});
+
+cmpClear.addEventListener('click',function(){
+  cmpActive=false;
+  tbody.querySelectorAll('input.compare-cb').forEach(function(c){c.checked=false});
+  if(checkAll) checkAll.checked=false;
+  updateCmpCount();
+  applyFilter();
+});
+
+/* Sorting */
 document.querySelectorAll('th').forEach(th=>{
+  if(th.dataset.i === undefined || th.dataset.i === null) return;
   th.addEventListener('click',()=>{
-    const i=+th.dataset.i, t=th.dataset.t;
-    if(sortI===i) sortAsc=!sortAsc; else {sortI=i;sortAsc=true;}
+    const i=+th.dataset.i + 1, t=th.dataset.t; // +1 offset for checkbox column
+    if(sortI===i) sortAsc=!sortAsc; else {sortI=i;sortAsc=(t==='s'); if(t==='d') sortAsc=false;}
     const rows=Array.from(tbody.rows);
     rows.sort((a,b)=>{
-      let av=a.cells[i].dataset.val||'', bv=b.cells[i].dataset.val||'';
+      let av=a.cells[i].dataset.val||a.cells[i].textContent||'',
+          bv=b.cells[i].dataset.val||b.cells[i].textContent||'';
       if(t==='n') {av=parseFloat(av); bv=parseFloat(bv);
         return (isNaN(av)?-Infinity:av)-(isNaN(bv)?-Infinity:bv);}
-      if(t==='d') return av< bv ? -1 : av> bv ? 1 : 0;
+      if(t==='d'){
+        var ad=Date.parse(av), bd=Date.parse(bv);
+        if(!isNaN(ad)&&!isNaN(bd)) return ad-bd;
+        return av<bv?-1:av>bv?1:0;
+      }
       return av.localeCompare(bv);
     });
     if(!sortAsc) rows.reverse();
     rows.forEach(r=>tbody.appendChild(r));
+
+    document.querySelectorAll('th').forEach(function(h){
+      h.classList.remove('sorted');
+      var arrow=h.querySelector('.sort-arrow');
+      if(arrow) arrow.remove();
+    });
+    th.classList.add('sorted');
+    var sortStateEl=document.getElementById('table-sort-state');
+    if(sortStateEl){
+      sortStateEl.textContent='';
+      sortStateEl.appendChild(document.createTextNode('Sorted: '));
+      var b=document.createElement('b');
+      b.textContent=th.textContent.trim();
+      sortStateEl.appendChild(b);
+      sortStateEl.appendChild(document.createTextNode(' '+(sortAsc?'↑':'↓')));
+    }
+    var arrow=document.createElement('span');
+    arrow.className='sort-arrow';
+    arrow.textContent=sortAsc?' ↑':' ↓';
+    th.appendChild(arrow);
+    applyFilter();
   });
 });
+
+/* Hash state */
+function encodeHashState(){
+  var parts=[];
+  var activePresetBtn=document.querySelector('.preset-btn.active');
+  if(activePresetBtn) parts.push('preset='+encodeURIComponent(activePresetBtn.dataset.preset));
+  if(activeScope!=='all') parts.push('scope='+encodeURIComponent(activeScope));
+  if(activeCreators.size>0) parts.push('creator='+encodeURIComponent(Array.from(activeCreators).join(',')));
+  numFilters.forEach(function(inp){
+    if(inp.value==='') return;
+    parts.push(inp.dataset.stat+'.'+inp.dataset.bound+'='+encodeURIComponent(inp.value));
+  });
+  return parts.join('&');
+}
+
+function updateHash(){
+  var h=encodeHashState();
+  history.replaceState(null,'',h?('#'+h):(location.pathname+location.search));
+}
+
 function fmt(v){ return (v===null||v===undefined) ? '' : v; }
 function esc(v){
   return (window.ModelCompassNav && ModelCompassNav.escapeHtml)
@@ -197,17 +580,43 @@ function safeHref(v, fallback){
     : (fallback||'#');
 }
 
-function buildRow(m){
+var DOTS=['--dot-1','--dot-2','--dot-3','--dot-4','--dot-5','--dot-6'];
+function dotFor(s){
+  var h=7;
+  for(var i=0;i<s.length;i++) h=(h*31+s.charCodeAt(i))|0;
+  return DOTS[Math.abs(h)%DOTS.length];
+}
+
+function shortName(name){
+  if(!name) return '';
+  function _repl(match){
+    if(/max/i.test(match)) return '(Max)';
+    if(/xhigh/i.test(match)) return '(Xhigh)';
+    if(/high/i.test(match)) return '(High)';
+    if(/medium/i.test(match)) return '(Medium)';
+    if(/low/i.test(match)) return '(Low)';
+    return match;
+  }
+  var n = String(name).replace(/\((?:Adaptive\s+)?Reasoning,\s*(?:Max|High|Medium|Low|Xhigh)\s*Effort(?:,\s*Opus\s*[\d.]+\s*Fallback)?\)/gi, _repl);
+  n = n.replace(/\(Non-reasoning,\s*(High|Low|Medium|Max)\s*Effort\)/gi, '($1)');
+  return n.trim();
+}
+
+function buildRow(m, rank){
   const b=m.benchmarks||{}, c=m.composite||{}, p=m.pricing_per_m_tokens||{}, perf=m.performance||{};
   const aaUrl=safeHref(m.aa_url, `https://artificialanalysis.ai/models/${encodeURIComponent(m.slug||'')}`);
   const rowClass = m.openrouter_slug ? ' class="free"' : '';
+  const displayName = shortName(m.name || '');
+
   function cell(stat, val){
     const v=fmt(val);
     return `<td class="num" data-stat="${esc(stat)}" data-val="${esc(v)}">${v===''?'—':esc(v)}</td>`;
   }
   return `<tr${rowClass} data-release="${esc(m.released||'')}" data-slug="${esc(m.slug||'')}">`+
-    `<td class="l" data-val="${esc((m.name||'').toLowerCase())}">${esc(m.name||'')}</td>`+
-    `<td class="l" data-val="${esc((m.creator||'').toLowerCase())}">${esc(m.creator||'')}</td>`+
+    `<td class="num rnk" data-rank>${rank}</td>`+
+    `<td class="cb-col"><input type="checkbox" class="compare-cb" data-model-row></td>`+
+    `<td class="l name-col" data-val="${esc(displayName.toLowerCase())}"><div class="cell-title">${esc(displayName)}</div><div class="cell-sub">${esc(m.slug||'')}</div></td>`+
+    `<td class="l" data-creator="${esc(m.creator||'')}" data-val="${esc((m.creator||'').toLowerCase())}"><span class="dot-badge" style="--dot-color:var(${dotFor(m.creator||'')})">${esc(m.creator||'')}</span></td>`+
     `<td class="num" data-t="d" data-val="${esc(m.released||'')}">${esc(m.released||'')}</td>`+
     cell('in_$/M', p.input)+
     cell('out_$/M', p.output)+
@@ -236,23 +645,41 @@ function buildRow(m){
     `</tr>`;
 }
 
+function bindCheckboxEvents(){
+  tbody.querySelectorAll('input.compare-cb').forEach(function(cb){
+    cb.addEventListener('change',function(){
+      updateCmpCount();
+    });
+  });
+}
+
+if(checkAll){
+  checkAll.addEventListener('change',function(){
+    tbody.querySelectorAll('input.compare-cb').forEach(function(c){c.checked=checkAll.checked});
+    updateCmpCount();
+  });
+}
+
 async function loadModels(){
   const metaEl=document.getElementById('meta-line');
+  const countEl=document.getElementById('model-count');
   try{
     const res=await fetch('data/models.json');
     const data=await res.json();
     const models=(data.models||[]).slice().sort((a,b)=>
       (b.composite.intelligence_index_v4_1||0)-(a.composite.intelligence_index_v4_1||0));
-    tbody.innerHTML=models.map(buildRow).join('\n');
+    tbody.innerHTML=models.map((m, i)=>buildRow(m, i+1)).join('\n');
     if(models.length){
       const dates=models.map(m=>m.released).filter(Boolean).sort();
       fromI.value=dates[0]||'';
       toI.value=dates[dates.length-1]||'';
     }
+    countEl.textContent=`${models.length} models`;
     metaEl.dataset.scrapedAt=data.scraped_at||'';
     metaEl.textContent=`Last scrape: ${(data.scraped_at||'—').replace('T',' ').replace('Z','')} · `+
       `released in the last ~6 months · sorted by intelligence desc · click headers to sort · `+
       `${models.length} models · full benchmark set from artificialanalysis.ai (no API key required)`;
+    bindCheckboxEvents();
   }catch(e){
     metaEl.textContent=`⚠️ Could not load data/models.json: ${e.message}`;
   }
@@ -264,6 +691,5 @@ loadModels().then(()=>{
   if(scrapedAtEl && scrapedAtEl.dataset.scrapedAt) ModelCompassNav.checkStaleness(scrapedAtEl.dataset.scrapedAt);
 });
 </script>
-</div><!-- /.page -->
 <div id="site-footer"></div>
 </body></html>

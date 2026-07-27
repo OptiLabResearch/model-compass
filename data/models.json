@@ -4905,7 +4905,336 @@
       "rich_as_of": "2026-07-05"
     },
     {
-      "name": "Claude Fable 5 (Adaptive Reasoning, Max Effort, Opus 4.8 Fallback)",
+      "name": "Gemma 4 E2B (Reasoning)",
+      "short_name": "Gemma 4 E2B (Reasoning)",
+      "slug": "gemma-4-e2b",
+      "aa_url": "https://artificialanalysis.ai/models/gemma-4-e2b",
+      "openrouter_slug": null,
+      "creator": "Google",
+      "released": "2026-04-02",
+      "knowledge_cutoff": null,
+      "is_reasoning": true,
+      "deprecated": false,
+      "context_tokens": 128000,
+      "is_open_weights": true,
+      "license": "Apache 2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "commercial_allowed": true,
+      "size_class": "Small",
+      "parameters_billions": 5.1,
+      "active_params_billions": 2.3,
+      "input_modalities": {
+        "text": null,
+        "image": null,
+        "audio": null,
+        "video": null
+      },
+      "output_modalities": {
+        "text": null,
+        "image": null,
+        "audio": null,
+        "video": null
+      },
+      "featured": false,
+      "note": null,
+      "has_rich_data": false,
+      "composite": {
+        "intelligence_index_v4_1": 9.5,
+        "coding_index": 7.2,
+        "math_index": null,
+        "agentic_index": null,
+        "omniscience_index": -24.0
+      },
+      "benchmarks": {
+        "gpqa_diamond": 40.5,
+        "hle": 4.8,
+        "scicode": 20.9,
+        "ifbench": 36.0,
+        "lcr": 15.0,
+        "tau2_bench": 20.8,
+        "tau3_banking": 4.5,
+        "terminalbench_hard": 3.0,
+        "terminalbench_v2_1": 0.4,
+        "mmlu_pro": null,
+        "livecodebench": null,
+        "math_500": 86.0,
+        "aime": null,
+        "aime25": null,
+        "gdpval_v2": null,
+        "critpt": 0,
+        "mmmu_pro": 44.6,
+        "apex_agents_aa": null,
+        "it_bench_sre": null,
+        "omniscience_accuracy": 6.7,
+        "omniscience_hallucination_rate": 32.9,
+        "omniscience_non_halluc": 67.1
+      },
+      "pricing_per_m_tokens": {
+        "input": 0,
+        "output": 0,
+        "blended_3_1": 0,
+        "blended_7_2_1": null,
+        "blended_1_1": null,
+        "cache_hit": null,
+        "cache_write": null
+      },
+      "cost_per_intelligence_task_usd": {
+        "total": null,
+        "input": null,
+        "output": null,
+        "cache_read": null,
+        "cache_write": null,
+        "non_cache_input": null,
+        "reasoning": null,
+        "answer": null
+      },
+      "cost_per_eval_breakdown_usd": {},
+      "time_per_task_seconds": null,
+      "output_tokens_per_task": {
+        "total": null,
+        "answer": null,
+        "reasoning": null
+      },
+      "performance": {
+        "output_speed_tps": null,
+        "ttft_seconds_total": null,
+        "ttft_seconds_answer": null,
+        "end_to_end_500tok": {
+          "total": null,
+          "input": null,
+          "reasoning": null,
+          "answer": null
+        }
+      },
+      "output_speed_by_prompt_length": [],
+      "derived": {
+        "safety_composite": 44.1
+      },
+      "rich_as_of": "2026-07-05"
+    },
+    {
+      "name": "Gemma 4 E2B (Non-reasoning)",
+      "short_name": "Gemma 4 E2B (Non-reasoning)",
+      "slug": "gemma-4-e2b-non-reasoning",
+      "aa_url": "https://artificialanalysis.ai/models/gemma-4-e2b-non-reasoning",
+      "openrouter_slug": null,
+      "creator": "Google",
+      "released": "2026-04-02",
+      "knowledge_cutoff": null,
+      "is_reasoning": false,
+      "deprecated": false,
+      "context_tokens": 128000,
+      "is_open_weights": true,
+      "license": "Apache 2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "commercial_allowed": true,
+      "size_class": "Small",
+      "parameters_billions": 5.1,
+      "active_params_billions": 2.3,
+      "input_modalities": {
+        "text": null,
+        "image": null,
+        "audio": null,
+        "video": null
+      },
+      "output_modalities": {
+        "text": null,
+        "image": null,
+        "audio": null,
+        "video": null
+      },
+      "featured": false,
+      "note": null,
+      "has_rich_data": false,
+      "composite": {
+        "intelligence_index_v4_1": 6.4,
+        "coding_index": null,
+        "math_index": null,
+        "agentic_index": null,
+        "omniscience_index": -61.4
+      },
+      "benchmarks": {
+        "gpqa_diamond": 40.5,
+        "hle": 4.5,
+        "scicode": 20.4,
+        "ifbench": 33.6,
+        "lcr": 15.0,
+        "tau2_bench": 22.2,
+        "tau3_banking": null,
+        "terminalbench_hard": 2.3,
+        "terminalbench_v2_1": null,
+        "mmlu_pro": null,
+        "livecodebench": null,
+        "math_500": null,
+        "aime": null,
+        "aime25": null,
+        "gdpval_v2": null,
+        "critpt": 0,
+        "mmmu_pro": 41.8,
+        "apex_agents_aa": null,
+        "it_bench_sre": null,
+        "omniscience_accuracy": 8.0,
+        "omniscience_hallucination_rate": 75.4,
+        "omniscience_non_halluc": 24.6
+      },
+      "pricing_per_m_tokens": {
+        "input": 0,
+        "output": 0,
+        "blended_3_1": 0,
+        "blended_7_2_1": null,
+        "blended_1_1": null,
+        "cache_hit": null,
+        "cache_write": null
+      },
+      "cost_per_intelligence_task_usd": {
+        "total": null,
+        "input": null,
+        "output": null,
+        "cache_read": null,
+        "cache_write": null,
+        "non_cache_input": null,
+        "reasoning": null,
+        "answer": null
+      },
+      "cost_per_eval_breakdown_usd": {},
+      "time_per_task_seconds": null,
+      "output_tokens_per_task": {
+        "total": null,
+        "answer": null,
+        "reasoning": null
+      },
+      "performance": {
+        "output_speed_tps": null,
+        "ttft_seconds_total": null,
+        "ttft_seconds_answer": null,
+        "end_to_end_500tok": {
+          "total": null,
+          "input": null,
+          "reasoning": null,
+          "answer": null
+        }
+      },
+      "output_speed_by_prompt_length": [],
+      "derived": {
+        "safety_composite": 17.3
+      },
+      "rich_as_of": "2026-07-05"
+    },
+    {
+      "name": "Gemini 3.1 Flash-Lite",
+      "short_name": "Gemini 3.1 Flash-Lite",
+      "slug": "gemini-3-1-flash-lite-preview",
+      "aa_url": "https://artificialanalysis.ai/models/gemini-3-1-flash-lite-preview",
+      "openrouter_slug": null,
+      "creator": "Google",
+      "released": "2026-03-03",
+      "knowledge_cutoff": "2025-01-01",
+      "is_reasoning": true,
+      "deprecated": false,
+      "context_tokens": 1000000,
+      "is_open_weights": false,
+      "license": null,
+      "license_url": null,
+      "commercial_allowed": null,
+      "size_class": "Medium",
+      "parameters_billions": null,
+      "active_params_billions": null,
+      "input_modalities": {
+        "text": null,
+        "image": null,
+        "audio": null,
+        "video": null
+      },
+      "output_modalities": {
+        "text": null,
+        "image": null,
+        "audio": null,
+        "video": null
+      },
+      "featured": false,
+      "note": null,
+      "has_rich_data": false,
+      "composite": {
+        "intelligence_index_v4_1": 25,
+        "coding_index": 34.7,
+        "math_index": null,
+        "agentic_index": 6.17,
+        "omniscience_index": -15.5
+      },
+      "benchmarks": {
+        "gpqa_diamond": 82.2,
+        "hle": 16.2,
+        "scicode": 41.9,
+        "ifbench": 77.2,
+        "lcr": 65.3,
+        "tau2_bench": 31.3,
+        "tau3_banking": 8.7,
+        "terminalbench_hard": 24.2,
+        "terminalbench_v2_1": 31.1,
+        "mmlu_pro": null,
+        "livecodebench": null,
+        "math_500": null,
+        "aime": null,
+        "aime25": null,
+        "gdpval_v2": 6.8,
+        "critpt": 1.1,
+        "mmmu_pro": 75.5,
+        "apex_agents_aa": 12.2,
+        "it_bench_sre": null,
+        "omniscience_accuracy": 36.4,
+        "omniscience_hallucination_rate": 81.6,
+        "omniscience_non_halluc": 18.4
+      },
+      "pricing_per_m_tokens": {
+        "input": 0.25,
+        "output": 1.5,
+        "blended_3_1": 0.56,
+        "blended_7_2_1": null,
+        "blended_1_1": null,
+        "cache_hit": null,
+        "cache_write": null
+      },
+      "cost_per_intelligence_task_usd": {
+        "total": null,
+        "input": null,
+        "output": null,
+        "cache_read": null,
+        "cache_write": null,
+        "non_cache_input": null,
+        "reasoning": null,
+        "answer": null
+      },
+      "cost_per_eval_breakdown_usd": {},
+      "time_per_task_seconds": null,
+      "output_tokens_per_task": {
+        "total": null,
+        "answer": null,
+        "reasoning": null
+      },
+      "performance": {
+        "output_speed_tps": 299.2,
+        "ttft_seconds_total": 5.15,
+        "ttft_seconds_answer": 5.15,
+        "end_to_end_500tok": {
+          "total": null,
+          "input": null,
+          "reasoning": null,
+          "answer": null
+        }
+      },
+      "output_speed_by_prompt_length": [],
+      "derived": {
+        "value_intelligence_per_dollar_blend": 44.6,
+        "safety_composite": 21.0,
+        "throughput_tps": 299.2,
+        "speed_tier": 2,
+        "latency_ttft_seconds": 5.15,
+        "latency_tier": 1
+      },
+      "rich_as_of": "2026-07-05"
+    },
+    {
+      "name": "Claude Fable 5 (Max)",
       "short_name": "Claude Fable 5 (with fallback)",
       "slug": "claude-fable-5",
       "aa_url": "https://artificialanalysis.ai/models/claude-fable-5",
@@ -5636,8 +5965,228 @@
       }
     },
     {
-      "name": "Claude Sonnet 5 (Adaptive Reasoning, Xhigh Effort)",
-      "short_name": "Claude Sonnet 5 (Adaptive Reasoning, Xhigh Effort)",
+      "name": "Claude Sonnet 5 (Medium)",
+      "short_name": "Claude Sonnet 5 (Medium)",
+      "slug": "claude-sonnet-5-medium",
+      "aa_url": "https://artificialanalysis.ai/models/claude-sonnet-5-medium",
+      "openrouter_slug": null,
+      "creator": "Anthropic",
+      "released": "2026-06-30",
+      "knowledge_cutoff": null,
+      "is_reasoning": false,
+      "deprecated": false,
+      "context_tokens": null,
+      "is_open_weights": false,
+      "license": null,
+      "license_url": null,
+      "commercial_allowed": null,
+      "size_class": null,
+      "parameters_billions": null,
+      "active_params_billions": null,
+      "input_modalities": {
+        "text": null,
+        "image": null,
+        "audio": null,
+        "video": null
+      },
+      "output_modalities": {
+        "text": null,
+        "image": null,
+        "audio": null,
+        "video": null
+      },
+      "featured": false,
+      "note": null,
+      "has_rich_data": false,
+      "composite": {
+        "intelligence_index_v4_1": null,
+        "coding_index": null,
+        "math_index": null,
+        "agentic_index": null,
+        "omniscience_index": null
+      },
+      "benchmarks": {
+        "gpqa_diamond": null,
+        "hle": null,
+        "scicode": null,
+        "ifbench": null,
+        "lcr": null,
+        "tau2_bench": null,
+        "tau3_banking": null,
+        "terminalbench_hard": null,
+        "terminalbench_v2_1": null,
+        "mmlu_pro": null,
+        "livecodebench": null,
+        "math_500": null,
+        "aime": null,
+        "aime25": null,
+        "gdpval_v2": null,
+        "critpt": null,
+        "mmmu_pro": null,
+        "apex_agents_aa": null,
+        "it_bench_sre": null,
+        "omniscience_accuracy": null,
+        "omniscience_hallucination_rate": null,
+        "omniscience_non_halluc": null
+      },
+      "pricing_per_m_tokens": {
+        "input": 2,
+        "output": 10,
+        "blended_3_1": 4,
+        "blended_7_2_1": null,
+        "blended_1_1": null,
+        "cache_hit": null,
+        "cache_write": null
+      },
+      "cost_per_intelligence_task_usd": {
+        "total": null,
+        "input": null,
+        "output": null,
+        "cache_read": null,
+        "cache_write": null,
+        "non_cache_input": null,
+        "reasoning": null,
+        "answer": null
+      },
+      "cost_per_eval_breakdown_usd": {},
+      "time_per_task_seconds": null,
+      "output_tokens_per_task": {
+        "total": null,
+        "answer": null,
+        "reasoning": null
+      },
+      "performance": {
+        "output_speed_tps": 63.47,
+        "ttft_seconds_total": 1.61,
+        "ttft_seconds_answer": 1.61,
+        "end_to_end_500tok": {
+          "total": null,
+          "input": null,
+          "reasoning": null,
+          "answer": null
+        }
+      },
+      "output_speed_by_prompt_length": [],
+      "derived": {
+        "throughput_tps": 63.47,
+        "speed_tier": 1,
+        "latency_ttft_seconds": 1.61,
+        "latency_tier": 2
+      }
+    },
+    {
+      "name": "Claude Sonnet 5 (Low)",
+      "short_name": "Claude Sonnet 5 (Low)",
+      "slug": "claude-sonnet-5-low",
+      "aa_url": "https://artificialanalysis.ai/models/claude-sonnet-5-low",
+      "openrouter_slug": null,
+      "creator": "Anthropic",
+      "released": "2026-06-30",
+      "knowledge_cutoff": null,
+      "is_reasoning": false,
+      "deprecated": false,
+      "context_tokens": null,
+      "is_open_weights": false,
+      "license": null,
+      "license_url": null,
+      "commercial_allowed": null,
+      "size_class": null,
+      "parameters_billions": null,
+      "active_params_billions": null,
+      "input_modalities": {
+        "text": null,
+        "image": null,
+        "audio": null,
+        "video": null
+      },
+      "output_modalities": {
+        "text": null,
+        "image": null,
+        "audio": null,
+        "video": null
+      },
+      "featured": false,
+      "note": null,
+      "has_rich_data": false,
+      "composite": {
+        "intelligence_index_v4_1": null,
+        "coding_index": null,
+        "math_index": null,
+        "agentic_index": null,
+        "omniscience_index": null
+      },
+      "benchmarks": {
+        "gpqa_diamond": null,
+        "hle": null,
+        "scicode": null,
+        "ifbench": null,
+        "lcr": null,
+        "tau2_bench": null,
+        "tau3_banking": null,
+        "terminalbench_hard": null,
+        "terminalbench_v2_1": null,
+        "mmlu_pro": null,
+        "livecodebench": null,
+        "math_500": null,
+        "aime": null,
+        "aime25": null,
+        "gdpval_v2": null,
+        "critpt": null,
+        "mmmu_pro": null,
+        "apex_agents_aa": null,
+        "it_bench_sre": null,
+        "omniscience_accuracy": null,
+        "omniscience_hallucination_rate": null,
+        "omniscience_non_halluc": null
+      },
+      "pricing_per_m_tokens": {
+        "input": 2,
+        "output": 10,
+        "blended_3_1": 4,
+        "blended_7_2_1": null,
+        "blended_1_1": null,
+        "cache_hit": null,
+        "cache_write": null
+      },
+      "cost_per_intelligence_task_usd": {
+        "total": null,
+        "input": null,
+        "output": null,
+        "cache_read": null,
+        "cache_write": null,
+        "non_cache_input": null,
+        "reasoning": null,
+        "answer": null
+      },
+      "cost_per_eval_breakdown_usd": {},
+      "time_per_task_seconds": null,
+      "output_tokens_per_task": {
+        "total": null,
+        "answer": null,
+        "reasoning": null
+      },
+      "performance": {
+        "output_speed_tps": 60.63,
+        "ttft_seconds_total": 1.51,
+        "ttft_seconds_answer": 1.51,
+        "end_to_end_500tok": {
+          "total": null,
+          "input": null,
+          "reasoning": null,
+          "answer": null
+        }
+      },
+      "output_speed_by_prompt_length": [],
+      "derived": {
+        "throughput_tps": 60.63,
+        "speed_tier": 1,
+        "latency_ttft_seconds": 1.51,
+        "latency_tier": 2
+      }
+    },
+    {
+      "name": "Claude Sonnet 5 (Xhigh)",
+      "short_name": "Claude Sonnet 5 (Xhigh)",
       "slug": "claude-sonnet-5-xhigh",
       "aa_url": "https://artificialanalysis.ai/models/claude-sonnet-5-xhigh",
       "openrouter_slug": null,
@@ -8206,6 +8755,119 @@
       "rich_as_of": "2026-07-05"
     },
     {
+      "name": "Grok 4.3 (Non-reasoning)",
+      "short_name": "Grok 4.3 (Non-reasoning)",
+      "slug": "grok-4-3-non-reasoning",
+      "aa_url": "https://artificialanalysis.ai/models/grok-4-3-non-reasoning",
+      "openrouter_slug": null,
+      "creator": "SpaceXAI",
+      "released": "2026-04-30",
+      "knowledge_cutoff": null,
+      "is_reasoning": false,
+      "deprecated": false,
+      "context_tokens": 1000000,
+      "is_open_weights": false,
+      "license": null,
+      "license_url": null,
+      "commercial_allowed": null,
+      "size_class": "Large",
+      "parameters_billions": null,
+      "active_params_billions": null,
+      "input_modalities": {
+        "text": null,
+        "image": null,
+        "audio": null,
+        "video": null
+      },
+      "output_modalities": {
+        "text": null,
+        "image": null,
+        "audio": null,
+        "video": null
+      },
+      "featured": false,
+      "note": null,
+      "has_rich_data": false,
+      "composite": {
+        "intelligence_index_v4_1": 24.8,
+        "coding_index": 35.2,
+        "math_index": null,
+        "agentic_index": 22.81,
+        "omniscience_index": -32.3
+      },
+      "benchmarks": {
+        "gpqa_diamond": 65.8,
+        "hle": 6.5,
+        "scicode": 37.4,
+        "ifbench": 47.6,
+        "lcr": 24.7,
+        "tau2_bench": 65.8,
+        "tau3_banking": 7.6,
+        "terminalbench_hard": 18.9,
+        "terminalbench_v2_1": 34.1,
+        "mmlu_pro": null,
+        "livecodebench": null,
+        "math_500": null,
+        "aime": null,
+        "aime25": null,
+        "gdpval_v2": 29.6,
+        "critpt": 0,
+        "mmmu_pro": 64.8,
+        "apex_agents_aa": null,
+        "it_bench_sre": null,
+        "omniscience_accuracy": 24.2,
+        "omniscience_hallucination_rate": 74.5,
+        "omniscience_non_halluc": 25.5
+      },
+      "pricing_per_m_tokens": {
+        "input": 1.25,
+        "output": 2.5,
+        "blended_3_1": 1.56,
+        "blended_7_2_1": null,
+        "blended_1_1": null,
+        "cache_hit": null,
+        "cache_write": null
+      },
+      "cost_per_intelligence_task_usd": {
+        "total": null,
+        "input": null,
+        "output": null,
+        "cache_read": null,
+        "cache_write": null,
+        "non_cache_input": null,
+        "reasoning": null,
+        "answer": null
+      },
+      "cost_per_eval_breakdown_usd": {},
+      "time_per_task_seconds": null,
+      "output_tokens_per_task": {
+        "total": null,
+        "answer": null,
+        "reasoning": null
+      },
+      "performance": {
+        "output_speed_tps": 91.64,
+        "ttft_seconds_total": 1.46,
+        "ttft_seconds_answer": 1.46,
+        "end_to_end_500tok": {
+          "total": null,
+          "input": null,
+          "reasoning": null,
+          "answer": null
+        }
+      },
+      "output_speed_by_prompt_length": [],
+      "derived": {
+        "value_intelligence_per_dollar_blend": 15.9,
+        "safety_composite": 25.2,
+        "throughput_tps": 91.64,
+        "speed_tier": 1,
+        "latency_ttft_seconds": 1.46,
+        "latency_tier": 2
+      },
+      "rich_as_of": "2026-07-05"
+    },
+    {
       "name": "Grok 4.3 (low)",
       "short_name": "Grok 4.3 (low)",
       "slug": "grok-4-3-low",
@@ -10748,6 +11410,119 @@
         "throughput_tps": 62.6,
         "speed_tier": 1,
         "latency_ttft_seconds": 34.52,
+        "latency_tier": 0
+      },
+      "rich_as_of": "2026-07-05"
+    },
+    {
+      "name": "MiMo-V2.5",
+      "short_name": "MiMo-V2.5",
+      "slug": "mimo-v2-5-0424",
+      "aa_url": "https://artificialanalysis.ai/models/mimo-v2-5-0424",
+      "openrouter_slug": "xiaomi/mimo-v2-5",
+      "creator": "Xiaomi",
+      "released": "2026-04-22",
+      "knowledge_cutoff": null,
+      "is_reasoning": true,
+      "deprecated": false,
+      "context_tokens": 1000000,
+      "is_open_weights": true,
+      "license": "Mit",
+      "license_url": "https://opensource.org/license/mit",
+      "commercial_allowed": true,
+      "size_class": "Large",
+      "parameters_billions": 310,
+      "active_params_billions": 15,
+      "input_modalities": {
+        "text": null,
+        "image": null,
+        "audio": null,
+        "video": null
+      },
+      "output_modalities": {
+        "text": null,
+        "image": null,
+        "audio": null,
+        "video": null
+      },
+      "featured": true,
+      "note": "Non-reasoning budget pick",
+      "has_rich_data": false,
+      "composite": {
+        "intelligence_index_v4_1": 37.2,
+        "coding_index": 56.8,
+        "math_index": null,
+        "agentic_index": null,
+        "omniscience_index": -9.3
+      },
+      "benchmarks": {
+        "gpqa_diamond": 84.9,
+        "hle": 25.2,
+        "scicode": 43.1,
+        "ifbench": 67.1,
+        "lcr": 62.7,
+        "tau2_bench": 90.6,
+        "tau3_banking": 6.6,
+        "terminalbench_hard": 41.7,
+        "terminalbench_v2_1": 63.7,
+        "mmlu_pro": null,
+        "livecodebench": null,
+        "math_500": null,
+        "aime": null,
+        "aime25": null,
+        "gdpval_v2": null,
+        "critpt": 3.7,
+        "mmmu_pro": 75.4,
+        "apex_agents_aa": null,
+        "it_bench_sre": null,
+        "omniscience_accuracy": 17.3,
+        "omniscience_hallucination_rate": 32.2,
+        "omniscience_non_halluc": 67.8
+      },
+      "pricing_per_m_tokens": {
+        "input": 0.14,
+        "output": 0.28,
+        "blended_3_1": 0.17,
+        "blended_7_2_1": null,
+        "blended_1_1": null,
+        "cache_hit": null,
+        "cache_write": null
+      },
+      "cost_per_intelligence_task_usd": {
+        "total": null,
+        "input": null,
+        "output": null,
+        "cache_read": null,
+        "cache_write": null,
+        "non_cache_input": null,
+        "reasoning": null,
+        "answer": null
+      },
+      "cost_per_eval_breakdown_usd": {},
+      "time_per_task_seconds": null,
+      "output_tokens_per_task": {
+        "total": null,
+        "answer": null,
+        "reasoning": null
+      },
+      "performance": {
+        "output_speed_tps": 60.92,
+        "ttft_seconds_total": 2.97,
+        "ttft_seconds_answer": 35.8,
+        "end_to_end_500tok": {
+          "total": null,
+          "input": null,
+          "reasoning": null,
+          "answer": null
+        }
+      },
+      "output_speed_by_prompt_length": [],
+      "derived": {
+        "value_intelligence_per_dollar_blend": 218.8,
+        "safety_composite": 55.6,
+        "throughput_tps": 60.92,
+        "speed_tier": 1,
+        "latency_ttft_seconds": 35.8,
         "latency_tier": 0
       },
       "rich_as_of": "2026-07-05"
@@ -19190,8 +19965,8 @@
       "rich_as_of": "2026-07-05"
     },
     {
-      "name": "Claude Sonnet 4.6 (Non-reasoning, High Effort)",
-      "short_name": "Claude Sonnet 4.6 (Non-reasoning, High Effort)",
+      "name": "Claude Sonnet 4.6 (High)",
+      "short_name": "Claude Sonnet 4.6 (High)",
       "slug": "claude-sonnet-4-6",
       "aa_url": "https://artificialanalysis.ai/models/claude-sonnet-4-6",
       "openrouter_slug": null,
@@ -19408,8 +20183,117 @@
       "rich_as_of": "2026-07-05"
     },
     {
-      "name": "Claude Opus 4.6 (Non-reasoning, High Effort)",
-      "short_name": "Claude Opus 4.6 (Non-reasoning, High Effort)",
+      "name": "Claude Opus 4.7 (Max)",
+      "short_name": "Claude Opus 4.7 (Max)",
+      "slug": "claude-opus-4-7",
+      "aa_url": "https://artificialanalysis.ai/models/claude-opus-4-7",
+      "openrouter_slug": null,
+      "creator": "Anthropic",
+      "released": "2026-04-16",
+      "knowledge_cutoff": "2026-01-01",
+      "is_reasoning": true,
+      "deprecated": false,
+      "context_tokens": 1000000,
+      "is_open_weights": false,
+      "license": null,
+      "license_url": null,
+      "commercial_allowed": null,
+      "size_class": "Large",
+      "parameters_billions": null,
+      "active_params_billions": null,
+      "input_modalities": {
+        "text": null,
+        "image": null,
+        "audio": null,
+        "video": null
+      },
+      "output_modalities": {
+        "text": null,
+        "image": null,
+        "audio": null,
+        "video": null
+      },
+      "featured": false,
+      "note": null,
+      "has_rich_data": false,
+      "composite": {
+        "intelligence_index_v4_1": 53.5,
+        "coding_index": 73.6,
+        "math_index": null,
+        "agentic_index": 44.39,
+        "omniscience_index": 26.2
+      },
+      "benchmarks": {
+        "gpqa_diamond": 91.4,
+        "hle": 39.6,
+        "scicode": 54.5,
+        "ifbench": 58.6,
+        "lcr": 70.3,
+        "tau2_bench": 88.6,
+        "tau3_banking": 28.9,
+        "terminalbench_hard": 51.5,
+        "terminalbench_v2_1": 83.1,
+        "mmlu_pro": null,
+        "livecodebench": null,
+        "math_500": null,
+        "aime": null,
+        "aime25": null,
+        "gdpval_v2": 49.9,
+        "critpt": 12.0,
+        "mmmu_pro": 78.8,
+        "apex_agents_aa": null,
+        "it_bench_sre": 46.7,
+        "omniscience_accuracy": 45.8,
+        "omniscience_hallucination_rate": 36.2,
+        "omniscience_non_halluc": 63.8
+      },
+      "pricing_per_m_tokens": {
+        "input": 5,
+        "output": 25,
+        "blended_3_1": 10,
+        "blended_7_2_1": null,
+        "blended_1_1": null,
+        "cache_hit": null,
+        "cache_write": null
+      },
+      "cost_per_intelligence_task_usd": {
+        "total": null,
+        "input": null,
+        "output": null,
+        "cache_read": null,
+        "cache_write": null,
+        "non_cache_input": null,
+        "reasoning": null,
+        "answer": null
+      },
+      "cost_per_eval_breakdown_usd": {},
+      "time_per_task_seconds": null,
+      "output_tokens_per_task": {
+        "total": null,
+        "answer": null,
+        "reasoning": null
+      },
+      "performance": {
+        "output_speed_tps": null,
+        "ttft_seconds_total": null,
+        "ttft_seconds_answer": null,
+        "end_to_end_500tok": {
+          "total": null,
+          "input": null,
+          "reasoning": null,
+          "answer": null
+        }
+      },
+      "output_speed_by_prompt_length": [],
+      "derived": {
+        "value_intelligence_per_dollar_blend": 5.3,
+        "safety_composite": 59.7
+      },
+      "rich_as_of": "2026-07-05"
+    },
+    {
+      "name": "Claude Opus 4.6 (High)",
+      "short_name": "Claude Opus 4.6 (High)",
       "slug": "claude-opus-4-6",
       "aa_url": "https://artificialanalysis.ai/models/claude-opus-4-6",
       "openrouter_slug": null,

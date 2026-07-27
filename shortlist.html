@@ -791,6 +791,7 @@ function buildRow(m, rank){
   var ctx=m.context_tokens ? Math.round(m.context_tokens/1000)+'K' : '';
   var aaUrl=safeHref(m.aa_url, 'https://artificialanalysis.ai/models/'+encodeURIComponent(m.slug||''));
   var rowClass = m.openrouter_slug ? ' class="free"' : '';
+  var displayName = shortenModelName(m.name || '');
   function cell(stat, val, fmt){
     var v = (val===null||val===undefined) ? '' : val;
     var shown = v===''?'—':(fmt?fmt(v):v);
@@ -799,7 +800,7 @@ function buildRow(m, rank){
   return '<tr'+rowClass+' data-release="'+esc(m.released||'')+'" data-slug="'+esc(m.slug||'')+'">'+
     '<td class="num rnk" data-rank>'+rank+'</td>'+
     '<td class="cb-col"><input type="checkbox" class="compare-cb" data-model-row></td>'+
-    '<td class="l name-col" data-val="'+esc((m.name||'').toLowerCase())+'"><div class="cell-title">'+esc(m.name||'')+'</div><div class="cell-sub">'+esc(m.slug||'')+'</div></td>'+
+    '<td class="l name-col" data-val="'+esc(displayName.toLowerCase())+'"><div class="cell-title">'+esc(displayName)+'</div><div class="cell-sub">'+esc(m.slug||'')+'</div></td>'+
     '<td class="l" data-creator="'+esc(m.creator||'')+'" data-val="'+esc((m.creator||'').toLowerCase())+'"><span class="dot-badge" style="--dot-color:var('+dotFor(m.creator||'')+')">'+esc(m.creator||'')+'</span></td>'+
     '<td class="num" data-t="d" data-val="'+esc(m.released||'')+'">'+esc(m.released||'')+'</td>'+
     cell('in_$/M', p.input, fmtNum)+
@@ -826,6 +827,21 @@ function buildRow(m, rank){
     '<td class="num" data-stat="is_frontier" data-val="'+(m.is_frontier?1:0)+'">'+(m.is_frontier?'Yes':'No')+'</td>'+
     '<td class="l" data-val="'+esc(m.slug||'')+'"><a href="'+esc(aaUrl)+'" target="_blank" rel="noopener" style="color:var(--accent);text-decoration:none">'+esc(m.slug||'')+'</a></td>'+
     '</tr>';
+}
+
+function shortenModelName(name){
+  if(!name) return '';
+  function _repl(match){
+    if(/max/i.test(match)) return '(Max)';
+    if(/xhigh/i.test(match)) return '(Xhigh)';
+    if(/high/i.test(match)) return '(High)';
+    if(/medium/i.test(match)) return '(Medium)';
+    if(/low/i.test(match)) return '(Low)';
+    return match;
+  }
+  var n = String(name).replace(/\((?:Adaptive\s+)?Reasoning,\s*(?:Max|High|Medium|Low|Xhigh)\s*Effort(?:,\s*Opus\s*[\d.]+\s*Fallback)?\)/gi, _repl);
+  n = n.replace(/\(Non-reasoning,\s*(High|Low|Medium|Max)\s*Effort\)/gi, '($1)');
+  return n.trim();
 }
 
 function shortName(name){

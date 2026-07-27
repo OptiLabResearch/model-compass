@@ -294,6 +294,34 @@ def _first(*vals):
     return None
 
 
+def shorten_model_name(name: str | None) -> str | None:
+    if not name:
+        return name
+
+    def _repl(match: re.Match) -> str:
+        txt = match.group(0)
+        if re.search(r'max', txt, re.I):
+            return '(Max)'
+        if re.search(r'xhigh', txt, re.I):
+            return '(Xhigh)'
+        if re.search(r'high', txt, re.I):
+            return '(High)'
+        if re.search(r'medium', txt, re.I):
+            return '(Medium)'
+        if re.search(r'low', txt, re.I):
+            return '(Low)'
+        return txt
+
+    n = re.sub(
+        r'\((?:Adaptive\s+)?Reasoning,\s*(?:Max|High|Medium|Low|Xhigh)\s*Effort(?:,\s*Opus\s*[\d.]+\s*Fallback)?\)',
+        _repl,
+        name,
+        flags=re.I,
+    )
+    n = re.sub(r'\(Non-reasoning,\s*(High|Low|Medium|Max)\s*Effort\)', r'(\1)', n, flags=re.I)
+    return n.strip()
+
+
 def build_model_entry(api_m: dict, rich: dict | None) -> dict:
     """Merge an API model with its (optional) page-scraped rich counterpart."""
     rich = rich or {}
@@ -319,9 +347,14 @@ def build_model_entry(api_m: dict, rich: dict | None) -> dict:
         for e in (cpt.get('evaluations') or [])
     }
 
+    raw_name = _first(rich.get('name'), api_m.get('name'))
+    raw_short = _first(rich.get('shortName'), api_m.get('name'))
+    clean_name = shorten_model_name(raw_name)
+    clean_short = shorten_model_name(raw_short)
+
     entry = {
-        "name": _first(rich.get('name'), api_m.get('name')),
-        "short_name": _first(rich.get('shortName'), api_m.get('name')),
+        "name": clean_name,
+        "short_name": clean_short,
         "slug": slug,
         "aa_url": f"https://artificialanalysis.ai/models/{slug}" if slug else None,
         "openrouter_slug": OPENROUTER_SLUGS.get(slug),
