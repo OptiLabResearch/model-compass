@@ -348,7 +348,7 @@ function applyFilter(){
 
     const txt=r.innerText.toLowerCase();
     const d=r.dataset.release||'';
-    let show=txt.includes(Q) && (!from||d>=from) && (!to||d<=to);
+    let show=txt.includes(Q) && (!from||(d&&d>=from)) && (!to||(d&&d<=to));
     if(free && !r.classList.contains('free')) show=false;
 
     /* Creator filter */
@@ -676,11 +676,7 @@ async function loadModels(){
     const models=(data.models||[]).slice().sort((a,b)=>
       (b.composite.intelligence_index_v4_1||0)-(a.composite.intelligence_index_v4_1||0));
     tbody.innerHTML=models.map((m, i)=>buildRow(m, i+1)).join('\n');
-    if(models.length){
-      const dates=models.map(m=>m.released).filter(Boolean).sort();
-      fromI.value=dates[0]||'';
-      toI.value=dates[dates.length-1]||'';
-    }
+
     countEl.textContent=`${models.length} models`;
     metaEl.dataset.scrapedAt=data.scraped_at||'';
     metaEl.textContent=`Last scrape: ${(data.scraped_at||'—').replace('T',' ').replace('Z','')} · `+
