@@ -20,11 +20,12 @@ code,.num,td,th,input{font-family:var(--mono),var(--sans)}
 .model-count{background:var(--accent-bg);color:var(--accent);font-size:12px;font-weight:600;padding:3px 10px;border-radius:var(--r-pill)}
 .meta{color:var(--text-muted);font-size:12px;margin-bottom:12px;line-height:1.6}
 
-.top-filters{display:flex;gap:12px;flex-wrap:wrap;align-items:center;font-size:12px;margin-top:16px}
+.top-filters{display:flex;gap:12px;flex-wrap:wrap;align-items:center;font-size:13px;margin-top:16px}
 .top-filters select{padding:8px 10px;font-size:13px;border:1px solid var(--border);border-radius:var(--r-sm);background:var(--surface);color:var(--text);font-family:inherit}
-.top-filters input[type=text]{width:220px}
+.top-filters .search-wrap{flex:1 1 240px;max-width:320px}
+.top-filters input[type=text]{width:100%}
 .top-filters input[type=date]{width:140px}
-.top-filters label{color:var(--text-secondary)}
+.top-filters label[for="from"]{display:inline-flex;align-items:center;gap:6px;color:var(--text-secondary);font-size:13px}
 
 .creator-dropdown-wrap{position:relative;display:inline-block}
 .creator-btn{padding:8px 12px;font-size:13px;border:1px solid var(--border);border-radius:var(--r-sm);background:var(--surface);color:var(--text);font-family:inherit;cursor:pointer;display:flex;align-items:center;gap:8px;min-width:140px;justify-content:space-between;transition:all .15s}
@@ -140,10 +141,10 @@ td.empty-data{opacity:0.25}
 
 @media (max-width:640px){
   .top-filters{gap:8px}
-  .search-wrap{flex:1 1 100%}
-  .creator-dropdown-wrap{flex:1 1 auto}
-  .top-filters label{display:flex;align-items:center;gap:4px;font-size:11px}
-  .top-filters input[type=date]{width:125px}
+  .top-filters .search-wrap{flex:1 1 100%;max-width:100%}
+  .top-filters .creator-dropdown-wrap{flex:1 1 auto}
+  .top-filters label[for="from"]{display:inline-flex;align-items:center;gap:4px;font-size:12px;flex:1 1 auto}
+  .top-filters input[type=date]{width:100%}
   
   th.cb-col,td.cb-col{width:24px;padding:6px 2px}
   th.rnk,td.rnk{left:24px;width:28px;padding:6px 2px;font-size:10px}
@@ -894,7 +895,6 @@ async function loadModels(){
 function resetAllFilterInputs(){
   if(q) q.value='';
   if(fromI) fromI.value='';
-  if(toI) toI.value='';
   if(creatorAllCb) creatorAllCb.checked=true;
   if(creatorCbs) creatorCbs.forEach(function(c){c.checked=false;});
   updateCreatorBtnLabel();
