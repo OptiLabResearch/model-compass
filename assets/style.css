@@ -221,7 +221,8 @@ a { color: var(--accent); }
 .table-card { overflow: visible; }
 .table-card > .scroll {
   overflow: auto;
-  max-height: calc(100vh - var(--nav-h) - 100px);
+  max-height: calc(100vh - var(--nav-h) - 80px);
+  max-height: calc(100dvh - var(--nav-h) - 80px);
   border-radius: inherit;
   -webkit-overflow-scrolling: touch;
 }
@@ -256,4 +257,10 @@ a { color: var(--accent); }
   #site-nav .brand-sub { display: none; }
   #site-nav a.tab { padding: 6px 10px; font-size: 12px; }
   #site-footer { padding: 12px 10px 20px; }
+}
+
+@media (max-width: 360px) {
+  #site-nav { padding: 0 8px; gap: 6px; }
+  #site-nav .btn-ghost { padding: 6px 10px; font-size: 12px; }
+  #site-nav .brand-name { font-size: 14px; }
 }

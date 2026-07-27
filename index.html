@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html><head><meta charset="utf-8"><title>All Models — Model Compass</title>
+<html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>All Models — Model Compass</title>
 <script>
   (function () {
     try {
@@ -8,9 +9,7 @@
     } catch (e) {}
   })();
 </script>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/fonts.css">
 <link rel="stylesheet" href="assets/style.css">
 <style>
 body{font-family:var(--sans);color:var(--text);font-size:14px}
@@ -68,23 +67,28 @@ code,.num,td,th,input{font-family:var(--mono),var(--sans)}
 
 .layout{display:flex;gap:16px;align-items:flex-start}
 aside.filters{flex:0 0 280px;position:sticky;top:calc(var(--nav-h) + 16px);border-radius:var(--r-lg);padding:20px;max-height:calc(100vh - var(--nav-h) - 32px);overflow-y:auto}
-aside.filters h2{font-size:14px;margin:0 0 10px;font-weight:600;display:flex;align-items:center;gap:6px}
-aside.filters h2 .btn-text{margin-left:auto;font-size:12px;font-weight:600;color:var(--accent);background:none;border:0;cursor:pointer;padding:0}
+.filters-header{display:flex;align-items:center;justify-content:space-between;gap:8px;width:100%}
+.filters-header h2{font-size:14px;margin:0;font-weight:600;display:flex;align-items:center;gap:6px}
+.filters-header-actions{display:flex;align-items:center;gap:8px;margin-left:auto}
+.filters-header-actions .btn-text{font-size:12px;font-weight:600;color:var(--accent);background:none;border:0;cursor:pointer;padding:0}
+.filters-toggle-btn{display:none;align-items:center;gap:6px;padding:6px 12px;font-size:12px;font-weight:600;border-radius:var(--r-pill);border:1px solid var(--border);background:var(--surface-2);color:var(--text);cursor:pointer;transition:all .15s}
+.filters-toggle-btn:hover{border-color:var(--accent);color:var(--accent)}
+.filters-toggle-btn .toggle-arrow{font-size:10px;transition:transform .15s}
+aside.filters.open .filters-toggle-btn .toggle-arrow{transform:rotate(180deg)}
 .filter-count{background:var(--accent);color:var(--accent-fg);font-size:10px;font-weight:700;padding:1px 6px;border-radius:var(--r-pill);display:none}
 .filter-count.visible{display:inline}
 .filter-group{margin-bottom:14px;padding-bottom:10px;border-bottom:1px solid var(--border)}
 .filter-group:last-of-type{border-bottom:0;margin-bottom:10px}
-.filter-group h3{font-size:10px;text-transform:uppercase;color:var(--text-muted);margin:0 0 6px;letter-spacing:0.5px;font-weight:600}
+.filter-group h3{font-size:10px;text-transform:uppercase;color:var(--text-muted);margin:6px 0 6px;letter-spacing:0.5px;font-weight:600}
 .filter-row{display:flex;align-items:center;gap:4px;margin-bottom:4px;padding-left:8px}
 .filter-row label{flex:0 0 80px;font-size:12px;color:var(--text)}
 .filter-row.has-filter{border-left:2px solid var(--accent)}
-.filter-row input{width:62px;padding:3px 5px;font-size:12px;border-radius:3px;font-variant-numeric:tabular-nums}
+.filter-row input{width:62px;padding:4px 5px;font-size:12px;border-radius:3px;font-variant-numeric:tabular-nums}
 .filter-row .arrow{color:var(--text-muted);font-size:10px}
-#reset{width:100%;padding:7px;font-size:12px;background:var(--surface-2);border:1px solid var(--border);border-radius:var(--r-sm);cursor:pointer;color:var(--text)}
-#reset:hover{background:var(--accent-bg)}
+#reset{padding:4px 8px;font-size:12px;background:none;border:0;cursor:pointer;color:var(--accent)}
 main{flex:1;min-width:0}
 table{border-collapse:separate;border-spacing:0;width:100%;background:var(--surface);font-size:12px}
-th,td{padding:14px 12px;text-align:right;white-space:nowrap;border-bottom:1px solid var(--border)}
+th,td{padding:12px 10px;text-align:right;white-space:nowrap;border-bottom:1px solid var(--border)}
 th{font-weight:600;font-size:11px;text-transform:uppercase;letter-spacing:0.6px;color:var(--text-muted);cursor:pointer;user-select:none}
 th.l,td.l{text-align:left}
 tr:hover td{background:var(--row-hover)}
@@ -105,7 +109,7 @@ th.name-col{position:sticky;left:66px;z-index:30;background:var(--surface);borde
 .sort-arrow{font-size:10px;margin-left:3px;opacity:0.4}
 th.sorted .sort-arrow{opacity:1;color:var(--accent)}
 td.empty-data{opacity:0.25}
-.compare-cb{width:15px;height:15px;cursor:pointer;accent-color:var(--accent)}
+.compare-cb{width:16px;height:16px;cursor:pointer;accent-color:var(--accent)}
 #compare-bar{display:none;align-items:center;gap:8px;padding:4px 10px;background:var(--accent-bg);border:1px solid var(--border-focus);border-radius:var(--r-sm);font-size:12px;margin-left:auto}
 #compare-bar.visible{display:flex}
 #compare-bar button{padding:4px 12px;font-size:11px;font-weight:600;border-radius:4px;border:1px solid var(--border);cursor:pointer;transition:all .15s}
@@ -124,11 +128,49 @@ td.empty-data{opacity:0.25}
 
 @media (max-width:800px){
   .layout{flex-direction:column}
-  aside.filters{position:static;flex:1 1 auto;width:100%;max-height:none}
+  aside.filters{position:static;flex:1 1 auto;width:100%;max-height:none;padding:12px 14px}
+  .filters-toggle-btn{display:inline-flex}
+  aside.filters .filters-body{display:none;margin-top:10px}
+  aside.filters.open .filters-body{display:block}
 }
+
+@media (max-width:768px){
+  .filter-row input, .top-filters input, .top-filters select{font-size:16px}
+}
+
+@media (max-width:640px){
+  .top-filters{gap:8px}
+  .search-wrap{flex:1 1 100%}
+  .creator-dropdown-wrap{flex:1 1 auto}
+  .top-filters label{display:flex;align-items:center;gap:4px;font-size:11px}
+  .top-filters input[type=date]{width:125px}
+  
+  th.cb-col,td.cb-col{width:24px;padding:6px 2px}
+  th.rnk,td.rnk{left:24px;width:28px;padding:6px 2px;font-size:10px}
+  th.name-col,td.name-col{left:52px;max-width:120px;font-size:11px}
+  
+  #compare-bar.visible{
+    position:fixed;
+    bottom:16px;
+    left:50%;
+    transform:translateX(-50%);
+    z-index:500;
+    box-shadow:var(--shadow-md);
+    background:var(--surface);
+    border:1px solid var(--accent);
+    padding:8px 14px;
+    border-radius:var(--r-pill);
+    max-width:calc(100vw - 32px);
+    width:auto;
+  }
+}
+
 @media (max-width:480px){
   .page{padding:12px 10px 20px}
   .top-filters input[type=text]{width:100%}
+  .presets{overflow-x:auto;flex-wrap:nowrap;padding-bottom:4px;-webkit-overflow-scrolling:touch}
+  .preset-btn{flex:none}
+  th.name-col,td.name-col{max-width:95px}
 }
 </style></head>
 <body>
@@ -154,73 +196,84 @@ td.empty-data{opacity:0.25}
   <div id="staleness-banner" class="staleness-banner" hidden style="margin-bottom:12px;margin-top:10px">⚠️ <span id="staleness-text"></span></div>
 
   <div class="top-filters">
-    <div class="search-wrap"><span class="icon">🔍</span><input id="q" type="text" placeholder="Search name, creator, slug…"></div>
+    <div class="search-wrap"><span class="icon">🔍</span><input id="q" name="q" type="text" placeholder="Search name, creator, slug…" aria-label="Search models"></div>
     <div class="creator-dropdown-wrap">
       <button type="button" id="creator-btn" class="creator-btn">
         <span id="creator-btn-label">All Creators</span>
         <span class="arrow">▾</span>
       </button>
       <div id="creator-menu" class="creator-menu" hidden>
-        <label class="creator-opt"><input type="checkbox" value="all" id="creator-all" checked> <b>All Creators</b></label>
+        <label class="creator-opt" for="creator-all"><input type="checkbox" value="all" id="creator-all" name="creator-all" checked> <b>All Creators</b></label>
         <div class="creator-divider"></div>
-        <label class="creator-opt"><input type="checkbox" value="Alibaba" class="creator-cb"> Alibaba</label>
-        <label class="creator-opt"><input type="checkbox" value="Anthropic" class="creator-cb"> Anthropic</label>
-        <label class="creator-opt"><input type="checkbox" value="DeepSeek" class="creator-cb"> DeepSeek</label>
-        <label class="creator-opt"><input type="checkbox" value="Google" class="creator-cb"> Google</label>
-        <label class="creator-opt"><input type="checkbox" value="Kimi" class="creator-cb"> Kimi</label>
-        <label class="creator-opt"><input type="checkbox" value="MiniMax" class="creator-cb"> MiniMax</label>
-        <label class="creator-opt"><input type="checkbox" value="OpenAI" class="creator-cb"> OpenAI</label>
-        <label class="creator-opt"><input type="checkbox" value="Xiaomi" class="creator-cb"> Xiaomi</label>
-        <label class="creator-opt"><input type="checkbox" value="Z AI" class="creator-cb"> Z AI</label>
-        <label class="creator-opt"><input type="checkbox" value="xAI" class="creator-cb"> xAI</label>
+        <label class="creator-opt" for="creator-Alibaba"><input type="checkbox" value="Alibaba" class="creator-cb" id="creator-Alibaba" name="creator-Alibaba"> Alibaba</label>
+        <label class="creator-opt" for="creator-Anthropic"><input type="checkbox" value="Anthropic" class="creator-cb" id="creator-Anthropic" name="creator-Anthropic"> Anthropic</label>
+        <label class="creator-opt" for="creator-DeepSeek"><input type="checkbox" value="DeepSeek" class="creator-cb" id="creator-DeepSeek" name="creator-DeepSeek"> DeepSeek</label>
+        <label class="creator-opt" for="creator-Google"><input type="checkbox" value="Google" class="creator-cb" id="creator-Google" name="creator-Google"> Google</label>
+        <label class="creator-opt" for="creator-Kimi"><input type="checkbox" value="Kimi" class="creator-cb" id="creator-Kimi" name="creator-Kimi"> Kimi</label>
+        <label class="creator-opt" for="creator-MiniMax"><input type="checkbox" value="MiniMax" class="creator-cb" id="creator-MiniMax" name="creator-MiniMax"> MiniMax</label>
+        <label class="creator-opt" for="creator-OpenAI"><input type="checkbox" value="OpenAI" class="creator-cb" id="creator-OpenAI" name="creator-OpenAI"> OpenAI</label>
+        <label class="creator-opt" for="creator-Xiaomi"><input type="checkbox" value="Xiaomi" class="creator-cb" id="creator-Xiaomi" name="creator-Xiaomi"> Xiaomi</label>
+        <label class="creator-opt" for="creator-Z_AI"><input type="checkbox" value="Z AI" class="creator-cb" id="creator-Z_AI" name="creator-Z_AI"> Z AI</label>
+        <label class="creator-opt" for="creator-xAI"><input type="checkbox" value="xAI" class="creator-cb" id="creator-xAI" name="creator-xAI"> xAI</label>
       </div>
     </div>
-    <label>From <input id="from" type="date"></label>
-    <label>To <input id="to" type="date"></label>
+    <label for="from">From <input id="from" name="from" type="date"></label>
+    <label for="to">To <input id="to" name="to" type="date"></label>
     <span id="count" style="color:var(--text-muted)"></span>
   </div>
 </header>
 <div class="layout">
-  <aside class="filters card">
-    <h2>Filters <span class="filter-count" id="filter-count-badge">0</span><button class="btn-text" id="reset">Reset</button></h2>
+  <aside class="filters card" id="filters-sidebar">
+    <div class="filters-header">
+      <h2>Filters <span class="filter-count" id="filter-count-badge">0</span></h2>
+      <div class="filters-header-actions">
+        <button class="btn-text" id="reset">Reset</button>
+        <button class="filters-toggle-btn" id="filters-toggle" type="button" aria-expanded="false" aria-label="Toggle filter panel">
+          <span class="toggle-label">Filter Settings</span>
+          <span class="toggle-arrow">▾</span>
+        </button>
+      </div>
+    </div>
+    <div class="filters-body" id="filters-body">
     <div class="filter-group"><h3>Cost ($/M tokens)</h3>
-      <div class="filter-row" data-stat="in_$/M"><label>Input</label><input type="number" class="num-filter" data-stat="in_$/M" data-bound="min" placeholder="min" step="any"><span class="arrow">→</span><input type="number" class="num-filter" data-stat="in_$/M" data-bound="max" placeholder="max" step="any"></div>
-      <div class="filter-row" data-stat="out_$/M"><label>Output</label><input type="number" class="num-filter" data-stat="out_$/M" data-bound="min" placeholder="min" step="any"><span class="arrow">→</span><input type="number" class="num-filter" data-stat="out_$/M" data-bound="max" placeholder="max" step="any"></div>
-      <div class="filter-row" data-stat="blend_3to1_$/M"><label>Blended</label><input type="number" class="num-filter" data-stat="blend_3to1_$/M" data-bound="min" placeholder="min" step="any"><span class="arrow">→</span><input type="number" class="num-filter" data-stat="blend_3to1_$/M" data-bound="max" placeholder="max" step="any"></div>
+      <div class="filter-row" data-stat="in_$/M"><label for="filter-in_M-min">Input</label><input type="number" class="num-filter" id="filter-in_M-min" name="filter-in_M-min" data-stat="in_$/M" data-bound="min" placeholder="min" step="any" aria-label="Input cost min"><span class="arrow">→</span><input type="number" class="num-filter" id="filter-in_M-max" name="filter-in_M-max" data-stat="in_$/M" data-bound="max" placeholder="max" step="any" aria-label="Input cost max"></div>
+      <div class="filter-row" data-stat="out_$/M"><label for="filter-out_M-min">Output</label><input type="number" class="num-filter" id="filter-out_M-min" name="filter-out_M-min" data-stat="out_$/M" data-bound="min" placeholder="min" step="any" aria-label="Output cost min"><span class="arrow">→</span><input type="number" class="num-filter" id="filter-out_M-max" name="filter-out_M-max" data-stat="out_$/M" data-bound="max" placeholder="max" step="any" aria-label="Output cost max"></div>
+      <div class="filter-row" data-stat="blend_3to1_$/M"><label for="filter-blend_3to1_M-min">Blended</label><input type="number" class="num-filter" id="filter-blend_3to1_M-min" name="filter-blend_3to1_M-min" data-stat="blend_3to1_$/M" data-bound="min" placeholder="min" step="any" aria-label="Blended cost min"><span class="arrow">→</span><input type="number" class="num-filter" id="filter-blend_3to1_M-max" name="filter-blend_3to1_M-max" data-stat="blend_3to1_$/M" data-bound="max" placeholder="max" step="any" aria-label="Blended cost max"></div>
     </div>
     <div class="filter-group"><h3>Composite (0-100)</h3>
-      <div class="filter-row" data-stat="intelligence"><label>Intelligence</label><input type="number" class="num-filter" data-stat="intelligence" data-bound="min" placeholder="min" step="any"><span class="arrow">→</span><input type="number" class="num-filter" data-stat="intelligence" data-bound="max" placeholder="max" step="any"></div>
-      <div class="filter-row" data-stat="coding"><label>Coding</label><input type="number" class="num-filter" data-stat="coding" data-bound="min" placeholder="min" step="any"><span class="arrow">→</span><input type="number" class="num-filter" data-stat="coding" data-bound="max" placeholder="max" step="any"></div>
-      <div class="filter-row" data-stat="agentic"><label>Agentic</label><input type="number" class="num-filter" data-stat="agentic" data-bound="min" placeholder="min" step="any"><span class="arrow">→</span><input type="number" class="num-filter" data-stat="agentic" data-bound="max" placeholder="max" step="any"></div>
-      <div class="filter-row" data-stat="omniscience"><label>Omniscience</label><input type="number" class="num-filter" data-stat="omniscience" data-bound="min" placeholder="min" step="any"><span class="arrow">→</span><input type="number" class="num-filter" data-stat="omniscience" data-bound="max" placeholder="max" step="any"></div>
+      <div class="filter-row" data-stat="intelligence"><label for="filter-intelligence-min">Intelligence</label><input type="number" class="num-filter" id="filter-intelligence-min" name="filter-intelligence-min" data-stat="intelligence" data-bound="min" placeholder="min" step="any" aria-label="Intelligence min"><span class="arrow">→</span><input type="number" class="num-filter" id="filter-intelligence-max" name="filter-intelligence-max" data-stat="intelligence" data-bound="max" placeholder="max" step="any" aria-label="Intelligence max"></div>
+      <div class="filter-row" data-stat="coding"><label for="filter-coding-min">Coding</label><input type="number" class="num-filter" id="filter-coding-min" name="filter-coding-min" data-stat="coding" data-bound="min" placeholder="min" step="any" aria-label="Coding min"><span class="arrow">→</span><input type="number" class="num-filter" id="filter-coding-max" name="filter-coding-max" data-stat="coding" data-bound="max" placeholder="max" step="any" aria-label="Coding max"></div>
+      <div class="filter-row" data-stat="agentic"><label for="filter-agentic-min">Agentic</label><input type="number" class="num-filter" id="filter-agentic-min" name="filter-agentic-min" data-stat="agentic" data-bound="min" placeholder="min" step="any" aria-label="Agentic min"><span class="arrow">→</span><input type="number" class="num-filter" id="filter-agentic-max" name="filter-agentic-max" data-stat="agentic" data-bound="max" placeholder="max" step="any" aria-label="Agentic max"></div>
+      <div class="filter-row" data-stat="omniscience"><label for="filter-omniscience-min">Omniscience</label><input type="number" class="num-filter" id="filter-omniscience-min" name="filter-omniscience-min" data-stat="omniscience" data-bound="min" placeholder="min" step="any" aria-label="Omniscience min"><span class="arrow">→</span><input type="number" class="num-filter" id="filter-omniscience-max" name="filter-omniscience-max" data-stat="omniscience" data-bound="max" placeholder="max" step="any" aria-label="Omniscience max"></div>
     </div>
     <div class="filter-group"><h3>Reasoning / Science</h3>
-      <div class="filter-row" data-stat="gpqa_%"><label>GPQA %</label><input type="number" class="num-filter" data-stat="gpqa_%" data-bound="min" placeholder="min" step="any"><span class="arrow">→</span><input type="number" class="num-filter" data-stat="gpqa_%" data-bound="max" placeholder="max" step="any"></div>
-      <div class="filter-row" data-stat="hle_%"><label>HLE %</label><input type="number" class="num-filter" data-stat="hle_%" data-bound="min" placeholder="min" step="any"><span class="arrow">→</span><input type="number" class="num-filter" data-stat="hle_%" data-bound="max" placeholder="max" step="any"></div>
-      <div class="filter-row" data-stat="critpt_%"><label>CritPt %</label><input type="number" class="num-filter" data-stat="critpt_%" data-bound="min" placeholder="min" step="any"><span class="arrow">→</span><input type="number" class="num-filter" data-stat="critpt_%" data-bound="max" placeholder="max" step="any"></div>
+      <div class="filter-row" data-stat="gpqa_%"><label for="filter-gpqa-min">GPQA %</label><input type="number" class="num-filter" id="filter-gpqa-min" name="filter-gpqa-min" data-stat="gpqa_%" data-bound="min" placeholder="min" step="any" aria-label="GPQA % min"><span class="arrow">→</span><input type="number" class="num-filter" id="filter-gpqa-max" name="filter-gpqa-max" data-stat="gpqa_%" data-bound="max" placeholder="max" step="any" aria-label="GPQA % max"></div>
+      <div class="filter-row" data-stat="hle_%"><label for="filter-hle-min">HLE %</label><input type="number" class="num-filter" id="filter-hle-min" name="filter-hle-min" data-stat="hle_%" data-bound="min" placeholder="min" step="any" aria-label="HLE % min"><span class="arrow">→</span><input type="number" class="num-filter" id="filter-hle-max" name="filter-hle-max" data-stat="hle_%" data-bound="max" placeholder="max" step="any" aria-label="HLE % max"></div>
+      <div class="filter-row" data-stat="critpt_%"><label for="filter-critpt-min">CritPt %</label><input type="number" class="num-filter" id="filter-critpt-min" name="filter-critpt-min" data-stat="critpt_%" data-bound="min" placeholder="min" step="any" aria-label="CritPt % min"><span class="arrow">→</span><input type="number" class="num-filter" id="filter-critpt-max" name="filter-critpt-max" data-stat="critpt_%" data-bound="max" placeholder="max" step="any" aria-label="CritPt % max"></div>
     </div>
     <div class="filter-group"><h3>Reliability</h3>
-      <div class="filter-row" data-stat="non_halluc_%"><label>Non-hallucination %</label><input type="number" class="num-filter" data-stat="non_halluc_%" data-bound="min" placeholder="min" step="any"><span class="arrow">→</span><input type="number" class="num-filter" data-stat="non_halluc_%" data-bound="max" placeholder="max" step="any"></div>
-      <div class="filter-row" data-stat="ifbench_%"><label>IFBench %</label><input type="number" class="num-filter" data-stat="ifbench_%" data-bound="min" placeholder="min" step="any"><span class="arrow">→</span><input type="number" class="num-filter" data-stat="ifbench_%" data-bound="max" placeholder="max" step="any"></div>
+      <div class="filter-row" data-stat="non_halluc_%"><label for="filter-non_halluc-min">Non-hallucination %</label><input type="number" class="num-filter" id="filter-non_halluc-min" name="filter-non_halluc-min" data-stat="non_halluc_%" data-bound="min" placeholder="min" step="any" aria-label="Non-hallucination % min"><span class="arrow">→</span><input type="number" class="num-filter" id="filter-non_halluc-max" name="filter-non_halluc-max" data-stat="non_halluc_%" data-bound="max" placeholder="max" step="any" aria-label="Non-hallucination % max"></div>
+      <div class="filter-row" data-stat="ifbench_%"><label for="filter-ifbench-min">IFBench %</label><input type="number" class="num-filter" id="filter-ifbench-min" name="filter-ifbench-min" data-stat="ifbench_%" data-bound="min" placeholder="min" step="any" aria-label="IFBench % min"><span class="arrow">→</span><input type="number" class="num-filter" id="filter-ifbench-max" name="filter-ifbench-max" data-stat="ifbench_%" data-bound="max" placeholder="max" step="any" aria-label="IFBench % max"></div>
     </div>
     <div class="filter-group"><h3>Agentic / Long-context</h3>
-      <div class="filter-row" data-stat="lcr_%"><label>LCR %</label><input type="number" class="num-filter" data-stat="lcr_%" data-bound="min" placeholder="min" step="any"><span class="arrow">→</span><input type="number" class="num-filter" data-stat="lcr_%" data-bound="max" placeholder="max" step="any"></div>
-      <div class="filter-row" data-stat="tau2_%"><label>τ²-Bench %</label><input type="number" class="num-filter" data-stat="tau2_%" data-bound="min" placeholder="min" step="any"><span class="arrow">→</span><input type="number" class="num-filter" data-stat="tau2_%" data-bound="max" placeholder="max" step="any"></div>
-      <div class="filter-row" data-stat="tau_banking_%"><label>τ³-Bench Banking % (v4.1)</label><input type="number" class="num-filter" data-stat="tau_banking_%" data-bound="min" placeholder="min" step="any"><span class="arrow">→</span><input type="number" class="num-filter" data-stat="tau_banking_%" data-bound="max" placeholder="max" step="any"></div>
-      <div class="filter-row" data-stat="gdpval_%"><label>GDPval %</label><input type="number" class="num-filter" data-stat="gdpval_%" data-bound="min" placeholder="min" step="any"><span class="arrow">→</span><input type="number" class="num-filter" data-stat="gdpval_%" data-bound="max" placeholder="max" step="any"></div>
+      <div class="filter-row" data-stat="lcr_%"><label for="filter-lcr-min">LCR %</label><input type="number" class="num-filter" id="filter-lcr-min" name="filter-lcr-min" data-stat="lcr_%" data-bound="min" placeholder="min" step="any" aria-label="LCR % min"><span class="arrow">→</span><input type="number" class="num-filter" id="filter-lcr-max" name="filter-lcr-max" data-stat="lcr_%" data-bound="max" placeholder="max" step="any" aria-label="LCR % max"></div>
+      <div class="filter-row" data-stat="tau2_%"><label for="filter-tau2-min">τ²-Bench %</label><input type="number" class="num-filter" id="filter-tau2-min" name="filter-tau2-min" data-stat="tau2_%" data-bound="min" placeholder="min" step="any" aria-label="τ²-Bench % min"><span class="arrow">→</span><input type="number" class="num-filter" id="filter-tau2-max" name="filter-tau2-max" data-stat="tau2_%" data-bound="max" placeholder="max" step="any" aria-label="τ²-Bench % max"></div>
+      <div class="filter-row" data-stat="tau_banking_%"><label for="filter-tau_banking-min">τ³-Bench Banking % (v4.1)</label><input type="number" class="num-filter" id="filter-tau_banking-min" name="filter-tau_banking-min" data-stat="tau_banking_%" data-bound="min" placeholder="min" step="any" aria-label="τ³-Bench Banking % min"><span class="arrow">→</span><input type="number" class="num-filter" id="filter-tau_banking-max" name="filter-tau_banking-max" data-stat="tau_banking_%" data-bound="max" placeholder="max" step="any" aria-label="τ³-Bench Banking % max"></div>
+      <div class="filter-row" data-stat="gdpval_%"><label for="filter-gdpval-min">GDPval %</label><input type="number" class="num-filter" id="filter-gdpval-min" name="filter-gdpval-min" data-stat="gdpval_%" data-bound="min" placeholder="min" step="any" aria-label="GDPval % min"><span class="arrow">→</span><input type="number" class="num-filter" id="filter-gdpval-max" name="filter-gdpval-max" data-stat="gdpval_%" data-bound="max" placeholder="max" step="any" aria-label="GDPval % max"></div>
     </div>
     <div class="filter-group"><h3>Coding benchmarks</h3>
-      <div class="filter-row" data-stat="terminalbench_hard_%"><label>Terminal-Bench Hard %</label><input type="number" class="num-filter" data-stat="terminalbench_hard_%" data-bound="min" placeholder="min" step="any"><span class="arrow">→</span><input type="number" class="num-filter" data-stat="terminalbench_hard_%" data-bound="max" placeholder="max" step="any"></div>
-      <div class="filter-row" data-stat="terminalbench_v2_1_%"><label>Terminal-Bench 2.1 % (v4.1)</label><input type="number" class="num-filter" data-stat="terminalbench_v2_1_%" data-bound="min" placeholder="min" step="any"><span class="arrow">→</span><input type="number" class="num-filter" data-stat="terminalbench_v2_1_%" data-bound="max" placeholder="max" step="any"></div>
-      <div class="filter-row" data-stat="scicode_%"><label>SciCode %</label><input type="number" class="num-filter" data-stat="scicode_%" data-bound="min" placeholder="min" step="any"><span class="arrow">→</span><input type="number" class="num-filter" data-stat="scicode_%" data-bound="max" placeholder="max" step="any"></div>
+      <div class="filter-row" data-stat="terminalbench_hard_%"><label for="filter-terminalbench_hard-min">Terminal-Bench Hard %</label><input type="number" class="num-filter" id="filter-terminalbench_hard-min" name="filter-terminalbench_hard-min" data-stat="terminalbench_hard_%" data-bound="min" placeholder="min" step="any" aria-label="Terminal-Bench Hard % min"><span class="arrow">→</span><input type="number" class="num-filter" id="filter-terminalbench_hard-max" name="filter-terminalbench_hard-max" data-stat="terminalbench_hard_%" data-bound="max" placeholder="max" step="any" aria-label="Terminal-Bench Hard % max"></div>
+      <div class="filter-row" data-stat="terminalbench_v2_1_%"><label for="filter-terminalbench_v2_1-min">Terminal-Bench 2.1 % (v4.1)</label><input type="number" class="num-filter" id="filter-terminalbench_v2_1-min" name="filter-terminalbench_v2_1-min" data-stat="terminalbench_v2_1_%" data-bound="min" placeholder="min" step="any" aria-label="Terminal-Bench 2.1 % min"><span class="arrow">→</span><input type="number" class="num-filter" id="filter-terminalbench_v2_1-max" name="filter-terminalbench_v2_1-max" data-stat="terminalbench_v2_1_%" data-bound="max" placeholder="max" step="any" aria-label="Terminal-Bench 2.1 % max"></div>
+      <div class="filter-row" data-stat="scicode_%"><label for="filter-scicode-min">SciCode %</label><input type="number" class="num-filter" id="filter-scicode-min" name="filter-scicode-min" data-stat="scicode_%" data-bound="min" placeholder="min" step="any" aria-label="SciCode % min"><span class="arrow">→</span><input type="number" class="num-filter" id="filter-scicode-max" name="filter-scicode-max" data-stat="scicode_%" data-bound="max" placeholder="max" step="any" aria-label="SciCode % max"></div>
     </div>
     <div class="filter-group"><h3>Vision</h3>
-      <div class="filter-row" data-stat="mmmu_pro_%"><label>MMMU-Pro %</label><input type="number" class="num-filter" data-stat="mmmu_pro_%" data-bound="min" placeholder="min" step="any"><span class="arrow">→</span><input type="number" class="num-filter" data-stat="mmmu_pro_%" data-bound="max" placeholder="max" step="any"></div>
+      <div class="filter-row" data-stat="mmmu_pro_%"><label for="filter-mmmu_pro-min">MMMU-Pro %</label><input type="number" class="num-filter" id="filter-mmmu_pro-min" name="filter-mmmu_pro-min" data-stat="mmmu_pro_%" data-bound="min" placeholder="min" step="any" aria-label="MMMU-Pro % min"><span class="arrow">→</span><input type="number" class="num-filter" id="filter-mmmu_pro-max" name="filter-mmmu_pro-max" data-stat="mmmu_pro_%" data-bound="max" placeholder="max" step="any" aria-label="MMMU-Pro % max"></div>
     </div>
     <div class="filter-group"><h3>Performance</h3>
-      <div class="filter-row" data-stat="speed_tps"><label>Speed t/s</label><input type="number" class="num-filter" data-stat="speed_tps" data-bound="min" placeholder="min" step="any"><span class="arrow">→</span><input type="number" class="num-filter" data-stat="speed_tps" data-bound="max" placeholder="max" step="any"></div>
-      <div class="filter-row" data-stat="ttft_s"><label>TTFT s</label><input type="number" class="num-filter" data-stat="ttft_s" data-bound="min" placeholder="min" step="any"><span class="arrow">→</span><input type="number" class="num-filter" data-stat="ttft_s" data-bound="max" placeholder="max" step="any"></div>
-      <div class="filter-row" data-stat="ttfa_s"><label>TTFA s</label><input type="number" class="num-filter" data-stat="ttfa_s" data-bound="min" placeholder="min" step="any"><span class="arrow">→</span><input type="number" class="num-filter" data-stat="ttfa_s" data-bound="max" placeholder="max" step="any"></div>
+      <div class="filter-row" data-stat="speed_tps"><label for="filter-speed_tps-min">Speed t/s</label><input type="number" class="num-filter" id="filter-speed_tps-min" name="filter-speed_tps-min" data-stat="speed_tps" data-bound="min" placeholder="min" step="any" aria-label="Speed t/s min"><span class="arrow">→</span><input type="number" class="num-filter" id="filter-speed_tps-max" name="filter-speed_tps-max" data-stat="speed_tps" data-bound="max" placeholder="max" step="any" aria-label="Speed t/s max"></div>
+      <div class="filter-row" data-stat="ttft_s"><label for="filter-ttft_s-min">TTFT s</label><input type="number" class="num-filter" id="filter-ttft_s-min" name="filter-ttft_s-min" data-stat="ttft_s" data-bound="min" placeholder="min" step="any" aria-label="TTFT s min"><span class="arrow">→</span><input type="number" class="num-filter" id="filter-ttft_s-max" name="filter-ttft_s-max" data-stat="ttft_s" data-bound="max" placeholder="max" step="any" aria-label="TTFT s max"></div>
+      <div class="filter-row" data-stat="ttfa_s"><label for="filter-ttfa_s-min">TTFA s</label><input type="number" class="num-filter" id="filter-ttfa_s-min" name="filter-ttfa_s-min" data-stat="ttfa_s" data-bound="min" placeholder="min" step="any" aria-label="TTFA s min"><span class="arrow">→</span><input type="number" class="num-filter" id="filter-ttfa_s-max" name="filter-ttfa_s-max" data-stat="ttfa_s" data-bound="max" placeholder="max" step="any" aria-label="TTFA s max"></div>
+    </div>
     </div>
   </aside>
   <main>
@@ -237,7 +290,7 @@ td.empty-data{opacity:0.25}
 <div class="card table-card"><div class="scroll">
 <table id="t"><thead><tr>
   <th class="l rnk" data-i="0" data-t="n" data-tip="Rank sorted by current sort column">#</th>
-  <th class="cb-col"><input type="checkbox" id="check-all" class="compare-cb" title="Select all"></th>
+  <th class="cb-col"><input type="checkbox" id="check-all" name="check-all" class="compare-cb" title="Select all" aria-label="Select all models"></th>
   <th class="l name-col" data-i="1" data-t="s" data-tip="Model name">Name</th>
   <th class="l" data-i="2" data-t="s" data-tip="Model creator / organization">Creator</th>
   <th data-i="3" data-t="d" data-tip="Release date">Released</th>
@@ -274,18 +327,40 @@ td.empty-data{opacity:0.25}
 </div><!-- /.page -->
 
 <script>
-/* Tooltip handler */
+/* Tooltip & Filter Toggle handlers */
 var tipEl=document.getElementById('tip');
 document.querySelectorAll('th[data-tip]').forEach(function(th){
-  th.addEventListener('mouseenter',function(e){
+  function showTip(e){
     tipEl.textContent=th.dataset.tip;
     tipEl.style.display='block';
     var r=th.getBoundingClientRect();
-    tipEl.style.left=Math.max(8,Math.min(r.left+r.width/2-140,window.innerWidth-296))+'px';
-    tipEl.style.top=(r.top-tipEl.offsetHeight-8)+'px';
-  });
-  th.addEventListener('mouseleave',function(){tipEl.style.display='none'});
+    var tipW=Math.min(280, window.innerWidth - 16);
+    tipEl.style.width=tipW+'px';
+    var left=Math.max(8, Math.min(r.left + r.width/2 - tipW/2, window.innerWidth - tipW - 8));
+    tipEl.style.left=left+'px';
+    var top=r.top - tipEl.offsetHeight - 8;
+    if (top < 8) top = r.bottom + 8;
+    tipEl.style.top=top+'px';
+  }
+  th.addEventListener('mouseenter', showTip);
+  th.addEventListener('mouseleave', function(){tipEl.style.display='none'});
+  th.addEventListener('click', showTip);
 });
+
+document.addEventListener('touchstart', function(e){
+  if (tipEl && !e.target.closest('th[data-tip]')) {
+    tipEl.style.display='none';
+  }
+}, {passive: true});
+
+var filtersSidebar=document.getElementById('filters-sidebar');
+var filtersToggle=document.getElementById('filters-toggle');
+if (filtersToggle && filtersSidebar) {
+  filtersToggle.addEventListener('click', function(){
+    var isOpen = filtersSidebar.classList.toggle('open');
+    filtersToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+  });
+}
 
 const tbody=document.querySelector('#t tbody');
 const q=document.getElementById('q'),
@@ -732,7 +807,7 @@ function buildRow(m, rank){
   }
   return `<tr${rowClass} data-release="${esc(m.released||'')}" data-slug="${esc(m.slug||'')}">`+
     `<td class="num rnk" data-rank>${rank}</td>`+
-    `<td class="cb-col"><input type="checkbox" class="compare-cb" data-model-row></td>`+
+    `<td class="cb-col"><input type="checkbox" class="compare-cb" data-model-row id="cmp-${esc(m.slug||rank)}" name="compare-model-${esc(m.slug||rank)}" aria-label="Select ${esc(displayName)} for comparison"></td>`+
     `<td class="l name-col" title="${esc(displayName)}" data-val="${esc(displayName.toLowerCase())}"><span class="cell-title">${esc(displayName)}</span></td>`+
     `<td class="l" data-creator="${esc(m.creator||'')}" data-val="${esc((m.creator||'').toLowerCase())}"><span class="dot-badge" style="--dot-color:var(${dotFor(m.creator||'')})">${esc(m.creator||'')}</span></td>`+
     `<td class="num" data-t="d" data-val="${esc(m.released||'')}">${esc(m.released||'')}</td>`+
@@ -826,9 +901,11 @@ function resetAllFilterInputs(){
   if(q) q.value='';
   if(fromI) fromI.value='';
   if(toI) toI.value='';
-  if(creatorSelect) creatorSelect.value='all';
-  document.querySelectorAll('.num-filter').forEach(function(i){i.value=''});
-  document.querySelectorAll('.preset-btn').forEach(function(b){b.classList.remove('active')});
+  if(creatorAllCb) creatorAllCb.checked=true;
+  if(creatorCbs) creatorCbs.forEach(function(c){c.checked=false;});
+  updateCreatorBtnLabel();
+  document.querySelectorAll('.num-filter').forEach(function(i){i.value='';});
+  document.querySelectorAll('.preset-btn').forEach(function(b){b.classList.remove('active');});
 }
 
 loadModels().then(()=>{
