@@ -8041,7 +8041,7 @@
         "audio": false,
         "video": false
       },
-      "featured": false,
+      "featured": true,
       "note": null,
       "has_rich_data": true,
       "composite": {

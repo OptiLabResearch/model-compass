@@ -103,7 +103,7 @@ FEATURED_SLUGS = {
     # Budget / specialized
     'minimax-m3', 'qwen3-7-plus',
     'mimo-v2-5-pro', 'mimo-v2-5-0424',
-    'deepseek-v4-pro',
+    'deepseek-v4-pro', 'deepseek-v4-flash',
 }
 
 # OpenRouter routing slug for models that are available through it (i.e. not
