@@ -147,7 +147,7 @@ td.empty-data{opacity:0.25}
   
   th.cb-col,td.cb-col{width:24px;padding:6px 2px}
   th.rnk,td.rnk{left:24px;width:28px;padding:6px 2px;font-size:10px}
-  th.name-col,td.name-col{left:52px;max-width:120px;font-size:11px}
+  th.name-col,td.name-col{left:52px;max-width:180px;font-size:12px}
   
   #compare-bar.visible{
     position:fixed;
@@ -170,7 +170,7 @@ td.empty-data{opacity:0.25}
   .top-filters input[type=text]{width:100%}
   .presets{overflow-x:auto;flex-wrap:nowrap;padding-bottom:4px;-webkit-overflow-scrolling:touch}
   .preset-btn{flex:none}
-  th.name-col,td.name-col{max-width:95px}
+  th.name-col,td.name-col{max-width:160px}
 }
 </style></head>
 <body>
@@ -216,10 +216,7 @@ td.empty-data{opacity:0.25}
         <label class="creator-opt" for="creator-Z_AI"><input type="checkbox" value="Z AI" class="creator-cb" id="creator-Z_AI" name="creator-Z_AI"> Z AI</label>
         <label class="creator-opt" for="creator-xAI"><input type="checkbox" value="xAI" class="creator-cb" id="creator-xAI" name="creator-xAI"> xAI</label>
       </div>
-    </div>
     <label for="from">From <input id="from" name="from" type="date"></label>
-    <label for="to">To <input id="to" name="to" type="date"></label>
-    <span id="count" style="color:var(--text-muted)"></span>
   </div>
 </header>
 <div class="layout">
@@ -364,8 +361,7 @@ if (filtersToggle && filtersSidebar) {
 
 const tbody=document.querySelector('#t tbody');
 const q=document.getElementById('q'),
-      fromI=document.getElementById('from'), toI=document.getElementById('to'),
-      cnt=document.getElementById('count');
+      fromI=document.getElementById('from');
 const filterCountBadge=document.getElementById('filter-count-badge');
 const filterRows=document.querySelectorAll('.filter-row[data-stat]');
 
@@ -488,7 +484,7 @@ function updateActiveFilterUI(){
 }
 
 function applyFilter(){
-  const Q=q.value.toLowerCase(), from=fromI.value, to=toI.value;
+  const Q=q.value.toLowerCase(), from=fromI ? fromI.value : '';
   const selectedCreators=getSelectedCreators();
   const ranges=getRanges();
   let n=0;
@@ -503,7 +499,7 @@ function applyFilter(){
 
     const txt=r.innerText.toLowerCase();
     const d=r.dataset.release||'';
-    let show=txt.includes(Q) && (!from||(d&&d>=from)) && (!to||(d&&d<=to));
+    let show=txt.includes(Q) && (!from||(d&&d>=from));
 
     /* Multi-select Creator filter */
     if(show && selectedCreators.size>0){
@@ -527,7 +523,6 @@ function applyFilter(){
     if(show) n++;
   });
 
-  cnt.textContent=`${n} of ${tbody.rows.length} rows`;
   var tableCountN=document.getElementById('table-count-n');
   if(tableCountN) tableCountN.textContent=n;
   updateRanks();
@@ -535,7 +530,7 @@ function applyFilter(){
   updateHash();
 }
 
-[q,fromI,toI].forEach(el=>{
+[q,fromI].forEach(el=>{
   if(!el) return;
   el.addEventListener('input',applyFilter);
 });
@@ -545,7 +540,6 @@ document.getElementById('reset').addEventListener('click',()=>{
   document.querySelectorAll('.num-filter').forEach(i=>i.value='');
   if(q) q.value='';
   if(fromI) fromI.value='';
-  if(toI) toI.value='';
   if(creatorAllCb) creatorAllCb.checked=true;
   if(creatorCbs) creatorCbs.forEach(function(c){c.checked=false});
   updateCreatorBtnLabel();
