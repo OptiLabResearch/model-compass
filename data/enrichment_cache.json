@@ -1,6 +1,6 @@
 {
   "description": "Last-known-good values for metrics the AA API does not expose (omniscience/non-hallucination, agentic index, GDPval, CritPt, MMMU-Pro, context window). Written by scripts/fetch_aa_models.py. Each entry records the date it was observed; fresh page data always overrides these.",
-  "updated_at": "2026-07-26",
+  "updated_at": "2026-07-27",
   "models": {
     "claude-fable-5": {
       "composite": {
@@ -30,8 +30,8 @@
         "audio": false,
         "video": false
       },
-      "_as_of": "2026-07-26",
-      "_name": "Claude Fable 5 (Adaptive Reasoning, Max Effort, Opus 4.8 Fallback)"
+      "_as_of": "2026-07-27",
+      "_name": "Claude Fable 5 (Max)"
     },
     "claude-opus-4-6": {
       "composite": {
@@ -186,8 +186,8 @@
         "audio": false,
         "video": false
       },
-      "_as_of": "2026-07-26",
-      "_name": "Claude Opus 4.8 (Adaptive Reasoning, Max Effort)"
+      "_as_of": "2026-07-27",
+      "_name": "Claude Opus 4.8 (Max)"
     },
     "claude-opus-5": {
       "composite": {
@@ -218,8 +218,8 @@
         "audio": false,
         "video": false
       },
-      "_as_of": "2026-07-26",
-      "_name": "Claude Opus 5 (Adaptive Reasoning, Max Effort)"
+      "_as_of": "2026-07-27",
+      "_name": "Claude Opus 5 (Max)"
     },
     "claude-sonnet-4-6": {
       "composite": {
@@ -344,8 +344,8 @@
         "audio": false,
         "video": false
       },
-      "_as_of": "2026-07-26",
-      "_name": "Claude Sonnet 5 (Adaptive Reasoning, Max Effort)"
+      "_as_of": "2026-07-27",
+      "_name": "Claude Sonnet 5 (Max)"
     },
     "claude-sonnet-5-non-reasoning": {
       "composite": {
@@ -413,7 +413,7 @@
         "audio": false,
         "video": false
       },
-      "_as_of": "2026-07-26",
+      "_as_of": "2026-07-27",
       "_name": "Command A+"
     },
     "deepseek-v4-flash": {
@@ -450,8 +450,8 @@
         "audio": false,
         "video": false
       },
-      "_as_of": "2026-07-26",
-      "_name": "DeepSeek V4 Flash (Reasoning, Max Effort)"
+      "_as_of": "2026-07-27",
+      "_name": "DeepSeek V4 Flash (Max)"
     },
     "deepseek-v4-flash-high": {
       "composite": {
@@ -556,8 +556,8 @@
         "audio": false,
         "video": false
       },
-      "_as_of": "2026-07-26",
-      "_name": "DeepSeek V4 Pro (Reasoning, Max Effort)"
+      "_as_of": "2026-07-27",
+      "_name": "DeepSeek V4 Pro (Max)"
     },
     "deepseek-v4-pro-high": {
       "composite": {
@@ -863,7 +863,7 @@
         "audio": false,
         "video": false
       },
-      "_as_of": "2026-07-26",
+      "_as_of": "2026-07-27",
       "_name": "Gemini 3.5 Flash-Lite"
     },
     "gemini-3-5-flash-medium": {
@@ -955,7 +955,7 @@
         "audio": false,
         "video": false
       },
-      "_as_of": "2026-07-26",
+      "_as_of": "2026-07-27",
       "_name": "Gemini 3.6 Flash (high)"
     },
     "gemma-4-12b": {
@@ -1135,7 +1135,7 @@
         "audio": false,
         "video": false
       },
-      "_as_of": "2026-07-26",
+      "_as_of": "2026-07-27",
       "_name": "Gemma 4 31B (Reasoning)"
     },
     "gemma-4-31b-non-reasoning": {
@@ -1522,7 +1522,7 @@
         "audio": false,
         "video": false
       },
-      "_as_of": "2026-07-26",
+      "_as_of": "2026-07-27",
       "_name": "GLM-5.2 (max)"
     },
     "glm-5-non-reasoning": {
@@ -2183,7 +2183,7 @@
         "audio": false,
         "video": false
       },
-      "_as_of": "2026-07-26",
+      "_as_of": "2026-07-27",
       "_name": "GPT-5.5 Pro (xhigh)"
     },
     "gpt-5-6-luna": {
@@ -2217,7 +2217,7 @@
         "audio": false,
         "video": false
       },
-      "_as_of": "2026-07-26",
+      "_as_of": "2026-07-27",
       "_name": "GPT-5.6 Luna (max)"
     },
     "gpt-5-6-sol": {
@@ -2250,7 +2250,7 @@
         "audio": false,
         "video": false
       },
-      "_as_of": "2026-07-26",
+      "_as_of": "2026-07-27",
       "_name": "GPT-5.6 Sol (max)"
     },
     "gpt-5-6-terra": {
@@ -2284,7 +2284,7 @@
         "audio": false,
         "video": false
       },
-      "_as_of": "2026-07-26",
+      "_as_of": "2026-07-27",
       "_name": "GPT-5.6 Terra (max)"
     },
     "granite-4-1-30b": {
@@ -2667,7 +2667,7 @@
         "audio": false,
         "video": false
       },
-      "_as_of": "2026-07-26",
+      "_as_of": "2026-07-27",
       "_name": "Grok 4.5 (high)"
     },
     "hy3": {
@@ -2806,7 +2806,7 @@
         "audio": false,
         "video": false
       },
-      "_as_of": "2026-07-26",
+      "_as_of": "2026-07-27",
       "_name": "Inkling (xhigh)"
     },
     "jt-35b-flash": {
@@ -3082,7 +3082,7 @@
         "omniscience_index": 18.4
       },
       "benchmarks": {
-        "gdpval_v2": 59.3,
+        "gdpval_v2": 59.4,
         "critpt": 23.4,
         "mmmu_pro": 80.5,
         "apex_agents_aa": 41.3,
@@ -3108,7 +3108,7 @@
         "audio": false,
         "video": false
       },
-      "_as_of": "2026-07-26",
+      "_as_of": "2026-07-27",
       "_name": "Kimi K3"
     },
     "lfm2-24b-a2b": {
@@ -3484,7 +3484,7 @@
         "audio": false,
         "video": false
       },
-      "_as_of": "2026-07-26",
+      "_as_of": "2026-07-27",
       "_name": "MiMo-V2.5-Pro"
     },
     "mimo-v2-5-pro-non-reasoning": {
@@ -3816,7 +3816,7 @@
         "audio": false,
         "video": false
       },
-      "_as_of": "2026-07-26",
+      "_as_of": "2026-07-27",
       "_name": "MiniMax-M3"
     },
     "mistral-medium-3-5": {
@@ -3852,7 +3852,7 @@
         "audio": false,
         "video": false
       },
-      "_as_of": "2026-07-26",
+      "_as_of": "2026-07-27",
       "_name": "Mistral Medium 3.5"
     },
     "mistral-small-4": {
@@ -3986,7 +3986,7 @@
         "audio": false,
         "video": false
       },
-      "_as_of": "2026-07-26",
+      "_as_of": "2026-07-27",
       "_name": "Muse Spark 1.1 (xhigh)"
     },
     "nanbeige4-1-3b": {
@@ -4268,7 +4268,7 @@
         "audio": false,
         "video": false
       },
-      "_as_of": "2026-07-26",
+      "_as_of": "2026-07-27",
       "_name": "Nemotron 3 Ultra 550B A55B (Reasoning)"
     },
     "olmo-3-1-32b-instruct": {
@@ -5172,7 +5172,7 @@
         "audio": false,
         "video": false
       },
-      "_as_of": "2026-07-26",
+      "_as_of": "2026-07-27",
       "_name": "Qwen3.7 Max"
     },
     "qwen3-7-plus": {
