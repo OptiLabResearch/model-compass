@@ -27,7 +27,6 @@
   --dot-1: #D97757; --dot-2: #3f6b35; --dot-3: #3730a3;
   --dot-4: #9d174d; --dot-5: #a16207; --dot-6: #52525B;
   --r-sm: 8px; --r-md: 12px; --r-lg: 16px; --r-pill: 999px;
-  --serif: 'Source Serif 4', Georgia, serif;
   --sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   --mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, monospace;
   --nav-h: 60px;
@@ -111,7 +110,7 @@ a { color: var(--accent); }
 }
 #site-nav .brand-tile img { display: block; width: 100%; height: 100%; }
 #site-nav .brand-text { display: flex; flex-direction: column; line-height: 1.25; }
-#site-nav .brand-name { font-family: var(--serif); font-weight: 600; font-size: 16px; color: var(--text); }
+#site-nav .brand-name { font-family: var(--sans); font-weight: 650; font-size: 16px; letter-spacing: -0.15px; color: var(--text); }
 #site-nav .brand-sub  { font-size: 11px; color: var(--text-muted); white-space: nowrap; }
 
 /* Segmented control (replaces the loose tab links) */
@@ -172,7 +171,7 @@ a { color: var(--accent); }
   color: var(--text-muted); margin-bottom: 10px;
 }
 .stat-tile .value {
-  font-family: var(--serif); font-size: 34px; font-weight: 600; line-height: 1;
+  font-family: var(--sans); font-size: 34px; font-weight: 650; line-height: 1;
   letter-spacing: -0.5px; color: var(--text);
 }
 .stat-tile .unit {
