@@ -231,13 +231,16 @@ a { color: var(--accent); }
   -webkit-overflow-scrolling: touch;
 }
 @media (max-width: 800px) {
+  .table-card {
+    overflow: visible;
+  }
   .table-card > .scroll {
-    max-height: calc(100svh - var(--nav-h) - 32px);
-    max-height: calc(100vh - var(--nav-h) - 32px);
+    max-height: none;
     overflow-x: auto;
-    overflow-y: auto;
-    overscroll-behavior: none;
+    overflow-y: visible;
     -webkit-overflow-scrolling: touch;
+    touch-action: pan-x pan-y;
+    padding-right: 16px;
   }
 }
 .table-card thead th {

@@ -73,7 +73,7 @@ aside.filters.open .filters-toggle-btn .toggle-arrow{transform:rotate(180deg)}
 .filter-row .arrow{color:var(--text-muted);font-size:10px}
 #reset{padding:4px 8px;font-size:12px;background:none;border:0;cursor:pointer;color:var(--accent)}
 main{flex:1;min-width:0}
-table{border-collapse:separate;border-spacing:0;width:max-content;min-width:100%;background:var(--surface);font-size:12px}
+table{border-collapse:separate;border-spacing:0;width:max-content;min-width:100%;min-width:950px;background:var(--surface);font-size:12px;margin-right:24px}
 th,td{padding:12px 10px;text-align:right;white-space:nowrap;border-bottom:1px solid var(--border)}
 th{font-family:var(--sans);font-weight:500;font-size:11px;letter-spacing:0.1px;color:var(--text-secondary);cursor:pointer;user-select:none}
 th.l,td.l{text-align:left}
@@ -89,7 +89,7 @@ th.cb-col,td.cb-col{position:sticky;left:36px;z-index:8;width:30px;min-width:30p
 th.cb-col{z-index:30}
 td.name-col{position:sticky;left:66px;z-index:8;background:var(--surface);border-right:1px solid var(--border);box-shadow:3px 0 6px -2px rgba(0,0,0,0.12);white-space:nowrap !important;width:220px;min-width:220px;max-width:220px;overflow:hidden;text-overflow:ellipsis}
 th.name-col{position:sticky;left:66px;z-index:30;background:var(--surface);border-right:1px solid var(--border);box-shadow:3px 0 6px -2px rgba(0,0,0,0.12);white-space:nowrap !important;width:220px;min-width:220px;max-width:220px}
-th:last-child,td:last-child{padding-right:16px;border-right:20px solid transparent !important;background-clip:padding-box !important}
+th:last-child,td:last-child{padding-right:20px}
 .cell-title{font-family:var(--sans);font-weight:550;color:var(--text);white-space:nowrap !important;display:inline-block;max-width:100%;overflow:hidden;text-overflow:ellipsis;vertical-align:middle}
 .sort-arrow{font-size:10px;margin-left:3px;opacity:0.4}
 th.sorted .sort-arrow{opacity:1;color:var(--accent)}
@@ -137,7 +137,7 @@ td.empty-data{opacity:0.25}
   th.rnk,td.rnk{left:0;width:28px;min-width:28px;max-width:28px;padding:6px 2px;font-size:10px}
   th.cb-col,td.cb-col{left:28px;width:24px;min-width:24px;max-width:24px;padding:6px 2px}
   th.name-col,td.name-col{left:52px;width:185px;min-width:185px;max-width:185px;font-size:12px}
-  th:last-child,td:last-child{padding-right:20px;border-right:24px solid transparent !important;background-clip:padding-box !important}
+  th:last-child,td:last-child{padding-right:24px}
 
   #compare-bar.visible{
     position:static;
