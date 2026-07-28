@@ -470,13 +470,6 @@ function safeHref(v, fallback){
     : (fallback||'#');
 }
 
-var DOTS=['dot-color-1','dot-color-2','dot-color-3','dot-color-4','dot-color-5','dot-color-6'];
-function dotFor(s){
-  var h=7;
-  for(var i=0;i<s.length;i++) h=(h*31+s.charCodeAt(i))|0;
-  return DOTS[Math.abs(h)%DOTS.length];
-}
-
 function shortName(name){
   if(!name) return '';
   function _repl(match){
@@ -516,7 +509,7 @@ function buildRow(m, rank){
     `<td class="num rnk" data-rank>${rank}</td>`+
     `<td class="cb-col"><input type="checkbox" class="compare-cb" data-model-row id="cmp-${esc(m.slug||rank)}" name="compare-model-${esc(m.slug||rank)}" aria-label="Select ${esc(displayName)} for comparison"></td>`+
     `<td class="l name-col" title="${esc(displayName)}" data-val="${esc(displayName.toLowerCase())}"><span class="cell-title">${esc(displayName)}</span></td>`+
-    `<td class="l creator-col" data-creator="${esc(m.creator||'')}" data-val="${esc((m.creator||'').toLowerCase())}"><span class="dot-badge ${dotFor(m.creator||'')}" aria-hidden="true"></span><span class="creator-name">${esc(m.creator||'')}</span></td>`+
+    `<td class="l creator-col" data-creator="${esc(m.creator||'')}" data-val="${esc((m.creator||'').toLowerCase())}"><span class="creator-name">${esc(m.creator||'')}</span></td>`+
     `<td class="num" data-t="d" data-val="${esc(m.released||'')}">${esc(m.released||'')}</td>`+
     cell('in_$/M', p.input, true)+
     cell('out_$/M', p.output, true)+

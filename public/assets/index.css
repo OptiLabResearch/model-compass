@@ -87,8 +87,8 @@ th.rnk,td.rnk{position:sticky;left:0;z-index:8;text-align:center;width:36px;min-
 th.rnk{z-index:30}
 th.cb-col,td.cb-col{position:sticky;left:36px;z-index:8;width:30px;min-width:30px;max-width:30px;padding:8px;background:var(--surface);border-right:1px solid var(--border)}
 th.cb-col{z-index:30}
-td.name-col{position:sticky;left:66px;z-index:8;background:var(--surface);border-right:1px solid var(--border);box-shadow:3px 0 6px -2px rgba(0,0,0,0.12);white-space:nowrap !important;width:220px;min-width:220px;max-width:220px;overflow:hidden;text-overflow:ellipsis}
-th.name-col{position:sticky;left:66px;z-index:30;background:var(--surface);border-right:1px solid var(--border);box-shadow:3px 0 6px -2px rgba(0,0,0,0.12);white-space:nowrap !important;width:220px;min-width:220px;max-width:220px}
+td.name-col{position:sticky;left:66px;z-index:8;background:var(--surface);border-right:1px solid var(--border);white-space:nowrap !important;width:220px;min-width:220px;max-width:220px;overflow:hidden;text-overflow:ellipsis}
+th.name-col{position:sticky;left:66px;z-index:30;background:var(--surface);border-right:1px solid var(--border);white-space:nowrap !important;width:220px;min-width:220px;max-width:220px}
 .creator-col{width:132px;min-width:132px;max-width:132px;overflow:hidden;text-overflow:ellipsis}
 .creator-name{vertical-align:middle}
 th:last-child,td:last-child{padding-right:20px}
@@ -136,9 +136,10 @@ td.empty-data{opacity:0.25}
   .date-filter-wrap{flex:1 1 calc(50% - 4px);min-width:130px}
   .date-filter-wrap .date-input{width:100%;flex:1}
 
+  th,td{height:39px}
   th.rnk,td.rnk{left:0;width:28px;min-width:28px;max-width:28px;padding:6px 2px;font-size:10px}
-  th.cb-col,td.cb-col{left:28px;width:24px;min-width:24px;max-width:24px;padding:6px 2px}
-  th.name-col,td.name-col{left:52px;width:185px;min-width:185px;max-width:185px;font-size:12px}
+  th.cb-col,td.cb-col{left:28px;width:34px;min-width:34px;max-width:34px;padding:6px 7px 6px 3px}
+  th.name-col,td.name-col{left:62px;width:185px;min-width:185px;max-width:185px;font-size:12px}
   .creator-col{width:132px;min-width:132px;max-width:132px}
 
   #compare-bar.visible{
@@ -162,15 +163,9 @@ td.empty-data{opacity:0.25}
 @media (max-width:480px){
   .page{padding:12px 10px 20px}
   .top-filters input[type=text]{width:100%}
-  th.name-col,td.name-col{left:52px;width:calc(100vw - 82px);min-width:160px;max-width:190px}
+  th.name-col,td.name-col{left:62px;width:calc(100vw - 92px);min-width:150px;max-width:180px}
 }
 
 .page-staleness-banner{margin:10px 0 12px}
 .model-link{color:var(--accent);text-decoration:none}
 .model-link:hover{text-decoration:underline}
-.dot-color-1{--dot-color:var(--dot-1)}
-.dot-color-2{--dot-color:var(--dot-2)}
-.dot-color-3{--dot-color:var(--dot-3)}
-.dot-color-4{--dot-color:var(--dot-4)}
-.dot-color-5{--dot-color:var(--dot-5)}
-.dot-color-6{--dot-color:var(--dot-6)}

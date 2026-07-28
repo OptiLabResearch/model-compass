@@ -182,14 +182,6 @@ a { color: var(--accent); }
   color: var(--text-muted); margin-left: 6px;
 }
 
-/* ---- Dot badges (creator / category) ---- */
-.dot-badge {
-  display: inline-block; width: 6px; height: 6px;
-  margin-right: 6px; border-radius: 50%;
-  background: var(--dot-color, var(--dot-6));
-  vertical-align: middle; flex: none;
-}
-
 .no-transitions, .no-transitions *, .no-transitions *::before, .no-transitions *::after {
   transition: none !important;
 }
@@ -233,14 +225,13 @@ a { color: var(--accent); }
     overflow: visible;
   }
   .table-card > .scroll {
-    max-height: none;
-    overflow-x: scroll;
-    overflow-y: visible;
-    overscroll-behavior-x: contain;
+    max-height: 625px; /* one 40px header + fifteen 39px model rows */
+    overflow: auto;
+    overscroll-behavior: contain;
     -webkit-overflow-scrolling: touch;
     touch-action: pan-x pan-y;
     padding-right: max(16px, env(safe-area-inset-right));
-    scrollbar-gutter: stable;
+    scrollbar-gutter: stable both-edges;
   }
 }
 .table-card thead th {
@@ -249,6 +240,11 @@ a { color: var(--accent); }
   z-index: 20;
   background: var(--surface);
   box-shadow: 0 1px 0 var(--border);
+}
+.table-card thead th.rnk,
+.table-card thead th.cb-col,
+.table-card thead th.name-col {
+  z-index: 40;
 }
 
 /* ---- Shared staleness banner (logic lives in nav.js, markup stays per-page) ---- */
