@@ -105,7 +105,7 @@ def main():
             prefix=f".{date_str}.", suffix=".tmp", delete=False,
         ) as f:
             tmp_name = f.name
-            w = csv.writer(f)
+            w = csv.writer(f, lineterminator="\n")
             w.writerow(HEADER)
             for m in data["models"]:
                 w.writerow(to_row(m))

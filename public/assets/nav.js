@@ -39,7 +39,7 @@
     const mount = document.getElementById('site-footer');
     if (!mount) return;
     mount.innerHTML =
-      '<span>Data: <a href="https://artificialanalysis.ai/models" target="_blank" rel="noopener noreferrer">Artificial Analysis</a></span>' +
+      '<span>Data from <a href="https://artificialanalysis.ai/" target="_blank" rel="noopener noreferrer">artificialanalysis.ai</a></span>' +
       '<span id="footer-scrape-date"></span>';
     applyStaleness(); // in case checkStaleness() already ran before this mount existed
   }

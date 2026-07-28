@@ -26,6 +26,7 @@ jobs:
       - name: Validate Python, site, data, and browser security
         run: |
           python3 -m py_compile scripts/*.py
+          python3 scripts/test_fetch_aa_models.py
           python3 scripts/validate_site.py
           node --check public/assets/nav.js
           node --check public/assets/models.js

@@ -2,20 +2,21 @@
 """
 fetch_aa_models.py — Build public/data/models.json from Artificial Analysis.
 
-Two sources, merged:
+Three sources, merged:
 
-  1. The official AA API (requires AA_API_KEY). Authoritative and supported.
-     Covers every tracked model (~574) but only 17 evaluations — notably it does
-     NOT expose AA-Omniscience, the agentic index, GDPval, CritPt, MMMU-Pro or
-     the context window.
+  1. AA's legacy API endpoint (requires AA_API_KEY). It currently carries a
+     broad evaluation set, but is not part of the documented V2 API.
 
-  2. The /models page's server-rendered payload. Best-effort. Carries the full
+  2. The documented Free API endpoint. Authoritative for headline indices,
+     evaluation cost, pricing, median performance, stable IDs, and index version.
+
+  3. The /models page's server-rendered payload. Best-effort. Carries the full
      metric set, but only for the ~28 models AA renders by default. This is the
      only public source for omniscience / non-hallucination.
 
-The API is the base; the page enriches it where it can. If the page scrape
-breaks (AA has been actively restructuring it), the site still builds from the
-API alone, and this script says so loudly.
+The legacy and Free APIs are merged by stable slug; the page enriches them where
+it can. Either API can act as a fallback if the other becomes unavailable. If
+the page scrape breaks, the site still builds from API data alone.
 
 Usage:
     AA_API_KEY=... python3 scripts/fetch_aa_models.py
@@ -39,8 +40,10 @@ from pathlib import Path
 from urllib.error import HTTPError, URLError
 from urllib.request import HTTPRedirectHandler, Request, build_opener
 
-API_URL = "https://artificialanalysis.ai/api/v2/data/llms/models"
+LEGACY_API_URL = "https://artificialanalysis.ai/api/v2/data/llms/models"
+FREE_API_URL = "https://artificialanalysis.ai/api/v2/language/models/free"
 PAGE_URL = "https://artificialanalysis.ai/models"
+EXPECTED_INDEX_VERSION = 4.1
 
 USER_AGENT = (
     "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
@@ -186,20 +189,114 @@ def _atomic_write_json(path: Path, obj) -> None:
             os.unlink(tmp_name)
 
 
-def fetch_api_models(api_key: str) -> list:
-    req = Request(API_URL, headers={'x-api-key': api_key, 'User-Agent': USER_AGENT})
+def _fetch_json(req: Request) -> tuple[dict, dict]:
     try:
         with _open_no_redirect(req, timeout=90) as r:
             payload = json.loads(_read_limited(r).decode('utf-8'))
+            headers = {
+                key: r.headers.get(key)
+                for key in (
+                    'X-AA-Tier', 'X-RateLimit-Limit',
+                    'X-RateLimit-Remaining', 'X-RateLimit-Reset',
+                )
+                if r.headers.get(key) is not None
+            }
     except HTTPError as e:
         raise RuntimeError(f"AA API returned HTTP {e.code}") from e
     except URLError as e:
         raise RuntimeError(f"AA API unreachable: {e.reason}") from e
+    except (UnicodeDecodeError, json.JSONDecodeError) as e:
+        raise RuntimeError("AA API returned invalid JSON") from e
+    if not isinstance(payload, dict):
+        raise RuntimeError("AA API response is not an object")
+    return payload, headers
 
+
+def fetch_legacy_api_models(api_key: str) -> list:
+    req = Request(
+        LEGACY_API_URL,
+        headers={'x-api-key': api_key, 'User-Agent': USER_AGENT},
+    )
+    payload, _ = _fetch_json(req)
     models = payload.get('data')
     if not models:
         raise RuntimeError(f"AA API returned no models (status={payload.get('status')})")
-    return models
+    return normalize_api_slugs(models)
+
+
+def normalize_api_slugs(models: list) -> list:
+    """Canonicalize mixed-case upstream slugs to AA URL-safe lowercase."""
+    normalized = []
+    for model in models:
+        item = dict(model)
+        slug = item.get('slug')
+        if isinstance(slug, str) and SLUG_RE.fullmatch(slug.lower()):
+            item['slug'] = slug.lower()
+        normalized.append(item)
+    return normalized
+
+
+def fetch_free_api_models(api_key: str) -> tuple[list, dict]:
+    """Fetch every page from the documented Free language-model endpoint."""
+    models = []
+    page = 1
+    meta = {'headers': {}}
+    while True:
+        req = Request(
+            f"{FREE_API_URL}?page={page}",
+            headers={'x-api-key': api_key, 'User-Agent': USER_AGENT},
+        )
+        payload, headers = _fetch_json(req)
+        page_models = payload.get('data')
+        pagination = payload.get('pagination')
+        if not isinstance(page_models, list) or not page_models:
+            raise RuntimeError(f"AA Free API returned no models on page {page}")
+        if not isinstance(pagination, dict):
+            raise RuntimeError("AA Free API response has no pagination object")
+        if pagination.get('page') != page:
+            raise RuntimeError(
+                f"AA Free API returned page {pagination.get('page')} while requesting {page}"
+            )
+
+        models.extend(page_models)
+        if page == 1:
+            meta['tier'] = payload.get('tier')
+            meta['intelligence_index_version'] = payload.get(
+                'intelligence_index_version'
+            )
+        meta['headers'] = headers
+
+        if not pagination.get('has_more'):
+            break
+        total_pages = pagination.get('total_pages')
+        if not isinstance(total_pages, int) or not page < total_pages <= 25:
+            raise RuntimeError(f"AA Free API returned invalid total_pages: {total_pages}")
+        page += 1
+
+    return normalize_api_slugs(models), meta
+
+
+def merge_api_models(legacy_models: list, free_models: list) -> list:
+    """Merge documented Free fields onto the broader legacy response by slug."""
+    merged = {model['slug']: dict(model) for model in legacy_models}
+    for free_model in free_models:
+        slug = free_model['slug']
+        target = merged.setdefault(slug, {})
+        for key in ('id', 'name', 'slug', 'release_date'):
+            if free_model.get(key) is not None:
+                target[key] = free_model[key]
+        for key in ('model_creator', 'evaluations', 'pricing'):
+            combined = dict(target.get(key) or {})
+            combined.update(free_model.get(key) or {})
+            target[key] = combined
+        for key in (
+            'artificial_analysis_intelligence_index_cost',
+            'performance',
+        ):
+            if isinstance(free_model.get(key), dict):
+                target[key] = free_model[key]
+        target['_has_free_api_data'] = True
+    return list(merged.values())
 
 
 def validate_api_models(models: list) -> None:
@@ -449,6 +546,9 @@ def build_model_entry(api_m: dict, rich: dict | None) -> dict:
     slug = api_m.get('slug', '')
     ev = api_m.get('evaluations') or {}
     pricing = api_m.get('pricing') or {}
+    api_cost = api_m.get('artificial_analysis_intelligence_index_cost') or {}
+    api_cost_per_task = api_cost.get('cost_per_task') or {}
+    api_performance = api_m.get('performance') or {}
 
     creator = (api_m.get('model_creator') or {}).get('name') \
         or (rich.get('creator') or {}).get('name')
@@ -477,9 +577,11 @@ def build_model_entry(api_m: dict, rich: dict | None) -> dict:
         "name": clean_name,
         "short_name": clean_short,
         "slug": slug,
+        "aa_id": api_m.get('id'),
         "aa_url": f"https://artificialanalysis.ai/models/{slug}" if slug else None,
         "openrouter_slug": OPENROUTER_SLUGS.get(slug),
         "creator": creator,
+        "creator_aa_id": (api_m.get('model_creator') or {}).get('id'),
         "released": api_m.get('release_date') or rich.get('releaseDate'),
         "knowledge_cutoff": rich.get('knowledgeCutoffDate'),
         "is_reasoning": bool(rich.get('isReasoning', False)),
@@ -520,8 +622,10 @@ def build_model_entry(api_m: dict, rich: dict | None) -> dict:
                 num(ev.get('artificial_analysis_coding_index')),
             ),
             "math_index": num(ev.get('artificial_analysis_math_index')),
-            # Page-only.
-            "agentic_index": num(rich.get('agenticIndex')),
+            "agentic_index": _first(
+                num(ev.get('artificial_analysis_agentic_index')),
+                num(rich.get('agenticIndex')),
+            ),
             "omniscience_index": num(rich.get('omniscience'), digits=1),
         },
 
@@ -567,12 +671,24 @@ def build_model_entry(api_m: dict, rich: dict | None) -> dict:
                                   num(pricing.get('price_1m_blended_3_to_1'))),
             "blended_7_2_1": num(rich.get('price1mBlended7To2To1')),
             "blended_1_1": num(rich.get('price1mBlended0To1To1')),
-            "cache_hit": num(rich.get('cacheHitPrice')),
-            "cache_write": num(rich.get('cacheWritePrice')),
+            "cache_hit": _first(
+                num(pricing.get('price_1m_cache_hit_tokens')),
+                num(rich.get('cacheHitPrice')),
+            ),
+            "cache_write": _first(
+                num(pricing.get('price_1m_cache_write_tokens')),
+                num(rich.get('cacheWritePrice')),
+            ),
         },
 
+        "intelligence_evaluation_total_cost_usd": num(
+            api_cost.get('total_cost'), 2
+        ),
         "cost_per_intelligence_task_usd": {
-            "total": num(cpt_cost.get('total'), 3),
+            "total": _first(
+                num(api_cost_per_task.get('total_cost'), 4),
+                num(cpt_cost.get('total'), 3),
+            ),
             "input": num(cpt_cost.get('input'), 4),
             "output": num(cpt_cost.get('output'), 4),
             "cache_read": num(cpt_cost.get('cacheRead'), 4),
@@ -593,19 +709,29 @@ def build_model_entry(api_m: dict, rich: dict | None) -> dict:
             # The API reports these for every model; the page only for its 28.
             # perf() maps AA's 0-means-unmeasured sentinel to null.
             "output_speed_tps": _first(
+                perf(api_performance.get('median_output_tokens_per_second')),
                 perf(ts.get('medianOutputSpeed')),
                 perf(api_m.get('median_output_tokens_per_second')),
             ),
             "ttft_seconds_total": _first(
+                perf(api_performance.get('median_time_to_first_token_seconds')),
                 perf(ts.get('medianTimeToFirstChunk')),
                 perf(api_m.get('median_time_to_first_token_seconds')),
             ),
             "ttft_seconds_answer": _first(
+                perf(api_performance.get(
+                    'median_time_to_first_answer_token_seconds'
+                )),
                 perf(ttfa.get('total')),
                 perf(api_m.get('median_time_to_first_answer_token')),
             ),
             "end_to_end_500tok": {
-                "total": num(e2e.get('total')),
+                "total": _first(
+                    perf(api_performance.get(
+                        'median_end_to_end_response_time_seconds'
+                    )),
+                    num(e2e.get('total')),
+                ),
                 "input": num(e2e.get('input')),
                 "reasoning": num(e2e.get('reasoning')),
                 "answer": num(e2e.get('answer')),
@@ -621,6 +747,10 @@ def build_model_entry(api_m: dict, rich: dict | None) -> dict:
             for k, v in (rich.get('performanceByPromptType') or {}).items()
             if isinstance(v, dict)
         ],
+        "data_sources": {
+            "documented_free_api": bool(api_m.get('_has_free_api_data')),
+            "page_enrichment": bool(rich),
+        },
     }
 
     entry['derived'] = build_derived(entry)
@@ -777,14 +907,52 @@ def main():
               "repo's GitHub Actions secrets.", file=sys.stderr)
         return 1
 
-    print(f"Fetching {API_URL} ...")
+    legacy_models = []
+    free_models = []
+    free_meta = {}
+
+    print(f"Fetching {LEGACY_API_URL} ...")
     try:
-        api_models = fetch_api_models(api_key)
+        legacy_models = fetch_legacy_api_models(api_key)
     except RuntimeError as e:
-        print(f"ERROR: {e}", file=sys.stderr)
+        print(f"  WARNING: legacy AA API unavailable: {e}", file=sys.stderr)
+    if legacy_models:
+        validate_api_models(legacy_models)
+        print(f"  {len(legacy_models)} models from the legacy API (validated)")
+
+    print(f"Fetching {FREE_API_URL} ...")
+    try:
+        free_models, free_meta = fetch_free_api_models(api_key)
+    except RuntimeError as e:
+        print(f"  WARNING: documented AA Free API unavailable: {e}", file=sys.stderr)
+    if free_models:
+        validate_api_models(free_models)
+        index_version = free_meta.get('intelligence_index_version')
+        if index_version != EXPECTED_INDEX_VERSION:
+            print(
+                f"ERROR: AA Intelligence Index version changed from "
+                f"{EXPECTED_INDEX_VERSION} to {index_version}; update the schema "
+                "and methodology copy before publishing.",
+                file=sys.stderr,
+            )
+            return 1
+        quota = free_meta.get('headers') or {}
+        quota_text = (
+            f", tier={free_meta.get('tier')}, "
+            f"remaining={quota.get('X-RateLimit-Remaining')}/"
+            f"{quota.get('X-RateLimit-Limit')}"
+        )
+        print(f"  {len(free_models)} models from the documented Free API "
+              f"(validated{quota_text})")
+
+    if not legacy_models and not free_models:
+        print("ERROR: both AA API sources failed; refusing to replace the dataset",
+              file=sys.stderr)
         return 1
+
+    api_models = merge_api_models(legacy_models, free_models)
     validate_api_models(api_models)
-    print(f"  {len(api_models)} models from the API (validated)")
+    print(f"  {len(api_models)} unique models after API merge")
 
     missing = check_featured_slugs(api_models)
     if missing:
@@ -832,11 +1000,14 @@ def main():
 
     out = {
         "version": "4.1",
+        "intelligence_index_version": (
+            free_meta.get('intelligence_index_version') or EXPECTED_INDEX_VERSION
+        ),
         "scraped_at": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
-        "source_url": PAGE_URL,
+        "source_url": FREE_API_URL,
         "scrape_method": (
-            "AA official API (all models, 17 evaluations) + /models page payload "
-            "(full metric set, top models only)"
+            "AA documented Free API + legacy API benchmark coverage + /models "
+            "page enrichment (top models only)"
         ),
         "intelligence_index_methodology": (
             "AA Intelligence Index v4.1 = composite of 9 evaluations: "
@@ -848,6 +1019,10 @@ def main():
             "total": len(models),
             "featured": n_featured,
             "with_rich_metrics": n_rich,
+            "with_documented_free_api": sum(
+                1 for model in models
+                if model['data_sources']['documented_free_api']
+            ),
             "featured_without_rich_metrics": featured_no_rich,
         },
     }

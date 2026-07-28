@@ -14,6 +14,10 @@ vm.createContext(context);
 vm.runInContext(fs.readFileSync('public/assets/nav.js', 'utf8'), context);
 
 const { escapeHtml, safeUrl } = context.ModelCompassNav;
+const navSource = fs.readFileSync('public/assets/nav.js', 'utf8');
+assert.match(navSource, /https:\/\/github\.com\/OptiLabResearch\/model-compass/);
+assert.doesNotMatch(navSource, /href="https:\/\/github\.com\/"/);
+assert.match(navSource, />artificialanalysis\.ai<\/a>/);
 assert.equal(escapeHtml('<img src=x onerror=alert(1)>'), '&lt;img src=x onerror=alert(1)&gt;');
 assert.equal(safeUrl('javascript:alert(1)', '#'), '#');
 assert.equal(safeUrl('data:text/html,boom', '#'), '#');
