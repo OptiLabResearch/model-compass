@@ -1,53 +1,61 @@
 # Model Compass
 
-Compare and evaluate LLMs — benchmark data from [Artificial Analysis](https://artificialanalysis.ai/models), refreshed weekly.
+Model Compass is a dependency-free static site for comparing recent language models using benchmark, pricing, speed, and latency data from [Artificial Analysis](https://artificialanalysis.ai/models).
 
-**All Models** ([index.html](index.html)) — full benchmark table across every model tracked in the last 6 months.
+Live site: [models.optiqo.dev](https://models.optiqo.dev)
 
-Live at [models.optiqo.dev](https://models.optiqo.dev).
+## Clone and run locally
 
-## Data
+You need Python 3.12 or newer. The site itself has no package install or build step.
 
-`data/models.json` is the single source of truth; fetched by `index.html`.
-`scripts/fetch_aa_models.py` builds it from two sources:
-
-| Source | Coverage | Provides |
-| --- | --- | --- |
-| AA official API (`AA_API_KEY`) | every tracked model | intelligence/coding indices, GPQA, HLE, SciCode, IFBench, LCR, τ², τ³-Banking, Terminal-Bench, pricing, speed, TTFT |
-| AA `/models` page payload | the ~28 models AA renders | **AA-Omniscience / non-hallucination**, agentic index, GDPval, CritPt, MMMU-Pro, context window, modalities |
-
-`data/enrichment_cache.json` remembers the page-only metrics per model. Cached values are stamped with the date observed and are always overridden by fresh data.
-
-Scores that AA has retired (MMLU-Pro, LiveCodeBench, AIME, MATH-500) are null for every model in the current window and are not displayed.
-
-## Refresh
-
-`.github/workflows/refresh.yml` runs Sundays at 19:00 UTC: fetch → export CSV snapshot to `data/history/` → commit → Cloudflare Pages auto-deploys. The job **fails loudly** (and opens an issue) if the API is unreachable or a curated model has vanished upstream, rather than committing a quietly degraded dataset.
-
-## Setup
-
-One secret for data refreshes:
-
-| Secret | Where | Why |
-| --- | --- | --- |
-| `AA_API_KEY` | GitHub Actions repo secret | the weekly data refresh |
-
-## Run locally
-
-The ignored local `.env` path is already connected to the Hermes credential store on the development machine. Do not overwrite it with `.env.example`; on another machine, create `.env` from that example and fill it locally.
-
-Serve the static page with Python:
-
-```
-python3 -m http.server 8000
+```bash
+git clone https://github.com/OptiLabResearch/model-compass.git
+cd model-compass
+python3 -m http.server 8000 --directory public
 ```
 
-Refresh the data by hand with:
+Open [http://localhost:8000](http://localhost:8000). Opening `public/index.html` directly with `file://` will not work because the page fetches `data/models.json`.
 
+Run the repository checks before submitting changes:
+
+```bash
+python3 scripts/validate_site.py
+node scripts/test_browser_security.mjs
 ```
+
+## Repository layout
+
+- `public/` is the complete deployable site and the only directory that should be published.
+- `public/data/models.json` is the browser's data source.
+- `scripts/` contains dependency-free refresh, export, validation, and security checks.
+- `data/enrichment_cache.json` retains metrics unavailable through the official API.
+- `data/history/` contains dated CSV snapshots for reproducibility.
+- `.github/workflows/` contains read-only pull-request checks and the scheduled refresh.
+
+## Data refresh
+
+The weekly workflow uses the official Artificial Analysis API, enriches it from the public models page, validates the result, exports a dated CSV, and commits only when data changed. Malformed payloads, duplicate slugs, unexpected URLs, implausible model-count drops, out-of-range values, and missing featured models fail closed.
+
+To refresh locally, copy `.env.example` to `.env`, add your own `AA_API_KEY`, restrict the file to your user, and run:
+
+```bash
+chmod 600 .env
 set -a; source .env; set +a
 python3 scripts/fetch_aa_models.py
 python3 scripts/export_history_csv.py
+python3 scripts/validate_site.py
 ```
 
-Opening the files via `file://` will not work — the page fetches `data/models.json`, which needs an HTTP server.
+Never commit `.env` or paste API keys into issues, logs, screenshots, or pull requests.
+
+## Deployment
+
+Cloudflare Pages is configured by `wrangler.toml` to publish only `public/`. The repository root must never be used as a direct-upload directory because it can contain local credentials and maintenance files.
+
+## Contributing and security
+
+Read [CONTRIBUTING.md](CONTRIBUTING.md) before opening a pull request. Report vulnerabilities privately according to [SECURITY.md](SECURITY.md), not in a public issue.
+
+## License
+
+The project source is available under the [MIT License](LICENSE). Artificial Analysis remains the source and owner of its benchmark data; review its terms before redistributing the dataset outside this project.

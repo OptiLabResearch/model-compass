@@ -1,37 +1,29 @@
 # Repository Guidelines
 
-## Project Structure & Module Organization
+## Project structure
 
-Model Compass is a static, single-page site with no application build step. `index.html` contains the full benchmark table ("All Models"), while `models.html` provides a redirect to `index.html`. Shared browser code and styling live in `assets/nav.js` and `assets/style.css`; keep page-specific scripts and styles with their HTML page unless they are reused.
+Model Compass is a dependency-free static site. `public/` is the complete deployment output: HTML lives at its root, shared browser code and styles are in `public/assets/`, and `public/data/models.json` is the UI data source. Never deploy the repository root.
 
-`data/models.json` is the UI's source of truth. `data/enrichment_cache.json` preserves metrics unavailable from the API, while dated snapshots live in `data/history/`. Python utilities in `scripts/` fetch and export this data. Deployment and scheduled refresh configuration live in `wrangler.toml` and `.github/workflows/refresh.yml`.
+Refresh and validation utilities live in `scripts/`. `data/enrichment_cache.json` preserves metrics unavailable from the API, and dated snapshots live in `data/history/`. CI and scheduled refresh configuration live in `.github/`.
 
-## Build, Test, and Development Commands
+## Local commands
 
-- `python3 -m http.server 8000` serves the static pages at `http://localhost:8000`.
-- `AA_API_KEY=... python3 scripts/fetch_aa_models.py` rebuilds `data/models.json` and updates the enrichment cache.
-- `python3 scripts/export_history_csv.py` writes today's CSV snapshot; use `--date YYYY-MM-DD` for reproducible output.
+- `python3 -m http.server 8000 --directory public` serves the site.
+- `python3 scripts/validate_site.py` checks the public boundary, CSP, HTML, data, fonts, and history.
+- `node scripts/test_browser_security.mjs` checks URL and HTML-sanitization regressions.
+- `AA_API_KEY=... python3 scripts/fetch_aa_models.py` refreshes model data.
+- `python3 scripts/export_history_csv.py` writes today's CSV snapshot.
 
-## Credentials and Environment
+## Credentials
 
-For local work, use the ignored repository-root `.env` path. On this machine it is a symlink to `/root/.hermes/.env`, so the project reuses Hermes's protected credentials without duplicating them. Do not replace or overwrite that symlink. On another machine, create `.env` from `.env.example` and fill it locally. The project uses:
+Use the ignored repository-root `.env` for local credentials and keep it mode `0600`. The only project credential is `AA_API_KEY`. Never read, print, commit, paste, or deploy secret values. GitHub and deployment credentials are managed outside repository files.
 
-- `AA_API_KEY` for local Artificial Analysis data refreshes
+## Style and testing
 
-Hermes-wide credentials may already be present in the agent's environment. Do not read, print, commit, or paste secret values. If a command reports a missing credential, report only the missing variable name. For shell commands that need the project file, load it in that shell with `set -a; source .env; set +a`.
+Use four spaces for Python and two for JavaScript. Prefer small, dependency-free changes. Treat missing benchmark values as unknown, not zero. Preserve the strict CSP, output allowlist, outbound URL allowlist, data validation, atomic writes, and formula-safe CSV export.
 
-GitHub and Cloudflare credentials are handled separately from this repository's `.env`. GitHub Actions supplies its built-in `GITHUB_TOKEN`, while `AA_API_KEY` is a GitHub repository secret. For local Wrangler/deployment administration, `CLOUDFLARE_API_TOKEN` is stored in `/root/.hermes/.env` and loaded by Hermes; use the environment variable and never open, print, copy, or commit the credential file.
+Before submitting, run the repository validation and browser-security tests. For UI work, exercise search, filters, presets, comparison, sorting, hash links, responsive layouts, and both themes.
 
-There is no compile or bundle command.
+## Commits and pull requests
 
-## Coding Style & Naming Conventions
-
-Follow existing formatting: four spaces for Python and two spaces for JavaScript. Use `snake_case` for Python functions and variables, `camelCase` for JavaScript, `UPPER_SNAKE_CASE` for constants, and kebab-case for CSS classes and web filenames. Prefer small dependency-free changes. Reuse shared CSS variables from `assets/style.css`, and treat missing benchmark values as unknown—not zero. No formatter or linter is configured, so review diffs for consistency.
-
-## Testing Guidelines
-
-No automated test framework or coverage target exists yet. Before submitting, serve the repository over HTTP and exercise All Models table, theme switching, filters, presets, sorting, and stale-data messaging in both light and dark modes. For data changes, run both scripts and inspect JSON/CSV diffs for dropped featured models or metrics.
-
-## Commit & Pull Request Guidelines
-
-Use concise, imperative commit subjects, matching history such as `Add automation plan`; reserve `data: weekly refresh YYYY-MM-DD` for generated refreshes. Keep commits focused. Open an issue before large or breaking work. Pull requests should explain the user-visible effect, list manual checks, link relevant issues, and include before/after screenshots for UI changes. Call out generated data updates and any required `AA_API_KEY` or `GROQ_API_KEY` configuration; never commit secret values.
+Use concise imperative subjects; reserve `data: weekly refresh YYYY-MM-DD` for generated refreshes. Keep commits focused. PRs should describe user-visible effects, checks performed, data changes, and screenshots for UI work. Follow `SECURITY.md` for vulnerability reports.

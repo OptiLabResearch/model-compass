@@ -26,7 +26,7 @@
         '</span>' +
       '</a>' +
       '<div class="nav-actions">' +
-        '<a class="btn btn-ghost" href="https://github.com/" target="_blank" rel="noopener">GitHub ↗</a>' +
+        '<a class="btn btn-ghost" href="https://github.com/OptiLabResearch/model-compass" target="_blank" rel="noopener noreferrer">GitHub ↗</a>' +
         '<button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch theme" title="Switch theme"></button>' +
       '</div>';
 
@@ -39,7 +39,7 @@
     const mount = document.getElementById('site-footer');
     if (!mount) return;
     mount.innerHTML =
-      '<span>Data: <a href="https://artificialanalysis.ai/models" target="_blank" rel="noopener">Artificial Analysis</a></span>' +
+      '<span>Data: <a href="https://artificialanalysis.ai/models" target="_blank" rel="noopener noreferrer">Artificial Analysis</a></span>' +
       '<span id="footer-scrape-date"></span>';
     applyStaleness(); // in case checkStaleness() already ran before this mount existed
   }
@@ -114,7 +114,6 @@
     'www.artificialanalysis.ai',
     'github.com',
     'www.github.com',
-    'openrouter.ai',
   ]);
 
   function safeUrl(value, fallback) {
@@ -124,12 +123,9 @@
     if (!raw || /^javascript:/i.test(raw) || /^data:/i.test(raw) || /^vbscript:/i.test(raw)) {
       return fb;
     }
-    if (raw.startsWith('/') || raw.startsWith('./') || raw.startsWith('../') || /^[a-zA-Z0-9_.-]+\.html(?:[?#].*)?$/.test(raw)) {
-      return raw;
-    }
     try {
       const u = new URL(raw, location.origin);
-      if (u.protocol !== 'https:') return fb;
+      if (u.protocol !== 'https:' && !(u.protocol === 'http:' && u.origin === location.origin)) return fb;
       if (u.origin === location.origin) return u.pathname + u.search + u.hash;
       if (!URL_HOST_ALLOWLIST.has(u.hostname)) return fb;
       return u.href;
