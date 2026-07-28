@@ -185,13 +185,16 @@ a { color: var(--accent); }
 /* ---- Dot badges (creator / category) ---- */
 .dot-badge {
   display: inline-flex; align-items: center; gap: 6px;
-  padding: 4px 10px; border-radius: var(--r-pill);
-  background: var(--surface-2); color: var(--text-secondary);
+  padding: 0; background: transparent; color: var(--text);
   font-size: 12px; font-weight: 500; white-space: nowrap;
 }
 .dot-badge::before {
   content: ''; width: 6px; height: 6px; border-radius: 50%;
   background: var(--dot-color, var(--dot-6)); flex: none;
+}
+
+.no-transitions, .no-transitions *, .no-transitions *::before, .no-transitions *::after {
+  transition: none !important;
 }
 
 /* ---- Inputs, table card, caption bar ---- */
@@ -227,6 +230,13 @@ a { color: var(--accent); }
   max-height: calc(100dvh - var(--nav-h) - 80px);
   border-radius: inherit;
   -webkit-overflow-scrolling: touch;
+}
+@media (max-width: 800px) {
+  .table-card > .scroll {
+    max-height: none;
+    overflow-x: auto;
+    overflow-y: visible;
+  }
 }
 .table-card thead th {
   position: sticky;

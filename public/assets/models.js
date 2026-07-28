@@ -26,10 +26,13 @@ document.addEventListener('touchstart', function(e){
 
 var filtersSidebar=document.getElementById('filters-sidebar');
 var filtersToggle=document.getElementById('filters-toggle');
-if (filtersToggle && filtersSidebar) {
-  filtersToggle.addEventListener('click', function(){
+var filtersHeader=document.querySelector('.filters-header');
+if (filtersSidebar && (filtersHeader || filtersToggle)) {
+  var targetEl = filtersHeader || filtersToggle;
+  targetEl.addEventListener('click', function(e){
+    if (e.target.closest('#reset')) return;
     var isOpen = filtersSidebar.classList.toggle('open');
-    filtersToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    if (filtersToggle) filtersToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
   });
 }
 
