@@ -1,6 +1,6 @@
 body{font-family:var(--sans);color:var(--text);font-size:14px}
 header{padding:0 0 12px;border-bottom:1px solid var(--border);margin-bottom:16px}
-code,.num{font-family:var(--mono),var(--sans)}
+code,.num{font-family:var(--sans);font-variant-numeric:tabular-nums}
 .meta{color:var(--text-muted);font-size:12px;margin-bottom:12px;line-height:1.6}
 
 .top-filters{display:flex;gap:12px;flex-wrap:wrap;align-items:center;font-size:13px;margin-top:16px}

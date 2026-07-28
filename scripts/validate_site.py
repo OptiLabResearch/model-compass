@@ -132,6 +132,17 @@ def validate_html():
     return errors
 
 
+def validate_default_ui():
+    html = (PUBLIC_DIR / "index.html").read_text(encoding="utf-8")
+    script = (PUBLIC_DIR / "assets" / "models.js").read_text(encoding="utf-8")
+    errors = []
+    if "Sorted: <b>Intelligence</b> ↓" not in html:
+        errors.append("index.html does not show Intelligence as the initial sort")
+    if not re.search(r"sortI\s*=\s*8;\s*sortAsc\s*=\s*false", script):
+        errors.append("models.js does not initialize descending Intelligence sorting")
+    return errors
+
+
 def validate_headers():
     headers = (PUBLIC_DIR / "_headers").read_text(encoding="utf-8")
     errors = []
@@ -200,6 +211,7 @@ def main():
     checks = (
         validate_public_tree,
         validate_html,
+        validate_default_ui,
         validate_headers,
         validate_fonts,
         validate_data,

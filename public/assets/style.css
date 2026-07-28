@@ -28,7 +28,7 @@
   --dot-4: #9d174d; --dot-5: #a16207; --dot-6: #52525B;
   --r-sm: 8px; --r-md: 12px; --r-lg: 16px; --r-pill: 999px;
   --sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  --mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, monospace;
+  --mono: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   --nav-h: 60px;
 }
 
@@ -84,7 +84,10 @@
 
 html { scroll-padding-top: calc(var(--nav-h) + 12px); }
 body { margin: 0; background: var(--bg); color: var(--text); }
-code, .num { font-family: var(--mono); }
+code, .num {
+  font-family: var(--mono);
+  font-variant-numeric: tabular-nums;
+}
 a { color: var(--accent); }
 
 /* Content below the sticky nav — keeps titles/tables clear of the header. */
