@@ -140,35 +140,35 @@
 </div>
 <div class="card table-card"><div class="scroll">
 <table id="t"><thead><tr>
-  <th class="l rnk" data-i="0" data-t="n" data-tip="Rank sorted by current sort column">#</th>
+  <th class="l rnk" data-i="0" data-t="n" data-tip="Position in the current sort order. Change the sorted column to rank models by what matters to you.">#</th>
   <th class="cb-col"><input type="checkbox" id="check-all" name="check-all" class="compare-cb" title="Select all" aria-label="Select all models"></th>
-  <th class="l name-col" data-i="1" data-t="s" data-tip="Model name">Name</th>
-  <th class="l" data-i="2" data-t="s" data-tip="Model creator / organization">Creator</th>
-  <th data-i="3" data-t="d" data-tip="Release date">Released</th>
-  <th data-i="4" data-t="n" data-tip="Input cost per 1M tokens in USD">In $/M</th>
-  <th data-i="5" data-t="n" data-tip="Output cost per 1M tokens in USD">Out $/M</th>
-  <th data-i="6" data-t="n" data-tip="Blended cost = input × 0.75 + output × 0.25 per million tokens">Blended</th>
-  <th data-i="7" data-t="n" data-tip="Composite intelligence index (v4.1) averaging GPQA, HLE, and IFBench">Intelligence</th>
-  <th data-i="8" data-t="n" data-tip="Average of SciCode and TerminalBench v2.1. Measures ability to write correct code">Coding</th>
-  <th data-i="9" data-t="n" data-tip="Average of τ²-Bench, LCR, and GDPval v2 for workflow automation">Agentic</th>
-  <th data-i="10" data-t="n" data-tip="Broad factual accuracy score across diverse knowledge domains">Omniscience</th>
-  <th data-i="11" data-t="n" data-tip="Graduate-level Google-Proof Q&A science benchmark">GPQA %</th>
-  <th data-i="12" data-t="n" data-tip="Humanity's Last Exam — hardest unsolvable benchmark questions">HLE %</th>
-  <th data-i="13" data-t="n" data-tip="Critical reasoning and scientific hypothesis evaluation">CritPt %</th>
-  <th data-i="14" data-t="n" data-tip="Percentage of outputs without hallucinated or fabricated facts">Non-halluc %</th>
-  <th data-i="15" data-t="n" data-tip="Instruction Following Benchmark for complex formatting rules">IFBench %</th>
-  <th data-i="16" data-t="n" data-tip="Long-Context Retrieval accuracy finding specific facts in 100K+ token documents">LCR %</th>
-  <th data-i="17" data-t="n" data-tip="Agent tool-use benchmark testing state tracking and API calls">τ²-Bench %</th>
-  <th data-i="18" data-t="n" data-tip="τ³-Bench Banking domain multi-step agent benchmark">τ³-Banking %</th>
-  <th data-i="19" data-t="n" data-tip="General Domain Proficiency real-world task completion">GDPval %</th>
-  <th data-i="20" data-t="n" data-tip="TerminalBench Hard — hard system administration tasks">TermBench H%</th>
-  <th data-i="21" data-t="n" data-tip="TerminalBench v2.1 — shell scripting & DevOps tasks">TermBench 2.1%</th>
-  <th data-i="22" data-t="n" data-tip="Scientific computing & numerical Python code execution">SciCode %</th>
-  <th data-i="23" data-t="n" data-tip="Expert visual & multimodal reasoning benchmark">MMMU-Pro %</th>
-  <th data-i="24" data-t="n" data-tip="Median output generation speed in tokens per second">Spd t/s</th>
-  <th data-i="25" data-t="n" data-tip="Median Time To First Token in seconds (latency)">TTFT s</th>
-  <th data-i="26" data-t="n" data-tip="Median Time To First Answer token in seconds">TTFA s</th>
-  <th class="l" data-i="27" data-t="s" data-tip="Model URL identifier on Artificial Analysis">Slug</th>
+  <th class="l name-col" data-i="1" data-t="s" data-tip="The model and, when relevant, its reasoning-effort variant.">Name</th>
+  <th class="l" data-i="2" data-t="s" data-tip="The company or organization that built the model.">Creator</th>
+  <th data-i="3" data-t="d" data-tip="When this model version was released. Newer can mean better features, but not always better results.">Released</th>
+  <th data-i="4" data-t="n" data-tip="Cost to send 1 million tokens to the model. Important for long prompts, documents, and chat history; lower is cheaper.">In $/M</th>
+  <th data-i="5" data-t="n" data-tip="Cost for 1 million generated tokens. Important for long answers, reports, and reasoning-heavy use; lower is cheaper.">Out $/M</th>
+  <th data-i="6" data-t="n" data-tip="Estimated everyday cost using 3 input tokens for every 1 output token. Use it for a quick overall price comparison.">Blended</th>
+  <th data-i="7" data-t="n" data-tip="Broad ability across nine hard tests of reasoning, knowledge, coding, and real-world agent work. Use as a general starting point.">Intelligence</th>
+  <th data-i="8" data-t="n" data-tip="Overall coding ability across programming and terminal tasks. Look here for coding assistants, developer tools, and coding agents.">Coding</th>
+  <th data-i="9" data-t="n" data-tip="Ability to complete multi-step work and use tools with less supervision. Look here for agents that must act, not just answer.">Agentic</th>
+  <th data-i="10" data-t="n" data-tip="Factual reliability: rewards correct answers and penalizes wrong guesses. Use when trust matters; negative means more wrong than right.">Omniscience</th>
+  <th data-i="11" data-t="n" data-tip="Expert-level science reasoning. Look here for research, engineering, medicine, and other work that needs careful technical thinking.">GPQA %</th>
+  <th data-i="12" data-t="n" data-tip="Extremely difficult questions across many subjects. It reveals deep reasoning and knowledge near the limits of today’s models.">HLE %</th>
+  <th data-i="13" data-t="n" data-tip="Advanced physics reasoning. Look here for models used on difficult quantitative science and step-by-step physical problems.">CritPt %</th>
+  <th data-i="14" data-t="n" data-tip="How often attempted answers avoid made-up facts. Important for research, advice, summaries, and any work where confident errors are risky.">Non-halluc %</th>
+  <th data-i="15" data-t="n" data-tip="How reliably the model follows detailed instructions and constraints. Useful for structured output, templates, and automation.">IFBench %</th>
+  <th data-i="16" data-t="n" data-tip="Ability to find and combine information in very long documents. Look here for contracts, reports, books, and large codebases.">LCR %</th>
+  <th data-i="17" data-t="n" data-tip="Tool-use reliability in multi-step customer-support tasks. Useful for agents that call APIs and must track changing information.">τ²-Bench %</th>
+  <th data-i="18" data-t="n" data-tip="Tool-use reliability on complex banking workflows. Useful for agents handling multi-step, rule-sensitive business processes.">τ³-Banking %</th>
+  <th data-i="19" data-t="n" data-tip="Performance on real professional knowledge-work tasks judged against human experts. Useful for reports, analysis, and office work.">GDPval %</th>
+  <th data-i="20" data-t="n" data-tip="Ability to solve difficult tasks in a computer terminal. Look here for DevOps, troubleshooting, and autonomous coding agents.">TermBench H%</th>
+  <th data-i="21" data-t="n" data-tip="Ability to complete real terminal, software, data, and system-admin tasks. Important for coding and operations agents.">TermBench 2.1%</th>
+  <th data-i="22" data-t="n" data-tip="Ability to write code for real scientific problems. Useful for research, engineering, data science, and numerical computing.">SciCode %</th>
+  <th data-i="23" data-t="n" data-tip="Reasoning over charts, diagrams, documents, and images. Look here when the model must understand more than plain text.">MMMU-Pro %</th>
+  <th data-i="24" data-t="n" data-tip="How quickly text is generated after output begins. Higher feels faster, especially for long answers and interactive apps.">Spd t/s</th>
+  <th data-i="25" data-t="n" data-tip="Delay before any output appears. Lower matters for chat, voice, search, and other experiences that must feel responsive.">TTFT s</th>
+  <th data-i="26" data-t="n" data-tip="Delay before the actual answer begins, excluding hidden reasoning. Lower is better when users need a useful response quickly.">TTFA s</th>
+  <th class="l" data-i="27" data-t="s" data-tip="The model’s unique Artificial Analysis identifier, used in links and data matching.">Slug</th>
 </tr></thead><tbody></tbody></table>
 </div></div>
 </main>
