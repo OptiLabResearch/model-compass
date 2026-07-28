@@ -555,7 +555,6 @@ if(checkAll){
 }
 
 async function loadModels(){
-  const countEl=document.getElementById('model-count');
   try{
     const res=await fetch('data/models.json', {credentials:'same-origin'});
     if(!res.ok) throw new Error(`HTTP ${res.status}`);
@@ -566,7 +565,6 @@ async function loadModels(){
       ((b.composite||{}).intelligence_index_v4_1||0)-((a.composite||{}).intelligence_index_v4_1||0));
     tbody.innerHTML=models.map((m, i)=>buildRow(m, i+1)).join('\n');
 
-    countEl.textContent=`${models.length} models`;
     if(data.scraped_at && window.ModelCompassNav){
       ModelCompassNav.checkStaleness(data.scraped_at);
     }

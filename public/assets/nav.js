@@ -21,7 +21,7 @@
       '<a class="brand" href="index.html">' +
         '<span class="brand-tile" aria-hidden="true">🧭</span>' +
         '<span class="brand-text">' +
-          '<span class="brand-name">Model Compass</span>' +
+          '<span class="brand-name">AI Models Compass</span>' +
           '<span class="brand-sub">' + currentPage.sub + '</span>' +
         '</span>' +
       '</a>' +
@@ -40,6 +40,7 @@
     if (!mount) return;
     mount.innerHTML =
       '<span>Data from <a href="https://artificialanalysis.ai/" target="_blank" rel="noopener noreferrer">artificialanalysis.ai</a></span>' +
+      '<span>Contact: <a href="mailto:models@optiqo.dev">models@optiqo.dev</a></span>' +
       '<span id="footer-scrape-date"></span>';
     applyStaleness(); // in case checkStaleness() already ran before this mount existed
   }

@@ -1,9 +1,6 @@
 body{font-family:var(--sans);color:var(--text);font-size:14px}
 header{padding:0 0 12px;border-bottom:1px solid var(--border);margin-bottom:16px}
-.header-top{display:flex;align-items:center;gap:10px;margin-bottom:6px;flex-wrap:wrap}
-h1{font-family:var(--serif);font-size:24px;margin:0;font-weight:600;letter-spacing:-0.2px}
 code,.num,td,th,input{font-family:var(--mono),var(--sans)}
-.model-count{background:var(--accent-bg);color:var(--accent);font-size:12px;font-weight:600;padding:3px 10px;border-radius:var(--r-pill)}
 .meta{color:var(--text-muted);font-size:12px;margin-bottom:12px;line-height:1.6}
 
 .top-filters{display:flex;gap:12px;flex-wrap:wrap;align-items:center;font-size:13px;margin-top:16px}

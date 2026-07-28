@@ -1,6 +1,6 @@
-# Model Compass
+# AI Models Compass
 
-Model Compass is a dependency-free static site for comparing recent language models using benchmark, pricing, speed, and latency data from [Artificial Analysis](https://artificialanalysis.ai/models).
+AI Models Compass is a dependency-free static site for comparing recent language models using benchmark, pricing, speed, and latency data from [Artificial Analysis](https://artificialanalysis.ai/models).
 
 Live site: [models.optiqo.dev](https://models.optiqo.dev)
 

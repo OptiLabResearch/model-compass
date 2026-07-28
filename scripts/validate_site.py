@@ -18,11 +18,12 @@ ALLOWED_ROOT_ENTRIES = {
     "404.html",
     "assets",
     "data",
+    "favicon.svg",
     "index.html",
     "models.html",
     "og.png",
 }
-ALLOWED_SUFFIXES = {".css", ".html", ".js", ".json", ".png", ".woff2"}
+ALLOWED_SUFFIXES = {".css", ".html", ".js", ".json", ".png", ".svg", ".woff2"}
 ALLOWED_EXTERNAL_HOSTS = {
     "artificialanalysis.ai",
     "github.com",
