@@ -19,7 +19,7 @@
     const currentPage = PAGES.find(p => p.href === current) || PAGES[0];
     mount.innerHTML =
       '<a class="brand" href="index.html">' +
-        '<span class="brand-tile" aria-hidden="true"><img src="favicon.svg" alt=""></span>' +
+        '<span class="brand-tile" aria-hidden="true"><img src="favicon.svg?v=2" alt=""></span>' +
         '<span class="brand-text">' +
           '<span class="brand-name">AI Models Compass</span>' +
           '<span class="brand-sub">' + currentPage.sub + '</span>' +
