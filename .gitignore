@@ -1,12 +1,15 @@
 __pycache__/
-*.pyc
+*.py[cod]
+.pytest_cache/
 .DS_Store
 *.swp
 *.swo
 *~
+*.tmp
 .env
-.venv
+.env.*
+!.env.example
+.venv/
 env/
 venv/
 .wrangler/
-# Phase 4: GitHub Pages integration verified 1783187582

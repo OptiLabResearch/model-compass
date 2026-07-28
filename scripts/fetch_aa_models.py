@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-fetch_aa_models.py — Build data/models.json from Artificial Analysis.
+fetch_aa_models.py — Build public/data/models.json from Artificial Analysis.
 
 Two sources, merged:
 
@@ -31,11 +31,13 @@ import os
 import re
 import sys
 import json
+import math
 import argparse
+import tempfile
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from urllib.error import HTTPError, URLError
-from urllib.request import Request, urlopen
+from urllib.request import HTTPRedirectHandler, Request, build_opener
 
 API_URL = "https://artificialanalysis.ai/api/v2/data/llms/models"
 PAGE_URL = "https://artificialanalysis.ai/models"
@@ -46,7 +48,7 @@ USER_AGENT = (
 )
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
-DEFAULT_OUTPUT = REPO_ROOT / "data" / "models.json"
+DEFAULT_OUTPUT = REPO_ROOT / "public" / "data" / "models.json"
 
 # Last-known-good store for the metrics only the page can provide. AA renders
 # ~28 models richly; everything else it has ever rendered is remembered here, so
@@ -136,6 +138,20 @@ RELEASE_WINDOW_DAYS = 183  # ~6 months
 # ---------------------------------------------------------------------------
 
 MAX_RESPONSE_BYTES = 25 * 1024 * 1024  # 25 MB hard cap on upstream bodies
+MIN_API_MODELS = 100
+MAX_API_MODELS = 5000
+SLUG_RE = re.compile(r"^[a-z0-9][a-z0-9._-]{0,199}$")
+
+
+class _NoRedirectHandler(HTTPRedirectHandler):
+    """Fail closed instead of forwarding credentials across redirects."""
+
+    def redirect_request(self, req, fp, code, msg, headers, newurl):
+        return None
+
+
+def _open_no_redirect(req: Request, timeout: int = 90):
+    return build_opener(_NoRedirectHandler).open(req, timeout=timeout)
 
 
 def _read_limited(resp, limit: int = MAX_RESPONSE_BYTES) -> bytes:
@@ -152,24 +168,31 @@ def _read_limited(resp, limit: int = MAX_RESPONSE_BYTES) -> bytes:
     return b''.join(chunks)
 
 
-def _atomic_write_json(path, obj) -> None:
-    path = path if hasattr(path, 'write_text') else path
+def _atomic_write_json(path: Path, obj) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
-    tmp = path.with_suffix(path.suffix + '.tmp')
-    with open(tmp, 'w') as f:
-        json.dump(obj, f, indent=2)
-        f.flush()
-        os.fsync(f.fileno())
-    os.replace(tmp, path)
+    tmp_name = None
+    try:
+        with tempfile.NamedTemporaryFile(
+            mode='w', encoding='utf-8', dir=path.parent,
+            prefix=f'.{path.name}.', suffix='.tmp', delete=False,
+        ) as f:
+            tmp_name = f.name
+            json.dump(obj, f, indent=2, allow_nan=False)
+            f.flush()
+            os.fsync(f.fileno())
+        os.replace(tmp_name, path)
+    finally:
+        if tmp_name and os.path.exists(tmp_name):
+            os.unlink(tmp_name)
 
 
 def fetch_api_models(api_key: str) -> list:
     req = Request(API_URL, headers={'x-api-key': api_key, 'User-Agent': USER_AGENT})
     try:
-        with urlopen(req, timeout=90) as r:
+        with _open_no_redirect(req, timeout=90) as r:
             payload = json.loads(_read_limited(r).decode('utf-8'))
     except HTTPError as e:
-        raise RuntimeError(f"AA API returned HTTP {e.code}: {e.read()[:200]!r}") from e
+        raise RuntimeError(f"AA API returned HTTP {e.code}") from e
     except URLError as e:
         raise RuntimeError(f"AA API unreachable: {e.reason}") from e
 
@@ -177,6 +200,107 @@ def fetch_api_models(api_key: str) -> list:
     if not models:
         raise RuntimeError(f"AA API returned no models (status={payload.get('status')})")
     return models
+
+
+def validate_api_models(models: list) -> None:
+    """Reject malformed or implausible upstream payloads before normalization."""
+    if not isinstance(models, list):
+        raise RuntimeError("AA API data is not a list")
+    if not MIN_API_MODELS <= len(models) <= MAX_API_MODELS:
+        raise RuntimeError(
+            f"AA API model count {len(models)} is outside the safe range "
+            f"{MIN_API_MODELS}..{MAX_API_MODELS}"
+        )
+
+    seen = set()
+    for index, model in enumerate(models):
+        if not isinstance(model, dict):
+            raise RuntimeError(f"AA API model {index} is not an object")
+        slug = model.get('slug')
+        if not isinstance(slug, str) or not SLUG_RE.fullmatch(slug):
+            raise RuntimeError(f"AA API model {index} has an invalid slug")
+        if slug in seen:
+            raise RuntimeError(f"AA API returned duplicate slug: {slug}")
+        seen.add(slug)
+
+        name = model.get('name')
+        if name is not None and (not isinstance(name, str) or len(name) > 500):
+            raise RuntimeError(f"AA API model {slug} has an invalid name")
+        for key in ('evaluations', 'pricing'):
+            value = model.get(key)
+            if value is not None and not isinstance(value, dict):
+                raise RuntimeError(f"AA API model {slug} has invalid {key}")
+        creator = model.get('model_creator')
+        if creator is not None and not isinstance(creator, dict):
+            raise RuntimeError(f"AA API model {slug} has an invalid creator")
+        release_date = model.get('release_date')
+        if release_date:
+            try:
+                datetime.fromisoformat(release_date).date()
+            except (TypeError, ValueError) as exc:
+                raise RuntimeError(
+                    f"AA API model {slug} has invalid release_date"
+                ) from exc
+
+
+def _check_finite_numbers(value, path: str = 'root') -> None:
+    if isinstance(value, float) and not math.isfinite(value):
+        raise RuntimeError(f"Non-finite number at {path}")
+    if isinstance(value, dict):
+        for key, child in value.items():
+            _check_finite_numbers(child, f"{path}.{key}")
+    elif isinstance(value, list):
+        for index, child in enumerate(value):
+            _check_finite_numbers(child, f"{path}[{index}]")
+
+
+def validate_output_models(models: list, previous_path: Path) -> None:
+    """Enforce invariants that protect the published dataset and browser UI."""
+    if not len(FEATURED_SLUGS) <= len(models) <= MAX_API_MODELS:
+        raise RuntimeError(f"Output model count {len(models)} is implausible")
+
+    seen = set()
+    for model in models:
+        slug = model.get('slug')
+        if not isinstance(slug, str) or not SLUG_RE.fullmatch(slug):
+            raise RuntimeError("Output contains an invalid slug")
+        if slug in seen:
+            raise RuntimeError(f"Output contains duplicate slug: {slug}")
+        seen.add(slug)
+        if model.get('aa_url') != f"https://artificialanalysis.ai/models/{slug}":
+            raise RuntimeError(f"Output contains unexpected AA URL for {slug}")
+        name = model.get('name')
+        creator = model.get('creator')
+        if not isinstance(name, str) or not name or len(name) > 500:
+            raise RuntimeError(f"Output contains invalid name for {slug}")
+        if creator is not None and (not isinstance(creator, str) or len(creator) > 200):
+            raise RuntimeError(f"Output contains invalid creator for {slug}")
+        _check_finite_numbers(model, f"models.{slug}")
+
+        for value in (model.get('benchmarks') or {}).values():
+            if value is not None and (not isinstance(value, (int, float)) or not 0 <= value <= 100):
+                raise RuntimeError(f"Output contains out-of-range benchmark for {slug}")
+        for value in (model.get('pricing_per_m_tokens') or {}).values():
+            if value is not None and (not isinstance(value, (int, float)) or not 0 <= value <= 1_000_000):
+                raise RuntimeError(f"Output contains invalid pricing for {slug}")
+
+    missing_featured = FEATURED_SLUGS - seen
+    if missing_featured:
+        raise RuntimeError(
+            "Output is missing featured slugs: " + ", ".join(sorted(missing_featured))
+        )
+
+    if previous_path.exists():
+        try:
+            previous = json.loads(previous_path.read_text(encoding='utf-8'))
+            previous_count = len(previous.get('models') or [])
+        except (OSError, json.JSONDecodeError, TypeError):
+            previous_count = 0
+        if previous_count and len(models) < math.floor(previous_count * 0.6):
+            raise RuntimeError(
+                f"Output model count dropped from {previous_count} to {len(models)}; "
+                "refusing an automatic destructive refresh"
+            )
 
 
 # ---------------------------------------------------------------------------
@@ -238,7 +362,7 @@ def fetch_page_enrichment() -> dict:
     """
     req = Request(PAGE_URL, headers={'User-Agent': USER_AGENT})
     try:
-        with urlopen(req, timeout=90) as r:
+        with _open_no_redirect(req, timeout=90) as r:
             html = _read_limited(r).decode('utf-8', errors='replace')
     except (HTTPError, URLError, RuntimeError) as e:
         print(f"  WARNING: could not fetch {PAGE_URL}: {e}", file=sys.stderr)
@@ -659,7 +783,8 @@ def main():
     except RuntimeError as e:
         print(f"ERROR: {e}", file=sys.stderr)
         return 1
-    print(f"  {len(api_models)} models from the API")
+    validate_api_models(api_models)
+    print(f"  {len(api_models)} models from the API (validated)")
 
     missing = check_featured_slugs(api_models)
     if missing:
@@ -686,6 +811,7 @@ def main():
     today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
     cache = load_cache()
     n_from_cache = sum(1 for m in models if not m['has_rich_data'] and apply_cache(m, cache))
+    validate_output_models(models, args.output)
     save_cache(cache, models, today)
     if cache:
         print(f"  {n_from_cache} models backfilled from the enrichment cache "

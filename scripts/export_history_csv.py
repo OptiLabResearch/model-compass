@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-export_history_csv.py — Flatten data/models.json into a dated CSV snapshot
+export_history_csv.py — Flatten public/data/models.json into a dated CSV snapshot
 under data/history/, matching the column layout of the existing history files.
 
 Usage:
@@ -14,11 +14,12 @@ import csv
 import json
 import os
 import argparse
+import tempfile
 from datetime import datetime, timezone
 from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
-MODELS_JSON = REPO_ROOT / "data" / "models.json"
+MODELS_JSON = REPO_ROOT / "public" / "data" / "models.json"
 HISTORY_DIR = REPO_ROOT / "data" / "history"
 
 # Mirrors the All Models table column order. AA stopped publishing MMLU-Pro,
@@ -35,7 +36,11 @@ HEADER = [
 
 
 def fmt(value):
-    return "—" if value is None else value
+    if value is None:
+        return "—"
+    if isinstance(value, str) and value.lstrip('\t\r').startswith(('=', '+', '-', '@')):
+        return "'" + value
+    return value
 
 
 def to_row(m):
@@ -82,19 +87,34 @@ def main():
     args = parser.parse_args()
 
     date_str = args.date or datetime.now(timezone.utc).strftime("%Y-%m-%d")
-    data = json.loads(MODELS_JSON.read_text())
+    try:
+        datetime.strptime(date_str, "%Y-%m-%d")
+    except ValueError as exc:
+        raise SystemExit("--date must use YYYY-MM-DD") from exc
+
+    data = json.loads(MODELS_JSON.read_text(encoding="utf-8"))
+    if not isinstance(data.get("models"), list):
+        raise SystemExit(f"Invalid models payload in {MODELS_JSON}")
 
     HISTORY_DIR.mkdir(parents=True, exist_ok=True)
     out_path = HISTORY_DIR / f"{date_str}.csv"
-    tmp_path = out_path.with_suffix(out_path.suffix + ".tmp")
-    with open(tmp_path, "w", newline="") as f:
-        w = csv.writer(f)
-        w.writerow(HEADER)
-        for m in data["models"]:
-            w.writerow(to_row(m))
-        f.flush()
-        os.fsync(f.fileno())
-    os.replace(tmp_path, out_path)
+    tmp_name = None
+    try:
+        with tempfile.NamedTemporaryFile(
+            mode="w", encoding="utf-8", newline="", dir=HISTORY_DIR,
+            prefix=f".{date_str}.", suffix=".tmp", delete=False,
+        ) as f:
+            tmp_name = f.name
+            w = csv.writer(f)
+            w.writerow(HEADER)
+            for m in data["models"]:
+                w.writerow(to_row(m))
+            f.flush()
+            os.fsync(f.fileno())
+        os.replace(tmp_name, out_path)
+    finally:
+        if tmp_name and os.path.exists(tmp_name):
+            os.unlink(tmp_name)
 
     print(f"Wrote {out_path} ({len(data['models'])} models)")
 

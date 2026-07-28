@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>All Models — Model Compass</title>
+<meta name="description" content="Compare recent AI models by benchmarks, pricing, speed, and latency.">
+<link rel="canonical" href="https://models.optiqo.dev/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Model Compass">
+<meta property="og:title" content="Model Compass — Compare models. Find your fit.">
+<meta property="og:description" content="Compare recent AI models by benchmarks, pricing, speed, and latency.">
+<meta property="og:url" content="https://models.optiqo.dev/">
+<meta property="og:image" content="https://models.optiqo.dev/og.png">
+<meta property="og:image:width" content="1731">
+<meta property="og:image:height" content="909">
+<meta property="og:image:alt" content="Model Compass — Compare models. Find your fit.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Model Compass — Compare models. Find your fit.">
+<meta name="twitter:description" content="Compare recent AI models by benchmarks, pricing, speed, and latency.">
+<meta name="twitter:image" content="https://models.optiqo.dev/og.png">
+<script src="assets/theme-init.js"></script>
+<link rel="stylesheet" href="assets/fonts.css">
+<link rel="stylesheet" href="assets/style.css">
+<link rel="stylesheet" href="assets/index.css">
+</head>
+<body>
+<div id="site-nav"></div>
+<script src="assets/nav.js"></script>
+<div class="page">
+<header>
+  <div class="header-top">
+    <h1>All Models</h1>
+    <span class="model-count" id="model-count">— models</span>
+  </div>
+
+  <!-- Presets -->
+  <div class="presets">
+    <button class="preset-btn" data-preset="best-overall">🏆 Best Overall</button>
+    <button class="preset-btn" data-preset="best-value">💰 Best Value</button>
+    <button class="preset-btn" data-preset="coding">💻 Coding</button>
+    <button class="preset-btn" data-preset="coding-value">⚡ Coding Value</button>
+    <button class="preset-btn" data-preset="reasoning">🧠 Reasoning</button>
+    <button class="preset-btn" data-preset="life-advice">💬 Life Advice</button>
+    <button class="preset-btn" data-preset="cheapest">💸 Cheapest</button>
+    <button class="preset-btn" data-preset="agentic">🤖 Agentic</button>
+  </div>
+
+  <div id="staleness-banner" class="staleness-banner page-staleness-banner" hidden>⚠️ <span id="staleness-text"></span></div>
+
+  <div class="top-filters">
+    <div class="search-wrap"><span class="icon">🔍</span><input id="q" name="q" type="text" placeholder="Search name, creator, slug…" aria-label="Search models"></div>
+    <div class="creator-dropdown-wrap">
+      <button type="button" id="creator-btn" class="creator-btn">
+        <span id="creator-btn-label">All Creators</span>
+        <span class="arrow">▾</span>
+      </button>
+      <div id="creator-menu" class="creator-menu" hidden>
+        <label class="creator-opt" for="creator-all"><input type="checkbox" value="all" id="creator-all" name="creator-all" checked> <b>All Creators</b></label>
+        <div class="creator-divider"></div>
+        <label class="creator-opt" for="creator-Alibaba"><input type="checkbox" value="Alibaba" class="creator-cb" id="creator-Alibaba" name="creator-Alibaba"> Alibaba</label>
+        <label class="creator-opt" for="creator-Anthropic"><input type="checkbox" value="Anthropic" class="creator-cb" id="creator-Anthropic" name="creator-Anthropic"> Anthropic</label>
+        <label class="creator-opt" for="creator-DeepSeek"><input type="checkbox" value="DeepSeek" class="creator-cb" id="creator-DeepSeek" name="creator-DeepSeek"> DeepSeek</label>
+        <label class="creator-opt" for="creator-Google"><input type="checkbox" value="Google" class="creator-cb" id="creator-Google" name="creator-Google"> Google</label>
+        <label class="creator-opt" for="creator-Kimi"><input type="checkbox" value="Kimi" class="creator-cb" id="creator-Kimi" name="creator-Kimi"> Kimi</label>
+        <label class="creator-opt" for="creator-MiniMax"><input type="checkbox" value="MiniMax" class="creator-cb" id="creator-MiniMax" name="creator-MiniMax"> MiniMax</label>
+        <label class="creator-opt" for="creator-OpenAI"><input type="checkbox" value="OpenAI" class="creator-cb" id="creator-OpenAI" name="creator-OpenAI"> OpenAI</label>
+        <label class="creator-opt" for="creator-Xiaomi"><input type="checkbox" value="Xiaomi" class="creator-cb" id="creator-Xiaomi" name="creator-Xiaomi"> Xiaomi</label>
+        <label class="creator-opt" for="creator-Z_AI"><input type="checkbox" value="Z AI" class="creator-cb" id="creator-Z_AI" name="creator-Z_AI"> Z AI</label>
+        <label class="creator-opt" for="creator-xAI"><input type="checkbox" value="xAI" class="creator-cb" id="creator-xAI" name="creator-xAI"> xAI</label>
+      </div>
+    </div>
+    <div class="date-filter-wrap">
+      <label for="from" class="date-label">From</label>
+      <input id="from" name="from" type="date" class="date-input">
+    </div>
+  </div>
+</header>
+<div class="layout">
+  <aside class="filters card" id="filters-sidebar">
+    <div class="filters-header">
+      <h2>Filters <span class="filter-count" id="filter-count-badge">0</span></h2>
+      <div class="filters-header-actions">
+        <button class="btn-text" id="reset">Reset</button>
+        <button class="filters-toggle-btn" id="filters-toggle" type="button" aria-expanded="false" aria-label="Toggle filter panel">
+          <span class="toggle-label">Filter Settings</span>
+          <span class="toggle-arrow">▾</span>
+        </button>
+      </div>
+    </div>
+    <div class="filters-body" id="filters-body">
+    <div class="filter-group"><h3>Cost ($/M tokens)</h3>
+      <div class="filter-row" data-stat="in_$/M"><label for="filter-in_M-min">Input</label><input type="number" class="num-filter" id="filter-in_M-min" name="filter-in_M-min" data-stat="in_$/M" data-bound="min" placeholder="min" step="any" aria-label="Input cost min"><span class="arrow">→</span><input type="number" class="num-filter" id="filter-in_M-max" name="filter-in_M-max" data-stat="in_$/M" data-bound="max" placeholder="max" step="any" aria-label="Input cost max"></div>
+      <div class="filter-row" data-stat="out_$/M"><label for="filter-out_M-min">Output</label><input type="number" class="num-filter" id="filter-out_M-min" name="filter-out_M-min" data-stat="out_$/M" data-bound="min" placeholder="min" step="any" aria-label="Output cost min"><span class="arrow">→</span><input type="number" class="num-filter" id="filter-out_M-max" name="filter-out_M-max" data-stat="out_$/M" data-bound="max" placeholder="max" step="any" aria-label="Output cost max"></div>
+      <div class="filter-row" data-stat="blend_3to1_$/M"><label for="filter-blend_3to1_M-min">Blended</label><input type="number" class="num-filter" id="filter-blend_3to1_M-min" name="filter-blend_3to1_M-min" data-stat="blend_3to1_$/M" data-bound="min" placeholder="min" step="any" aria-label="Blended cost min"><span class="arrow">→</span><input type="number" class="num-filter" id="filter-blend_3to1_M-max" name="filter-blend_3to1_M-max" data-stat="blend_3to1_$/M" data-bound="max" placeholder="max" step="any" aria-label="Blended cost max"></div>
+    </div>
+    <div class="filter-group"><h3>Composite (0-100)</h3>
+      <div class="filter-row" data-stat="intelligence"><label for="filter-intelligence-min">Intelligence</label><input type="number" class="num-filter" id="filter-intelligence-min" name="filter-intelligence-min" data-stat="intelligence" data-bound="min" placeholder="min" step="any" aria-label="Intelligence min"><span class="arrow">→</span><input type="number" class="num-filter" id="filter-intelligence-max" name="filter-intelligence-max" data-stat="intelligence" data-bound="max" placeholder="max" step="any" aria-label="Intelligence max"></div>
+      <div class="filter-row" data-stat="coding"><label for="filter-coding-min">Coding</label><input type="number" class="num-filter" id="filter-coding-min" name="filter-coding-min" data-stat="coding" data-bound="min" placeholder="min" step="any" aria-label="Coding min"><span class="arrow">→</span><input type="number" class="num-filter" id="filter-coding-max" name="filter-coding-max" data-stat="coding" data-bound="max" placeholder="max" step="any" aria-label="Coding max"></div>
+      <div class="filter-row" data-stat="agentic"><label for="filter-agentic-min">Agentic</label><input type="number" class="num-filter" id="filter-agentic-min" name="filter-agentic-min" data-stat="agentic" data-bound="min" placeholder="min" step="any" aria-label="Agentic min"><span class="arrow">→</span><input type="number" class="num-filter" id="filter-agentic-max" name="filter-agentic-max" data-stat="agentic" data-bound="max" placeholder="max" step="any" aria-label="Agentic max"></div>
+      <div class="filter-row" data-stat="omniscience"><label for="filter-omniscience-min">Omniscience</label><input type="number" class="num-filter" id="filter-omniscience-min" name="filter-omniscience-min" data-stat="omniscience" data-bound="min" placeholder="min" step="any" aria-label="Omniscience min"><span class="arrow">→</span><input type="number" class="num-filter" id="filter-omniscience-max" name="filter-omniscience-max" data-stat="omniscience" data-bound="max" placeholder="max" step="any" aria-label="Omniscience max"></div>
+    </div>
+    <div class="filter-group"><h3>Reasoning / Science</h3>
+      <div class="filter-row" data-stat="gpqa_%"><label for="filter-gpqa-min">GPQA %</label><input type="number" class="num-filter" id="filter-gpqa-min" name="filter-gpqa-min" data-stat="gpqa_%" data-bound="min" placeholder="min" step="any" aria-label="GPQA % min"><span class="arrow">→</span><input type="number" class="num-filter" id="filter-gpqa-max" name="filter-gpqa-max" data-stat="gpqa_%" data-bound="max" placeholder="max" step="any" aria-label="GPQA % max"></div>
+      <div class="filter-row" data-stat="hle_%"><label for="filter-hle-min">HLE %</label><input type="number" class="num-filter" id="filter-hle-min" name="filter-hle-min" data-stat="hle_%" data-bound="min" placeholder="min" step="any" aria-label="HLE % min"><span class="arrow">→</span><input type="number" class="num-filter" id="filter-hle-max" name="filter-hle-max" data-stat="hle_%" data-bound="max" placeholder="max" step="any" aria-label="HLE % max"></div>
+      <div class="filter-row" data-stat="critpt_%"><label for="filter-critpt-min">CritPt %</label><input type="number" class="num-filter" id="filter-critpt-min" name="filter-critpt-min" data-stat="critpt_%" data-bound="min" placeholder="min" step="any" aria-label="CritPt % min"><span class="arrow">→</span><input type="number" class="num-filter" id="filter-critpt-max" name="filter-critpt-max" data-stat="critpt_%" data-bound="max" placeholder="max" step="any" aria-label="CritPt % max"></div>
+    </div>
+    <div class="filter-group"><h3>Reliability</h3>
+      <div class="filter-row" data-stat="non_halluc_%"><label for="filter-non_halluc-min">Non-hallucination %</label><input type="number" class="num-filter" id="filter-non_halluc-min" name="filter-non_halluc-min" data-stat="non_halluc_%" data-bound="min" placeholder="min" step="any" aria-label="Non-hallucination % min"><span class="arrow">→</span><input type="number" class="num-filter" id="filter-non_halluc-max" name="filter-non_halluc-max" data-stat="non_halluc_%" data-bound="max" placeholder="max" step="any" aria-label="Non-hallucination % max"></div>
+      <div class="filter-row" data-stat="ifbench_%"><label for="filter-ifbench-min">IFBench %</label><input type="number" class="num-filter" id="filter-ifbench-min" name="filter-ifbench-min" data-stat="ifbench_%" data-bound="min" placeholder="min" step="any" aria-label="IFBench % min"><span class="arrow">→</span><input type="number" class="num-filter" id="filter-ifbench-max" name="filter-ifbench-max" data-stat="ifbench_%" data-bound="max" placeholder="max" step="any" aria-label="IFBench % max"></div>
+    </div>
+    <div class="filter-group"><h3>Agentic / Long-context</h3>
+      <div class="filter-row" data-stat="lcr_%"><label for="filter-lcr-min">LCR %</label><input type="number" class="num-filter" id="filter-lcr-min" name="filter-lcr-min" data-stat="lcr_%" data-bound="min" placeholder="min" step="any" aria-label="LCR % min"><span class="arrow">→</span><input type="number" class="num-filter" id="filter-lcr-max" name="filter-lcr-max" data-stat="lcr_%" data-bound="max" placeholder="max" step="any" aria-label="LCR % max"></div>
+      <div class="filter-row" data-stat="tau2_%"><label for="filter-tau2-min">τ²-Bench %</label><input type="number" class="num-filter" id="filter-tau2-min" name="filter-tau2-min" data-stat="tau2_%" data-bound="min" placeholder="min" step="any" aria-label="τ²-Bench % min"><span class="arrow">→</span><input type="number" class="num-filter" id="filter-tau2-max" name="filter-tau2-max" data-stat="tau2_%" data-bound="max" placeholder="max" step="any" aria-label="τ²-Bench % max"></div>
+      <div class="filter-row" data-stat="tau_banking_%"><label for="filter-tau_banking-min">τ³-Bench Banking % (v4.1)</label><input type="number" class="num-filter" id="filter-tau_banking-min" name="filter-tau_banking-min" data-stat="tau_banking_%" data-bound="min" placeholder="min" step="any" aria-label="τ³-Bench Banking % min"><span class="arrow">→</span><input type="number" class="num-filter" id="filter-tau_banking-max" name="filter-tau_banking-max" data-stat="tau_banking_%" data-bound="max" placeholder="max" step="any" aria-label="τ³-Bench Banking % max"></div>
+      <div class="filter-row" data-stat="gdpval_%"><label for="filter-gdpval-min">GDPval %</label><input type="number" class="num-filter" id="filter-gdpval-min" name="filter-gdpval-min" data-stat="gdpval_%" data-bound="min" placeholder="min" step="any" aria-label="GDPval % min"><span class="arrow">→</span><input type="number" class="num-filter" id="filter-gdpval-max" name="filter-gdpval-max" data-stat="gdpval_%" data-bound="max" placeholder="max" step="any" aria-label="GDPval % max"></div>
+    </div>
+    <div class="filter-group"><h3>Coding benchmarks</h3>
+      <div class="filter-row" data-stat="terminalbench_hard_%"><label for="filter-terminalbench_hard-min">Terminal-Bench Hard %</label><input type="number" class="num-filter" id="filter-terminalbench_hard-min" name="filter-terminalbench_hard-min" data-stat="terminalbench_hard_%" data-bound="min" placeholder="min" step="any" aria-label="Terminal-Bench Hard % min"><span class="arrow">→</span><input type="number" class="num-filter" id="filter-terminalbench_hard-max" name="filter-terminalbench_hard-max" data-stat="terminalbench_hard_%" data-bound="max" placeholder="max" step="any" aria-label="Terminal-Bench Hard % max"></div>
+      <div class="filter-row" data-stat="terminalbench_v2_1_%"><label for="filter-terminalbench_v2_1-min">Terminal-Bench 2.1 % (v4.1)</label><input type="number" class="num-filter" id="filter-terminalbench_v2_1-min" name="filter-terminalbench_v2_1-min" data-stat="terminalbench_v2_1_%" data-bound="min" placeholder="min" step="any" aria-label="Terminal-Bench 2.1 % min"><span class="arrow">→</span><input type="number" class="num-filter" id="filter-terminalbench_v2_1-max" name="filter-terminalbench_v2_1-max" data-stat="terminalbench_v2_1_%" data-bound="max" placeholder="max" step="any" aria-label="Terminal-Bench 2.1 % max"></div>
+      <div class="filter-row" data-stat="scicode_%"><label for="filter-scicode-min">SciCode %</label><input type="number" class="num-filter" id="filter-scicode-min" name="filter-scicode-min" data-stat="scicode_%" data-bound="min" placeholder="min" step="any" aria-label="SciCode % min"><span class="arrow">→</span><input type="number" class="num-filter" id="filter-scicode-max" name="filter-scicode-max" data-stat="scicode_%" data-bound="max" placeholder="max" step="any" aria-label="SciCode % max"></div>
+    </div>
+    <div class="filter-group"><h3>Vision</h3>
+      <div class="filter-row" data-stat="mmmu_pro_%"><label for="filter-mmmu_pro-min">MMMU-Pro %</label><input type="number" class="num-filter" id="filter-mmmu_pro-min" name="filter-mmmu_pro-min" data-stat="mmmu_pro_%" data-bound="min" placeholder="min" step="any" aria-label="MMMU-Pro % min"><span class="arrow">→</span><input type="number" class="num-filter" id="filter-mmmu_pro-max" name="filter-mmmu_pro-max" data-stat="mmmu_pro_%" data-bound="max" placeholder="max" step="any" aria-label="MMMU-Pro % max"></div>
+    </div>
+    <div class="filter-group"><h3>Performance</h3>
+      <div class="filter-row" data-stat="speed_tps"><label for="filter-speed_tps-min">Speed t/s</label><input type="number" class="num-filter" id="filter-speed_tps-min" name="filter-speed_tps-min" data-stat="speed_tps" data-bound="min" placeholder="min" step="any" aria-label="Speed t/s min"><span class="arrow">→</span><input type="number" class="num-filter" id="filter-speed_tps-max" name="filter-speed_tps-max" data-stat="speed_tps" data-bound="max" placeholder="max" step="any" aria-label="Speed t/s max"></div>
+      <div class="filter-row" data-stat="ttft_s"><label for="filter-ttft_s-min">TTFT s</label><input type="number" class="num-filter" id="filter-ttft_s-min" name="filter-ttft_s-min" data-stat="ttft_s" data-bound="min" placeholder="min" step="any" aria-label="TTFT s min"><span class="arrow">→</span><input type="number" class="num-filter" id="filter-ttft_s-max" name="filter-ttft_s-max" data-stat="ttft_s" data-bound="max" placeholder="max" step="any" aria-label="TTFT s max"></div>
+      <div class="filter-row" data-stat="ttfa_s"><label for="filter-ttfa_s-min">TTFA s</label><input type="number" class="num-filter" id="filter-ttfa_s-min" name="filter-ttfa_s-min" data-stat="ttfa_s" data-bound="min" placeholder="min" step="any" aria-label="TTFA s min"><span class="arrow">→</span><input type="number" class="num-filter" id="filter-ttfa_s-max" name="filter-ttfa_s-max" data-stat="ttfa_s" data-bound="max" placeholder="max" step="any" aria-label="TTFA s max"></div>
+    </div>
+    </div>
+  </aside>
+  <main>
+<div class="table-caption">
+  <span class="count" id="table-count"><strong id="table-count-n">0</strong> models</span>
+  <span class="sort-state" id="table-sort-state">Sorted: <b>—</b></span>
+  <div id="compare-bar">
+    <span id="cmp-count">0</span> selected
+    <button id="cmp-go">Compare</button>
+    <button id="cmp-copy-md" title="Copy selected models table as Markdown">📋 Copy MD</button>
+    <button id="cmp-clear">Show All</button>
+  </div>
+</div>
+<div class="card table-card"><div class="scroll">
+<table id="t"><thead><tr>
+  <th class="l rnk" data-i="0" data-t="n" data-tip="Rank sorted by current sort column">#</th>
+  <th class="cb-col"><input type="checkbox" id="check-all" name="check-all" class="compare-cb" title="Select all" aria-label="Select all models"></th>
+  <th class="l name-col" data-i="1" data-t="s" data-tip="Model name">Name</th>
+  <th class="l" data-i="2" data-t="s" data-tip="Model creator / organization">Creator</th>
+  <th data-i="3" data-t="d" data-tip="Release date">Released</th>
+  <th data-i="4" data-t="n" data-tip="Input cost per 1M tokens in USD">In $/M</th>
+  <th data-i="5" data-t="n" data-tip="Output cost per 1M tokens in USD">Out $/M</th>
+  <th data-i="6" data-t="n" data-tip="Blended cost = input × 0.75 + output × 0.25 per million tokens">Blended</th>
+  <th data-i="7" data-t="n" data-tip="Composite intelligence index (v4.1) averaging GPQA, HLE, and IFBench">Intelligence</th>
+  <th data-i="8" data-t="n" data-tip="Average of SciCode and TerminalBench v2.1. Measures ability to write correct code">Coding</th>
+  <th data-i="9" data-t="n" data-tip="Average of τ²-Bench, LCR, and GDPval v2 for workflow automation">Agentic</th>
+  <th data-i="10" data-t="n" data-tip="Broad factual accuracy score across diverse knowledge domains">Omniscience</th>
+  <th data-i="11" data-t="n" data-tip="Graduate-level Google-Proof Q&A science benchmark">GPQA %</th>
+  <th data-i="12" data-t="n" data-tip="Humanity's Last Exam — hardest unsolvable benchmark questions">HLE %</th>
+  <th data-i="13" data-t="n" data-tip="Critical reasoning and scientific hypothesis evaluation">CritPt %</th>
+  <th data-i="14" data-t="n" data-tip="Percentage of outputs without hallucinated or fabricated facts">Non-halluc %</th>
+  <th data-i="15" data-t="n" data-tip="Instruction Following Benchmark for complex formatting rules">IFBench %</th>
+  <th data-i="16" data-t="n" data-tip="Long-Context Retrieval accuracy finding specific facts in 100K+ token documents">LCR %</th>
+  <th data-i="17" data-t="n" data-tip="Agent tool-use benchmark testing state tracking and API calls">τ²-Bench %</th>
+  <th data-i="18" data-t="n" data-tip="τ³-Bench Banking domain multi-step agent benchmark">τ³-Banking %</th>
+  <th data-i="19" data-t="n" data-tip="General Domain Proficiency real-world task completion">GDPval %</th>
+  <th data-i="20" data-t="n" data-tip="TerminalBench Hard — hard system administration tasks">TermBench H%</th>
+  <th data-i="21" data-t="n" data-tip="TerminalBench v2.1 — shell scripting & DevOps tasks">TermBench 2.1%</th>
+  <th data-i="22" data-t="n" data-tip="Scientific computing & numerical Python code execution">SciCode %</th>
+  <th data-i="23" data-t="n" data-tip="Expert visual & multimodal reasoning benchmark">MMMU-Pro %</th>
+  <th data-i="24" data-t="n" data-tip="Median output generation speed in tokens per second">Spd t/s</th>
+  <th data-i="25" data-t="n" data-tip="Median Time To First Token in seconds (latency)">TTFT s</th>
+  <th data-i="26" data-t="n" data-tip="Median Time To First Answer token in seconds">TTFA s</th>
+  <th class="l" data-i="27" data-t="s" data-tip="Model URL identifier on Artificial Analysis">Slug</th>
+</tr></thead><tbody></tbody></table>
+</div></div>
+</main>
+</div>
+
+<div id="tip"></div>
+</div><!-- /.page -->
+
+<script src="assets/models.js"></script>
+<div id="site-footer"></div>
+</body></html>
