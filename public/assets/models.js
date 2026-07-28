@@ -127,16 +127,6 @@ var cmpBar=document.getElementById('compare-bar'),
     checkAll=document.getElementById('check-all');
 var cmpActive=false;
 
-function updateRanks(){
-  var rank=0;
-  tbody.querySelectorAll('tr').forEach(function(r){
-    if(r.style.display==='none') return;
-    rank++;
-    var cell=r.querySelector('td.rnk');
-    if(cell) cell.textContent=rank;
-  });
-}
-
 function updateCmpCount(){
   var n=tbody.querySelectorAll('input.compare-cb:checked').length;
   cmpCount.textContent=n;
@@ -205,7 +195,6 @@ function applyFilter(){
 
   var tableCountN=document.getElementById('table-count-n');
   if(tableCountN) tableCountN.textContent=n;
-  updateRanks();
   updateActiveFilterUI();
   updateHash();
 }
@@ -314,7 +303,7 @@ if(cmpCopyMd){
     });
     if(checkedRows.length===0) return;
 
-    var headerThs=Array.from(document.querySelectorAll('#t thead th')).slice(2); // Skip # and checkbox
+    var headerThs=Array.from(document.querySelectorAll('#t thead th')).slice(1); // Skip checkbox
     var headers=headerThs.map(function(th){
       return th.textContent.replace(/[\u2191\u2193]/g,'').trim();
     });
@@ -326,7 +315,7 @@ if(cmpCopyMd){
     }).join(' | ') + ' |');
 
     checkedRows.forEach(function(r){
-      var cells=Array.from(r.children).slice(2);
+      var cells=Array.from(r.children).slice(1);
       var vals=cells.map(function(c){
         var txt=c.textContent.trim();
         return txt || '—';
@@ -358,7 +347,7 @@ document.querySelectorAll('th').forEach(th=>{
   if(th.dataset.i === undefined || th.dataset.i === null) return;
   th.addEventListener('click',()=>{
     document.querySelectorAll('.preset-btn').forEach(function(b){b.classList.remove('active');b.setAttribute('aria-pressed','false')});
-    const i=+th.dataset.i + 1, t=th.dataset.t; // +1 offset for checkbox column
+    const i=+th.dataset.i, t=th.dataset.t; // data index includes the checkbox column
     if(sortI===i) sortAsc=!sortAsc; else {sortI=i;sortAsc=(t==='s'); if(t==='d') sortAsc=false;}
     const rows=Array.from(tbody.rows);
     rows.sort((a,b)=>{
@@ -506,7 +495,6 @@ function buildRow(m, rank){
     return `<td class="num" data-stat="${esc(stat)}" data-val="${esc(raw)}">${esc(disp)}</td>`;
   }
   return `<tr${rowClass} data-release="${esc(m.released||'')}" data-slug="${esc(m.slug||'')}">`+
-    `<td class="num rnk" data-rank>${rank}</td>`+
     `<td class="cb-col"><input type="checkbox" class="compare-cb" data-model-row id="cmp-${esc(m.slug||rank)}" name="compare-model-${esc(m.slug||rank)}" aria-label="Select ${esc(displayName)} for comparison"></td>`+
     `<td class="l name-col" title="${esc(displayName)}" data-val="${esc(displayName.toLowerCase())}"><span class="cell-title">${esc(displayName)}</span></td>`+
     `<td class="l creator-col" data-creator="${esc(m.creator||'')}" data-val="${esc((m.creator||'').toLowerCase())}"><span class="creator-name">${esc(m.creator||'')}</span></td>`+
@@ -569,7 +557,7 @@ async function loadModels(){
     }
     bindCheckboxEvents();
 
-    sortI = 8;
+    sortI = 7;
     sortAsc = false;
     var intelTh = document.querySelector('th[data-i="7"]');
     if(intelTh){

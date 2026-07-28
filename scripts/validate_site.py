@@ -138,7 +138,7 @@ def validate_default_ui():
     errors = []
     if "Sorted: <b>Intelligence</b> ↓" not in html:
         errors.append("index.html does not show Intelligence as the initial sort")
-    if not re.search(r"sortI\s*=\s*8;\s*sortAsc\s*=\s*false", script):
+    if not re.search(r"sortI\s*=\s*7;\s*sortAsc\s*=\s*false", script):
         errors.append("models.js does not initialize descending Intelligence sorting")
     return errors
 

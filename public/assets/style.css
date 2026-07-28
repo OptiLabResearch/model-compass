@@ -212,8 +212,9 @@ a { color: var(--accent); }
 
 /* overflow:hidden on the card breaks position:sticky for thead. Keep the
    radius via the card; let .scroll own both axes so column headers stick. */
-.table-card { overflow: visible; }
+.table-card { width: 100%; max-width: 100%; min-width: 0; overflow: visible; }
 .table-card > .scroll {
+  display: block; width: 100%; max-width: 100%; min-width: 0;
   overflow: auto;
   max-height: calc(100vh - var(--nav-h) - 80px);
   max-height: calc(100dvh - var(--nav-h) - 80px);
@@ -221,17 +222,17 @@ a { color: var(--accent); }
   -webkit-overflow-scrolling: touch;
 }
 @media (max-width: 800px) {
-  .table-card {
-    overflow: visible;
+  main, .table-card {
+    width: 100%; max-width: 100%; min-width: 0;
   }
   .table-card > .scroll {
     max-height: 625px; /* one 40px header + fifteen 39px model rows */
-    overflow: auto;
-    overscroll-behavior: contain;
+    overflow-x: auto;
+    overflow-y: auto;
+    overscroll-behavior-x: contain;
+    overscroll-behavior-y: auto;
     -webkit-overflow-scrolling: touch;
-    touch-action: pan-x pan-y;
     padding-right: max(16px, env(safe-area-inset-right));
-    scrollbar-gutter: stable both-edges;
   }
 }
 .table-card thead th {
@@ -241,7 +242,6 @@ a { color: var(--accent); }
   background: var(--surface);
   box-shadow: 0 1px 0 var(--border);
 }
-.table-card thead th.rnk,
 .table-card thead th.cb-col,
 .table-card thead th.name-col {
   z-index: 40;
