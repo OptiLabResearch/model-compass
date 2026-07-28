@@ -13,7 +13,15 @@ from urllib.parse import urlparse
 REPO_ROOT = Path(__file__).resolve().parent.parent
 PUBLIC_DIR = REPO_ROOT / "public"
 MAX_PUBLIC_BYTES = 25 * 1024 * 1024
-ALLOWED_ROOT_ENTRIES = {"_headers", "assets", "data", "index.html", "models.html", "og.png"}
+ALLOWED_ROOT_ENTRIES = {
+    "_headers",
+    "404.html",
+    "assets",
+    "data",
+    "index.html",
+    "models.html",
+    "og.png",
+}
 ALLOWED_SUFFIXES = {".css", ".html", ".js", ".json", ".png", ".woff2"}
 ALLOWED_EXTERNAL_HOSTS = {
     "artificialanalysis.ai",
