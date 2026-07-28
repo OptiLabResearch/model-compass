@@ -189,8 +189,7 @@ a { color: var(--accent); }
   font-size: 12px; font-weight: 500; white-space: nowrap;
 }
 .dot-badge::before {
-  content: ''; width: 6px; height: 6px; border-radius: 50%;
-  background: var(--dot-color, var(--dot-6)); flex: none;
+  display: none !important;
 }
 
 .no-transitions, .no-transitions *, .no-transitions *::before, .no-transitions *::after {
@@ -233,9 +232,12 @@ a { color: var(--accent); }
 }
 @media (max-width: 800px) {
   .table-card > .scroll {
-    max-height: none;
+    max-height: calc(100svh - var(--nav-h) - 32px);
+    max-height: calc(100vh - var(--nav-h) - 32px);
     overflow-x: auto;
-    overflow-y: visible;
+    overflow-y: auto;
+    overscroll-behavior-y: contain;
+    padding-right: 16px;
   }
 }
 .table-card thead th {
