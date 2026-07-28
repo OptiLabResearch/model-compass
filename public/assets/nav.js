@@ -4,7 +4,7 @@
    ModelCompassNav.checkStaleness(scrapedAtISOString). */
 (function () {
   const PAGES = [
-    { href: 'index.html', label: 'All Models', sub: 'Full benchmark table' },
+    { href: 'index.html', label: 'All Models', sub: 'Compare cost, speed & capability' },
   ];
 
   function currentFile() {
@@ -19,7 +19,7 @@
     const currentPage = PAGES.find(p => p.href === current) || PAGES[0];
     mount.innerHTML =
       '<a class="brand" href="index.html">' +
-        '<span class="brand-tile" aria-hidden="true">🧭</span>' +
+        '<span class="brand-tile" aria-hidden="true"><img src="favicon.svg" alt=""></span>' +
         '<span class="brand-text">' +
           '<span class="brand-name">AI Models Compass</span>' +
           '<span class="brand-sub">' + currentPage.sub + '</span>' +

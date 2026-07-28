@@ -106,10 +106,10 @@ a { color: var(--accent); }
 }
 #site-nav .brand { display: flex; align-items: center; gap: 10px; text-decoration: none; }
 #site-nav .brand-tile {
-  width: 34px; height: 34px; border-radius: 10px;
-  background: var(--accent); color: var(--accent-fg);
-  display: grid; place-items: center; font-size: 17px; flex: none;
+  width: 34px; height: 34px; border-radius: 10px; overflow: hidden; flex: none;
+  box-shadow: 0 1px 2px rgba(24,24,27,0.16);
 }
+#site-nav .brand-tile img { display: block; width: 100%; height: 100%; }
 #site-nav .brand-text { display: flex; flex-direction: column; line-height: 1.25; }
 #site-nav .brand-name { font-family: var(--serif); font-weight: 600; font-size: 16px; color: var(--text); }
 #site-nav .brand-sub  { font-size: 11px; color: var(--text-muted); white-space: nowrap; }
