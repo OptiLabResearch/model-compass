@@ -236,8 +236,8 @@ a { color: var(--accent); }
     max-height: calc(100vh - var(--nav-h) - 32px);
     overflow-x: auto;
     overflow-y: auto;
-    overscroll-behavior-y: contain;
-    padding-right: 16px;
+    overscroll-behavior: none;
+    -webkit-overflow-scrolling: touch;
   }
 }
 .table-card thead th {
