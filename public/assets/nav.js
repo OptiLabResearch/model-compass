@@ -92,10 +92,16 @@
   function applyTheme(theme) {
     document.documentElement.classList.add('no-transitions');
     document.documentElement.setAttribute('data-theme', theme);
+    document.documentElement.style.colorScheme = theme;
+    const themeMeta = document.querySelector('meta[name="theme-color"]');
+    if (themeMeta) themeMeta.setAttribute('content', theme === 'dark' ? '#1b1a17' : '#F4F4F5');
     const btn = document.getElementById('theme-toggle');
     if (btn) btn.textContent = theme === 'dark' ? '☀' : '☾'; // show the destination
-    void document.documentElement.offsetHeight;
-    document.documentElement.classList.remove('no-transitions');
+    requestAnimationFrame(function () {
+      requestAnimationFrame(function () {
+        document.documentElement.classList.remove('no-transitions');
+      });
+    });
   }
   function toggleTheme() {
     const next = currentTheme() === 'dark' ? 'light' : 'dark';

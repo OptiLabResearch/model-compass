@@ -184,12 +184,10 @@ a { color: var(--accent); }
 
 /* ---- Dot badges (creator / category) ---- */
 .dot-badge {
-  display: inline-flex; align-items: center; gap: 6px;
-  padding: 0; background: transparent; color: var(--text);
-  font-size: 12px; font-weight: 500; white-space: nowrap;
-}
-.dot-badge::before {
-  display: none !important;
+  display: inline-block; width: 6px; height: 6px;
+  margin-right: 6px; border-radius: 50%;
+  background: var(--dot-color, var(--dot-6));
+  vertical-align: middle; flex: none;
 }
 
 .no-transitions, .no-transitions *, .no-transitions *::before, .no-transitions *::after {
@@ -236,11 +234,13 @@ a { color: var(--accent); }
   }
   .table-card > .scroll {
     max-height: none;
-    overflow-x: auto;
+    overflow-x: scroll;
     overflow-y: visible;
+    overscroll-behavior-x: contain;
     -webkit-overflow-scrolling: touch;
     touch-action: pan-x pan-y;
-    padding-right: 16px;
+    padding-right: max(16px, env(safe-area-inset-right));
+    scrollbar-gutter: stable;
   }
 }
 .table-card thead th {
