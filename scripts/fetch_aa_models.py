@@ -239,8 +239,9 @@ def normalize_api_slugs(models: list) -> list:
 def fetch_free_api_models(api_key: str) -> tuple[list, dict]:
     """Fetch every page from the documented Free language-model endpoint."""
     models = []
+    seen_by_slug = {}
     page = 1
-    meta = {'headers': {}}
+    meta = {'headers': {}, 'duplicate_slugs': []}
     while True:
         req = Request(
             f"{FREE_API_URL}?page={page}",
@@ -258,7 +259,19 @@ def fetch_free_api_models(api_key: str) -> tuple[list, dict]:
                 f"AA Free API returned page {pagination.get('page')} while requesting {page}"
             )
 
-        models.extend(page_models)
+        for model in normalize_api_slugs(page_models):
+            slug = model.get('slug')
+            previous = seen_by_slug.get(slug)
+            if previous is None:
+                seen_by_slug[slug] = model
+                models.append(model)
+                continue
+            if model.get('id') != previous.get('id') or model != previous:
+                raise RuntimeError(
+                    f"AA Free API returned conflicting duplicate slug: {slug}"
+                )
+            if slug not in meta['duplicate_slugs']:
+                meta['duplicate_slugs'].append(slug)
         if page == 1:
             meta['tier'] = payload.get('tier')
             meta['intelligence_index_version'] = payload.get(
@@ -273,7 +286,7 @@ def fetch_free_api_models(api_key: str) -> tuple[list, dict]:
             raise RuntimeError(f"AA Free API returned invalid total_pages: {total_pages}")
         page += 1
 
-    return normalize_api_slugs(models), meta
+    return models, meta
 
 
 def merge_api_models(legacy_models: list, free_models: list) -> list:
@@ -944,6 +957,13 @@ def main():
         )
         print(f"  {len(free_models)} models from the documented Free API "
               f"(validated{quota_text})")
+        duplicate_slugs = free_meta.get('duplicate_slugs') or []
+        if duplicate_slugs:
+            print(
+                "  WARNING: ignored identical paginated duplicate slugs: "
+                + ", ".join(duplicate_slugs),
+                file=sys.stderr,
+            )
 
     if not legacy_models and not free_models:
         print("ERROR: both AA API sources failed; refusing to replace the dataset",

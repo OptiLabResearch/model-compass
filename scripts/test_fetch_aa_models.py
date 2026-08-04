@@ -109,5 +109,73 @@ class FetchAAModelsTests(unittest.TestCase):
         self.assertTrue(model["data_sources"]["documented_free_api"])
 
 
+    def test_free_api_ignores_identical_duplicate_across_pages(self):
+        original = fetch._fetch_json
+        model = {
+            "id": "stable-id",
+            "name": "Example",
+            "slug": "Example",
+            "release_date": "2026-01-01",
+            "model_creator": {"id": "creator-id", "name": "Creator"},
+            "evaluations": {},
+            "pricing": {},
+        }
+
+        def fake_fetch(req):
+            page = int(req.full_url.rsplit("=", 1)[1])
+            return {
+                "tier": "free",
+                "intelligence_index_version": 4.1,
+                "pagination": {
+                    "page": page,
+                    "page_size": 1,
+                    "total_pages": 2,
+                    "has_more": page == 1,
+                },
+                "data": [dict(model)],
+            }, {}
+
+        fetch._fetch_json = fake_fetch
+        try:
+            models, meta = fetch.fetch_free_api_models("not-a-real-key")
+        finally:
+            fetch._fetch_json = original
+
+        self.assertEqual([item["slug"] for item in models], ["example"])
+        self.assertEqual(meta["duplicate_slugs"], ["example"])
+
+    def test_free_api_rejects_conflicting_duplicate_slug(self):
+        original = fetch._fetch_json
+
+        def fake_fetch(req):
+            page = int(req.full_url.rsplit("=", 1)[1])
+            return {
+                "tier": "free",
+                "intelligence_index_version": 4.1,
+                "pagination": {
+                    "page": page,
+                    "page_size": 1,
+                    "total_pages": 2,
+                    "has_more": page == 1,
+                },
+                "data": [{
+                    "id": f"id-{page}",
+                    "name": f"Model {page}",
+                    "slug": "duplicate",
+                    "release_date": "2026-01-01",
+                    "model_creator": {"id": "creator-id", "name": "Creator"},
+                    "evaluations": {},
+                    "pricing": {},
+                }],
+            }, {}
+
+        fetch._fetch_json = fake_fetch
+        try:
+            with self.assertRaisesRegex(RuntimeError, "conflicting duplicate slug"):
+                fetch.fetch_free_api_models("not-a-real-key")
+        finally:
+            fetch._fetch_json = original
+
+
 if __name__ == "__main__":
     unittest.main()
