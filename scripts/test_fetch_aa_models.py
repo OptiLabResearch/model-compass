@@ -12,7 +12,7 @@ SPEC.loader.exec_module(fetch)
 
 
 class FetchAAModelsTests(unittest.TestCase):
-    def test_legacy_mixed_case_slug_is_canonicalized(self):
+    def test_free_mixed_case_slug_is_canonicalized(self):
         models = fetch.normalize_api_slugs([{"slug": "QwQ-32B-Preview"}])
         self.assertEqual(models[0]["slug"], "qwq-32b-preview")
 
@@ -58,17 +58,8 @@ class FetchAAModelsTests(unittest.TestCase):
             f"{fetch.FREE_API_URL}?page=2",
         ])
 
-    def test_free_fields_enrich_legacy_model(self):
-        legacy = [{
-            "name": "Example",
-            "slug": "example",
-            "release_date": "2026-01-01",
-            "model_creator": {"name": "Creator"},
-            "evaluations": {"gpqa": 0.5},
-            "pricing": {"price_1m_input_tokens": 1},
-            "median_output_tokens_per_second": 10,
-        }]
-        free = [{
+    def test_free_fields_build_model_entry(self):
+        free = {
             "id": "model-id",
             "name": "Example",
             "slug": "example",
@@ -90,10 +81,10 @@ class FetchAAModelsTests(unittest.TestCase):
                 "median_time_to_first_answer_token_seconds": 3.2,
                 "median_end_to_end_response_time_seconds": 8.7,
             },
-        }]
+            "_has_free_api_data": True,
+        }
 
-        merged = fetch.merge_api_models(legacy, free)
-        model = fetch.build_model_entry(merged[0], None)
+        model = fetch.build_model_entry(free, None)
 
         self.assertEqual(model["aa_id"], "model-id")
         self.assertEqual(model["creator_aa_id"], "creator-id")

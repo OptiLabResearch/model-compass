@@ -34,7 +34,7 @@ node scripts/test_browser_security.mjs
 
 ## Data refresh
 
-The weekly workflow merges the documented Artificial Analysis Free API with the broader legacy API response, enriches it from the public models page, validates the result, exports a dated CSV, and commits only when data changed. Either API can act as a fallback if the other is temporarily unavailable. Malformed payloads, duplicate slugs, unexpected URLs, implausible model-count drops, index-version changes, out-of-range values, and missing featured models fail closed.
+The weekly workflow fetches the documented Artificial Analysis Free API, enriches it from the public models page, validates the result, exports a dated CSV, and commits only when data changed. Malformed payloads, duplicate slugs, unexpected URLs, implausible model-count drops, index-version changes, out-of-range values, and missing featured models fail closed.
 
 To refresh locally, copy `.env.example` to `.env`, add your own `AA_API_KEY`, restrict the file to your user, and run:
 

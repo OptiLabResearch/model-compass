@@ -2,21 +2,21 @@
 """
 fetch_aa_models.py — Build public/data/models.json from Artificial Analysis.
 
-Three sources, merged:
+Two sources, merged:
 
-  1. AA's legacy API endpoint (requires AA_API_KEY). It currently carries a
-     broad evaluation set, but is not part of the documented V2 API.
+  1. The documented Free API endpoint (requires AA_API_KEY). Authoritative for
+     headline indices, evaluation cost, pricing, median performance, stable IDs,
+     and index version.
 
-  2. The documented Free API endpoint. Authoritative for headline indices,
-     evaluation cost, pricing, median performance, stable IDs, and index version.
-
-  3. The /models page's server-rendered payload. Best-effort. Carries the full
+  2. The /models page's server-rendered payload. Best-effort. Carries the full
      metric set, but only for the ~28 models AA renders by default. This is the
      only public source for omniscience / non-hallucination.
 
-The legacy and Free APIs are merged by stable slug; the page enriches them where
-it can. Either API can act as a fallback if the other becomes unavailable. If
-the page scrape breaks, the site still builds from API data alone.
+The page enriches the API data where it can. If the page scrape breaks, the site
+still builds from API data alone.
+
+The legacy /api/v2/data/* endpoints are retired by AA on 2026-11-04, so this
+script now relies solely on the documented Free API.
 
 Usage:
     AA_API_KEY=... python3 scripts/fetch_aa_models.py
@@ -40,7 +40,6 @@ from pathlib import Path
 from urllib.error import HTTPError, URLError
 from urllib.request import HTTPRedirectHandler, Request, build_opener
 
-LEGACY_API_URL = "https://artificialanalysis.ai/api/v2/data/llms/models"
 FREE_API_URL = "https://artificialanalysis.ai/api/v2/language/models/free"
 PAGE_URL = "https://artificialanalysis.ai/models"
 EXPECTED_INDEX_VERSION = 4.1
@@ -137,7 +136,7 @@ RELEASE_WINDOW_DAYS = 183  # ~6 months
 
 
 # ---------------------------------------------------------------------------
-# Source 1 — the official API
+# Source 1 — the documented Free API
 # ---------------------------------------------------------------------------
 
 MAX_RESPONSE_BYTES = 25 * 1024 * 1024  # 25 MB hard cap on upstream bodies
@@ -212,18 +211,6 @@ def _fetch_json(req: Request) -> tuple[dict, dict]:
     return payload, headers
 
 
-def fetch_legacy_api_models(api_key: str) -> list:
-    req = Request(
-        LEGACY_API_URL,
-        headers={'x-api-key': api_key, 'User-Agent': USER_AGENT},
-    )
-    payload, _ = _fetch_json(req)
-    models = payload.get('data')
-    if not models:
-        raise RuntimeError(f"AA API returned no models (status={payload.get('status')})")
-    return normalize_api_slugs(models)
-
-
 def normalize_api_slugs(models: list) -> list:
     """Canonicalize mixed-case upstream slugs to AA URL-safe lowercase."""
     normalized = []
@@ -287,29 +274,6 @@ def fetch_free_api_models(api_key: str) -> tuple[list, dict]:
         page += 1
 
     return models, meta
-
-
-def merge_api_models(legacy_models: list, free_models: list) -> list:
-    """Merge documented Free fields onto the broader legacy response by slug."""
-    merged = {model['slug']: dict(model) for model in legacy_models}
-    for free_model in free_models:
-        slug = free_model['slug']
-        target = merged.setdefault(slug, {})
-        for key in ('id', 'name', 'slug', 'release_date'):
-            if free_model.get(key) is not None:
-                target[key] = free_model[key]
-        for key in ('model_creator', 'evaluations', 'pricing'):
-            combined = dict(target.get(key) or {})
-            combined.update(free_model.get(key) or {})
-            target[key] = combined
-        for key in (
-            'artificial_analysis_intelligence_index_cost',
-            'performance',
-        ):
-            if isinstance(free_model.get(key), dict):
-                target[key] = free_model[key]
-        target['_has_free_api_data'] = True
-    return list(merged.values())
 
 
 def validate_api_models(models: list) -> None:
@@ -920,59 +884,45 @@ def main():
               "repo's GitHub Actions secrets.", file=sys.stderr)
         return 1
 
-    legacy_models = []
-    free_models = []
     free_meta = {}
-
-    print(f"Fetching {LEGACY_API_URL} ...")
-    try:
-        legacy_models = fetch_legacy_api_models(api_key)
-    except RuntimeError as e:
-        print(f"  WARNING: legacy AA API unavailable: {e}", file=sys.stderr)
-    if legacy_models:
-        validate_api_models(legacy_models)
-        print(f"  {len(legacy_models)} models from the legacy API (validated)")
 
     print(f"Fetching {FREE_API_URL} ...")
     try:
         free_models, free_meta = fetch_free_api_models(api_key)
     except RuntimeError as e:
-        print(f"  WARNING: documented AA Free API unavailable: {e}", file=sys.stderr)
-    if free_models:
-        validate_api_models(free_models)
-        index_version = free_meta.get('intelligence_index_version')
-        if index_version != EXPECTED_INDEX_VERSION:
-            print(
-                f"ERROR: AA Intelligence Index version changed from "
-                f"{EXPECTED_INDEX_VERSION} to {index_version}; update the schema "
-                "and methodology copy before publishing.",
-                file=sys.stderr,
-            )
-            return 1
-        quota = free_meta.get('headers') or {}
-        quota_text = (
-            f", tier={free_meta.get('tier')}, "
-            f"remaining={quota.get('X-RateLimit-Remaining')}/"
-            f"{quota.get('X-RateLimit-Limit')}"
-        )
-        print(f"  {len(free_models)} models from the documented Free API "
-              f"(validated{quota_text})")
-        duplicate_slugs = free_meta.get('duplicate_slugs') or []
-        if duplicate_slugs:
-            print(
-                "  WARNING: ignored identical paginated duplicate slugs: "
-                + ", ".join(duplicate_slugs),
-                file=sys.stderr,
-            )
-
-    if not legacy_models and not free_models:
-        print("ERROR: both AA API sources failed; refusing to replace the dataset",
-              file=sys.stderr)
+        print(f"ERROR: documented AA Free API unavailable: {e}", file=sys.stderr)
+        print("Refusing to replace the dataset.", file=sys.stderr)
         return 1
 
-    api_models = merge_api_models(legacy_models, free_models)
-    validate_api_models(api_models)
-    print(f"  {len(api_models)} unique models after API merge")
+    validate_api_models(free_models)
+    index_version = free_meta.get('intelligence_index_version')
+    if index_version != EXPECTED_INDEX_VERSION:
+        print(
+            f"ERROR: AA Intelligence Index version changed from "
+            f"{EXPECTED_INDEX_VERSION} to {index_version}; update the schema "
+            "and methodology copy before publishing.",
+            file=sys.stderr,
+        )
+        return 1
+    quota = free_meta.get('headers') or {}
+    quota_text = (
+        f", tier={free_meta.get('tier')}, "
+        f"remaining={quota.get('X-RateLimit-Remaining')}/"
+        f"{quota.get('X-RateLimit-Limit')}"
+    )
+    print(f"  {len(free_models)} models from the documented Free API "
+          f"(validated{quota_text})")
+    duplicate_slugs = free_meta.get('duplicate_slugs') or []
+    if duplicate_slugs:
+        print(
+            "  WARNING: ignored identical paginated duplicate slugs: "
+            + ", ".join(duplicate_slugs),
+            file=sys.stderr,
+        )
+
+    api_models = free_models
+    for model in api_models:
+        model['_has_free_api_data'] = True
 
     missing = check_featured_slugs(api_models)
     if missing:
@@ -1026,8 +976,7 @@ def main():
         "scraped_at": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
         "source_url": FREE_API_URL,
         "scrape_method": (
-            "AA documented Free API + legacy API benchmark coverage + /models "
-            "page enrichment (top models only)"
+            "AA documented Free API + /models page enrichment (top models only)"
         ),
         "intelligence_index_methodology": (
             "AA Intelligence Index v4.1 = composite of 9 evaluations: "
