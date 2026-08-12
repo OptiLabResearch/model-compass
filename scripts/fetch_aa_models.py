@@ -40,6 +40,8 @@ from pathlib import Path
 from urllib.error import HTTPError, URLError
 from urllib.request import HTTPRedirectHandler, Request, build_opener
 
+from export_benchmarks_json import export_benchmarks
+
 FREE_API_URL = "https://artificialanalysis.ai/api/v2/language/models/free"
 PAGE_URL = "https://artificialanalysis.ai/models"
 EXPECTED_INDEX_VERSION = 4.1
@@ -998,6 +1000,9 @@ def main():
 
     _atomic_write_json(args.output, out)
     print(f"  Saved {args.output} ({args.output.stat().st_size} bytes)")
+    benchmarks_output = args.output.parent / "benchmarks.json"
+    export_benchmarks(out, benchmarks_output)
+    print(f"  Saved {benchmarks_output} ({benchmarks_output.stat().st_size} bytes)")
     return 0
 
 

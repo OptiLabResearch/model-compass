@@ -16,3 +16,8 @@
 
 /data/models.json
   Cache-Control: public, max-age=300, must-revalidate
+
+/data/benchmarks.json
+  Cache-Control: public, max-age=300, must-revalidate
+  Access-Control-Allow-Origin: *
+  Cross-Origin-Resource-Policy: cross-origin

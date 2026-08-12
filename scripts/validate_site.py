@@ -188,6 +188,56 @@ def validate_data():
     return []
 
 
+def validate_benchmarks_json():
+    path = PUBLIC_DIR / "data" / "benchmarks.json"
+    if not path.exists():
+        return ["public/data/benchmarks.json is missing"]
+    try:
+        data = json.loads(path.read_text(encoding="utf-8"))
+    except Exception as exc:
+        return [f"benchmarks.json invalid JSON: {exc}"]
+
+    errors = []
+    if not isinstance(data, dict):
+        return ["benchmarks.json root must be an object"]
+    if data.get("source") != "Artificial Analysis via Model Compass":
+        errors.append("benchmarks.json source field differs from expected value")
+    if not isinstance(data.get("updated_at"), str) or len(data.get("updated_at", "")) != 10:
+        errors.append("benchmarks.json updated_at must be YYYY-MM-DD string")
+
+    b_models = data.get("models")
+    if not isinstance(b_models, list):
+        return ["benchmarks.json models field must be a list"]
+
+    models_json_path = PUBLIC_DIR / "data" / "models.json"
+    if models_json_path.exists():
+        m_data = json.loads(models_json_path.read_text(encoding="utf-8"))
+        m_models = m_data.get("models", [])
+        if len(b_models) != len(m_models):
+            errors.append(
+                f"benchmarks.json model count ({len(b_models)}) differs from models.json ({len(m_models)})"
+            )
+
+    expected_keys = {
+        "slug", "name", "creator", "released", "input_price", "output_price",
+        "blended_price", "intelligence", "coding", "agentic", "omniscience",
+        "gpqa", "hle", "critpt", "non_hallucination", "ifbench", "lcr",
+        "tau2_bench", "tau3_banking", "gdpval", "terminalbench_hard",
+        "terminalbench_2_1", "scicode", "mmmu_pro", "speed_tps",
+        "ttft_seconds", "ttfa_seconds",
+    }
+    for idx, item in enumerate(b_models):
+        if not isinstance(item, dict):
+            errors.append(f"benchmarks.json item {idx} is not an object")
+            continue
+        missing_keys = expected_keys - set(item.keys())
+        if missing_keys:
+            errors.append(f"benchmarks.json item {idx} missing keys: {sorted(missing_keys)}")
+            break
+
+    return errors
+
+
 def validate_history_csv():
     errors = []
     dangerous = ("=", "+", "-", "@", "\t", "\r")
@@ -215,6 +265,7 @@ def main():
         validate_headers,
         validate_fonts,
         validate_data,
+        validate_benchmarks_json,
         validate_history_csv,
     )
     errors = [error for check in checks for error in check()]

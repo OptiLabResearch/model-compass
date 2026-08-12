@@ -167,6 +167,49 @@ class FetchAAModelsTests(unittest.TestCase):
         finally:
             fetch._fetch_json = original
 
+    def test_export_benchmarks_format_and_null_preservation(self):
+        exp_spec = importlib.util.spec_from_file_location(
+            "export_benchmarks_json",
+            MODULE_PATH.with_name("export_benchmarks_json.py")
+        )
+        exporter = importlib.util.module_from_spec(exp_spec)
+        exp_spec.loader.exec_module(exporter)
+
+        sample_model = fetch.build_model_entry({
+            "id": "m1",
+            "name": "Test Model",
+            "slug": "test-model",
+            "release_date": "2026-05-01",
+            "model_creator": {"id": "c1", "name": "Test Creator"},
+            "evaluations": {"artificial_analysis_intelligence_index": 50.0},
+            "pricing": {"price_1m_input_tokens": 5.0, "price_1m_output_tokens": 30.0},
+            "performance": {"median_output_tokens_per_second": 60.0},
+            "_has_free_api_data": True,
+        }, None)
+
+        payload = exporter.build_benchmarks_payload({
+            "scraped_at": "2026-08-09T19:25:29Z",
+            "models": [sample_model],
+        })
+
+        self.assertEqual(payload["updated_at"], "2026-08-09")
+        self.assertEqual(payload["source"], "Artificial Analysis via Model Compass")
+        self.assertEqual(len(payload["models"]), 1)
+
+        bm = payload["models"][0]
+        self.assertEqual(bm["slug"], "test-model")
+        self.assertEqual(bm["name"], "Test Model")
+        self.assertEqual(bm["creator"], "Test Creator")
+        self.assertEqual(bm["input_price"], 5.0)
+        self.assertEqual(bm["output_price"], 30.0)
+        self.assertEqual(bm["intelligence"], 50.0)
+        self.assertEqual(bm["speed_tps"], 60.0)
+        # Check that unpopulated benchmarks strictly remain None (null) and not 0 or string
+        self.assertIsNone(bm["omniscience"])
+        self.assertIsNone(bm["gdpval"])
+        self.assertIsNone(bm["critpt"])
+        self.assertIsNone(bm["non_hallucination"])
+
 
 if __name__ == "__main__":
     unittest.main()
