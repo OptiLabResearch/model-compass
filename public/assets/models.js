@@ -123,6 +123,7 @@ var cmpBar=document.getElementById('compare-bar'),
     cmpCount=document.getElementById('cmp-count'),
     cmpGo=document.getElementById('cmp-go'),
     cmpCopyMd=document.getElementById('cmp-copy-md'),
+    cmpSaveCsv=document.getElementById('cmp-save-csv'),
     cmpClear=document.getElementById('cmp-clear'),
     checkAll=document.getElementById('check-all');
 var cmpActive=false;
@@ -318,7 +319,8 @@ if(cmpCopyMd){
       var cells=Array.from(r.children).slice(1);
       var vals=cells.map(function(c){
         var txt=c.textContent.trim();
-        return txt || '—';
+        if(txt==='—'||txt==='-'||txt==='–') txt='';
+        return txt;
       });
       mdLines.push('| ' + vals.join(' | ') + ' |');
     });
@@ -331,6 +333,63 @@ if(cmpCopyMd){
     }).catch(function(err){
       console.error('Failed to copy markdown:', err);
     });
+  });
+}
+
+if(cmpSaveCsv){
+  cmpSaveCsv.addEventListener('click',function(){
+    var checkedRows=Array.from(tbody.querySelectorAll('tr')).filter(function(r){
+      var cb=r.querySelector('input.compare-cb');
+      return (cb&&cb.checked)||(cmpActive&&r.style.display!=='none');
+    });
+    if(checkedRows.length===0) return;
+
+    var headerThs=Array.from(document.querySelectorAll('#t thead th')).slice(1); // Skip checkbox
+    var headers=headerThs.map(function(th){
+      return th.textContent.replace(/[\u2191\u2193]/g,'').trim();
+    });
+
+    function escapeCsvCell(val){
+      if(val===null||val===undefined) return '';
+      var str=String(val).trim();
+      if(str==='—'||str==='-'||str==='–') return '';
+      if(/^[=+\-@\t\r]/.test(str)){
+        str="'"+str;
+      }
+      if(/[",\n\r]/.test(str)){
+        str='"'+str.replace(/"/g,'""')+'"';
+      }
+      return str;
+    }
+
+    var csvRows=[];
+    csvRows.push(headers.map(escapeCsvCell).join(','));
+
+    checkedRows.forEach(function(r){
+      var cells=Array.from(r.children).slice(1);
+      var vals=cells.map(function(c){
+        return escapeCsvCell(c.textContent);
+      });
+      csvRows.push(vals.join(','));
+    });
+
+    var csvText=csvRows.join('\r\n');
+    var blob=new Blob([csvText],{type:'text/csv;charset=utf-8;'});
+    var url=URL.createObjectURL(blob);
+    var dateStr=new Date().toISOString().split('T')[0];
+    var fileName='model-benchmarks-'+dateStr+'.csv';
+
+    var a=document.createElement('a');
+    a.href=url;
+    a.download=fileName;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+
+    var origText=cmpSaveCsv.textContent;
+    cmpSaveCsv.textContent='✓ Saved!';
+    setTimeout(function(){ cmpSaveCsv.textContent=origText; }, 2000);
   });
 }
 
@@ -482,7 +541,7 @@ function buildRow(m, rank){
 
   function cell(stat, val, isPrice){
     const raw=(val===null||val===undefined)?'':val;
-    if(raw==='') return `<td class="num" data-stat="${esc(stat)}" data-val="">—</td>`;
+    if(raw==='') return `<td class="num" data-stat="${esc(stat)}" data-val=""></td>`;
     let disp=raw;
     if(typeof raw==='number' || (!isNaN(parseFloat(raw)) && isFinite(raw))){
       const num=parseFloat(raw);

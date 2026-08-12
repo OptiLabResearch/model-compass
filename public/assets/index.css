@@ -100,6 +100,8 @@ td.empty-data{opacity:0.25}
 #compare-bar button{padding:4px 12px;font-size:11px;font-weight:600;border-radius:4px;border:1px solid var(--border);cursor:pointer;transition:all .15s}
 #cmp-go{background:var(--accent);color:var(--accent-fg);border-color:var(--accent)}
 #cmp-go:hover{background:var(--accent-hover)}
+#cmp-copy-md,#cmp-save-csv{background:var(--surface);color:var(--text)}
+#cmp-copy-md:hover,#cmp-save-csv:hover{background:var(--surface-2)}
 #cmp-clear{background:var(--surface);color:var(--text-secondary)}
 #cmp-clear:hover{background:var(--surface-2)}
 #cmp-count{color:var(--accent);font-weight:600}
