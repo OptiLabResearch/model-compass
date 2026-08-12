@@ -302,6 +302,11 @@ if(cmpCopyMd){
       var cb=r.querySelector('input.compare-cb');
       return (cb&&cb.checked)||(cmpActive&&r.style.display!=='none');
     });
+    if(checkedRows.length===0){
+      checkedRows=Array.from(tbody.querySelectorAll('tr')).filter(function(r){
+        return r.style.display!=='none';
+      });
+    }
     if(checkedRows.length===0) return;
 
     var headerThs=Array.from(document.querySelectorAll('#t thead th')).slice(1); // Skip checkbox
@@ -342,6 +347,11 @@ if(cmpSaveCsv){
       var cb=r.querySelector('input.compare-cb');
       return (cb&&cb.checked)||(cmpActive&&r.style.display!=='none');
     });
+    if(checkedRows.length===0){
+      checkedRows=Array.from(tbody.querySelectorAll('tr')).filter(function(r){
+        return r.style.display!=='none';
+      });
+    }
     if(checkedRows.length===0) return;
 
     var headerThs=Array.from(document.querySelectorAll('#t thead th')).slice(1); // Skip checkbox
@@ -385,7 +395,7 @@ if(cmpSaveCsv){
     document.body.appendChild(a);
     a.click();
     document.body.removeChild(a);
-    URL.revokeObjectURL(url);
+    setTimeout(function(){ URL.revokeObjectURL(url); }, 1000);
 
     var origText=cmpSaveCsv.textContent;
     cmpSaveCsv.textContent='✓ Saved!';
