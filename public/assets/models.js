@@ -394,8 +394,7 @@ if(cmpSaveCsv){
     a.download=fileName;
     document.body.appendChild(a);
     a.click();
-    document.body.removeChild(a);
-    setTimeout(function(){ URL.revokeObjectURL(url); }, 1000);
+    setTimeout(function(){ document.body.removeChild(a); URL.revokeObjectURL(url); }, 1000);
 
     var origText=cmpSaveCsv.textContent;
     cmpSaveCsv.textContent='✓ Saved!';
