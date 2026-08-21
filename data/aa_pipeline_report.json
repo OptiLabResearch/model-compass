@@ -1,67 +1,69 @@
 {
-  "generated_at": "2026-08-21T15:01:11Z",
+  "generated_at": "2026-08-21T17:10:29Z",
   "sources": {
     "rsc": {
       "healthy": true,
-      "records": 412,
-      "fetched_at": "2026-08-21T15:01:05Z",
+      "records": 411,
+      "fetched_at": "2026-08-21T17:10:24Z",
       "errors": []
     },
     "official_api": {
-      "healthy": true,
-      "records": 610,
-      "fetched_at": "2026-08-21T15:01:05Z",
-      "errors": []
+      "healthy": false,
+      "records": 0,
+      "fetched_at": "2026-08-21T17:10:25Z",
+      "errors": [
+        "AA_API_KEY is not set; official API fetch skipped"
+      ]
     },
     "snapshot": {
       "healthy": true,
       "records": 570,
-      "fetched_at": "2026-08-21T15:01:07Z",
+      "fetched_at": "2026-08-21T17:10:25Z",
       "errors": []
     }
   },
   "field_coverage": {
-    "intelligence_index": 601,
-    "coding_index": 223,
+    "intelligence_index": 596,
+    "coding_index": 166,
     "math_index": 0,
-    "agentic_index": 186,
+    "agentic_index": 150,
     "omniscience_index": 480,
     "context_tokens": 609,
     "parameters_billions": 338,
-    "is_reasoning": 412,
+    "is_reasoning": 411,
     "is_open_weights": 609,
     "license": 328,
     "size_class": 555,
-    "released": 613,
-    "creator": 614
+    "released": 609,
+    "creator": 609
   },
   "benchmark_coverage": {
     "aime": 0,
-    "aime25": 189,
+    "aime25": 188,
     "apex_agents": 30,
-    "critpt": 487,
-    "gdpval": 201,
+    "critpt": 483,
+    "gdpval": 197,
     "gpqa": 576,
     "gpqa_diamond": 0,
     "hle": 570,
     "ifbench": 456,
     "it_bench_sre": 28,
     "lcr": 502,
-    "livecodebench": 216,
+    "livecodebench": 215,
     "math_500": 0,
     "mmlu_pro": 0,
     "mmmu_pro": 240,
-    "omniscience": 371,
+    "omniscience": 370,
     "omniscience_accuracy": 480,
     "omniscience_hallucination_rate": 0,
-    "omniscience_non_halluc": 484,
+    "omniscience_non_halluc": 480,
     "scicode": 568,
     "tau2": 446,
-    "tau_banking": 166,
+    "tau_banking": 165,
     "terminalbench_hard": 438,
-    "terminalbench_v21": 178
+    "terminalbench_v21": 177
   },
-  "total_models": 614,
+  "total_models": 609,
   "parser_versions": {
     "rsc": "0.2.0",
     "official_api": "0.1.0",

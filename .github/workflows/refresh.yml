@@ -26,21 +26,22 @@ jobs:
         with:
           python-version: "3.12"
 
-      # Fails the job if the AA API is unreachable or a featured model has
-      # vanished upstream, rather than committing a silently-degraded dataset.
-      - name: Fetch model data from Artificial Analysis
-        env:
-          AA_API_KEY: ${{ secrets.AA_API_KEY }}
-        run: python3 scripts/fetch_aa_models.py
-
-      # Private model-selection pipeline (adapter architecture): merges the
-      # rich RSC leaderboard payload + official API + Oolong snapshot into
-      # data/aa_models_v2.json. AA_API_KEY is passed through so the official
-      # API validates the RSC data; the RSC and snapshot sources need no key.
+      # Data pipeline: build the rich private dataset, then derive the public
+      # site models.json + benchmarks.json from it.
+      #
+      # The legacy Free-API path (scripts/fetch_aa_models.py) is NOT used for
+      # the site anymore: AA's Free API now omits per-benchmark scores
+      # (Pro-only), leaving ~175 models with no benchmarks. The RSC leaderboard
+      # payload + API + snapshot carry full benchmarks + pricing + the latest
+      # models, and scripts/build_site_from_aa.py maps them onto the exact
+      # schema the frontend/validator expect.
       - name: Build private AA dataset (RSC + API + snapshot)
         env:
           AA_API_KEY: ${{ secrets.AA_API_KEY }}
         run: python3 -m scripts.aa.orchestrate
+
+      - name: Build public site models.json from rich dataset
+        run: python3 scripts/build_site_from_aa.py
 
       - name: Export dated history CSV
         run: python3 scripts/export_history_csv.py

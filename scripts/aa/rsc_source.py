@@ -135,6 +135,65 @@ def _looks_like_row(entry) -> bool:
     )
 
 
+def _extract_array(payload_text: str, key: str):
+    """Locate and json-parse the array for *any* ``"<key>":[`` occurrence,
+    scanning from the end and returning the first one that parses as a list
+    of dicts. Returns (list, end_index) or (None, None)."""
+    search_from = len(payload_text)
+    while True:
+        last = payload_text.rfind(f'"{key}":[', 0, search_from)
+        if last < 0:
+            return None, None
+        start = payload_text.index("[", last)
+        depth = 0
+        in_str = False
+        esc = False
+        end = -1
+        for i in range(start, len(payload_text)):
+            c = payload_text[i]
+            if esc:
+                esc = False
+            elif c == "\\":
+                esc = True
+            elif c == '"':
+                in_str = not in_str
+            elif not in_str:
+                if c == "[":
+                    depth += 1
+                elif c == "]":
+                    depth -= 1
+                    if depth == 0:
+                        end = i
+                        break
+        if end < 0:
+            return None, None
+        text = payload_text[start:end + 1]
+        try:
+            arr = json.loads(text)
+        except json.JSONDecodeError:
+            search_from = last  # try an earlier occurrence
+            continue
+        # only accept arrays that look like the RSC models metadata table
+        if isinstance(arr, list) and arr and all(isinstance(x, dict) for x in arr):
+            return arr, end
+        search_from = last
+
+
+def _extract_models_meta(payload_text: str) -> dict:
+    """Return {slug: entry} for the RSC ``models`` metadata table, which carries
+    releaseDate / creator / isReasoning / deprecated / effort that the ``rows``
+    table omits. Best-effort: {} if not found."""
+    arr, _ = _extract_array(payload_text, "models")
+    if not arr:
+        return {}
+    out = {}
+    for entry in arr:
+        slug = (entry or {}).get("slug")
+        if slug:
+            out[slug] = entry
+    return out
+
+
 def normalize_row(row: dict, source_meta: dict) -> dict:
     """Map one RSC row (host+model+pricing+performance) onto the schema."""
     rec = schema.model_record_template()
@@ -213,7 +272,7 @@ def normalize_row(row: dict, source_meta: dict) -> dict:
     b["mmmu_pro"] = _pct(model.get("mmmuPro"))
     b["apex_agents"] = _pct(model.get("apexAgents"))
     b["it_bench_sre"] = _pct(model.get("itBenchSre"))
-    b["omniscience"] = _pct(model.get("omniscience"))
+    b["omniscience"] = _num(model.get("omniscience"), 2)
     b["omniscience_accuracy"] = _pct(model.get("omniscienceAccuracy"))
     b["omniscience_hallucination_rate"] = _pct(model.get("omniscienceHallucinationRate"))
     if isinstance(model.get("omniscienceNonHallucination"), (int, float)):
@@ -374,16 +433,34 @@ class RSCSource:
             return result
 
         models = {}
+        # The `rows` table omits releaseDate/creator/effort; the `models`
+        # metadata table in the same payload carries them. Merge so records
+        # keep full identity even for models AA's rows table under-specifies.
+        meta = _extract_models_meta(text)
         for r in rows:
             if not _looks_like_row(r):
                 continue
             rec = normalize_row(r, {"source": self.name})
             if not schema.require_identity(rec):
                 continue
-            models[rec["slug"]] = rec  # dedup by slug, last wins for richness
+            slug = rec["slug"]
+            mmeta = meta.get(slug)
+            if mmeta:
+                if rec.get("released") is None:
+                    rec["released"] = mmeta.get("releaseDate") or mmeta.get("release_date")
+                if rec.get("creator") is None:
+                    cr = mmeta.get("creator")
+                    if isinstance(cr, dict):
+                        rec["creator"] = cr.get("name") or cr.get("slug")
+                if rec.get("is_reasoning") is None and mmeta.get("isReasoning") is not None:
+                    rec["is_reasoning"] = bool(mmeta["isReasoning"])
+                if rec.get("deprecated") is None and mmeta.get("deprecated") is not None:
+                    rec["deprecated"] = bool(mmeta["deprecated"])
+            models[slug] = rec  # dedup by slug, last wins for richness
         result.meta = {
             "raw_rows": len(rows),
             "unique_models": len(models),
+            "models_meta": len(meta),
             "payload_bytes": len(raw_bytes),
             "intelligence_index_version": "4.1",
             **(raw_meta or {}),
