@@ -1,0 +1,72 @@
+{
+  "generated_at": "2026-08-21T14:49:59Z",
+  "sources": {
+    "rsc": {
+      "healthy": true,
+      "records": 412,
+      "fetched_at": "2026-08-21T14:49:55Z",
+      "errors": []
+    },
+    "official_api": {
+      "healthy": false,
+      "records": 0,
+      "fetched_at": "2026-08-21T14:49:55Z",
+      "errors": [
+        "AA_API_KEY is not set; official API fetch skipped"
+      ]
+    },
+    "snapshot": {
+      "healthy": true,
+      "records": 570,
+      "fetched_at": "2026-08-21T14:49:55Z",
+      "errors": []
+    }
+  },
+  "field_coverage": {
+    "intelligence_index": 596,
+    "coding_index": 166,
+    "math_index": 0,
+    "agentic_index": 146,
+    "omniscience_index": 480,
+    "context_tokens": 609,
+    "parameters_billions": 338,
+    "is_reasoning": 412,
+    "is_open_weights": 609,
+    "license": 328,
+    "size_class": 555,
+    "released": 569,
+    "creator": 609
+  },
+  "benchmark_coverage": {
+    "aime": 0,
+    "aime25": 189,
+    "apex_agents": 30,
+    "critpt": 483,
+    "gdpval": 197,
+    "gpqa": 576,
+    "gpqa_diamond": 0,
+    "hle": 570,
+    "ifbench": 456,
+    "it_bench_sre": 29,
+    "lcr": 502,
+    "livecodebench": 216,
+    "math_500": 0,
+    "mmlu_pro": 0,
+    "mmmu_pro": 240,
+    "omniscience": 371,
+    "omniscience_accuracy": 480,
+    "omniscience_hallucination_rate": 0,
+    "omniscience_non_halluc": 480,
+    "scicode": 568,
+    "tau2": 446,
+    "tau_banking": 166,
+    "terminalbench_hard": 438,
+    "terminalbench_v21": 178
+  },
+  "total_models": 609,
+  "parser_versions": {
+    "rsc": "0.2.0",
+    "official_api": "0.1.0",
+    "snapshot": "0.1.0"
+  }
+}

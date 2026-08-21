@@ -33,6 +33,15 @@ jobs:
           AA_API_KEY: ${{ secrets.AA_API_KEY }}
         run: python3 scripts/fetch_aa_models.py
 
+      # Private model-selection pipeline (adapter architecture): merges the
+      # rich RSC leaderboard payload + official API + Oolong snapshot into
+      # data/aa_models_v2.json. AA_API_KEY is passed through so the official
+      # API validates the RSC data; the RSC and snapshot sources need no key.
+      - name: Build private AA dataset (RSC + API + snapshot)
+        env:
+          AA_API_KEY: ${{ secrets.AA_API_KEY }}
+        run: python3 -m scripts.aa.orchestrate
+
       - name: Export dated history CSV
         run: python3 scripts/export_history_csv.py
 
@@ -43,7 +52,9 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add public/data/models.json public/data/benchmarks.json data/enrichment_cache.json data/history/
+          git add public/data/models.json public/data/benchmarks.json \
+            data/enrichment_cache.json data/history/ \
+            data/aa_models_v2.json data/aa_pipeline_report.json
           git diff --staged --quiet || git commit -m "data: weekly refresh $(date -u +%Y-%m-%d)"
           git push
 
@@ -60,7 +71,10 @@ jobs:
               `Run: ${context.serverUrl}/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}`,
               '',
               'Likely causes: `AA_API_KEY` missing or expired, a featured slug renamed',
-              'upstream, or AA changed the /models page again.',
+              'upstream, AA changed the /models page (legacy pipeline), or the RSC',
+              'leaderboard payload structure changed (scripts/aa/orchestrate.py is',
+              'designed to fail visibly rather than publish empty data — see the',
+              'pipeline report).',
             ].join('\n');
             const open = await github.rest.issues.listForRepo({
               owner: context.repo.owner, repo: context.repo.repo,

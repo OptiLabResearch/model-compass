@@ -13,3 +13,7 @@ __pycache__/
 env/
 venv/
 .wrangler/
+# AA pipeline raw payload cache (large binary dumps, reproducible, not commit-
+# worthy). The normalized outputs data/aa_models_v2.json and
+# data/aa_pipeline_report.json ARE committed.
+data/aa_cache/
