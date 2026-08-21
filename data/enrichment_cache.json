@@ -1,14 +1,49 @@
 {
   "description": "Last-known-good values for metrics the AA API does not expose (omniscience/non-hallucination, agentic index, GDPval, CritPt, MMMU-Pro, context window). Written by scripts/fetch_aa_models.py. Each entry records the date it was observed; fresh page data always overrides these.",
-  "updated_at": "2026-08-09",
+  "updated_at": "2026-08-21",
   "models": {
+    "a-x-k2": {
+      "composite": {
+        "agentic_index": 25.7,
+        "omniscience_index": -8.2
+      },
+      "benchmarks": {
+        "gdpval_v2": 30.5,
+        "critpt": 8.9,
+        "omniscience_accuracy": 18.6,
+        "omniscience_hallucination_rate": 33.0,
+        "omniscience_non_halluc": 67.0
+      },
+      "context_tokens": 262144,
+      "is_reasoning": true,
+      "is_open_weights": true,
+      "license": "Apache 2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "size_class": "large",
+      "parameters_billions": 692,
+      "active_params_billions": 33,
+      "input_modalities": {
+        "text": true,
+        "image": false,
+        "audio": false,
+        "video": false
+      },
+      "output_modalities": {
+        "text": true,
+        "image": false,
+        "audio": false,
+        "video": false
+      },
+      "_as_of": "2026-08-21",
+      "_name": "A.X-K2"
+    },
     "claude-fable-5": {
       "composite": {
         "agentic_index": 56.6,
         "omniscience_index": 43.3
       },
       "benchmarks": {
-        "gdpval_v2": 62.1,
+        "gdpval_v2": 61.9,
         "critpt": 28.6,
         "omniscience_accuracy": 65.3,
         "omniscience_hallucination_rate": 63.6,
@@ -30,7 +65,7 @@
         "audio": false,
         "video": false
       },
-      "_as_of": "2026-08-09",
+      "_as_of": "2026-08-21",
       "_name": "Claude Fable 5 (Max)"
     },
     "claude-opus-4-6": {
@@ -195,7 +230,7 @@
         "omniscience_index": 37.1
       },
       "benchmarks": {
-        "gdpval_v2": 67.3,
+        "gdpval_v2": 67.2,
         "critpt": 29.1,
         "mmmu_pro": 84.7,
         "omniscience_accuracy": 60.9,
@@ -218,7 +253,7 @@
         "audio": false,
         "video": false
       },
-      "_as_of": "2026-08-09",
+      "_as_of": "2026-08-21",
       "_name": "Claude Opus 5 (Max)"
     },
     "claude-sonnet-4-6": {
@@ -385,7 +420,7 @@
         "omniscience_index": -4.0
       },
       "benchmarks": {
-        "gdpval_v2": 10.9,
+        "gdpval_v2": 10.8,
         "critpt": 0.3,
         "mmmu_pro": 63.2,
         "omniscience_accuracy": 8.9,
@@ -397,7 +432,6 @@
       "is_open_weights": true,
       "license": "Apache 2.0",
       "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
-      "commercial_allowed": true,
       "size_class": "large",
       "parameters_billions": 218,
       "active_params_billions": 25,
@@ -413,7 +447,7 @@
         "audio": false,
         "video": false
       },
-      "_as_of": "2026-08-09",
+      "_as_of": "2026-08-21",
       "_name": "Command A+"
     },
     "deepseek-v4-flash": {
@@ -522,24 +556,21 @@
     },
     "deepseek-v4-pro": {
       "composite": {
-        "agentic_index": 36.4,
-        "omniscience_index": -10.0
+        "agentic_index": 49.6,
+        "omniscience_index": 0.8
       },
       "benchmarks": {
-        "gdpval_v2": 40.3,
-        "critpt": 12.9,
-        "apex_agents_aa": 24.3,
-        "it_bench_sre": 38.3,
-        "omniscience_accuracy": 43.3,
-        "omniscience_hallucination_rate": 94.0,
-        "omniscience_non_halluc": 6.0
+        "gdpval_v2": 54.5,
+        "critpt": 18.0,
+        "omniscience_accuracy": 49.1,
+        "omniscience_hallucination_rate": 94.8,
+        "omniscience_non_halluc": 5.2
       },
       "context_tokens": 1000000,
       "is_reasoning": true,
       "is_open_weights": true,
-      "license": "MIT",
+      "license": "Mit",
       "license_url": "https://opensource.org/license/mit",
-      "commercial_allowed": true,
       "size_class": "large",
       "parameters_billions": 1600,
       "active_params_billions": 49,
@@ -555,8 +586,8 @@
         "audio": false,
         "video": false
       },
-      "_as_of": "2026-07-28",
-      "_name": "DeepSeek V4 Pro (Max)"
+      "_as_of": "2026-08-21",
+      "_name": "DeepSeek V4 Pro 0813 (Max)"
     },
     "deepseek-v4-pro-high": {
       "composite": {
@@ -839,7 +870,7 @@
         "omniscience_index": 5.2
       },
       "benchmarks": {
-        "gdpval_v2": 32.1,
+        "gdpval_v2": 32.0,
         "critpt": 0,
         "mmmu_pro": 79.0,
         "omniscience_accuracy": 29.5,
@@ -862,7 +893,7 @@
         "audio": false,
         "video": false
       },
-      "_as_of": "2026-08-09",
+      "_as_of": "2026-08-21",
       "_name": "Gemini 3.5 Flash-Lite"
     },
     "gemini-3-5-flash-medium": {
@@ -956,6 +987,38 @@
       },
       "_as_of": "2026-08-09",
       "_name": "Gemini 3.6 Flash (high)"
+    },
+    "gemini-3-7-flash": {
+      "composite": {
+        "agentic_index": 45.1,
+        "omniscience_index": 26.5
+      },
+      "benchmarks": {
+        "gdpval_v2": 51.6,
+        "critpt": 14.3,
+        "mmmu_pro": 85.5,
+        "omniscience_accuracy": 55.3,
+        "omniscience_hallucination_rate": 64.5,
+        "omniscience_non_halluc": 35.5
+      },
+      "context_tokens": 1000000,
+      "is_reasoning": true,
+      "is_open_weights": false,
+      "size_class": "large",
+      "input_modalities": {
+        "text": true,
+        "image": true,
+        "audio": true,
+        "video": true
+      },
+      "output_modalities": {
+        "text": true,
+        "image": false,
+        "audio": false,
+        "video": false
+      },
+      "_as_of": "2026-08-21",
+      "_name": "Gemini 3.7 Flash (high)"
     },
     "gemma-4-12b": {
       "composite": {
@@ -1523,6 +1586,41 @@
       },
       "_as_of": "2026-08-09",
       "_name": "GLM-5.2 (max)"
+    },
+    "glm-5-3": {
+      "composite": {
+        "agentic_index": 59.1,
+        "omniscience_index": 14.3
+      },
+      "benchmarks": {
+        "gdpval_v2": 63.4,
+        "critpt": 19.1,
+        "omniscience_accuracy": 33.9,
+        "omniscience_hallucination_rate": 29.6,
+        "omniscience_non_halluc": 70.4
+      },
+      "context_tokens": 1000000,
+      "is_reasoning": true,
+      "is_open_weights": false,
+      "license": "Mit",
+      "license_url": "https://opensource.org/license/mit",
+      "size_class": "large",
+      "parameters_billions": 753,
+      "active_params_billions": 40,
+      "input_modalities": {
+        "text": true,
+        "image": false,
+        "audio": false,
+        "video": false
+      },
+      "output_modalities": {
+        "text": true,
+        "image": false,
+        "audio": false,
+        "video": false
+      },
+      "_as_of": "2026-08-21",
+      "_name": "GLM-5.3 (max)"
     },
     "glm-5-non-reasoning": {
       "composite": {
@@ -2182,7 +2280,7 @@
         "audio": false,
         "video": false
       },
-      "_as_of": "2026-08-09",
+      "_as_of": "2026-08-21",
       "_name": "GPT-5.5 Pro (xhigh)"
     },
     "gpt-5-6-luna": {
@@ -2191,7 +2289,7 @@
         "omniscience_index": -10.3
       },
       "benchmarks": {
-        "gdpval_v2": 54.1,
+        "gdpval_v2": 53.9,
         "critpt": 20.6,
         "mmmu_pro": 78.6,
         "apex_agents_aa": 35.8,
@@ -2216,7 +2314,7 @@
         "audio": false,
         "video": false
       },
-      "_as_of": "2026-08-09",
+      "_as_of": "2026-08-21",
       "_name": "GPT-5.6 Luna (max)"
     },
     "gpt-5-6-sol": {
@@ -2225,7 +2323,7 @@
         "omniscience_index": 22.0
       },
       "benchmarks": {
-        "gdpval_v2": 61.5,
+        "gdpval_v2": 61.1,
         "critpt": 32.3,
         "mmmu_pro": 83.4,
         "it_bench_sre": 56.2,
@@ -2249,7 +2347,7 @@
         "audio": false,
         "video": false
       },
-      "_as_of": "2026-08-09",
+      "_as_of": "2026-08-21",
       "_name": "GPT-5.6 Sol (max)"
     },
     "gpt-5-6-terra": {
@@ -2258,7 +2356,7 @@
         "omniscience_index": 0.1
       },
       "benchmarks": {
-        "gdpval_v2": 53.9,
+        "gdpval_v2": 53.8,
         "critpt": 30.0,
         "mmmu_pro": 80.7,
         "apex_agents_aa": 38.9,
@@ -2283,7 +2381,7 @@
         "audio": false,
         "video": false
       },
-      "_as_of": "2026-08-09",
+      "_as_of": "2026-08-21",
       "_name": "GPT-5.6 Terra (max)"
     },
     "granite-4-1-30b": {
@@ -2669,6 +2767,37 @@
       "_as_of": "2026-08-09",
       "_name": "Grok 4.5 (high)"
     },
+    "grok-4-6": {
+      "composite": {
+        "agentic_index": 58.7,
+        "omniscience_index": 30.5
+      },
+      "benchmarks": {
+        "gdpval_v2": 62.4,
+        "critpt": 17.1,
+        "omniscience_accuracy": 48.2,
+        "omniscience_hallucination_rate": 34.3,
+        "omniscience_non_halluc": 65.7
+      },
+      "context_tokens": 500000,
+      "is_reasoning": true,
+      "is_open_weights": false,
+      "size_class": "large",
+      "input_modalities": {
+        "text": true,
+        "image": true,
+        "audio": false,
+        "video": false
+      },
+      "output_modalities": {
+        "text": true,
+        "image": false,
+        "audio": false,
+        "video": false
+      },
+      "_as_of": "2026-08-21",
+      "_name": "Grok 4.6 (high)"
+    },
     "hy3": {
       "composite": {
         "omniscience_index": -34.6
@@ -2777,7 +2906,7 @@
         "omniscience_index": 2
       },
       "benchmarks": {
-        "gdpval_v2": 37.0,
+        "gdpval_v2": 36.9,
         "critpt": 5.4,
         "mmmu_pro": 73.5,
         "omniscience_accuracy": 41.5,
@@ -2789,7 +2918,6 @@
       "is_open_weights": true,
       "license": "Apache 2.0",
       "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
-      "commercial_allowed": true,
       "size_class": "large",
       "parameters_billions": 975,
       "active_params_billions": 41,
@@ -2805,7 +2933,7 @@
         "audio": false,
         "video": false
       },
-      "_as_of": "2026-08-09",
+      "_as_of": "2026-08-21",
       "_name": "Inkling (xhigh)"
     },
     "jt-35b-flash": {
@@ -2866,6 +2994,40 @@
       },
       "_as_of": "2026-07-05",
       "_name": "JT-MINI"
+    },
+    "k-exaone-2-0-0803": {
+      "composite": {
+        "agentic_index": 19.7,
+        "omniscience_index": -6.6
+      },
+      "benchmarks": {
+        "gdpval_v2": 24.0,
+        "critpt": 0.9,
+        "omniscience_accuracy": 13.1,
+        "omniscience_hallucination_rate": 22.6,
+        "omniscience_non_halluc": 77.4
+      },
+      "context_tokens": 262144,
+      "is_reasoning": true,
+      "is_open_weights": true,
+      "license": "apache-2.0",
+      "size_class": "large",
+      "parameters_billions": 750,
+      "active_params_billions": 37,
+      "input_modalities": {
+        "text": true,
+        "image": false,
+        "audio": false,
+        "video": false
+      },
+      "output_modalities": {
+        "text": true,
+        "image": false,
+        "audio": false,
+        "video": false
+      },
+      "_as_of": "2026-08-21",
+      "_name": "K-EXAONE 2.0 0803"
     },
     "kat-coder-pro-v2": {
       "composite": {
@@ -3081,7 +3243,7 @@
         "omniscience_index": 19.7
       },
       "benchmarks": {
-        "gdpval_v2": 59.1,
+        "gdpval_v2": 58.9,
         "critpt": 23.4,
         "mmmu_pro": 80.5,
         "apex_agents_aa": 41.3,
@@ -3095,7 +3257,6 @@
       "is_open_weights": true,
       "license": "Kimi K3 License",
       "license_url": "https://huggingface.co/moonshotai/Kimi-K3/blob/main/LICENSE",
-      "commercial_allowed": false,
       "size_class": "large",
       "parameters_billions": 2800,
       "active_params_billions": 104,
@@ -3111,7 +3272,7 @@
         "audio": false,
         "video": false
       },
-      "_as_of": "2026-08-09",
+      "_as_of": "2026-08-21",
       "_name": "Kimi K3 (max)"
     },
     "lfm2-24b-a2b": {
@@ -3791,7 +3952,7 @@
         "omniscience_index": 1.4
       },
       "benchmarks": {
-        "gdpval_v2": 44.5,
+        "gdpval_v2": 44.3,
         "critpt": 3.7,
         "mmmu_pro": 78.6,
         "omniscience_accuracy": 16.7,
@@ -3803,7 +3964,6 @@
       "is_open_weights": true,
       "license": "MINIMAX COMMUNITY LICENSE",
       "license_url": "https://huggingface.co/MiniMaxAI/MiniMax-M3/blob/main/LICENSE",
-      "commercial_allowed": false,
       "size_class": "large",
       "parameters_billions": 428,
       "active_params_billions": 23,
@@ -3819,7 +3979,7 @@
         "audio": false,
         "video": false
       },
-      "_as_of": "2026-08-09",
+      "_as_of": "2026-08-21",
       "_name": "MiniMax-M3"
     },
     "mistral-medium-3-5": {
@@ -3828,7 +3988,7 @@
         "omniscience_index": -36.8
       },
       "benchmarks": {
-        "gdpval_v2": 21.6,
+        "gdpval_v2": 21.7,
         "critpt": 0,
         "mmmu_pro": 64.9,
         "omniscience_accuracy": 24.7,
@@ -3840,7 +4000,6 @@
       "is_open_weights": true,
       "license": "Modified MIT License",
       "license_url": "https://huggingface.co/mistralai/Mistral-Medium-3.5-128B/blob/main/LICENSE",
-      "commercial_allowed": true,
       "size_class": "medium",
       "parameters_billions": 128,
       "input_modalities": {
@@ -3855,7 +4014,7 @@
         "audio": false,
         "video": false
       },
-      "_as_of": "2026-08-09",
+      "_as_of": "2026-08-21",
       "_name": "Mistral Medium 3.5"
     },
     "mistral-small-4": {
@@ -3930,6 +4089,75 @@
       "_as_of": "2026-07-05",
       "_name": "Mistral Small 4 (Non-reasoning)"
     },
+    "motif-3": {
+      "composite": {
+        "agentic_index": 37.6,
+        "omniscience_index": 10.2
+      },
+      "benchmarks": {
+        "gdpval_v2": 38.7,
+        "critpt": 6.6,
+        "omniscience_accuracy": 30.1,
+        "omniscience_hallucination_rate": 28.4,
+        "omniscience_non_halluc": 71.6
+      },
+      "context_tokens": 262144,
+      "is_reasoning": true,
+      "is_open_weights": true,
+      "size_class": "large",
+      "parameters_billions": 314,
+      "active_params_billions": 13.2,
+      "input_modalities": {
+        "text": true,
+        "image": false,
+        "audio": false,
+        "video": false
+      },
+      "output_modalities": {
+        "text": true,
+        "image": false,
+        "audio": false,
+        "video": false
+      },
+      "_as_of": "2026-08-21",
+      "_name": "Motif 3"
+    },
+    "muse-glimmer": {
+      "composite": {
+        "agentic_index": 22.9,
+        "omniscience_index": -32.9
+      },
+      "benchmarks": {
+        "gdpval_v2": 22.7,
+        "critpt": 2.6,
+        "mmmu_pro": 74.3,
+        "omniscience_accuracy": 27.0,
+        "omniscience_hallucination_rate": 81.9,
+        "omniscience_non_halluc": 18.1
+      },
+      "context_tokens": 131072,
+      "knowledge_cutoff": "2026-01-04",
+      "is_reasoning": true,
+      "is_open_weights": true,
+      "license": "Apache 2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "size_class": "small",
+      "parameters_billions": 30,
+      "input_modalities": {
+        "text": true,
+        "image": true,
+        "audio": false,
+        "video": false
+      },
+      "output_modalities": {
+        "text": true,
+        "image": false,
+        "audio": false,
+        "video": false
+      },
+      "_as_of": "2026-08-21",
+      "_name": "Muse Glimmer (high)"
+    },
     "muse-spark": {
       "composite": {
         "agentic_index": 28.69,
@@ -3998,7 +4226,7 @@
         "omniscience_index": 27.2
       },
       "benchmarks": {
-        "gdpval_v2": 56.5,
+        "gdpval_v2": 56.4,
         "critpt": 17.7,
         "omniscience_accuracy": 45.4,
         "omniscience_hallucination_rate": 33.3,
@@ -4011,8 +4239,8 @@
       "input_modalities": {
         "text": true,
         "image": true,
-        "audio": false,
-        "video": false
+        "audio": true,
+        "video": true
       },
       "output_modalities": {
         "text": true,
@@ -4020,7 +4248,7 @@
         "audio": false,
         "video": false
       },
-      "_as_of": "2026-08-09",
+      "_as_of": "2026-08-21",
       "_name": "Muse Spark 1.2 (xhigh)"
     },
     "nanbeige4-1-3b": {
@@ -4056,6 +4284,41 @@
       },
       "_as_of": "2026-07-05",
       "_name": "Nanbeige4.1-3B"
+    },
+    "nemotron-3-5-lightning": {
+      "composite": {
+        "agentic_index": 13.8,
+        "omniscience_index": -17.7
+      },
+      "benchmarks": {
+        "gdpval_v2": 16.2,
+        "critpt": 0,
+        "omniscience_accuracy": 14.4,
+        "omniscience_hallucination_rate": 37.6,
+        "omniscience_non_halluc": 62.4
+      },
+      "context_tokens": 1000000,
+      "is_reasoning": true,
+      "is_open_weights": true,
+      "license": "OpenMDW-1.1",
+      "license_url": "https://openmdw.ai/license/1-1/",
+      "size_class": "small",
+      "parameters_billions": 31.6,
+      "active_params_billions": 3.6,
+      "input_modalities": {
+        "text": true,
+        "image": false,
+        "audio": false,
+        "video": false
+      },
+      "output_modalities": {
+        "text": true,
+        "image": false,
+        "audio": false,
+        "video": false
+      },
+      "_as_of": "2026-08-21",
+      "_name": "Nemotron 3.5 Lightning"
     },
     "nemotron-3-nano-omni-30b-a3b": {
       "composite": {
@@ -4233,15 +4496,15 @@
     },
     "nvidia-nemotron-3-super-120b-a12b": {
       "composite": {
-        "agentic_index": 8.72,
-        "omniscience_index": -42.1
+        "agentic_index": 8.8,
+        "omniscience_index": -41.5
       },
       "benchmarks": {
-        "gdpval_v2": 9.6,
+        "gdpval_v2": 9.9,
         "critpt": 3.1,
         "apex_agents_aa": 1.8,
         "it_bench_sre": 1.1,
-        "omniscience_accuracy": 24.0,
+        "omniscience_accuracy": 24.3,
         "omniscience_hallucination_rate": 87.0,
         "omniscience_non_halluc": 13.0
       },
@@ -4250,8 +4513,7 @@
       "is_open_weights": true,
       "license": "Nvidia Nemotron Open Model License",
       "license_url": "https://www.nvidia.com/en-us/agreements/enterprise-software/nvidia-open-model-license/",
-      "commercial_allowed": true,
-      "size_class": "Medium",
+      "size_class": "medium",
       "parameters_billions": 120.6,
       "active_params_billions": 12.7,
       "input_modalities": {
@@ -4266,8 +4528,8 @@
         "audio": false,
         "video": false
       },
-      "_as_of": "2026-07-05",
-      "_name": "NVIDIA Nemotron 3 Super 120B A12B (Reasoning)"
+      "_as_of": "2026-08-21",
+      "_name": "Nemotron 3 Super 120B A12B (Reasoning)"
     },
     "nvidia-nemotron-3-ultra-550b-a55b": {
       "composite": {
@@ -4275,7 +4537,7 @@
         "omniscience_index": -0.4
       },
       "benchmarks": {
-        "gdpval_v2": 33.2,
+        "gdpval_v2": 33.1,
         "critpt": 3.1,
         "omniscience_accuracy": 22.6,
         "omniscience_hallucination_rate": 29.7,
@@ -4286,7 +4548,6 @@
       "is_open_weights": true,
       "license": "OpenMDW",
       "license_url": "https://openmdw.ai/license/1-1/",
-      "commercial_allowed": true,
       "size_class": "large",
       "parameters_billions": 550,
       "active_params_billions": 55,
@@ -4302,7 +4563,7 @@
         "audio": false,
         "video": false
       },
-      "_as_of": "2026-08-09",
+      "_as_of": "2026-08-21",
       "_name": "Nemotron 3 Ultra 550B A55B (Reasoning)"
     },
     "olmo-3-1-32b-instruct": {
@@ -5242,6 +5503,76 @@
       "_as_of": "2026-07-05",
       "_name": "Qwen3.7 Plus"
     },
+    "qwen3-8-2-4t-a95b": {
+      "composite": {
+        "agentic_index": 57.1,
+        "omniscience_index": 4.3
+      },
+      "benchmarks": {
+        "gdpval_v2": 61.0,
+        "critpt": 20.0,
+        "omniscience_accuracy": 31.2,
+        "omniscience_hallucination_rate": 39.2,
+        "omniscience_non_halluc": 60.8
+      },
+      "context_tokens": 983616,
+      "is_reasoning": true,
+      "is_open_weights": true,
+      "license": "Qwen3.8-Max License",
+      "license_url": "https://huggingface.co/Qwen/Qwen3.8-2.4T-A95B/blob/main/LICENSE",
+      "size_class": "large",
+      "parameters_billions": 2400,
+      "active_params_billions": 95,
+      "input_modalities": {
+        "text": true,
+        "image": false,
+        "audio": false,
+        "video": false
+      },
+      "output_modalities": {
+        "text": true,
+        "image": false,
+        "audio": false,
+        "video": false
+      },
+      "_as_of": "2026-08-21",
+      "_name": "Qwen3.8 2.4T A95B"
+    },
+    "qwen3-8-27b": {
+      "composite": {
+        "agentic_index": 50.9,
+        "omniscience_index": -10.0
+      },
+      "benchmarks": {
+        "gdpval_v2": 52.3,
+        "critpt": 5.4,
+        "mmmu_pro": 76.3,
+        "omniscience_accuracy": 15.6,
+        "omniscience_hallucination_rate": 30.3,
+        "omniscience_non_halluc": 69.7
+      },
+      "context_tokens": 256000,
+      "is_reasoning": true,
+      "is_open_weights": true,
+      "license": "Apache 2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "size_class": "small",
+      "parameters_billions": 27,
+      "input_modalities": {
+        "text": true,
+        "image": true,
+        "audio": false,
+        "video": true
+      },
+      "output_modalities": {
+        "text": true,
+        "image": false,
+        "audio": false,
+        "video": false
+      },
+      "_as_of": "2026-08-21",
+      "_name": "Qwen3.8 27B"
+    },
     "qwen3-8-max": {
       "composite": {
         "agentic_index": 58.4,
@@ -5441,6 +5772,42 @@
       },
       "_as_of": "2026-07-05",
       "_name": "Sarvam 30B (high)"
+    },
+    "solar-open2-250b": {
+      "composite": {
+        "agentic_index": 27.8,
+        "omniscience_index": -1.8
+      },
+      "benchmarks": {
+        "gdpval_v2": 31.1,
+        "critpt": 5.7,
+        "omniscience_accuracy": 18.8,
+        "omniscience_hallucination_rate": 25.4,
+        "omniscience_non_halluc": 74.6
+      },
+      "context_tokens": 1048576,
+      "knowledge_cutoff": "2026-02-01",
+      "is_reasoning": true,
+      "is_open_weights": true,
+      "license": "Upstage Solar License",
+      "license_url": "https://huggingface.co/upstage/Solar-Open2-250B/blob/main/LICENSE",
+      "size_class": "large",
+      "parameters_billions": 250,
+      "active_params_billions": 15,
+      "input_modalities": {
+        "text": true,
+        "image": false,
+        "audio": false,
+        "video": false
+      },
+      "output_modalities": {
+        "text": true,
+        "image": false,
+        "audio": false,
+        "video": false
+      },
+      "_as_of": "2026-08-21",
+      "_name": "Solar Open2 250B"
     },
     "solar-pro-3": {
       "composite": {
