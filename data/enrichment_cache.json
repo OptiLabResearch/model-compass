@@ -1,6 +1,6 @@
 {
   "description": "Last-known-good values for metrics the AA API does not expose (omniscience/non-hallucination, agentic index, GDPval, CritPt, MMMU-Pro, context window). Written by scripts/fetch_aa_models.py. Each entry records the date it was observed; fresh page data always overrides these.",
-  "updated_at": "2026-08-21",
+  "updated_at": "2026-08-16",
   "models": {
     "a-x-k2": {
       "composite": {
@@ -17,11 +17,6 @@
       "context_tokens": 262144,
       "is_reasoning": true,
       "is_open_weights": true,
-      "license": "Apache 2.0",
-      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
-      "size_class": "large",
-      "parameters_billions": 692,
-      "active_params_billions": 33,
       "input_modalities": {
         "text": true,
         "image": false,
@@ -34,7 +29,7 @@
         "audio": false,
         "video": false
       },
-      "_as_of": "2026-08-21",
+      "_as_of": "2026-08-16",
       "_name": "A.X-K2"
     },
     "claude-fable-5": {
@@ -65,7 +60,7 @@
         "audio": false,
         "video": false
       },
-      "_as_of": "2026-08-21",
+      "_as_of": "2026-08-16",
       "_name": "Claude Fable 5 (Max)"
     },
     "claude-opus-4-6": {
@@ -230,7 +225,7 @@
         "omniscience_index": 37.1
       },
       "benchmarks": {
-        "gdpval_v2": 67.2,
+        "gdpval_v2": 67.4,
         "critpt": 29.1,
         "mmmu_pro": 84.7,
         "omniscience_accuracy": 60.9,
@@ -253,7 +248,7 @@
         "audio": false,
         "video": false
       },
-      "_as_of": "2026-08-21",
+      "_as_of": "2026-08-16",
       "_name": "Claude Opus 5 (Max)"
     },
     "claude-sonnet-4-6": {
@@ -432,6 +427,7 @@
       "is_open_weights": true,
       "license": "Apache 2.0",
       "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "commercial_allowed": true,
       "size_class": "large",
       "parameters_billions": 218,
       "active_params_billions": 25,
@@ -447,7 +443,7 @@
         "audio": false,
         "video": false
       },
-      "_as_of": "2026-08-21",
+      "_as_of": "2026-08-16",
       "_name": "Command A+"
     },
     "deepseek-v4-flash": {
@@ -571,6 +567,7 @@
       "is_open_weights": true,
       "license": "Mit",
       "license_url": "https://opensource.org/license/mit",
+      "commercial_allowed": true,
       "size_class": "large",
       "parameters_billions": 1600,
       "active_params_billions": 49,
@@ -586,7 +583,7 @@
         "audio": false,
         "video": false
       },
-      "_as_of": "2026-08-21",
+      "_as_of": "2026-08-16",
       "_name": "DeepSeek V4 Pro 0813 (Max)"
     },
     "deepseek-v4-pro-high": {
@@ -893,7 +890,7 @@
         "audio": false,
         "video": false
       },
-      "_as_of": "2026-08-21",
+      "_as_of": "2026-08-16",
       "_name": "Gemini 3.5 Flash-Lite"
     },
     "gemini-3-5-flash-medium": {
@@ -994,7 +991,7 @@
         "omniscience_index": 26.5
       },
       "benchmarks": {
-        "gdpval_v2": 51.6,
+        "gdpval_v2": 51.3,
         "critpt": 14.3,
         "mmmu_pro": 85.5,
         "omniscience_accuracy": 55.3,
@@ -1017,7 +1014,7 @@
         "audio": false,
         "video": false
       },
-      "_as_of": "2026-08-21",
+      "_as_of": "2026-08-16",
       "_name": "Gemini 3.7 Flash (high)"
     },
     "gemma-4-12b": {
@@ -1555,7 +1552,7 @@
         "omniscience_index": 4.4
       },
       "benchmarks": {
-        "gdpval_v2": 50.4,
+        "gdpval_v2": 50.3,
         "critpt": 20.9,
         "apex_agents_aa": 33.7,
         "it_bench_sre": 42.7,
@@ -1584,43 +1581,8 @@
         "audio": false,
         "video": false
       },
-      "_as_of": "2026-08-09",
+      "_as_of": "2026-08-16",
       "_name": "GLM-5.2 (max)"
-    },
-    "glm-5-3": {
-      "composite": {
-        "agentic_index": 59.1,
-        "omniscience_index": 14.3
-      },
-      "benchmarks": {
-        "gdpval_v2": 63.4,
-        "critpt": 19.1,
-        "omniscience_accuracy": 33.9,
-        "omniscience_hallucination_rate": 29.6,
-        "omniscience_non_halluc": 70.4
-      },
-      "context_tokens": 1000000,
-      "is_reasoning": true,
-      "is_open_weights": false,
-      "license": "Mit",
-      "license_url": "https://opensource.org/license/mit",
-      "size_class": "large",
-      "parameters_billions": 753,
-      "active_params_billions": 40,
-      "input_modalities": {
-        "text": true,
-        "image": false,
-        "audio": false,
-        "video": false
-      },
-      "output_modalities": {
-        "text": true,
-        "image": false,
-        "audio": false,
-        "video": false
-      },
-      "_as_of": "2026-08-21",
-      "_name": "GLM-5.3 (max)"
     },
     "glm-5-non-reasoning": {
       "composite": {
@@ -2280,7 +2242,7 @@
         "audio": false,
         "video": false
       },
-      "_as_of": "2026-08-21",
+      "_as_of": "2026-08-16",
       "_name": "GPT-5.5 Pro (xhigh)"
     },
     "gpt-5-6-luna": {
@@ -2289,7 +2251,7 @@
         "omniscience_index": -10.3
       },
       "benchmarks": {
-        "gdpval_v2": 53.9,
+        "gdpval_v2": 54.0,
         "critpt": 20.6,
         "mmmu_pro": 78.6,
         "apex_agents_aa": 35.8,
@@ -2314,7 +2276,7 @@
         "audio": false,
         "video": false
       },
-      "_as_of": "2026-08-21",
+      "_as_of": "2026-08-16",
       "_name": "GPT-5.6 Luna (max)"
     },
     "gpt-5-6-sol": {
@@ -2323,7 +2285,7 @@
         "omniscience_index": 22.0
       },
       "benchmarks": {
-        "gdpval_v2": 61.1,
+        "gdpval_v2": 61.3,
         "critpt": 32.3,
         "mmmu_pro": 83.4,
         "it_bench_sre": 56.2,
@@ -2347,7 +2309,7 @@
         "audio": false,
         "video": false
       },
-      "_as_of": "2026-08-21",
+      "_as_of": "2026-08-16",
       "_name": "GPT-5.6 Sol (max)"
     },
     "gpt-5-6-terra": {
@@ -2356,7 +2318,7 @@
         "omniscience_index": 0.1
       },
       "benchmarks": {
-        "gdpval_v2": 53.8,
+        "gdpval_v2": 53.9,
         "critpt": 30.0,
         "mmmu_pro": 80.7,
         "apex_agents_aa": 38.9,
@@ -2381,7 +2343,7 @@
         "audio": false,
         "video": false
       },
-      "_as_of": "2026-08-21",
+      "_as_of": "2026-08-16",
       "_name": "GPT-5.6 Terra (max)"
     },
     "granite-4-1-30b": {
@@ -2773,7 +2735,7 @@
         "omniscience_index": 30.5
       },
       "benchmarks": {
-        "gdpval_v2": 62.4,
+        "gdpval_v2": 62.3,
         "critpt": 17.1,
         "omniscience_accuracy": 48.2,
         "omniscience_hallucination_rate": 34.3,
@@ -2795,7 +2757,7 @@
         "audio": false,
         "video": false
       },
-      "_as_of": "2026-08-21",
+      "_as_of": "2026-08-16",
       "_name": "Grok 4.6 (high)"
     },
     "hy3": {
@@ -2906,7 +2868,7 @@
         "omniscience_index": 2
       },
       "benchmarks": {
-        "gdpval_v2": 36.9,
+        "gdpval_v2": 37.0,
         "critpt": 5.4,
         "mmmu_pro": 73.5,
         "omniscience_accuracy": 41.5,
@@ -2918,6 +2880,7 @@
       "is_open_weights": true,
       "license": "Apache 2.0",
       "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "commercial_allowed": true,
       "size_class": "large",
       "parameters_billions": 975,
       "active_params_billions": 41,
@@ -2933,7 +2896,7 @@
         "audio": false,
         "video": false
       },
-      "_as_of": "2026-08-21",
+      "_as_of": "2026-08-16",
       "_name": "Inkling (xhigh)"
     },
     "jt-35b-flash": {
@@ -3026,7 +2989,7 @@
         "audio": false,
         "video": false
       },
-      "_as_of": "2026-08-21",
+      "_as_of": "2026-08-16",
       "_name": "K-EXAONE 2.0 0803"
     },
     "kat-coder-pro-v2": {
@@ -3243,7 +3206,7 @@
         "omniscience_index": 19.7
       },
       "benchmarks": {
-        "gdpval_v2": 58.9,
+        "gdpval_v2": 59.1,
         "critpt": 23.4,
         "mmmu_pro": 80.5,
         "apex_agents_aa": 41.3,
@@ -3257,6 +3220,7 @@
       "is_open_weights": true,
       "license": "Kimi K3 License",
       "license_url": "https://huggingface.co/moonshotai/Kimi-K3/blob/main/LICENSE",
+      "commercial_allowed": false,
       "size_class": "large",
       "parameters_billions": 2800,
       "active_params_billions": 104,
@@ -3272,7 +3236,7 @@
         "audio": false,
         "video": false
       },
-      "_as_of": "2026-08-21",
+      "_as_of": "2026-08-16",
       "_name": "Kimi K3 (max)"
     },
     "lfm2-24b-a2b": {
@@ -3952,7 +3916,7 @@
         "omniscience_index": 1.4
       },
       "benchmarks": {
-        "gdpval_v2": 44.3,
+        "gdpval_v2": 44.4,
         "critpt": 3.7,
         "mmmu_pro": 78.6,
         "omniscience_accuracy": 16.7,
@@ -3964,6 +3928,7 @@
       "is_open_weights": true,
       "license": "MINIMAX COMMUNITY LICENSE",
       "license_url": "https://huggingface.co/MiniMaxAI/MiniMax-M3/blob/main/LICENSE",
+      "commercial_allowed": false,
       "size_class": "large",
       "parameters_billions": 428,
       "active_params_billions": 23,
@@ -3979,7 +3944,7 @@
         "audio": false,
         "video": false
       },
-      "_as_of": "2026-08-21",
+      "_as_of": "2026-08-16",
       "_name": "MiniMax-M3"
     },
     "mistral-medium-3-5": {
@@ -4000,6 +3965,7 @@
       "is_open_weights": true,
       "license": "Modified MIT License",
       "license_url": "https://huggingface.co/mistralai/Mistral-Medium-3.5-128B/blob/main/LICENSE",
+      "commercial_allowed": true,
       "size_class": "medium",
       "parameters_billions": 128,
       "input_modalities": {
@@ -4014,7 +3980,7 @@
         "audio": false,
         "video": false
       },
-      "_as_of": "2026-08-21",
+      "_as_of": "2026-08-16",
       "_name": "Mistral Medium 3.5"
     },
     "mistral-small-4": {
@@ -4119,7 +4085,7 @@
         "audio": false,
         "video": false
       },
-      "_as_of": "2026-08-21",
+      "_as_of": "2026-08-16",
       "_name": "Motif 3"
     },
     "muse-glimmer": {
@@ -4141,6 +4107,7 @@
       "is_open_weights": true,
       "license": "Apache 2.0",
       "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "commercial_allowed": true,
       "size_class": "small",
       "parameters_billions": 30,
       "input_modalities": {
@@ -4155,7 +4122,7 @@
         "audio": false,
         "video": false
       },
-      "_as_of": "2026-08-21",
+      "_as_of": "2026-08-16",
       "_name": "Muse Glimmer (high)"
     },
     "muse-spark": {
@@ -4248,7 +4215,7 @@
         "audio": false,
         "video": false
       },
-      "_as_of": "2026-08-21",
+      "_as_of": "2026-08-16",
       "_name": "Muse Spark 1.2 (xhigh)"
     },
     "nanbeige4-1-3b": {
@@ -4302,6 +4269,7 @@
       "is_open_weights": true,
       "license": "OpenMDW-1.1",
       "license_url": "https://openmdw.ai/license/1-1/",
+      "commercial_allowed": true,
       "size_class": "small",
       "parameters_billions": 31.6,
       "active_params_billions": 3.6,
@@ -4317,7 +4285,7 @@
         "audio": false,
         "video": false
       },
-      "_as_of": "2026-08-21",
+      "_as_of": "2026-08-16",
       "_name": "Nemotron 3.5 Lightning"
     },
     "nemotron-3-nano-omni-30b-a3b": {
@@ -4513,6 +4481,7 @@
       "is_open_weights": true,
       "license": "Nvidia Nemotron Open Model License",
       "license_url": "https://www.nvidia.com/en-us/agreements/enterprise-software/nvidia-open-model-license/",
+      "commercial_allowed": true,
       "size_class": "medium",
       "parameters_billions": 120.6,
       "active_params_billions": 12.7,
@@ -4528,7 +4497,7 @@
         "audio": false,
         "video": false
       },
-      "_as_of": "2026-08-21",
+      "_as_of": "2026-08-16",
       "_name": "Nemotron 3 Super 120B A12B (Reasoning)"
     },
     "nvidia-nemotron-3-ultra-550b-a55b": {
@@ -4548,6 +4517,7 @@
       "is_open_weights": true,
       "license": "OpenMDW",
       "license_url": "https://openmdw.ai/license/1-1/",
+      "commercial_allowed": true,
       "size_class": "large",
       "parameters_billions": 550,
       "active_params_billions": 55,
@@ -4563,7 +4533,7 @@
         "audio": false,
         "video": false
       },
-      "_as_of": "2026-08-21",
+      "_as_of": "2026-08-16",
       "_name": "Nemotron 3 Ultra 550B A55B (Reasoning)"
     },
     "olmo-3-1-32b-instruct": {
@@ -5503,83 +5473,13 @@
       "_as_of": "2026-07-05",
       "_name": "Qwen3.7 Plus"
     },
-    "qwen3-8-2-4t-a95b": {
-      "composite": {
-        "agentic_index": 57.1,
-        "omniscience_index": 4.3
-      },
-      "benchmarks": {
-        "gdpval_v2": 61.0,
-        "critpt": 20.0,
-        "omniscience_accuracy": 31.2,
-        "omniscience_hallucination_rate": 39.2,
-        "omniscience_non_halluc": 60.8
-      },
-      "context_tokens": 983616,
-      "is_reasoning": true,
-      "is_open_weights": true,
-      "license": "Qwen3.8-Max License",
-      "license_url": "https://huggingface.co/Qwen/Qwen3.8-2.4T-A95B/blob/main/LICENSE",
-      "size_class": "large",
-      "parameters_billions": 2400,
-      "active_params_billions": 95,
-      "input_modalities": {
-        "text": true,
-        "image": false,
-        "audio": false,
-        "video": false
-      },
-      "output_modalities": {
-        "text": true,
-        "image": false,
-        "audio": false,
-        "video": false
-      },
-      "_as_of": "2026-08-21",
-      "_name": "Qwen3.8 2.4T A95B"
-    },
-    "qwen3-8-27b": {
-      "composite": {
-        "agentic_index": 50.9,
-        "omniscience_index": -10.0
-      },
-      "benchmarks": {
-        "gdpval_v2": 52.3,
-        "critpt": 5.4,
-        "mmmu_pro": 76.3,
-        "omniscience_accuracy": 15.6,
-        "omniscience_hallucination_rate": 30.3,
-        "omniscience_non_halluc": 69.7
-      },
-      "context_tokens": 256000,
-      "is_reasoning": true,
-      "is_open_weights": true,
-      "license": "Apache 2.0",
-      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
-      "size_class": "small",
-      "parameters_billions": 27,
-      "input_modalities": {
-        "text": true,
-        "image": true,
-        "audio": false,
-        "video": true
-      },
-      "output_modalities": {
-        "text": true,
-        "image": false,
-        "audio": false,
-        "video": false
-      },
-      "_as_of": "2026-08-21",
-      "_name": "Qwen3.8 27B"
-    },
     "qwen3-8-max": {
       "composite": {
         "agentic_index": 58.4,
         "omniscience_index": 3.4
       },
       "benchmarks": {
-        "gdpval_v2": 62.0,
+        "gdpval_v2": 61.8,
         "critpt": 20.0,
         "mmmu_pro": 82.3,
         "omniscience_accuracy": 31.9,
@@ -5602,7 +5502,7 @@
         "audio": false,
         "video": false
       },
-      "_as_of": "2026-08-09",
+      "_as_of": "2026-08-16",
       "_name": "Qwen3.8 Max"
     },
     "qwen3-coder-next": {
@@ -5789,11 +5689,8 @@
       "knowledge_cutoff": "2026-02-01",
       "is_reasoning": true,
       "is_open_weights": true,
-      "license": "Upstage Solar License",
-      "license_url": "https://huggingface.co/upstage/Solar-Open2-250B/blob/main/LICENSE",
       "size_class": "large",
       "parameters_billions": 250,
-      "active_params_billions": 15,
       "input_modalities": {
         "text": true,
         "image": false,
@@ -5806,7 +5703,7 @@
         "audio": false,
         "video": false
       },
-      "_as_of": "2026-08-21",
+      "_as_of": "2026-08-16",
       "_name": "Solar Open2 250B"
     },
     "solar-pro-3": {
