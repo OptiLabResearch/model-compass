@@ -32,11 +32,12 @@ fields + bounds), `http.py` (retries/backoff/rate-limit/atomic/cache),
 
 ## Outputs
 
-- `data/aa_models_v2.json` — merged normalized dataset (609 models as of
+- `data/aa_models_v2.json` — merged normalized dataset (614 models as of
   2026-08-21), each record includes source provenance (`merged.primary`,
   `merged.also_from`), original ids/slugs, normalized values, and preserved
   unknown raw fields.
 - `data/aa_pipeline_report.json` — per-source health + field/benchmark coverage.
+- `data/history/rich/*.delta.json` — bounded rich-dataset change deltas (104 files retained).
 - `data/aa_cache/` — raw payloads (git-ignored), for reproducibility/debugging.
 
 ## Commands
@@ -49,8 +50,13 @@ python3.12 -m scripts.aa.orchestrate
 # Cross-validate RSC vs snapshot (and vs API with AA_API_KEY)
 python3.12 scripts/aa/crossvalidate.py --api
 
-# Query layer demo (best coding/agentic/value/speed/backup)
+# Query layer demo (best coding/value/agentic/speed/backup)
 python3.12 scripts/aa/demo_query.py
+
+# Stable decision CLI (JSON output)
+python3 scripts/model_compass.py recommend coding
+python3 scripts/model_compass.py pareto intelligence_index cost
+python3 scripts/model_compass.py backup <slug>
 
 # Offline unit tests (drift detection, scaling, dedup, merge, NaN)
 python3.12 scripts/aa/tests/test_pipeline.py
@@ -83,10 +89,11 @@ Runs in the weekly GitHub workflow (`.github/workflows/refresh.yml`, Sundays
 
 ## Field / benchmark coverage (2026-08-21)
 
-609 merged models. Field coverage varies by source:
+614 merged models. Field coverage varies by source and is recorded in
+`data/aa_pipeline_report.json` on every refresh:
 
-- intelligence_index 596/609, omniscience_index 480, context_tokens 609,
-  creator 609, is_open_weights 609, parameters 338, license 328
+- intelligence_index 601/614, omniscience_index 480, context_tokens 609,
+  creator 614, is_open_weights 609, parameters 338, license 328
 - benchmarks: gpqa 576, hle 570, scicode 568, lcr 502, critpt 483,
   omniscience_accuracy/non_halluc 480, ifbench 456, tau2 446,
   terminalbench_hard 438, omniscience 371, mmmu_pro 240, gdpval 197,

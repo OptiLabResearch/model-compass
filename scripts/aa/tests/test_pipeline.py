@@ -80,6 +80,17 @@ def test_rsc_extract_normalize_roundtrip():
     assert validate.run_sanity([rec], "rsc", 1).passed
 
 
+def test_checked_in_rsc_fixture_replays():
+    payload = (Path(__file__).parent / "fixtures" / "rsc_minimal.txt").read_text()
+    rows, _ = rsc_source._extract_rows(payload)
+    assert rows and rows[0]["model"]["slug"] == "fixture-model"
+    rec = rsc_source.normalize_row(rows[0], {
+        "source": "rsc", "intelligence_index_version": schema.EXPECTED_INDEX_VERSION,
+    })
+    assert rec["benchmarks"]["gpqa"] == 90.0
+    assert rec["intelligence_index_version"] == schema.EXPECTED_INDEX_VERSION
+
+
 def test_drift_detect_missing_rows():
     payload = '<div>no rows here at all' + '</div>'
     assert rsc_source._extract_rows(payload) == (None, None)

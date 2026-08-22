@@ -45,18 +45,21 @@ from aa.http import atomic_write_json, read_json          # noqa: E402
 from aa.source_base import SourceResult                    # noqa: E402
 from aa.rsc_source import RSCSource                        # noqa: E402
 from aa.validate import run_sanity, check_schema_drift, KNOWN_FIELDS  # noqa: E402
+from aa.history import diff_snapshots, write_delta, prune_deltas  # noqa: E402
 
 
 def load_all_sources(args, cache_dir: Path) -> list[SourceResult]:
     results: list[SourceResult] = []
 
-    rsc = RSCSource(use_cache=True, cache_dir=cache_dir, force_refresh=args.refresh)
+    rsc = RSCSource(use_cache=True, cache_dir=cache_dir, force_refresh=args.refresh,
+                    offline=args.offline)
     results.append(rsc.fetch())
 
     if args.api:
         try:
             from aa.official_api_source import OfficialAPISource
-            api = OfficialAPISource(cache_dir=cache_dir, force_refresh=args.refresh)
+            api = OfficialAPISource(cache_dir=cache_dir, force_refresh=args.refresh,
+                                    offline=args.offline)
             results.append(api.fetch())
         except ImportError:
             logging.getLogger("aa.pipeline").warning(
@@ -71,7 +74,8 @@ def load_all_sources(args, cache_dir: Path) -> list[SourceResult]:
     if args.snapshot:
         try:
             from aa.snapshot_source import SnapshotSource
-            snap = SnapshotSource(cache_dir=cache_dir, force_refresh=args.refresh)
+            snap = SnapshotSource(cache_dir=cache_dir, force_refresh=args.refresh,
+                                  offline=args.offline)
             results.append(snap.fetch())
         except ImportError:
             logging.getLogger("aa.pipeline").warning(
@@ -128,6 +132,12 @@ def merge_records(results: list[SourceResult]) -> list[dict]:
         if slug not in merged:
             merged[slug] = dict(rec)
             merged[slug]["source"] = src_name
+            merged[slug]["provenance"] = {
+                "sources": [src_name], "primary_source": src_name,
+                "parser_version": next((r.parser_version for r in results if r.source == src_name), None),
+                "fetched_at": next((r.fetched_at for r in results if r.source == src_name), None),
+                "cached": bool(next((r.meta.get("cached") for r in results if r.source == src_name), False)),
+            }
             merged[slug]["merged"] = {"primary": src_name, "also_from": []}
             continue
         dst = merged[slug]
@@ -151,6 +161,10 @@ def merge_records(results: list[SourceResult]) -> list[dict]:
         srcset = contrib.setdefault("also_from", [])
         if src_name not in srcset:
             srcset.append(src_name)
+        prov = dst.setdefault("provenance", {})
+        sources = prov.setdefault("sources", [])
+        if src_name not in sources:
+            sources.append(src_name)
     return list(merged.values())
 
 
@@ -231,6 +245,7 @@ def main() -> int:
     ap.add_argument("--refresh", action="store_true", help="force bypass of disk caches")
     ap.add_argument("--output", default=str(REPO_ROOT / "data" / "aa_models_v2.json"))
     ap.add_argument("--report", default=str(REPO_ROOT / "data" / "aa_pipeline_report.json"))
+    ap.add_argument("--history-dir", default=str(REPO_ROOT / "data" / "history" / "rich"))
     args = ap.parse_args()
 
     logging.basicConfig(level=logging.INFO, format="%(levelname)s %(name)s: %(message)s")
@@ -242,7 +257,8 @@ def main() -> int:
     results = load_all_sources(
         argparse.Namespace(
             api=not args.no_api, snapshot=not args.no_snapshot,
-            refresh=args.refresh or args.offline,
+            refresh=args.refresh,
+            offline=args.offline,
         ),
         cache_dir,
     )
@@ -260,7 +276,14 @@ def main() -> int:
         if previous and previous.get("models"):
             log.warning("No live source healthy; keeping previous dataset "
                         "(%d models) as stale fallback.", len(previous["models"]))
-            # fall back to previous good normalized dataset
+            stale_report = {
+                "generated_at": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
+                "status": "stale_fallback", "stale": True,
+                "stale_reason": "no healthy source; previous dataset retained",
+                "previous_generated_at": previous.get("generated_at"),
+                "sources": {r.source: {"healthy": r.healthy, "records": len(r.records), "errors": r.errors[:10]} for r in results},
+            }
+            atomic_write_json(Path(args.report), stale_report)
             return 0
         log.error("No live AA source healthy and no previous dataset; aborting.")
         return 1
@@ -287,11 +310,19 @@ def main() -> int:
         "models": sorted(models, key=lambda m: (m.get("intelligence_index") is not None, -(m.get("intelligence_index") or 0))),
         "coverage": coverage_report(models, results),
         "notes": [f"backfilled {n_filled} models from legacy enrichment cache"],
+        "freshness": {"stale": False, "generated_at": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
+                       "source_fetched_at": {r.source: r.fetched_at for r in results}},
     }
     atomic_write_json(Path(args.output), {
         "version": out["version"], "generated_at": out["generated_at"],
         "coverage": out["coverage"], "models": out["models"],
+        "freshness": out["freshness"],
     })
+    history_dir = Path(args.history_dir)
+    if previous and previous.get("models"):
+        stamp = out["generated_at"][:10]
+        write_delta(history_dir / f"{stamp}.delta.json", diff_snapshots(previous, out, generated_at=out["generated_at"]))
+        prune_deltas(history_dir, keep=104)
     atomic_write_json(Path(args.report), {
         "generated_at": out["generated_at"],
         "sources": coverage_report(models, results)["sources"],
@@ -301,6 +332,8 @@ def main() -> int:
         "parser_versions": {
             "rsc": "0.2.0", "official_api": "0.1.0", "snapshot": "0.1.0",
         },
+        "status": "fresh", "stale": False, "total_models": len(models),
+        "freshness": out["freshness"],
     })
     log.info("Wrote %d models -> %s", len(models), args.output)
     log.info("Report -> %s", args.report)

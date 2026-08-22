@@ -161,10 +161,11 @@ class OfficialAPISource:
     name = "official_api"
 
     def __init__(self, api_key: str | None = None, cache_dir: Path | None = None,
-                 force_refresh: bool = False):
+                 force_refresh: bool = False, offline: bool = False):
         self.api_key = api_key if api_key is not None else os.environ.get("AA_API_KEY")
         self.cache_dir = cache_dir or Path("data/aa_cache")
         self.force_refresh = force_refresh
+        self.offline = offline
 
     def _page_url(self, page: int) -> str:
         return f"{BASE_URL}{FREE_PATH}?{urlencode({'page': page})}"
@@ -176,6 +177,8 @@ class OfficialAPISource:
             cached = read_json(cache_path)
             if isinstance(cached, dict) and isinstance(cached.get("payload"), dict):
                 return cached["payload"], cached.get("headers") or {}, True
+        if self.offline:
+            raise RuntimeError(f"offline mode has no cached API page {page}")
         result: FetchResult = fetch_bytes(
             url, headers={"x-api-key": self.api_key or "", "User-Agent": "Mozilla/5.0 (compatible; ModelCompass/1.0)"},
             retries=3,
@@ -192,7 +195,7 @@ class OfficialAPISource:
     def fetch(self) -> SourceResult:
         now = datetime.now(timezone.utc)
         result = SourceResult(self.name, API_PARSER_VERSION, now.strftime("%Y-%m-%dT%H:%M:%SZ"), now.timestamp(), [])
-        if not self.api_key:
+        if not self.api_key and not self.offline:
             result.errors.append("AA_API_KEY is not set; official API fetch skipped")
             return result
         all_items: list[dict] = []

@@ -27,11 +27,13 @@ On Windows use `py -3` in place of `python3`. `validate_site.py`, `test_fetch_aa
 - `python3 scripts/validate_site.py` checks the public boundary, CSP, HTML, data, fonts, and history.
 - `node scripts/test_browser_security.mjs` checks URL and HTML-sanitization regressions.
 - `python3 -m scripts.aa.orchestrate` builds the private rich dataset (`data/aa_models_v2.json`); `--no-api`/`--no-snapshot`/`--offline`/`--refresh` flags available; optional `AA_API_KEY`.
+- `python3 scripts/model_compass.py recommend coding --limit 10` provides deterministic recommendation/explanation JSON; `pareto`, `backup`, `explain`, `changes`, `health`, and `list` are also available. `.model-compass-access.json` is an optional gitignored availability overlay.
 - `python3 scripts/build_site_from_aa.py` builds the site's `public/data/models.json` from the rich dataset.
 - `python3 scripts/export_history_csv.py` writes today's CSV snapshot.
 - `python3 scripts/export_benchmarks_json.py` writes `public/data/benchmarks.json`.
 - `python3 scripts/aa/tests/test_pipeline.py` and `python3 scripts/aa/crossvalidate.py` test and cross-validate the pipeline.
 - `python3 -c "import sys;sys.path.insert(0,'scripts');from aa.query import AADB;db=AADB()"` queries the dataset (best coding/value/backup etc.).
+- Rich snapshot deltas are written under `data/history/rich/` and retained for 104 files; `--offline` is cache-only and never attempts a network request.
 
 ## Credentials
 

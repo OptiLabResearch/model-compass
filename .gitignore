@@ -17,3 +17,5 @@ venv/
 # worthy). The normalized outputs data/aa_models_v2.json and
 # data/aa_pipeline_report.json ARE committed.
 data/aa_cache/
+# Private local access/channel overlay; never commit credentials or quotas.
+.model-compass-access.json

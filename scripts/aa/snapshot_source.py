@@ -297,10 +297,12 @@ class SnapshotSource:
     name = "snapshot"
 
     def __init__(self, base_url: str = DEFAULT_BASE_URL,
-                 cache_dir: Path = Path("data/aa_cache"), force_refresh: bool = False):
+                 cache_dir: Path = Path("data/aa_cache"), force_refresh: bool = False,
+                 offline: bool = False):
         self.base_url = base_url
         self.cache_dir = Path(cache_dir)
         self.force_refresh = force_refresh
+        self.offline = offline
 
     def _fetch_cached(self, url: str) -> dict:
         cache_path = self.cache_dir / f"snapshot_{disk_cache_key(url)}.json"
@@ -309,6 +311,8 @@ class SnapshotSource:
             if isinstance(cached, dict):
                 log.info("Using cached snapshot JSON for %s", url)
                 return cached
+        if self.offline:
+            raise RuntimeError(f"offline mode has no cached snapshot for {url}")
         payload, _response = fetch_json(url)
         atomic_write_json(cache_path, payload)
         return payload

@@ -385,10 +385,11 @@ class RSCSource:
     name = "rsc"
 
     def __init__(self, use_cache: bool = True, cache_dir: Path | None = None,
-                 force_refresh: bool = False):
+                 force_refresh: bool = False, offline: bool = False):
         self.use_cache = use_cache
         self.cache_dir = cache_dir or Path("data/aa_cache")
         self.force_refresh = force_refresh
+        self.offline = offline
 
     def fetch(self) -> SourceResult:
         now = datetime.now(timezone.utc)
@@ -440,7 +441,7 @@ class RSCSource:
         for r in rows:
             if not _looks_like_row(r):
                 continue
-            rec = normalize_row(r, {"source": self.name})
+            rec = normalize_row(r, {"source": self.name, "intelligence_index_version": schema.EXPECTED_INDEX_VERSION})
             if not schema.require_identity(rec):
                 continue
             slug = rec["slug"]
@@ -477,6 +478,8 @@ class RSCSource:
         if not self.force_refresh and self.use_cache and cache_path and cache_path.exists():
             log.info("Using cached RSC bytes (%d)", cache_path.stat().st_size)
             return cache_path.read_bytes(), {"cached": True}
+        if self.offline:
+            return None, {"error": "offline mode has no cached RSC payload"}
         last_err = None
         for url in RSC_URLS:
             try:
