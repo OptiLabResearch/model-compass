@@ -143,7 +143,19 @@ def merge_records(results: list[SourceResult]) -> list[dict]:
         dst = merged[slug]
         # fill blanks in dst from this (lower/equal priority) record
         for k, v in rec.items():
-            if isinstance(v, dict):
+            if k == "hosts" and isinstance(v, list):
+                existing = dst.setdefault("hosts", [])
+                if not isinstance(existing, list):
+                    existing = dst["hosts"] = []
+                seen_hosts = {str(h.get("slug") or h.get("name")) for h in existing if isinstance(h, dict)}
+                for host in v:
+                    if not isinstance(host, dict):
+                        continue
+                    key = str(host.get("slug") or host.get("name"))
+                    if key not in seen_hosts:
+                        existing.append(host)
+                        seen_hosts.add(key)
+            elif isinstance(v, dict):
                 if k not in dst or not isinstance(dst[k], dict):
                     dst[k] = {}
                 for kk, vv in v.items():

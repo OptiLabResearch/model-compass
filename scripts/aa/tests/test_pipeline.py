@@ -153,6 +153,19 @@ def test_merge_priority_rich_over_thin():
     assert "official_api" in m["merged"].get("also_from", [])
 
 
+def test_merge_preserves_provider_variants_for_same_model():
+    from aa.orchestrate import merge_records
+    from aa.source_base import SourceResult
+    a = {**schema.model_record_template(), "slug": "same", "name": "Same",
+         "hosts": [{"slug": "provider-a", "name": "A"}]}
+    b = {**schema.model_record_template(), "slug": "same", "name": "Same",
+         "hosts": [{"slug": "provider-b", "name": "B"}]}
+    results = [SourceResult("rsc", "1", "t", 0, [a], healthy=True),
+               SourceResult("official_api", "1", "t", 0, [b], healthy=True)]
+    merged = merge_records(results)
+    assert {h["slug"] for h in merged[0]["hosts"]} == {"provider-a", "provider-b"}
+
+
 if __name__ == "__main__":
     for name, fn in sorted(globals().items()):
         if name.startswith("test_") and callable(fn):
