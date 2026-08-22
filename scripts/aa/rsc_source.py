@@ -403,6 +403,11 @@ class RSCSource:
         if raw_bytes is None:
             result.errors.append("RSC payload unavailable")
             return result
+        if raw_meta and raw_meta.get("cached"):
+            cache_path = self.cache_dir / "rsc_raw_latest.bin"
+            cached_ts = cache_path.stat().st_mtime if cache_path.exists() else now.timestamp()
+            result.fetched_at_ts = cached_ts
+            result.fetched_at = datetime.fromtimestamp(cached_ts, timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
         # persist raw bytes for reproducibility
         self.cache_dir.mkdir(parents=True, exist_ok=True)
         raw_path = self.cache_dir / f"rsc_raw_{now.strftime('%Y%m%d_%H%M%S')}.bin"

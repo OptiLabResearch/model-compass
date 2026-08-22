@@ -271,7 +271,7 @@ The new provenance/freshness fields are generated on the next orchestrated refre
 ## 8. Current history/freshness behavior
 
 - Fresh runs write explicit freshness and source timestamps.
-- Offline runs are cache-only and can be replayed without network access.
+- Offline runs are cache-only and are reported as `stale_cache` with the cached source timestamps; the cache file acquisition time, not the current execution time, drives freshness decisions.
 - No-healthy-source runs preserve the previous dataset but produce a stale report with `status: "stale_fallback"`.
 - Successful runs compare the previous rich dataset and write a compact delta.
 - Rich delta retention is capped at 104 files.
@@ -291,7 +291,7 @@ db.backups("claude-opus-5", limit=10)
 db.explain("claude-opus-5")
 ```
 
-The `cost` Pareto dimension means lower blended 3:1 cost is better. Other dimensions are maximized unless prefixed with `-`. Results with missing required dimensions are excluded from the frontier rather than filled with zero.
+The `cost` Pareto dimension and any dimension prefixed with `-` mean lower is better. Other dimensions are maximized unless prefixed with `-`. Results with missing required dimensions are excluded from the frontier rather than filled with zero.
 
 The recommendation score is not a universal truth claim. It is a transparent profile-specific ranking among candidates that passed the stated constraints. The returned explanation identifies source, missing metrics, and the metrics used.
 

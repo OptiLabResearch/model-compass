@@ -316,13 +316,18 @@ def main() -> int:
         log.error("Final merged sanity FAILED: %s", "; ".join(all_rep.failures[:5]))
         return 1
 
+    healthy_sources = [r for r in results if r.healthy]
+    live_sources = [r for r in healthy_sources if not r.meta.get("cached")]
+    data_stale = bool(args.offline or (healthy_sources and not live_sources))
     out = {
         "version": schema.EXPECTED_INDEX_VERSION,
         "generated_at": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
         "models": sorted(models, key=lambda m: (m.get("intelligence_index") is not None, -(m.get("intelligence_index") or 0))),
         "coverage": coverage_report(models, results),
         "notes": [f"backfilled {n_filled} models from legacy enrichment cache"],
-        "freshness": {"stale": False, "generated_at": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
+        "freshness": {"stale": data_stale, "generated_at": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
+                       "cached_sources": [r.source for r in healthy_sources if r.meta.get("cached")],
+                       "live_sources": [r.source for r in live_sources],
                        "source_fetched_at": {r.source: r.fetched_at for r in results}},
     }
     atomic_write_json(Path(args.output), {
@@ -344,7 +349,7 @@ def main() -> int:
         "parser_versions": {
             "rsc": "0.2.0", "official_api": "0.1.0", "snapshot": "0.1.0",
         },
-        "status": "fresh", "stale": False, "total_models": len(models),
+        "status": "stale_cache" if data_stale else "fresh", "stale": data_stale, "total_models": len(models),
         "freshness": out["freshness"],
     })
     log.info("Wrote %d models -> %s", len(models), args.output)

@@ -166,6 +166,7 @@ class OfficialAPISource:
         self.cache_dir = cache_dir or Path("data/aa_cache")
         self.force_refresh = force_refresh
         self.offline = offline
+        self._cache_times: list[float] = []
 
     def _page_url(self, page: int) -> str:
         return f"{BASE_URL}{FREE_PATH}?{urlencode({'page': page})}"
@@ -176,6 +177,7 @@ class OfficialAPISource:
         if not self.force_refresh:
             cached = read_json(cache_path)
             if isinstance(cached, dict) and isinstance(cached.get("payload"), dict):
+                self._cache_times.append(cache_path.stat().st_mtime)
                 return cached["payload"], cached.get("headers") or {}, True
         if self.offline:
             raise RuntimeError(f"offline mode has no cached API page {page}")
@@ -229,7 +231,12 @@ class OfficialAPISource:
                 models[rec["slug"]] = rec
         result.records = list(models.values())
         result.raw = pages
-        result.meta = {"pages": len(pages), "raw_records": len(all_items), "cached_pages": cache_hits, "intelligence_index_version": version, **headers_seen}
+        if cache_hits and self._cache_times:
+            cached_ts = min(self._cache_times)
+            result.fetched_at_ts = cached_ts
+            result.fetched_at = datetime.fromtimestamp(cached_ts, timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+        result.meta = {"pages": len(pages), "raw_records": len(all_items), "cached_pages": cache_hits,
+                       "cached": cache_hits == len(pages), "intelligence_index_version": version, **headers_seen}
         result.healthy = len(result.records) >= schema.MIN_MODELS_API
         if not result.records:
             result.errors.append("official API returned 0 valid records")

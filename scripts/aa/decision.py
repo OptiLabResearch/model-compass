@@ -197,7 +197,7 @@ class DecisionEngine:
         return {"profile": p.name, "metric": metric, "candidate_count": len(ranked), "recommendations": output}
 
     def pareto(self, dimensions: list[str]) -> list[dict]:
-        """Return non-dominated models; dimensions prefixed ``-`` are maximized.
+        """Return non-dominated models; dimensions prefixed ``-`` are minimized.
         Known cost dimensions are minimized, all others are maximized."""
         values = []
         for m in self.models:
