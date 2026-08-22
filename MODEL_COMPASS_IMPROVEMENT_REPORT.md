@@ -1,8 +1,8 @@
 # Model Compass Improvement Report
 
-**Date:** 2026-08-22 UTC  
-**Repository:** `/srv/projects/shared/model-compass`  
-**Starting point:** `6dd03afb1f17e727abf5a0fcc4a1857e9e31372b`  
+**Date:** 2026-08-22 UTC
+**Repository:** `/srv/projects/shared/model-compass`
+**Starting point:** `6dd03afb1f17e727abf5a0fcc4a1857e9e31372b`
 **Implementation commits:**
 
 - `fc17fb6 feat: harden pipeline and add decision engine`

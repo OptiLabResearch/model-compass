@@ -1,8 +1,8 @@
 # Model Compass — Repository Review Dossier
 
-**Audit type:** read-only repository, runtime, data, CI, and security audit  
-**Audit date:** 2026-08-22 UTC  
-**Repository:** `/srv/projects/shared/model-compass`  
+**Audit type:** read-only repository, runtime, data, CI, and security audit
+**Audit date:** 2026-08-22 UTC
+**Repository:** `/srv/projects/shared/model-compass`
 **Evidence convention:** repository paths and line ranges refer to the audited checkout at commit `6dd03afb1f17e727abf5a0fcc4a1857e9e31372b`, unless stated otherwise.
 
 ## 1. Executive summary
