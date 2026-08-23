@@ -20,7 +20,7 @@ PR #6 was **not merged automatically**.
 
 **Bug:** `coding_agent_source.py` previously hard-coded `benchmark_version: "1.4"`.
 
-**Fix:** the adapter now parses a version from public methodology/description text using a structured version pattern. If no version is exposed, it records `null` rather than inventing one. The version is shared across the Coding Agent Index, Time per Task, and Cost per Task JSON-LD datasets when the page exposes it once.
+**Fix:** the adapter now parses a version from public methodology/description text using a structured version pattern, in an order-independent pre-pass across all JSON-LD datasets. If no version is exposed, it records `null` rather than inventing one. The version is shared across the Coding Agent Index, Time per Task, and Cost per Task JSON-LD datasets when the page exposes it once.
 
 **Verification:** the checked-in fixture says `Coding Agent Index v1.3` and produces `benchmark_version: "1.3"` for all three observations. The live page at the time of the corrected refresh exposed `v1.4`, which was captured as a derived value. The code no longer silently preserves an obsolete constant.
 
@@ -33,6 +33,8 @@ PR #6 was **not merged automatically**.
 - `fresh` — timestamp exists and is within the 14-day evidence window;
 - `stale` — timestamp exists but is older than the window, or provenance explicitly marks stale;
 - `unknown` — timestamp is absent, malformed, or in the future.
+
+Naive ISO timestamps are interpreted as UTC rather than raising an exception.
 
 The recommendation explanation and nested confidence object use the same helper. Missing timestamps are no longer reported as fresh.
 

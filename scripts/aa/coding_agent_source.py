@@ -22,12 +22,16 @@ PARSER_VERSION = "0.1.0"
 
 def parse_datasets(page: str, *, fetched_at: str) -> list[dict]:
     datasets = []
-    page_version = None
+    payloads = []
     for raw in re.findall(r'<script type="application/ld\+json">(.*?)</script>', page, re.S):
         try:
-            payload = json.loads(html.unescape(raw))
+            payloads.append(json.loads(html.unescape(raw)))
         except json.JSONDecodeError:
             continue
+    page_version = next((match.group(1) for payload in payloads
+                         for match in [re.search(r"\bv(\d+(?:\.\d+)*)\b", payload.get("description") or "", re.I)]
+                         if match), None)
+    for payload in payloads:
         name = payload.get("name")
         description = payload.get("description") or ""
         if name not in {"Coding Agent Index", "Time per Task", "Cost per Task"}:
@@ -40,8 +44,6 @@ def parse_datasets(page: str, *, fetched_at: str) -> list[dict]:
             if not label or metric not in row:
                 continue
             version_match = re.search(r"\bv(\d+(?:\.\d+)*)\b", description, re.I)
-            if version_match:
-                page_version = version_match.group(1)
             item = {"agent_id": label, "agent_name": label,
                     "benchmark_suite": name, "benchmark_version": version_match.group(1) if version_match else page_version,
                     "scores": {"coding_agent_index": row.get("codingAgentsIndex")},

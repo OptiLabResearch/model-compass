@@ -88,6 +88,13 @@ def test_freshness_is_fresh_stale_or_unknown_not_always_true():
     assert states["unknown"] == "unknown"
 
 
+def test_naive_timestamp_is_interpreted_as_utc():
+    row = model("naive", "N", 87, 1, 100)
+    row["provenance"]["fetched_at"] = "2026-08-23T00:00:00"
+    result = DecisionEngine([row]).recommend("premium")
+    assert result["recommendations"][0]["explanation"]["fresh"] == "fresh"
+
+
 if __name__ == "__main__":
     for name, fn in sorted(globals().items()):
         if name.startswith("test_") and callable(fn):

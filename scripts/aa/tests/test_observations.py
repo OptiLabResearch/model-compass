@@ -56,6 +56,12 @@ def test_coding_agent_fixture_remains_separate_observation():
     assert {r["benchmark_version"] for r in rows} == {"1.3"}
 
 
+def test_coding_agent_version_is_order_independent():
+    lines = (Path(__file__).parent / "fixtures" / "coding_agents_minimal.html").read_text().splitlines()
+    rows = parse_datasets("\n".join(lines[1:] + lines[:1]), fetched_at="2026-08-23T00:00:00Z")
+    assert {r["benchmark_version"] for r in rows} == {"1.3"}
+
+
 def test_provider_and_agent_queries_are_source_specific():
     endpoint = normalize_openrouter_endpoint({"model_id": "m", "provider_name": "A", "tag": "a", "latency_last_30m": 1.0, "status": 0}, fetched_at="t")
     endpoint2 = normalize_openrouter_endpoint({"model_id": "m", "provider_name": "B", "tag": "b", "latency_last_30m": 2.0, "status": 0}, fetched_at="t")

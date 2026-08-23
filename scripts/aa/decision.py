@@ -107,6 +107,8 @@ class DecisionEngine:
             return "unknown", None
         try:
             when = datetime.fromisoformat(str(stamp).replace("Z", "+00:00"))
+            if when.tzinfo is None:
+                when = when.replace(tzinfo=timezone.utc)
             age = (datetime.now(timezone.utc) - when).total_seconds() / 86400
             if age < 0:
                 return "unknown", age
