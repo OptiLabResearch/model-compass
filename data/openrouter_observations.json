@@ -1,12 +1,12 @@
 {
   "version": 1,
   "parser_version": "0.1.0",
-  "generated_at": "2026-08-23T17:19:40Z",
+  "generated_at": "2026-08-23T19:16:12Z",
   "source": "openrouter",
   "source_url": "https://openrouter.ai/api/v1/models",
   "model_catalog_count": 422,
   "endpoint_models_requested": 25,
-  "endpoint_observation_count": 445,
+  "endpoint_observation_count": 529,
   "endpoint_errors": [],
   "observations": [
     {
@@ -23637,22 +23637,144 @@
       }
     },
     {
+      "observation_type": "provider_endpoint",
+      "model_id": "meta-llama/llama-3.1-70b-instruct",
+      "model_slug": "meta-llama/llama-3.1-70b-instruct",
+      "provider_id": "amazon-bedrock",
+      "provider_name": "Amazon Bedrock",
+      "endpoint_id": "Amazon Bedrock | meta-llama/llama-3.1-70b-instruct",
+      "identity_key": "meta-llama/llama-3.1-70b-instruct:amazon-bedrock:Amazon Bedrock | meta-llama/llama-3.1-70b-instruct",
+      "context_tokens": 131072,
+      "pricing": {
+        "input_per_million": 0.72,
+        "output_per_million": 0.72,
+        "raw": {
+          "prompt": "0.00000072",
+          "completion": "0.00000072",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
       "availability": {
         "status": "available",
-        "uptime_1d": 99.99218016890835,
+        "uptime_5m": 100.0,
         "uptime_30m": 100.0,
-        "uptime_5m": 100.0
+        "uptime_1d": 99.91903594948421
       },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "max_tokens",
+          "stop",
+          "temperature",
+          "top_k",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T19:16:12Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "meta-llama/llama-3.1-70b-instruct",
+        "last_seen": "2026-08-23T19:16:12Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "meta-llama/llama-3.1-70b-instruct",
+      "model_slug": "meta-llama/llama-3.1-70b-instruct",
+      "provider_id": "coreweave/bf16",
+      "provider_name": "CoreWeave",
+      "endpoint_id": "CoreWeave | meta-llama/llama-3.1-70b-instruct",
+      "identity_key": "meta-llama/llama-3.1-70b-instruct:coreweave/bf16:CoreWeave | meta-llama/llama-3.1-70b-instruct",
+      "context_tokens": 128000,
+      "pricing": {
+        "input_per_million": 0.7999999999999999,
+        "output_per_million": 0.7999999999999999,
+        "raw": {
+          "prompt": "0.0000008",
+          "completion": "0.0000008",
+          "input_cache_read": "0.0000008",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 100.0,
+        "uptime_30m": 100.0,
+        "uptime_1d": 99.99749899959984
+      },
+      "quantization": "bf16",
       "capabilities": {
         "supported_parameters": [
           "frequency_penalty",
-          "include_reasoning",
+          "logprobs",
+          "max_tokens",
+          "presence_penalty",
+          "repetition_penalty",
+          "response_format",
+          "seed",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "top_k",
+          "top_logprobs",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T19:16:12Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "meta-llama/llama-3.1-70b-instruct",
+        "last_seen": "2026-08-23T19:16:12Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "meta-llama/llama-3.1-70b-instruct",
+      "model_slug": "meta-llama/llama-3.1-70b-instruct",
+      "provider_id": "deepinfra/turbo",
+      "provider_name": "DeepInfra",
+      "endpoint_id": "DeepInfra | meta-llama/llama-3.1-70b-instruct",
+      "identity_key": "meta-llama/llama-3.1-70b-instruct:deepinfra/turbo:DeepInfra | meta-llama/llama-3.1-70b-instruct",
+      "context_tokens": 131072,
+      "pricing": {
+        "input_per_million": 0.39999999999999997,
+        "output_per_million": 0.39999999999999997,
+        "raw": {
+          "prompt": "0.0000004",
+          "completion": "0.0000004",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 99.80382540461011,
+        "uptime_30m": 99.95811810693843,
+        "uptime_1d": 99.83864504241664
+      },
+      "quantization": "fp8",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
           "logit_bias",
           "max_tokens",
           "min_p",
           "presence_penalty",
-          "reasoning",
-          "reasoning_effort",
           "repetition_penalty",
           "response_format",
           "seed",
@@ -23665,104 +23787,1902 @@
           "top_p"
         ]
       },
-      "context_tokens": 131072,
-      "endpoint_id": "DeepInfra | meta/muse-glimmer-30b-20260810",
-      "identity_key": "meta/muse-glimmer-30b:deepinfra/bf16:DeepInfra | meta/muse-glimmer-30b-20260810",
-      "model_id": "meta/muse-glimmer-30b",
-      "model_slug": "meta/muse-glimmer-30b",
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T19:16:12Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "meta-llama/llama-3.1-70b-instruct",
+        "last_seen": "2026-08-23T19:16:12Z"
+      }
+    },
+    {
       "observation_type": "provider_endpoint",
+      "model_id": "meta-llama/llama-3.1-8b-instruct",
+      "model_slug": "meta-llama/llama-3.1-8b-instruct",
+      "provider_id": "cloudflare/fp8",
+      "provider_name": "Cloudflare",
+      "endpoint_id": "Cloudflare | meta-llama/llama-3.1-8b-instruct",
+      "identity_key": "meta-llama/llama-3.1-8b-instruct:cloudflare/fp8:Cloudflare | meta-llama/llama-3.1-8b-instruct",
+      "context_tokens": 32000,
+      "pricing": {
+        "input_per_million": 0.15200000000000002,
+        "output_per_million": 0.28700000000000003,
+        "raw": {
+          "prompt": "0.000000152",
+          "completion": "0.000000287",
+          "discount": 0
+        }
+      },
       "performance": {
         "latency_seconds": null,
         "throughput_tps": null
       },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 100.0,
+        "uptime_30m": 100.0,
+        "uptime_1d": 98.22879714192267
+      },
+      "quantization": "fp8",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "logit_bias",
+          "max_tokens",
+          "min_p",
+          "presence_penalty",
+          "repetition_penalty",
+          "response_format",
+          "seed",
+          "stop",
+          "temperature",
+          "top_k",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T19:16:12Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "meta-llama/llama-3.1-8b-instruct",
+        "last_seen": "2026-08-23T19:16:12Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "meta-llama/llama-3.1-8b-instruct",
+      "model_slug": "meta-llama/llama-3.1-8b-instruct",
+      "provider_id": "coreweave/bf16",
+      "provider_name": "CoreWeave",
+      "endpoint_id": "CoreWeave | meta-llama/llama-3.1-8b-instruct",
+      "identity_key": "meta-llama/llama-3.1-8b-instruct:coreweave/bf16:CoreWeave | meta-llama/llama-3.1-8b-instruct",
+      "context_tokens": 128000,
+      "pricing": {
+        "input_per_million": 0.22,
+        "output_per_million": 0.22,
+        "raw": {
+          "prompt": "0.00000022",
+          "completion": "0.00000022",
+          "input_cache_read": "0.00000022",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 100.0,
+        "uptime_30m": 100.0,
+        "uptime_1d": 99.99426160835641
+      },
+      "quantization": "bf16",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "logprobs",
+          "max_tokens",
+          "presence_penalty",
+          "repetition_penalty",
+          "response_format",
+          "seed",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_k",
+          "top_logprobs",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T19:16:12Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "meta-llama/llama-3.1-8b-instruct",
+        "last_seen": "2026-08-23T19:16:12Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "meta-llama/llama-3.1-8b-instruct",
+      "model_slug": "meta-llama/llama-3.1-8b-instruct",
+      "provider_id": "deepinfra/fp8",
+      "provider_name": "DeepInfra",
+      "endpoint_id": "DeepInfra | meta-llama/llama-3.1-8b-instruct",
+      "identity_key": "meta-llama/llama-3.1-8b-instruct:deepinfra/fp8:DeepInfra | meta-llama/llama-3.1-8b-instruct",
+      "context_tokens": 131072,
+      "pricing": {
+        "input_per_million": 0.02,
+        "output_per_million": 0.04,
+        "raw": {
+          "prompt": "0.00000002",
+          "completion": "0.00000004",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 99.97362173568979,
+        "uptime_30m": 99.9112924687306,
+        "uptime_1d": 99.83341819576191
+      },
+      "quantization": "fp8",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "logit_bias",
+          "max_tokens",
+          "min_p",
+          "presence_penalty",
+          "repetition_penalty",
+          "response_format",
+          "seed",
+          "stop",
+          "temperature",
+          "top_k",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T19:16:12Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "meta-llama/llama-3.1-8b-instruct",
+        "last_seen": "2026-08-23T19:16:12Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "meta-llama/llama-3.1-8b-instruct",
+      "model_slug": "meta-llama/llama-3.1-8b-instruct",
+      "provider_id": "groq",
+      "provider_name": "Groq",
+      "endpoint_id": "Groq | meta-llama/llama-3.1-8b-instruct",
+      "identity_key": "meta-llama/llama-3.1-8b-instruct:groq:Groq | meta-llama/llama-3.1-8b-instruct",
+      "context_tokens": 131072,
+      "pricing": {
+        "input_per_million": 0.049999999999999996,
+        "output_per_million": 0.08,
+        "raw": {
+          "prompt": "0.00000005",
+          "completion": "0.00000008",
+          "input_cache_read": "0.000000025",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 99.9941846941149,
+        "uptime_30m": 99.76835580548278,
+        "uptime_1d": 99.94414650032111
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "max_tokens",
+          "response_format",
+          "seed",
+          "stop",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T19:16:12Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "meta-llama/llama-3.1-8b-instruct",
+        "last_seen": "2026-08-23T19:16:12Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "meta-llama/llama-3.1-8b-instruct",
+      "model_slug": "meta-llama/llama-3.1-8b-instruct",
+      "provider_id": "novita/fp8",
+      "provider_name": "Novita",
+      "endpoint_id": "Novita | meta-llama/llama-3.1-8b-instruct",
+      "identity_key": "meta-llama/llama-3.1-8b-instruct:novita/fp8:Novita | meta-llama/llama-3.1-8b-instruct",
+      "context_tokens": 16384,
+      "pricing": {
+        "input_per_million": 0.02,
+        "output_per_million": 0.049999999999999996,
+        "raw": {
+          "prompt": "0.00000002",
+          "completion": "0.00000005",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 100.0,
+        "uptime_30m": 99.87175224433572,
+        "uptime_1d": 99.84383291368252
+      },
+      "quantization": "fp8",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "logprobs",
+          "max_tokens",
+          "presence_penalty",
+          "repetition_penalty",
+          "response_format",
+          "seed",
+          "stop",
+          "temperature",
+          "top_k",
+          "top_logprobs",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T19:16:12Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "meta-llama/llama-3.1-8b-instruct",
+        "last_seen": "2026-08-23T19:16:12Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "meta-llama/llama-3.2-1b-instruct",
+      "model_slug": "meta-llama/llama-3.2-1b-instruct",
+      "provider_id": "cloudflare",
+      "provider_name": "Cloudflare",
+      "endpoint_id": "Cloudflare | meta-llama/llama-3.2-1b-instruct",
+      "identity_key": "meta-llama/llama-3.2-1b-instruct:cloudflare:Cloudflare | meta-llama/llama-3.2-1b-instruct",
+      "context_tokens": 60000,
+      "pricing": {
+        "input_per_million": 0.027,
+        "output_per_million": 0.201,
+        "raw": {
+          "prompt": "0.000000027",
+          "completion": "0.000000201",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": null,
+        "uptime_30m": null,
+        "uptime_1d": 100.0
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "logit_bias",
+          "max_tokens",
+          "min_p",
+          "presence_penalty",
+          "repetition_penalty",
+          "seed",
+          "stop",
+          "temperature",
+          "top_k",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T19:16:12Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "meta-llama/llama-3.2-1b-instruct",
+        "last_seen": "2026-08-23T19:16:12Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "meta-llama/llama-3.2-3b-instruct",
+      "model_slug": "meta-llama/llama-3.2-3b-instruct",
+      "provider_id": "cloudflare",
+      "provider_name": "Cloudflare",
+      "endpoint_id": "Cloudflare | meta-llama/llama-3.2-3b-instruct",
+      "identity_key": "meta-llama/llama-3.2-3b-instruct:cloudflare:Cloudflare | meta-llama/llama-3.2-3b-instruct",
+      "context_tokens": 80000,
+      "pricing": {
+        "input_per_million": 0.0509,
+        "output_per_million": 0.335,
+        "raw": {
+          "prompt": "0.0000000509",
+          "completion": "0.000000335",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 98.93617021276596,
+        "uptime_30m": 99.74683544303798,
+        "uptime_1d": 94.18507758484787
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "logit_bias",
+          "logprobs",
+          "max_tokens",
+          "min_p",
+          "presence_penalty",
+          "repetition_penalty",
+          "seed",
+          "stop",
+          "temperature",
+          "top_k",
+          "top_logprobs",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T19:16:12Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "meta-llama/llama-3.2-3b-instruct",
+        "last_seen": "2026-08-23T19:16:12Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "meta-llama/llama-3.2-3b-instruct",
+      "model_slug": "meta-llama/llama-3.2-3b-instruct",
+      "provider_id": "parasail/bf16",
+      "provider_name": "Parasail",
+      "endpoint_id": "Parasail | meta-llama/llama-3.2-3b-instruct",
+      "identity_key": "meta-llama/llama-3.2-3b-instruct:parasail/bf16:Parasail | meta-llama/llama-3.2-3b-instruct",
+      "context_tokens": 131072,
+      "pricing": {
+        "input_per_million": 0.049999999999999996,
+        "output_per_million": 0.33,
+        "raw": {
+          "prompt": "0.00000005",
+          "completion": "0.00000033",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 100.0,
+        "uptime_30m": 100.0,
+        "uptime_1d": 99.9885144932738
+      },
+      "quantization": "bf16",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "logit_bias",
+          "logprobs",
+          "max_tokens",
+          "presence_penalty",
+          "repetition_penalty",
+          "seed",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "top_k",
+          "top_logprobs",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T19:16:12Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "meta-llama/llama-3.2-3b-instruct",
+        "last_seen": "2026-08-23T19:16:12Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "meta-llama/llama-3.3-70b-instruct",
+      "model_slug": "meta-llama/llama-3.3-70b-instruct",
+      "provider_id": "akashml/fp8",
+      "provider_name": "AkashML",
+      "endpoint_id": "AkashML | meta-llama/llama-3.3-70b-instruct",
+      "identity_key": "meta-llama/llama-3.3-70b-instruct:akashml/fp8:AkashML | meta-llama/llama-3.3-70b-instruct",
+      "context_tokens": 131072,
+      "pricing": {
+        "input_per_million": 0.19999999999999998,
+        "output_per_million": 0.52,
+        "raw": {
+          "prompt": "0.0000002",
+          "completion": "0.00000052",
+          "input_cache_read": "0.0000001",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 100.0,
+        "uptime_30m": 99.50009432182607,
+        "uptime_1d": 99.4429962789886
+      },
+      "quantization": "fp8",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "logprobs",
+          "max_tokens",
+          "presence_penalty",
+          "repetition_penalty",
+          "response_format",
+          "seed",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_k",
+          "top_logprobs",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T19:16:12Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "meta-llama/llama-3.3-70b-instruct",
+        "last_seen": "2026-08-23T19:16:12Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "meta-llama/llama-3.3-70b-instruct",
+      "model_slug": "meta-llama/llama-3.3-70b-instruct",
+      "provider_id": "cloudflare/fp8",
+      "provider_name": "Cloudflare",
+      "endpoint_id": "Cloudflare | meta-llama/llama-3.3-70b-instruct",
+      "identity_key": "meta-llama/llama-3.3-70b-instruct:cloudflare/fp8:Cloudflare | meta-llama/llama-3.3-70b-instruct",
+      "context_tokens": 24000,
+      "pricing": {
+        "input_per_million": 0.293,
+        "output_per_million": 2.2529999999999997,
+        "raw": {
+          "prompt": "0.000000293",
+          "completion": "0.000002253",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 100.0,
+        "uptime_30m": 100.0,
+        "uptime_1d": 98.66720927866518
+      },
+      "quantization": "fp8",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "logit_bias",
+          "logprobs",
+          "max_tokens",
+          "min_p",
+          "presence_penalty",
+          "repetition_penalty",
+          "response_format",
+          "seed",
+          "stop",
+          "temperature",
+          "top_k",
+          "top_logprobs",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T19:16:12Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "meta-llama/llama-3.3-70b-instruct",
+        "last_seen": "2026-08-23T19:16:12Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "meta-llama/llama-3.3-70b-instruct",
+      "model_slug": "meta-llama/llama-3.3-70b-instruct",
+      "provider_id": "coreweave/fp16",
+      "provider_name": "CoreWeave",
+      "endpoint_id": "CoreWeave | meta-llama/llama-3.3-70b-instruct",
+      "identity_key": "meta-llama/llama-3.3-70b-instruct:coreweave/fp16:CoreWeave | meta-llama/llama-3.3-70b-instruct",
+      "context_tokens": 128000,
+      "pricing": {
+        "input_per_million": 0.71,
+        "output_per_million": 0.71,
+        "raw": {
+          "prompt": "0.00000071",
+          "completion": "0.00000071",
+          "input_cache_read": "0.00000071",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 99.73333333333333,
+        "uptime_30m": 99.83890455094644,
+        "uptime_1d": 99.87657495500129
+      },
+      "quantization": "fp16",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "logprobs",
+          "max_tokens",
+          "presence_penalty",
+          "repetition_penalty",
+          "response_format",
+          "seed",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_k",
+          "top_logprobs",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T19:16:12Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "meta-llama/llama-3.3-70b-instruct",
+        "last_seen": "2026-08-23T19:16:12Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "meta-llama/llama-3.3-70b-instruct",
+      "model_slug": "meta-llama/llama-3.3-70b-instruct",
+      "provider_id": "crusoe/bf16",
+      "provider_name": "Crusoe",
+      "endpoint_id": "Crusoe | meta-llama/llama-3.3-70b-instruct",
+      "identity_key": "meta-llama/llama-3.3-70b-instruct:crusoe/bf16:Crusoe | meta-llama/llama-3.3-70b-instruct",
+      "context_tokens": 131072,
+      "pricing": {
+        "input_per_million": 0.25,
+        "output_per_million": 0.75,
+        "raw": {
+          "prompt": "0.00000025",
+          "completion": "0.00000075",
+          "input_cache_read": "0.00000013",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 99.74424552429667,
+        "uptime_30m": 99.83423124740986,
+        "uptime_1d": 99.67677838124254
+      },
+      "quantization": "bf16",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "logit_bias",
+          "max_tokens",
+          "min_p",
+          "presence_penalty",
+          "repetition_penalty",
+          "response_format",
+          "seed",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "top_k",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T19:16:12Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "meta-llama/llama-3.3-70b-instruct",
+        "last_seen": "2026-08-23T19:16:12Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "meta-llama/llama-3.3-70b-instruct",
+      "model_slug": "meta-llama/llama-3.3-70b-instruct",
+      "provider_id": "deepinfra/turbo",
+      "provider_name": "DeepInfra",
+      "endpoint_id": "DeepInfra | meta-llama/llama-3.3-70b-instruct",
+      "identity_key": "meta-llama/llama-3.3-70b-instruct:deepinfra/turbo:DeepInfra | meta-llama/llama-3.3-70b-instruct",
+      "context_tokens": 131072,
+      "pricing": {
+        "input_per_million": 0.09999999999999999,
+        "output_per_million": 0.32,
+        "raw": {
+          "prompt": "0.0000001",
+          "completion": "0.00000032",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 96.02356406480118,
+        "uptime_30m": 96.90567448817426,
+        "uptime_1d": 96.19791804391323
+      },
+      "quantization": "fp8",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "logit_bias",
+          "max_tokens",
+          "min_p",
+          "presence_penalty",
+          "repetition_penalty",
+          "response_format",
+          "seed",
+          "stop",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_k",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T19:16:12Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "meta-llama/llama-3.3-70b-instruct",
+        "last_seen": "2026-08-23T19:16:12Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "meta-llama/llama-3.3-70b-instruct",
+      "model_slug": "meta-llama/llama-3.3-70b-instruct",
+      "provider_id": "google-vertex",
+      "provider_name": "Google",
+      "endpoint_id": "Google | meta-llama/llama-3.3-70b-instruct",
+      "identity_key": "meta-llama/llama-3.3-70b-instruct:google-vertex:Google | meta-llama/llama-3.3-70b-instruct",
+      "context_tokens": 128000,
+      "pricing": {
+        "input_per_million": 0.72,
+        "output_per_million": 0.72,
+        "raw": {
+          "prompt": "0.00000072",
+          "completion": "0.00000072",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": null,
+        "uptime_30m": 98.46938775510205,
+        "uptime_1d": 98.48512502281437
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "max_tokens",
+          "response_format",
+          "seed",
+          "temperature",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T19:16:12Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "meta-llama/llama-3.3-70b-instruct",
+        "last_seen": "2026-08-23T19:16:12Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "meta-llama/llama-3.3-70b-instruct",
+      "model_slug": "meta-llama/llama-3.3-70b-instruct",
+      "provider_id": "google-vertex/us-central1",
+      "provider_name": "Google",
+      "endpoint_id": "Google | meta-llama/llama-3.3-70b-instruct",
+      "identity_key": "meta-llama/llama-3.3-70b-instruct:google-vertex/us-central1:Google | meta-llama/llama-3.3-70b-instruct",
+      "context_tokens": 128000,
+      "pricing": {
+        "input_per_million": 0.72,
+        "output_per_million": 0.72,
+        "raw": {
+          "prompt": "0.00000072",
+          "completion": "0.00000072",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 100.0,
+        "uptime_30m": 100.0,
+        "uptime_1d": 99.95378622829604
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "max_tokens",
+          "presence_penalty",
+          "response_format",
+          "seed",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_k",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T19:16:12Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "meta-llama/llama-3.3-70b-instruct",
+        "last_seen": "2026-08-23T19:16:12Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "meta-llama/llama-3.3-70b-instruct",
+      "model_slug": "meta-llama/llama-3.3-70b-instruct",
+      "provider_id": "groq",
+      "provider_name": "Groq",
+      "endpoint_id": "Groq | meta-llama/llama-3.3-70b-instruct",
+      "identity_key": "meta-llama/llama-3.3-70b-instruct:groq:Groq | meta-llama/llama-3.3-70b-instruct",
+      "context_tokens": 131072,
+      "pricing": {
+        "input_per_million": 0.59,
+        "output_per_million": 0.7899999999999999,
+        "raw": {
+          "prompt": "0.00000059",
+          "completion": "0.00000079",
+          "input_cache_read": "0.000000295",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 99.67032967032966,
+        "uptime_30m": 98.99721448467966,
+        "uptime_1d": 99.46763888322064
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "max_tokens",
+          "response_format",
+          "seed",
+          "stop",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T19:16:12Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "meta-llama/llama-3.3-70b-instruct",
+        "last_seen": "2026-08-23T19:16:12Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "meta-llama/llama-3.3-70b-instruct",
+      "model_slug": "meta-llama/llama-3.3-70b-instruct",
+      "provider_id": "nebius/fp8",
+      "provider_name": "Nebius",
+      "endpoint_id": "Nebius | meta-llama/llama-3.3-70b-instruct",
+      "identity_key": "meta-llama/llama-3.3-70b-instruct:nebius/fp8:Nebius | meta-llama/llama-3.3-70b-instruct",
+      "context_tokens": 131072,
+      "pricing": {
+        "input_per_million": 0.13,
+        "output_per_million": 0.39999999999999997,
+        "raw": {
+          "prompt": "0.00000013",
+          "completion": "0.0000004",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "unavailable",
+        "uptime_5m": null,
+        "uptime_30m": 59.70695970695971,
+        "uptime_1d": 52.4295976263599
+      },
+      "quantization": "fp8",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "logit_bias",
+          "max_tokens",
+          "presence_penalty",
+          "repetition_penalty",
+          "response_format",
+          "seed",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_k",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T19:16:12Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "meta-llama/llama-3.3-70b-instruct",
+        "last_seen": "2026-08-23T19:16:12Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "meta-llama/llama-3.3-70b-instruct",
+      "model_slug": "meta-llama/llama-3.3-70b-instruct",
+      "provider_id": "novita/bf16",
+      "provider_name": "Novita",
+      "endpoint_id": "Novita | meta-llama/llama-3.3-70b-instruct",
+      "identity_key": "meta-llama/llama-3.3-70b-instruct:novita/bf16:Novita | meta-llama/llama-3.3-70b-instruct",
+      "context_tokens": 12288,
+      "pricing": {
+        "input_per_million": 0.135,
+        "output_per_million": 0.39999999999999997,
+        "raw": {
+          "prompt": "0.000000135",
+          "completion": "0.0000004",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 93.28703703703704,
+        "uptime_30m": 97.96782387806944,
+        "uptime_1d": 94.12360839952906
+      },
+      "quantization": "bf16",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "logprobs",
+          "max_tokens",
+          "presence_penalty",
+          "repetition_penalty",
+          "response_format",
+          "seed",
+          "stop",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_k",
+          "top_logprobs",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T19:16:12Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "meta-llama/llama-3.3-70b-instruct",
+        "last_seen": "2026-08-23T19:16:12Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "meta-llama/llama-3.3-70b-instruct",
+      "model_slug": "meta-llama/llama-3.3-70b-instruct",
+      "provider_id": "parasail/fp8",
+      "provider_name": "Parasail",
+      "endpoint_id": "Parasail | meta-llama/llama-3.3-70b-instruct",
+      "identity_key": "meta-llama/llama-3.3-70b-instruct:parasail/fp8:Parasail | meta-llama/llama-3.3-70b-instruct",
+      "context_tokens": 131072,
+      "pricing": {
+        "input_per_million": 0.22,
+        "output_per_million": 0.5,
+        "raw": {
+          "prompt": "0.00000022",
+          "completion": "0.0000005",
+          "input_cache_read": "0.00000011",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 99.37629937629939,
+        "uptime_30m": 99.32863376972139,
+        "uptime_1d": 99.28777991220345
+      },
+      "quantization": "fp8",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "logit_bias",
+          "logprobs",
+          "max_tokens",
+          "presence_penalty",
+          "repetition_penalty",
+          "response_format",
+          "seed",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "top_k",
+          "top_logprobs",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T19:16:12Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "meta-llama/llama-3.3-70b-instruct",
+        "last_seen": "2026-08-23T19:16:12Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "meta-llama/llama-3.3-70b-instruct",
+      "model_slug": "meta-llama/llama-3.3-70b-instruct",
+      "provider_id": "sambanova-turbo",
+      "provider_name": "SambaNova",
+      "endpoint_id": "SambaNova | meta-llama/llama-3.3-70b-instruct",
+      "identity_key": "meta-llama/llama-3.3-70b-instruct:sambanova-turbo:SambaNova | meta-llama/llama-3.3-70b-instruct",
+      "context_tokens": 131072,
+      "pricing": {
+        "input_per_million": 0.44999999999999996,
+        "output_per_million": 0.8999999999999999,
+        "raw": {
+          "prompt": "0.00000045",
+          "completion": "0.0000009",
+          "discount": 0.25
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 100.0,
+        "uptime_30m": 99.34640522875817,
+        "uptime_1d": 98.34458902981386
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "logprobs",
+          "max_tokens",
+          "response_format",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "top_k",
+          "top_logprobs",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T19:16:12Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "meta-llama/llama-3.3-70b-instruct",
+        "last_seen": "2026-08-23T19:16:12Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "meta-llama/llama-3.3-70b-instruct",
+      "model_slug": "meta-llama/llama-3.3-70b-instruct",
+      "provider_id": "together",
+      "provider_name": "Together",
+      "endpoint_id": "Together | meta-llama/llama-3.3-70b-instruct",
+      "identity_key": "meta-llama/llama-3.3-70b-instruct:together:Together | meta-llama/llama-3.3-70b-instruct",
+      "context_tokens": 131072,
+      "pricing": {
+        "input_per_million": 1.04,
+        "output_per_million": 1.04,
+        "raw": {
+          "prompt": "0.00000104",
+          "completion": "0.00000104",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": null,
+        "uptime_30m": 97.2027972027972,
+        "uptime_1d": 98.14245810055866
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "logit_bias",
+          "max_tokens",
+          "min_p",
+          "presence_penalty",
+          "repetition_penalty",
+          "response_format",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_k",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T19:16:12Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "meta-llama/llama-3.3-70b-instruct",
+        "last_seen": "2026-08-23T19:16:12Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "meta-llama/llama-4-maverick",
+      "model_slug": "meta-llama/llama-4-maverick",
+      "provider_id": "deepinfra/base",
+      "provider_name": "DeepInfra",
+      "endpoint_id": "DeepInfra | meta-llama/llama-4-maverick-17b-128e-instruct",
+      "identity_key": "meta-llama/llama-4-maverick:deepinfra/base:DeepInfra | meta-llama/llama-4-maverick-17b-128e-instruct",
+      "context_tokens": 1048576,
+      "pricing": {
+        "input_per_million": 0.19999999999999998,
+        "output_per_million": 0.7999999999999999,
+        "raw": {
+          "prompt": "0.0000002",
+          "completion": "0.0000008",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 99.87129987129987,
+        "uptime_30m": 99.76720984369804,
+        "uptime_1d": 99.82183921395554
+      },
+      "quantization": "fp8",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "logit_bias",
+          "max_tokens",
+          "min_p",
+          "presence_penalty",
+          "repetition_penalty",
+          "response_format",
+          "seed",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "top_k",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T19:16:12Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "meta-llama/llama-4-maverick",
+        "last_seen": "2026-08-23T19:16:12Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "meta-llama/llama-4-maverick",
+      "model_slug": "meta-llama/llama-4-maverick",
+      "provider_id": "digitalocean",
+      "provider_name": "DigitalOcean",
+      "endpoint_id": "DigitalOcean | meta-llama/llama-4-maverick-17b-128e-instruct",
+      "identity_key": "meta-llama/llama-4-maverick:digitalocean:DigitalOcean | meta-llama/llama-4-maverick-17b-128e-instruct",
+      "context_tokens": 128000,
+      "pricing": {
+        "input_per_million": 0.19999999999999998,
+        "output_per_million": 0.696,
+        "raw": {
+          "prompt": "0.0000002",
+          "completion": "0.000000696",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 100.0,
+        "uptime_30m": 100.0,
+        "uptime_1d": 99.0602430936706
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "logprobs",
+          "max_tokens",
+          "response_format",
+          "structured_outputs",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_logprobs",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T19:16:12Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "meta-llama/llama-4-maverick",
+        "last_seen": "2026-08-23T19:16:12Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "meta-llama/llama-4-maverick",
+      "model_slug": "meta-llama/llama-4-maverick",
+      "provider_id": "google-vertex/us-east5",
+      "provider_name": "Google",
+      "endpoint_id": "Google | meta-llama/llama-4-maverick-17b-128e-instruct",
+      "identity_key": "meta-llama/llama-4-maverick:google-vertex/us-east5:Google | meta-llama/llama-4-maverick-17b-128e-instruct",
+      "context_tokens": 524288,
+      "pricing": {
+        "input_per_million": 0.35,
+        "output_per_million": 1.15,
+        "raw": {
+          "prompt": "0.00000035",
+          "completion": "0.00000115",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 100.0,
+        "uptime_30m": 100.0,
+        "uptime_1d": 99.82203261473217
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "max_tokens",
+          "presence_penalty",
+          "response_format",
+          "seed",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_k",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T19:16:12Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "meta-llama/llama-4-maverick",
+        "last_seen": "2026-08-23T19:16:12Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "meta-llama/llama-4-maverick",
+      "model_slug": "meta-llama/llama-4-maverick",
+      "provider_id": "novita/fp8",
+      "provider_name": "Novita",
+      "endpoint_id": "Novita | meta-llama/llama-4-maverick-17b-128e-instruct",
+      "identity_key": "meta-llama/llama-4-maverick:novita/fp8:Novita | meta-llama/llama-4-maverick-17b-128e-instruct",
+      "context_tokens": 1048576,
+      "pricing": {
+        "input_per_million": 0.27,
+        "output_per_million": 0.85,
+        "raw": {
+          "prompt": "0.00000027",
+          "completion": "0.00000085",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 99.54337899543378,
+        "uptime_30m": 99.42446043165467,
+        "uptime_1d": 99.75759903039612
+      },
+      "quantization": "fp8",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "max_tokens",
+          "presence_penalty",
+          "repetition_penalty",
+          "response_format",
+          "seed",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "top_k",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T19:16:12Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "meta-llama/llama-4-maverick",
+        "last_seen": "2026-08-23T19:16:12Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "meta-llama/llama-4-maverick",
+      "model_slug": "meta-llama/llama-4-maverick",
+      "provider_id": "parasail/fp8",
+      "provider_name": "Parasail",
+      "endpoint_id": "Parasail | meta-llama/llama-4-maverick-17b-128e-instruct",
+      "identity_key": "meta-llama/llama-4-maverick:parasail/fp8:Parasail | meta-llama/llama-4-maverick-17b-128e-instruct",
+      "context_tokens": 524288,
+      "pricing": {
+        "input_per_million": 0.35,
+        "output_per_million": 1.0,
+        "raw": {
+          "prompt": "0.00000035",
+          "completion": "0.000001",
+          "input_cache_read": "0.00000017",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 100.0,
+        "uptime_30m": 100.0,
+        "uptime_1d": 99.97013352073085
+      },
+      "quantization": "fp8",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "logit_bias",
+          "logprobs",
+          "max_tokens",
+          "presence_penalty",
+          "repetition_penalty",
+          "response_format",
+          "seed",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_k",
+          "top_logprobs",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T19:16:12Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "meta-llama/llama-4-maverick",
+        "last_seen": "2026-08-23T19:16:12Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "meta-llama/llama-4-scout",
+      "model_slug": "meta-llama/llama-4-scout",
+      "provider_id": "deepinfra/fp8",
+      "provider_name": "DeepInfra",
+      "endpoint_id": "DeepInfra | meta-llama/llama-4-scout-17b-16e-instruct",
+      "identity_key": "meta-llama/llama-4-scout:deepinfra/fp8:DeepInfra | meta-llama/llama-4-scout-17b-16e-instruct",
+      "context_tokens": 327680,
+      "pricing": {
+        "input_per_million": 0.09999999999999999,
+        "output_per_million": 0.3,
+        "raw": {
+          "prompt": "0.0000001",
+          "completion": "0.0000003",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 100.0,
+        "uptime_30m": 100.0,
+        "uptime_1d": 99.90935605027383
+      },
+      "quantization": "fp8",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "logit_bias",
+          "max_tokens",
+          "min_p",
+          "presence_penalty",
+          "repetition_penalty",
+          "response_format",
+          "seed",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "top_k",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T19:16:12Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "meta-llama/llama-4-scout",
+        "last_seen": "2026-08-23T19:16:12Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "meta-llama/llama-4-scout",
+      "model_slug": "meta-llama/llama-4-scout",
+      "provider_id": "google-vertex/us-east5",
+      "provider_name": "Google",
+      "endpoint_id": "Google | meta-llama/llama-4-scout-17b-16e-instruct",
+      "identity_key": "meta-llama/llama-4-scout:google-vertex/us-east5:Google | meta-llama/llama-4-scout-17b-16e-instruct",
+      "context_tokens": 1310720,
+      "pricing": {
+        "input_per_million": 0.25,
+        "output_per_million": 0.7,
+        "raw": {
+          "prompt": "0.00000025",
+          "completion": "0.0000007",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 100.0,
+        "uptime_30m": 100.0,
+        "uptime_1d": 99.93656080250585
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "max_tokens",
+          "presence_penalty",
+          "response_format",
+          "seed",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_k",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T19:16:12Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "meta-llama/llama-4-scout",
+        "last_seen": "2026-08-23T19:16:12Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "meta-llama/llama-4-scout",
+      "model_slug": "meta-llama/llama-4-scout",
+      "provider_id": "groq",
+      "provider_name": "Groq",
+      "endpoint_id": "Groq | meta-llama/llama-4-scout-17b-16e-instruct",
+      "identity_key": "meta-llama/llama-4-scout:groq:Groq | meta-llama/llama-4-scout-17b-16e-instruct",
+      "context_tokens": 131072,
+      "pricing": {
+        "input_per_million": 0.11,
+        "output_per_million": 0.33999999999999997,
+        "raw": {
+          "prompt": "0.00000011",
+          "completion": "0.00000034",
+          "input_cache_read": "0.000000055",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 99.7624703087886,
+        "uptime_30m": 99.8185117967332,
+        "uptime_1d": 99.64436628657015
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "max_tokens",
+          "response_format",
+          "seed",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T19:16:12Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "meta-llama/llama-4-scout",
+        "last_seen": "2026-08-23T19:16:12Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "meta-llama/llama-4-scout",
+      "model_slug": "meta-llama/llama-4-scout",
+      "provider_id": "novita/bf16",
+      "provider_name": "Novita",
+      "endpoint_id": "Novita | meta-llama/llama-4-scout-17b-16e-instruct",
+      "identity_key": "meta-llama/llama-4-scout:novita/bf16:Novita | meta-llama/llama-4-scout-17b-16e-instruct",
+      "context_tokens": 131072,
+      "pricing": {
+        "input_per_million": 0.18,
+        "output_per_million": 0.59,
+        "raw": {
+          "prompt": "0.00000018",
+          "completion": "0.00000059",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 100.0,
+        "uptime_30m": 100.0,
+        "uptime_1d": 99.90381800694183
+      },
+      "quantization": "bf16",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "max_tokens",
+          "presence_penalty",
+          "repetition_penalty",
+          "seed",
+          "stop",
+          "temperature",
+          "top_k",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T19:16:12Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "meta-llama/llama-4-scout",
+        "last_seen": "2026-08-23T19:16:12Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "meta-llama/llama-guard-4-12b",
+      "model_slug": "meta-llama/llama-guard-4-12b",
+      "provider_id": "deepinfra/bf16",
+      "provider_name": "DeepInfra",
+      "endpoint_id": "DeepInfra | meta-llama/llama-guard-4-12b",
+      "identity_key": "meta-llama/llama-guard-4-12b:deepinfra/bf16:DeepInfra | meta-llama/llama-guard-4-12b",
+      "context_tokens": 163840,
+      "pricing": {
+        "input_per_million": 0.18,
+        "output_per_million": 0.18,
+        "raw": {
+          "prompt": "0.00000018",
+          "completion": "0.00000018",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 100.0,
+        "uptime_30m": 100.0,
+        "uptime_1d": 99.9699663623258
+      },
+      "quantization": "bf16",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "logit_bias",
+          "max_tokens",
+          "min_p",
+          "presence_penalty",
+          "repetition_penalty",
+          "response_format",
+          "seed",
+          "stop",
+          "temperature",
+          "top_k",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T19:16:12Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "meta-llama/llama-guard-4-12b",
+        "last_seen": "2026-08-23T19:16:12Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "meta-llama/llama-guard-4-12b",
+      "model_slug": "meta-llama/llama-guard-4-12b",
+      "provider_id": "together",
+      "provider_name": "Together",
+      "endpoint_id": "Together | meta-llama/llama-guard-4-12b",
+      "identity_key": "meta-llama/llama-guard-4-12b:together:Together | meta-llama/llama-guard-4-12b",
+      "context_tokens": 1048576,
+      "pricing": {
+        "input_per_million": 0.19999999999999998,
+        "output_per_million": 0.19999999999999998,
+        "raw": {
+          "prompt": "0.0000002",
+          "completion": "0.0000002",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 100.0,
+        "uptime_30m": 99.21930447125621,
+        "uptime_1d": 99.86685765706206
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "logit_bias",
+          "max_tokens",
+          "min_p",
+          "presence_penalty",
+          "repetition_penalty",
+          "stop",
+          "temperature",
+          "top_k",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T19:16:12Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "meta-llama/llama-guard-4-12b",
+        "last_seen": "2026-08-23T19:16:12Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "meta/muse-glimmer-30b",
+      "model_slug": "meta/muse-glimmer-30b",
+      "provider_id": "deepinfra/bf16",
+      "provider_name": "DeepInfra",
+      "endpoint_id": "DeepInfra | meta/muse-glimmer-30b-20260810",
+      "identity_key": "meta/muse-glimmer-30b:deepinfra/bf16:DeepInfra | meta/muse-glimmer-30b-20260810",
+      "context_tokens": 131072,
       "pricing": {
         "input_per_million": 0.3,
         "output_per_million": 1.2,
         "raw": {
+          "prompt": "0.0000003",
           "completion": "0.0000012",
-          "discount": 0,
           "input_cache_read": "0.00000004",
-          "prompt": "0.0000003"
+          "discount": 0
         }
       },
-      "privacy": {},
-      "provenance": {
-        "fetched_at": "2026-08-23T06:09:01Z",
-        "raw_endpoint": "meta/muse-glimmer-30b",
-        "source": "openrouter",
-        "source_authority": "openrouter"
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
       },
-      "provider_id": "deepinfra/bf16",
-      "provider_name": "DeepInfra",
-      "quantization": "bf16"
-    },
-    {
       "availability": {
-        "status": "unavailable",
-        "uptime_1d": 96.99759807846277,
-        "uptime_30m": 24.0,
-        "uptime_5m": null
+        "status": "available",
+        "uptime_5m": null,
+        "uptime_30m": 100.0,
+        "uptime_1d": 99.97643917380036
       },
+      "quantization": "bf16",
       "capabilities": {
         "supported_parameters": [
           "frequency_penalty",
           "include_reasoning",
           "logit_bias",
-          "logprobs",
           "max_tokens",
+          "min_p",
           "presence_penalty",
           "reasoning",
           "reasoning_effort",
           "repetition_penalty",
           "response_format",
+          "seed",
           "stop",
           "structured_outputs",
           "temperature",
           "tool_choice",
           "tools",
           "top_k",
-          "top_logprobs",
           "top_p"
         ]
       },
-      "context_tokens": 131072,
-      "endpoint_id": "Fireworks | meta/muse-glimmer-30b-20260810",
-      "identity_key": "meta/muse-glimmer-30b:fireworks:Fireworks | meta/muse-glimmer-30b-20260810",
-      "model_id": "meta/muse-glimmer-30b",
-      "model_slug": "meta/muse-glimmer-30b",
-      "observation_type": "provider_endpoint",
-      "performance": {
-        "latency_seconds": null,
-        "throughput_tps": null
-      },
-      "pricing": {
-        "input_per_million": 0.35,
-        "output_per_million": 1.5,
-        "raw": {
-          "completion": "0.0000015",
-          "discount": 0,
-          "input_cache_read": "0.00000004",
-          "prompt": "0.00000035"
-        }
-      },
       "privacy": {},
       "provenance": {
-        "fetched_at": "2026-08-23T06:09:01Z",
-        "raw_endpoint": "meta/muse-glimmer-30b",
         "source": "openrouter",
-        "source_authority": "openrouter"
-      },
+        "fetched_at": "2026-08-23T19:16:12Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "meta/muse-glimmer-30b",
+        "last_seen": "2026-08-23T19:16:12Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "meta/muse-glimmer-30b",
+      "model_slug": "meta/muse-glimmer-30b",
       "provider_id": "fireworks",
       "provider_name": "Fireworks",
-      "quantization": "unknown"
-    },
-    {
+      "endpoint_id": "Fireworks | meta/muse-glimmer-30b-20260810",
+      "identity_key": "meta/muse-glimmer-30b:fireworks:Fireworks | meta/muse-glimmer-30b-20260810",
+      "context_tokens": 131072,
+      "pricing": {
+        "input_per_million": 0.35,
+        "output_per_million": 1.5,
+        "raw": {
+          "prompt": "0.00000035",
+          "completion": "0.0000015",
+          "input_cache_read": "0.00000004",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
       "availability": {
         "status": "available",
-        "uptime_1d": 99.91081344865884,
-        "uptime_30m": 100.0,
-        "uptime_5m": 100.0
+        "uptime_5m": null,
+        "uptime_30m": null,
+        "uptime_1d": 92.94234592445328
       },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "include_reasoning",
+          "logit_bias",
+          "logprobs",
+          "max_tokens",
+          "presence_penalty",
+          "reasoning",
+          "reasoning_effort",
+          "repetition_penalty",
+          "response_format",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_k",
+          "top_logprobs",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T19:16:12Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "meta/muse-glimmer-30b",
+        "last_seen": "2026-08-23T19:16:12Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "meta/muse-glimmer-30b",
+      "model_slug": "meta/muse-glimmer-30b",
+      "provider_id": "parasail/bf16",
+      "provider_name": "Parasail",
+      "endpoint_id": "Parasail | meta/muse-glimmer-30b-20260810",
+      "identity_key": "meta/muse-glimmer-30b:parasail/bf16:Parasail | meta/muse-glimmer-30b-20260810",
+      "context_tokens": 131072,
+      "pricing": {
+        "input_per_million": 0.3,
+        "output_per_million": 1.1,
+        "raw": {
+          "prompt": "0.0000003",
+          "completion": "0.0000011",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 100.0,
+        "uptime_30m": 100.0,
+        "uptime_1d": 99.91382281971734
+      },
+      "quantization": "bf16",
       "capabilities": {
         "supported_parameters": [
           "frequency_penalty",
@@ -23785,43 +25705,45 @@
           "top_p"
         ]
       },
-      "context_tokens": 131072,
-      "endpoint_id": "Parasail | meta/muse-glimmer-30b-20260810",
-      "identity_key": "meta/muse-glimmer-30b:parasail/bf16:Parasail | meta/muse-glimmer-30b-20260810",
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T19:16:12Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "meta/muse-glimmer-30b",
+        "last_seen": "2026-08-23T19:16:12Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
       "model_id": "meta/muse-glimmer-30b",
       "model_slug": "meta/muse-glimmer-30b",
-      "observation_type": "provider_endpoint",
-      "performance": {
-        "latency_seconds": null,
-        "throughput_tps": null
-      },
+      "provider_id": "phala",
+      "provider_name": "Phala",
+      "endpoint_id": "Phala | meta/muse-glimmer-30b-20260810",
+      "identity_key": "meta/muse-glimmer-30b:phala:Phala | meta/muse-glimmer-30b-20260810",
+      "context_tokens": 131072,
       "pricing": {
         "input_per_million": 0.3,
         "output_per_million": 1.1,
         "raw": {
+          "prompt": "0.0000003",
           "completion": "0.0000011",
-          "discount": 0,
-          "prompt": "0.0000003"
+          "input_cache_read": "0.00000004",
+          "discount": 0
         }
       },
-      "privacy": {},
-      "provenance": {
-        "fetched_at": "2026-08-23T06:09:01Z",
-        "raw_endpoint": "meta/muse-glimmer-30b",
-        "source": "openrouter",
-        "source_authority": "openrouter"
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
       },
-      "provider_id": "parasail/bf16",
-      "provider_name": "Parasail",
-      "quantization": "bf16"
-    },
-    {
       "availability": {
         "status": "available",
-        "uptime_1d": 99.98560995790913,
-        "uptime_30m": 99.87012987012987,
-        "uptime_5m": 100.0
+        "uptime_5m": 100.0,
+        "uptime_30m": 100.0,
+        "uptime_1d": 99.9836291774831
       },
+      "quantization": "unknown",
       "capabilities": {
         "supported_parameters": [
           "frequency_penalty",
@@ -23843,44 +25765,45 @@
           "top_p"
         ]
       },
-      "context_tokens": 131072,
-      "endpoint_id": "Phala | meta/muse-glimmer-30b-20260810",
-      "identity_key": "meta/muse-glimmer-30b:phala:Phala | meta/muse-glimmer-30b-20260810",
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T19:16:12Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "meta/muse-glimmer-30b",
+        "last_seen": "2026-08-23T19:16:12Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
       "model_id": "meta/muse-glimmer-30b",
       "model_slug": "meta/muse-glimmer-30b",
-      "observation_type": "provider_endpoint",
+      "provider_id": "together",
+      "provider_name": "Together",
+      "endpoint_id": "Together | meta/muse-glimmer-30b-20260810",
+      "identity_key": "meta/muse-glimmer-30b:together:Together | meta/muse-glimmer-30b-20260810",
+      "context_tokens": 131072,
+      "pricing": {
+        "input_per_million": 0.35,
+        "output_per_million": 1.5,
+        "raw": {
+          "prompt": "0.00000035",
+          "completion": "0.0000015",
+          "input_cache_read": "0.00000004",
+          "discount": 0
+        }
+      },
       "performance": {
         "latency_seconds": null,
         "throughput_tps": null
       },
-      "pricing": {
-        "input_per_million": 0.3,
-        "output_per_million": 1.1,
-        "raw": {
-          "completion": "0.0000011",
-          "discount": 0,
-          "input_cache_read": "0.00000004",
-          "prompt": "0.0000003"
-        }
-      },
-      "privacy": {},
-      "provenance": {
-        "fetched_at": "2026-08-23T06:09:01Z",
-        "raw_endpoint": "meta/muse-glimmer-30b",
-        "source": "openrouter",
-        "source_authority": "openrouter"
-      },
-      "provider_id": "phala",
-      "provider_name": "Phala",
-      "quantization": "unknown"
-    },
-    {
       "availability": {
         "status": "available",
-        "uptime_1d": 99.92435923544643,
-        "uptime_30m": 99.96825396825398,
-        "uptime_5m": 100.0
+        "uptime_5m": 100.0,
+        "uptime_30m": 100.0,
+        "uptime_1d": 99.9827546066757
       },
+      "quantization": "unknown",
       "capabilities": {
         "supported_parameters": [
           "frequency_penalty",
@@ -23902,99 +25825,46 @@
           "top_p"
         ]
       },
-      "context_tokens": 131072,
-      "endpoint_id": "Together | meta/muse-glimmer-30b-20260810",
-      "identity_key": "meta/muse-glimmer-30b:together:Together | meta/muse-glimmer-30b-20260810",
-      "model_id": "meta/muse-glimmer-30b",
-      "model_slug": "meta/muse-glimmer-30b",
-      "observation_type": "provider_endpoint",
-      "performance": {
-        "latency_seconds": null,
-        "throughput_tps": null
-      },
-      "pricing": {
-        "input_per_million": 0.35,
-        "output_per_million": 1.5,
-        "raw": {
-          "completion": "0.0000015",
-          "discount": 0,
-          "input_cache_read": "0.00000004",
-          "prompt": "0.00000035"
-        }
-      },
       "privacy": {},
       "provenance": {
-        "fetched_at": "2026-08-23T06:09:01Z",
-        "raw_endpoint": "meta/muse-glimmer-30b",
         "source": "openrouter",
-        "source_authority": "openrouter"
-      },
-      "provider_id": "together",
-      "provider_name": "Together",
-      "quantization": "unknown"
+        "fetched_at": "2026-08-23T19:16:12Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "meta/muse-glimmer-30b",
+        "last_seen": "2026-08-23T19:16:12Z"
+      }
     },
     {
-      "availability": {
-        "status": "available",
-        "uptime_1d": 99.99780434520085,
-        "uptime_30m": 100.0,
-        "uptime_5m": 100.0
-      },
-      "capabilities": {
-        "supported_parameters": [
-          "include_reasoning",
-          "max_tokens",
-          "reasoning",
-          "reasoning_effort",
-          "repetition_penalty",
-          "response_format",
-          "structured_outputs",
-          "temperature",
-          "tool_choice",
-          "tools",
-          "top_k",
-          "top_p"
-        ]
-      },
-      "context_tokens": 1048576,
-      "endpoint_id": "Meta | meta/muse-spark-1.2-20260805",
-      "identity_key": "meta/muse-spark-1.2:meta:Meta | meta/muse-spark-1.2-20260805",
-      "model_id": "meta/muse-spark-1.2",
-      "model_slug": "meta/muse-spark-1.2",
       "observation_type": "provider_endpoint",
-      "performance": {
-        "latency_seconds": null,
-        "throughput_tps": null
-      },
+      "model_id": "meta/muse-spark-1.1",
+      "model_slug": "meta/muse-spark-1.1",
+      "provider_id": "meta",
+      "provider_name": "Meta",
+      "endpoint_id": "Meta | meta/muse-spark-1.1-20260709",
+      "identity_key": "meta/muse-spark-1.1:meta:Meta | meta/muse-spark-1.1-20260709",
+      "context_tokens": 1048576,
       "pricing": {
         "input_per_million": 1.25,
         "output_per_million": 4.25,
         "raw": {
-          "completion": "0.00000425",
-          "discount": 0,
-          "input_cache_read": "0.00000015",
           "prompt": "0.00000125",
-          "web_search": "0.0025"
+          "completion": "0.00000425",
+          "web_search": "0.0025",
+          "input_cache_read": "0.00000015",
+          "discount": 0
         }
       },
-      "privacy": {},
-      "provenance": {
-        "fetched_at": "2026-08-23T06:09:01Z",
-        "raw_endpoint": "meta/muse-spark-1.2",
-        "source": "openrouter",
-        "source_authority": "openrouter"
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
       },
-      "provider_id": "meta",
-      "provider_name": "Meta",
-      "quantization": "unknown"
-    },
-    {
       "availability": {
         "status": "available",
-        "uptime_1d": 99.99861214236644,
+        "uptime_5m": 100.0,
         "uptime_30m": 100.0,
-        "uptime_5m": 100.0
+        "uptime_1d": 100.0
       },
+      "quantization": "unknown",
       "capabilities": {
         "supported_parameters": [
           "include_reasoning",
@@ -24011,37 +25881,2738 @@
           "top_p"
         ]
       },
-      "context_tokens": 1048576,
-      "endpoint_id": "Meta | meta/muse-spark-1.2-contributor-20260805",
-      "identity_key": "meta/muse-spark-1.2-contributor:meta:Meta | meta/muse-spark-1.2-contributor-20260805",
-      "model_id": "meta/muse-spark-1.2-contributor",
-      "model_slug": "meta/muse-spark-1.2-contributor",
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T19:16:12Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "meta/muse-spark-1.1",
+        "last_seen": "2026-08-23T19:16:12Z"
+      }
+    },
+    {
       "observation_type": "provider_endpoint",
+      "model_id": "meta/muse-spark-1.2",
+      "model_slug": "meta/muse-spark-1.2",
+      "provider_id": "meta",
+      "provider_name": "Meta",
+      "endpoint_id": "Meta | meta/muse-spark-1.2-20260805",
+      "identity_key": "meta/muse-spark-1.2:meta:Meta | meta/muse-spark-1.2-20260805",
+      "context_tokens": 1048576,
+      "pricing": {
+        "input_per_million": 1.25,
+        "output_per_million": 4.25,
+        "raw": {
+          "prompt": "0.00000125",
+          "completion": "0.00000425",
+          "web_search": "0.0025",
+          "input_cache_read": "0.00000015",
+          "discount": 0
+        }
+      },
       "performance": {
         "latency_seconds": null,
         "throughput_tps": null
       },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 100.0,
+        "uptime_30m": 100.0,
+        "uptime_1d": 99.99806166803158
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "include_reasoning",
+          "max_tokens",
+          "reasoning",
+          "reasoning_effort",
+          "repetition_penalty",
+          "response_format",
+          "structured_outputs",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_k",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T19:16:12Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "meta/muse-spark-1.2",
+        "last_seen": "2026-08-23T19:16:12Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "meta/muse-spark-1.2-contributor",
+      "model_slug": "meta/muse-spark-1.2-contributor",
+      "provider_id": "meta",
+      "provider_name": "Meta",
+      "endpoint_id": "Meta | meta/muse-spark-1.2-contributor-20260805",
+      "identity_key": "meta/muse-spark-1.2-contributor:meta:Meta | meta/muse-spark-1.2-contributor-20260805",
+      "context_tokens": 1048576,
       "pricing": {
         "input_per_million": 0.09999999999999999,
         "output_per_million": 0.19999999999999998,
         "raw": {
-          "completion": "0.0000002",
-          "discount": 0,
-          "input_cache_read": "0.000000002",
           "prompt": "0.0000001",
-          "web_search": "0.0025"
+          "completion": "0.0000002",
+          "web_search": "0.0025",
+          "input_cache_read": "0.000000002",
+          "discount": 0
         }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 100.0,
+        "uptime_30m": 100.0,
+        "uptime_1d": 99.99936820125316
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "include_reasoning",
+          "max_tokens",
+          "reasoning",
+          "reasoning_effort",
+          "repetition_penalty",
+          "response_format",
+          "structured_outputs",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_k",
+          "top_p"
+        ]
       },
       "privacy": {},
       "provenance": {
-        "fetched_at": "2026-08-23T06:09:01Z",
-        "raw_endpoint": "meta/muse-spark-1.2-contributor",
         "source": "openrouter",
-        "source_authority": "openrouter"
+        "fetched_at": "2026-08-23T19:16:12Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "meta/muse-spark-1.2-contributor",
+        "last_seen": "2026-08-23T19:16:12Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "microsoft/phi-4",
+      "model_slug": "microsoft/phi-4",
+      "provider_id": "deepinfra/bf16",
+      "provider_name": "DeepInfra",
+      "endpoint_id": "DeepInfra | microsoft/phi-4",
+      "identity_key": "microsoft/phi-4:deepinfra/bf16:DeepInfra | microsoft/phi-4",
+      "context_tokens": 16384,
+      "pricing": {
+        "input_per_million": 0.07,
+        "output_per_million": 0.14,
+        "raw": {
+          "prompt": "0.00000007",
+          "completion": "0.00000014",
+          "discount": 0
+        }
       },
-      "provider_id": "meta",
-      "provider_name": "Meta",
-      "quantization": "unknown"
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 100.0,
+        "uptime_30m": 100.0,
+        "uptime_1d": 100.0
+      },
+      "quantization": "bf16",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "logit_bias",
+          "max_tokens",
+          "min_p",
+          "presence_penalty",
+          "repetition_penalty",
+          "response_format",
+          "seed",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "top_k",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T19:16:12Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "microsoft/phi-4",
+        "last_seen": "2026-08-23T19:16:12Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "microsoft/wizardlm-2-8x22b",
+      "model_slug": "microsoft/wizardlm-2-8x22b",
+      "provider_id": "novita/bf16",
+      "provider_name": "Novita",
+      "endpoint_id": "Novita | microsoft/wizardlm-2-8x22b",
+      "identity_key": "microsoft/wizardlm-2-8x22b:novita/bf16:Novita | microsoft/wizardlm-2-8x22b",
+      "context_tokens": 65535,
+      "pricing": {
+        "input_per_million": 0.62,
+        "output_per_million": 0.62,
+        "raw": {
+          "prompt": "0.00000062",
+          "completion": "0.00000062",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 100.0,
+        "uptime_30m": 100.0,
+        "uptime_1d": 99.99179958177868
+      },
+      "quantization": "bf16",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "max_tokens",
+          "presence_penalty",
+          "repetition_penalty",
+          "response_format",
+          "seed",
+          "stop",
+          "temperature",
+          "top_k",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T19:16:12Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "microsoft/wizardlm-2-8x22b",
+        "last_seen": "2026-08-23T19:16:12Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "minimax/minimax-01",
+      "model_slug": "minimax/minimax-01",
+      "provider_id": "minimax",
+      "provider_name": "Minimax",
+      "endpoint_id": "Minimax | minimax/minimax-01",
+      "identity_key": "minimax/minimax-01:minimax:Minimax | minimax/minimax-01",
+      "context_tokens": 1000192,
+      "pricing": {
+        "input_per_million": 0.19999999999999998,
+        "output_per_million": 1.1,
+        "raw": {
+          "prompt": "0.0000002",
+          "completion": "0.0000011",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 100.0,
+        "uptime_30m": 100.0,
+        "uptime_1d": 100.0
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "max_tokens",
+          "temperature",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T19:16:12Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "minimax/minimax-01",
+        "last_seen": "2026-08-23T19:16:12Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "minimax/minimax-m1",
+      "model_slug": "minimax/minimax-m1",
+      "provider_id": "minimax",
+      "provider_name": "Minimax",
+      "endpoint_id": "Minimax | minimax/minimax-m1",
+      "identity_key": "minimax/minimax-m1:minimax:Minimax | minimax/minimax-m1",
+      "context_tokens": 1000000,
+      "pricing": {
+        "input_per_million": 0.39999999999999997,
+        "output_per_million": 2.2,
+        "raw": {
+          "prompt": "0.0000004",
+          "completion": "0.0000022",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": null,
+        "uptime_30m": null,
+        "uptime_1d": 100.0
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "include_reasoning",
+          "max_tokens",
+          "reasoning",
+          "temperature",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T19:16:12Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "minimax/minimax-m1",
+        "last_seen": "2026-08-23T19:16:12Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "minimax/minimax-m1",
+      "model_slug": "minimax/minimax-m1",
+      "provider_id": "novita/bf16",
+      "provider_name": "Novita",
+      "endpoint_id": "Novita | minimax/minimax-m1",
+      "identity_key": "minimax/minimax-m1:novita/bf16:Novita | minimax/minimax-m1",
+      "context_tokens": 1000000,
+      "pricing": {
+        "input_per_million": 0.55,
+        "output_per_million": 2.2,
+        "raw": {
+          "prompt": "0.00000055",
+          "completion": "0.0000022",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": null,
+        "uptime_30m": null,
+        "uptime_1d": 100.0
+      },
+      "quantization": "bf16",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "include_reasoning",
+          "max_tokens",
+          "presence_penalty",
+          "reasoning",
+          "repetition_penalty",
+          "seed",
+          "stop",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_k",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T19:16:12Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "minimax/minimax-m1",
+        "last_seen": "2026-08-23T19:16:12Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "minimax/minimax-m2",
+      "model_slug": "minimax/minimax-m2",
+      "provider_id": "google-vertex",
+      "provider_name": "Google",
+      "endpoint_id": "Google | minimax/minimax-m2",
+      "identity_key": "minimax/minimax-m2:google-vertex:Google | minimax/minimax-m2",
+      "context_tokens": 196608,
+      "pricing": {
+        "input_per_million": 0.3,
+        "output_per_million": 1.2,
+        "raw": {
+          "prompt": "0.0000003",
+          "completion": "0.0000012",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": null,
+        "uptime_30m": null,
+        "uptime_1d": 100.0
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "include_reasoning",
+          "logprobs",
+          "max_tokens",
+          "presence_penalty",
+          "reasoning",
+          "repetition_penalty",
+          "response_format",
+          "seed",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_k",
+          "top_logprobs",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T19:16:12Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "minimax/minimax-m2",
+        "last_seen": "2026-08-23T19:16:12Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "minimax/minimax-m2",
+      "model_slug": "minimax/minimax-m2",
+      "provider_id": "minimax/fp8",
+      "provider_name": "Minimax",
+      "endpoint_id": "Minimax | minimax/minimax-m2",
+      "identity_key": "minimax/minimax-m2:minimax/fp8:Minimax | minimax/minimax-m2",
+      "context_tokens": 204800,
+      "pricing": {
+        "input_per_million": 0.255,
+        "output_per_million": 1.02,
+        "raw": {
+          "prompt": "0.000000255",
+          "completion": "0.00000102",
+          "discount": 0.15
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": null,
+        "uptime_30m": 100.0,
+        "uptime_1d": 99.97655883731834
+      },
+      "quantization": "fp8",
+      "capabilities": {
+        "supported_parameters": [
+          "include_reasoning",
+          "max_tokens",
+          "reasoning",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T19:16:12Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "minimax/minimax-m2",
+        "last_seen": "2026-08-23T19:16:12Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "minimax/minimax-m2",
+      "model_slug": "minimax/minimax-m2",
+      "provider_id": "novita/fp8",
+      "provider_name": "Novita",
+      "endpoint_id": "Novita | minimax/minimax-m2",
+      "identity_key": "minimax/minimax-m2:novita/fp8:Novita | minimax/minimax-m2",
+      "context_tokens": 204800,
+      "pricing": {
+        "input_per_million": 0.3,
+        "output_per_million": 1.2,
+        "raw": {
+          "prompt": "0.0000003",
+          "completion": "0.0000012",
+          "input_cache_read": "0.00000003",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": null,
+        "uptime_30m": null,
+        "uptime_1d": 100.0
+      },
+      "quantization": "fp8",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "include_reasoning",
+          "max_tokens",
+          "presence_penalty",
+          "reasoning",
+          "repetition_penalty",
+          "response_format",
+          "seed",
+          "stop",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_k",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T19:16:12Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "minimax/minimax-m2",
+        "last_seen": "2026-08-23T19:16:12Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "minimax/minimax-m2-her",
+      "model_slug": "minimax/minimax-m2-her",
+      "provider_id": "minimax",
+      "provider_name": "Minimax",
+      "endpoint_id": "Minimax | minimax/minimax-m2-her-20260123",
+      "identity_key": "minimax/minimax-m2-her:minimax:Minimax | minimax/minimax-m2-her-20260123",
+      "context_tokens": 65536,
+      "pricing": {
+        "input_per_million": 0.3,
+        "output_per_million": 1.2,
+        "raw": {
+          "prompt": "0.0000003",
+          "completion": "0.0000012",
+          "input_cache_read": "0.00000003",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 100.0,
+        "uptime_30m": 100.0,
+        "uptime_1d": 100.0
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "max_tokens",
+          "temperature",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T19:16:12Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "minimax/minimax-m2-her",
+        "last_seen": "2026-08-23T19:16:12Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "minimax/minimax-m2.1",
+      "model_slug": "minimax/minimax-m2.1",
+      "provider_id": "minimax/fp8",
+      "provider_name": "Minimax",
+      "endpoint_id": "Minimax | minimax/minimax-m2.1",
+      "identity_key": "minimax/minimax-m2.1:minimax/fp8:Minimax | minimax/minimax-m2.1",
+      "context_tokens": 204800,
+      "pricing": {
+        "input_per_million": 0.3,
+        "output_per_million": 1.2,
+        "raw": {
+          "prompt": "0.0000003",
+          "completion": "0.0000012",
+          "input_cache_read": "0.00000003",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": null,
+        "uptime_30m": null,
+        "uptime_1d": 99.47447447447448
+      },
+      "quantization": "fp8",
+      "capabilities": {
+        "supported_parameters": [
+          "include_reasoning",
+          "max_tokens",
+          "reasoning",
+          "response_format",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T19:16:12Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "minimax/minimax-m2.1",
+        "last_seen": "2026-08-23T19:16:12Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "minimax/minimax-m2.1",
+      "model_slug": "minimax/minimax-m2.1",
+      "provider_id": "minimax/highspeed",
+      "provider_name": "Minimax",
+      "endpoint_id": "Minimax | minimax/minimax-m2.1",
+      "identity_key": "minimax/minimax-m2.1:minimax/highspeed:Minimax | minimax/minimax-m2.1",
+      "context_tokens": 204800,
+      "pricing": {
+        "input_per_million": 0.3,
+        "output_per_million": 2.4,
+        "raw": {
+          "prompt": "0.0000003",
+          "completion": "0.0000024",
+          "input_cache_read": "0.00000003",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": null,
+        "uptime_30m": null,
+        "uptime_1d": 99.87654320987654
+      },
+      "quantization": "fp8",
+      "capabilities": {
+        "supported_parameters": [
+          "include_reasoning",
+          "max_tokens",
+          "reasoning",
+          "response_format",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T19:16:12Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "minimax/minimax-m2.1",
+        "last_seen": "2026-08-23T19:16:12Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "minimax/minimax-m2.1",
+      "model_slug": "minimax/minimax-m2.1",
+      "provider_id": "novita/fp8",
+      "provider_name": "Novita",
+      "endpoint_id": "Novita | minimax/minimax-m2.1",
+      "identity_key": "minimax/minimax-m2.1:novita/fp8:Novita | minimax/minimax-m2.1",
+      "context_tokens": 204800,
+      "pricing": {
+        "input_per_million": 0.3,
+        "output_per_million": 1.2,
+        "raw": {
+          "prompt": "0.0000003",
+          "completion": "0.0000012",
+          "input_cache_read": "0.00000003",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": null,
+        "uptime_30m": null,
+        "uptime_1d": 99.673735725938
+      },
+      "quantization": "fp8",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "include_reasoning",
+          "max_tokens",
+          "presence_penalty",
+          "reasoning",
+          "repetition_penalty",
+          "response_format",
+          "seed",
+          "stop",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_k",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T19:16:12Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "minimax/minimax-m2.1",
+        "last_seen": "2026-08-23T19:16:12Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "minimax/minimax-m2.5",
+      "model_slug": "minimax/minimax-m2.5",
+      "provider_id": "atlas-cloud/fp8",
+      "provider_name": "AtlasCloud",
+      "endpoint_id": "AtlasCloud | minimax/minimax-m2.5-20260211",
+      "identity_key": "minimax/minimax-m2.5:atlas-cloud/fp8:AtlasCloud | minimax/minimax-m2.5-20260211",
+      "context_tokens": 196608,
+      "pricing": {
+        "input_per_million": 0.295,
+        "output_per_million": 1.2,
+        "raw": {
+          "prompt": "0.000000295",
+          "completion": "0.0000012",
+          "input_cache_read": "0.00000006",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 100.0,
+        "uptime_30m": 100.0,
+        "uptime_1d": 99.96119695966766
+      },
+      "quantization": "fp8",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "include_reasoning",
+          "logit_bias",
+          "logprobs",
+          "max_tokens",
+          "min_p",
+          "presence_penalty",
+          "reasoning",
+          "repetition_penalty",
+          "response_format",
+          "seed",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_k",
+          "top_logprobs",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T19:16:12Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "minimax/minimax-m2.5",
+        "last_seen": "2026-08-23T19:16:12Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "minimax/minimax-m2.5",
+      "model_slug": "minimax/minimax-m2.5",
+      "provider_id": "digitalocean",
+      "provider_name": "DigitalOcean",
+      "endpoint_id": "DigitalOcean | minimax/minimax-m2.5-20260211",
+      "identity_key": "minimax/minimax-m2.5:digitalocean:DigitalOcean | minimax/minimax-m2.5-20260211",
+      "context_tokens": 65536,
+      "pricing": {
+        "input_per_million": 0.3,
+        "output_per_million": 1.2,
+        "raw": {
+          "prompt": "0.0000003",
+          "completion": "0.0000012",
+          "input_cache_read": "0.00000006",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 100.0,
+        "uptime_30m": 100.0,
+        "uptime_1d": 99.96006788459619
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "include_reasoning",
+          "logprobs",
+          "max_tokens",
+          "reasoning",
+          "response_format",
+          "structured_outputs",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_logprobs",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T19:16:12Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "minimax/minimax-m2.5",
+        "last_seen": "2026-08-23T19:16:12Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "minimax/minimax-m2.5",
+      "model_slug": "minimax/minimax-m2.5",
+      "provider_id": "friendli",
+      "provider_name": "Friendli",
+      "endpoint_id": "Friendli | minimax/minimax-m2.5-20260211",
+      "identity_key": "minimax/minimax-m2.5:friendli:Friendli | minimax/minimax-m2.5-20260211",
+      "context_tokens": 196608,
+      "pricing": {
+        "input_per_million": 0.3,
+        "output_per_million": 1.2,
+        "raw": {
+          "prompt": "0.0000003",
+          "completion": "0.0000012",
+          "input_cache_read": "0.00000006",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": null,
+        "uptime_30m": 100.0,
+        "uptime_1d": 99.99210235349865
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "include_reasoning",
+          "max_tokens",
+          "min_p",
+          "presence_penalty",
+          "reasoning",
+          "repetition_penalty",
+          "response_format",
+          "seed",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_k",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T19:16:12Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "minimax/minimax-m2.5",
+        "last_seen": "2026-08-23T19:16:12Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "minimax/minimax-m2.5",
+      "model_slug": "minimax/minimax-m2.5",
+      "provider_id": "minimax/fp8",
+      "provider_name": "Minimax",
+      "endpoint_id": "Minimax | minimax/minimax-m2.5-20260211",
+      "identity_key": "minimax/minimax-m2.5:minimax/fp8:Minimax | minimax/minimax-m2.5-20260211",
+      "context_tokens": 204800,
+      "pricing": {
+        "input_per_million": 0.3,
+        "output_per_million": 1.2,
+        "raw": {
+          "prompt": "0.0000003",
+          "completion": "0.0000012",
+          "input_cache_read": "0.00000003",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": null,
+        "uptime_30m": null,
+        "uptime_1d": 99.89373989373989
+      },
+      "quantization": "fp8",
+      "capabilities": {
+        "supported_parameters": [
+          "include_reasoning",
+          "max_tokens",
+          "reasoning",
+          "response_format",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T19:16:12Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "minimax/minimax-m2.5",
+        "last_seen": "2026-08-23T19:16:12Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "minimax/minimax-m2.5",
+      "model_slug": "minimax/minimax-m2.5",
+      "provider_id": "minimax/highspeed",
+      "provider_name": "Minimax",
+      "endpoint_id": "Minimax | minimax/minimax-m2.5-20260211",
+      "identity_key": "minimax/minimax-m2.5:minimax/highspeed:Minimax | minimax/minimax-m2.5-20260211",
+      "context_tokens": 204800,
+      "pricing": {
+        "input_per_million": 0.6,
+        "output_per_million": 2.4,
+        "raw": {
+          "prompt": "0.0000006",
+          "completion": "0.0000024",
+          "input_cache_read": "0.00000006",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": null,
+        "uptime_30m": null,
+        "uptime_1d": 99.92897727272727
+      },
+      "quantization": "fp8",
+      "capabilities": {
+        "supported_parameters": [
+          "include_reasoning",
+          "max_tokens",
+          "reasoning",
+          "response_format",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T19:16:12Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "minimax/minimax-m2.5",
+        "last_seen": "2026-08-23T19:16:12Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "minimax/minimax-m2.5",
+      "model_slug": "minimax/minimax-m2.5",
+      "provider_id": "novita/fp8",
+      "provider_name": "Novita",
+      "endpoint_id": "Novita | minimax/minimax-m2.5-20260211",
+      "identity_key": "minimax/minimax-m2.5:novita/fp8:Novita | minimax/minimax-m2.5-20260211",
+      "context_tokens": 204800,
+      "pricing": {
+        "input_per_million": 0.3,
+        "output_per_million": 1.2,
+        "raw": {
+          "prompt": "0.0000003",
+          "completion": "0.0000012",
+          "input_cache_read": "0.00000003",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": null,
+        "uptime_30m": 100.0,
+        "uptime_1d": 99.76624420176047
+      },
+      "quantization": "fp8",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "include_reasoning",
+          "max_tokens",
+          "presence_penalty",
+          "reasoning",
+          "repetition_penalty",
+          "response_format",
+          "seed",
+          "stop",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_k",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T19:16:12Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "minimax/minimax-m2.5",
+        "last_seen": "2026-08-23T19:16:12Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "minimax/minimax-m2.5",
+      "model_slug": "minimax/minimax-m2.5",
+      "provider_id": "siliconflow/fp8",
+      "provider_name": "SiliconFlow",
+      "endpoint_id": "SiliconFlow | minimax/minimax-m2.5-20260211",
+      "identity_key": "minimax/minimax-m2.5:siliconflow/fp8:SiliconFlow | minimax/minimax-m2.5-20260211",
+      "context_tokens": 196608,
+      "pricing": {
+        "input_per_million": 0.3,
+        "output_per_million": 1.2,
+        "raw": {
+          "prompt": "0.0000003",
+          "completion": "0.0000012",
+          "input_cache_read": "0.00000003",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": null,
+        "uptime_30m": 100.0,
+        "uptime_1d": 100.0
+      },
+      "quantization": "fp8",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "include_reasoning",
+          "max_tokens",
+          "reasoning",
+          "response_format",
+          "structured_outputs",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_k",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T19:16:12Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "minimax/minimax-m2.5",
+        "last_seen": "2026-08-23T19:16:12Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "minimax/minimax-m2.5",
+      "model_slug": "minimax/minimax-m2.5",
+      "provider_id": "streamlake",
+      "provider_name": "StreamLake",
+      "endpoint_id": "StreamLake | minimax/minimax-m2.5-20260211",
+      "identity_key": "minimax/minimax-m2.5:streamlake:StreamLake | minimax/minimax-m2.5-20260211",
+      "context_tokens": 200000,
+      "pricing": {
+        "input_per_million": 0.27,
+        "output_per_million": 1.08,
+        "raw": {
+          "prompt": "0.00000027",
+          "completion": "0.00000108",
+          "input_cache_read": "0.000000027",
+          "discount": 0.1
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 100.0,
+        "uptime_30m": 99.74832214765101,
+        "uptime_1d": 99.89369644248247
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "include_reasoning",
+          "logprobs",
+          "max_tokens",
+          "reasoning",
+          "response_format",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_logprobs",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T19:16:12Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "minimax/minimax-m2.5",
+        "last_seen": "2026-08-23T19:16:12Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "minimax/minimax-m2.5",
+      "model_slug": "minimax/minimax-m2.5",
+      "provider_id": "venice",
+      "provider_name": "Venice",
+      "endpoint_id": "Venice | minimax/minimax-m2.5-20260211",
+      "identity_key": "minimax/minimax-m2.5:venice:Venice | minimax/minimax-m2.5-20260211",
+      "context_tokens": 198000,
+      "pricing": {
+        "input_per_million": 0.27,
+        "output_per_million": 0.95,
+        "raw": {
+          "prompt": "0.00000027",
+          "completion": "0.00000095",
+          "input_cache_read": "0.00000003",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": null,
+        "uptime_30m": null,
+        "uptime_1d": 99.33636363636363
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "include_reasoning",
+          "max_tokens",
+          "presence_penalty",
+          "reasoning",
+          "stop",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_k",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T19:16:12Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "minimax/minimax-m2.5",
+        "last_seen": "2026-08-23T19:16:12Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "minimax/minimax-m2.7",
+      "model_slug": "minimax/minimax-m2.7",
+      "provider_id": "atlas-cloud/fp8",
+      "provider_name": "AtlasCloud",
+      "endpoint_id": "AtlasCloud | minimax/minimax-m2.7-20260318",
+      "identity_key": "minimax/minimax-m2.7:atlas-cloud/fp8:AtlasCloud | minimax/minimax-m2.7-20260318",
+      "context_tokens": 196608,
+      "pricing": {
+        "input_per_million": 0.3,
+        "output_per_million": 1.2,
+        "raw": {
+          "prompt": "0.0000003",
+          "completion": "0.0000012",
+          "input_cache_read": "0.00000006",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 99.69418960244649,
+        "uptime_30m": 99.4899960768929,
+        "uptime_1d": 99.59497206703911
+      },
+      "quantization": "fp8",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "include_reasoning",
+          "logit_bias",
+          "max_tokens",
+          "min_p",
+          "presence_penalty",
+          "reasoning",
+          "repetition_penalty",
+          "response_format",
+          "seed",
+          "stop",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_k",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T19:16:12Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "minimax/minimax-m2.7",
+        "last_seen": "2026-08-23T19:16:12Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "minimax/minimax-m2.7",
+      "model_slug": "minimax/minimax-m2.7",
+      "provider_id": "deepinfra/fp8",
+      "provider_name": "DeepInfra",
+      "endpoint_id": "DeepInfra | minimax/minimax-m2.7-20260318",
+      "identity_key": "minimax/minimax-m2.7:deepinfra/fp8:DeepInfra | minimax/minimax-m2.7-20260318",
+      "context_tokens": 196608,
+      "pricing": {
+        "input_per_million": 0.25,
+        "output_per_million": 1.0,
+        "raw": {
+          "prompt": "0.00000025",
+          "completion": "0.000001",
+          "input_cache_read": "0.00000005",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 100.0,
+        "uptime_30m": 99.85621854780733,
+        "uptime_1d": 99.76190926097391
+      },
+      "quantization": "fp8",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "include_reasoning",
+          "logit_bias",
+          "max_tokens",
+          "min_p",
+          "presence_penalty",
+          "reasoning",
+          "repetition_penalty",
+          "response_format",
+          "seed",
+          "stop",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_k",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T19:16:12Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "minimax/minimax-m2.7",
+        "last_seen": "2026-08-23T19:16:12Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "minimax/minimax-m2.7",
+      "model_slug": "minimax/minimax-m2.7",
+      "provider_id": "deepinfra/turbo",
+      "provider_name": "DeepInfra",
+      "endpoint_id": "DeepInfra | minimax/minimax-m2.7-20260318",
+      "identity_key": "minimax/minimax-m2.7:deepinfra/turbo:DeepInfra | minimax/minimax-m2.7-20260318",
+      "context_tokens": 196608,
+      "pricing": {
+        "input_per_million": 0.38,
+        "output_per_million": 1.7,
+        "raw": {
+          "prompt": "0.00000038",
+          "completion": "0.0000017",
+          "input_cache_read": "0.00000007",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "unavailable",
+        "uptime_5m": null,
+        "uptime_30m": 89.83050847457628,
+        "uptime_1d": 75.55282555282555
+      },
+      "quantization": "fp8",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "include_reasoning",
+          "logit_bias",
+          "max_tokens",
+          "min_p",
+          "presence_penalty",
+          "reasoning",
+          "repetition_penalty",
+          "response_format",
+          "seed",
+          "stop",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_k",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T19:16:12Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "minimax/minimax-m2.7",
+        "last_seen": "2026-08-23T19:16:12Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "minimax/minimax-m2.7",
+      "model_slug": "minimax/minimax-m2.7",
+      "provider_id": "fireworks",
+      "provider_name": "Fireworks",
+      "endpoint_id": "Fireworks | minimax/minimax-m2.7-20260318",
+      "identity_key": "minimax/minimax-m2.7:fireworks:Fireworks | minimax/minimax-m2.7-20260318",
+      "context_tokens": 196608,
+      "pricing": {
+        "input_per_million": 0.3,
+        "output_per_million": 1.2,
+        "raw": {
+          "prompt": "0.0000003",
+          "completion": "0.0000012",
+          "input_cache_read": "0.000000059",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": null,
+        "uptime_30m": null,
+        "uptime_1d": null
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "include_reasoning",
+          "logit_bias",
+          "logprobs",
+          "max_tokens",
+          "presence_penalty",
+          "reasoning",
+          "repetition_penalty",
+          "response_format",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_k",
+          "top_logprobs",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T19:16:12Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "minimax/minimax-m2.7",
+        "last_seen": "2026-08-23T19:16:12Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "minimax/minimax-m2.7",
+      "model_slug": "minimax/minimax-m2.7",
+      "provider_id": "gmicloud/fp8",
+      "provider_name": "GMICloud",
+      "endpoint_id": "GMICloud | minimax/minimax-m2.7-20260318",
+      "identity_key": "minimax/minimax-m2.7:gmicloud/fp8:GMICloud | minimax/minimax-m2.7-20260318",
+      "context_tokens": 196608,
+      "pricing": {
+        "input_per_million": 0.24,
+        "output_per_million": 0.96,
+        "raw": {
+          "prompt": "0.00000024",
+          "completion": "0.00000096",
+          "input_cache_read": "0.000000048",
+          "discount": 0.2
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 100.0,
+        "uptime_30m": 99.94687444660883,
+        "uptime_1d": 99.96266893763963
+      },
+      "quantization": "fp8",
+      "capabilities": {
+        "supported_parameters": [
+          "include_reasoning",
+          "max_tokens",
+          "reasoning",
+          "response_format",
+          "seed",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T19:16:12Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "minimax/minimax-m2.7",
+        "last_seen": "2026-08-23T19:16:12Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "minimax/minimax-m2.7",
+      "model_slug": "minimax/minimax-m2.7",
+      "provider_id": "groq",
+      "provider_name": "Groq",
+      "endpoint_id": "Groq | minimax/minimax-m2.7-20260318",
+      "identity_key": "minimax/minimax-m2.7:groq:Groq | minimax/minimax-m2.7-20260318",
+      "context_tokens": 196608,
+      "pricing": {
+        "input_per_million": 0.6,
+        "output_per_million": 1.7999999999999998,
+        "raw": {
+          "prompt": "0.0000006",
+          "completion": "0.0000018",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 100.0,
+        "uptime_30m": 99.91823385118562,
+        "uptime_1d": 99.86599319657768
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "include_reasoning",
+          "max_tokens",
+          "reasoning",
+          "seed",
+          "stop",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T19:16:12Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "minimax/minimax-m2.7",
+        "last_seen": "2026-08-23T19:16:12Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "minimax/minimax-m2.7",
+      "model_slug": "minimax/minimax-m2.7",
+      "provider_id": "mara",
+      "provider_name": "Mara",
+      "endpoint_id": "Mara | minimax/minimax-m2.7-20260318",
+      "identity_key": "minimax/minimax-m2.7:mara:Mara | minimax/minimax-m2.7-20260318",
+      "context_tokens": 196608,
+      "pricing": {
+        "input_per_million": 0.24,
+        "output_per_million": 0.96,
+        "raw": {
+          "prompt": "0.00000024",
+          "completion": "0.00000096",
+          "discount": 0.6
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 100.0,
+        "uptime_30m": 100.0,
+        "uptime_1d": 99.88396978057396
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "include_reasoning",
+          "logprobs",
+          "max_tokens",
+          "reasoning",
+          "response_format",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_k",
+          "top_logprobs",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T19:16:12Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "minimax/minimax-m2.7",
+        "last_seen": "2026-08-23T19:16:12Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "minimax/minimax-m2.7",
+      "model_slug": "minimax/minimax-m2.7",
+      "provider_id": "minimax/fp8",
+      "provider_name": "Minimax",
+      "endpoint_id": "Minimax | minimax/minimax-m2.7-20260318",
+      "identity_key": "minimax/minimax-m2.7:minimax/fp8:Minimax | minimax/minimax-m2.7-20260318",
+      "context_tokens": 204800,
+      "pricing": {
+        "input_per_million": 0.3,
+        "output_per_million": 1.2,
+        "raw": {
+          "prompt": "0.0000003",
+          "completion": "0.0000012",
+          "input_cache_read": "0.00000006",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 100.0,
+        "uptime_30m": 99.6977329974811,
+        "uptime_1d": 99.24005177669214
+      },
+      "quantization": "fp8",
+      "capabilities": {
+        "supported_parameters": [
+          "include_reasoning",
+          "max_tokens",
+          "reasoning",
+          "response_format",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T19:16:12Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "minimax/minimax-m2.7",
+        "last_seen": "2026-08-23T19:16:12Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "minimax/minimax-m2.7",
+      "model_slug": "minimax/minimax-m2.7",
+      "provider_id": "minimax/highspeed",
+      "provider_name": "Minimax",
+      "endpoint_id": "Minimax | minimax/minimax-m2.7-20260318",
+      "identity_key": "minimax/minimax-m2.7:minimax/highspeed:Minimax | minimax/minimax-m2.7-20260318",
+      "context_tokens": 204800,
+      "pricing": {
+        "input_per_million": 0.6,
+        "output_per_million": 2.4,
+        "raw": {
+          "prompt": "0.0000006",
+          "completion": "0.0000024",
+          "input_cache_read": "0.00000006",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 100.0,
+        "uptime_30m": 99.44873208379272,
+        "uptime_1d": 98.62802743945122
+      },
+      "quantization": "fp8",
+      "capabilities": {
+        "supported_parameters": [
+          "include_reasoning",
+          "max_tokens",
+          "reasoning",
+          "response_format",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T19:16:12Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "minimax/minimax-m2.7",
+        "last_seen": "2026-08-23T19:16:12Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "minimax/minimax-m2.7",
+      "model_slug": "minimax/minimax-m2.7",
+      "provider_id": "novita/fp8",
+      "provider_name": "Novita",
+      "endpoint_id": "Novita | minimax/minimax-m2.7-20260318",
+      "identity_key": "minimax/minimax-m2.7:novita/fp8:Novita | minimax/minimax-m2.7-20260318",
+      "context_tokens": 204800,
+      "pricing": {
+        "input_per_million": 0.27,
+        "output_per_million": 1.08,
+        "raw": {
+          "prompt": "0.00000027",
+          "completion": "0.00000108",
+          "input_cache_read": "0.000000054",
+          "discount": 0.1
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 100.0,
+        "uptime_30m": 99.75,
+        "uptime_1d": 99.78338601855211
+      },
+      "quantization": "fp8",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "include_reasoning",
+          "max_tokens",
+          "presence_penalty",
+          "reasoning",
+          "repetition_penalty",
+          "response_format",
+          "seed",
+          "stop",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_k",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T19:16:12Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "minimax/minimax-m2.7",
+        "last_seen": "2026-08-23T19:16:12Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "minimax/minimax-m2.7",
+      "model_slug": "minimax/minimax-m2.7",
+      "provider_id": "sambanova",
+      "provider_name": "SambaNova",
+      "endpoint_id": "SambaNova | minimax/minimax-m2.7-20260318",
+      "identity_key": "minimax/minimax-m2.7:sambanova:SambaNova | minimax/minimax-m2.7-20260318",
+      "context_tokens": 196608,
+      "pricing": {
+        "input_per_million": 0.6,
+        "output_per_million": 2.4,
+        "raw": {
+          "prompt": "0.0000006",
+          "completion": "0.0000024",
+          "input_cache_read": "0.00000006",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": null,
+        "uptime_30m": null,
+        "uptime_1d": 93.29470198675497
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "include_reasoning",
+          "max_tokens",
+          "reasoning",
+          "stop",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_k",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T19:16:12Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "minimax/minimax-m2.7",
+        "last_seen": "2026-08-23T19:16:12Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "minimax/minimax-m3",
+      "model_slug": "minimax/minimax-m3",
+      "provider_id": "atlas-cloud/fp8",
+      "provider_name": "AtlasCloud",
+      "endpoint_id": "AtlasCloud | minimax/minimax-m3-20260531",
+      "identity_key": "minimax/minimax-m3:atlas-cloud/fp8:AtlasCloud | minimax/minimax-m3-20260531",
+      "context_tokens": 524300,
+      "pricing": {
+        "input_per_million": 0.3,
+        "output_per_million": 1.2,
+        "raw": {
+          "prompt": "0.0000003",
+          "completion": "0.0000012",
+          "input_cache_read": "0.00000006",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 100.0,
+        "uptime_30m": 100.0,
+        "uptime_1d": 99.59024390243903
+      },
+      "quantization": "fp8",
+      "capabilities": {
+        "supported_parameters": [
+          "include_reasoning",
+          "max_tokens",
+          "reasoning",
+          "temperature",
+          "tools",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T19:16:12Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "minimax/minimax-m3",
+        "last_seen": "2026-08-23T19:16:12Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "minimax/minimax-m3",
+      "model_slug": "minimax/minimax-m3",
+      "provider_id": "coreweave/fp4",
+      "provider_name": "CoreWeave",
+      "endpoint_id": "CoreWeave | minimax/minimax-m3-20260531",
+      "identity_key": "minimax/minimax-m3:coreweave/fp4:CoreWeave | minimax/minimax-m3-20260531",
+      "context_tokens": 262144,
+      "pricing": {
+        "input_per_million": 0.22999999999999998,
+        "output_per_million": 0.96,
+        "raw": {
+          "prompt": "0.00000023",
+          "completion": "0.00000096",
+          "input_cache_read": "0.00000005",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 99.54337899543378,
+        "uptime_30m": 99.78401727861771,
+        "uptime_1d": 99.89601611750179
+      },
+      "quantization": "fp4",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "include_reasoning",
+          "logprobs",
+          "max_tokens",
+          "presence_penalty",
+          "reasoning",
+          "repetition_penalty",
+          "response_format",
+          "seed",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "top_k",
+          "top_logprobs",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T19:16:12Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "minimax/minimax-m3",
+        "last_seen": "2026-08-23T19:16:12Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "minimax/minimax-m3",
+      "model_slug": "minimax/minimax-m3",
+      "provider_id": "deepinfra/fp8",
+      "provider_name": "DeepInfra",
+      "endpoint_id": "DeepInfra | minimax/minimax-m3-20260531",
+      "identity_key": "minimax/minimax-m3:deepinfra/fp8:DeepInfra | minimax/minimax-m3-20260531",
+      "context_tokens": 524288,
+      "pricing": {
+        "input_per_million": 0.28,
+        "output_per_million": 1.1,
+        "raw": {
+          "prompt": "0.00000028",
+          "completion": "0.0000011",
+          "input_cache_read": "0.000000056",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 97.67441860465115,
+        "uptime_30m": 96.94050991501416,
+        "uptime_1d": 98.5260816018434
+      },
+      "quantization": "fp8",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "include_reasoning",
+          "logit_bias",
+          "max_tokens",
+          "min_p",
+          "presence_penalty",
+          "reasoning",
+          "repetition_penalty",
+          "response_format",
+          "seed",
+          "stop",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_k",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T19:16:12Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "minimax/minimax-m3",
+        "last_seen": "2026-08-23T19:16:12Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "minimax/minimax-m3",
+      "model_slug": "minimax/minimax-m3",
+      "provider_id": "gmicloud/fp8",
+      "provider_name": "GMICloud",
+      "endpoint_id": "GMICloud | minimax/minimax-m3-20260531",
+      "identity_key": "minimax/minimax-m3:gmicloud/fp8:GMICloud | minimax/minimax-m3-20260531",
+      "context_tokens": 1048576,
+      "pricing": {
+        "input_per_million": 0.24,
+        "output_per_million": 0.96,
+        "raw": {
+          "prompt": "0.00000024",
+          "completion": "0.00000096",
+          "input_cache_read": "0.000000048",
+          "discount": 0.6
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 100.0,
+        "uptime_30m": 100.0,
+        "uptime_1d": 99.80226176986825
+      },
+      "quantization": "fp8",
+      "capabilities": {
+        "supported_parameters": [
+          "include_reasoning",
+          "max_tokens",
+          "reasoning",
+          "response_format",
+          "seed",
+          "temperature",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T19:16:12Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "minimax/minimax-m3",
+        "last_seen": "2026-08-23T19:16:12Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "minimax/minimax-m3",
+      "model_slug": "minimax/minimax-m3",
+      "provider_id": "minimax/fp8",
+      "provider_name": "Minimax",
+      "endpoint_id": "Minimax | minimax/minimax-m3-20260531",
+      "identity_key": "minimax/minimax-m3:minimax/fp8:Minimax | minimax/minimax-m3-20260531",
+      "context_tokens": 524288,
+      "pricing": {
+        "input_per_million": 0.3,
+        "output_per_million": 1.2,
+        "raw": {
+          "prompt": "0.0000003",
+          "completion": "0.0000012",
+          "input_cache_read": "0.00000006",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 99.69969969969969,
+        "uptime_30m": 99.67532467532467,
+        "uptime_1d": 99.47217729597412
+      },
+      "quantization": "fp8",
+      "capabilities": {
+        "supported_parameters": [
+          "include_reasoning",
+          "max_tokens",
+          "reasoning",
+          "response_format",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T19:16:12Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "minimax/minimax-m3",
+        "last_seen": "2026-08-23T19:16:12Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "minimax/minimax-m3",
+      "model_slug": "minimax/minimax-m3",
+      "provider_id": "modelrun/fp4",
+      "provider_name": "ModelRun",
+      "endpoint_id": "ModelRun | minimax/minimax-m3-20260531",
+      "identity_key": "minimax/minimax-m3:modelrun/fp4:ModelRun | minimax/minimax-m3-20260531",
+      "context_tokens": 1048576,
+      "pricing": {
+        "input_per_million": 0.75,
+        "output_per_million": 3.0,
+        "raw": {
+          "prompt": "0.00000075",
+          "completion": "0.000003",
+          "input_cache_read": "0.00000015",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 100.0,
+        "uptime_30m": 99.84126984126985,
+        "uptime_1d": 99.69890314717901
+      },
+      "quantization": "fp4",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "include_reasoning",
+          "max_tokens",
+          "presence_penalty",
+          "reasoning",
+          "repetition_penalty",
+          "response_format",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_k",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T19:16:12Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "minimax/minimax-m3",
+        "last_seen": "2026-08-23T19:16:12Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "minimax/minimax-m3",
+      "model_slug": "minimax/minimax-m3",
+      "provider_id": "morph/fp4",
+      "provider_name": "Morph",
+      "endpoint_id": "Morph | minimax/minimax-m3-20260531",
+      "identity_key": "minimax/minimax-m3:morph/fp4:Morph | minimax/minimax-m3-20260531",
+      "context_tokens": 256000,
+      "pricing": {
+        "input_per_million": 0.255,
+        "output_per_million": 1.02,
+        "raw": {
+          "prompt": "0.000000255",
+          "completion": "0.00000102",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 97.01492537313433,
+        "uptime_30m": 95.53719008264463,
+        "uptime_1d": 93.65260524120978
+      },
+      "quantization": "fp4",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "include_reasoning",
+          "logit_bias",
+          "logprobs",
+          "max_tokens",
+          "min_p",
+          "presence_penalty",
+          "reasoning",
+          "repetition_penalty",
+          "response_format",
+          "seed",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_k",
+          "top_logprobs",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T19:16:12Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "minimax/minimax-m3",
+        "last_seen": "2026-08-23T19:16:12Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "minimax/minimax-m3",
+      "model_slug": "minimax/minimax-m3",
+      "provider_id": "novita/fp8",
+      "provider_name": "Novita",
+      "endpoint_id": "Novita | minimax/minimax-m3-20260531",
+      "identity_key": "minimax/minimax-m3:novita/fp8:Novita | minimax/minimax-m3-20260531",
+      "context_tokens": 1000000,
+      "pricing": {
+        "input_per_million": 0.3,
+        "output_per_million": 1.2,
+        "raw": {
+          "prompt": "0.0000003",
+          "completion": "0.0000012",
+          "input_cache_read": "0.00000006",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 99.77876106194691,
+        "uptime_30m": 99.88207547169812,
+        "uptime_1d": 99.68670205617525
+      },
+      "quantization": "fp8",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "include_reasoning",
+          "max_tokens",
+          "presence_penalty",
+          "reasoning",
+          "repetition_penalty",
+          "seed",
+          "stop",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_k",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T19:16:12Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "minimax/minimax-m3",
+        "last_seen": "2026-08-23T19:16:12Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "minimax/minimax-m3",
+      "model_slug": "minimax/minimax-m3",
+      "provider_id": "parasail/fp8",
+      "provider_name": "Parasail",
+      "endpoint_id": "Parasail | minimax/minimax-m3-20260531",
+      "identity_key": "minimax/minimax-m3:parasail/fp8:Parasail | minimax/minimax-m3-20260531",
+      "context_tokens": 1048576,
+      "pricing": {
+        "input_per_million": 0.3,
+        "output_per_million": 1.2,
+        "raw": {
+          "prompt": "0.0000003",
+          "completion": "0.0000012",
+          "input_cache_read": "0.00000006",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 98.07692307692307,
+        "uptime_30m": 98.3132530120482,
+        "uptime_1d": 98.82951243138521
+      },
+      "quantization": "fp8",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "include_reasoning",
+          "logit_bias",
+          "logprobs",
+          "max_tokens",
+          "presence_penalty",
+          "reasoning",
+          "repetition_penalty",
+          "response_format",
+          "seed",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_k",
+          "top_logprobs",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T19:16:12Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "minimax/minimax-m3",
+        "last_seen": "2026-08-23T19:16:12Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "minimax/minimax-m3",
+      "model_slug": "minimax/minimax-m3",
+      "provider_id": "sambanova",
+      "provider_name": "SambaNova",
+      "endpoint_id": "SambaNova | minimax/minimax-m3-20260531",
+      "identity_key": "minimax/minimax-m3:sambanova:SambaNova | minimax/minimax-m3-20260531",
+      "context_tokens": 1048576,
+      "pricing": {
+        "input_per_million": 0.6,
+        "output_per_million": 2.4,
+        "raw": {
+          "prompt": "0.0000006",
+          "completion": "0.0000024",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 98.83720930232558,
+        "uptime_30m": 99.50372208436724,
+        "uptime_1d": 98.82543103448276
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "include_reasoning",
+          "logprobs",
+          "max_tokens",
+          "reasoning",
+          "response_format",
+          "stop",
+          "temperature",
+          "top_k",
+          "top_logprobs",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T19:16:12Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "minimax/minimax-m3",
+        "last_seen": "2026-08-23T19:16:12Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "minimax/minimax-m3",
+      "model_slug": "minimax/minimax-m3",
+      "provider_id": "streamlake/fp8",
+      "provider_name": "StreamLake",
+      "endpoint_id": "StreamLake | minimax/minimax-m3-20260531",
+      "identity_key": "minimax/minimax-m3:streamlake/fp8:StreamLake | minimax/minimax-m3-20260531",
+      "context_tokens": 1000000,
+      "pricing": {
+        "input_per_million": 0.3,
+        "output_per_million": 1.2,
+        "raw": {
+          "prompt": "0.0000003",
+          "completion": "0.0000012",
+          "input_cache_read": "0.00000006",
+          "discount": 0.5
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": null,
+        "uptime_30m": 99.68553459119497,
+        "uptime_1d": 99.2691839220463
+      },
+      "quantization": "fp8",
+      "capabilities": {
+        "supported_parameters": [
+          "include_reasoning",
+          "max_tokens",
+          "reasoning",
+          "response_format",
+          "stop",
+          "temperature",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T19:16:12Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "minimax/minimax-m3",
+        "last_seen": "2026-08-23T19:16:12Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "minimax/minimax-m3",
+      "model_slug": "minimax/minimax-m3",
+      "provider_id": "together",
+      "provider_name": "Together",
+      "endpoint_id": "Together | minimax/minimax-m3-20260531",
+      "identity_key": "minimax/minimax-m3:together:Together | minimax/minimax-m3-20260531",
+      "context_tokens": 524288,
+      "pricing": {
+        "input_per_million": 0.3,
+        "output_per_million": 1.2,
+        "raw": {
+          "prompt": "0.0000003",
+          "completion": "0.0000012",
+          "input_cache_read": "0.00000006",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 99.74683544303798,
+        "uptime_30m": 99.94484280198566,
+        "uptime_1d": 98.61356932153392
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "include_reasoning",
+          "logit_bias",
+          "max_tokens",
+          "min_p",
+          "presence_penalty",
+          "reasoning",
+          "repetition_penalty",
+          "response_format",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_k",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T19:16:12Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "minimax/minimax-m3",
+        "last_seen": "2026-08-23T19:16:12Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "minimax/minimax-m3",
+      "model_slug": "minimax/minimax-m3",
+      "provider_id": "venice/fp8",
+      "provider_name": "Venice",
+      "endpoint_id": "Venice | minimax/minimax-m3-20260531",
+      "identity_key": "minimax/minimax-m3:venice/fp8:Venice | minimax/minimax-m3-20260531",
+      "context_tokens": 524288,
+      "pricing": {
+        "input_per_million": 0.3,
+        "output_per_million": 1.2,
+        "raw": {
+          "prompt": "0.0000003",
+          "completion": "0.0000012",
+          "input_cache_read": "0.00000006",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 100.0,
+        "uptime_30m": 100.0,
+        "uptime_1d": 99.92567872808615
+      },
+      "quantization": "fp8",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "include_reasoning",
+          "max_tokens",
+          "presence_penalty",
+          "reasoning",
+          "stop",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_k",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T19:16:12Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "minimax/minimax-m3",
+        "last_seen": "2026-08-23T19:16:12Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "minimax/minimax-m3:batch",
+      "model_slug": "minimax/minimax-m3:batch",
+      "provider_id": "together",
+      "provider_name": "Together",
+      "endpoint_id": "Together | minimax/minimax-m3-20260531:batch",
+      "identity_key": "minimax/minimax-m3:batch:together:Together | minimax/minimax-m3-20260531:batch",
+      "context_tokens": 524288,
+      "pricing": {
+        "input_per_million": 0.3,
+        "output_per_million": 1.2,
+        "raw": {
+          "prompt": "0.0000003",
+          "completion": "0.0000012",
+          "input_cache_read": "0.00000006",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": null,
+        "uptime_30m": null,
+        "uptime_1d": null
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "include_reasoning",
+          "logit_bias",
+          "max_tokens",
+          "min_p",
+          "presence_penalty",
+          "reasoning",
+          "repetition_penalty",
+          "response_format",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_k",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T19:16:12Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "minimax/minimax-m3:batch",
+        "last_seen": "2026-08-23T19:16:12Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "mistralai/codestral-2508",
+      "model_slug": "mistralai/codestral-2508",
+      "provider_id": "mistral",
+      "provider_name": "Mistral",
+      "endpoint_id": "Mistral | mistralai/codestral-2508",
+      "identity_key": "mistralai/codestral-2508:mistral:Mistral | mistralai/codestral-2508",
+      "context_tokens": 256000,
+      "pricing": {
+        "input_per_million": 0.3,
+        "output_per_million": 0.8999999999999999,
+        "raw": {
+          "prompt": "0.0000003",
+          "completion": "0.0000009",
+          "input_cache_read": "0.00000003",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 100.0,
+        "uptime_30m": 100.0,
+        "uptime_1d": 99.94530628480508
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "max_tokens",
+          "prediction",
+          "presence_penalty",
+          "response_format",
+          "seed",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T19:16:12Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "mistralai/codestral-2508",
+        "last_seen": "2026-08-23T19:16:12Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "mistralai/ministral-14b-2512",
+      "model_slug": "mistralai/ministral-14b-2512",
+      "provider_id": "mistral",
+      "provider_name": "Mistral",
+      "endpoint_id": "Mistral | mistralai/ministral-14b-2512",
+      "identity_key": "mistralai/ministral-14b-2512:mistral:Mistral | mistralai/ministral-14b-2512",
+      "context_tokens": 262144,
+      "pricing": {
+        "input_per_million": 0.19999999999999998,
+        "output_per_million": 0.19999999999999998,
+        "raw": {
+          "prompt": "0.0000002",
+          "completion": "0.0000002",
+          "input_cache_read": "0.00000002",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 100.0,
+        "uptime_30m": 99.92125984251969,
+        "uptime_1d": 99.72500185809555
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "max_tokens",
+          "presence_penalty",
+          "response_format",
+          "seed",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T19:16:12Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "mistralai/ministral-14b-2512",
+        "last_seen": "2026-08-23T19:16:12Z"
+      }
     },
     {
       "availability": {
@@ -25679,45 +30250,45 @@
   ],
   "coverage": {
     "catalog_models": 422,
-    "models_with_observations": 138,
-    "proportion": 0.327,
-    "fresh_observations": 59,
-    "retained_observations": 386,
+    "models_with_observations": 160,
+    "proportion": 0.3791,
+    "fresh_observations": 91,
+    "retained_observations": 438,
     "retention_days": 14
   },
   "selection": {
-    "cursor_before": 100,
-    "cursor_after": 125,
+    "cursor_before": 125,
+    "cursor_after": 150,
     "selected_model_ids": [
-      "google/gemma-2-27b-it",
-      "google/gemma-3-12b-it",
-      "google/gemma-3-27b-it",
-      "google/gemma-3-4b-it",
-      "google/gemma-3n-e4b-it",
-      "google/gemma-4-26b-a4b-it",
-      "google/gemma-4-26b-a4b-it:free",
-      "google/gemma-4-31b-it",
-      "google/gemma-4-31b-it:free",
-      "google/lyria-3-clip-preview",
-      "google/lyria-3-pro-preview",
-      "gryphe/mythomax-l2-13b",
-      "ibm-granite/granite-4.0-h-micro",
-      "ibm-granite/granite-4.1-8b",
-      "inception/mercury-2",
-      "inclusionai/ling-2.6-1t",
-      "inclusionai/ling-2.6-flash",
-      "inclusionai/ling-3.0-flash",
-      "inclusionai/ring-2.6-1t",
-      "kwaipilot/kat-coder-air-v2.5",
-      "kwaipilot/kat-coder-pro-v2",
-      "kwaipilot/kat-coder-pro-v2.5",
-      "liquid/lfm-2.5-2.6b:free",
-      "mancer/weaver",
-      "meituan/longcat-2.0"
+      "meta-llama/llama-3.1-70b-instruct",
+      "meta-llama/llama-3.1-8b-instruct",
+      "meta-llama/llama-3.2-1b-instruct",
+      "meta-llama/llama-3.2-3b-instruct",
+      "meta-llama/llama-3.3-70b-instruct",
+      "meta-llama/llama-4-maverick",
+      "meta-llama/llama-4-scout",
+      "meta-llama/llama-guard-4-12b",
+      "meta/muse-glimmer-30b",
+      "meta/muse-spark-1.1",
+      "meta/muse-spark-1.2",
+      "meta/muse-spark-1.2-contributor",
+      "microsoft/phi-4",
+      "microsoft/wizardlm-2-8x22b",
+      "minimax/minimax-01",
+      "minimax/minimax-m1",
+      "minimax/minimax-m2",
+      "minimax/minimax-m2-her",
+      "minimax/minimax-m2.1",
+      "minimax/minimax-m2.5",
+      "minimax/minimax-m2.7",
+      "minimax/minimax-m3",
+      "minimax/minimax-m3:batch",
+      "mistralai/codestral-2508",
+      "mistralai/ministral-14b-2512"
     ]
   },
   "next_state": {
-    "cursor": 125,
+    "cursor": 150,
     "priority_ids": []
   },
   "response_headers": {
