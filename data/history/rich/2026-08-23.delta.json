@@ -1,56 +1,15 @@
 {
   "added": [],
-  "changed": [
-    {
-      "changes": {
-        "intelligence_index": {
-          "after": 2.07,
-          "before": 1.6
-        }
-      },
-      "name": "Granite 4.0 1B",
-      "slug": "granite-4-0-nano-1b"
-    },
-    {
-      "changes": {
-        "agentic_index": {
-          "after": 43.7,
-          "before": null
-        },
-        "coding_index": {
-          "after": 58.2,
-          "before": null
-        }
-      },
-      "name": "Qwen3.8 27B (low)",
-      "slug": "qwen3-8-27b-low"
-    },
-    {
-      "changes": {
-        "agentic_index": {
-          "after": 49.8,
-          "before": null
-        },
-        "coding_index": {
-          "after": 56.1,
-          "before": null
-        }
-      },
-      "name": "Qwen3.8 27B (medium)",
-      "slug": "qwen3-8-27b-medium"
-    }
-  ],
+  "changed": [],
   "counts": {
     "added": 0,
-    "changed": 3,
+    "changed": 0,
     "current": 618,
-    "previous": 619,
-    "removed": 1
+    "previous": 618,
+    "removed": 0
   },
-  "generated_at": "2026-08-23T06:09:00Z",
-  "previous_generated_at": "2026-08-23T05:51:04Z",
-  "removed": [
-    "motif-0714"
-  ],
+  "generated_at": "2026-08-23T07:23:52Z",
+  "previous_generated_at": "2026-08-23T06:09:00Z",
+  "removed": [],
   "version": 1
 }

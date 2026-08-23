@@ -1,22 +1,22 @@
 {
-  "generated_at": "2026-08-23T06:09:00Z",
+  "generated_at": "2026-08-23T07:23:52Z",
   "sources": {
     "rsc": {
       "healthy": true,
       "records": 416,
-      "fetched_at": "2026-08-23T06:08:54Z",
+      "fetched_at": "2026-08-23T07:23:46Z",
       "errors": []
     },
     "official_api": {
       "healthy": true,
       "records": 609,
-      "fetched_at": "2026-08-23T06:08:55Z",
+      "fetched_at": "2026-08-23T07:23:46Z",
       "errors": []
     },
     "snapshot": {
       "healthy": true,
       "records": 570,
-      "fetched_at": "2026-08-23T06:08:55Z",
+      "fetched_at": "2026-08-23T07:23:47Z",
       "errors": []
     }
   },
@@ -71,7 +71,7 @@
   "stale": false,
   "freshness": {
     "stale": false,
-    "generated_at": "2026-08-23T06:09:00Z",
+    "generated_at": "2026-08-23T07:23:52Z",
     "cached_sources": [],
     "live_sources": [
       "rsc",
@@ -79,9 +79,9 @@
       "snapshot"
     ],
     "source_fetched_at": {
-      "rsc": "2026-08-23T06:08:54Z",
-      "official_api": "2026-08-23T06:08:55Z",
-      "snapshot": "2026-08-23T06:08:55Z"
+      "rsc": "2026-08-23T07:23:46Z",
+      "official_api": "2026-08-23T07:23:46Z",
+      "snapshot": "2026-08-23T07:23:47Z"
     }
   }
 }
