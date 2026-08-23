@@ -22,6 +22,7 @@ from __future__ import annotations
 
 import json
 from pathlib import Path
+from .decision import DecisionEngine, Profile, PROFILES
 
 
 class AADB:
@@ -32,6 +33,7 @@ class AADB:
         self.generated_at = blob.get("generated_at")
         self.coverage = blob.get("coverage", {})
         self._by_slug = {m.get("slug"): m for m in self.models}
+        self.engine = DecisionEngine(self.models)
 
     # -- index lookup ------------------------------------------------------
     def get(self, slug: str) -> dict | None:
@@ -174,6 +176,8 @@ class AADB:
         if not best:
             return []
         top_score = best[0][0]
+        primary_creator = best[0][1].get("creator")
+        primary_hosts = {h.get("slug") or h.get("name") for h in best[0][1].get("hosts", [])}
         rows = []
         for m in self.models:
             v = m.get(primary_metric)
@@ -183,6 +187,29 @@ class AADB:
                 continue
             if require_open_weights and not m.get("is_open_weights"):
                 continue
+            if m.get("creator") == primary_creator:
+                continue
+            hosts = {h.get("slug") or h.get("name") for h in m.get("hosts", [])}
+            if primary_hosts and hosts & primary_hosts:
+                continue
             rows.append((v, m))
         rows.sort(key=lambda t: t[0], reverse=True)
         return rows[:limit]
+
+    def recommend(self, profile: str | dict | Profile = "premium", limit: int = 10,
+                  available_only: bool = False) -> dict:
+        return self.engine.recommend(profile, limit=limit, available_only=available_only)
+
+    def pareto(self, dimensions: list[str]) -> list[dict]:
+        return self.engine.pareto(dimensions)
+
+    def backups(self, primary_slug: str, limit: int = 10) -> list[dict]:
+        return self.engine.backups(primary_slug, limit=limit)
+
+    def explain(self, slug: str) -> dict | None:
+        model = self.get(slug)
+        return self.engine.explain(model) if model else None
+
+    @staticmethod
+    def profiles() -> list[str]:
+        return sorted(PROFILES)

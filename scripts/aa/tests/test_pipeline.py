@@ -12,6 +12,8 @@ and the merge priority.
 import json
 import os
 import sys
+import tempfile
+import time
 from pathlib import Path
 
 REPO = Path(__file__).resolve().parent.parent.parent.parent
@@ -80,6 +82,29 @@ def test_rsc_extract_normalize_roundtrip():
     assert validate.run_sanity([rec], "rsc", 1).passed
 
 
+def test_checked_in_rsc_fixture_replays():
+    payload = (Path(__file__).parent / "fixtures" / "rsc_minimal.txt").read_text()
+    rows, _ = rsc_source._extract_rows(payload)
+    assert rows and rows[0]["model"]["slug"] == "fixture-model"
+    rec = rsc_source.normalize_row(rows[0], {
+        "source": "rsc", "intelligence_index_version": schema.EXPECTED_INDEX_VERSION,
+    })
+    assert rec["benchmarks"]["gpqa"] == 90.0
+    assert rec["intelligence_index_version"] == schema.EXPECTED_INDEX_VERSION
+
+
+def test_cached_rsc_preserves_acquisition_time():
+    from aa.rsc_source import RSCSource
+    with tempfile.TemporaryDirectory() as tmp:
+        cache = Path(tmp) / "rsc_raw_latest.bin"
+        cache.write_text((Path(__file__).parent / "fixtures" / "rsc_minimal.txt").read_text())
+        old = time.time() - 86400 * 10
+        os.utime(cache, (old, old))
+        result = RSCSource(cache_dir=Path(tmp), offline=True).fetch()
+        assert result.meta["cached"] is True
+        assert result.fetched_at_ts < time.time() - 86400 * 9
+
+
 def test_drift_detect_missing_rows():
     payload = '<div>no rows here at all' + '</div>'
     assert rsc_source._extract_rows(payload) == (None, None)
@@ -140,6 +165,19 @@ def test_merge_priority_rich_over_thin():
     assert m["pricing"]["blended_3_1"] == 3.5    # thin fills rich's gap
     assert m["source"] == "rsc"                  # primary provenance
     assert "official_api" in m["merged"].get("also_from", [])
+
+
+def test_merge_preserves_provider_variants_for_same_model():
+    from aa.orchestrate import merge_records
+    from aa.source_base import SourceResult
+    a = {**schema.model_record_template(), "slug": "same", "name": "Same",
+         "hosts": [{"slug": "provider-a", "name": "A"}]}
+    b = {**schema.model_record_template(), "slug": "same", "name": "Same",
+         "hosts": [{"slug": "provider-b", "name": "B"}]}
+    results = [SourceResult("rsc", "1", "t", 0, [a], healthy=True),
+               SourceResult("official_api", "1", "t", 0, [b], healthy=True)]
+    merged = merge_records(results)
+    assert {h["slug"] for h in merged[0]["hosts"]} == {"provider-a", "provider-b"}
 
 
 if __name__ == "__main__":

@@ -1,0 +1,589 @@
+{
+  "version": 1,
+  "parser_version": "0.1.0",
+  "generated_at": "2026-08-23T07:23:55Z",
+  "source": "artificial_analysis_coding_agents",
+  "source_url": "https://artificialanalysis.ai/agents/coding-agents",
+  "methodology": "public JSON-LD datasets; agent/harness labels preserved verbatim",
+  "coverage": {
+    "scope": "partial_public_jsonld",
+    "complete_public_dataset": false,
+    "agent_labels": 18,
+    "dataset_names": [
+      "Coding Agent Index",
+      "Cost per Task",
+      "Time per Task"
+    ],
+    "note": "JSON-LD is a partial structured view; richer page/network datasets may exist."
+  },
+  "observation_count": 27,
+  "observations": [
+    {
+      "observation_type": "coding_agent",
+      "agent_id": "Claude Code - Opus 5 (xhigh)",
+      "agent_name": "Claude Code - Opus 5 (xhigh)",
+      "model_id": null,
+      "configuration": null,
+      "benchmark_suite": "Coding Agent Index",
+      "benchmark_version": "1.4",
+      "scores": {
+        "coding_agent_index": 0.6814975428587517
+      },
+      "cost_per_task_usd": null,
+      "execution_time_seconds": null,
+      "tokens": null,
+      "turns": null,
+      "provenance": {
+        "source": "artificial_analysis_coding_agents",
+        "fetched_at": "2026-08-23T07:23:55Z",
+        "source_authority": "artificial_analysis_coding_agents"
+      }
+    },
+    {
+      "observation_type": "coding_agent",
+      "agent_id": "Claude Code - Fable 5 (max) (with fallback)",
+      "agent_name": "Claude Code - Fable 5 (max) (with fallback)",
+      "model_id": null,
+      "configuration": null,
+      "benchmark_suite": "Coding Agent Index",
+      "benchmark_version": "1.4",
+      "scores": {
+        "coding_agent_index": 0.6717276042685724
+      },
+      "cost_per_task_usd": null,
+      "execution_time_seconds": null,
+      "tokens": null,
+      "turns": null,
+      "provenance": {
+        "source": "artificial_analysis_coding_agents",
+        "fetched_at": "2026-08-23T07:23:55Z",
+        "source_authority": "artificial_analysis_coding_agents"
+      }
+    },
+    {
+      "observation_type": "coding_agent",
+      "agent_id": "Codex - GPT-5.6 Sol (max)",
+      "agent_name": "Codex - GPT-5.6 Sol (max)",
+      "model_id": null,
+      "configuration": null,
+      "benchmark_suite": "Coding Agent Index",
+      "benchmark_version": "1.4",
+      "scores": {
+        "coding_agent_index": 0.6505240024334411
+      },
+      "cost_per_task_usd": null,
+      "execution_time_seconds": null,
+      "tokens": null,
+      "turns": null,
+      "provenance": {
+        "source": "artificial_analysis_coding_agents",
+        "fetched_at": "2026-08-23T07:23:55Z",
+        "source_authority": "artificial_analysis_coding_agents"
+      }
+    },
+    {
+      "observation_type": "coding_agent",
+      "agent_id": "Grok Build - Grok 4.5 (high)",
+      "agent_name": "Grok Build - Grok 4.5 (high)",
+      "model_id": null,
+      "configuration": null,
+      "benchmark_suite": "Coding Agent Index",
+      "benchmark_version": "1.4",
+      "scores": {
+        "coding_agent_index": 0.6408998279698193
+      },
+      "cost_per_task_usd": null,
+      "execution_time_seconds": null,
+      "tokens": null,
+      "turns": null,
+      "provenance": {
+        "source": "artificial_analysis_coding_agents",
+        "fetched_at": "2026-08-23T07:23:55Z",
+        "source_authority": "artificial_analysis_coding_agents"
+      }
+    },
+    {
+      "observation_type": "coding_agent",
+      "agent_id": "Kimi Code CLI - Kimi K3",
+      "agent_name": "Kimi Code CLI - Kimi K3",
+      "model_id": null,
+      "configuration": null,
+      "benchmark_suite": "Coding Agent Index",
+      "benchmark_version": "1.4",
+      "scores": {
+        "coding_agent_index": 0.6263880112748017
+      },
+      "cost_per_task_usd": null,
+      "execution_time_seconds": null,
+      "tokens": null,
+      "turns": null,
+      "provenance": {
+        "source": "artificial_analysis_coding_agents",
+        "fetched_at": "2026-08-23T07:23:55Z",
+        "source_authority": "artificial_analysis_coding_agents"
+      }
+    },
+    {
+      "observation_type": "coding_agent",
+      "agent_id": "Opencode - Gemini 3.7 Flash (high)",
+      "agent_name": "Opencode - Gemini 3.7 Flash (high)",
+      "model_id": null,
+      "configuration": null,
+      "benchmark_suite": "Coding Agent Index",
+      "benchmark_version": "1.4",
+      "scores": {
+        "coding_agent_index": 0.5962784529614886
+      },
+      "cost_per_task_usd": null,
+      "execution_time_seconds": null,
+      "tokens": null,
+      "turns": null,
+      "provenance": {
+        "source": "artificial_analysis_coding_agents",
+        "fetched_at": "2026-08-23T07:23:55Z",
+        "source_authority": "artificial_analysis_coding_agents"
+      }
+    },
+    {
+      "observation_type": "coding_agent",
+      "agent_id": "Codex - DeepSeek V4 Flash 0731 (max)",
+      "agent_name": "Codex - DeepSeek V4 Flash 0731 (max)",
+      "model_id": null,
+      "configuration": null,
+      "benchmark_suite": "Coding Agent Index",
+      "benchmark_version": "1.4",
+      "scores": {
+        "coding_agent_index": 0.49757600316190537
+      },
+      "cost_per_task_usd": null,
+      "execution_time_seconds": null,
+      "tokens": null,
+      "turns": null,
+      "provenance": {
+        "source": "artificial_analysis_coding_agents",
+        "fetched_at": "2026-08-23T07:23:55Z",
+        "source_authority": "artificial_analysis_coding_agents"
+      }
+    },
+    {
+      "observation_type": "coding_agent",
+      "agent_id": "Claude Code - GLM-5.2",
+      "agent_name": "Claude Code - GLM-5.2",
+      "model_id": null,
+      "configuration": null,
+      "benchmark_suite": "Coding Agent Index",
+      "benchmark_version": "1.4",
+      "scores": {
+        "coding_agent_index": 0.43310157193602167
+      },
+      "cost_per_task_usd": null,
+      "execution_time_seconds": null,
+      "tokens": null,
+      "turns": null,
+      "provenance": {
+        "source": "artificial_analysis_coding_agents",
+        "fetched_at": "2026-08-23T07:23:55Z",
+        "source_authority": "artificial_analysis_coding_agents"
+      }
+    },
+    {
+      "observation_type": "coding_agent",
+      "agent_id": "Cursor CLI - Composer 2.5 Fast",
+      "agent_name": "Cursor CLI - Composer 2.5 Fast",
+      "model_id": null,
+      "configuration": null,
+      "benchmark_suite": "Coding Agent Index",
+      "benchmark_version": "1.4",
+      "scores": {
+        "coding_agent_index": 0.3830075380367747
+      },
+      "cost_per_task_usd": null,
+      "execution_time_seconds": null,
+      "tokens": null,
+      "turns": null,
+      "provenance": {
+        "source": "artificial_analysis_coding_agents",
+        "fetched_at": "2026-08-23T07:23:55Z",
+        "source_authority": "artificial_analysis_coding_agents"
+      }
+    },
+    {
+      "observation_type": "coding_agent",
+      "agent_id": "Cursor CLI - Composer 2.5 Fast\n(Cursor)",
+      "agent_name": "Cursor CLI - Composer 2.5 Fast\n(Cursor)",
+      "model_id": null,
+      "configuration": null,
+      "benchmark_suite": "Time per Task",
+      "benchmark_version": "1.4",
+      "scores": {
+        "coding_agent_index": null
+      },
+      "cost_per_task_usd": null,
+      "execution_time_seconds": 472.37220245398754,
+      "tokens": null,
+      "turns": null,
+      "provenance": {
+        "source": "artificial_analysis_coding_agents",
+        "fetched_at": "2026-08-23T07:23:55Z",
+        "source_authority": "artificial_analysis_coding_agents"
+      }
+    },
+    {
+      "observation_type": "coding_agent",
+      "agent_id": "Opencode - Gemini 3.7 Flash (high)\n(Google)",
+      "agent_name": "Opencode - Gemini 3.7 Flash (high)\n(Google)",
+      "model_id": null,
+      "configuration": null,
+      "benchmark_suite": "Time per Task",
+      "benchmark_version": "1.4",
+      "scores": {
+        "coding_agent_index": null
+      },
+      "cost_per_task_usd": null,
+      "execution_time_seconds": 527.0915644171779,
+      "tokens": null,
+      "turns": null,
+      "provenance": {
+        "source": "artificial_analysis_coding_agents",
+        "fetched_at": "2026-08-23T07:23:55Z",
+        "source_authority": "artificial_analysis_coding_agents"
+      }
+    },
+    {
+      "observation_type": "coding_agent",
+      "agent_id": "Codex - GPT-5.6 Sol (max)\n(OpenAI)",
+      "agent_name": "Codex - GPT-5.6 Sol (max)\n(OpenAI)",
+      "model_id": null,
+      "configuration": null,
+      "benchmark_suite": "Time per Task",
+      "benchmark_version": "1.4",
+      "scores": {
+        "coding_agent_index": null
+      },
+      "cost_per_task_usd": null,
+      "execution_time_seconds": 613.70177198364,
+      "tokens": null,
+      "turns": null,
+      "provenance": {
+        "source": "artificial_analysis_coding_agents",
+        "fetched_at": "2026-08-23T07:23:55Z",
+        "source_authority": "artificial_analysis_coding_agents"
+      }
+    },
+    {
+      "observation_type": "coding_agent",
+      "agent_id": "Codex - DeepSeek V4 Flash 0731 (max)\n(DeepSeek)",
+      "agent_name": "Codex - DeepSeek V4 Flash 0731 (max)\n(DeepSeek)",
+      "model_id": null,
+      "configuration": null,
+      "benchmark_suite": "Time per Task",
+      "benchmark_version": "1.4",
+      "scores": {
+        "coding_agent_index": null
+      },
+      "cost_per_task_usd": null,
+      "execution_time_seconds": 868.3750143149272,
+      "tokens": null,
+      "turns": null,
+      "provenance": {
+        "source": "artificial_analysis_coding_agents",
+        "fetched_at": "2026-08-23T07:23:55Z",
+        "source_authority": "artificial_analysis_coding_agents"
+      }
+    },
+    {
+      "observation_type": "coding_agent",
+      "agent_id": "Grok Build - Grok 4.5 (high)\n(SpaceXAI)",
+      "agent_name": "Grok Build - Grok 4.5 (high)\n(SpaceXAI)",
+      "model_id": null,
+      "configuration": null,
+      "benchmark_suite": "Time per Task",
+      "benchmark_version": "1.4",
+      "scores": {
+        "coding_agent_index": null
+      },
+      "cost_per_task_usd": null,
+      "execution_time_seconds": 929.1851094069541,
+      "tokens": null,
+      "turns": null,
+      "provenance": {
+        "source": "artificial_analysis_coding_agents",
+        "fetched_at": "2026-08-23T07:23:55Z",
+        "source_authority": "artificial_analysis_coding_agents"
+      }
+    },
+    {
+      "observation_type": "coding_agent",
+      "agent_id": "Claude Code - Fable 5 (max) (with fallback)\n(Anthropic)",
+      "agent_name": "Claude Code - Fable 5 (max) (with fallback)\n(Anthropic)",
+      "model_id": null,
+      "configuration": null,
+      "benchmark_suite": "Time per Task",
+      "benchmark_version": "1.4",
+      "scores": {
+        "coding_agent_index": null
+      },
+      "cost_per_task_usd": null,
+      "execution_time_seconds": 1407.3063016359897,
+      "tokens": null,
+      "turns": null,
+      "provenance": {
+        "source": "artificial_analysis_coding_agents",
+        "fetched_at": "2026-08-23T07:23:55Z",
+        "source_authority": "artificial_analysis_coding_agents"
+      }
+    },
+    {
+      "observation_type": "coding_agent",
+      "agent_id": "Claude Code - Opus 5 (xhigh)\n(Anthropic)",
+      "agent_name": "Claude Code - Opus 5 (xhigh)\n(Anthropic)",
+      "model_id": null,
+      "configuration": null,
+      "benchmark_suite": "Time per Task",
+      "benchmark_version": "1.4",
+      "scores": {
+        "coding_agent_index": null
+      },
+      "cost_per_task_usd": null,
+      "execution_time_seconds": 1421.8799826175893,
+      "tokens": null,
+      "turns": null,
+      "provenance": {
+        "source": "artificial_analysis_coding_agents",
+        "fetched_at": "2026-08-23T07:23:55Z",
+        "source_authority": "artificial_analysis_coding_agents"
+      }
+    },
+    {
+      "observation_type": "coding_agent",
+      "agent_id": "Kimi Code CLI - Kimi K3\n(Moonshot AI)",
+      "agent_name": "Kimi Code CLI - Kimi K3\n(Moonshot AI)",
+      "model_id": null,
+      "configuration": null,
+      "benchmark_suite": "Time per Task",
+      "benchmark_version": "1.4",
+      "scores": {
+        "coding_agent_index": null
+      },
+      "cost_per_task_usd": null,
+      "execution_time_seconds": 1447.3730531697347,
+      "tokens": null,
+      "turns": null,
+      "provenance": {
+        "source": "artificial_analysis_coding_agents",
+        "fetched_at": "2026-08-23T07:23:55Z",
+        "source_authority": "artificial_analysis_coding_agents"
+      }
+    },
+    {
+      "observation_type": "coding_agent",
+      "agent_id": "Claude Code - GLM-5.2\n(Novita)",
+      "agent_name": "Claude Code - GLM-5.2\n(Novita)",
+      "model_id": null,
+      "configuration": null,
+      "benchmark_suite": "Time per Task",
+      "benchmark_version": "1.4",
+      "scores": {
+        "coding_agent_index": null
+      },
+      "cost_per_task_usd": null,
+      "execution_time_seconds": 1507.044470347651,
+      "tokens": null,
+      "turns": null,
+      "provenance": {
+        "source": "artificial_analysis_coding_agents",
+        "fetched_at": "2026-08-23T07:23:55Z",
+        "source_authority": "artificial_analysis_coding_agents"
+      }
+    },
+    {
+      "observation_type": "coding_agent",
+      "agent_id": "Codex - DeepSeek V4 Flash 0731 (max)\n(DeepSeek)",
+      "agent_name": "Codex - DeepSeek V4 Flash 0731 (max)\n(DeepSeek)",
+      "model_id": null,
+      "configuration": null,
+      "benchmark_suite": "Cost per Task",
+      "benchmark_version": "1.4",
+      "scores": {
+        "coding_agent_index": null
+      },
+      "cost_per_task_usd": 0.05949917044417178,
+      "execution_time_seconds": null,
+      "tokens": null,
+      "turns": null,
+      "provenance": {
+        "source": "artificial_analysis_coding_agents",
+        "fetched_at": "2026-08-23T07:23:55Z",
+        "source_authority": "artificial_analysis_coding_agents"
+      }
+    },
+    {
+      "observation_type": "coding_agent",
+      "agent_id": "Cursor CLI - Composer 2.5 Fast\n(Cursor)",
+      "agent_name": "Cursor CLI - Composer 2.5 Fast\n(Cursor)",
+      "model_id": null,
+      "configuration": null,
+      "benchmark_suite": "Cost per Task",
+      "benchmark_version": "1.4",
+      "scores": {
+        "coding_agent_index": null
+      },
+      "cost_per_task_usd": 0.5573437730061347,
+      "execution_time_seconds": null,
+      "tokens": null,
+      "turns": null,
+      "provenance": {
+        "source": "artificial_analysis_coding_agents",
+        "fetched_at": "2026-08-23T07:23:55Z",
+        "source_authority": "artificial_analysis_coding_agents"
+      }
+    },
+    {
+      "observation_type": "coding_agent",
+      "agent_id": "Opencode - Gemini 3.7 Flash (high)\n(Google)",
+      "agent_name": "Opencode - Gemini 3.7 Flash (high)\n(Google)",
+      "model_id": null,
+      "configuration": null,
+      "benchmark_suite": "Cost per Task",
+      "benchmark_version": "1.4",
+      "scores": {
+        "coding_agent_index": null
+      },
+      "cost_per_task_usd": 1.2679325688650298,
+      "execution_time_seconds": null,
+      "tokens": null,
+      "turns": null,
+      "provenance": {
+        "source": "artificial_analysis_coding_agents",
+        "fetched_at": "2026-08-23T07:23:55Z",
+        "source_authority": "artificial_analysis_coding_agents"
+      }
+    },
+    {
+      "observation_type": "coding_agent",
+      "agent_id": "Grok Build - Grok 4.5 (high)\n(SpaceXAI)",
+      "agent_name": "Grok Build - Grok 4.5 (high)\n(SpaceXAI)",
+      "model_id": null,
+      "configuration": null,
+      "benchmark_suite": "Cost per Task",
+      "benchmark_version": "1.4",
+      "scores": {
+        "coding_agent_index": null
+      },
+      "cost_per_task_usd": 2.4389824437627774,
+      "execution_time_seconds": null,
+      "tokens": null,
+      "turns": null,
+      "provenance": {
+        "source": "artificial_analysis_coding_agents",
+        "fetched_at": "2026-08-23T07:23:55Z",
+        "source_authority": "artificial_analysis_coding_agents"
+      }
+    },
+    {
+      "observation_type": "coding_agent",
+      "agent_id": "Kimi Code CLI - Kimi K3\n(Moonshot AI)",
+      "agent_name": "Kimi Code CLI - Kimi K3\n(Moonshot AI)",
+      "model_id": null,
+      "configuration": null,
+      "benchmark_suite": "Cost per Task",
+      "benchmark_version": "1.4",
+      "scores": {
+        "coding_agent_index": null
+      },
+      "cost_per_task_usd": 3.0816355416104315,
+      "execution_time_seconds": null,
+      "tokens": null,
+      "turns": null,
+      "provenance": {
+        "source": "artificial_analysis_coding_agents",
+        "fetched_at": "2026-08-23T07:23:55Z",
+        "source_authority": "artificial_analysis_coding_agents"
+      }
+    },
+    {
+      "observation_type": "coding_agent",
+      "agent_id": "Codex - GPT-5.6 Sol (max)\n(OpenAI)",
+      "agent_name": "Codex - GPT-5.6 Sol (max)\n(OpenAI)",
+      "model_id": null,
+      "configuration": null,
+      "benchmark_suite": "Cost per Task",
+      "benchmark_version": "1.4",
+      "scores": {
+        "coding_agent_index": null
+      },
+      "cost_per_task_usd": 6.420249160020451,
+      "execution_time_seconds": null,
+      "tokens": null,
+      "turns": null,
+      "provenance": {
+        "source": "artificial_analysis_coding_agents",
+        "fetched_at": "2026-08-23T07:23:55Z",
+        "source_authority": "artificial_analysis_coding_agents"
+      }
+    },
+    {
+      "observation_type": "coding_agent",
+      "agent_id": "Claude Code - GLM-5.2\n(Novita)",
+      "agent_name": "Claude Code - GLM-5.2\n(Novita)",
+      "model_id": null,
+      "configuration": null,
+      "benchmark_suite": "Cost per Task",
+      "benchmark_version": "1.4",
+      "scores": {
+        "coding_agent_index": null
+      },
+      "cost_per_task_usd": 6.657531358159519,
+      "execution_time_seconds": null,
+      "tokens": null,
+      "turns": null,
+      "provenance": {
+        "source": "artificial_analysis_coding_agents",
+        "fetched_at": "2026-08-23T07:23:55Z",
+        "source_authority": "artificial_analysis_coding_agents"
+      }
+    },
+    {
+      "observation_type": "coding_agent",
+      "agent_id": "Claude Code - Opus 5 (xhigh)\n(Anthropic)",
+      "agent_name": "Claude Code - Opus 5 (xhigh)\n(Anthropic)",
+      "model_id": null,
+      "configuration": null,
+      "benchmark_suite": "Cost per Task",
+      "benchmark_version": "1.4",
+      "scores": {
+        "coding_agent_index": null
+      },
+      "cost_per_task_usd": 8.170783921523503,
+      "execution_time_seconds": null,
+      "tokens": null,
+      "turns": null,
+      "provenance": {
+        "source": "artificial_analysis_coding_agents",
+        "fetched_at": "2026-08-23T07:23:55Z",
+        "source_authority": "artificial_analysis_coding_agents"
+      }
+    },
+    {
+      "observation_type": "coding_agent",
+      "agent_id": "Claude Code - Fable 5 (max) (with fallback)\n(Anthropic)",
+      "agent_name": "Claude Code - Fable 5 (max) (with fallback)\n(Anthropic)",
+      "model_id": null,
+      "configuration": null,
+      "benchmark_suite": "Cost per Task",
+      "benchmark_version": "1.4",
+      "scores": {
+        "coding_agent_index": null
+      },
+      "cost_per_task_usd": 11.687407620910031,
+      "execution_time_seconds": null,
+      "tokens": null,
+      "turns": null,
+      "provenance": {
+        "source": "artificial_analysis_coding_agents",
+        "fetched_at": "2026-08-23T07:23:55Z",
+        "source_authority": "artificial_analysis_coding_agents"
+      }
+    }
+  ]
+}

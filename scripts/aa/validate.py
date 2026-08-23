@@ -108,7 +108,7 @@ def check_schema_drift(records: list[dict], source: str,
     return [f"[{source}] unexpected normalized fields: {sorted(unknown)}"] if unknown else []
 
 
-KNOWN_FIELDS = set(schema.model_record_template().keys()) | {"from_cache"} | {"merged"} | {"raw_fields"} | {"hosts"}
+KNOWN_FIELDS = set(schema.model_record_template().keys()) | {"from_cache"} | {"merged"} | {"raw_fields"} | {"hosts"} | {"provenance"}
 
 
 def staleness_fallback(current: dict, fallback: dict, max_age_days: int = 7,

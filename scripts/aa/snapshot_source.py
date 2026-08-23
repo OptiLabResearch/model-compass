@@ -297,10 +297,13 @@ class SnapshotSource:
     name = "snapshot"
 
     def __init__(self, base_url: str = DEFAULT_BASE_URL,
-                 cache_dir: Path = Path("data/aa_cache"), force_refresh: bool = False):
+                 cache_dir: Path = Path("data/aa_cache"), force_refresh: bool = False,
+                 offline: bool = False):
         self.base_url = base_url
         self.cache_dir = Path(cache_dir)
         self.force_refresh = force_refresh
+        self.offline = offline
+        self._cache_times: list[float] = []
 
     def _fetch_cached(self, url: str) -> dict:
         cache_path = self.cache_dir / f"snapshot_{disk_cache_key(url)}.json"
@@ -308,7 +311,10 @@ class SnapshotSource:
             cached = read_json(cache_path)
             if isinstance(cached, dict):
                 log.info("Using cached snapshot JSON for %s", url)
+                self._cache_times.append(cache_path.stat().st_mtime)
                 return cached
+        if self.offline:
+            raise RuntimeError(f"offline mode has no cached snapshot for {url}")
         payload, _response = fetch_json(url)
         atomic_write_json(cache_path, payload)
         return payload
@@ -346,7 +352,12 @@ class SnapshotSource:
                 "array_key": array_key,
                 "snapshot_date": latest.get("date"),
                 "skipped_entries": skipped,
+                "cached": len(self._cache_times) >= 2,
             }
+            if self._cache_times:
+                cached_ts = min(self._cache_times)
+                result.fetched_at_ts = cached_ts
+                result.fetched_at = datetime.fromtimestamp(cached_ts, timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
             raw_path = self.cache_dir / f"snapshot_raw_{now.strftime('%Y%m%d_%H%M%S')}.json"
             normalized_path = self.cache_dir / f"snapshot_normalized_{now.strftime('%Y%m%d_%H%M%S')}.json"
             atomic_write_json(raw_path, payload)

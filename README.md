@@ -28,25 +28,43 @@ node scripts/test_browser_security.mjs
 - `public/` is the complete deployable site and the only directory that should be published.
 - `public/data/models.json` is the browser's data source.
 - `scripts/` contains dependency-free refresh, export, validation, and security checks.
-- `data/enrichment_cache.json` retains metrics unavailable through the official API.
-- `data/history/` contains dated CSV snapshots for reproducibility.
+- `data/enrichment_cache.json` is a legacy backfill cache retained for compatibility.
+- `data/history/` contains dated public CSV snapshots and bounded rich-dataset delta files.
+- `data/openrouter_observations.json` contains bounded provider-endpoint observations.
+- `data/coding_agent_observations.json` contains separate model+harness coding-agent observations.
 - `.github/workflows/` contains read-only pull-request checks and the scheduled refresh.
 
 ## Data refresh
 
-The weekly workflow fetches the documented Artificial Analysis Free API, enriches it from the public models page, validates the result, exports a dated CSV, and commits only when data changed. Malformed payloads, duplicate slugs, unexpected URLs, implausible model-count drops, index-version changes, out-of-range values, and missing featured models fail closed.
+The weekly workflow builds the rich dataset from the Artificial Analysis leaderboard RSC payload, the official Free API when `AA_API_KEY` is available, and the Oolong-Tea snapshot adapter. It validates the merged result, derives the public site JSON, writes dated public CSV/rich delta history, and commits only when data changed. Malformed payloads, duplicate slugs, unexpected URLs, implausible model-count drops, index-version changes, out-of-range values, and missing featured models fail closed. A fallback to an older dataset is explicitly reported as stale.
 
 To refresh locally, copy `.env.example` to `.env`, add your own `AA_API_KEY`, restrict the file to your user, and run:
 
 ```bash
 chmod 600 .env
 set -a; source .env; set +a
-python3 scripts/fetch_aa_models.py
+python3 -m scripts.aa.orchestrate
+python3 scripts/build_site_from_aa.py
 python3 scripts/export_history_csv.py
+python3 scripts/export_benchmarks_json.py
 python3 scripts/validate_site.py
 ```
 
+For deterministic parser work, use `python3 -m scripts.aa.orchestrate --offline` with cached payloads; it never attempts a network request. The legacy `scripts/fetch_aa_models.py` remains for reference/tests and is not the active site refresh path.
+
 Never commit `.env` or paste API keys into issues, logs, screenshots, or pull requests.
+
+The private decision interface also supports provider and coding-agent queries:
+
+```bash
+python3 scripts/model_compass.py providers openai/gpt-5
+python3 scripts/model_compass.py recommend-provider openai/gpt-5 --profile interactive
+python3 scripts/model_compass.py agents
+python3 scripts/model_compass.py recommend-agent cost
+python3 scripts/model_compass.py access
+```
+
+Provider observations are operational facts from OpenRouter and do not overwrite Artificial Analysis benchmark fields. Coding-agent observations retain the public agent/harness label and are not flattened into base-model records.
 
 ## Deployment
 
