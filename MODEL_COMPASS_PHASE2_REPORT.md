@@ -272,7 +272,7 @@ Identity rules:
 5. Context and capability fields remain source-specific unless an explicit reconciliation rule is later added.
 6. A provider observation cannot overwrite canonical benchmark truth.
 
-The current committed live artifact is `data/openrouter_observations.json` with 422 catalog models and 319 retained detailed endpoint observations from three bounded rotating cohorts (93 catalog models, 22.04% coverage).
+The current committed live artifact is `data/openrouter_observations.json` with 422 catalog models and 387 retained detailed endpoint observations from bounded rotating cohorts (114 catalog models, 27.01% coverage).
 
 Supported queries:
 
