@@ -1,7 +1,7 @@
 {
   "version": "4.1",
   "intelligence_index_version": "4.1",
-  "scraped_at": "2026-08-23T07:23:52Z",
+  "scraped_at": "2026-08-23T17:19:39Z",
   "source_url": "https://artificialanalysis.ai/leaderboards/providers",
   "scrape_method": "AA RSC leaderboard payload via scripts/aa pipeline",
   "intelligence_index_methodology": "AA Intelligence Index v4.1 = composite of 9 evaluations: GDPval-AA v2, \u03c4\u00b3-Banking, Terminal-Bench v2.1, SciCode, HLE, GPQA Diamond, CritPt, AA-Omniscience, AA-LCR",
@@ -91,11 +91,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 71.02,
-        "ttft_seconds_total": 93.78,
-        "ttft_seconds_answer": 93.78,
+        "output_speed_tps": 67.51,
+        "ttft_seconds_total": 109.0,
+        "ttft_seconds_answer": 109.0,
         "end_to_end_500tok": {
-          "total": 100.83,
+          "total": 116.4,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -116,9 +116,9 @@
         "value_intelligence_per_dollar_blend": 3.1,
         "value_intelligence_per_dollar_task": 6.1,
         "safety_composite": 46.7,
-        "throughput_tps": 71.02,
+        "throughput_tps": 67.51,
         "speed_tier": 1,
-        "latency_ttft_seconds": 93.78,
+        "latency_ttft_seconds": 109.0,
         "latency_tier": 0
       }
     },
@@ -207,11 +207,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 71.78,
-        "ttft_seconds_total": 96.27,
-        "ttft_seconds_answer": 96.27,
+        "output_speed_tps": 74.77,
+        "ttft_seconds_total": 104.85,
+        "ttft_seconds_answer": 104.85,
         "end_to_end_500tok": {
-          "total": 103.24,
+          "total": 111.54,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -232,9 +232,9 @@
         "value_intelligence_per_dollar_blend": 5.4,
         "value_intelligence_per_dollar_task": 49.5,
         "safety_composite": 29.1,
-        "throughput_tps": 71.78,
+        "throughput_tps": 74.77,
         "speed_tier": 1,
-        "latency_ttft_seconds": 96.27,
+        "latency_ttft_seconds": 104.85,
         "latency_tier": 0
       }
     },
@@ -313,11 +313,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 18.44,
-        "ttft_seconds_total": 3.15,
-        "ttft_seconds_answer": 111.61,
+        "output_speed_tps": 17.84,
+        "ttft_seconds_total": 3.14,
+        "ttft_seconds_answer": 115.23,
         "end_to_end_500tok": {
-          "total": 138.72,
+          "total": 143.25,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -338,9 +338,9 @@
         "value_intelligence_per_dollar_blend": 11.2,
         "value_intelligence_per_dollar_task": 50.4,
         "safety_composite": 52.0,
-        "throughput_tps": 18.44,
+        "throughput_tps": 17.84,
         "speed_tier": 0,
-        "latency_ttft_seconds": 111.61,
+        "latency_ttft_seconds": 115.23,
         "latency_tier": 0
       }
     },
@@ -430,10 +430,10 @@
       "output_tokens_per_task": null,
       "performance": {
         "output_speed_tps": 60.52,
-        "ttft_seconds_total": 10.62,
-        "ttft_seconds_answer": 10.62,
+        "ttft_seconds_total": 17.05,
+        "ttft_seconds_answer": 17.05,
         "end_to_end_500tok": {
-          "total": 18.88,
+          "total": 25.31,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -456,7 +456,7 @@
         "safety_composite": 59.4,
         "throughput_tps": 60.52,
         "speed_tier": 1,
-        "latency_ttft_seconds": 10.62,
+        "latency_ttft_seconds": 17.05,
         "latency_tier": 1
       }
     },
@@ -545,11 +545,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 151.77,
-        "ttft_seconds_total": 116.29,
-        "ttft_seconds_answer": 116.29,
+        "output_speed_tps": 156.98,
+        "ttft_seconds_total": 120.09,
+        "ttft_seconds_answer": 120.09,
         "end_to_end_500tok": {
-          "total": 119.58,
+          "total": 123.28,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -570,9 +570,9 @@
         "value_intelligence_per_dollar_blend": 9.1,
         "value_intelligence_per_dollar_task": 58.1,
         "safety_composite": 29.9,
-        "throughput_tps": 151.77,
+        "throughput_tps": 156.98,
         "speed_tier": 2,
-        "latency_ttft_seconds": 116.29,
+        "latency_ttft_seconds": 120.09,
         "latency_tier": 0
       }
     },
@@ -661,11 +661,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 65.34,
-        "ttft_seconds_total": 5.85,
-        "ttft_seconds_answer": 5.85,
+        "output_speed_tps": 60.89,
+        "ttft_seconds_total": 6.57,
+        "ttft_seconds_answer": 6.57,
         "end_to_end_500tok": {
-          "total": 13.5,
+          "total": 14.78,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -686,9 +686,9 @@
         "value_intelligence_per_dollar_blend": 18.6,
         "value_intelligence_per_dollar_task": 154.8,
         "safety_composite": 49.8,
-        "throughput_tps": 65.34,
+        "throughput_tps": 60.89,
         "speed_tier": 1,
-        "latency_ttft_seconds": 5.85,
+        "latency_ttft_seconds": 6.57,
         "latency_tier": 1
       }
     },
@@ -777,11 +777,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 88.5,
-        "ttft_seconds_total": 138.1,
-        "ttft_seconds_answer": 138.1,
+        "output_speed_tps": 82.82,
+        "ttft_seconds_total": 189.4,
+        "ttft_seconds_answer": 189.4,
         "end_to_end_500tok": {
-          "total": 143.75,
+          "total": 195.44,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -802,9 +802,9 @@
         "value_intelligence_per_dollar_blend": 13.8,
         "value_intelligence_per_dollar_task": 28.1,
         "safety_composite": 58.5,
-        "throughput_tps": 88.5,
+        "throughput_tps": 82.82,
         "speed_tier": 1,
-        "latency_ttft_seconds": 138.1,
+        "latency_ttft_seconds": 189.4,
         "latency_tier": 0
       }
     },
@@ -893,11 +893,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 64.78,
+        "output_speed_tps": 65.65,
         "ttft_seconds_total": 2.8,
-        "ttft_seconds_answer": 33.68,
+        "ttft_seconds_answer": 33.27,
         "end_to_end_500tok": {
-          "total": 41.39,
+          "total": 40.88,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -918,9 +918,9 @@
         "value_intelligence_per_dollar_blend": 26.9,
         "value_intelligence_per_dollar_task": 137.7,
         "safety_composite": 24.4,
-        "throughput_tps": 64.78,
+        "throughput_tps": 65.65,
         "speed_tier": 1,
-        "latency_ttft_seconds": 33.68,
+        "latency_ttft_seconds": 33.27,
         "latency_tier": 0
       }
     },
@@ -999,11 +999,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 260.45,
-        "ttft_seconds_total": 1.58,
-        "ttft_seconds_answer": 9.26,
+        "output_speed_tps": 211.72,
+        "ttft_seconds_total": 1.63,
+        "ttft_seconds_answer": 11.08,
         "end_to_end_500tok": {
-          "total": 11.18,
+          "total": 13.44,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -1024,9 +1024,9 @@
         "value_intelligence_per_dollar_blend": 26.6,
         "value_intelligence_per_dollar_task": 182.0,
         "safety_composite": 51.3,
-        "throughput_tps": 260.45,
+        "throughput_tps": 211.72,
         "speed_tier": 2,
-        "latency_ttft_seconds": 9.26,
+        "latency_ttft_seconds": 11.08,
         "latency_tier": 1
       }
     },
@@ -1115,11 +1115,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 98.49,
+        "output_speed_tps": 98.79,
         "ttft_seconds_total": 2.03,
-        "ttft_seconds_answer": 22.33,
+        "ttft_seconds_answer": 22.27,
         "end_to_end_500tok": {
-          "total": 27.41,
+          "total": 27.33,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -1140,9 +1140,9 @@
         "value_intelligence_per_dollar_blend": 26.3,
         "value_intelligence_per_dollar_task": 85.4,
         "safety_composite": 65.3,
-        "throughput_tps": 98.49,
+        "throughput_tps": 98.79,
         "speed_tier": 1,
-        "latency_ttft_seconds": 22.33,
+        "latency_ttft_seconds": 22.27,
         "latency_tier": 0
       }
     },
@@ -1231,11 +1231,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 230.93,
-        "ttft_seconds_total": 104.61,
-        "ttft_seconds_answer": 104.61,
+        "output_speed_tps": 235.02,
+        "ttft_seconds_total": 97.83,
+        "ttft_seconds_answer": 97.83,
         "end_to_end_500tok": {
-          "total": 106.78,
+          "total": 99.95,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -1256,9 +1256,9 @@
         "value_intelligence_per_dollar_blend": 21.1,
         "value_intelligence_per_dollar_task": 152.7,
         "safety_composite": 25.4,
-        "throughput_tps": 230.93,
+        "throughput_tps": 235.02,
         "speed_tier": 2,
-        "latency_ttft_seconds": 104.61,
+        "latency_ttft_seconds": 97.83,
         "latency_tier": 0
       }
     },
@@ -1453,11 +1453,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 228.29,
-        "ttft_seconds_total": 15.93,
-        "ttft_seconds_answer": 15.93,
+        "output_speed_tps": 208.71,
+        "ttft_seconds_total": 15.66,
+        "ttft_seconds_answer": 15.66,
         "end_to_end_500tok": {
-          "total": 18.12,
+          "total": 18.06,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -1478,9 +1478,9 @@
         "value_intelligence_per_dollar_blend": 34.4,
         "value_intelligence_per_dollar_task": 149.9,
         "safety_composite": 47.3,
-        "throughput_tps": 228.29,
+        "throughput_tps": 208.71,
         "speed_tier": 2,
-        "latency_ttft_seconds": 15.93,
+        "latency_ttft_seconds": 15.66,
         "latency_tier": 1
       }
     },
@@ -1570,10 +1570,10 @@
       "output_tokens_per_task": null,
       "performance": {
         "output_speed_tps": 125.77,
-        "ttft_seconds_total": 32.63,
-        "ttft_seconds_answer": 32.63,
+        "ttft_seconds_total": 29.62,
+        "ttft_seconds_answer": 29.62,
         "end_to_end_500tok": {
-          "total": 36.6,
+          "total": 33.6,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -1596,7 +1596,7 @@
         "safety_composite": 48.6,
         "throughput_tps": 125.77,
         "speed_tier": 2,
-        "latency_ttft_seconds": 32.63,
+        "latency_ttft_seconds": 29.62,
         "latency_tier": 0
       }
     },
@@ -1685,11 +1685,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 215.91,
-        "ttft_seconds_total": 2.25,
-        "ttft_seconds_answer": 13.41,
+        "output_speed_tps": 208.74,
+        "ttft_seconds_total": 2.23,
+        "ttft_seconds_answer": 13.77,
         "end_to_end_500tok": {
-          "total": 15.73,
+          "total": 16.16,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -1710,9 +1710,9 @@
         "value_intelligence_per_dollar_blend": 12.5,
         "value_intelligence_per_dollar_task": 86.3,
         "safety_composite": 63.3,
-        "throughput_tps": 215.91,
+        "throughput_tps": 208.74,
         "speed_tier": 2,
-        "latency_ttft_seconds": 13.41,
+        "latency_ttft_seconds": 13.77,
         "latency_tier": 1
       }
     },
@@ -1917,11 +1917,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 54.79,
-        "ttft_seconds_total": 4.76,
-        "ttft_seconds_answer": 41.27,
+        "output_speed_tps": 50.06,
+        "ttft_seconds_total": 3.53,
+        "ttft_seconds_answer": 43.48,
         "end_to_end_500tok": {
-          "total": 50.39,
+          "total": 53.47,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -1942,9 +1942,9 @@
         "value_intelligence_per_dollar_blend": 79.4,
         "value_intelligence_per_dollar_task": 1264.9,
         "safety_composite": 62.3,
-        "throughput_tps": 54.79,
+        "throughput_tps": 50.06,
         "speed_tier": 1,
-        "latency_ttft_seconds": 41.27,
+        "latency_ttft_seconds": 43.48,
         "latency_tier": 0
       }
     },
@@ -2033,11 +2033,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 56.39,
-        "ttft_seconds_total": 2.05,
-        "ttft_seconds_answer": 37.52,
+        "output_speed_tps": 56.17,
+        "ttft_seconds_total": 2.08,
+        "ttft_seconds_answer": 37.69,
         "end_to_end_500tok": {
-          "total": 46.38,
+          "total": 46.59,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -2058,9 +2058,9 @@
         "value_intelligence_per_dollar_blend": 56.2,
         "value_intelligence_per_dollar_task": 162.4,
         "safety_composite": 59.1,
-        "throughput_tps": 56.39,
+        "throughput_tps": 56.17,
         "speed_tier": 1,
-        "latency_ttft_seconds": 37.52,
+        "latency_ttft_seconds": 37.69,
         "latency_tier": 0
       }
     },
@@ -2149,9 +2149,9 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 64.34,
-        "ttft_seconds_total": 4.01,
-        "ttft_seconds_answer": 35.09,
+        "output_speed_tps": 64.78,
+        "ttft_seconds_total": 4.28,
+        "ttft_seconds_answer": 35.15,
         "end_to_end_500tok": {
           "total": 42.87,
           "input": null,
@@ -2174,9 +2174,9 @@
         "value_intelligence_per_dollar_blend": 211.3,
         "value_intelligence_per_dollar_task": 3657.7,
         "safety_composite": 56.1,
-        "throughput_tps": 64.34,
+        "throughput_tps": 64.78,
         "speed_tier": 1,
-        "latency_ttft_seconds": 35.09,
+        "latency_ttft_seconds": 35.15,
         "latency_tier": 0
       }
     },
@@ -2255,11 +2255,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 55.62,
-        "ttft_seconds_total": 31.41,
-        "ttft_seconds_answer": 31.41,
+        "output_speed_tps": 53.44,
+        "ttft_seconds_total": 38.4,
+        "ttft_seconds_answer": 38.4,
         "end_to_end_500tok": {
-          "total": 40.4,
+          "total": 47.76,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -2280,9 +2280,9 @@
         "value_intelligence_per_dollar_blend": 6.3,
         "value_intelligence_per_dollar_task": 19.0,
         "safety_composite": 48.7,
-        "throughput_tps": 55.62,
+        "throughput_tps": 53.44,
         "speed_tier": 1,
-        "latency_ttft_seconds": 31.41,
+        "latency_ttft_seconds": 38.4,
         "latency_tier": 0
       }
     },
@@ -2361,11 +2361,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 55.45,
-        "ttft_seconds_total": 33.49,
-        "ttft_seconds_answer": 33.49,
+        "output_speed_tps": 54.01,
+        "ttft_seconds_total": 33.55,
+        "ttft_seconds_answer": 33.55,
         "end_to_end_500tok": {
-          "total": 42.5,
+          "total": 42.8,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -2386,9 +2386,9 @@
         "value_intelligence_per_dollar_blend": 6.3,
         "value_intelligence_per_dollar_task": 34.7,
         "safety_composite": 49.3,
-        "throughput_tps": 55.45,
+        "throughput_tps": 54.01,
         "speed_tier": 1,
-        "latency_ttft_seconds": 33.49,
+        "latency_ttft_seconds": 33.55,
         "latency_tier": 0
       }
     },
@@ -2467,11 +2467,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 57.99,
-        "ttft_seconds_total": 14.88,
-        "ttft_seconds_answer": 14.88,
+        "output_speed_tps": 52.48,
+        "ttft_seconds_total": 15.34,
+        "ttft_seconds_answer": 15.34,
         "end_to_end_500tok": {
-          "total": 23.51,
+          "total": 24.87,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -2492,9 +2492,9 @@
         "value_intelligence_per_dollar_blend": 6.1,
         "value_intelligence_per_dollar_task": 50.1,
         "safety_composite": 47.9,
-        "throughput_tps": 57.99,
+        "throughput_tps": 52.48,
         "speed_tier": 1,
-        "latency_ttft_seconds": 14.88,
+        "latency_ttft_seconds": 15.34,
         "latency_tier": 1
       }
     },
@@ -2573,11 +2573,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 69.42,
-        "ttft_seconds_total": 39.72,
-        "ttft_seconds_answer": 39.72,
+        "output_speed_tps": 66.68,
+        "ttft_seconds_total": 43.66,
+        "ttft_seconds_answer": 43.66,
         "end_to_end_500tok": {
-          "total": 46.92,
+          "total": 51.15,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -2598,9 +2598,9 @@
         "value_intelligence_per_dollar_blend": 20.3,
         "value_intelligence_per_dollar_task": 72.8,
         "safety_composite": 63.8,
-        "throughput_tps": 69.42,
+        "throughput_tps": 66.68,
         "speed_tier": 1,
-        "latency_ttft_seconds": 39.72,
+        "latency_ttft_seconds": 43.66,
         "latency_tier": 0
       }
     },
@@ -2679,11 +2679,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 62.35,
-        "ttft_seconds_total": 39.05,
-        "ttft_seconds_answer": 39.05,
+        "output_speed_tps": 64.79,
+        "ttft_seconds_total": 46.08,
+        "ttft_seconds_answer": 46.08,
         "end_to_end_500tok": {
-          "total": 47.07,
+          "total": 53.8,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -2704,9 +2704,9 @@
         "value_intelligence_per_dollar_blend": 20.0,
         "value_intelligence_per_dollar_task": 57.6,
         "safety_composite": 69.6,
-        "throughput_tps": 62.35,
+        "throughput_tps": 64.79,
         "speed_tier": 1,
-        "latency_ttft_seconds": 39.05,
+        "latency_ttft_seconds": 46.08,
         "latency_tier": 0
       }
     },
@@ -2785,15 +2785,10 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 102.09,
-        "ttft_seconds_total": 4.35,
-        "ttft_seconds_answer": 23.94,
-        "end_to_end_500tok": {
-          "total": 28.84,
-          "input": null,
-          "reasoning": 0,
-          "answer": null
-        }
+        "output_speed_tps": null,
+        "ttft_seconds_total": null,
+        "ttft_seconds_answer": null,
+        "end_to_end_500tok": null
       },
       "output_speed_by_prompt_length": [],
       "featured": false,
@@ -2809,11 +2804,7 @@
       "derived": {
         "value_intelligence_per_dollar_blend": 27.7,
         "value_intelligence_per_dollar_task": 87.1,
-        "safety_composite": 66.1,
-        "throughput_tps": 102.09,
-        "speed_tier": 2,
-        "latency_ttft_seconds": 23.94,
-        "latency_tier": 0
+        "safety_composite": 66.1
       }
     },
     {
@@ -2891,11 +2882,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 72.74,
-        "ttft_seconds_total": 27.09,
-        "ttft_seconds_answer": 27.09,
+        "output_speed_tps": 70.97,
+        "ttft_seconds_total": 27.33,
+        "ttft_seconds_answer": 27.33,
         "end_to_end_500tok": {
-          "total": 33.96,
+          "total": 34.37,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -2916,9 +2907,9 @@
         "value_intelligence_per_dollar_blend": 19.7,
         "value_intelligence_per_dollar_task": 88.4,
         "safety_composite": 69.2,
-        "throughput_tps": 72.74,
+        "throughput_tps": 70.97,
         "speed_tier": 1,
-        "latency_ttft_seconds": 27.09,
+        "latency_ttft_seconds": 27.33,
         "latency_tier": 0
       }
     },
@@ -3007,11 +2998,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 74.1,
-        "ttft_seconds_total": 25.27,
-        "ttft_seconds_answer": 25.27,
+        "output_speed_tps": 69.24,
+        "ttft_seconds_total": 26.79,
+        "ttft_seconds_answer": 26.79,
         "end_to_end_500tok": {
-          "total": 32.02,
+          "total": 34.01,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -3032,9 +3023,9 @@
         "value_intelligence_per_dollar_blend": 5.2,
         "value_intelligence_per_dollar_task": 73.1,
         "safety_composite": 28.5,
-        "throughput_tps": 74.1,
+        "throughput_tps": 69.24,
         "speed_tier": 1,
-        "latency_ttft_seconds": 25.27,
+        "latency_ttft_seconds": 26.79,
         "latency_tier": 0
       }
     },
@@ -3113,11 +3104,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 56.73,
+        "output_speed_tps": 52.32,
         "ttft_seconds_total": 4.63,
         "ttft_seconds_answer": 4.63,
         "end_to_end_500tok": {
-          "total": 13.44,
+          "total": 14.18,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -3138,7 +3129,7 @@
         "value_intelligence_per_dollar_blend": 5.9,
         "value_intelligence_per_dollar_task": 61.6,
         "safety_composite": 47.0,
-        "throughput_tps": 56.73,
+        "throughput_tps": 52.32,
         "speed_tier": 1,
         "latency_ttft_seconds": 4.63,
         "latency_tier": 2
@@ -3219,11 +3210,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 47.8,
-        "ttft_seconds_total": 2.56,
-        "ttft_seconds_answer": 44.4,
+        "output_speed_tps": 50.81,
+        "ttft_seconds_total": 2.57,
+        "ttft_seconds_answer": 41.93,
         "end_to_end_500tok": {
-          "total": 54.86,
+          "total": 51.77,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -3244,9 +3235,9 @@
         "value_intelligence_per_dollar_blend": 19.4,
         "value_intelligence_per_dollar_task": 51.3,
         "safety_composite": 58.2,
-        "throughput_tps": 47.8,
-        "speed_tier": 0,
-        "latency_ttft_seconds": 44.4,
+        "throughput_tps": 50.81,
+        "speed_tier": 1,
+        "latency_ttft_seconds": 41.93,
         "latency_tier": 0
       }
     },
@@ -3325,11 +3316,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 45.09,
-        "ttft_seconds_total": 2.54,
-        "ttft_seconds_answer": 46.89,
+        "output_speed_tps": 44.93,
+        "ttft_seconds_total": 2.62,
+        "ttft_seconds_answer": 47.14,
         "end_to_end_500tok": {
-          "total": 57.97,
+          "total": 58.27,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -3350,9 +3341,9 @@
         "value_intelligence_per_dollar_blend": 19.2,
         "value_intelligence_per_dollar_task": 52.8,
         "safety_composite": 59.6,
-        "throughput_tps": 45.09,
+        "throughput_tps": 44.93,
         "speed_tier": 0,
-        "latency_ttft_seconds": 46.89,
+        "latency_ttft_seconds": 47.14,
         "latency_tier": 0
       }
     },
@@ -3441,11 +3432,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 73.51,
-        "ttft_seconds_total": 8.91,
-        "ttft_seconds_answer": 8.91,
+        "output_speed_tps": 66.3,
+        "ttft_seconds_total": 9.69,
+        "ttft_seconds_answer": 9.69,
         "end_to_end_500tok": {
-          "total": 15.71,
+          "total": 17.23,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -3466,9 +3457,9 @@
         "value_intelligence_per_dollar_blend": 5.1,
         "value_intelligence_per_dollar_task": 104.7,
         "safety_composite": 28.2,
-        "throughput_tps": 73.51,
+        "throughput_tps": 66.3,
         "speed_tier": 1,
-        "latency_ttft_seconds": 8.91,
+        "latency_ttft_seconds": 9.69,
         "latency_tier": 1
       }
     },
@@ -3654,11 +3645,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 81.05,
-        "ttft_seconds_total": 65.6,
-        "ttft_seconds_answer": 65.6,
+        "output_speed_tps": 84.13,
+        "ttft_seconds_total": 77.91,
+        "ttft_seconds_answer": 77.91,
         "end_to_end_500tok": {
-          "total": 71.77,
+          "total": 83.85,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -3679,9 +3670,9 @@
         "value_intelligence_per_dollar_blend": 5.0,
         "value_intelligence_per_dollar_task": 47.9,
         "safety_composite": 29.1,
-        "throughput_tps": 81.05,
+        "throughput_tps": 84.13,
         "speed_tier": 1,
-        "latency_ttft_seconds": 65.6,
+        "latency_ttft_seconds": 77.91,
         "latency_tier": 0
       }
     },
@@ -3760,11 +3751,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 373.29,
+        "output_speed_tps": 338.91,
         "ttft_seconds_total": 13.15,
         "ttft_seconds_answer": 13.15,
         "end_to_end_500tok": {
-          "total": 14.49,
+          "total": 14.63,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -3785,7 +3776,7 @@
         "value_intelligence_per_dollar_blend": 37.4,
         "value_intelligence_per_dollar_task": 139.3,
         "safety_composite": 43.7,
-        "throughput_tps": 373.29,
+        "throughput_tps": 338.91,
         "speed_tier": 2,
         "latency_ttft_seconds": 13.15,
         "latency_tier": 1
@@ -3876,11 +3867,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 73.28,
-        "ttft_seconds_total": 3.22,
-        "ttft_seconds_answer": 3.22,
+        "output_speed_tps": 69.55,
+        "ttft_seconds_total": 3.72,
+        "ttft_seconds_answer": 3.72,
         "end_to_end_500tok": {
-          "total": 10.05,
+          "total": 10.91,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -3901,9 +3892,9 @@
         "value_intelligence_per_dollar_blend": 4.9,
         "value_intelligence_per_dollar_task": 149.5,
         "safety_composite": 27.7,
-        "throughput_tps": 73.28,
+        "throughput_tps": 69.55,
         "speed_tier": 1,
-        "latency_ttft_seconds": 3.22,
+        "latency_ttft_seconds": 3.72,
         "latency_tier": 2
       }
     },
@@ -3992,11 +3983,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 51.58,
-        "ttft_seconds_total": 15.32,
-        "ttft_seconds_answer": 15.32,
+        "output_speed_tps": 52.13,
+        "ttft_seconds_total": 17.11,
+        "ttft_seconds_answer": 17.11,
         "end_to_end_500tok": {
-          "total": 25.01,
+          "total": 26.71,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -4017,9 +4008,9 @@
         "value_intelligence_per_dollar_blend": 5.5,
         "value_intelligence_per_dollar_task": 24.7,
         "safety_composite": 56.6,
-        "throughput_tps": 51.58,
+        "throughput_tps": 52.13,
         "speed_tier": 1,
-        "latency_ttft_seconds": 15.32,
+        "latency_ttft_seconds": 17.11,
         "latency_tier": 1
       }
     },
@@ -4108,11 +4099,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 83.93,
-        "ttft_seconds_total": 14.64,
-        "ttft_seconds_answer": 14.64,
+        "output_speed_tps": 81.92,
+        "ttft_seconds_total": 15.9,
+        "ttft_seconds_answer": 15.9,
         "end_to_end_500tok": {
-          "total": 20.59,
+          "total": 22.0,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -4133,9 +4124,9 @@
         "value_intelligence_per_dollar_blend": 4.9,
         "value_intelligence_per_dollar_task": 68.1,
         "safety_composite": 28.4,
-        "throughput_tps": 83.93,
+        "throughput_tps": 81.92,
         "speed_tier": 1,
-        "latency_ttft_seconds": 14.64,
+        "latency_ttft_seconds": 15.9,
         "latency_tier": 1
       }
     },
@@ -4330,11 +4321,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 93.86,
-        "ttft_seconds_total": 154.68,
-        "ttft_seconds_answer": 154.68,
+        "output_speed_tps": 92.48,
+        "ttft_seconds_total": 167.24,
+        "ttft_seconds_answer": 167.24,
         "end_to_end_500tok": {
-          "total": 160.01,
+          "total": 172.64,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -4355,9 +4346,9 @@
         "value_intelligence_per_dollar_blend": 9.5,
         "value_intelligence_per_dollar_task": 58.5,
         "safety_composite": 26.2,
-        "throughput_tps": 93.86,
+        "throughput_tps": 92.48,
         "speed_tier": 1,
-        "latency_ttft_seconds": 154.68,
+        "latency_ttft_seconds": 167.24,
         "latency_tier": 0
       }
     },
@@ -4446,11 +4437,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 106.91,
-        "ttft_seconds_total": 8.98,
-        "ttft_seconds_answer": 8.98,
+        "output_speed_tps": 103.84,
+        "ttft_seconds_total": 24.03,
+        "ttft_seconds_answer": 24.03,
         "end_to_end_500tok": {
-          "total": 13.66,
+          "total": 28.85,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -4471,10 +4462,10 @@
         "value_intelligence_per_dollar_blend": 11.7,
         "value_intelligence_per_dollar_task": 173.0,
         "safety_composite": 27.7,
-        "throughput_tps": 106.91,
+        "throughput_tps": 103.84,
         "speed_tier": 2,
-        "latency_ttft_seconds": 8.98,
-        "latency_tier": 1
+        "latency_ttft_seconds": 24.03,
+        "latency_tier": 0
       }
     },
     {
@@ -4552,11 +4543,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 55.85,
-        "ttft_seconds_total": 3.54,
-        "ttft_seconds_answer": 3.54,
+        "output_speed_tps": 53.24,
+        "ttft_seconds_total": 3.49,
+        "ttft_seconds_answer": 3.49,
         "end_to_end_500tok": {
-          "total": 12.5,
+          "total": 12.88,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -4577,9 +4568,9 @@
         "value_intelligence_per_dollar_blend": 5.2,
         "value_intelligence_per_dollar_task": 95.9,
         "safety_composite": 43.7,
-        "throughput_tps": 55.85,
+        "throughput_tps": 53.24,
         "speed_tier": 1,
-        "latency_ttft_seconds": 3.54,
+        "latency_ttft_seconds": 3.49,
         "latency_tier": 2
       }
     },
@@ -4658,11 +4649,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 55.66,
-        "ttft_seconds_total": 2.97,
-        "ttft_seconds_answer": 38.91,
+        "output_speed_tps": 53.84,
+        "ttft_seconds_total": 2.98,
+        "ttft_seconds_answer": 40.13,
         "end_to_end_500tok": {
-          "total": 47.89,
+          "total": 49.42,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -4683,9 +4674,9 @@
         "value_intelligence_per_dollar_blend": 46.4,
         "value_intelligence_per_dollar_task": 205.3,
         "safety_composite": 62.6,
-        "throughput_tps": 55.66,
+        "throughput_tps": 53.84,
         "speed_tier": 1,
-        "latency_ttft_seconds": 38.91,
+        "latency_ttft_seconds": 40.13,
         "latency_tier": 0
       }
     },
@@ -4774,11 +4765,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 224.04,
-        "ttft_seconds_total": 22.83,
-        "ttft_seconds_answer": 22.83,
+        "output_speed_tps": 211.73,
+        "ttft_seconds_total": 19.13,
+        "ttft_seconds_answer": 19.13,
         "end_to_end_500tok": {
-          "total": 25.06,
+          "total": 21.49,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -4799,10 +4790,10 @@
         "value_intelligence_per_dollar_blend": 15.4,
         "value_intelligence_per_dollar_task": 74.9,
         "safety_composite": 43.5,
-        "throughput_tps": 224.04,
+        "throughput_tps": 211.73,
         "speed_tier": 2,
-        "latency_ttft_seconds": 22.83,
-        "latency_tier": 0
+        "latency_ttft_seconds": 19.13,
+        "latency_tier": 1
       }
     },
     {
@@ -4880,11 +4871,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 70.37,
-        "ttft_seconds_total": 8.77,
-        "ttft_seconds_answer": 8.77,
+        "output_speed_tps": 63.64,
+        "ttft_seconds_total": 8.69,
+        "ttft_seconds_answer": 8.69,
         "end_to_end_500tok": {
-          "total": 15.88,
+          "total": 16.55,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -4905,9 +4896,9 @@
         "value_intelligence_per_dollar_blend": 17.2,
         "value_intelligence_per_dollar_task": 234.2,
         "safety_composite": 62.3,
-        "throughput_tps": 70.37,
+        "throughput_tps": 63.64,
         "speed_tier": 1,
-        "latency_ttft_seconds": 8.77,
+        "latency_ttft_seconds": 8.69,
         "latency_tier": 1
       }
     },
@@ -4996,11 +4987,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 79.28,
-        "ttft_seconds_total": 5.49,
-        "ttft_seconds_answer": 5.49,
+        "output_speed_tps": 78.42,
+        "ttft_seconds_total": 6.67,
+        "ttft_seconds_answer": 6.67,
         "end_to_end_500tok": {
-          "total": 11.8,
+          "total": 13.05,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -5021,9 +5012,9 @@
         "value_intelligence_per_dollar_blend": 4.6,
         "value_intelligence_per_dollar_task": 102.8,
         "safety_composite": 26.8,
-        "throughput_tps": 79.28,
+        "throughput_tps": 78.42,
         "speed_tier": 1,
-        "latency_ttft_seconds": 5.49,
+        "latency_ttft_seconds": 6.67,
         "latency_tier": 1
       }
     },
@@ -5102,11 +5093,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 315.6,
+        "output_speed_tps": 298.06,
         "ttft_seconds_total": 0.93,
         "ttft_seconds_answer": 0.93,
         "end_to_end_500tok": {
-          "total": 2.52,
+          "total": 2.61,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -5127,7 +5118,7 @@
         "value_intelligence_per_dollar_blend": 34.0,
         "value_intelligence_per_dollar_task": 309.1,
         "safety_composite": 39.8,
-        "throughput_tps": 315.6,
+        "throughput_tps": 298.06,
         "speed_tier": 2,
         "latency_ttft_seconds": 0.93,
         "latency_tier": 2
@@ -5218,11 +5209,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 71.04,
-        "ttft_seconds_total": 2.73,
-        "ttft_seconds_answer": 2.73,
+        "output_speed_tps": 67.65,
+        "ttft_seconds_total": 2.83,
+        "ttft_seconds_answer": 2.83,
         "end_to_end_500tok": {
-          "total": 9.77,
+          "total": 10.22,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -5243,9 +5234,9 @@
         "value_intelligence_per_dollar_blend": 4.5,
         "value_intelligence_per_dollar_task": 219.5,
         "safety_composite": 26.7,
-        "throughput_tps": 71.04,
+        "throughput_tps": 67.65,
         "speed_tier": 1,
-        "latency_ttft_seconds": 2.73,
+        "latency_ttft_seconds": 2.83,
         "latency_tier": 2
       }
     },
@@ -5334,11 +5325,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 109.86,
-        "ttft_seconds_total": 2.26,
-        "ttft_seconds_answer": 2.26,
+        "output_speed_tps": 106.77,
+        "ttft_seconds_total": 2.34,
+        "ttft_seconds_answer": 2.34,
         "end_to_end_500tok": {
-          "total": 6.81,
+          "total": 7.02,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -5359,9 +5350,9 @@
         "value_intelligence_per_dollar_blend": 11.1,
         "value_intelligence_per_dollar_task": 229.5,
         "safety_composite": 26.2,
-        "throughput_tps": 109.86,
+        "throughput_tps": 106.77,
         "speed_tier": 2,
-        "latency_ttft_seconds": 2.26,
+        "latency_ttft_seconds": 2.34,
         "latency_tier": 2
       }
     },
@@ -5450,11 +5441,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 150.44,
-        "ttft_seconds_total": 40.77,
-        "ttft_seconds_answer": 40.77,
+        "output_speed_tps": 145.42,
+        "ttft_seconds_total": 52.74,
+        "ttft_seconds_answer": 52.74,
         "end_to_end_500tok": {
-          "total": 44.1,
+          "total": 56.18,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -5475,9 +5466,9 @@
         "value_intelligence_per_dollar_blend": 111.2,
         "value_intelligence_per_dollar_task": 1584.2,
         "safety_composite": 24.5,
-        "throughput_tps": 150.44,
+        "throughput_tps": 145.42,
         "speed_tier": 2,
-        "latency_ttft_seconds": 40.77,
+        "latency_ttft_seconds": 52.74,
         "latency_tier": 0
       }
     },
@@ -5556,11 +5547,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 35.98,
-        "ttft_seconds_total": 3.17,
-        "ttft_seconds_answer": 58.75,
+        "output_speed_tps": 35.26,
+        "ttft_seconds_total": 3.54,
+        "ttft_seconds_answer": 60.27,
         "end_to_end_500tok": {
-          "total": 72.65,
+          "total": 74.45,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -5581,9 +5572,9 @@
         "value_intelligence_per_dollar_blend": 8.0,
         "value_intelligence_per_dollar_task": 199.5,
         "safety_composite": 33.0,
-        "throughput_tps": 35.98,
+        "throughput_tps": 35.26,
         "speed_tier": 0,
-        "latency_ttft_seconds": 58.75,
+        "latency_ttft_seconds": 60.27,
         "latency_tier": 0
       }
     },
@@ -5766,11 +5757,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 134.17,
-        "ttft_seconds_total": 7.04,
-        "ttft_seconds_answer": 7.04,
+        "output_speed_tps": 133.15,
+        "ttft_seconds_total": 9.24,
+        "ttft_seconds_answer": 9.24,
         "end_to_end_500tok": {
-          "total": 10.77,
+          "total": 13.0,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -5791,9 +5782,9 @@
         "value_intelligence_per_dollar_blend": 104.4,
         "value_intelligence_per_dollar_task": 2174.1,
         "safety_composite": 23.3,
-        "throughput_tps": 134.17,
+        "throughput_tps": 133.15,
         "speed_tier": 2,
-        "latency_ttft_seconds": 7.04,
+        "latency_ttft_seconds": 9.24,
         "latency_tier": 1
       }
     },
@@ -5882,11 +5873,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 106.73,
-        "ttft_seconds_total": 1.67,
-        "ttft_seconds_answer": 1.67,
+        "output_speed_tps": 102.92,
+        "ttft_seconds_total": 1.84,
+        "ttft_seconds_answer": 1.84,
         "end_to_end_500tok": {
-          "total": 6.35,
+          "total": 6.69,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -5907,9 +5898,9 @@
         "value_intelligence_per_dollar_blend": 10.4,
         "value_intelligence_per_dollar_task": 392.9,
         "safety_composite": 24.8,
-        "throughput_tps": 106.73,
+        "throughput_tps": 102.92,
         "speed_tier": 2,
-        "latency_ttft_seconds": 1.67,
+        "latency_ttft_seconds": 1.84,
         "latency_tier": 2
       }
     },
@@ -5999,10 +5990,10 @@
       "output_tokens_per_task": null,
       "performance": {
         "output_speed_tps": 217.28,
-        "ttft_seconds_total": 17.63,
-        "ttft_seconds_answer": 17.63,
+        "ttft_seconds_total": 15.75,
+        "ttft_seconds_answer": 15.75,
         "end_to_end_500tok": {
-          "total": 19.93,
+          "total": 18.06,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -6024,7 +6015,7 @@
         "safety_composite": 41.6,
         "throughput_tps": 217.28,
         "speed_tier": 2,
-        "latency_ttft_seconds": 17.63,
+        "latency_ttft_seconds": 15.75,
         "latency_tier": 1
       }
     },
@@ -6103,11 +6094,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 80.3,
-        "ttft_seconds_total": 1.76,
-        "ttft_seconds_answer": 56.25,
+        "output_speed_tps": 77.3,
+        "ttft_seconds_total": 1.78,
+        "ttft_seconds_answer": 58.38,
         "end_to_end_500tok": {
-          "total": 62.47,
+          "total": 64.85,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -6128,9 +6119,9 @@
         "value_intelligence_per_dollar_blend": 83.8,
         "value_intelligence_per_dollar_task": 955.1,
         "safety_composite": 21.6,
-        "throughput_tps": 80.3,
+        "throughput_tps": 77.3,
         "speed_tier": 1,
-        "latency_ttft_seconds": 56.25,
+        "latency_ttft_seconds": 58.38,
         "latency_tier": 0
       }
     },
@@ -6219,11 +6210,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 50.93,
-        "ttft_seconds_total": 2.81,
-        "ttft_seconds_answer": 90.21,
+        "output_speed_tps": 53.41,
+        "ttft_seconds_total": 2.71,
+        "ttft_seconds_answer": 86.06,
         "end_to_end_500tok": {
-          "total": 100.03,
+          "total": 95.42,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -6244,9 +6235,9 @@
         "value_intelligence_per_dollar_blend": 26.4,
         "value_intelligence_per_dollar_task": 123.6,
         "safety_composite": 53.8,
-        "throughput_tps": 50.93,
+        "throughput_tps": 53.41,
         "speed_tier": 1,
-        "latency_ttft_seconds": 90.21,
+        "latency_ttft_seconds": 86.06,
         "latency_tier": 0
       }
     },
@@ -6335,11 +6326,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 81.34,
-        "ttft_seconds_total": 2.33,
-        "ttft_seconds_answer": 2.33,
+        "output_speed_tps": 77.32,
+        "ttft_seconds_total": 1.93,
+        "ttft_seconds_answer": 1.93,
         "end_to_end_500tok": {
-          "total": 8.48,
+          "total": 8.4,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -6360,9 +6351,9 @@
         "value_intelligence_per_dollar_blend": 4.0,
         "value_intelligence_per_dollar_task": 171.9,
         "safety_composite": 25.0,
-        "throughput_tps": 81.34,
+        "throughput_tps": 77.32,
         "speed_tier": 1,
-        "latency_ttft_seconds": 2.33,
+        "latency_ttft_seconds": 1.93,
         "latency_tier": 2
       }
     },
@@ -6441,11 +6432,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 64.93,
-        "ttft_seconds_total": 3.03,
-        "ttft_seconds_answer": 33.83,
+        "output_speed_tps": 62.48,
+        "ttft_seconds_total": 3.02,
+        "ttft_seconds_answer": 35.03,
         "end_to_end_500tok": {
-          "total": 41.53,
+          "total": 43.04,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -6466,9 +6457,9 @@
         "value_intelligence_per_dollar_blend": 39.7,
         "value_intelligence_per_dollar_task": 236.7,
         "safety_composite": 37.7,
-        "throughput_tps": 64.93,
+        "throughput_tps": 62.48,
         "speed_tier": 1,
-        "latency_ttft_seconds": 33.83,
+        "latency_ttft_seconds": 35.03,
         "latency_tier": 0
       }
     },
@@ -6661,11 +6652,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 66.1,
+        "output_speed_tps": 63.88,
         "ttft_seconds_total": 1.56,
         "ttft_seconds_answer": 1.56,
         "end_to_end_500tok": {
-          "total": 9.13,
+          "total": 9.39,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -6685,7 +6676,7 @@
       "derived": {
         "value_intelligence_per_dollar_blend": 4.4,
         "safety_composite": 45.1,
-        "throughput_tps": 66.1,
+        "throughput_tps": 63.88,
         "speed_tier": 1,
         "latency_ttft_seconds": 1.56,
         "latency_tier": 2
@@ -6766,11 +6757,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 169.67,
-        "ttft_seconds_total": 0.61,
-        "ttft_seconds_answer": 12.35,
+        "output_speed_tps": 162.41,
+        "ttft_seconds_total": 0.57,
+        "ttft_seconds_answer": 12.83,
         "end_to_end_500tok": {
-          "total": 15.29,
+          "total": 15.91,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -6791,9 +6782,9 @@
         "value_intelligence_per_dollar_blend": 20.2,
         "value_intelligence_per_dollar_task": 64.2,
         "safety_composite": 24.3,
-        "throughput_tps": 169.67,
+        "throughput_tps": 162.41,
         "speed_tier": 2,
-        "latency_ttft_seconds": 12.35,
+        "latency_ttft_seconds": 12.83,
         "latency_tier": 1
       }
     },
@@ -6882,11 +6873,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 48.5,
-        "ttft_seconds_total": 2.98,
-        "ttft_seconds_answer": 48.94,
+        "output_speed_tps": 49.05,
+        "ttft_seconds_total": 2.93,
+        "ttft_seconds_answer": 48.37,
         "end_to_end_500tok": {
-          "total": 59.25,
+          "total": 58.56,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -6907,9 +6898,9 @@
         "value_intelligence_per_dollar_blend": 25.2,
         "value_intelligence_per_dollar_task": 193.8,
         "safety_composite": 27.8,
-        "throughput_tps": 48.5,
+        "throughput_tps": 49.05,
         "speed_tier": 0,
-        "latency_ttft_seconds": 48.94,
+        "latency_ttft_seconds": 48.37,
         "latency_tier": 0
       }
     },
@@ -6988,11 +6979,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 65.86,
-        "ttft_seconds_total": 2.91,
-        "ttft_seconds_answer": 33.28,
+        "output_speed_tps": 64.46,
+        "ttft_seconds_total": 2.97,
+        "ttft_seconds_answer": 34.0,
         "end_to_end_500tok": {
-          "total": 40.87,
+          "total": 41.76,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -7013,9 +7004,9 @@
         "value_intelligence_per_dollar_blend": 38.3,
         "value_intelligence_per_dollar_task": 258.6,
         "safety_composite": 45.4,
-        "throughput_tps": 65.86,
+        "throughput_tps": 64.46,
         "speed_tier": 1,
-        "latency_ttft_seconds": 33.28,
+        "latency_ttft_seconds": 34.0,
         "latency_tier": 0
       }
     },
@@ -7104,11 +7095,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 69.32,
-        "ttft_seconds_total": 1.94,
-        "ttft_seconds_answer": 1.94,
+        "output_speed_tps": 66.15,
+        "ttft_seconds_total": 1.77,
+        "ttft_seconds_answer": 1.77,
         "end_to_end_500tok": {
-          "total": 9.15,
+          "total": 9.33,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -7129,9 +7120,9 @@
         "value_intelligence_per_dollar_blend": 10.6,
         "value_intelligence_per_dollar_task": 69.6,
         "safety_composite": 45.8,
-        "throughput_tps": 69.32,
+        "throughput_tps": 66.15,
         "speed_tier": 1,
-        "latency_ttft_seconds": 1.94,
+        "latency_ttft_seconds": 1.77,
         "latency_tier": 2
       }
     },
@@ -7210,11 +7201,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 79.54,
-        "ttft_seconds_total": 2.34,
-        "ttft_seconds_answer": 27.48,
+        "output_speed_tps": 65.28,
+        "ttft_seconds_total": 2.39,
+        "ttft_seconds_answer": 33.02,
         "end_to_end_500tok": {
-          "total": 33.77,
+          "total": 40.68,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -7235,9 +7226,9 @@
         "value_intelligence_per_dollar_blend": 24.0,
         "value_intelligence_per_dollar_task": 124.8,
         "safety_composite": 36.3,
-        "throughput_tps": 79.54,
+        "throughput_tps": 65.28,
         "speed_tier": 1,
-        "latency_ttft_seconds": 27.48,
+        "latency_ttft_seconds": 33.02,
         "latency_tier": 0
       }
     },
@@ -7326,11 +7317,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 78.8,
+        "output_speed_tps": 77.33,
         "ttft_seconds_total": 3.35,
-        "ttft_seconds_answer": 28.73,
+        "ttft_seconds_answer": 29.21,
         "end_to_end_500tok": {
-          "total": 35.08,
+          "total": 35.68,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -7351,9 +7342,9 @@
         "value_intelligence_per_dollar_blend": 183.5,
         "value_intelligence_per_dollar_task": 1248.8,
         "safety_composite": 32.4,
-        "throughput_tps": 78.8,
+        "throughput_tps": 77.33,
         "speed_tier": 1,
-        "latency_ttft_seconds": 28.73,
+        "latency_ttft_seconds": 29.21,
         "latency_tier": 0
       }
     },
@@ -7432,11 +7423,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 120.77,
-        "ttft_seconds_total": 1.42,
-        "ttft_seconds_answer": 47.89,
+        "output_speed_tps": 118.29,
+        "ttft_seconds_total": 1.47,
+        "ttft_seconds_answer": 48.92,
         "end_to_end_500tok": {
-          "total": 52.03,
+          "total": 53.15,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -7457,9 +7448,9 @@
         "value_intelligence_per_dollar_blend": 234.0,
         "value_intelligence_per_dollar_task": 673.9,
         "safety_composite": 19.2,
-        "throughput_tps": 120.77,
+        "throughput_tps": 118.29,
         "speed_tier": 2,
-        "latency_ttft_seconds": 47.89,
+        "latency_ttft_seconds": 48.92,
         "latency_tier": 0
       }
     },
@@ -7548,11 +7539,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 106.21,
-        "ttft_seconds_total": 2.09,
-        "ttft_seconds_answer": 2.09,
+        "output_speed_tps": 94.22,
+        "ttft_seconds_total": 1.55,
+        "ttft_seconds_answer": 1.55,
         "end_to_end_500tok": {
-          "total": 6.8,
+          "total": 6.85,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -7573,9 +7564,9 @@
         "value_intelligence_per_dollar_blend": 3.4,
         "value_intelligence_per_dollar_task": 139.4,
         "safety_composite": 21.1,
-        "throughput_tps": 106.21,
-        "speed_tier": 2,
-        "latency_ttft_seconds": 2.09,
+        "throughput_tps": 94.22,
+        "speed_tier": 1,
+        "latency_ttft_seconds": 1.55,
         "latency_tier": 2
       }
     },
@@ -7664,11 +7655,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 140.25,
-        "ttft_seconds_total": 1.58,
-        "ttft_seconds_answer": 15.84,
+        "output_speed_tps": 140.2,
+        "ttft_seconds_total": 1.56,
+        "ttft_seconds_answer": 15.82,
         "end_to_end_500tok": {
-          "total": 19.41,
+          "total": 19.39,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -7688,9 +7679,9 @@
       "derived": {
         "value_intelligence_per_dollar_blend": 41.7,
         "safety_composite": 19.8,
-        "throughput_tps": 140.25,
+        "throughput_tps": 140.2,
         "speed_tier": 2,
-        "latency_ttft_seconds": 15.84,
+        "latency_ttft_seconds": 15.82,
         "latency_tier": 1
       }
     },
@@ -7769,11 +7760,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 48.55,
-        "ttft_seconds_total": 2.54,
-        "ttft_seconds_answer": 43.74,
+        "output_speed_tps": 53.15,
+        "ttft_seconds_total": 2.43,
+        "ttft_seconds_answer": 40.07,
         "end_to_end_500tok": {
-          "total": 54.04,
+          "total": 49.47,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -7794,9 +7785,9 @@
         "value_intelligence_per_dollar_blend": 80.1,
         "value_intelligence_per_dollar_task": 186.6,
         "safety_composite": 62.0,
-        "throughput_tps": 48.55,
-        "speed_tier": 0,
-        "latency_ttft_seconds": 43.74,
+        "throughput_tps": 53.15,
+        "speed_tier": 1,
+        "latency_ttft_seconds": 40.07,
         "latency_tier": 0
       }
     },
@@ -7991,10 +7982,10 @@
       "output_tokens_per_task": null,
       "performance": {
         "output_speed_tps": 102.61,
-        "ttft_seconds_total": 1.38,
-        "ttft_seconds_answer": 1.38,
+        "ttft_seconds_total": 1.32,
+        "ttft_seconds_answer": 1.32,
         "end_to_end_500tok": {
-          "total": 6.26,
+          "total": 6.19,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -8017,7 +8008,7 @@
         "safety_composite": 22.6,
         "throughput_tps": 102.61,
         "speed_tier": 2,
-        "latency_ttft_seconds": 1.38,
+        "latency_ttft_seconds": 1.32,
         "latency_tier": 2
       }
     },
@@ -8096,11 +8087,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 331.77,
+        "output_speed_tps": 345.08,
         "ttft_seconds_total": 0.5,
-        "ttft_seconds_answer": 6.53,
+        "ttft_seconds_answer": 6.29,
         "end_to_end_500tok": {
-          "total": 8.03,
+          "total": 7.74,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -8121,9 +8112,9 @@
         "value_intelligence_per_dollar_blend": 60.6,
         "value_intelligence_per_dollar_task": 315.1,
         "safety_composite": 38.7,
-        "throughput_tps": 331.77,
+        "throughput_tps": 345.08,
         "speed_tier": 2,
-        "latency_ttft_seconds": 6.53,
+        "latency_ttft_seconds": 6.29,
         "latency_tier": 1
       }
     },
@@ -8212,11 +8203,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 62.41,
-        "ttft_seconds_total": 3.11,
-        "ttft_seconds_answer": 35.16,
+        "output_speed_tps": 59.84,
+        "ttft_seconds_total": 2.99,
+        "ttft_seconds_answer": 36.41,
         "end_to_end_500tok": {
-          "total": 43.17,
+          "total": 44.77,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -8236,9 +8227,9 @@
       "derived": {
         "value_intelligence_per_dollar_blend": 14.1,
         "safety_composite": 48.7,
-        "throughput_tps": 62.41,
+        "throughput_tps": 59.84,
         "speed_tier": 1,
-        "latency_ttft_seconds": 35.16,
+        "latency_ttft_seconds": 36.41,
         "latency_tier": 0
       }
     },
@@ -8327,11 +8318,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 133.23,
-        "ttft_seconds_total": 0.75,
-        "ttft_seconds_answer": 29.2,
+        "output_speed_tps": 134.81,
+        "ttft_seconds_total": 0.73,
+        "ttft_seconds_answer": 28.86,
         "end_to_end_500tok": {
-          "total": 32.95,
+          "total": 32.57,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -8352,9 +8343,9 @@
         "value_intelligence_per_dollar_blend": 19.1,
         "value_intelligence_per_dollar_task": 166.1,
         "safety_composite": 58.4,
-        "throughput_tps": 133.23,
+        "throughput_tps": 134.81,
         "speed_tier": 2,
-        "latency_ttft_seconds": 29.2,
+        "latency_ttft_seconds": 28.86,
         "latency_tier": 0
       }
     },
@@ -8443,11 +8434,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 182.92,
-        "ttft_seconds_total": 5.98,
-        "ttft_seconds_answer": 5.98,
+        "output_speed_tps": 184.37,
+        "ttft_seconds_total": 8.43,
+        "ttft_seconds_answer": 8.43,
         "end_to_end_500tok": {
-          "total": 8.71,
+          "total": 11.15,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -8468,9 +8459,9 @@
         "value_intelligence_per_dollar_blend": 24.2,
         "value_intelligence_per_dollar_task": 82.7,
         "safety_composite": 22.3,
-        "throughput_tps": 182.92,
+        "throughput_tps": 184.37,
         "speed_tier": 2,
-        "latency_ttft_seconds": 5.98,
+        "latency_ttft_seconds": 8.43,
         "latency_tier": 1
       }
     },
@@ -8673,11 +8664,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 61.97,
-        "ttft_seconds_total": 0.59,
-        "ttft_seconds_answer": 32.86,
+        "output_speed_tps": 60.38,
+        "ttft_seconds_total": 0.58,
+        "ttft_seconds_answer": 33.71,
         "end_to_end_500tok": {
-          "total": 40.93,
+          "total": 41.99,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -8698,9 +8689,9 @@
         "value_intelligence_per_dollar_blend": 32.5,
         "value_intelligence_per_dollar_task": 180.5,
         "safety_composite": 20.4,
-        "throughput_tps": 61.97,
+        "throughput_tps": 60.38,
         "speed_tier": 1,
-        "latency_ttft_seconds": 32.86,
+        "latency_ttft_seconds": 33.71,
         "latency_tier": 0
       }
     },
@@ -8789,11 +8780,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 56.5,
-        "ttft_seconds_total": 2.06,
-        "ttft_seconds_answer": 100.28,
+        "output_speed_tps": 55.71,
+        "ttft_seconds_total": 2.04,
+        "ttft_seconds_answer": 101.66,
         "end_to_end_500tok": {
-          "total": 109.13,
+          "total": 110.64,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -8814,9 +8805,9 @@
         "value_intelligence_per_dollar_blend": 36.2,
         "value_intelligence_per_dollar_task": 113.4,
         "safety_composite": 55.4,
-        "throughput_tps": 56.5,
+        "throughput_tps": 55.71,
         "speed_tier": 1,
-        "latency_ttft_seconds": 100.28,
+        "latency_ttft_seconds": 101.66,
         "latency_tier": 0
       }
     },
@@ -8905,11 +8896,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 102.9,
+        "output_speed_tps": 102.33,
         "ttft_seconds_total": 1.96,
         "ttft_seconds_answer": 1.96,
         "end_to_end_500tok": {
-          "total": 6.82,
+          "total": 6.85,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -8929,7 +8920,7 @@
       "derived": {
         "value_intelligence_per_dollar_blend": 7.1,
         "safety_composite": 26.5,
-        "throughput_tps": 102.9,
+        "throughput_tps": 102.33,
         "speed_tier": 2,
         "latency_ttft_seconds": 1.96,
         "latency_tier": 2
@@ -9114,11 +9105,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 129.52,
-        "ttft_seconds_total": 1.88,
-        "ttft_seconds_answer": 17.32,
+        "output_speed_tps": 130.14,
+        "ttft_seconds_total": 2.03,
+        "ttft_seconds_answer": 17.4,
         "end_to_end_500tok": {
-          "total": 21.18,
+          "total": 21.24,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -9138,9 +9129,9 @@
       "derived": {
         "value_intelligence_per_dollar_blend": 70.9,
         "safety_composite": 23.0,
-        "throughput_tps": 129.52,
+        "throughput_tps": 130.14,
         "speed_tier": 2,
-        "latency_ttft_seconds": 17.32,
+        "latency_ttft_seconds": 17.4,
         "latency_tier": 1
       }
     },
@@ -9229,11 +9220,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 159.4,
-        "ttft_seconds_total": 3.08,
-        "ttft_seconds_answer": 3.08,
+        "output_speed_tps": 170.28,
+        "ttft_seconds_total": 3.9,
+        "ttft_seconds_answer": 3.9,
         "end_to_end_500tok": {
-          "total": 6.22,
+          "total": 6.84,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -9254,9 +9245,9 @@
         "value_intelligence_per_dollar_blend": 86.3,
         "value_intelligence_per_dollar_task": 266.0,
         "safety_composite": 31.4,
-        "throughput_tps": 159.4,
+        "throughput_tps": 170.28,
         "speed_tier": 2,
-        "latency_ttft_seconds": 3.08,
+        "latency_ttft_seconds": 3.9,
         "latency_tier": 2
       }
     },
@@ -9439,11 +9430,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 121.89,
-        "ttft_seconds_total": 1.6,
-        "ttft_seconds_answer": 11.77,
+        "output_speed_tps": 119.59,
+        "ttft_seconds_total": 1.52,
+        "ttft_seconds_answer": 11.89,
         "end_to_end_500tok": {
-          "total": 15.88,
+          "total": 16.07,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -9464,9 +9455,9 @@
         "value_intelligence_per_dollar_blend": 216.7,
         "value_intelligence_per_dollar_task": 865.0,
         "safety_composite": 22.2,
-        "throughput_tps": 121.89,
+        "throughput_tps": 119.59,
         "speed_tier": 2,
-        "latency_ttft_seconds": 11.77,
+        "latency_ttft_seconds": 11.89,
         "latency_tier": 1
       }
     },
@@ -9555,11 +9546,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 143.97,
+        "output_speed_tps": 141.87,
         "ttft_seconds_total": 2.17,
         "ttft_seconds_answer": 2.17,
         "end_to_end_500tok": {
-          "total": 5.64,
+          "total": 5.69,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -9580,7 +9571,7 @@
         "value_intelligence_per_dollar_blend": 86.5,
         "value_intelligence_per_dollar_task": 3443.4,
         "safety_composite": 21.0,
-        "throughput_tps": 143.97,
+        "throughput_tps": 141.87,
         "speed_tier": 2,
         "latency_ttft_seconds": 2.17,
         "latency_tier": 2
@@ -9671,11 +9662,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 396.82,
-        "ttft_seconds_total": 1.91,
-        "ttft_seconds_answer": 8.12,
+        "output_speed_tps": 403.85,
+        "ttft_seconds_total": 1.92,
+        "ttft_seconds_answer": 8.02,
         "end_to_end_500tok": {
-          "total": 9.38,
+          "total": 9.26,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -9696,9 +9687,9 @@
         "value_intelligence_per_dollar_blend": 37.0,
         "value_intelligence_per_dollar_task": 109.6,
         "safety_composite": 54.2,
-        "throughput_tps": 396.82,
+        "throughput_tps": 403.85,
         "speed_tier": 2,
-        "latency_ttft_seconds": 8.12,
+        "latency_ttft_seconds": 8.02,
         "latency_tier": 1
       }
     },
@@ -9903,11 +9894,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 144.4,
-        "ttft_seconds_total": 22.57,
-        "ttft_seconds_answer": 22.57,
+        "output_speed_tps": 158.09,
+        "ttft_seconds_total": 19.39,
+        "ttft_seconds_answer": 19.39,
         "end_to_end_500tok": {
-          "total": 26.03,
+          "total": 22.55,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -9928,10 +9919,10 @@
         "value_intelligence_per_dollar_blend": 24.3,
         "value_intelligence_per_dollar_task": 78.5,
         "safety_composite": 59.7,
-        "throughput_tps": 144.4,
+        "throughput_tps": 158.09,
         "speed_tier": 2,
-        "latency_ttft_seconds": 22.57,
-        "latency_tier": 0
+        "latency_ttft_seconds": 19.39,
+        "latency_tier": 1
       }
     },
     {
@@ -10019,11 +10010,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 216.35,
+        "output_speed_tps": 219.23,
         "ttft_seconds_total": 12.49,
         "ttft_seconds_answer": 12.49,
         "end_to_end_500tok": {
-          "total": 14.8,
+          "total": 14.77,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -10043,7 +10034,7 @@
       "derived": {
         "value_intelligence_per_dollar_blend": 12.7,
         "safety_composite": 64.7,
-        "throughput_tps": 216.35,
+        "throughput_tps": 219.23,
         "speed_tier": 2,
         "latency_ttft_seconds": 12.49,
         "latency_tier": 1
@@ -10124,11 +10115,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 407.03,
+        "output_speed_tps": 399.12,
         "ttft_seconds_total": 2.7,
-        "ttft_seconds_answer": 7.61,
+        "ttft_seconds_answer": 7.71,
         "end_to_end_500tok": {
-          "total": 8.84,
+          "total": 8.96,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -10149,9 +10140,9 @@
         "value_intelligence_per_dollar_blend": 343.8,
         "value_intelligence_per_dollar_task": 1003.2,
         "safety_composite": 48.7,
-        "throughput_tps": 407.03,
+        "throughput_tps": 399.12,
         "speed_tier": 2,
-        "latency_ttft_seconds": 7.61,
+        "latency_ttft_seconds": 7.71,
         "latency_tier": 1
       }
     },
@@ -10240,11 +10231,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 41.19,
-        "ttft_seconds_total": 3.94,
-        "ttft_seconds_answer": 141.74,
+        "output_speed_tps": 37.69,
+        "ttft_seconds_total": 4.08,
+        "ttft_seconds_answer": 154.67,
         "end_to_end_500tok": {
-          "total": 153.87,
+          "total": 167.94,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -10265,9 +10256,9 @@
         "value_intelligence_per_dollar_blend": 37.0,
         "value_intelligence_per_dollar_task": 201.6,
         "safety_composite": 45.5,
-        "throughput_tps": 41.19,
+        "throughput_tps": 37.69,
         "speed_tier": 0,
-        "latency_ttft_seconds": 141.74,
+        "latency_ttft_seconds": 154.67,
         "latency_tier": 0
       }
     },
@@ -10452,11 +10443,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 407.07,
-        "ttft_seconds_total": 8.62,
-        "ttft_seconds_answer": 8.62,
+        "output_speed_tps": 370.13,
+        "ttft_seconds_total": 8.63,
+        "ttft_seconds_answer": 8.63,
         "end_to_end_500tok": {
-          "total": 9.85,
+          "total": 9.98,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -10477,9 +10468,9 @@
         "value_intelligence_per_dollar_blend": 44.0,
         "value_intelligence_per_dollar_task": 388.0,
         "safety_composite": 54.3,
-        "throughput_tps": 407.07,
+        "throughput_tps": 370.13,
         "speed_tier": 2,
-        "latency_ttft_seconds": 8.62,
+        "latency_ttft_seconds": 8.63,
         "latency_tier": 1
       }
     },
@@ -10872,11 +10863,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 125.58,
-        "ttft_seconds_total": 15.09,
-        "ttft_seconds_answer": 15.09,
+        "output_speed_tps": 128.45,
+        "ttft_seconds_total": 12.7,
+        "ttft_seconds_answer": 12.7,
         "end_to_end_500tok": {
-          "total": 19.08,
+          "total": 16.59,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -10896,9 +10887,9 @@
       "derived": {
         "value_intelligence_per_dollar_blend": 23.7,
         "safety_composite": 64.6,
-        "throughput_tps": 125.58,
+        "throughput_tps": 128.45,
         "speed_tier": 2,
-        "latency_ttft_seconds": 15.09,
+        "latency_ttft_seconds": 12.7,
         "latency_tier": 1
       }
     },
@@ -10988,10 +10979,10 @@
       "output_tokens_per_task": null,
       "performance": {
         "output_speed_tps": 119.1,
-        "ttft_seconds_total": 5.58,
-        "ttft_seconds_answer": 5.58,
+        "ttft_seconds_total": 5.7,
+        "ttft_seconds_answer": 5.7,
         "end_to_end_500tok": {
-          "total": 9.77,
+          "total": 9.9,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -11013,7 +11004,7 @@
         "safety_composite": 64.1,
         "throughput_tps": 119.1,
         "speed_tier": 2,
-        "latency_ttft_seconds": 5.58,
+        "latency_ttft_seconds": 5.7,
         "latency_tier": 1
       }
     },
@@ -11102,11 +11093,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 31.75,
-        "ttft_seconds_total": 1.83,
-        "ttft_seconds_answer": 1.83,
+        "output_speed_tps": 31.97,
+        "ttft_seconds_total": 1.84,
+        "ttft_seconds_answer": 1.84,
         "end_to_end_500tok": {
-          "total": 17.58,
+          "total": 17.48,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -11126,9 +11117,9 @@
       "derived": {
         "value_intelligence_per_dollar_blend": 16.9,
         "safety_composite": 36.3,
-        "throughput_tps": 31.75,
+        "throughput_tps": 31.97,
         "speed_tier": 0,
-        "latency_ttft_seconds": 1.83,
+        "latency_ttft_seconds": 1.84,
         "latency_tier": 2
       }
     },
@@ -11321,11 +11312,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 183.69,
+        "output_speed_tps": 184.74,
         "ttft_seconds_total": 0.8,
         "ttft_seconds_answer": 0.8,
         "end_to_end_500tok": {
-          "total": 3.53,
+          "total": 3.51,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -11345,7 +11336,7 @@
       "derived": {
         "value_intelligence_per_dollar_blend": 10.6,
         "safety_composite": 29.7,
-        "throughput_tps": 183.69,
+        "throughput_tps": 184.74,
         "speed_tier": 2,
         "latency_ttft_seconds": 0.8,
         "latency_tier": 2
@@ -11436,11 +11427,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 135.17,
-        "ttft_seconds_total": 0.76,
-        "ttft_seconds_answer": 0.76,
+        "output_speed_tps": 128.98,
+        "ttft_seconds_total": 0.73,
+        "ttft_seconds_answer": 0.73,
         "end_to_end_500tok": {
-          "total": 4.46,
+          "total": 4.61,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -11461,9 +11452,9 @@
         "value_intelligence_per_dollar_blend": 2.9,
         "value_intelligence_per_dollar_task": 89.0,
         "safety_composite": 18.7,
-        "throughput_tps": 135.17,
+        "throughput_tps": 128.98,
         "speed_tier": 2,
-        "latency_ttft_seconds": 0.76,
+        "latency_ttft_seconds": 0.73,
         "latency_tier": 2
       }
     },
@@ -11552,11 +11543,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 59.49,
-        "ttft_seconds_total": 2.01,
-        "ttft_seconds_answer": 2.01,
+        "output_speed_tps": 65.3,
+        "ttft_seconds_total": 1.91,
+        "ttft_seconds_answer": 1.91,
         "end_to_end_500tok": {
-          "total": 10.42,
+          "total": 9.57,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -11576,9 +11567,9 @@
       "derived": {
         "value_intelligence_per_dollar_blend": 24.4,
         "safety_composite": 47.7,
-        "throughput_tps": 59.49,
+        "throughput_tps": 65.3,
         "speed_tier": 1,
-        "latency_ttft_seconds": 2.01,
+        "latency_ttft_seconds": 1.91,
         "latency_tier": 2
       }
     },
@@ -11762,10 +11753,10 @@
       "output_tokens_per_task": null,
       "performance": {
         "output_speed_tps": 162.42,
-        "ttft_seconds_total": 0.79,
-        "ttft_seconds_answer": 13.11,
+        "ttft_seconds_total": 0.78,
+        "ttft_seconds_answer": 13.09,
         "end_to_end_500tok": {
-          "total": 16.18,
+          "total": 16.17,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -11788,7 +11779,7 @@
         "safety_composite": 24.9,
         "throughput_tps": 162.42,
         "speed_tier": 2,
-        "latency_ttft_seconds": 13.11,
+        "latency_ttft_seconds": 13.09,
         "latency_tier": 1
       }
     },
@@ -11962,10 +11953,10 @@
       "output_tokens_per_task": null,
       "performance": {
         "output_speed_tps": 198.95,
-        "ttft_seconds_total": 1.49,
-        "ttft_seconds_answer": 1.49,
+        "ttft_seconds_total": 1.39,
+        "ttft_seconds_answer": 1.39,
         "end_to_end_500tok": {
-          "total": 4.01,
+          "total": 3.91,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -11987,7 +11978,7 @@
         "safety_composite": 53.7,
         "throughput_tps": 198.95,
         "speed_tier": 2,
-        "latency_ttft_seconds": 1.49,
+        "latency_ttft_seconds": 1.39,
         "latency_tier": 2
       }
     },
@@ -12076,11 +12067,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 140.58,
+        "output_speed_tps": 133.24,
         "ttft_seconds_total": 0.65,
         "ttft_seconds_answer": 0.65,
         "end_to_end_500tok": {
-          "total": 4.21,
+          "total": 4.4,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -12101,7 +12092,7 @@
         "value_intelligence_per_dollar_blend": 5.6,
         "value_intelligence_per_dollar_task": 172.4,
         "safety_composite": 16.8,
-        "throughput_tps": 140.58,
+        "throughput_tps": 133.24,
         "speed_tier": 2,
         "latency_ttft_seconds": 0.65,
         "latency_tier": 2
@@ -12192,11 +12183,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 65.28,
-        "ttft_seconds_total": 5.88,
-        "ttft_seconds_answer": 36.51,
+        "output_speed_tps": 63.23,
+        "ttft_seconds_total": 5.9,
+        "ttft_seconds_answer": 37.53,
         "end_to_end_500tok": {
-          "total": 44.17,
+          "total": 45.43,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -12216,9 +12207,9 @@
       "derived": {
         "value_intelligence_per_dollar_blend": 42.2,
         "safety_composite": 24.9,
-        "throughput_tps": 65.28,
+        "throughput_tps": 63.23,
         "speed_tier": 1,
-        "latency_ttft_seconds": 36.51,
+        "latency_ttft_seconds": 37.53,
         "latency_tier": 0
       }
     },
@@ -12595,10 +12586,10 @@
       "output_tokens_per_task": null,
       "performance": {
         "output_speed_tps": 44.24,
-        "ttft_seconds_total": 2.55,
-        "ttft_seconds_answer": 47.76,
+        "ttft_seconds_total": 2.56,
+        "ttft_seconds_answer": 47.77,
         "end_to_end_500tok": {
-          "total": 59.06,
+          "total": 59.07,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -12621,7 +12612,7 @@
         "safety_composite": 28.3,
         "throughput_tps": 44.24,
         "speed_tier": 0,
-        "latency_ttft_seconds": 47.76,
+        "latency_ttft_seconds": 47.77,
         "latency_tier": 0
       }
     },
@@ -12710,11 +12701,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 138.7,
-        "ttft_seconds_total": 2.07,
-        "ttft_seconds_answer": 2.07,
+        "output_speed_tps": 137.04,
+        "ttft_seconds_total": 1.85,
+        "ttft_seconds_answer": 1.85,
         "end_to_end_500tok": {
-          "total": 5.68,
+          "total": 5.5,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -12735,9 +12726,9 @@
         "value_intelligence_per_dollar_blend": 75.2,
         "value_intelligence_per_dollar_task": 3846.6,
         "safety_composite": 19.6,
-        "throughput_tps": 138.7,
+        "throughput_tps": 137.04,
         "speed_tier": 2,
-        "latency_ttft_seconds": 2.07,
+        "latency_ttft_seconds": 1.85,
         "latency_tier": 2
       }
     },
@@ -12941,11 +12932,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 125.31,
-        "ttft_seconds_total": 1.84,
-        "ttft_seconds_answer": 17.8,
+        "output_speed_tps": 122.81,
+        "ttft_seconds_total": 1.92,
+        "ttft_seconds_answer": 18.2,
         "end_to_end_500tok": {
-          "total": 21.79,
+          "total": 22.27,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -12966,9 +12957,9 @@
         "value_intelligence_per_dollar_blend": 29.9,
         "value_intelligence_per_dollar_task": 130.0,
         "safety_composite": 20.9,
-        "throughput_tps": 125.31,
+        "throughput_tps": 122.81,
         "speed_tier": 2,
-        "latency_ttft_seconds": 17.8,
+        "latency_ttft_seconds": 18.2,
         "latency_tier": 1
       }
     },
@@ -13057,11 +13048,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 121.0,
+        "output_speed_tps": 124.85,
         "ttft_seconds_total": 1.47,
-        "ttft_seconds_answer": 46.06,
+        "ttft_seconds_answer": 44.68,
         "end_to_end_500tok": {
-          "total": 50.19,
+          "total": 48.69,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -13082,9 +13073,9 @@
         "value_intelligence_per_dollar_blend": 57.4,
         "value_intelligence_per_dollar_task": 165.1,
         "safety_composite": 42.6,
-        "throughput_tps": 121.0,
+        "throughput_tps": 124.85,
         "speed_tier": 2,
-        "latency_ttft_seconds": 46.06,
+        "latency_ttft_seconds": 44.68,
         "latency_tier": 0
       }
     },
@@ -13163,11 +13154,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 74.54,
-        "ttft_seconds_total": 1.81,
-        "ttft_seconds_answer": 1.81,
+        "output_speed_tps": 72.91,
+        "ttft_seconds_total": 1.79,
+        "ttft_seconds_answer": 1.79,
         "end_to_end_500tok": {
-          "total": 8.52,
+          "total": 8.65,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -13187,9 +13178,9 @@
       "derived": {
         "value_intelligence_per_dollar_blend": 59.1,
         "safety_composite": 20.1,
-        "throughput_tps": 74.54,
+        "throughput_tps": 72.91,
         "speed_tier": 1,
-        "latency_ttft_seconds": 1.81,
+        "latency_ttft_seconds": 1.79,
         "latency_tier": 2
       }
     },
@@ -13278,11 +13269,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 136.83,
-        "ttft_seconds_total": 3.95,
-        "ttft_seconds_answer": 18.56,
+        "output_speed_tps": 129.87,
+        "ttft_seconds_total": 4.04,
+        "ttft_seconds_answer": 19.44,
         "end_to_end_500tok": {
-          "total": 22.22,
+          "total": 23.29,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -13303,9 +13294,9 @@
         "value_intelligence_per_dollar_blend": 37.2,
         "value_intelligence_per_dollar_task": 87.9,
         "safety_composite": 21.5,
-        "throughput_tps": 136.83,
+        "throughput_tps": 129.87,
         "speed_tier": 2,
-        "latency_ttft_seconds": 18.56,
+        "latency_ttft_seconds": 19.44,
         "latency_tier": 1
       }
     },
@@ -13394,11 +13385,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 48.18,
-        "ttft_seconds_total": 2.45,
-        "ttft_seconds_answer": 2.45,
+        "output_speed_tps": 48.99,
+        "ttft_seconds_total": 2.44,
+        "ttft_seconds_answer": 2.44,
         "end_to_end_500tok": {
-          "total": 12.83,
+          "total": 12.64,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -13418,9 +13409,9 @@
       "derived": {
         "value_intelligence_per_dollar_blend": 20.9,
         "safety_composite": 50.3,
-        "throughput_tps": 48.18,
+        "throughput_tps": 48.99,
         "speed_tier": 0,
-        "latency_ttft_seconds": 2.45,
+        "latency_ttft_seconds": 2.44,
         "latency_tier": 2
       }
     },
@@ -13509,11 +13500,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 63.77,
-        "ttft_seconds_total": 2.98,
-        "ttft_seconds_answer": 2.98,
+        "output_speed_tps": 62.75,
+        "ttft_seconds_total": 2.97,
+        "ttft_seconds_answer": 2.97,
         "end_to_end_500tok": {
-          "total": 10.82,
+          "total": 10.94,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -13534,9 +13525,9 @@
         "value_intelligence_per_dollar_blend": 23.2,
         "value_intelligence_per_dollar_task": 78.7,
         "safety_composite": 22.2,
-        "throughput_tps": 63.77,
+        "throughput_tps": 62.75,
         "speed_tier": 1,
-        "latency_ttft_seconds": 2.98,
+        "latency_ttft_seconds": 2.97,
         "latency_tier": 2
       }
     },
@@ -13833,11 +13824,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 158.64,
-        "ttft_seconds_total": 0.66,
-        "ttft_seconds_answer": 13.27,
+        "output_speed_tps": 155.78,
+        "ttft_seconds_total": 0.65,
+        "ttft_seconds_answer": 13.49,
         "end_to_end_500tok": {
-          "total": 16.42,
+          "total": 16.7,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -13858,9 +13849,9 @@
         "value_intelligence_per_dollar_blend": 70.2,
         "value_intelligence_per_dollar_task": 338.4,
         "safety_composite": 21.4,
-        "throughput_tps": 158.64,
+        "throughput_tps": 155.78,
         "speed_tier": 2,
-        "latency_ttft_seconds": 13.27,
+        "latency_ttft_seconds": 13.49,
         "latency_tier": 1
       }
     },
@@ -13949,11 +13940,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 176.52,
-        "ttft_seconds_total": 2.85,
-        "ttft_seconds_answer": 2.85,
+        "output_speed_tps": 176.07,
+        "ttft_seconds_total": 3.89,
+        "ttft_seconds_answer": 3.89,
         "end_to_end_500tok": {
-          "total": 5.68,
+          "total": 6.73,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -13973,9 +13964,9 @@
       "derived": {
         "value_intelligence_per_dollar_blend": 67.0,
         "safety_composite": 41.7,
-        "throughput_tps": 176.52,
+        "throughput_tps": 176.07,
         "speed_tier": 2,
-        "latency_ttft_seconds": 2.85,
+        "latency_ttft_seconds": 3.89,
         "latency_tier": 2
       }
     },
@@ -14064,11 +14055,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 185.19,
-        "ttft_seconds_total": 3.99,
-        "ttft_seconds_answer": 3.99,
+        "output_speed_tps": 182.12,
+        "ttft_seconds_total": 5.07,
+        "ttft_seconds_answer": 5.07,
         "end_to_end_500tok": {
-          "total": 6.69,
+          "total": 7.81,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -14088,10 +14079,10 @@
       "derived": {
         "value_intelligence_per_dollar_blend": 18.0,
         "safety_composite": 18.3,
-        "throughput_tps": 185.19,
+        "throughput_tps": 182.12,
         "speed_tier": 2,
-        "latency_ttft_seconds": 3.99,
-        "latency_tier": 2
+        "latency_ttft_seconds": 5.07,
+        "latency_tier": 1
       }
     },
     {
@@ -14179,11 +14170,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 150.48,
-        "ttft_seconds_total": 2.26,
-        "ttft_seconds_answer": 15.55,
+        "output_speed_tps": 148.28,
+        "ttft_seconds_total": 2.24,
+        "ttft_seconds_answer": 15.73,
         "end_to_end_500tok": {
-          "total": 18.87,
+          "total": 19.1,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -14204,9 +14195,9 @@
         "value_intelligence_per_dollar_blend": 10.1,
         "value_intelligence_per_dollar_task": 65.5,
         "safety_composite": 23.2,
-        "throughput_tps": 150.48,
+        "throughput_tps": 148.28,
         "speed_tier": 2,
-        "latency_ttft_seconds": 15.55,
+        "latency_ttft_seconds": 15.73,
         "latency_tier": 1
       }
     },
@@ -14295,11 +14286,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 89.29,
+        "output_speed_tps": 85.03,
         "ttft_seconds_total": 5.56,
         "ttft_seconds_answer": 5.56,
         "end_to_end_500tok": {
-          "total": 11.16,
+          "total": 11.44,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -14319,7 +14310,7 @@
       "derived": {
         "value_intelligence_per_dollar_blend": 36.5,
         "safety_composite": 26.9,
-        "throughput_tps": 89.29,
+        "throughput_tps": 85.03,
         "speed_tier": 1,
         "latency_ttft_seconds": 5.56,
         "latency_tier": 1
@@ -14410,11 +14401,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 106.9,
+        "output_speed_tps": 108.22,
         "ttft_seconds_total": 1.54,
-        "ttft_seconds_answer": 20.25,
+        "ttft_seconds_answer": 20.02,
         "end_to_end_500tok": {
-          "total": 24.92,
+          "total": 24.64,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -14434,9 +14425,9 @@
       "derived": {
         "value_intelligence_per_dollar_blend": 43.3,
         "safety_composite": 20.7,
-        "throughput_tps": 106.9,
+        "throughput_tps": 108.22,
         "speed_tier": 2,
-        "latency_ttft_seconds": 20.25,
+        "latency_ttft_seconds": 20.02,
         "latency_tier": 0
       }
     },
@@ -14525,11 +14516,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 63.94,
-        "ttft_seconds_total": 1.29,
-        "ttft_seconds_answer": 28.44,
+        "output_speed_tps": 62.04,
+        "ttft_seconds_total": 1.23,
+        "ttft_seconds_answer": 29.21,
         "end_to_end_500tok": {
-          "total": 36.26,
+          "total": 37.27,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -14550,9 +14541,9 @@
         "value_intelligence_per_dollar_blend": 56.0,
         "value_intelligence_per_dollar_task": 294.5,
         "safety_composite": 20.9,
-        "throughput_tps": 63.94,
+        "throughput_tps": 62.04,
         "speed_tier": 1,
-        "latency_ttft_seconds": 28.44,
+        "latency_ttft_seconds": 29.21,
         "latency_tier": 0
       }
     },
@@ -14641,11 +14632,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 65.45,
-        "ttft_seconds_total": 1.58,
-        "ttft_seconds_answer": 1.58,
+        "output_speed_tps": 66.95,
+        "ttft_seconds_total": 1.57,
+        "ttft_seconds_answer": 1.57,
         "end_to_end_500tok": {
-          "total": 9.22,
+          "total": 9.03,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -14665,9 +14656,9 @@
       "derived": {
         "value_intelligence_per_dollar_blend": 162.7,
         "safety_composite": 15.0,
-        "throughput_tps": 65.45,
+        "throughput_tps": 66.95,
         "speed_tier": 1,
-        "latency_ttft_seconds": 1.58,
+        "latency_ttft_seconds": 1.57,
         "latency_tier": 2
       }
     },
@@ -14756,11 +14747,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 148.37,
-        "ttft_seconds_total": 1.13,
-        "ttft_seconds_answer": 14.61,
+        "output_speed_tps": 136.3,
+        "ttft_seconds_total": 1.03,
+        "ttft_seconds_answer": 15.7,
         "end_to_end_500tok": {
-          "total": 17.98,
+          "total": 19.37,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -14781,9 +14772,9 @@
         "value_intelligence_per_dollar_blend": 2.6,
         "value_intelligence_per_dollar_task": 54.5,
         "safety_composite": 27.8,
-        "throughput_tps": 148.37,
+        "throughput_tps": 136.3,
         "speed_tier": 2,
-        "latency_ttft_seconds": 14.61,
+        "latency_ttft_seconds": 15.7,
         "latency_tier": 1
       }
     },
@@ -14976,11 +14967,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 48.23,
-        "ttft_seconds_total": 3.19,
-        "ttft_seconds_answer": 3.19,
+        "output_speed_tps": 48.65,
+        "ttft_seconds_total": 3.27,
+        "ttft_seconds_answer": 3.27,
         "end_to_end_500tok": {
-          "total": 13.56,
+          "total": 13.54,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -15000,9 +14991,9 @@
       "derived": {
         "value_intelligence_per_dollar_blend": 43.8,
         "safety_composite": 17.9,
-        "throughput_tps": 48.23,
+        "throughput_tps": 48.65,
         "speed_tier": 0,
-        "latency_ttft_seconds": 3.19,
+        "latency_ttft_seconds": 3.27,
         "latency_tier": 2
       }
     },
@@ -15091,11 +15082,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 91.38,
+        "output_speed_tps": 88.81,
         "ttft_seconds_total": 0.98,
         "ttft_seconds_answer": 0.98,
         "end_to_end_500tok": {
-          "total": 6.46,
+          "total": 6.61,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -15115,7 +15106,7 @@
       "derived": {
         "value_intelligence_per_dollar_blend": 5.0,
         "safety_composite": 20.5,
-        "throughput_tps": 91.38,
+        "throughput_tps": 88.81,
         "speed_tier": 1,
         "latency_ttft_seconds": 0.98,
         "latency_tier": 2
@@ -15206,11 +15197,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 160.27,
-        "ttft_seconds_total": 2.44,
-        "ttft_seconds_answer": 2.44,
+        "output_speed_tps": 151.67,
+        "ttft_seconds_total": 2.42,
+        "ttft_seconds_answer": 2.42,
         "end_to_end_500tok": {
-          "total": 5.56,
+          "total": 5.72,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -15231,9 +15222,9 @@
         "value_intelligence_per_dollar_blend": 25.6,
         "value_intelligence_per_dollar_task": 144.3,
         "safety_composite": 16.3,
-        "throughput_tps": 160.27,
+        "throughput_tps": 151.67,
         "speed_tier": 2,
-        "latency_ttft_seconds": 2.44,
+        "latency_ttft_seconds": 2.42,
         "latency_tier": 2
       }
     },
@@ -15322,11 +15313,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 205.74,
-        "ttft_seconds_total": 1.36,
-        "ttft_seconds_answer": 1.36,
+        "output_speed_tps": 207.78,
+        "ttft_seconds_total": 1.2,
+        "ttft_seconds_answer": 1.2,
         "end_to_end_500tok": {
-          "total": 3.79,
+          "total": 3.6,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -15347,9 +15338,9 @@
         "value_intelligence_per_dollar_blend": 10.8,
         "value_intelligence_per_dollar_task": 288.0,
         "safety_composite": 25.7,
-        "throughput_tps": 205.74,
+        "throughput_tps": 207.78,
         "speed_tier": 2,
-        "latency_ttft_seconds": 1.36,
+        "latency_ttft_seconds": 1.2,
         "latency_tier": 2
       }
     },
@@ -15659,11 +15650,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 222.45,
-        "ttft_seconds_total": 1.09,
-        "ttft_seconds_answer": 10.08,
+        "output_speed_tps": 222.86,
+        "ttft_seconds_total": 1.12,
+        "ttft_seconds_answer": 10.09,
         "end_to_end_500tok": {
-          "total": 12.32,
+          "total": 12.34,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -15683,9 +15674,9 @@
       "derived": {
         "value_intelligence_per_dollar_blend": 176.8,
         "safety_composite": 15.8,
-        "throughput_tps": 222.45,
+        "throughput_tps": 222.86,
         "speed_tier": 2,
-        "latency_ttft_seconds": 10.08,
+        "latency_ttft_seconds": 10.09,
         "latency_tier": 1
       }
     },
@@ -15881,11 +15872,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 56.1,
-        "ttft_seconds_total": 62.25,
-        "ttft_seconds_answer": 97.9,
+        "output_speed_tps": 56.01,
+        "ttft_seconds_total": 44.78,
+        "ttft_seconds_answer": 80.49,
         "end_to_end_500tok": {
-          "total": 106.82,
+          "total": 89.42,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -15906,9 +15897,9 @@
         "value_intelligence_per_dollar_blend": 160.4,
         "value_intelligence_per_dollar_task": 259.8,
         "safety_composite": 18.1,
-        "throughput_tps": 56.1,
+        "throughput_tps": 56.01,
         "speed_tier": 1,
-        "latency_ttft_seconds": 97.9,
+        "latency_ttft_seconds": 80.49,
         "latency_tier": 0
       }
     },
@@ -15997,11 +15988,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 341.34,
-        "ttft_seconds_total": 5.45,
-        "ttft_seconds_answer": 5.45,
+        "output_speed_tps": 334.48,
+        "ttft_seconds_total": 5.39,
+        "ttft_seconds_answer": 5.39,
         "end_to_end_500tok": {
-          "total": 6.91,
+          "total": 6.89,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -16022,9 +16013,9 @@
         "value_intelligence_per_dollar_blend": 45.7,
         "value_intelligence_per_dollar_task": 592.8,
         "safety_composite": 20.6,
-        "throughput_tps": 341.34,
+        "throughput_tps": 334.48,
         "speed_tier": 2,
-        "latency_ttft_seconds": 5.45,
+        "latency_ttft_seconds": 5.39,
         "latency_tier": 1
       }
     },
@@ -16114,10 +16105,10 @@
       "output_tokens_per_task": null,
       "performance": {
         "output_speed_tps": 121.28,
-        "ttft_seconds_total": 0.76,
-        "ttft_seconds_answer": 0.76,
+        "ttft_seconds_total": 0.73,
+        "ttft_seconds_answer": 0.73,
         "end_to_end_500tok": {
-          "total": 4.89,
+          "total": 4.85,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -16140,7 +16131,7 @@
         "safety_composite": 25.3,
         "throughput_tps": 121.28,
         "speed_tier": 2,
-        "latency_ttft_seconds": 0.76,
+        "latency_ttft_seconds": 0.73,
         "latency_tier": 2
       }
     },
@@ -16229,11 +16220,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 142.33,
-        "ttft_seconds_total": 2.03,
-        "ttft_seconds_answer": 2.03,
+        "output_speed_tps": 138.22,
+        "ttft_seconds_total": 2.01,
+        "ttft_seconds_answer": 2.01,
         "end_to_end_500tok": {
-          "total": 5.54,
+          "total": 5.63,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -16254,9 +16245,9 @@
         "value_intelligence_per_dollar_blend": 29.2,
         "value_intelligence_per_dollar_task": 39.0,
         "safety_composite": 14.6,
-        "throughput_tps": 142.33,
+        "throughput_tps": 138.22,
         "speed_tier": 2,
-        "latency_ttft_seconds": 2.03,
+        "latency_ttft_seconds": 2.01,
         "latency_tier": 2
       }
     },
@@ -16335,11 +16326,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 174.77,
-        "ttft_seconds_total": 2.6,
-        "ttft_seconds_answer": 14.04,
+        "output_speed_tps": 172.78,
+        "ttft_seconds_total": 2.57,
+        "ttft_seconds_answer": 14.14,
         "end_to_end_500tok": {
-          "total": 16.91,
+          "total": 17.03,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -16358,9 +16349,9 @@
       "short_name": "Ling 3.0 Tiny",
       "derived": {
         "safety_composite": 51.5,
-        "throughput_tps": 174.77,
+        "throughput_tps": 172.78,
         "speed_tier": 2,
-        "latency_ttft_seconds": 14.04,
+        "latency_ttft_seconds": 14.14,
         "latency_tier": 1
       }
     },
@@ -16449,11 +16440,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 168.84,
-        "ttft_seconds_total": 2.08,
-        "ttft_seconds_answer": 2.08,
+        "output_speed_tps": 167.34,
+        "ttft_seconds_total": 2.06,
+        "ttft_seconds_answer": 2.06,
         "end_to_end_500tok": {
-          "total": 5.04,
+          "total": 5.05,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -16474,9 +16465,9 @@
         "value_intelligence_per_dollar_blend": 35.2,
         "value_intelligence_per_dollar_task": 100.9,
         "safety_composite": 13.7,
-        "throughput_tps": 168.84,
+        "throughput_tps": 167.34,
         "speed_tier": 2,
-        "latency_ttft_seconds": 2.08,
+        "latency_ttft_seconds": 2.06,
         "latency_tier": 2
       }
     },
@@ -16556,10 +16547,10 @@
       "output_tokens_per_task": null,
       "performance": {
         "output_speed_tps": 538.09,
-        "ttft_seconds_total": 0.56,
-        "ttft_seconds_answer": 4.27,
+        "ttft_seconds_total": 0.59,
+        "ttft_seconds_answer": 4.31,
         "end_to_end_500tok": {
-          "total": 5.2,
+          "total": 5.23,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -16582,7 +16573,7 @@
         "safety_composite": 46.9,
         "throughput_tps": 538.09,
         "speed_tier": 2,
-        "latency_ttft_seconds": 4.27,
+        "latency_ttft_seconds": 4.31,
         "latency_tier": 2
       }
     },
@@ -16777,11 +16768,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 201.4,
-        "ttft_seconds_total": 0.39,
-        "ttft_seconds_answer": 10.32,
+        "output_speed_tps": 221.08,
+        "ttft_seconds_total": 0.38,
+        "ttft_seconds_answer": 9.42,
         "end_to_end_500tok": {
-          "total": 12.81,
+          "total": 11.69,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -16800,9 +16791,9 @@
       "short_name": "Command A+",
       "derived": {
         "safety_composite": 60.6,
-        "throughput_tps": 201.4,
+        "throughput_tps": 221.08,
         "speed_tier": 2,
-        "latency_ttft_seconds": 10.32,
+        "latency_ttft_seconds": 9.42,
         "latency_tier": 1
       }
     },
@@ -16891,11 +16882,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 51.74,
-        "ttft_seconds_total": 1.42,
-        "ttft_seconds_answer": 1.42,
+        "output_speed_tps": 60.14,
+        "ttft_seconds_total": 1.33,
+        "ttft_seconds_answer": 1.33,
         "end_to_end_500tok": {
-          "total": 11.09,
+          "total": 9.64,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -16916,9 +16907,9 @@
         "value_intelligence_per_dollar_blend": 106.0,
         "value_intelligence_per_dollar_task": 542.7,
         "safety_composite": 19.8,
-        "throughput_tps": 51.74,
+        "throughput_tps": 60.14,
         "speed_tier": 1,
-        "latency_ttft_seconds": 1.42,
+        "latency_ttft_seconds": 1.33,
         "latency_tier": 2
       }
     },
@@ -17007,11 +16998,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 94.26,
-        "ttft_seconds_total": 0.64,
-        "ttft_seconds_answer": 0.64,
+        "output_speed_tps": 96.79,
+        "ttft_seconds_total": 0.62,
+        "ttft_seconds_answer": 0.62,
         "end_to_end_500tok": {
-          "total": 5.95,
+          "total": 5.79,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -17031,9 +17022,9 @@
       "derived": {
         "value_intelligence_per_dollar_blend": 14.2,
         "safety_composite": 10.5,
-        "throughput_tps": 94.26,
+        "throughput_tps": 96.79,
         "speed_tier": 1,
-        "latency_ttft_seconds": 0.64,
+        "latency_ttft_seconds": 0.62,
         "latency_tier": 2
       }
     },
@@ -17123,10 +17114,10 @@
       "output_tokens_per_task": null,
       "performance": {
         "output_speed_tps": 112.09,
-        "ttft_seconds_total": 2.19,
-        "ttft_seconds_answer": 20.03,
+        "ttft_seconds_total": 2.18,
+        "ttft_seconds_answer": 20.02,
         "end_to_end_500tok": {
-          "total": 24.49,
+          "total": 24.48,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -17148,7 +17139,7 @@
         "safety_composite": 20.3,
         "throughput_tps": 112.09,
         "speed_tier": 2,
-        "latency_ttft_seconds": 20.03,
+        "latency_ttft_seconds": 20.02,
         "latency_tier": 0
       }
     },
@@ -17237,11 +17228,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 90.84,
+        "output_speed_tps": 89.55,
         "ttft_seconds_total": 0.78,
-        "ttft_seconds_answer": 22.79,
+        "ttft_seconds_answer": 23.12,
         "end_to_end_500tok": {
-          "total": 28.3,
+          "total": 28.7,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -17262,9 +17253,9 @@
         "value_intelligence_per_dollar_blend": 114.7,
         "value_intelligence_per_dollar_task": 71.7,
         "safety_composite": 18.6,
-        "throughput_tps": 90.84,
+        "throughput_tps": 89.55,
         "speed_tier": 1,
-        "latency_ttft_seconds": 22.79,
+        "latency_ttft_seconds": 23.12,
         "latency_tier": 0
       }
     },
@@ -17353,11 +17344,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 83.12,
+        "output_speed_tps": 89.2,
         "ttft_seconds_total": 0.77,
         "ttft_seconds_answer": 0.77,
         "end_to_end_500tok": {
-          "total": 6.78,
+          "total": 6.38,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -17377,7 +17368,7 @@
       "derived": {
         "value_intelligence_per_dollar_blend": 108.5,
         "safety_composite": 9.2,
-        "throughput_tps": 83.12,
+        "throughput_tps": 89.2,
         "speed_tier": 1,
         "latency_ttft_seconds": 0.77,
         "latency_tier": 2
@@ -17572,11 +17563,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 25.65,
-        "ttft_seconds_total": 1.38,
-        "ttft_seconds_answer": 1.38,
+        "output_speed_tps": 32.75,
+        "ttft_seconds_total": 1.26,
+        "ttft_seconds_answer": 1.26,
         "end_to_end_500tok": {
-          "total": 20.87,
+          "total": 16.53,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -17596,9 +17587,9 @@
       "derived": {
         "value_intelligence_per_dollar_blend": 101.9,
         "safety_composite": 13.0,
-        "throughput_tps": 25.65,
+        "throughput_tps": 32.75,
         "speed_tier": 0,
-        "latency_ttft_seconds": 1.38,
+        "latency_ttft_seconds": 1.26,
         "latency_tier": 2
       }
     },
@@ -17687,11 +17678,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 35.2,
-        "ttft_seconds_total": 0.81,
-        "ttft_seconds_answer": 57.64,
+        "output_speed_tps": 33.59,
+        "ttft_seconds_total": 0.94,
+        "ttft_seconds_answer": 60.49,
         "end_to_end_500tok": {
-          "total": 71.84,
+          "total": 75.38,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -17711,9 +17702,9 @@
       "derived": {
         "value_intelligence_per_dollar_blend": 339.5,
         "safety_composite": 16.2,
-        "throughput_tps": 35.2,
+        "throughput_tps": 33.59,
         "speed_tier": 0,
-        "latency_ttft_seconds": 57.64,
+        "latency_ttft_seconds": 60.49,
         "latency_tier": 0
       }
     },
@@ -17802,11 +17793,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 26.64,
-        "ttft_seconds_total": 0.53,
-        "ttft_seconds_answer": 75.6,
+        "output_speed_tps": 26.55,
+        "ttft_seconds_total": 0.49,
+        "ttft_seconds_answer": 75.82,
         "end_to_end_500tok": {
-          "total": 94.37,
+          "total": 94.65,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -17825,9 +17816,9 @@
       "short_name": "North Mini Code",
       "derived": {
         "safety_composite": 18.1,
-        "throughput_tps": 26.64,
+        "throughput_tps": 26.55,
         "speed_tier": 0,
-        "latency_ttft_seconds": 75.6,
+        "latency_ttft_seconds": 75.82,
         "latency_tier": 0
       }
     },
@@ -17916,11 +17907,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 159.91,
-        "ttft_seconds_total": 0.78,
-        "ttft_seconds_answer": 13.28,
+        "output_speed_tps": 175.4,
+        "ttft_seconds_total": 0.76,
+        "ttft_seconds_answer": 12.17,
         "end_to_end_500tok": {
-          "total": 16.41,
+          "total": 15.02,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -17941,9 +17932,9 @@
         "value_intelligence_per_dollar_blend": 75.8,
         "value_intelligence_per_dollar_task": 196.5,
         "safety_composite": 28.0,
-        "throughput_tps": 159.91,
+        "throughput_tps": 175.4,
         "speed_tier": 2,
-        "latency_ttft_seconds": 13.28,
+        "latency_ttft_seconds": 12.17,
         "latency_tier": 1
       }
     },
@@ -18032,11 +18023,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 260.29,
+        "output_speed_tps": 246.27,
         "ttft_seconds_total": 1.84,
         "ttft_seconds_answer": 1.84,
         "end_to_end_500tok": {
-          "total": 3.76,
+          "total": 3.87,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -18056,7 +18047,7 @@
       "derived": {
         "value_intelligence_per_dollar_blend": 68.7,
         "safety_composite": 11.7,
-        "throughput_tps": 260.29,
+        "throughput_tps": 246.27,
         "speed_tier": 2,
         "latency_ttft_seconds": 1.84,
         "latency_tier": 2
@@ -18251,11 +18242,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 177.47,
-        "ttft_seconds_total": 0.62,
-        "ttft_seconds_answer": 11.89,
+        "output_speed_tps": 188.42,
+        "ttft_seconds_total": 0.61,
+        "ttft_seconds_answer": 11.22,
         "end_to_end_500tok": {
-          "total": 14.71,
+          "total": 13.88,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -18276,9 +18267,9 @@
         "value_intelligence_per_dollar_blend": 49.1,
         "value_intelligence_per_dollar_task": 236.2,
         "safety_composite": 15.9,
-        "throughput_tps": 177.47,
+        "throughput_tps": 188.42,
         "speed_tier": 2,
-        "latency_ttft_seconds": 11.89,
+        "latency_ttft_seconds": 11.22,
         "latency_tier": 1
       }
     },
@@ -18585,11 +18576,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 172.39,
-        "ttft_seconds_total": 0.62,
-        "ttft_seconds_answer": 0.62,
+        "output_speed_tps": 176.64,
+        "ttft_seconds_total": 0.6,
+        "ttft_seconds_answer": 0.6,
         "end_to_end_500tok": {
-          "total": 3.52,
+          "total": 3.43,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -18609,9 +18600,9 @@
       "derived": {
         "value_intelligence_per_dollar_blend": 38.7,
         "safety_composite": 30.2,
-        "throughput_tps": 172.39,
+        "throughput_tps": 176.64,
         "speed_tier": 2,
-        "latency_ttft_seconds": 0.62,
+        "latency_ttft_seconds": 0.6,
         "latency_tier": 2
       }
     },
@@ -18700,11 +18691,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 175.67,
+        "output_speed_tps": 176.34,
         "ttft_seconds_total": 0.74,
         "ttft_seconds_answer": 0.74,
         "end_to_end_500tok": {
-          "total": 3.59,
+          "total": 3.58,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -18724,7 +18715,7 @@
       "derived": {
         "value_intelligence_per_dollar_blend": 9.9,
         "safety_composite": 9.3,
-        "throughput_tps": 175.67,
+        "throughput_tps": 176.34,
         "speed_tier": 2,
         "latency_ttft_seconds": 0.74,
         "latency_tier": 2
@@ -18910,11 +18901,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 18.53,
+        "output_speed_tps": 16.69,
         "ttft_seconds_total": 0.9,
         "ttft_seconds_answer": 0.9,
         "end_to_end_500tok": {
-          "total": 27.88,
+          "total": 30.85,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -18934,7 +18925,7 @@
       "derived": {
         "value_intelligence_per_dollar_blend": 268.7,
         "safety_composite": 8.4,
-        "throughput_tps": 18.53,
+        "throughput_tps": 16.69,
         "speed_tier": 0,
         "latency_ttft_seconds": 0.9,
         "latency_tier": 2
@@ -19025,11 +19016,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 326.36,
-        "ttft_seconds_total": 1.01,
-        "ttft_seconds_answer": 7.14,
+        "output_speed_tps": 325.94,
+        "ttft_seconds_total": 1.04,
+        "ttft_seconds_answer": 7.17,
         "end_to_end_500tok": {
-          "total": 8.67,
+          "total": 8.71,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -19049,9 +19040,9 @@
       "derived": {
         "value_intelligence_per_dollar_blend": 150.1,
         "safety_composite": 14.6,
-        "throughput_tps": 326.36,
+        "throughput_tps": 325.94,
         "speed_tier": 2,
-        "latency_ttft_seconds": 7.14,
+        "latency_ttft_seconds": 7.17,
         "latency_tier": 1
       }
     },
@@ -19144,7 +19135,7 @@
         "ttft_seconds_total": 2.33,
         "ttft_seconds_answer": 16.19,
         "end_to_end_500tok": {
-          "total": 19.66,
+          "total": 19.65,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -19256,11 +19247,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 103.82,
-        "ttft_seconds_total": 1.16,
-        "ttft_seconds_answer": 1.16,
+        "output_speed_tps": 103.92,
+        "ttft_seconds_total": 1.13,
+        "ttft_seconds_answer": 1.13,
         "end_to_end_500tok": {
-          "total": 5.98,
+          "total": 5.94,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -19280,9 +19271,9 @@
       "derived": {
         "value_intelligence_per_dollar_blend": 94.8,
         "safety_composite": 7.7,
-        "throughput_tps": 103.82,
+        "throughput_tps": 103.92,
         "speed_tier": 2,
-        "latency_ttft_seconds": 1.16,
+        "latency_ttft_seconds": 1.13,
         "latency_tier": 2
       }
     },
@@ -19475,11 +19466,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 122.47,
-        "ttft_seconds_total": 2.3,
-        "ttft_seconds_answer": 2.3,
+        "output_speed_tps": 122.06,
+        "ttft_seconds_total": 2.32,
+        "ttft_seconds_answer": 2.32,
         "end_to_end_500tok": {
-          "total": 6.38,
+          "total": 6.42,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -19499,9 +19490,9 @@
       "derived": {
         "value_intelligence_per_dollar_blend": 88.0,
         "safety_composite": 21.2,
-        "throughput_tps": 122.47,
+        "throughput_tps": 122.06,
         "speed_tier": 2,
-        "latency_ttft_seconds": 2.3,
+        "latency_ttft_seconds": 2.32,
         "latency_tier": 2
       }
     },
@@ -19590,11 +19581,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 142.93,
+        "output_speed_tps": 167.52,
         "ttft_seconds_total": 0.79,
         "ttft_seconds_answer": 0.79,
         "end_to_end_500tok": {
-          "total": 4.29,
+          "total": 3.78,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -19614,7 +19605,7 @@
       "derived": {
         "value_intelligence_per_dollar_blend": 47.5,
         "safety_composite": 18.1,
-        "throughput_tps": 142.93,
+        "throughput_tps": 167.52,
         "speed_tier": 2,
         "latency_ttft_seconds": 0.79,
         "latency_tier": 2
@@ -19695,11 +19686,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 1467.99,
+        "output_speed_tps": 1605.26,
         "ttft_seconds_total": 0.58,
         "ttft_seconds_answer": 0.58,
         "end_to_end_500tok": {
-          "total": 0.92,
+          "total": 0.89,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -19720,7 +19711,7 @@
         "value_intelligence_per_dollar_blend": 37.4,
         "value_intelligence_per_dollar_task": 47.8,
         "safety_composite": 9.3,
-        "throughput_tps": 1467.99,
+        "throughput_tps": 1605.26,
         "speed_tier": 2,
         "latency_ttft_seconds": 0.58,
         "latency_tier": 2
@@ -19811,11 +19802,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 56.02,
-        "ttft_seconds_total": 0.7,
-        "ttft_seconds_answer": 36.4,
+        "output_speed_tps": 50.82,
+        "ttft_seconds_total": 0.76,
+        "ttft_seconds_answer": 40.11,
         "end_to_end_500tok": {
-          "total": 45.32,
+          "total": 49.95,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -19835,9 +19826,9 @@
       "derived": {
         "value_intelligence_per_dollar_blend": 304.5,
         "safety_composite": 46.3,
-        "throughput_tps": 56.02,
+        "throughput_tps": 50.82,
         "speed_tier": 1,
-        "latency_ttft_seconds": 36.4,
+        "latency_ttft_seconds": 40.11,
         "latency_tier": 0
       }
     },
@@ -20448,11 +20439,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 57.67,
-        "ttft_seconds_total": 0.7,
-        "ttft_seconds_answer": 0.7,
+        "output_speed_tps": 50.61,
+        "ttft_seconds_total": 0.72,
+        "ttft_seconds_answer": 0.72,
         "end_to_end_500tok": {
-          "total": 9.37,
+          "total": 10.6,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -20472,9 +20463,9 @@
       "derived": {
         "value_intelligence_per_dollar_blend": 218.8,
         "safety_composite": 31.2,
-        "throughput_tps": 57.67,
+        "throughput_tps": 50.61,
         "speed_tier": 1,
-        "latency_ttft_seconds": 0.7,
+        "latency_ttft_seconds": 0.72,
         "latency_tier": 2
       }
     },
@@ -20771,11 +20762,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 339.09,
-        "ttft_seconds_total": 1.76,
-        "ttft_seconds_answer": 7.66,
+        "output_speed_tps": 339.07,
+        "ttft_seconds_total": 1.83,
+        "ttft_seconds_answer": 7.73,
         "end_to_end_500tok": {
-          "total": 9.13,
+          "total": 9.2,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -20794,9 +20785,9 @@
       "short_name": "LFM2.5-8B-A1B",
       "derived": {
         "safety_composite": 35.1,
-        "throughput_tps": 339.09,
+        "throughput_tps": 339.07,
         "speed_tier": 2,
-        "latency_ttft_seconds": 7.66,
+        "latency_ttft_seconds": 7.73,
         "latency_tier": 1
       }
     },
@@ -20989,11 +20980,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 115.86,
-        "ttft_seconds_total": 0.77,
-        "ttft_seconds_answer": 0.77,
+        "output_speed_tps": 121.37,
+        "ttft_seconds_total": 0.75,
+        "ttft_seconds_answer": 0.75,
         "end_to_end_500tok": {
-          "total": 5.08,
+          "total": 4.87,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -21013,9 +21004,9 @@
       "derived": {
         "value_intelligence_per_dollar_blend": 107.0,
         "safety_composite": 10.3,
-        "throughput_tps": 115.86,
+        "throughput_tps": 121.37,
         "speed_tier": 2,
-        "latency_ttft_seconds": 0.77,
+        "latency_ttft_seconds": 0.75,
         "latency_tier": 2
       }
     },
@@ -21956,11 +21947,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 64.13,
-        "ttft_seconds_total": 2.41,
-        "ttft_seconds_answer": 2.41,
+        "output_speed_tps": 63.73,
+        "ttft_seconds_total": 2.68,
+        "ttft_seconds_answer": 2.68,
         "end_to_end_500tok": {
-          "total": 10.21,
+          "total": 10.52,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -21978,9 +21969,9 @@
       },
       "short_name": "Claude Sonnet 5 (low)",
       "derived": {
-        "throughput_tps": 64.13,
+        "throughput_tps": 63.73,
         "speed_tier": 1,
-        "latency_ttft_seconds": 2.41,
+        "latency_ttft_seconds": 2.68,
         "latency_tier": 2
       }
     },
@@ -22171,10 +22162,10 @@
       "output_tokens_per_task": null,
       "performance": {
         "output_speed_tps": 68.89,
-        "ttft_seconds_total": 22.93,
-        "ttft_seconds_answer": 22.93,
+        "ttft_seconds_total": 23.9,
+        "ttft_seconds_answer": 23.9,
         "end_to_end_500tok": {
-          "total": 30.19,
+          "total": 31.16,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -22194,7 +22185,7 @@
       "derived": {
         "throughput_tps": 68.89,
         "speed_tier": 1,
-        "latency_ttft_seconds": 22.93,
+        "latency_ttft_seconds": 23.9,
         "latency_tier": 0
       }
     },
@@ -22282,11 +22273,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 64.54,
-        "ttft_seconds_total": 8.39,
-        "ttft_seconds_answer": 8.39,
+        "output_speed_tps": 65.48,
+        "ttft_seconds_total": 10.71,
+        "ttft_seconds_answer": 10.71,
         "end_to_end_500tok": {
-          "total": 16.13,
+          "total": 18.35,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -22304,9 +22295,9 @@
       },
       "short_name": "Claude Sonnet 5 (high)",
       "derived": {
-        "throughput_tps": 64.54,
+        "throughput_tps": 65.48,
         "speed_tier": 1,
-        "latency_ttft_seconds": 8.39,
+        "latency_ttft_seconds": 10.71,
         "latency_tier": 1
       }
     },
@@ -22395,10 +22386,10 @@
       "output_tokens_per_task": null,
       "performance": {
         "output_speed_tps": 64.66,
-        "ttft_seconds_total": 3.7,
-        "ttft_seconds_answer": 3.7,
+        "ttft_seconds_total": 3.58,
+        "ttft_seconds_answer": 3.58,
         "end_to_end_500tok": {
-          "total": 11.44,
+          "total": 11.31,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -22418,7 +22409,7 @@
       "derived": {
         "throughput_tps": 64.66,
         "speed_tier": 1,
-        "latency_ttft_seconds": 3.7,
+        "latency_ttft_seconds": 3.58,
         "latency_tier": 2
       }
     },

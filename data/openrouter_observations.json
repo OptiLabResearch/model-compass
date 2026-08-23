@@ -1,21 +1,13 @@
 {
-  "coverage": {
-    "catalog_models": 422,
-    "fresh_observations": 75,
-    "models_with_observations": 114,
-    "proportion": 0.2701,
-    "retained_observations": 312,
-    "retention_days": 14
-  },
-  "endpoint_errors": [],
-  "endpoint_models_requested": 25,
-  "endpoint_observation_count": 387,
-  "generated_at": "2026-08-23T07:23:53Z",
+  "version": 1,
+  "parser_version": "0.1.0",
+  "generated_at": "2026-08-23T17:19:40Z",
+  "source": "openrouter",
+  "source_url": "https://openrouter.ai/api/v1/models",
   "model_catalog_count": 422,
-  "next_state": {
-    "cursor": 100,
-    "priority_ids": []
-  },
+  "endpoint_models_requested": 25,
+  "endpoint_observation_count": 445,
+  "endpoint_errors": [],
   "observations": [
     {
       "availability": {
@@ -20324,12 +20316,3179 @@
       "quantization": "unknown"
     },
     {
+      "observation_type": "provider_endpoint",
+      "model_id": "google/gemma-2-27b-it",
+      "model_slug": "google/gemma-2-27b-it",
+      "provider_id": "nextbit/int4",
+      "provider_name": "NextBit",
+      "endpoint_id": "NextBit | google/gemma-2-27b-it",
+      "identity_key": "google/gemma-2-27b-it:nextbit/int4:NextBit | google/gemma-2-27b-it",
+      "context_tokens": 8192,
+      "pricing": {
+        "input_per_million": 0.65,
+        "output_per_million": 0.65,
+        "raw": {
+          "prompt": "0.00000065",
+          "completion": "0.00000065",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
       "availability": {
         "status": "available",
-        "uptime_1d": 96.7224224256147,
-        "uptime_30m": 97.90732436472346,
-        "uptime_5m": 93.78698224852072
+        "uptime_5m": null,
+        "uptime_30m": 100.0,
+        "uptime_1d": 100.0
       },
+      "quantization": "int4",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "max_tokens",
+          "presence_penalty",
+          "repetition_penalty",
+          "response_format",
+          "seed",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T17:19:40Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "google/gemma-2-27b-it",
+        "last_seen": "2026-08-23T17:19:40Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "google/gemma-3-12b-it",
+      "model_slug": "google/gemma-3-12b-it",
+      "provider_id": "deepinfra/bf16",
+      "provider_name": "DeepInfra",
+      "endpoint_id": "DeepInfra | google/gemma-3-12b-it",
+      "identity_key": "google/gemma-3-12b-it:deepinfra/bf16:DeepInfra | google/gemma-3-12b-it",
+      "context_tokens": 131072,
+      "pricing": {
+        "input_per_million": 0.049999999999999996,
+        "output_per_million": 0.15,
+        "raw": {
+          "prompt": "0.00000005",
+          "completion": "0.00000015",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 100.0,
+        "uptime_30m": 100.0,
+        "uptime_1d": 99.98339834575455
+      },
+      "quantization": "bf16",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "logit_bias",
+          "max_tokens",
+          "min_p",
+          "presence_penalty",
+          "repetition_penalty",
+          "response_format",
+          "seed",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_k",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T17:19:40Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "google/gemma-3-12b-it",
+        "last_seen": "2026-08-23T17:19:40Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "google/gemma-3-27b-it",
+      "model_slug": "google/gemma-3-27b-it",
+      "provider_id": "deepinfra/fp8",
+      "provider_name": "DeepInfra",
+      "endpoint_id": "DeepInfra | google/gemma-3-27b-it",
+      "identity_key": "google/gemma-3-27b-it:deepinfra/fp8:DeepInfra | google/gemma-3-27b-it",
+      "context_tokens": 131072,
+      "pricing": {
+        "input_per_million": 0.08,
+        "output_per_million": 0.16,
+        "raw": {
+          "prompt": "0.00000008",
+          "completion": "0.00000016",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 100.0,
+        "uptime_30m": 99.96765847347994,
+        "uptime_1d": 99.44304779224947
+      },
+      "quantization": "fp8",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "logit_bias",
+          "max_tokens",
+          "min_p",
+          "presence_penalty",
+          "repetition_penalty",
+          "response_format",
+          "seed",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_k",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T17:19:40Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "google/gemma-3-27b-it",
+        "last_seen": "2026-08-23T17:19:40Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "google/gemma-3-27b-it",
+      "model_slug": "google/gemma-3-27b-it",
+      "provider_id": "nebius/fp8",
+      "provider_name": "Nebius",
+      "endpoint_id": "Nebius | google/gemma-3-27b-it",
+      "identity_key": "google/gemma-3-27b-it:nebius/fp8:Nebius | google/gemma-3-27b-it",
+      "context_tokens": 110000,
+      "pricing": {
+        "input_per_million": 0.09999999999999999,
+        "output_per_million": 0.3,
+        "raw": {
+          "prompt": "0.0000001",
+          "completion": "0.0000003",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 100.0,
+        "uptime_30m": 97.48110831234257,
+        "uptime_1d": 65.15018800205094
+      },
+      "quantization": "fp8",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "logit_bias",
+          "max_tokens",
+          "presence_penalty",
+          "repetition_penalty",
+          "response_format",
+          "seed",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "top_k",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T17:19:40Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "google/gemma-3-27b-it",
+        "last_seen": "2026-08-23T17:19:40Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "google/gemma-3-27b-it",
+      "model_slug": "google/gemma-3-27b-it",
+      "provider_id": "novita/bf16",
+      "provider_name": "Novita",
+      "endpoint_id": "Novita | google/gemma-3-27b-it",
+      "identity_key": "google/gemma-3-27b-it:novita/bf16:Novita | google/gemma-3-27b-it",
+      "context_tokens": 98304,
+      "pricing": {
+        "input_per_million": 0.119,
+        "output_per_million": 0.19999999999999998,
+        "raw": {
+          "prompt": "0.000000119",
+          "completion": "0.0000002",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 100.0,
+        "uptime_30m": 99.75490196078431,
+        "uptime_1d": 81.36819345874173
+      },
+      "quantization": "bf16",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "max_tokens",
+          "presence_penalty",
+          "repetition_penalty",
+          "seed",
+          "stop",
+          "temperature",
+          "top_k",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T17:19:40Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "google/gemma-3-27b-it",
+        "last_seen": "2026-08-23T17:19:40Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "google/gemma-3-27b-it",
+      "model_slug": "google/gemma-3-27b-it",
+      "provider_id": "parasail/fp8",
+      "provider_name": "Parasail",
+      "endpoint_id": "Parasail | google/gemma-3-27b-it",
+      "identity_key": "google/gemma-3-27b-it:parasail/fp8:Parasail | google/gemma-3-27b-it",
+      "context_tokens": 131072,
+      "pricing": {
+        "input_per_million": 0.08,
+        "output_per_million": 0.44999999999999996,
+        "raw": {
+          "prompt": "0.00000008",
+          "completion": "0.00000045",
+          "input_cache_read": "0.00000004",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 98.95884977689639,
+        "uptime_30m": 99.3096292749112,
+        "uptime_1d": 99.5713585910422
+      },
+      "quantization": "fp8",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "logit_bias",
+          "logprobs",
+          "max_tokens",
+          "presence_penalty",
+          "repetition_penalty",
+          "response_format",
+          "seed",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "top_k",
+          "top_logprobs",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T17:19:40Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "google/gemma-3-27b-it",
+        "last_seen": "2026-08-23T17:19:40Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "google/gemma-3-27b-it",
+      "model_slug": "google/gemma-3-27b-it",
+      "provider_id": "phala",
+      "provider_name": "Phala",
+      "endpoint_id": "Phala | google/gemma-3-27b-it",
+      "identity_key": "google/gemma-3-27b-it:phala:Phala | google/gemma-3-27b-it",
+      "context_tokens": 262144,
+      "pricing": {
+        "input_per_million": 0.15,
+        "output_per_million": 0.45999999999999996,
+        "raw": {
+          "prompt": "0.00000015",
+          "completion": "0.00000046",
+          "input_cache_read": "0.000000075",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 100.0,
+        "uptime_30m": 99.64075767472241,
+        "uptime_1d": 93.27470145676594
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "max_tokens",
+          "min_p",
+          "presence_penalty",
+          "repetition_penalty",
+          "response_format",
+          "seed",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "top_k",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T17:19:40Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "google/gemma-3-27b-it",
+        "last_seen": "2026-08-23T17:19:40Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "google/gemma-3-4b-it",
+      "model_slug": "google/gemma-3-4b-it",
+      "provider_id": "deepinfra/bf16",
+      "provider_name": "DeepInfra",
+      "endpoint_id": "DeepInfra | google/gemma-3-4b-it",
+      "identity_key": "google/gemma-3-4b-it:deepinfra/bf16:DeepInfra | google/gemma-3-4b-it",
+      "context_tokens": 131072,
+      "pricing": {
+        "input_per_million": 0.049999999999999996,
+        "output_per_million": 0.09999999999999999,
+        "raw": {
+          "prompt": "0.00000005",
+          "completion": "0.0000001",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 100.0,
+        "uptime_30m": 100.0,
+        "uptime_1d": 99.9875963272407
+      },
+      "quantization": "bf16",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "logit_bias",
+          "max_tokens",
+          "min_p",
+          "presence_penalty",
+          "repetition_penalty",
+          "response_format",
+          "seed",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "top_k",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T17:19:40Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "google/gemma-3-4b-it",
+        "last_seen": "2026-08-23T17:19:40Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "google/gemma-3n-e4b-it",
+      "model_slug": "google/gemma-3n-e4b-it",
+      "provider_id": "together",
+      "provider_name": "Together",
+      "endpoint_id": "Together | google/gemma-3n-e4b-it",
+      "identity_key": "google/gemma-3n-e4b-it:together:Together | google/gemma-3n-e4b-it",
+      "context_tokens": 32768,
+      "pricing": {
+        "input_per_million": 0.06,
+        "output_per_million": 0.12,
+        "raw": {
+          "prompt": "0.00000006",
+          "completion": "0.00000012",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 100.0,
+        "uptime_30m": 99.90908264387672,
+        "uptime_1d": 99.97918838752435
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "logit_bias",
+          "max_tokens",
+          "min_p",
+          "presence_penalty",
+          "repetition_penalty",
+          "response_format",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "top_k",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T17:19:40Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "google/gemma-3n-e4b-it",
+        "last_seen": "2026-08-23T17:19:40Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "google/gemma-4-26b-a4b-it",
+      "model_slug": "google/gemma-4-26b-a4b-it",
+      "provider_id": "cloudflare",
+      "provider_name": "Cloudflare",
+      "endpoint_id": "Cloudflare | google/gemma-4-26b-a4b-it-20260403",
+      "identity_key": "google/gemma-4-26b-a4b-it:cloudflare:Cloudflare | google/gemma-4-26b-a4b-it-20260403",
+      "context_tokens": 256000,
+      "pricing": {
+        "input_per_million": 0.09999999999999999,
+        "output_per_million": 0.3,
+        "raw": {
+          "prompt": "0.0000001",
+          "completion": "0.0000003",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 99.92677568952892,
+        "uptime_30m": 99.93386768245907,
+        "uptime_1d": 99.9015676864943
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "include_reasoning",
+          "logit_bias",
+          "logprobs",
+          "max_tokens",
+          "min_p",
+          "presence_penalty",
+          "reasoning",
+          "repetition_penalty",
+          "response_format",
+          "seed",
+          "stop",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_k",
+          "top_logprobs",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T17:19:40Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "google/gemma-4-26b-a4b-it",
+        "last_seen": "2026-08-23T17:19:40Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "google/gemma-4-26b-a4b-it",
+      "model_slug": "google/gemma-4-26b-a4b-it",
+      "provider_id": "darkbloom",
+      "provider_name": "Darkbloom",
+      "endpoint_id": "Darkbloom | google/gemma-4-26b-a4b-it-20260403",
+      "identity_key": "google/gemma-4-26b-a4b-it:darkbloom:Darkbloom | google/gemma-4-26b-a4b-it-20260403",
+      "context_tokens": 131072,
+      "pricing": {
+        "input_per_million": 0.041999999999999996,
+        "output_per_million": 0.22,
+        "raw": {
+          "prompt": "0.000000042",
+          "completion": "0.00000022",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 98.44224422442244,
+        "uptime_30m": 98.18007482750193,
+        "uptime_1d": 93.83128079761512
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "include_reasoning",
+          "logprobs",
+          "max_tokens",
+          "presence_penalty",
+          "reasoning",
+          "repetition_penalty",
+          "response_format",
+          "seed",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_k",
+          "top_logprobs",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T17:19:40Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "google/gemma-4-26b-a4b-it",
+        "last_seen": "2026-08-23T17:19:40Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "google/gemma-4-26b-a4b-it",
+      "model_slug": "google/gemma-4-26b-a4b-it",
+      "provider_id": "deepinfra/fp8",
+      "provider_name": "DeepInfra",
+      "endpoint_id": "DeepInfra | google/gemma-4-26b-a4b-it-20260403",
+      "identity_key": "google/gemma-4-26b-a4b-it:deepinfra/fp8:DeepInfra | google/gemma-4-26b-a4b-it-20260403",
+      "context_tokens": 262144,
+      "pricing": {
+        "input_per_million": 0.07,
+        "output_per_million": 0.33999999999999997,
+        "raw": {
+          "prompt": "0.00000007",
+          "completion": "0.00000034",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 99.94791214515149,
+        "uptime_30m": 99.74403465376996,
+        "uptime_1d": 99.78098012312073
+      },
+      "quantization": "fp8",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "include_reasoning",
+          "logit_bias",
+          "max_tokens",
+          "min_p",
+          "presence_penalty",
+          "reasoning",
+          "repetition_penalty",
+          "response_format",
+          "seed",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_k",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T17:19:40Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "google/gemma-4-26b-a4b-it",
+        "last_seen": "2026-08-23T17:19:40Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "google/gemma-4-26b-a4b-it",
+      "model_slug": "google/gemma-4-26b-a4b-it",
+      "provider_id": "google-vertex/global",
+      "provider_name": "Google",
+      "endpoint_id": "Google | google/gemma-4-26b-a4b-it-20260403",
+      "identity_key": "google/gemma-4-26b-a4b-it:google-vertex/global:Google | google/gemma-4-26b-a4b-it-20260403",
+      "context_tokens": 262144,
+      "pricing": {
+        "input_per_million": 0.15,
+        "output_per_million": 0.6,
+        "raw": {
+          "prompt": "0.00000015",
+          "completion": "0.0000006",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 98.6022871664549,
+        "uptime_30m": 98.32990590141459,
+        "uptime_1d": 98.68152326696269
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "include_reasoning",
+          "logprobs",
+          "max_tokens",
+          "presence_penalty",
+          "reasoning",
+          "repetition_penalty",
+          "response_format",
+          "seed",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_k",
+          "top_logprobs",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T17:19:40Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "google/gemma-4-26b-a4b-it",
+        "last_seen": "2026-08-23T17:19:40Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "google/gemma-4-26b-a4b-it",
+      "model_slug": "google/gemma-4-26b-a4b-it",
+      "provider_id": "nextbit/bf16",
+      "provider_name": "NextBit",
+      "endpoint_id": "NextBit | google/gemma-4-26b-a4b-it-20260403",
+      "identity_key": "google/gemma-4-26b-a4b-it:nextbit/bf16:NextBit | google/gemma-4-26b-a4b-it-20260403",
+      "context_tokens": 262144,
+      "pricing": {
+        "input_per_million": 0.09999999999999999,
+        "output_per_million": 0.39999999999999997,
+        "raw": {
+          "prompt": "0.0000001",
+          "completion": "0.0000004",
+          "input_cache_read": "0.00000005",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 99.90381058083611,
+        "uptime_30m": 99.93973701629076,
+        "uptime_1d": 98.97119055315284
+      },
+      "quantization": "bf16",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "include_reasoning",
+          "logprobs",
+          "max_tokens",
+          "presence_penalty",
+          "reasoning",
+          "repetition_penalty",
+          "response_format",
+          "seed",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_logprobs",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T17:19:40Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "google/gemma-4-26b-a4b-it",
+        "last_seen": "2026-08-23T17:19:40Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "google/gemma-4-26b-a4b-it",
+      "model_slug": "google/gemma-4-26b-a4b-it",
+      "provider_id": "novita/bf16",
+      "provider_name": "Novita",
+      "endpoint_id": "Novita | google/gemma-4-26b-a4b-it-20260403",
+      "identity_key": "google/gemma-4-26b-a4b-it:novita/bf16:Novita | google/gemma-4-26b-a4b-it-20260403",
+      "context_tokens": 262144,
+      "pricing": {
+        "input_per_million": 0.13,
+        "output_per_million": 0.39999999999999997,
+        "raw": {
+          "prompt": "0.00000013",
+          "completion": "0.0000004",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 100.0,
+        "uptime_30m": 99.92769342010122,
+        "uptime_1d": 99.8225819491731
+      },
+      "quantization": "bf16",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "include_reasoning",
+          "logprobs",
+          "max_tokens",
+          "presence_penalty",
+          "reasoning",
+          "repetition_penalty",
+          "response_format",
+          "seed",
+          "stop",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_k",
+          "top_logprobs",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T17:19:40Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "google/gemma-4-26b-a4b-it",
+        "last_seen": "2026-08-23T17:19:40Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "google/gemma-4-26b-a4b-it",
+      "model_slug": "google/gemma-4-26b-a4b-it",
+      "provider_id": "parasail/bf16",
+      "provider_name": "Parasail",
+      "endpoint_id": "Parasail | google/gemma-4-26b-a4b-it-20260403",
+      "identity_key": "google/gemma-4-26b-a4b-it:parasail/bf16:Parasail | google/gemma-4-26b-a4b-it-20260403",
+      "context_tokens": 262144,
+      "pricing": {
+        "input_per_million": 0.13,
+        "output_per_million": 0.39999999999999997,
+        "raw": {
+          "prompt": "0.00000013",
+          "completion": "0.0000004",
+          "input_cache_read": "0.00000005",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 99.40807174887892,
+        "uptime_30m": 99.65183656213475,
+        "uptime_1d": 99.23218410064149
+      },
+      "quantization": "bf16",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "include_reasoning",
+          "logit_bias",
+          "logprobs",
+          "max_tokens",
+          "presence_penalty",
+          "reasoning",
+          "repetition_penalty",
+          "response_format",
+          "seed",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "top_k",
+          "top_logprobs",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T17:19:40Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "google/gemma-4-26b-a4b-it",
+        "last_seen": "2026-08-23T17:19:40Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "google/gemma-4-26b-a4b-it",
+      "model_slug": "google/gemma-4-26b-a4b-it",
+      "provider_id": "siliconflow/fp8",
+      "provider_name": "SiliconFlow",
+      "endpoint_id": "SiliconFlow | google/gemma-4-26b-a4b-it-20260403",
+      "identity_key": "google/gemma-4-26b-a4b-it:siliconflow/fp8:SiliconFlow | google/gemma-4-26b-a4b-it-20260403",
+      "context_tokens": 262144,
+      "pricing": {
+        "input_per_million": 0.12,
+        "output_per_million": 0.39999999999999997,
+        "raw": {
+          "prompt": "0.00000012",
+          "completion": "0.0000004",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 99.40511600237953,
+        "uptime_30m": 99.55407886683571,
+        "uptime_1d": 99.59269556105764
+      },
+      "quantization": "fp8",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "include_reasoning",
+          "max_tokens",
+          "reasoning",
+          "response_format",
+          "structured_outputs",
+          "temperature",
+          "top_k",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T17:19:40Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "google/gemma-4-26b-a4b-it",
+        "last_seen": "2026-08-23T17:19:40Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "google/gemma-4-26b-a4b-it",
+      "model_slug": "google/gemma-4-26b-a4b-it",
+      "provider_id": "venice/bf16",
+      "provider_name": "Venice",
+      "endpoint_id": "Venice | google/gemma-4-26b-a4b-it-20260403",
+      "identity_key": "google/gemma-4-26b-a4b-it:venice/bf16:Venice | google/gemma-4-26b-a4b-it-20260403",
+      "context_tokens": 256000,
+      "pricing": {
+        "input_per_million": 0.13,
+        "output_per_million": 0.39999999999999997,
+        "raw": {
+          "prompt": "0.00000013",
+          "completion": "0.0000004",
+          "input_cache_read": "0.00000005",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 99.48734380006408,
+        "uptime_30m": 99.7123287671233,
+        "uptime_1d": 99.48931950746571
+      },
+      "quantization": "bf16",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "include_reasoning",
+          "logprobs",
+          "max_tokens",
+          "presence_penalty",
+          "reasoning",
+          "response_format",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_k",
+          "top_logprobs",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T17:19:40Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "google/gemma-4-26b-a4b-it",
+        "last_seen": "2026-08-23T17:19:40Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "google/gemma-4-26b-a4b-it:free",
+      "model_slug": "google/gemma-4-26b-a4b-it:free",
+      "provider_id": "google-ai-studio",
+      "provider_name": "Google AI Studio",
+      "endpoint_id": "Google AI Studio | google/gemma-4-26b-a4b-it-20260403:free",
+      "identity_key": "google/gemma-4-26b-a4b-it:free:google-ai-studio:Google AI Studio | google/gemma-4-26b-a4b-it-20260403:free",
+      "context_tokens": 262144,
+      "pricing": {
+        "input_per_million": 0.0,
+        "output_per_million": 0.0,
+        "raw": {
+          "prompt": "0",
+          "completion": "0",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 100.0,
+        "uptime_30m": 100.0,
+        "uptime_1d": 99.84577701170281
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "include_reasoning",
+          "max_tokens",
+          "reasoning",
+          "response_format",
+          "seed",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T17:19:40Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "google/gemma-4-26b-a4b-it:free",
+        "last_seen": "2026-08-23T17:19:40Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "google/gemma-4-31b-it",
+      "model_slug": "google/gemma-4-31b-it",
+      "provider_id": "cerebras/fp16",
+      "provider_name": "Cerebras",
+      "endpoint_id": "Cerebras | google/gemma-4-31b-it-20260402",
+      "identity_key": "google/gemma-4-31b-it:cerebras/fp16:Cerebras | google/gemma-4-31b-it-20260402",
+      "context_tokens": 131072,
+      "pricing": {
+        "input_per_million": 0.9900000000000001,
+        "output_per_million": 1.49,
+        "raw": {
+          "prompt": "0.00000099",
+          "completion": "0.00000149",
+          "input_cache_read": "0.00000099",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 100.0,
+        "uptime_30m": 100.0,
+        "uptime_1d": 99.93320946725443
+      },
+      "quantization": "fp16",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "include_reasoning",
+          "logit_bias",
+          "max_tokens",
+          "presence_penalty",
+          "reasoning",
+          "response_format",
+          "seed",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T17:19:40Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "google/gemma-4-31b-it",
+        "last_seen": "2026-08-23T17:19:40Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "google/gemma-4-31b-it",
+      "model_slug": "google/gemma-4-31b-it",
+      "provider_id": "chutes/fp4",
+      "provider_name": "Chutes",
+      "endpoint_id": "Chutes | google/gemma-4-31b-it-20260402",
+      "identity_key": "google/gemma-4-31b-it:chutes/fp4:Chutes | google/gemma-4-31b-it-20260402",
+      "context_tokens": 131072,
+      "pricing": {
+        "input_per_million": 0.12,
+        "output_per_million": 0.37,
+        "raw": {
+          "prompt": "0.00000012",
+          "completion": "0.00000037",
+          "input_cache_read": "0.000000012",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "unavailable",
+        "uptime_5m": 13.559322033898304,
+        "uptime_30m": 81.08108108108108,
+        "uptime_1d": 97.04176781104304
+      },
+      "quantization": "fp4",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "include_reasoning",
+          "max_tokens",
+          "presence_penalty",
+          "reasoning",
+          "repetition_penalty",
+          "response_format",
+          "seed",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_k",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T17:19:40Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "google/gemma-4-31b-it",
+        "last_seen": "2026-08-23T17:19:40Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "google/gemma-4-31b-it",
+      "model_slug": "google/gemma-4-31b-it",
+      "provider_id": "coreweave/bf16",
+      "provider_name": "CoreWeave",
+      "endpoint_id": "CoreWeave | google/gemma-4-31b-it-20260402",
+      "identity_key": "google/gemma-4-31b-it:coreweave/bf16:CoreWeave | google/gemma-4-31b-it-20260402",
+      "context_tokens": 262144,
+      "pricing": {
+        "input_per_million": 0.09999999999999999,
+        "output_per_million": 0.33999999999999997,
+        "raw": {
+          "prompt": "0.0000001",
+          "completion": "0.00000034",
+          "input_cache_read": "0.0000001",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 96.48035301533936,
+        "uptime_30m": 97.49951385790925,
+        "uptime_1d": 98.64838136773966
+      },
+      "quantization": "bf16",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "include_reasoning",
+          "logprobs",
+          "max_tokens",
+          "presence_penalty",
+          "reasoning",
+          "repetition_penalty",
+          "response_format",
+          "seed",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_k",
+          "top_logprobs",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T17:19:40Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "google/gemma-4-31b-it",
+        "last_seen": "2026-08-23T17:19:40Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "google/gemma-4-31b-it",
+      "model_slug": "google/gemma-4-31b-it",
+      "provider_id": "crusoe",
+      "provider_name": "Crusoe",
+      "endpoint_id": "Crusoe | google/gemma-4-31b-it-20260402",
+      "identity_key": "google/gemma-4-31b-it:crusoe:Crusoe | google/gemma-4-31b-it-20260402",
+      "context_tokens": 262144,
+      "pricing": {
+        "input_per_million": 0.14,
+        "output_per_million": 0.39999999999999997,
+        "raw": {
+          "prompt": "0.00000014",
+          "completion": "0.0000004",
+          "input_cache_read": "0.00000014",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 98.7551867219917,
+        "uptime_30m": 99.04761904761905,
+        "uptime_1d": 99.32668260642538
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "include_reasoning",
+          "logit_bias",
+          "max_tokens",
+          "min_p",
+          "presence_penalty",
+          "reasoning",
+          "repetition_penalty",
+          "response_format",
+          "seed",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_k",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T17:19:40Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "google/gemma-4-31b-it",
+        "last_seen": "2026-08-23T17:19:40Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "google/gemma-4-31b-it",
+      "model_slug": "google/gemma-4-31b-it",
+      "provider_id": "deepinfra/fp8",
+      "provider_name": "DeepInfra",
+      "endpoint_id": "DeepInfra | google/gemma-4-31b-it-20260402",
+      "identity_key": "google/gemma-4-31b-it:deepinfra/fp8:DeepInfra | google/gemma-4-31b-it-20260402",
+      "context_tokens": 262144,
+      "pricing": {
+        "input_per_million": 0.13,
+        "output_per_million": 0.38,
+        "raw": {
+          "prompt": "0.00000013",
+          "completion": "0.00000038",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 99.87989430699015,
+        "uptime_30m": 99.53194383326,
+        "uptime_1d": 99.50034319585801
+      },
+      "quantization": "fp8",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "include_reasoning",
+          "logit_bias",
+          "max_tokens",
+          "min_p",
+          "presence_penalty",
+          "reasoning",
+          "repetition_penalty",
+          "response_format",
+          "seed",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_k",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T17:19:40Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "google/gemma-4-31b-it",
+        "last_seen": "2026-08-23T17:19:40Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "google/gemma-4-31b-it",
+      "model_slug": "google/gemma-4-31b-it",
+      "provider_id": "deepinfra/turbo",
+      "provider_name": "DeepInfra",
+      "endpoint_id": "DeepInfra | google/gemma-4-31b-it-20260402",
+      "identity_key": "google/gemma-4-31b-it:deepinfra/turbo:DeepInfra | google/gemma-4-31b-it-20260402",
+      "context_tokens": 262144,
+      "pricing": {
+        "input_per_million": 0.09,
+        "output_per_million": 0.33999999999999997,
+        "raw": {
+          "prompt": "0.00000009",
+          "completion": "0.00000034",
+          "input_cache_read": "0.00000005",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 99.88936304725779,
+        "uptime_30m": 99.88251773530342,
+        "uptime_1d": 99.933570909939
+      },
+      "quantization": "fp4",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "include_reasoning",
+          "logit_bias",
+          "max_tokens",
+          "min_p",
+          "presence_penalty",
+          "reasoning",
+          "repetition_penalty",
+          "response_format",
+          "seed",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "top_k",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T17:19:40Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "google/gemma-4-31b-it",
+        "last_seen": "2026-08-23T17:19:40Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "google/gemma-4-31b-it",
+      "model_slug": "google/gemma-4-31b-it",
+      "provider_id": "deepinfra/ultra",
+      "provider_name": "DeepInfra",
+      "endpoint_id": "DeepInfra | google/gemma-4-31b-it-20260402",
+      "identity_key": "google/gemma-4-31b-it:deepinfra/ultra:DeepInfra | google/gemma-4-31b-it-20260402",
+      "context_tokens": 131072,
+      "pricing": {
+        "input_per_million": 0.27,
+        "output_per_million": 0.76,
+        "raw": {
+          "prompt": "0.00000027",
+          "completion": "0.00000076",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 100.0,
+        "uptime_30m": 100.0,
+        "uptime_1d": 99.39327082184225
+      },
+      "quantization": "fp8",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "include_reasoning",
+          "logit_bias",
+          "max_tokens",
+          "min_p",
+          "presence_penalty",
+          "reasoning",
+          "repetition_penalty",
+          "seed",
+          "stop",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_k",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T17:19:40Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "google/gemma-4-31b-it",
+        "last_seen": "2026-08-23T17:19:40Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "google/gemma-4-31b-it",
+      "model_slug": "google/gemma-4-31b-it",
+      "provider_id": "friendli",
+      "provider_name": "Friendli",
+      "endpoint_id": "Friendli | google/gemma-4-31b-it-20260402",
+      "identity_key": "google/gemma-4-31b-it:friendli:Friendli | google/gemma-4-31b-it-20260402",
+      "context_tokens": 262144,
+      "pricing": {
+        "input_per_million": 0.14,
+        "output_per_million": 0.39999999999999997,
+        "raw": {
+          "prompt": "0.00000014",
+          "completion": "0.0000004",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 100.0,
+        "uptime_30m": 100.0,
+        "uptime_1d": 99.74690139261175
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "include_reasoning",
+          "max_tokens",
+          "min_p",
+          "presence_penalty",
+          "reasoning",
+          "repetition_penalty",
+          "response_format",
+          "seed",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_k",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T17:19:40Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "google/gemma-4-31b-it",
+        "last_seen": "2026-08-23T17:19:40Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "google/gemma-4-31b-it",
+      "model_slug": "google/gemma-4-31b-it",
+      "provider_id": "modelrun/fp4",
+      "provider_name": "ModelRun",
+      "endpoint_id": "ModelRun | google/gemma-4-31b-it-20260402",
+      "identity_key": "google/gemma-4-31b-it:modelrun/fp4:ModelRun | google/gemma-4-31b-it-20260402",
+      "context_tokens": 262144,
+      "pricing": {
+        "input_per_million": 0.75,
+        "output_per_million": 1.0,
+        "raw": {
+          "prompt": "0.00000075",
+          "completion": "0.000001",
+          "input_cache_read": "0.00000075",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 100.0,
+        "uptime_30m": 99.96677372909514,
+        "uptime_1d": 99.96322904170286
+      },
+      "quantization": "fp4",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "include_reasoning",
+          "max_tokens",
+          "presence_penalty",
+          "reasoning",
+          "repetition_penalty",
+          "response_format",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_k",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T17:19:40Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "google/gemma-4-31b-it",
+        "last_seen": "2026-08-23T17:19:40Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "google/gemma-4-31b-it",
+      "model_slug": "google/gemma-4-31b-it",
+      "provider_id": "novita/bf16",
+      "provider_name": "Novita",
+      "endpoint_id": "Novita | google/gemma-4-31b-it-20260402",
+      "identity_key": "google/gemma-4-31b-it:novita/bf16:Novita | google/gemma-4-31b-it-20260402",
+      "context_tokens": 262144,
+      "pricing": {
+        "input_per_million": 0.14,
+        "output_per_million": 0.39999999999999997,
+        "raw": {
+          "prompt": "0.00000014",
+          "completion": "0.0000004",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 100.0,
+        "uptime_30m": 100.0,
+        "uptime_1d": 98.87728313690442
+      },
+      "quantization": "bf16",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "include_reasoning",
+          "logprobs",
+          "max_tokens",
+          "presence_penalty",
+          "reasoning",
+          "repetition_penalty",
+          "response_format",
+          "seed",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_k",
+          "top_logprobs",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T17:19:40Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "google/gemma-4-31b-it",
+        "last_seen": "2026-08-23T17:19:40Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "google/gemma-4-31b-it",
+      "model_slug": "google/gemma-4-31b-it",
+      "provider_id": "open-inference/bf16",
+      "provider_name": "OpenInference",
+      "endpoint_id": "OpenInference | google/gemma-4-31b-it-20260402",
+      "identity_key": "google/gemma-4-31b-it:open-inference/bf16:OpenInference | google/gemma-4-31b-it-20260402",
+      "context_tokens": 262144,
+      "pricing": {
+        "input_per_million": 0.08,
+        "output_per_million": 0.35,
+        "raw": {
+          "prompt": "0.00000008",
+          "completion": "0.00000035",
+          "input_cache_read": "0.00000001",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 95.29520295202953,
+        "uptime_30m": 97.55065013607499,
+        "uptime_1d": 98.19451139124133
+      },
+      "quantization": "bf16",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "include_reasoning",
+          "max_tokens",
+          "presence_penalty",
+          "reasoning",
+          "response_format",
+          "seed",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T17:19:40Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "google/gemma-4-31b-it",
+        "last_seen": "2026-08-23T17:19:40Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "google/gemma-4-31b-it",
+      "model_slug": "google/gemma-4-31b-it",
+      "provider_id": "parasail/fp8",
+      "provider_name": "Parasail",
+      "endpoint_id": "Parasail | google/gemma-4-31b-it-20260402",
+      "identity_key": "google/gemma-4-31b-it:parasail/fp8:Parasail | google/gemma-4-31b-it-20260402",
+      "context_tokens": 262144,
+      "pricing": {
+        "input_per_million": 0.15,
+        "output_per_million": 0.39999999999999997,
+        "raw": {
+          "prompt": "0.00000015",
+          "completion": "0.0000004",
+          "input_cache_read": "0.00000006",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 100.0,
+        "uptime_30m": 99.23378474697077,
+        "uptime_1d": 99.66244077346651
+      },
+      "quantization": "fp8",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "include_reasoning",
+          "logit_bias",
+          "logprobs",
+          "max_tokens",
+          "presence_penalty",
+          "reasoning",
+          "repetition_penalty",
+          "response_format",
+          "seed",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_k",
+          "top_logprobs",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T17:19:40Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "google/gemma-4-31b-it",
+        "last_seen": "2026-08-23T17:19:40Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "google/gemma-4-31b-it",
+      "model_slug": "google/gemma-4-31b-it",
+      "provider_id": "phala",
+      "provider_name": "Phala",
+      "endpoint_id": "Phala | google/gemma-4-31b-it-20260402",
+      "identity_key": "google/gemma-4-31b-it:phala:Phala | google/gemma-4-31b-it-20260402",
+      "context_tokens": 262144,
+      "pricing": {
+        "input_per_million": 0.15,
+        "output_per_million": 0.45999999999999996,
+        "raw": {
+          "prompt": "0.00000015",
+          "completion": "0.00000046",
+          "input_cache_read": "0.000000075",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 99.77941176470588,
+        "uptime_30m": 99.857668129522,
+        "uptime_1d": 98.89501125725798
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "include_reasoning",
+          "max_tokens",
+          "min_p",
+          "presence_penalty",
+          "reasoning",
+          "repetition_penalty",
+          "response_format",
+          "seed",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_k",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T17:19:40Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "google/gemma-4-31b-it",
+        "last_seen": "2026-08-23T17:19:40Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "google/gemma-4-31b-it",
+      "model_slug": "google/gemma-4-31b-it",
+      "provider_id": "sambanova",
+      "provider_name": "SambaNova",
+      "endpoint_id": "SambaNova | google/gemma-4-31b-it-20260402",
+      "identity_key": "google/gemma-4-31b-it:sambanova:SambaNova | google/gemma-4-31b-it-20260402",
+      "context_tokens": 262144,
+      "pricing": {
+        "input_per_million": 0.38,
+        "output_per_million": 1.15,
+        "raw": {
+          "prompt": "0.00000038",
+          "completion": "0.00000115",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": null,
+        "uptime_30m": 99.38271604938271,
+        "uptime_1d": 99.9589601805752
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "include_reasoning",
+          "max_tokens",
+          "reasoning",
+          "stop",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_k",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T17:19:40Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "google/gemma-4-31b-it",
+        "last_seen": "2026-08-23T17:19:40Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "google/gemma-4-31b-it",
+      "model_slug": "google/gemma-4-31b-it",
+      "provider_id": "siliconflow/fp8",
+      "provider_name": "SiliconFlow",
+      "endpoint_id": "SiliconFlow | google/gemma-4-31b-it-20260402",
+      "identity_key": "google/gemma-4-31b-it:siliconflow/fp8:SiliconFlow | google/gemma-4-31b-it-20260402",
+      "context_tokens": 262144,
+      "pricing": {
+        "input_per_million": 0.13,
+        "output_per_million": 0.39999999999999997,
+        "raw": {
+          "prompt": "0.00000013",
+          "completion": "0.0000004",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 91.34615384615384,
+        "uptime_30m": 96.0691823899371,
+        "uptime_1d": 83.70134360798261
+      },
+      "quantization": "fp8",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "include_reasoning",
+          "max_tokens",
+          "reasoning",
+          "response_format",
+          "structured_outputs",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_k",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T17:19:40Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "google/gemma-4-31b-it",
+        "last_seen": "2026-08-23T17:19:40Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "google/gemma-4-31b-it",
+      "model_slug": "google/gemma-4-31b-it",
+      "provider_id": "together",
+      "provider_name": "Together",
+      "endpoint_id": "Together | google/gemma-4-31b-it-20260402",
+      "identity_key": "google/gemma-4-31b-it:together:Together | google/gemma-4-31b-it-20260402",
+      "context_tokens": 262144,
+      "pricing": {
+        "input_per_million": 0.39,
+        "output_per_million": 0.9700000000000001,
+        "raw": {
+          "prompt": "0.00000039",
+          "completion": "0.00000097",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 100.0,
+        "uptime_30m": 97.43589743589743,
+        "uptime_1d": 98.72085897513357
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "include_reasoning",
+          "logit_bias",
+          "max_tokens",
+          "min_p",
+          "presence_penalty",
+          "reasoning",
+          "repetition_penalty",
+          "response_format",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_k",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T17:19:40Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "google/gemma-4-31b-it",
+        "last_seen": "2026-08-23T17:19:40Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "google/gemma-4-31b-it",
+      "model_slug": "google/gemma-4-31b-it",
+      "provider_id": "venice/bf16",
+      "provider_name": "Venice",
+      "endpoint_id": "Venice | google/gemma-4-31b-it-20260402",
+      "identity_key": "google/gemma-4-31b-it:venice/bf16:Venice | google/gemma-4-31b-it-20260402",
+      "context_tokens": 256000,
+      "pricing": {
+        "input_per_million": 0.12,
+        "output_per_million": 0.36,
+        "raw": {
+          "prompt": "0.00000012",
+          "completion": "0.00000036",
+          "input_cache_read": "0.00000009",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 99.85369422092172,
+        "uptime_30m": 99.89201447006101,
+        "uptime_1d": 99.71947642296024
+      },
+      "quantization": "bf16",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "include_reasoning",
+          "logprobs",
+          "max_tokens",
+          "presence_penalty",
+          "reasoning",
+          "response_format",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_k",
+          "top_logprobs",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T17:19:40Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "google/gemma-4-31b-it",
+        "last_seen": "2026-08-23T17:19:40Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "google/gemma-4-31b-it:free",
+      "model_slug": "google/gemma-4-31b-it:free",
+      "provider_id": "google-ai-studio",
+      "provider_name": "Google AI Studio",
+      "endpoint_id": "Google AI Studio | google/gemma-4-31b-it-20260402:free",
+      "identity_key": "google/gemma-4-31b-it:free:google-ai-studio:Google AI Studio | google/gemma-4-31b-it-20260402:free",
+      "context_tokens": 262144,
+      "pricing": {
+        "input_per_million": 0.0,
+        "output_per_million": 0.0,
+        "raw": {
+          "prompt": "0",
+          "completion": "0",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 98.76543209876543,
+        "uptime_30m": 99.8,
+        "uptime_1d": 99.90353697749195
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "include_reasoning",
+          "max_tokens",
+          "reasoning",
+          "response_format",
+          "seed",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T17:19:40Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "google/gemma-4-31b-it:free",
+        "last_seen": "2026-08-23T17:19:40Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "google/lyria-3-clip-preview",
+      "model_slug": "google/lyria-3-clip-preview",
+      "provider_id": "google-ai-studio",
+      "provider_name": "Google AI Studio",
+      "endpoint_id": "Google AI Studio | google/lyria-3-clip-preview-20260330",
+      "identity_key": "google/lyria-3-clip-preview:google-ai-studio:Google AI Studio | google/lyria-3-clip-preview-20260330",
+      "context_tokens": 1048576,
+      "pricing": {
+        "input_per_million": 0.0,
+        "output_per_million": 0.0,
+        "raw": {
+          "prompt": "0",
+          "completion": "0",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": null,
+        "uptime_30m": null,
+        "uptime_1d": 100.0
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "max_tokens",
+          "response_format",
+          "seed",
+          "temperature",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T17:19:40Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "google/lyria-3-clip-preview",
+        "last_seen": "2026-08-23T17:19:40Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "google/lyria-3-pro-preview",
+      "model_slug": "google/lyria-3-pro-preview",
+      "provider_id": "google-ai-studio",
+      "provider_name": "Google AI Studio",
+      "endpoint_id": "Google AI Studio | google/lyria-3-pro-preview-20260330",
+      "identity_key": "google/lyria-3-pro-preview:google-ai-studio:Google AI Studio | google/lyria-3-pro-preview-20260330",
+      "context_tokens": 1048576,
+      "pricing": {
+        "input_per_million": 0.0,
+        "output_per_million": 0.0,
+        "raw": {
+          "prompt": "0",
+          "completion": "0",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": null,
+        "uptime_30m": null,
+        "uptime_1d": 99.84639016897081
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "max_tokens",
+          "response_format",
+          "seed",
+          "temperature",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T17:19:40Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "google/lyria-3-pro-preview",
+        "last_seen": "2026-08-23T17:19:40Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "gryphe/mythomax-l2-13b",
+      "model_slug": "gryphe/mythomax-l2-13b",
+      "provider_id": "deepinfra/fp16",
+      "provider_name": "DeepInfra",
+      "endpoint_id": "DeepInfra | gryphe/mythomax-l2-13b",
+      "identity_key": "gryphe/mythomax-l2-13b:deepinfra/fp16:DeepInfra | gryphe/mythomax-l2-13b",
+      "context_tokens": 4096,
+      "pricing": {
+        "input_per_million": 0.39999999999999997,
+        "output_per_million": 0.39999999999999997,
+        "raw": {
+          "prompt": "0.0000004",
+          "completion": "0.0000004",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": null,
+        "uptime_30m": 100.0,
+        "uptime_1d": 99.99115826702034
+      },
+      "quantization": "fp16",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "logit_bias",
+          "max_tokens",
+          "min_p",
+          "presence_penalty",
+          "repetition_penalty",
+          "response_format",
+          "seed",
+          "stop",
+          "temperature",
+          "top_k",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T17:19:40Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "gryphe/mythomax-l2-13b",
+        "last_seen": "2026-08-23T17:19:40Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "gryphe/mythomax-l2-13b",
+      "model_slug": "gryphe/mythomax-l2-13b",
+      "provider_id": "mancer/fp8",
+      "provider_name": "Mancer 2",
+      "endpoint_id": "Mancer 2 | gryphe/mythomax-l2-13b",
+      "identity_key": "gryphe/mythomax-l2-13b:mancer/fp8:Mancer 2 | gryphe/mythomax-l2-13b",
+      "context_tokens": 8192,
+      "pricing": {
+        "input_per_million": 0.39999999999999997,
+        "output_per_million": 0.6,
+        "raw": {
+          "prompt": "0.0000004",
+          "completion": "0.0000006",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": null,
+        "uptime_30m": 100.0,
+        "uptime_1d": 99.87259898079185
+      },
+      "quantization": "fp8",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "logit_bias",
+          "logprobs",
+          "max_tokens",
+          "min_p",
+          "presence_penalty",
+          "repetition_penalty",
+          "response_format",
+          "seed",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "top_a",
+          "top_k",
+          "top_logprobs",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T17:19:40Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "gryphe/mythomax-l2-13b",
+        "last_seen": "2026-08-23T17:19:40Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "gryphe/mythomax-l2-13b",
+      "model_slug": "gryphe/mythomax-l2-13b",
+      "provider_id": "nextbit/int4",
+      "provider_name": "NextBit",
+      "endpoint_id": "NextBit | gryphe/mythomax-l2-13b",
+      "identity_key": "gryphe/mythomax-l2-13b:nextbit/int4:NextBit | gryphe/mythomax-l2-13b",
+      "context_tokens": 4096,
+      "pricing": {
+        "input_per_million": 0.06,
+        "output_per_million": 0.06,
+        "raw": {
+          "prompt": "0.00000006",
+          "completion": "0.00000006",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 100.0,
+        "uptime_30m": 99.8914223669924,
+        "uptime_1d": 99.93802394232965
+      },
+      "quantization": "int4",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "logprobs",
+          "max_tokens",
+          "presence_penalty",
+          "repetition_penalty",
+          "response_format",
+          "seed",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "top_logprobs",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T17:19:40Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "gryphe/mythomax-l2-13b",
+        "last_seen": "2026-08-23T17:19:40Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "gryphe/mythomax-l2-13b",
+      "model_slug": "gryphe/mythomax-l2-13b",
+      "provider_id": "parasail/fp16",
+      "provider_name": "Parasail",
+      "endpoint_id": "Parasail | gryphe/mythomax-l2-13b",
+      "identity_key": "gryphe/mythomax-l2-13b:parasail/fp16:Parasail | gryphe/mythomax-l2-13b",
+      "context_tokens": 4096,
+      "pricing": {
+        "input_per_million": 0.08,
+        "output_per_million": 0.11,
+        "raw": {
+          "prompt": "0.00000008",
+          "completion": "0.00000011",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 100.0,
+        "uptime_30m": 99.38271604938271,
+        "uptime_1d": 98.20622613123481
+      },
+      "quantization": "fp16",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "logit_bias",
+          "logprobs",
+          "max_tokens",
+          "presence_penalty",
+          "repetition_penalty",
+          "seed",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "top_k",
+          "top_logprobs",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T17:19:40Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "gryphe/mythomax-l2-13b",
+        "last_seen": "2026-08-23T17:19:40Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "ibm-granite/granite-4.0-h-micro",
+      "model_slug": "ibm-granite/granite-4.0-h-micro",
+      "provider_id": "cloudflare",
+      "provider_name": "Cloudflare",
+      "endpoint_id": "Cloudflare | ibm-granite/granite-4.0-h-micro",
+      "identity_key": "ibm-granite/granite-4.0-h-micro:cloudflare:Cloudflare | ibm-granite/granite-4.0-h-micro",
+      "context_tokens": 131000,
+      "pricing": {
+        "input_per_million": 0.017,
+        "output_per_million": 0.112,
+        "raw": {
+          "prompt": "0.000000017",
+          "completion": "0.000000112",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 100.0,
+        "uptime_30m": 100.0,
+        "uptime_1d": 100.0
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "logit_bias",
+          "logprobs",
+          "max_tokens",
+          "min_p",
+          "presence_penalty",
+          "repetition_penalty",
+          "response_format",
+          "seed",
+          "stop",
+          "temperature",
+          "top_k",
+          "top_logprobs",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T17:19:40Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "ibm-granite/granite-4.0-h-micro",
+        "last_seen": "2026-08-23T17:19:40Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "ibm-granite/granite-4.1-8b",
+      "model_slug": "ibm-granite/granite-4.1-8b",
+      "provider_id": "coreweave/bf16",
+      "provider_name": "CoreWeave",
+      "endpoint_id": "CoreWeave | ibm-granite/granite-4.1-8b-20260429",
+      "identity_key": "ibm-granite/granite-4.1-8b:coreweave/bf16:CoreWeave | ibm-granite/granite-4.1-8b-20260429",
+      "context_tokens": 131072,
+      "pricing": {
+        "input_per_million": 0.049999999999999996,
+        "output_per_million": 0.09999999999999999,
+        "raw": {
+          "prompt": "0.00000005",
+          "completion": "0.0000001",
+          "input_cache_read": "0.00000005",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 100.0,
+        "uptime_30m": 100.0,
+        "uptime_1d": 100.0
+      },
+      "quantization": "bf16",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "logprobs",
+          "max_tokens",
+          "presence_penalty",
+          "repetition_penalty",
+          "response_format",
+          "seed",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_k",
+          "top_logprobs",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T17:19:40Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "ibm-granite/granite-4.1-8b",
+        "last_seen": "2026-08-23T17:19:40Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "inception/mercury-2",
+      "model_slug": "inception/mercury-2",
+      "provider_id": "inception",
+      "provider_name": "Inception",
+      "endpoint_id": "Inception | inception/mercury-2-20260304",
+      "identity_key": "inception/mercury-2:inception:Inception | inception/mercury-2-20260304",
+      "context_tokens": 128000,
+      "pricing": {
+        "input_per_million": 0.25,
+        "output_per_million": 0.75,
+        "raw": {
+          "prompt": "0.00000025",
+          "completion": "0.00000075",
+          "input_cache_read": "0.000000025",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 100.0,
+        "uptime_30m": 100.0,
+        "uptime_1d": 99.99449187551639
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "include_reasoning",
+          "max_tokens",
+          "reasoning",
+          "reasoning_effort",
+          "response_format",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "tool_choice",
+          "tools"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T17:19:40Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "inception/mercury-2",
+        "last_seen": "2026-08-23T17:19:40Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "inclusionai/ling-2.6-1t",
+      "model_slug": "inclusionai/ling-2.6-1t",
+      "provider_id": "novita",
+      "provider_name": "Novita",
+      "endpoint_id": "Novita | inclusionai/ling-2.6-1t-20260423",
+      "identity_key": "inclusionai/ling-2.6-1t:novita:Novita | inclusionai/ling-2.6-1t-20260423",
+      "context_tokens": 262144,
+      "pricing": {
+        "input_per_million": 0.075,
+        "output_per_million": 0.625,
+        "raw": {
+          "prompt": "0.000000075",
+          "completion": "0.000000625",
+          "input_cache_read": "0.000000015",
+          "discount": 0.75
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": null,
+        "uptime_30m": 100.0,
+        "uptime_1d": 100.0
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "logprobs",
+          "max_tokens",
+          "presence_penalty",
+          "repetition_penalty",
+          "response_format",
+          "seed",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_k",
+          "top_logprobs",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T17:19:40Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "inclusionai/ling-2.6-1t",
+        "last_seen": "2026-08-23T17:19:40Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "inclusionai/ling-2.6-flash",
+      "model_slug": "inclusionai/ling-2.6-flash",
+      "provider_id": "novita",
+      "provider_name": "Novita",
+      "endpoint_id": "Novita | inclusionai/ling-2.6-flash-20260421",
+      "identity_key": "inclusionai/ling-2.6-flash:novita:Novita | inclusionai/ling-2.6-flash-20260421",
+      "context_tokens": 262144,
+      "pricing": {
+        "input_per_million": 0.01,
+        "output_per_million": 0.03,
+        "raw": {
+          "prompt": "0.00000001",
+          "completion": "0.00000003",
+          "input_cache_read": "0.000000002",
+          "discount": 0.9
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 100.0,
+        "uptime_30m": 100.0,
+        "uptime_1d": 99.99489199078543
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "logprobs",
+          "max_tokens",
+          "presence_penalty",
+          "repetition_penalty",
+          "response_format",
+          "seed",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_k",
+          "top_logprobs",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T17:19:40Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "inclusionai/ling-2.6-flash",
+        "last_seen": "2026-08-23T17:19:40Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "inclusionai/ling-3.0-flash",
+      "model_slug": "inclusionai/ling-3.0-flash",
+      "provider_id": "deepinfra/bf16",
+      "provider_name": "DeepInfra",
+      "endpoint_id": "DeepInfra | inclusionai/ling-3.0-flash-20260723",
+      "identity_key": "inclusionai/ling-3.0-flash:deepinfra/bf16:DeepInfra | inclusionai/ling-3.0-flash-20260723",
+      "context_tokens": 131072,
+      "pricing": {
+        "input_per_million": 0.06,
+        "output_per_million": 0.18,
+        "raw": {
+          "prompt": "0.00000006",
+          "completion": "0.00000018",
+          "input_cache_read": "0.000000012",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 100.0,
+        "uptime_30m": 100.0,
+        "uptime_1d": 99.78332259472492
+      },
+      "quantization": "bf16",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "include_reasoning",
+          "logit_bias",
+          "max_tokens",
+          "min_p",
+          "presence_penalty",
+          "reasoning",
+          "repetition_penalty",
+          "response_format",
+          "seed",
+          "stop",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_k",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T17:19:40Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "inclusionai/ling-3.0-flash",
+        "last_seen": "2026-08-23T17:19:40Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "inclusionai/ling-3.0-flash",
+      "model_slug": "inclusionai/ling-3.0-flash",
+      "provider_id": "novita",
+      "provider_name": "Novita",
+      "endpoint_id": "Novita | inclusionai/ling-3.0-flash-20260723",
+      "identity_key": "inclusionai/ling-3.0-flash:novita:Novita | inclusionai/ling-3.0-flash-20260723",
+      "context_tokens": 262144,
+      "pricing": {
+        "input_per_million": 0.020999999999999998,
+        "output_per_million": 0.063,
+        "raw": {
+          "prompt": "0.000000021",
+          "completion": "0.000000063",
+          "input_cache_read": "0.0000000042",
+          "discount": 0.65
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 100.0,
+        "uptime_30m": 100.0,
+        "uptime_1d": 99.99893280286521
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "include_reasoning",
+          "logprobs",
+          "max_tokens",
+          "presence_penalty",
+          "reasoning",
+          "repetition_penalty",
+          "seed",
+          "stop",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_k",
+          "top_logprobs",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T17:19:40Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "inclusionai/ling-3.0-flash",
+        "last_seen": "2026-08-23T17:19:40Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "inclusionai/ling-3.0-flash",
+      "model_slug": "inclusionai/ling-3.0-flash",
+      "provider_id": "novita/fast",
+      "provider_name": "Novita",
+      "endpoint_id": "Novita | inclusionai/ling-3.0-flash-20260723",
+      "identity_key": "inclusionai/ling-3.0-flash:novita/fast:Novita | inclusionai/ling-3.0-flash-20260723",
+      "context_tokens": 262144,
+      "pricing": {
+        "input_per_million": 0.041999999999999996,
+        "output_per_million": 0.126,
+        "raw": {
+          "prompt": "0.000000042",
+          "completion": "0.000000126",
+          "input_cache_read": "0.0000000084",
+          "discount": 0.3
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 100.0,
+        "uptime_30m": 100.0,
+        "uptime_1d": 99.99653604676337
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "include_reasoning",
+          "logprobs",
+          "max_tokens",
+          "presence_penalty",
+          "reasoning",
+          "repetition_penalty",
+          "seed",
+          "stop",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_k",
+          "top_logprobs",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T17:19:40Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "inclusionai/ling-3.0-flash",
+        "last_seen": "2026-08-23T17:19:40Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "inclusionai/ring-2.6-1t",
+      "model_slug": "inclusionai/ring-2.6-1t",
+      "provider_id": "novita",
+      "provider_name": "Novita",
+      "endpoint_id": "Novita | inclusionai/ring-2.6-1t-20260508",
+      "identity_key": "inclusionai/ring-2.6-1t:novita:Novita | inclusionai/ring-2.6-1t-20260508",
+      "context_tokens": 262144,
+      "pricing": {
+        "input_per_million": 0.075,
+        "output_per_million": 0.625,
+        "raw": {
+          "prompt": "0.000000075",
+          "completion": "0.000000625",
+          "input_cache_read": "0.000000015",
+          "discount": 0.75
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 100.0,
+        "uptime_30m": 100.0,
+        "uptime_1d": 100.0
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "include_reasoning",
+          "max_tokens",
+          "presence_penalty",
+          "reasoning",
+          "reasoning_effort",
+          "repetition_penalty",
+          "response_format",
+          "seed",
+          "stop",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_k",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T17:19:40Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "inclusionai/ring-2.6-1t",
+        "last_seen": "2026-08-23T17:19:40Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "kwaipilot/kat-coder-air-v2.5",
+      "model_slug": "kwaipilot/kat-coder-air-v2.5",
+      "provider_id": "streamlake",
+      "provider_name": "StreamLake",
+      "endpoint_id": "StreamLake | kwaipilot/kat-coder-air-v2.5-20260710",
+      "identity_key": "kwaipilot/kat-coder-air-v2.5:streamlake:StreamLake | kwaipilot/kat-coder-air-v2.5-20260710",
+      "context_tokens": 256000,
+      "pricing": {
+        "input_per_million": 0.15,
+        "output_per_million": 0.6,
+        "raw": {
+          "prompt": "0.00000015",
+          "completion": "0.0000006",
+          "input_cache_read": "0.00000003",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": null,
+        "uptime_30m": null,
+        "uptime_1d": 100.0
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "logprobs",
+          "max_tokens",
+          "presence_penalty",
+          "response_format",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_logprobs",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T17:19:40Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "kwaipilot/kat-coder-air-v2.5",
+        "last_seen": "2026-08-23T17:19:40Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "kwaipilot/kat-coder-pro-v2",
+      "model_slug": "kwaipilot/kat-coder-pro-v2",
+      "provider_id": "atlas-cloud/fp8",
+      "provider_name": "AtlasCloud",
+      "endpoint_id": "AtlasCloud | kwaipilot/kat-coder-pro-v2-20260327",
+      "identity_key": "kwaipilot/kat-coder-pro-v2:atlas-cloud/fp8:AtlasCloud | kwaipilot/kat-coder-pro-v2-20260327",
+      "context_tokens": 262144,
+      "pricing": {
+        "input_per_million": 0.3,
+        "output_per_million": 1.2,
+        "raw": {
+          "prompt": "0.0000003",
+          "completion": "0.0000012",
+          "input_cache_read": "0.00000006",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 96.0,
+        "uptime_30m": 99.17127071823204,
+        "uptime_1d": 99.74961898541258
+      },
+      "quantization": "fp8",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "logit_bias",
+          "max_tokens",
+          "min_p",
+          "presence_penalty",
+          "repetition_penalty",
+          "response_format",
+          "seed",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_k",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T17:19:40Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "kwaipilot/kat-coder-pro-v2",
+        "last_seen": "2026-08-23T17:19:40Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "kwaipilot/kat-coder-pro-v2",
+      "model_slug": "kwaipilot/kat-coder-pro-v2",
+      "provider_id": "streamlake",
+      "provider_name": "StreamLake",
+      "endpoint_id": "StreamLake | kwaipilot/kat-coder-pro-v2-20260327",
+      "identity_key": "kwaipilot/kat-coder-pro-v2:streamlake:StreamLake | kwaipilot/kat-coder-pro-v2-20260327",
+      "context_tokens": 256000,
+      "pricing": {
+        "input_per_million": 0.3,
+        "output_per_million": 1.2,
+        "raw": {
+          "prompt": "0.0000003",
+          "completion": "0.0000012",
+          "input_cache_read": "0.00000006",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 100.0,
+        "uptime_30m": 100.0,
+        "uptime_1d": 99.79511125935102
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "logprobs",
+          "max_tokens",
+          "response_format",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_logprobs",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T17:19:40Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "kwaipilot/kat-coder-pro-v2",
+        "last_seen": "2026-08-23T17:19:40Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "kwaipilot/kat-coder-pro-v2.5",
+      "model_slug": "kwaipilot/kat-coder-pro-v2.5",
+      "provider_id": "streamlake",
+      "provider_name": "StreamLake",
+      "endpoint_id": "StreamLake | kwaipilot/kat-coder-pro-v2.5-20260710",
+      "identity_key": "kwaipilot/kat-coder-pro-v2.5:streamlake:StreamLake | kwaipilot/kat-coder-pro-v2.5-20260710",
+      "context_tokens": 256000,
+      "pricing": {
+        "input_per_million": 0.74,
+        "output_per_million": 2.96,
+        "raw": {
+          "prompt": "0.00000074",
+          "completion": "0.00000296",
+          "input_cache_read": "0.00000015",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": null,
+        "uptime_30m": null,
+        "uptime_1d": 100.0
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "logprobs",
+          "max_tokens",
+          "presence_penalty",
+          "response_format",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_logprobs",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T17:19:40Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "kwaipilot/kat-coder-pro-v2.5",
+        "last_seen": "2026-08-23T17:19:40Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "liquid/lfm-2.5-2.6b:free",
+      "model_slug": "liquid/lfm-2.5-2.6b:free",
+      "provider_id": "liquid/fp8",
+      "provider_name": "Liquid",
+      "endpoint_id": "Liquid | liquid/lfm-2.5-2.6b-20260811:free",
+      "identity_key": "liquid/lfm-2.5-2.6b:free:liquid/fp8:Liquid | liquid/lfm-2.5-2.6b-20260811:free",
+      "context_tokens": 65536,
+      "pricing": {
+        "input_per_million": 0.0,
+        "output_per_million": 0.0,
+        "raw": {
+          "prompt": "0",
+          "completion": "0",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 99.0,
+        "uptime_30m": 97.61273209549071,
+        "uptime_1d": 95.31563988631359
+      },
+      "quantization": "fp8",
       "capabilities": {
         "supported_parameters": [
           "frequency_penalty",
@@ -20353,35 +23512,129 @@
           "top_p"
         ]
       },
-      "context_tokens": 65536,
-      "endpoint_id": "Liquid | liquid/lfm-2.5-2.6b-20260811:free",
-      "identity_key": "liquid/lfm-2.5-2.6b:free:liquid/fp8:Liquid | liquid/lfm-2.5-2.6b-20260811:free",
-      "model_id": "liquid/lfm-2.5-2.6b:free",
-      "model_slug": "liquid/lfm-2.5-2.6b:free",
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T17:19:40Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "liquid/lfm-2.5-2.6b:free",
+        "last_seen": "2026-08-23T17:19:40Z"
+      }
+    },
+    {
       "observation_type": "provider_endpoint",
+      "model_id": "mancer/weaver",
+      "model_slug": "mancer/weaver",
+      "provider_id": "mancer/fp8",
+      "provider_name": "Mancer 2",
+      "endpoint_id": "Mancer 2 | mancer/weaver",
+      "identity_key": "mancer/weaver:mancer/fp8:Mancer 2 | mancer/weaver",
+      "context_tokens": 8000,
+      "pricing": {
+        "input_per_million": 0.5,
+        "output_per_million": 0.75,
+        "raw": {
+          "prompt": "0.0000005",
+          "completion": "0.00000075",
+          "discount": 0
+        }
+      },
       "performance": {
         "latency_seconds": null,
         "throughput_tps": null
       },
-      "pricing": {
-        "input_per_million": 0.0,
-        "output_per_million": 0.0,
-        "raw": {
-          "completion": "0",
-          "discount": 0,
-          "prompt": "0"
-        }
+      "availability": {
+        "status": "available",
+        "uptime_5m": null,
+        "uptime_30m": null,
+        "uptime_1d": 100.0
+      },
+      "quantization": "fp8",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "logit_bias",
+          "logprobs",
+          "max_tokens",
+          "min_p",
+          "presence_penalty",
+          "repetition_penalty",
+          "response_format",
+          "seed",
+          "stop",
+          "temperature",
+          "top_a",
+          "top_k",
+          "top_logprobs",
+          "top_p"
+        ]
       },
       "privacy": {},
       "provenance": {
-        "fetched_at": "2026-08-23T06:09:01Z",
-        "raw_endpoint": "liquid/lfm-2.5-2.6b:free",
         "source": "openrouter",
-        "source_authority": "openrouter"
+        "fetched_at": "2026-08-23T17:19:40Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "mancer/weaver",
+        "last_seen": "2026-08-23T17:19:40Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "meituan/longcat-2.0",
+      "model_slug": "meituan/longcat-2.0",
+      "provider_id": "atlas-cloud/fp8",
+      "provider_name": "AtlasCloud",
+      "endpoint_id": "AtlasCloud | meituan/longcat-2.0-20260720",
+      "identity_key": "meituan/longcat-2.0:atlas-cloud/fp8:AtlasCloud | meituan/longcat-2.0-20260720",
+      "context_tokens": 1048756,
+      "pricing": {
+        "input_per_million": 0.3,
+        "output_per_million": 1.2,
+        "raw": {
+          "prompt": "0.0000003",
+          "completion": "0.0000012",
+          "input_cache_read": "0.000000006",
+          "discount": 0.6
+        }
       },
-      "provider_id": "liquid/fp8",
-      "provider_name": "Liquid",
-      "quantization": "fp8"
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 100.0,
+        "uptime_30m": 100.0,
+        "uptime_1d": 100.0
+      },
+      "quantization": "fp8",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "include_reasoning",
+          "logit_bias",
+          "max_tokens",
+          "min_p",
+          "presence_penalty",
+          "reasoning",
+          "repetition_penalty",
+          "seed",
+          "stop",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_k",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T17:19:40Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "meituan/longcat-2.0",
+        "last_seen": "2026-08-23T17:19:40Z"
+      }
     },
     {
       "availability": {
@@ -22424,42 +25677,50 @@
       "quantization": "fp8"
     }
   ],
-  "parser_version": "0.1.0",
-  "response_headers": {
-    "content-type": "application/json"
+  "coverage": {
+    "catalog_models": 422,
+    "models_with_observations": 138,
+    "proportion": 0.327,
+    "fresh_observations": 59,
+    "retained_observations": 386,
+    "retention_days": 14
   },
   "selection": {
-    "cursor_after": 100,
-    "cursor_before": 75,
+    "cursor_before": 100,
+    "cursor_after": 125,
     "selected_model_ids": [
-      "google/gemini-2.5-pro",
-      "google/gemini-2.5-pro-preview",
-      "google/gemini-2.5-pro-preview-05-06",
-      "google/gemini-2.5-pro:batch",
-      "google/gemini-3-flash-preview",
-      "google/gemini-3-flash-preview:batch",
-      "google/gemini-3-pro-image",
-      "google/gemini-3-pro-image-preview",
-      "google/gemini-3.1-flash-image",
-      "google/gemini-3.1-flash-image-preview",
-      "google/gemini-3.1-flash-lite",
-      "google/gemini-3.1-flash-lite-image",
-      "google/gemini-3.1-flash-lite-preview",
-      "google/gemini-3.1-flash-lite:batch",
-      "google/gemini-3.1-pro-preview",
-      "google/gemini-3.1-pro-preview-customtools",
-      "google/gemini-3.1-pro-preview:batch",
-      "google/gemini-3.5-flash",
-      "google/gemini-3.5-flash-lite",
-      "google/gemini-3.5-flash-lite:batch",
-      "google/gemini-3.5-flash:batch",
-      "google/gemini-3.6-flash",
-      "google/gemini-3.6-flash:batch",
-      "google/gemini-3.7-flash",
-      "google/gemini-3.7-flash:batch"
+      "google/gemma-2-27b-it",
+      "google/gemma-3-12b-it",
+      "google/gemma-3-27b-it",
+      "google/gemma-3-4b-it",
+      "google/gemma-3n-e4b-it",
+      "google/gemma-4-26b-a4b-it",
+      "google/gemma-4-26b-a4b-it:free",
+      "google/gemma-4-31b-it",
+      "google/gemma-4-31b-it:free",
+      "google/lyria-3-clip-preview",
+      "google/lyria-3-pro-preview",
+      "gryphe/mythomax-l2-13b",
+      "ibm-granite/granite-4.0-h-micro",
+      "ibm-granite/granite-4.1-8b",
+      "inception/mercury-2",
+      "inclusionai/ling-2.6-1t",
+      "inclusionai/ling-2.6-flash",
+      "inclusionai/ling-3.0-flash",
+      "inclusionai/ring-2.6-1t",
+      "kwaipilot/kat-coder-air-v2.5",
+      "kwaipilot/kat-coder-pro-v2",
+      "kwaipilot/kat-coder-pro-v2.5",
+      "liquid/lfm-2.5-2.6b:free",
+      "mancer/weaver",
+      "meituan/longcat-2.0"
     ]
   },
-  "source": "openrouter",
-  "source_url": "https://openrouter.ai/api/v1/models",
-  "version": 1
+  "next_state": {
+    "cursor": 125,
+    "priority_ids": []
+  },
+  "response_headers": {
+    "content-type": "application/json"
+  }
 }
