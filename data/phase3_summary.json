@@ -1,0 +1,30 @@
+{
+  "phase": 3,
+  "generated_at": "2026-08-23T17:40:00Z",
+  "endpoint_accuracy": {
+    "source": "artificial_analysis public JSON-LD provider pages",
+    "index_version": "1.0",
+    "models": 2,
+    "observations": 30,
+    "models_without_current_jsonld": ["deepseek-v4-pro"],
+    "classification_preserved": true,
+    "point_in_time": true
+  },
+  "coding_agents": {
+    "phase2_observations": 27,
+    "phase3_variants": 9,
+    "coverage": {"coding_agent_index": 9, "cost_per_task_usd": 9, "execution_time_seconds": 9},
+    "benchmark_version": "1.4",
+    "structured_source_scope": "partial_public_jsonld"
+  },
+  "identity": {
+    "aa_models": 618,
+    "openrouter_observations": 445,
+    "verified_same_source_endpoint_model_mappings": 30,
+    "candidate_cross_source_mappings": 0,
+    "unresolved_openrouter_models": 445,
+    "manual_aliases": 0,
+    "conflicts": 0
+  },
+  "workflow": {"endpoint_accuracy": "manual/experimental", "coding_agents": "manual/experimental", "reason": "public JSON-LD is bounded and coverage rotates; no fragile source was promoted to weekly CI"}
+}

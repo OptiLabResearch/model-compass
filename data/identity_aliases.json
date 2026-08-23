@@ -1,0 +1,5 @@
+{
+  "version": 1,
+  "description": "Audited cross-source aliases only; empty by default. Never store credentials here.",
+  "mappings": []
+}

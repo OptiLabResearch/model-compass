@@ -1,0 +1,2130 @@
+{
+  "ambiguous": [],
+  "conflicts": [],
+  "generated_at": "2026-08-23T00:00:00Z",
+  "health": {
+    "aa_models": 618,
+    "ambiguous": 0,
+    "candidate": 0,
+    "conflict": 0,
+    "manual": 0,
+    "openrouter_models": 445,
+    "unresolved": 445,
+    "verified": 30
+  },
+  "mappings": [
+    {
+      "confidence": 1.0,
+      "evidence": "same Artificial Analysis stable slug",
+      "last_verified": "2026-08-23T00:00:00Z",
+      "relation": "endpoint_model_to_model",
+      "source": "artificial_analysis_endpoint_accuracy",
+      "source_entity_id": "glm-5-2",
+      "state": "verified",
+      "target": "artificial_analysis",
+      "target_entity_id": "glm-5-2"
+    },
+    {
+      "confidence": 1.0,
+      "evidence": "same Artificial Analysis stable slug",
+      "last_verified": "2026-08-23T00:00:00Z",
+      "relation": "endpoint_model_to_model",
+      "source": "artificial_analysis_endpoint_accuracy",
+      "source_entity_id": "glm-5-2",
+      "state": "verified",
+      "target": "artificial_analysis",
+      "target_entity_id": "glm-5-2"
+    },
+    {
+      "confidence": 1.0,
+      "evidence": "same Artificial Analysis stable slug",
+      "last_verified": "2026-08-23T00:00:00Z",
+      "relation": "endpoint_model_to_model",
+      "source": "artificial_analysis_endpoint_accuracy",
+      "source_entity_id": "glm-5-2",
+      "state": "verified",
+      "target": "artificial_analysis",
+      "target_entity_id": "glm-5-2"
+    },
+    {
+      "confidence": 1.0,
+      "evidence": "same Artificial Analysis stable slug",
+      "last_verified": "2026-08-23T00:00:00Z",
+      "relation": "endpoint_model_to_model",
+      "source": "artificial_analysis_endpoint_accuracy",
+      "source_entity_id": "glm-5-2",
+      "state": "verified",
+      "target": "artificial_analysis",
+      "target_entity_id": "glm-5-2"
+    },
+    {
+      "confidence": 1.0,
+      "evidence": "same Artificial Analysis stable slug",
+      "last_verified": "2026-08-23T00:00:00Z",
+      "relation": "endpoint_model_to_model",
+      "source": "artificial_analysis_endpoint_accuracy",
+      "source_entity_id": "glm-5-2",
+      "state": "verified",
+      "target": "artificial_analysis",
+      "target_entity_id": "glm-5-2"
+    },
+    {
+      "confidence": 1.0,
+      "evidence": "same Artificial Analysis stable slug",
+      "last_verified": "2026-08-23T00:00:00Z",
+      "relation": "endpoint_model_to_model",
+      "source": "artificial_analysis_endpoint_accuracy",
+      "source_entity_id": "glm-5-2",
+      "state": "verified",
+      "target": "artificial_analysis",
+      "target_entity_id": "glm-5-2"
+    },
+    {
+      "confidence": 1.0,
+      "evidence": "same Artificial Analysis stable slug",
+      "last_verified": "2026-08-23T00:00:00Z",
+      "relation": "endpoint_model_to_model",
+      "source": "artificial_analysis_endpoint_accuracy",
+      "source_entity_id": "glm-5-2",
+      "state": "verified",
+      "target": "artificial_analysis",
+      "target_entity_id": "glm-5-2"
+    },
+    {
+      "confidence": 1.0,
+      "evidence": "same Artificial Analysis stable slug",
+      "last_verified": "2026-08-23T00:00:00Z",
+      "relation": "endpoint_model_to_model",
+      "source": "artificial_analysis_endpoint_accuracy",
+      "source_entity_id": "glm-5-2",
+      "state": "verified",
+      "target": "artificial_analysis",
+      "target_entity_id": "glm-5-2"
+    },
+    {
+      "confidence": 1.0,
+      "evidence": "same Artificial Analysis stable slug",
+      "last_verified": "2026-08-23T00:00:00Z",
+      "relation": "endpoint_model_to_model",
+      "source": "artificial_analysis_endpoint_accuracy",
+      "source_entity_id": "glm-5-2",
+      "state": "verified",
+      "target": "artificial_analysis",
+      "target_entity_id": "glm-5-2"
+    },
+    {
+      "confidence": 1.0,
+      "evidence": "same Artificial Analysis stable slug",
+      "last_verified": "2026-08-23T00:00:00Z",
+      "relation": "endpoint_model_to_model",
+      "source": "artificial_analysis_endpoint_accuracy",
+      "source_entity_id": "glm-5-2",
+      "state": "verified",
+      "target": "artificial_analysis",
+      "target_entity_id": "glm-5-2"
+    },
+    {
+      "confidence": 1.0,
+      "evidence": "same Artificial Analysis stable slug",
+      "last_verified": "2026-08-23T00:00:00Z",
+      "relation": "endpoint_model_to_model",
+      "source": "artificial_analysis_endpoint_accuracy",
+      "source_entity_id": "glm-5-2",
+      "state": "verified",
+      "target": "artificial_analysis",
+      "target_entity_id": "glm-5-2"
+    },
+    {
+      "confidence": 1.0,
+      "evidence": "same Artificial Analysis stable slug",
+      "last_verified": "2026-08-23T00:00:00Z",
+      "relation": "endpoint_model_to_model",
+      "source": "artificial_analysis_endpoint_accuracy",
+      "source_entity_id": "glm-5-2",
+      "state": "verified",
+      "target": "artificial_analysis",
+      "target_entity_id": "glm-5-2"
+    },
+    {
+      "confidence": 1.0,
+      "evidence": "same Artificial Analysis stable slug",
+      "last_verified": "2026-08-23T00:00:00Z",
+      "relation": "endpoint_model_to_model",
+      "source": "artificial_analysis_endpoint_accuracy",
+      "source_entity_id": "glm-5-2",
+      "state": "verified",
+      "target": "artificial_analysis",
+      "target_entity_id": "glm-5-2"
+    },
+    {
+      "confidence": 1.0,
+      "evidence": "same Artificial Analysis stable slug",
+      "last_verified": "2026-08-23T00:00:00Z",
+      "relation": "endpoint_model_to_model",
+      "source": "artificial_analysis_endpoint_accuracy",
+      "source_entity_id": "glm-5-2",
+      "state": "verified",
+      "target": "artificial_analysis",
+      "target_entity_id": "glm-5-2"
+    },
+    {
+      "confidence": 1.0,
+      "evidence": "same Artificial Analysis stable slug",
+      "last_verified": "2026-08-23T00:00:00Z",
+      "relation": "endpoint_model_to_model",
+      "source": "artificial_analysis_endpoint_accuracy",
+      "source_entity_id": "gpt-oss-120b",
+      "state": "verified",
+      "target": "artificial_analysis",
+      "target_entity_id": "gpt-oss-120b"
+    },
+    {
+      "confidence": 1.0,
+      "evidence": "same Artificial Analysis stable slug",
+      "last_verified": "2026-08-23T00:00:00Z",
+      "relation": "endpoint_model_to_model",
+      "source": "artificial_analysis_endpoint_accuracy",
+      "source_entity_id": "gpt-oss-120b",
+      "state": "verified",
+      "target": "artificial_analysis",
+      "target_entity_id": "gpt-oss-120b"
+    },
+    {
+      "confidence": 1.0,
+      "evidence": "same Artificial Analysis stable slug",
+      "last_verified": "2026-08-23T00:00:00Z",
+      "relation": "endpoint_model_to_model",
+      "source": "artificial_analysis_endpoint_accuracy",
+      "source_entity_id": "gpt-oss-120b",
+      "state": "verified",
+      "target": "artificial_analysis",
+      "target_entity_id": "gpt-oss-120b"
+    },
+    {
+      "confidence": 1.0,
+      "evidence": "same Artificial Analysis stable slug",
+      "last_verified": "2026-08-23T00:00:00Z",
+      "relation": "endpoint_model_to_model",
+      "source": "artificial_analysis_endpoint_accuracy",
+      "source_entity_id": "gpt-oss-120b",
+      "state": "verified",
+      "target": "artificial_analysis",
+      "target_entity_id": "gpt-oss-120b"
+    },
+    {
+      "confidence": 1.0,
+      "evidence": "same Artificial Analysis stable slug",
+      "last_verified": "2026-08-23T00:00:00Z",
+      "relation": "endpoint_model_to_model",
+      "source": "artificial_analysis_endpoint_accuracy",
+      "source_entity_id": "gpt-oss-120b",
+      "state": "verified",
+      "target": "artificial_analysis",
+      "target_entity_id": "gpt-oss-120b"
+    },
+    {
+      "confidence": 1.0,
+      "evidence": "same Artificial Analysis stable slug",
+      "last_verified": "2026-08-23T00:00:00Z",
+      "relation": "endpoint_model_to_model",
+      "source": "artificial_analysis_endpoint_accuracy",
+      "source_entity_id": "gpt-oss-120b",
+      "state": "verified",
+      "target": "artificial_analysis",
+      "target_entity_id": "gpt-oss-120b"
+    },
+    {
+      "confidence": 1.0,
+      "evidence": "same Artificial Analysis stable slug",
+      "last_verified": "2026-08-23T00:00:00Z",
+      "relation": "endpoint_model_to_model",
+      "source": "artificial_analysis_endpoint_accuracy",
+      "source_entity_id": "gpt-oss-120b",
+      "state": "verified",
+      "target": "artificial_analysis",
+      "target_entity_id": "gpt-oss-120b"
+    },
+    {
+      "confidence": 1.0,
+      "evidence": "same Artificial Analysis stable slug",
+      "last_verified": "2026-08-23T00:00:00Z",
+      "relation": "endpoint_model_to_model",
+      "source": "artificial_analysis_endpoint_accuracy",
+      "source_entity_id": "gpt-oss-120b",
+      "state": "verified",
+      "target": "artificial_analysis",
+      "target_entity_id": "gpt-oss-120b"
+    },
+    {
+      "confidence": 1.0,
+      "evidence": "same Artificial Analysis stable slug",
+      "last_verified": "2026-08-23T00:00:00Z",
+      "relation": "endpoint_model_to_model",
+      "source": "artificial_analysis_endpoint_accuracy",
+      "source_entity_id": "gpt-oss-120b",
+      "state": "verified",
+      "target": "artificial_analysis",
+      "target_entity_id": "gpt-oss-120b"
+    },
+    {
+      "confidence": 1.0,
+      "evidence": "same Artificial Analysis stable slug",
+      "last_verified": "2026-08-23T00:00:00Z",
+      "relation": "endpoint_model_to_model",
+      "source": "artificial_analysis_endpoint_accuracy",
+      "source_entity_id": "gpt-oss-120b",
+      "state": "verified",
+      "target": "artificial_analysis",
+      "target_entity_id": "gpt-oss-120b"
+    },
+    {
+      "confidence": 1.0,
+      "evidence": "same Artificial Analysis stable slug",
+      "last_verified": "2026-08-23T00:00:00Z",
+      "relation": "endpoint_model_to_model",
+      "source": "artificial_analysis_endpoint_accuracy",
+      "source_entity_id": "gpt-oss-120b",
+      "state": "verified",
+      "target": "artificial_analysis",
+      "target_entity_id": "gpt-oss-120b"
+    },
+    {
+      "confidence": 1.0,
+      "evidence": "same Artificial Analysis stable slug",
+      "last_verified": "2026-08-23T00:00:00Z",
+      "relation": "endpoint_model_to_model",
+      "source": "artificial_analysis_endpoint_accuracy",
+      "source_entity_id": "gpt-oss-120b",
+      "state": "verified",
+      "target": "artificial_analysis",
+      "target_entity_id": "gpt-oss-120b"
+    },
+    {
+      "confidence": 1.0,
+      "evidence": "same Artificial Analysis stable slug",
+      "last_verified": "2026-08-23T00:00:00Z",
+      "relation": "endpoint_model_to_model",
+      "source": "artificial_analysis_endpoint_accuracy",
+      "source_entity_id": "gpt-oss-120b",
+      "state": "verified",
+      "target": "artificial_analysis",
+      "target_entity_id": "gpt-oss-120b"
+    },
+    {
+      "confidence": 1.0,
+      "evidence": "same Artificial Analysis stable slug",
+      "last_verified": "2026-08-23T00:00:00Z",
+      "relation": "endpoint_model_to_model",
+      "source": "artificial_analysis_endpoint_accuracy",
+      "source_entity_id": "gpt-oss-120b",
+      "state": "verified",
+      "target": "artificial_analysis",
+      "target_entity_id": "gpt-oss-120b"
+    },
+    {
+      "confidence": 1.0,
+      "evidence": "same Artificial Analysis stable slug",
+      "last_verified": "2026-08-23T00:00:00Z",
+      "relation": "endpoint_model_to_model",
+      "source": "artificial_analysis_endpoint_accuracy",
+      "source_entity_id": "gpt-oss-120b",
+      "state": "verified",
+      "target": "artificial_analysis",
+      "target_entity_id": "gpt-oss-120b"
+    },
+    {
+      "confidence": 1.0,
+      "evidence": "same Artificial Analysis stable slug",
+      "last_verified": "2026-08-23T00:00:00Z",
+      "relation": "endpoint_model_to_model",
+      "source": "artificial_analysis_endpoint_accuracy",
+      "source_entity_id": "gpt-oss-120b",
+      "state": "verified",
+      "target": "artificial_analysis",
+      "target_entity_id": "gpt-oss-120b"
+    }
+  ],
+  "unresolved": [
+    {
+      "source": "openrouter",
+      "source_entity_id": "aion-labs/aion-2.0"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "aion-labs/aion-3.0"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "aion-labs/aion-3.0-mini"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "aion-labs/aion-rp-llama-3.1-8b"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "amazon/nova-2-lite-v1"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "amazon/nova-2-lite-v1"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "amazon/nova-lite-v1"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "amazon/nova-lite-v1"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "amazon/nova-micro-v1"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "amazon/nova-micro-v1"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "amazon/nova-premier-v1"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "amazon/nova-pro-v1"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "amazon/nova-pro-v1"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "anthracite-org/magnum-v4-72b"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "anthropic/claude-3-haiku"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "anthropic/claude-fable-5"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "anthropic/claude-fable-5"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "anthropic/claude-fable-5"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "anthropic/claude-fable-5"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "anthropic/claude-fable-5"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "anthropic/claude-fable-5"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "anthropic/claude-fable-5:batch"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "anthropic/claude-haiku-4.5"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "anthropic/claude-haiku-4.5"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "anthropic/claude-haiku-4.5"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "anthropic/claude-haiku-4.5"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "anthropic/claude-haiku-4.5"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "anthropic/claude-haiku-4.5"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "anthropic/claude-haiku-4.5"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "anthropic/claude-haiku-4.5"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "anthropic/claude-haiku-4.5:batch"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "anthropic/claude-opus-4"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "anthropic/claude-opus-4.1"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "anthropic/claude-opus-4.1"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "anthropic/claude-opus-4.1:batch"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "anthropic/claude-opus-4.5"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "anthropic/claude-opus-4.5"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "anthropic/claude-opus-4.5"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "anthropic/claude-opus-4.5"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "anthropic/claude-opus-4.5"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "anthropic/claude-opus-4.5"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "anthropic/claude-opus-4.5:batch"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "anthropic/claude-opus-4.6"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "anthropic/claude-opus-4.6"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "anthropic/claude-opus-4.6"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "anthropic/claude-opus-4.6"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "anthropic/claude-opus-4.6"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "anthropic/claude-opus-4.6"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "anthropic/claude-opus-4.6:batch"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "anthropic/claude-opus-4.7"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "anthropic/claude-opus-4.7"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "anthropic/claude-opus-4.7"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "anthropic/claude-opus-4.7"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "anthropic/claude-opus-4.7"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "anthropic/claude-opus-4.7"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "anthropic/claude-opus-4.7"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "anthropic/claude-opus-4.7"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "anthropic/claude-opus-4.7-fast"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "anthropic/claude-opus-4.7:batch"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "anthropic/claude-opus-4.8"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "anthropic/claude-opus-4.8"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "anthropic/claude-opus-4.8"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "anthropic/claude-opus-4.8"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "anthropic/claude-opus-4.8"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "anthropic/claude-opus-4.8"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "anthropic/claude-opus-4.8"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "anthropic/claude-opus-4.8"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "anthropic/claude-opus-4.8"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "anthropic/claude-opus-4.8"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "anthropic/claude-opus-4.8-fast"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "anthropic/claude-opus-4.8:batch"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "anthropic/claude-opus-5"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "anthropic/claude-opus-5"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "anthropic/claude-opus-5"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "anthropic/claude-opus-5"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "anthropic/claude-opus-5"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "anthropic/claude-opus-5"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "anthropic/claude-opus-5"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "anthropic/claude-opus-5"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "anthropic/claude-opus-5"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "anthropic/claude-opus-5-fast"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "anthropic/claude-opus-5:batch"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "anthropic/claude-sonnet-4"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "anthropic/claude-sonnet-4"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "anthropic/claude-sonnet-4"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "anthropic/claude-sonnet-4"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "anthropic/claude-sonnet-4"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "anthropic/claude-sonnet-4.5"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "anthropic/claude-sonnet-4.5"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "anthropic/claude-sonnet-4.5"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "anthropic/claude-sonnet-4.5"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "anthropic/claude-sonnet-4.5"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "anthropic/claude-sonnet-4.5"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "anthropic/claude-sonnet-4.5"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "anthropic/claude-sonnet-4.5:batch"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "anthropic/claude-sonnet-4.6"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "anthropic/claude-sonnet-4.6"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "anthropic/claude-sonnet-4.6"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "anthropic/claude-sonnet-4.6"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "anthropic/claude-sonnet-4.6"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "anthropic/claude-sonnet-4.6"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "anthropic/claude-sonnet-4.6"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "anthropic/claude-sonnet-4.6"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "anthropic/claude-sonnet-4.6"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "anthropic/claude-sonnet-4.6:batch"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "anthropic/claude-sonnet-5"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "anthropic/claude-sonnet-5"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "anthropic/claude-sonnet-5"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "anthropic/claude-sonnet-5"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "anthropic/claude-sonnet-5"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "anthropic/claude-sonnet-5"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "anthropic/claude-sonnet-5"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "anthropic/claude-sonnet-5"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "anthropic/claude-sonnet-5"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "anthropic/claude-sonnet-5:batch"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "arcee-ai/trinity-large-thinking"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "arcee-ai/trinity-large-thinking"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "arcee-ai/virtuoso-large"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "baidu/ernie-4.5-vl-424b-a47b"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "bytedance-seed/seed-1.6"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "bytedance-seed/seed-1.6-flash"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "bytedance-seed/seed-2-1-turbo"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "bytedance-seed/seed-2.0-code"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "bytedance-seed/seed-2.0-lite"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "bytedance-seed/seed-2.0-mini"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "bytedance/ui-tars-1.5-7b"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "cognitivecomputations/dolphin-mistral-24b-venice-edition"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "cohere/command-a"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "cohere/command-r-08-2024"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "cohere/command-r-plus-08-2024"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "cohere/command-r7b-12-2024"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "cohere/north-mini-code:free"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "deepseek/deepseek-chat"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "deepseek/deepseek-chat"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "deepseek/deepseek-chat"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "deepseek/deepseek-chat-v3-0324"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "deepseek/deepseek-chat-v3-0324"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "deepseek/deepseek-chat-v3-0324"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "deepseek/deepseek-chat-v3-0324"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "deepseek/deepseek-chat-v3-0324"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "deepseek/deepseek-chat-v3.1"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "deepseek/deepseek-chat-v3.1"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "deepseek/deepseek-chat-v3.1"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "deepseek/deepseek-chat-v3.1"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "deepseek/deepseek-chat-v3.1"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "deepseek/deepseek-chat-v3.1"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "deepseek/deepseek-chat-v3.1"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "deepseek/deepseek-chat-v3.1"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "deepseek/deepseek-r1"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "deepseek/deepseek-r1-0528"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "deepseek/deepseek-r1-0528"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "deepseek/deepseek-r1-0528"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "deepseek/deepseek-r1-0528"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "deepseek/deepseek-r1-distill-llama-70b"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "deepseek/deepseek-v3.1-terminus"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "deepseek/deepseek-v3.1-terminus"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "deepseek/deepseek-v3.1-terminus"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "deepseek/deepseek-v3.1-terminus"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "deepseek/deepseek-v3.2"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "deepseek/deepseek-v3.2"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "deepseek/deepseek-v3.2"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "deepseek/deepseek-v3.2"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "deepseek/deepseek-v3.2"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "deepseek/deepseek-v3.2"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "deepseek/deepseek-v3.2"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "deepseek/deepseek-v3.2"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "deepseek/deepseek-v3.2"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "deepseek/deepseek-v3.2"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "deepseek/deepseek-v3.2"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "deepseek/deepseek-v3.2"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "deepseek/deepseek-v3.2"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "deepseek/deepseek-v3.2"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "deepseek/deepseek-v3.2-exp"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "deepseek/deepseek-v3.2-exp"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "deepseek/deepseek-v3.2-exp"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "deepseek/deepseek-v4-flash"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "deepseek/deepseek-v4-flash"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "deepseek/deepseek-v4-flash"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "deepseek/deepseek-v4-flash"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "deepseek/deepseek-v4-flash"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "deepseek/deepseek-v4-flash"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "deepseek/deepseek-v4-flash"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "deepseek/deepseek-v4-flash"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "deepseek/deepseek-v4-flash"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "deepseek/deepseek-v4-flash"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "deepseek/deepseek-v4-flash"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "deepseek/deepseek-v4-flash"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "deepseek/deepseek-v4-flash"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "deepseek/deepseek-v4-flash"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "deepseek/deepseek-v4-flash"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "deepseek/deepseek-v4-flash"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "deepseek/deepseek-v4-flash"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "deepseek/deepseek-v4-flash-0731"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "deepseek/deepseek-v4-flash-0731"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "deepseek/deepseek-v4-flash-0731"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "deepseek/deepseek-v4-flash-0731"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "deepseek/deepseek-v4-flash-0731"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "deepseek/deepseek-v4-flash-0731"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "deepseek/deepseek-v4-flash-0731"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "deepseek/deepseek-v4-flash-0731"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "deepseek/deepseek-v4-flash-0731"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "deepseek/deepseek-v4-flash-0731"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "deepseek/deepseek-v4-flash-0731"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "deepseek/deepseek-v4-flash-0731"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "deepseek/deepseek-v4-flash-0731"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "deepseek/deepseek-v4-flash-0731"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "deepseek/deepseek-v4-flash-0731"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "deepseek/deepseek-v4-flash-0731"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "deepseek/deepseek-v4-flash-0731"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "deepseek/deepseek-v4-flash-0731"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "deepseek/deepseek-v4-flash-0731"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "deepseek/deepseek-v4-flash-0731"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "deepseek/deepseek-v4-flash-0731"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "deepseek/deepseek-v4-flash-0731"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "deepseek/deepseek-v4-flash-0731"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "deepseek/deepseek-v4-flash-0731"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "deepseek/deepseek-v4-flash-0731"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "deepseek/deepseek-v4-flash-0731"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "deepseek/deepseek-v4-flash-0731"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "deepseek/deepseek-v4-flash-0731"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "deepseek/deepseek-v4-flash-0731"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "deepseek/deepseek-v4-flash-0731"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "deepseek/deepseek-v4-flash-vision-exp"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "deepseek/deepseek-v4-pro"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "deepseek/deepseek-v4-pro"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "deepseek/deepseek-v4-pro"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "deepseek/deepseek-v4-pro"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "deepseek/deepseek-v4-pro"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "deepseek/deepseek-v4-pro"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "deepseek/deepseek-v4-pro"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "deepseek/deepseek-v4-pro"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "deepseek/deepseek-v4-pro"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "deepseek/deepseek-v4-pro"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "deepseek/deepseek-v4-pro"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "deepseek/deepseek-v4-pro"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "deepseek/deepseek-v4-pro"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "deepseek/deepseek-v4-pro"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "deepseek/deepseek-v4-pro"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "deepseek/deepseek-v4-pro"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "deepseek/deepseek-v4-pro"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "deepseek/deepseek-v4-pro-0813"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "deepseek/deepseek-v4-pro-0813"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "deepseek/deepseek-v4-pro-0813"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "deepseek/deepseek-v4-pro-0813"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "deepseek/deepseek-v4-pro-0813"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "deepseek/deepseek-v4-pro-0813"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "deepseek/deepseek-v4-pro-0813"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "deepseek/deepseek-v4-pro-0813"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "deepseek/deepseek-v4-pro-0813"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "deepseek/deepseek-v4-pro-0813"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "deepseek/deepseek-v4-pro-0813"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "deepseek/deepseek-v4-pro-0813"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "deepseek/deepseek-v4-pro-0813"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "deepseek/deepseek-v4-pro-0813"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "deepseek/deepseek-v4-pro-0813"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "dots-studio/dots-3-note-preview:free"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "google/gemini-2.5-flash"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "google/gemini-2.5-flash"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "google/gemini-2.5-flash"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "google/gemini-2.5-flash"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "google/gemini-2.5-flash"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "google/gemini-2.5-flash"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "google/gemini-2.5-flash"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "google/gemini-2.5-flash-image"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "google/gemini-2.5-flash-image"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "google/gemini-2.5-flash-image"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "google/gemini-2.5-flash-image"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "google/gemini-2.5-flash-image"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "google/gemini-2.5-flash-lite"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "google/gemini-2.5-flash-lite"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "google/gemini-2.5-flash-lite"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "google/gemini-2.5-flash-lite"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "google/gemini-2.5-flash-lite"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "google/gemini-2.5-flash-lite:batch"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "google/gemini-2.5-flash:batch"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "google/gemini-2.5-pro"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "google/gemini-2.5-pro"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "google/gemini-2.5-pro"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "google/gemini-2.5-pro"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "google/gemini-2.5-pro"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "google/gemini-2.5-pro"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "google/gemini-2.5-pro"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "google/gemini-2.5-pro"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "google/gemini-2.5-pro:batch"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "google/gemini-3-flash-preview"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "google/gemini-3-flash-preview"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "google/gemini-3-flash-preview"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "google/gemini-3-flash-preview"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "google/gemini-3-flash-preview"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "google/gemini-3-flash-preview"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "google/gemini-3-flash-preview:batch"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "google/gemini-3-pro-image"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "google/gemini-3-pro-image"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "google/gemini-3-pro-image-preview"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "google/gemini-3-pro-image-preview"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "google/gemini-3.1-flash-image"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "google/gemini-3.1-flash-image"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "google/gemini-3.1-flash-image-preview"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "google/gemini-3.1-flash-lite"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "google/gemini-3.1-flash-lite"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "google/gemini-3.1-flash-lite"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "google/gemini-3.1-flash-lite"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "google/gemini-3.1-flash-lite"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "google/gemini-3.1-flash-lite"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "google/gemini-3.1-flash-lite"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "google/gemini-3.1-flash-lite-image"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "google/gemini-3.1-flash-lite-image"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "google/gemini-3.1-flash-lite-preview"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "google/gemini-3.1-flash-lite-preview"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "google/gemini-3.1-flash-lite-preview"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "google/gemini-3.1-flash-lite:batch"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "google/gemini-3.1-pro-preview"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "google/gemini-3.1-pro-preview"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "google/gemini-3.1-pro-preview"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "google/gemini-3.1-pro-preview"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "google/gemini-3.1-pro-preview"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "google/gemini-3.1-pro-preview"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "google/gemini-3.1-pro-preview-customtools"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "google/gemini-3.1-pro-preview:batch"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "google/gemini-3.5-flash"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "google/gemini-3.5-flash"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "google/gemini-3.5-flash"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "google/gemini-3.5-flash"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "google/gemini-3.5-flash"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "google/gemini-3.5-flash"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "google/gemini-3.5-flash"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "google/gemini-3.5-flash-lite"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "google/gemini-3.5-flash-lite"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "google/gemini-3.5-flash-lite"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "google/gemini-3.5-flash-lite"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "google/gemini-3.5-flash-lite"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "google/gemini-3.5-flash-lite"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "google/gemini-3.5-flash-lite"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "google/gemini-3.5-flash-lite:batch"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "google/gemini-3.5-flash:batch"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "google/gemini-3.6-flash"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "google/gemini-3.6-flash"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "google/gemini-3.6-flash"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "google/gemini-3.6-flash"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "google/gemini-3.6-flash"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "google/gemini-3.6-flash"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "google/gemini-3.6-flash"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "google/gemini-3.6-flash:batch"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "google/gemini-3.7-flash"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "google/gemini-3.7-flash"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "google/gemini-3.7-flash"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "google/gemini-3.7-flash"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "google/gemini-3.7-flash"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "google/gemini-3.7-flash"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "google/gemini-3.7-flash:batch"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "google/gemma-2-27b-it"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "google/gemma-3-12b-it"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "google/gemma-3-27b-it"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "google/gemma-3-27b-it"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "google/gemma-3-27b-it"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "google/gemma-3-27b-it"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "google/gemma-3-27b-it"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "google/gemma-3-4b-it"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "google/gemma-3n-e4b-it"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "google/gemma-4-26b-a4b-it"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "google/gemma-4-26b-a4b-it"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "google/gemma-4-26b-a4b-it"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "google/gemma-4-26b-a4b-it"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "google/gemma-4-26b-a4b-it"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "google/gemma-4-26b-a4b-it"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "google/gemma-4-26b-a4b-it"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "google/gemma-4-26b-a4b-it"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "google/gemma-4-26b-a4b-it"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "google/gemma-4-26b-a4b-it:free"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "google/gemma-4-31b-it"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "google/gemma-4-31b-it"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "google/gemma-4-31b-it"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "google/gemma-4-31b-it"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "google/gemma-4-31b-it"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "google/gemma-4-31b-it"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "google/gemma-4-31b-it"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "google/gemma-4-31b-it"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "google/gemma-4-31b-it"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "google/gemma-4-31b-it"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "google/gemma-4-31b-it"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "google/gemma-4-31b-it"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "google/gemma-4-31b-it"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "google/gemma-4-31b-it"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "google/gemma-4-31b-it"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "google/gemma-4-31b-it"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "google/gemma-4-31b-it"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "google/gemma-4-31b-it:free"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "google/lyria-3-clip-preview"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "google/lyria-3-pro-preview"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "gryphe/mythomax-l2-13b"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "gryphe/mythomax-l2-13b"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "gryphe/mythomax-l2-13b"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "gryphe/mythomax-l2-13b"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "ibm-granite/granite-4.0-h-micro"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "ibm-granite/granite-4.1-8b"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "inception/mercury-2"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "inclusionai/ling-2.6-1t"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "inclusionai/ling-2.6-flash"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "inclusionai/ling-3.0-flash"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "inclusionai/ling-3.0-flash"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "inclusionai/ling-3.0-flash"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "inclusionai/ring-2.6-1t"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "kwaipilot/kat-coder-air-v2.5"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "kwaipilot/kat-coder-pro-v2"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "kwaipilot/kat-coder-pro-v2"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "kwaipilot/kat-coder-pro-v2.5"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "liquid/lfm-2.5-2.6b:free"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "mancer/weaver"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "meituan/longcat-2.0"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "meta/muse-glimmer-30b"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "meta/muse-glimmer-30b"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "meta/muse-glimmer-30b"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "meta/muse-glimmer-30b"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "meta/muse-glimmer-30b"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "meta/muse-spark-1.2"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "meta/muse-spark-1.2-contributor"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "nvidia/nemotron-3.5-lightning"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "nvidia/nemotron-3.5-lightning"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "nvidia/nemotron-3.5-lightning:free"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "qwen/qwen3.8-2.4t-a95b"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "qwen/qwen3.8-2.4t-a95b"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "qwen/qwen3.8-2.4t-a95b"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "qwen/qwen3.8-2.4t-a95b"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "qwen/qwen3.8-2.4t-a95b"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "qwen/qwen3.8-2.4t-a95b"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "qwen/qwen3.8-27b"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "qwen/qwen3.8-27b"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "qwen/qwen3.8-27b"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "qwen/qwen3.8-27b"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "qwen/qwen3.8-27b"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "qwen/qwen3.8-27b"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "qwen/qwen3.8-27b"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "qwen/qwen3.8-27b"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "qwen/qwen3.8-max"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "sakana/sakana-namazu"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "stealth/ox-alpha"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "tencent/hy-mt2-1.8b"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "tencent/hy-mt2-30b-a3b"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "tencent/hy-mt2-7b"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "upstage/solar-pro4"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "x-ai/grok-4.6"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "x-ai/grok-4.6"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "x-ai/grok-4.6"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "x-ai/grok-4.6"
+    },
+    {
+      "source": "openrouter",
+      "source_entity_id": "z-ai/glm-5.3"
+    }
+  ],
+  "version": 1
+}
