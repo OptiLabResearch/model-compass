@@ -1,7 +1,7 @@
 {
   "version": 1,
   "parser_version": "0.1.0",
-  "generated_at": "2026-08-23T05:59:16Z",
+  "generated_at": "2026-08-23T06:09:01Z",
   "source": "openrouter",
   "source_url": "https://openrouter.ai/api/v1/models",
   "model_catalog_count": 422,
@@ -36,7 +36,7 @@
         "status": "available",
         "uptime_5m": 100.0,
         "uptime_30m": 100.0,
-        "uptime_1d": 99.99859583759458
+        "uptime_1d": 99.99861214236644
       },
       "quantization": "unknown",
       "capabilities": {
@@ -58,7 +58,7 @@
       "privacy": {},
       "provenance": {
         "source": "openrouter",
-        "fetched_at": "2026-08-23T05:59:16Z",
+        "fetched_at": "2026-08-23T06:09:01Z",
         "source_authority": "openrouter",
         "raw_endpoint": "meta/muse-spark-1.2-contributor"
       }
@@ -113,7 +113,7 @@
       "privacy": {},
       "provenance": {
         "source": "openrouter",
-        "fetched_at": "2026-08-23T05:59:16Z",
+        "fetched_at": "2026-08-23T06:09:01Z",
         "source_authority": "openrouter",
         "raw_endpoint": "deepseek/deepseek-v4-flash-vision-exp"
       }
@@ -141,9 +141,9 @@
       },
       "availability": {
         "status": "available",
-        "uptime_5m": 99.98637901157026,
-        "uptime_30m": 99.99315523421774,
-        "uptime_1d": 99.9853928713014
+        "uptime_5m": 99.982088024565,
+        "uptime_30m": 99.99108757633365,
+        "uptime_1d": 99.98534451655271
       },
       "quantization": "unknown",
       "capabilities": {
@@ -163,7 +163,7 @@
       "privacy": {},
       "provenance": {
         "source": "openrouter",
-        "fetched_at": "2026-08-23T05:59:16Z",
+        "fetched_at": "2026-08-23T06:09:01Z",
         "source_authority": "openrouter",
         "raw_endpoint": "stealth/ox-alpha"
       }
@@ -191,8 +191,8 @@
       },
       "availability": {
         "status": "available",
-        "uptime_5m": null,
-        "uptime_30m": null,
+        "uptime_5m": 100.0,
+        "uptime_30m": 100.0,
         "uptime_1d": 100.0
       },
       "quantization": "fp8",
@@ -207,7 +207,7 @@
       "privacy": {},
       "provenance": {
         "source": "openrouter",
-        "fetched_at": "2026-08-23T05:59:16Z",
+        "fetched_at": "2026-08-23T06:09:01Z",
         "source_authority": "openrouter",
         "raw_endpoint": "tencent/hy-mt2-1.8b"
       }
@@ -253,7 +253,7 @@
       "privacy": {},
       "provenance": {
         "source": "openrouter",
-        "fetched_at": "2026-08-23T05:59:16Z",
+        "fetched_at": "2026-08-23T06:09:01Z",
         "source_authority": "openrouter",
         "raw_endpoint": "tencent/hy-mt2-30b-a3b"
       }
@@ -299,7 +299,7 @@
       "privacy": {},
       "provenance": {
         "source": "openrouter",
-        "fetched_at": "2026-08-23T05:59:16Z",
+        "fetched_at": "2026-08-23T06:09:01Z",
         "source_authority": "openrouter",
         "raw_endpoint": "tencent/hy-mt2-7b"
       }
@@ -350,7 +350,7 @@
       "privacy": {},
       "provenance": {
         "source": "openrouter",
-        "fetched_at": "2026-08-23T05:59:16Z",
+        "fetched_at": "2026-08-23T06:09:01Z",
         "source_authority": "openrouter",
         "raw_endpoint": "z-ai/glm-5.3"
       }
@@ -381,7 +381,7 @@
         "status": "available",
         "uptime_5m": 100.0,
         "uptime_30m": 100.0,
-        "uptime_1d": 98.16935733000767
+        "uptime_1d": 98.16918248393364
       },
       "quantization": "fp8",
       "capabilities": {
@@ -409,7 +409,7 @@
       "privacy": {},
       "provenance": {
         "source": "openrouter",
-        "fetched_at": "2026-08-23T05:59:16Z",
+        "fetched_at": "2026-08-23T06:09:01Z",
         "source_authority": "openrouter",
         "raw_endpoint": "qwen/qwen3.8-27b"
       }
@@ -439,8 +439,8 @@
       "availability": {
         "status": "available",
         "uptime_5m": 100.0,
-        "uptime_30m": 99.79716024340772,
-        "uptime_1d": 99.50561587639228
+        "uptime_30m": 99.85096870342772,
+        "uptime_1d": 99.50567365112012
       },
       "quantization": "fp8",
       "capabilities": {
@@ -466,7 +466,7 @@
       "privacy": {},
       "provenance": {
         "source": "openrouter",
-        "fetched_at": "2026-08-23T05:59:16Z",
+        "fetched_at": "2026-08-23T06:09:01Z",
         "source_authority": "openrouter",
         "raw_endpoint": "qwen/qwen3.8-27b"
       }
@@ -497,7 +497,7 @@
         "status": "available",
         "uptime_5m": 100.0,
         "uptime_30m": 100.0,
-        "uptime_1d": 99.92067141871695
+        "uptime_1d": 99.92044550517105
       },
       "quantization": "bf16",
       "capabilities": {
@@ -525,7 +525,7 @@
       "privacy": {},
       "provenance": {
         "source": "openrouter",
-        "fetched_at": "2026-08-23T05:59:16Z",
+        "fetched_at": "2026-08-23T06:09:01Z",
         "source_authority": "openrouter",
         "raw_endpoint": "qwen/qwen3.8-27b"
       }
@@ -554,9 +554,9 @@
       },
       "availability": {
         "status": "available",
-        "uptime_5m": 100.0,
-        "uptime_30m": 99.82110912343471,
-        "uptime_1d": 99.88787943741859
+        "uptime_5m": 98.76543209876543,
+        "uptime_30m": 98.88143176733782,
+        "uptime_1d": 99.87906298664723
       },
       "quantization": "fp8",
       "capabilities": {
@@ -583,7 +583,7 @@
       "privacy": {},
       "provenance": {
         "source": "openrouter",
-        "fetched_at": "2026-08-23T05:59:16Z",
+        "fetched_at": "2026-08-23T06:09:01Z",
         "source_authority": "openrouter",
         "raw_endpoint": "qwen/qwen3.8-27b"
       }
@@ -611,9 +611,9 @@
       },
       "availability": {
         "status": "available",
-        "uptime_5m": 100.0,
-        "uptime_30m": 100.0,
-        "uptime_1d": 99.16324435318276
+        "uptime_5m": 98.46153846153847,
+        "uptime_30m": 99.47780678851174,
+        "uptime_1d": 99.15522155998964
       },
       "quantization": "fp8",
       "capabilities": {
@@ -636,7 +636,7 @@
       "privacy": {},
       "provenance": {
         "source": "openrouter",
-        "fetched_at": "2026-08-23T05:59:16Z",
+        "fetched_at": "2026-08-23T06:09:01Z",
         "source_authority": "openrouter",
         "raw_endpoint": "qwen/qwen3.8-27b"
       }
@@ -664,9 +664,9 @@
       },
       "availability": {
         "status": "available",
-        "uptime_5m": 100.0,
-        "uptime_30m": 100.0,
-        "uptime_1d": 99.57702582368655
+        "uptime_5m": 97.77777777777777,
+        "uptime_30m": 99.70149253731343,
+        "uptime_1d": 99.57029245767059
       },
       "quantization": "fp8",
       "capabilities": {
@@ -695,7 +695,7 @@
       "privacy": {},
       "provenance": {
         "source": "openrouter",
-        "fetched_at": "2026-08-23T05:59:16Z",
+        "fetched_at": "2026-08-23T06:09:01Z",
         "source_authority": "openrouter",
         "raw_endpoint": "qwen/qwen3.8-27b"
       }
@@ -726,7 +726,7 @@
         "status": "available",
         "uptime_5m": 100.0,
         "uptime_30m": 100.0,
-        "uptime_1d": 99.36463536463536
+        "uptime_1d": 99.36445759053481
       },
       "quantization": "fp8",
       "capabilities": {
@@ -751,7 +751,7 @@
       "privacy": {},
       "provenance": {
         "source": "openrouter",
-        "fetched_at": "2026-08-23T05:59:16Z",
+        "fetched_at": "2026-08-23T06:09:01Z",
         "source_authority": "openrouter",
         "raw_endpoint": "qwen/qwen3.8-27b"
       }
@@ -783,7 +783,7 @@
         "status": "available",
         "uptime_5m": 100.0,
         "uptime_30m": 100.0,
-        "uptime_1d": 99.98181184352123
+        "uptime_1d": 99.98153391604087
       },
       "quantization": "unknown",
       "capabilities": {
@@ -809,7 +809,7 @@
       "privacy": {},
       "provenance": {
         "source": "openrouter",
-        "fetched_at": "2026-08-23T05:59:16Z",
+        "fetched_at": "2026-08-23T06:09:01Z",
         "source_authority": "openrouter",
         "raw_endpoint": "qwen/qwen3.8-27b"
       }
@@ -839,7 +839,7 @@
         "status": "available",
         "uptime_5m": 100.0,
         "uptime_30m": 100.0,
-        "uptime_1d": 99.97768740281369
+        "uptime_1d": 99.97765455789428
       },
       "quantization": "fp8",
       "capabilities": {
@@ -858,7 +858,7 @@
       "privacy": {},
       "provenance": {
         "source": "openrouter",
-        "fetched_at": "2026-08-23T05:59:16Z",
+        "fetched_at": "2026-08-23T06:09:01Z",
         "source_authority": "openrouter",
         "raw_endpoint": "dots-studio/dots-3-note-preview:free"
       }
@@ -893,9 +893,9 @@
       },
       "availability": {
         "status": "available",
-        "uptime_5m": 99.89090548447882,
-        "uptime_30m": 99.82136424785527,
-        "uptime_1d": 99.60323766532098
+        "uptime_5m": 99.75395579688627,
+        "uptime_30m": 99.86160180265391,
+        "uptime_1d": 99.60598051015879
       },
       "quantization": "unknown",
       "capabilities": {
@@ -915,7 +915,7 @@
       "privacy": {},
       "provenance": {
         "source": "openrouter",
-        "fetched_at": "2026-08-23T05:59:16Z",
+        "fetched_at": "2026-08-23T06:09:01Z",
         "source_authority": "openrouter",
         "raw_endpoint": "google/gemini-3.7-flash"
       }
@@ -950,9 +950,9 @@
       },
       "availability": {
         "status": "available",
-        "uptime_5m": 99.89090548447882,
-        "uptime_30m": 99.82136424785527,
-        "uptime_1d": 99.60323766532098
+        "uptime_5m": 99.75395579688627,
+        "uptime_30m": 99.86160180265391,
+        "uptime_1d": 99.60598051015879
       },
       "quantization": "unknown",
       "capabilities": {
@@ -972,7 +972,7 @@
       "privacy": {},
       "provenance": {
         "source": "openrouter",
-        "fetched_at": "2026-08-23T05:59:16Z",
+        "fetched_at": "2026-08-23T06:09:01Z",
         "source_authority": "openrouter",
         "raw_endpoint": "google/gemini-3.7-flash"
       }
@@ -1007,9 +1007,9 @@
       },
       "availability": {
         "status": "available",
-        "uptime_5m": 99.89090548447882,
-        "uptime_30m": 99.82136424785527,
-        "uptime_1d": 99.60323766532098
+        "uptime_5m": 99.75395579688627,
+        "uptime_30m": 99.86160180265391,
+        "uptime_1d": 99.60598051015879
       },
       "quantization": "unknown",
       "capabilities": {
@@ -1029,7 +1029,7 @@
       "privacy": {},
       "provenance": {
         "source": "openrouter",
-        "fetched_at": "2026-08-23T05:59:16Z",
+        "fetched_at": "2026-08-23T06:09:01Z",
         "source_authority": "openrouter",
         "raw_endpoint": "google/gemini-3.7-flash"
       }
@@ -1064,9 +1064,9 @@
       },
       "availability": {
         "status": "available",
-        "uptime_5m": 100.0,
-        "uptime_30m": 99.879427279578,
-        "uptime_1d": 99.78422430537961
+        "uptime_5m": 99.7308209959623,
+        "uptime_30m": 99.84025559105432,
+        "uptime_1d": 99.78355711804821
       },
       "quantization": "unknown",
       "capabilities": {
@@ -1087,7 +1087,7 @@
       "privacy": {},
       "provenance": {
         "source": "openrouter",
-        "fetched_at": "2026-08-23T05:59:16Z",
+        "fetched_at": "2026-08-23T06:09:01Z",
         "source_authority": "openrouter",
         "raw_endpoint": "google/gemini-3.7-flash"
       }
@@ -1122,9 +1122,9 @@
       },
       "availability": {
         "status": "available",
-        "uptime_5m": 100.0,
-        "uptime_30m": 99.879427279578,
-        "uptime_1d": 99.78422430537961
+        "uptime_5m": 99.7308209959623,
+        "uptime_30m": 99.84025559105432,
+        "uptime_1d": 99.78355711804821
       },
       "quantization": "unknown",
       "capabilities": {
@@ -1145,7 +1145,7 @@
       "privacy": {},
       "provenance": {
         "source": "openrouter",
-        "fetched_at": "2026-08-23T05:59:16Z",
+        "fetched_at": "2026-08-23T06:09:01Z",
         "source_authority": "openrouter",
         "raw_endpoint": "google/gemini-3.7-flash"
       }
@@ -1180,9 +1180,9 @@
       },
       "availability": {
         "status": "available",
-        "uptime_5m": 100.0,
-        "uptime_30m": 99.879427279578,
-        "uptime_1d": 99.78422430537961
+        "uptime_5m": 99.7308209959623,
+        "uptime_30m": 99.84025559105432,
+        "uptime_1d": 99.78355711804821
       },
       "quantization": "unknown",
       "capabilities": {
@@ -1203,7 +1203,7 @@
       "privacy": {},
       "provenance": {
         "source": "openrouter",
-        "fetched_at": "2026-08-23T05:59:16Z",
+        "fetched_at": "2026-08-23T06:09:01Z",
         "source_authority": "openrouter",
         "raw_endpoint": "google/gemini-3.7-flash"
       }
@@ -1260,7 +1260,7 @@
       "privacy": {},
       "provenance": {
         "source": "openrouter",
-        "fetched_at": "2026-08-23T05:59:16Z",
+        "fetched_at": "2026-08-23T06:09:01Z",
         "source_authority": "openrouter",
         "raw_endpoint": "google/gemini-3.7-flash:batch"
       }
@@ -1311,7 +1311,7 @@
       "privacy": {},
       "provenance": {
         "source": "openrouter",
-        "fetched_at": "2026-08-23T05:59:16Z",
+        "fetched_at": "2026-08-23T06:09:01Z",
         "source_authority": "openrouter",
         "raw_endpoint": "bytedance-seed/seed-2-1-turbo"
       }
@@ -1341,8 +1341,8 @@
       "availability": {
         "status": "available",
         "uptime_5m": null,
-        "uptime_30m": 98.62068965517241,
-        "uptime_1d": 99.04468206348675
+        "uptime_30m": 97.51552795031056,
+        "uptime_1d": 99.03662179852975
       },
       "quantization": "fp4",
       "capabilities": {
@@ -1370,7 +1370,7 @@
       "privacy": {},
       "provenance": {
         "source": "openrouter",
-        "fetched_at": "2026-08-23T05:59:16Z",
+        "fetched_at": "2026-08-23T06:09:01Z",
         "source_authority": "openrouter",
         "raw_endpoint": "qwen/qwen3.8-2.4t-a95b"
       }
@@ -1399,9 +1399,9 @@
       },
       "availability": {
         "status": "available",
-        "uptime_5m": 100.0,
+        "uptime_5m": null,
         "uptime_30m": 100.0,
-        "uptime_1d": 99.9935258319306
+        "uptime_1d": 99.99353420406052
       },
       "quantization": "fp8",
       "capabilities": {
@@ -1423,7 +1423,7 @@
       "privacy": {},
       "provenance": {
         "source": "openrouter",
-        "fetched_at": "2026-08-23T05:59:16Z",
+        "fetched_at": "2026-08-23T06:09:01Z",
         "source_authority": "openrouter",
         "raw_endpoint": "qwen/qwen3.8-2.4t-a95b"
       }
@@ -1452,9 +1452,9 @@
       },
       "availability": {
         "status": "available",
-        "uptime_5m": 100.0,
+        "uptime_5m": null,
         "uptime_30m": 100.0,
-        "uptime_1d": 99.04500343299419
+        "uptime_1d": 99.04506303832231
       },
       "quantization": "nvfp4",
       "capabilities": {
@@ -1475,7 +1475,7 @@
       "privacy": {},
       "provenance": {
         "source": "openrouter",
-        "fetched_at": "2026-08-23T05:59:16Z",
+        "fetched_at": "2026-08-23T06:09:01Z",
         "source_authority": "openrouter",
         "raw_endpoint": "qwen/qwen3.8-2.4t-a95b"
       }
@@ -1507,7 +1507,7 @@
         "status": "available",
         "uptime_5m": null,
         "uptime_30m": null,
-        "uptime_1d": 99.98732733493854
+        "uptime_1d": 99.98734977862112
       },
       "quantization": "unknown",
       "capabilities": {
@@ -1532,7 +1532,7 @@
       "privacy": {},
       "provenance": {
         "source": "openrouter",
-        "fetched_at": "2026-08-23T05:59:16Z",
+        "fetched_at": "2026-08-23T06:09:01Z",
         "source_authority": "openrouter",
         "raw_endpoint": "qwen/qwen3.8-2.4t-a95b"
       }
@@ -1563,7 +1563,7 @@
         "status": "available",
         "uptime_5m": null,
         "uptime_30m": null,
-        "uptime_1d": 99.89509965532744
+        "uptime_1d": 99.89461005721168
       },
       "quantization": "unknown",
       "capabilities": {
@@ -1592,7 +1592,7 @@
       "privacy": {},
       "provenance": {
         "source": "openrouter",
-        "fetched_at": "2026-08-23T05:59:16Z",
+        "fetched_at": "2026-08-23T06:09:01Z",
         "source_authority": "openrouter",
         "raw_endpoint": "qwen/qwen3.8-2.4t-a95b"
       }
@@ -1623,7 +1623,7 @@
         "status": "available",
         "uptime_5m": null,
         "uptime_30m": null,
-        "uptime_1d": 99.51443215538171
+        "uptime_1d": 99.5136449608214
       },
       "quantization": "unknown",
       "capabilities": {
@@ -1645,7 +1645,7 @@
       "privacy": {},
       "provenance": {
         "source": "openrouter",
-        "fetched_at": "2026-08-23T05:59:16Z",
+        "fetched_at": "2026-08-23T06:09:01Z",
         "source_authority": "openrouter",
         "raw_endpoint": "qwen/qwen3.8-2.4t-a95b"
       }
@@ -1704,7 +1704,7 @@
       "privacy": {},
       "provenance": {
         "source": "openrouter",
-        "fetched_at": "2026-08-23T05:59:16Z",
+        "fetched_at": "2026-08-23T06:09:01Z",
         "source_authority": "openrouter",
         "raw_endpoint": "bytedance-seed/seed-2.0-code"
       }
@@ -1735,7 +1735,7 @@
         "status": "available",
         "uptime_5m": 100.0,
         "uptime_30m": 100.0,
-        "uptime_1d": 99.98446933116469
+        "uptime_1d": 99.9844556144201
       },
       "quantization": "unknown",
       "capabilities": {
@@ -1759,7 +1759,7 @@
       "privacy": {},
       "provenance": {
         "source": "openrouter",
-        "fetched_at": "2026-08-23T05:59:16Z",
+        "fetched_at": "2026-08-23T06:09:01Z",
         "source_authority": "openrouter",
         "raw_endpoint": "deepseek/deepseek-v4-pro-0813"
       }
@@ -1789,8 +1789,8 @@
       "availability": {
         "status": "available",
         "uptime_5m": 100.0,
-        "uptime_30m": 99.9896351575456,
-        "uptime_1d": 99.84196320105751
+        "uptime_30m": 99.98958767180342,
+        "uptime_1d": 99.84323435365305
       },
       "quantization": "fp8",
       "capabilities": {
@@ -1812,7 +1812,7 @@
       "privacy": {},
       "provenance": {
         "source": "openrouter",
-        "fetched_at": "2026-08-23T05:59:16Z",
+        "fetched_at": "2026-08-23T06:09:01Z",
         "source_authority": "openrouter",
         "raw_endpoint": "deepseek/deepseek-v4-pro-0813"
       }
@@ -1858,8 +1858,8 @@
       "availability": {
         "status": "available",
         "uptime_5m": 100.0,
-        "uptime_30m": 99.8991935483871,
-        "uptime_1d": 99.98296303753553
+        "uptime_30m": 100.0,
+        "uptime_1d": 99.98290341465437
       },
       "quantization": "unknown",
       "capabilities": {
@@ -1884,7 +1884,7 @@
       "privacy": {},
       "provenance": {
         "source": "openrouter",
-        "fetched_at": "2026-08-23T05:59:16Z",
+        "fetched_at": "2026-08-23T06:09:01Z",
         "source_authority": "openrouter",
         "raw_endpoint": "deepseek/deepseek-v4-pro-0813"
       }
@@ -1914,8 +1914,8 @@
       "availability": {
         "status": "available",
         "uptime_5m": 100.0,
-        "uptime_30m": 100.0,
-        "uptime_1d": 94.04511278195488
+        "uptime_30m": 99.83660130718954,
+        "uptime_1d": 94.3126607602172
       },
       "quantization": "fp8",
       "capabilities": {
@@ -1942,7 +1942,7 @@
       "privacy": {},
       "provenance": {
         "source": "openrouter",
-        "fetched_at": "2026-08-23T05:59:16Z",
+        "fetched_at": "2026-08-23T06:09:01Z",
         "source_authority": "openrouter",
         "raw_endpoint": "deepseek/deepseek-v4-pro-0813"
       }
@@ -1973,7 +1973,7 @@
         "status": "available",
         "uptime_5m": 100.0,
         "uptime_30m": 100.0,
-        "uptime_1d": 99.79827321875251
+        "uptime_1d": 99.79927739863508
       },
       "quantization": "fp4",
       "capabilities": {
@@ -1998,7 +1998,7 @@
       "privacy": {},
       "provenance": {
         "source": "openrouter",
-        "fetched_at": "2026-08-23T05:59:16Z",
+        "fetched_at": "2026-08-23T06:09:01Z",
         "source_authority": "openrouter",
         "raw_endpoint": "deepseek/deepseek-v4-pro-0813"
       }
@@ -2029,7 +2029,7 @@
         "status": "available",
         "uptime_5m": null,
         "uptime_30m": 100.0,
-        "uptime_1d": 99.44110060189166
+        "uptime_1d": 99.44
       },
       "quantization": "unknown",
       "capabilities": {
@@ -2051,7 +2051,7 @@
       "privacy": {},
       "provenance": {
         "source": "openrouter",
-        "fetched_at": "2026-08-23T05:59:16Z",
+        "fetched_at": "2026-08-23T06:09:01Z",
         "source_authority": "openrouter",
         "raw_endpoint": "deepseek/deepseek-v4-pro-0813"
       }
@@ -2082,7 +2082,7 @@
         "status": "available",
         "uptime_5m": 100.0,
         "uptime_30m": 100.0,
-        "uptime_1d": 99.2042469352014
+        "uptime_1d": 99.20610653678992
       },
       "quantization": "unknown",
       "capabilities": {
@@ -2109,7 +2109,7 @@
       "privacy": {},
       "provenance": {
         "source": "openrouter",
-        "fetched_at": "2026-08-23T05:59:16Z",
+        "fetched_at": "2026-08-23T06:09:01Z",
         "source_authority": "openrouter",
         "raw_endpoint": "deepseek/deepseek-v4-pro-0813"
       }
@@ -2140,7 +2140,7 @@
         "status": "available",
         "uptime_5m": 100.0,
         "uptime_30m": 100.0,
-        "uptime_1d": 99.87593644128452
+        "uptime_1d": 99.87639942002805
       },
       "quantization": "fp8",
       "capabilities": {
@@ -2163,7 +2163,7 @@
       "privacy": {},
       "provenance": {
         "source": "openrouter",
-        "fetched_at": "2026-08-23T05:59:16Z",
+        "fetched_at": "2026-08-23T06:09:01Z",
         "source_authority": "openrouter",
         "raw_endpoint": "deepseek/deepseek-v4-pro-0813"
       }
@@ -2192,9 +2192,9 @@
       },
       "availability": {
         "status": "available",
-        "uptime_5m": 100.0,
-        "uptime_30m": 99.31428571428572,
-        "uptime_1d": 99.34757505773672
+        "uptime_5m": 98.30508474576271,
+        "uptime_30m": 99.7610513739546,
+        "uptime_1d": 99.34431886808731
       },
       "quantization": "fp8",
       "capabilities": {
@@ -2223,7 +2223,7 @@
       "privacy": {},
       "provenance": {
         "source": "openrouter",
-        "fetched_at": "2026-08-23T05:59:16Z",
+        "fetched_at": "2026-08-23T06:09:01Z",
         "source_authority": "openrouter",
         "raw_endpoint": "deepseek/deepseek-v4-pro-0813"
       }
@@ -2252,9 +2252,9 @@
       },
       "availability": {
         "status": "available",
-        "uptime_5m": null,
+        "uptime_5m": 100.0,
         "uptime_30m": 100.0,
-        "uptime_1d": 98.93796928904823
+        "uptime_1d": 98.95607375271149
       },
       "quantization": "fp8",
       "capabilities": {
@@ -2273,7 +2273,7 @@
       "privacy": {},
       "provenance": {
         "source": "openrouter",
-        "fetched_at": "2026-08-23T05:59:16Z",
+        "fetched_at": "2026-08-23T06:09:01Z",
         "source_authority": "openrouter",
         "raw_endpoint": "deepseek/deepseek-v4-pro-0813"
       }
@@ -2303,8 +2303,8 @@
       "availability": {
         "status": "available",
         "uptime_5m": null,
-        "uptime_30m": 98.4126984126984,
-        "uptime_1d": 99.58009470204591
+        "uptime_30m": 99.18032786885246,
+        "uptime_1d": 99.58957887223411
       },
       "quantization": "fp4",
       "capabilities": {
@@ -2325,7 +2325,7 @@
       "privacy": {},
       "provenance": {
         "source": "openrouter",
-        "fetched_at": "2026-08-23T05:59:16Z",
+        "fetched_at": "2026-08-23T06:09:01Z",
         "source_authority": "openrouter",
         "raw_endpoint": "deepseek/deepseek-v4-pro-0813"
       }
@@ -2356,7 +2356,7 @@
         "status": "available",
         "uptime_5m": 100.0,
         "uptime_30m": 100.0,
-        "uptime_1d": 99.92826827664535
+        "uptime_1d": 99.93437928771701
       },
       "quantization": "unknown",
       "capabilities": {
@@ -2377,7 +2377,7 @@
       "privacy": {},
       "provenance": {
         "source": "openrouter",
-        "fetched_at": "2026-08-23T05:59:16Z",
+        "fetched_at": "2026-08-23T06:09:01Z",
         "source_authority": "openrouter",
         "raw_endpoint": "deepseek/deepseek-v4-pro-0813"
       }
@@ -2408,7 +2408,7 @@
         "status": "available",
         "uptime_5m": 100.0,
         "uptime_30m": 100.0,
-        "uptime_1d": 98.09113131368618
+        "uptime_1d": 98.10405764541494
       },
       "quantization": "unknown",
       "capabilities": {
@@ -2438,7 +2438,7 @@
       "privacy": {},
       "provenance": {
         "source": "openrouter",
-        "fetched_at": "2026-08-23T05:59:16Z",
+        "fetched_at": "2026-08-23T06:09:01Z",
         "source_authority": "openrouter",
         "raw_endpoint": "deepseek/deepseek-v4-pro-0813"
       }
@@ -2469,7 +2469,7 @@
         "status": "available",
         "uptime_5m": null,
         "uptime_30m": 100.0,
-        "uptime_1d": 99.8664362036455
+        "uptime_1d": 99.86238160770662
       },
       "quantization": "unknown",
       "capabilities": {
@@ -2497,7 +2497,7 @@
       "privacy": {},
       "provenance": {
         "source": "openrouter",
-        "fetched_at": "2026-08-23T05:59:16Z",
+        "fetched_at": "2026-08-23T06:09:01Z",
         "source_authority": "openrouter",
         "raw_endpoint": "deepseek/deepseek-v4-pro-0813"
       }
@@ -2528,7 +2528,7 @@
         "status": "available",
         "uptime_5m": 100.0,
         "uptime_30m": 100.0,
-        "uptime_1d": 99.95686866508518
+        "uptime_1d": 99.95693553249214
       },
       "quantization": "unknown",
       "capabilities": {
@@ -2555,7 +2555,7 @@
       "privacy": {},
       "provenance": {
         "source": "openrouter",
-        "fetched_at": "2026-08-23T05:59:16Z",
+        "fetched_at": "2026-08-23T06:09:01Z",
         "source_authority": "openrouter",
         "raw_endpoint": "deepseek/deepseek-v4-pro-0813"
       }
@@ -2594,8 +2594,8 @@
       "availability": {
         "status": "available",
         "uptime_5m": 100.0,
-        "uptime_30m": 99.90403071017275,
-        "uptime_1d": 99.94906337428536
+        "uptime_30m": 100.0,
+        "uptime_1d": 99.94880650386625
       },
       "quantization": "unknown",
       "capabilities": {
@@ -2618,7 +2618,7 @@
       "privacy": {},
       "provenance": {
         "source": "openrouter",
-        "fetched_at": "2026-08-23T05:59:16Z",
+        "fetched_at": "2026-08-23T06:09:01Z",
         "source_authority": "openrouter",
         "raw_endpoint": "x-ai/grok-4.6"
       }
@@ -2657,8 +2657,8 @@
       "availability": {
         "status": "available",
         "uptime_5m": 100.0,
-        "uptime_30m": 99.90403071017275,
-        "uptime_1d": 99.94906337428536
+        "uptime_30m": 100.0,
+        "uptime_1d": 99.94880650386625
       },
       "quantization": "unknown",
       "capabilities": {
@@ -2681,7 +2681,7 @@
       "privacy": {},
       "provenance": {
         "source": "openrouter",
-        "fetched_at": "2026-08-23T05:59:16Z",
+        "fetched_at": "2026-08-23T06:09:01Z",
         "source_authority": "openrouter",
         "raw_endpoint": "x-ai/grok-4.6"
       }
@@ -2719,9 +2719,9 @@
       },
       "availability": {
         "status": "available",
-        "uptime_5m": 99.97520456236053,
-        "uptime_30m": 99.93451688009313,
-        "uptime_1d": 99.91695594660209
+        "uptime_5m": 100.0,
+        "uptime_30m": 99.95503597122301,
+        "uptime_1d": 99.9172840985729
       },
       "quantization": "unknown",
       "capabilities": {
@@ -2744,7 +2744,7 @@
       "privacy": {},
       "provenance": {
         "source": "openrouter",
-        "fetched_at": "2026-08-23T05:59:16Z",
+        "fetched_at": "2026-08-23T06:09:01Z",
         "source_authority": "openrouter",
         "raw_endpoint": "x-ai/grok-4.6"
       }
@@ -2782,9 +2782,9 @@
       },
       "availability": {
         "status": "available",
-        "uptime_5m": 99.97520456236053,
-        "uptime_30m": 99.93451688009313,
-        "uptime_1d": 99.91695594660209
+        "uptime_5m": 100.0,
+        "uptime_30m": 99.95503597122301,
+        "uptime_1d": 99.9172840985729
       },
       "quantization": "unknown",
       "capabilities": {
@@ -2807,7 +2807,7 @@
       "privacy": {},
       "provenance": {
         "source": "openrouter",
-        "fetched_at": "2026-08-23T05:59:16Z",
+        "fetched_at": "2026-08-23T06:09:01Z",
         "source_authority": "openrouter",
         "raw_endpoint": "x-ai/grok-4.6"
       }
@@ -2835,9 +2835,9 @@
       },
       "availability": {
         "status": "available",
-        "uptime_5m": 99.52681388012618,
-        "uptime_30m": 98.36874051593323,
-        "uptime_1d": 96.75007373514336
+        "uptime_5m": 93.78698224852072,
+        "uptime_30m": 97.90732436472346,
+        "uptime_1d": 96.7224224256147
       },
       "quantization": "fp8",
       "capabilities": {
@@ -2866,7 +2866,7 @@
       "privacy": {},
       "provenance": {
         "source": "openrouter",
-        "fetched_at": "2026-08-23T05:59:16Z",
+        "fetched_at": "2026-08-23T06:09:01Z",
         "source_authority": "openrouter",
         "raw_endpoint": "liquid/lfm-2.5-2.6b:free"
       }
@@ -2897,7 +2897,7 @@
         "status": "available",
         "uptime_5m": 100.0,
         "uptime_30m": 100.0,
-        "uptime_1d": 99.93855984271319
+        "uptime_1d": 99.93837642418931
       },
       "quantization": "bf16",
       "capabilities": {
@@ -2924,7 +2924,7 @@
       "privacy": {},
       "provenance": {
         "source": "openrouter",
-        "fetched_at": "2026-08-23T05:59:16Z",
+        "fetched_at": "2026-08-23T06:09:01Z",
         "source_authority": "openrouter",
         "raw_endpoint": "nvidia/nemotron-3.5-lightning"
       }
@@ -2980,7 +2980,7 @@
       "privacy": {},
       "provenance": {
         "source": "openrouter",
-        "fetched_at": "2026-08-23T05:59:16Z",
+        "fetched_at": "2026-08-23T06:09:01Z",
         "source_authority": "openrouter",
         "raw_endpoint": "nvidia/nemotron-3.5-lightning"
       }
@@ -3008,9 +3008,9 @@
       },
       "availability": {
         "status": "available",
-        "uptime_5m": 99.82682316721186,
-        "uptime_30m": 99.9477468959168,
-        "uptime_1d": 99.76815569164657
+        "uptime_5m": 99.96081504702194,
+        "uptime_30m": 99.92929114371574,
+        "uptime_1d": 99.76848195758507
       },
       "quantization": "nvfp4",
       "capabilities": {
@@ -3028,7 +3028,7 @@
       "privacy": {},
       "provenance": {
         "source": "openrouter",
-        "fetched_at": "2026-08-23T05:59:16Z",
+        "fetched_at": "2026-08-23T06:09:01Z",
         "source_authority": "openrouter",
         "raw_endpoint": "nvidia/nemotron-3.5-lightning:free"
       }
@@ -3077,7 +3077,7 @@
       "privacy": {},
       "provenance": {
         "source": "openrouter",
-        "fetched_at": "2026-08-23T05:59:16Z",
+        "fetched_at": "2026-08-23T06:09:01Z",
         "source_authority": "openrouter",
         "raw_endpoint": "sakana/sakana-namazu"
       }
@@ -3108,7 +3108,7 @@
         "status": "available",
         "uptime_5m": 100.0,
         "uptime_30m": 100.0,
-        "uptime_1d": 99.99997912361347
+        "uptime_1d": 99.99997929547898
       },
       "quantization": "unknown",
       "capabilities": {
@@ -3129,7 +3129,7 @@
       "privacy": {},
       "provenance": {
         "source": "openrouter",
-        "fetched_at": "2026-08-23T05:59:16Z",
+        "fetched_at": "2026-08-23T06:09:01Z",
         "source_authority": "openrouter",
         "raw_endpoint": "upstage/solar-pro4"
       }
@@ -3159,8 +3159,8 @@
       "availability": {
         "status": "available",
         "uptime_5m": 100.0,
-        "uptime_30m": 99.86263736263736,
-        "uptime_1d": 99.98570049690774
+        "uptime_30m": 99.87012987012987,
+        "uptime_1d": 99.98560995790913
       },
       "quantization": "unknown",
       "capabilities": {
@@ -3187,7 +3187,7 @@
       "privacy": {},
       "provenance": {
         "source": "openrouter",
-        "fetched_at": "2026-08-23T05:59:16Z",
+        "fetched_at": "2026-08-23T06:09:01Z",
         "source_authority": "openrouter",
         "raw_endpoint": "meta/muse-glimmer-30b"
       }
@@ -3217,7 +3217,7 @@
         "status": "available",
         "uptime_5m": 100.0,
         "uptime_30m": 100.0,
-        "uptime_1d": 99.91082245255082
+        "uptime_1d": 99.91081344865884
       },
       "quantization": "bf16",
       "capabilities": {
@@ -3245,7 +3245,7 @@
       "privacy": {},
       "provenance": {
         "source": "openrouter",
-        "fetched_at": "2026-08-23T05:59:16Z",
+        "fetched_at": "2026-08-23T06:09:01Z",
         "source_authority": "openrouter",
         "raw_endpoint": "meta/muse-glimmer-30b"
       }
@@ -3276,7 +3276,7 @@
         "status": "available",
         "uptime_5m": 100.0,
         "uptime_30m": 100.0,
-        "uptime_1d": 99.99212629424038
+        "uptime_1d": 99.99218016890835
       },
       "quantization": "bf16",
       "capabilities": {
@@ -3304,7 +3304,7 @@
       "privacy": {},
       "provenance": {
         "source": "openrouter",
-        "fetched_at": "2026-08-23T05:59:16Z",
+        "fetched_at": "2026-08-23T06:09:01Z",
         "source_authority": "openrouter",
         "raw_endpoint": "meta/muse-glimmer-30b"
       }
@@ -3334,8 +3334,8 @@
       "availability": {
         "status": "available",
         "uptime_5m": 100.0,
-        "uptime_30m": 99.97222222222221,
-        "uptime_1d": 99.92390940256475
+        "uptime_30m": 99.96825396825398,
+        "uptime_1d": 99.92435923544643
       },
       "quantization": "unknown",
       "capabilities": {
@@ -3362,7 +3362,7 @@
       "privacy": {},
       "provenance": {
         "source": "openrouter",
-        "fetched_at": "2026-08-23T05:59:16Z",
+        "fetched_at": "2026-08-23T06:09:01Z",
         "source_authority": "openrouter",
         "raw_endpoint": "meta/muse-glimmer-30b"
       }
@@ -3392,8 +3392,8 @@
       "availability": {
         "status": "unavailable",
         "uptime_5m": null,
-        "uptime_30m": 69.49152542372882,
-        "uptime_1d": 97.58530183727035
+        "uptime_30m": 24.0,
+        "uptime_1d": 96.99759807846277
       },
       "quantization": "unknown",
       "capabilities": {
@@ -3421,7 +3421,7 @@
       "privacy": {},
       "provenance": {
         "source": "openrouter",
-        "fetched_at": "2026-08-23T05:59:16Z",
+        "fetched_at": "2026-08-23T06:09:01Z",
         "source_authority": "openrouter",
         "raw_endpoint": "meta/muse-glimmer-30b"
       }
@@ -3452,8 +3452,8 @@
       "availability": {
         "status": "available",
         "uptime_5m": 100.0,
-        "uptime_30m": 99.99105945462674,
-        "uptime_1d": 99.99778502157758
+        "uptime_30m": 100.0,
+        "uptime_1d": 99.99780434520085
       },
       "quantization": "unknown",
       "capabilities": {
@@ -3475,7 +3475,7 @@
       "privacy": {},
       "provenance": {
         "source": "openrouter",
-        "fetched_at": "2026-08-23T05:59:16Z",
+        "fetched_at": "2026-08-23T06:09:01Z",
         "source_authority": "openrouter",
         "raw_endpoint": "meta/muse-spark-1.2"
       }
@@ -3534,7 +3534,7 @@
       "privacy": {},
       "provenance": {
         "source": "openrouter",
-        "fetched_at": "2026-08-23T05:59:16Z",
+        "fetched_at": "2026-08-23T06:09:01Z",
         "source_authority": "openrouter",
         "raw_endpoint": "qwen/qwen3.8-max"
       }

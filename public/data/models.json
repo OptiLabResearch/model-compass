@@ -1,7 +1,7 @@
 {
   "version": "4.1",
   "intelligence_index_version": "4.1",
-  "scraped_at": "2026-08-23T05:51:04Z",
+  "scraped_at": "2026-08-23T06:09:01Z",
   "source_url": "https://artificialanalysis.ai/leaderboards/providers",
   "scrape_method": "AA RSC leaderboard payload via scripts/aa pipeline",
   "intelligence_index_methodology": "AA Intelligence Index v4.1 = composite of 9 evaluations: GDPval-AA v2, \u03c4\u00b3-Banking, Terminal-Bench v2.1, SciCode, HLE, GPQA Diamond, CritPt, AA-Omniscience, AA-LCR",
@@ -6029,98 +6029,6 @@
       }
     },
     {
-      "name": "Motif 3 (Beta)",
-      "slug": "motif-0714",
-      "aa_url": "https://artificialanalysis.ai/models/motif-0714",
-      "creator": "Motif Technologies",
-      "released": "2026-07-14",
-      "knowledge_cutoff": null,
-      "is_reasoning": false,
-      "is_open_weights": false,
-      "deprecated": false,
-      "commercial_allowed": null,
-      "license": null,
-      "license_url": null,
-      "size_class": null,
-      "context_tokens": null,
-      "parameters_billions": null,
-      "active_params_billions": null,
-      "input_modalities": null,
-      "output_modalities": null,
-      "composite": {
-        "intelligence_index_v4_1": 45.3,
-        "coding_index": 62,
-        "math_index": null,
-        "agentic_index": null,
-        "omniscience_index": null
-      },
-      "benchmarks": {
-        "gpqa_diamond": null,
-        "hle": null,
-        "scicode": null,
-        "ifbench": null,
-        "lcr": null,
-        "tau2_bench": null,
-        "tau3_banking": null,
-        "terminalbench_hard": null,
-        "terminalbench_v2_1": null,
-        "mmlu_pro": null,
-        "livecodebench": null,
-        "math_500": null,
-        "aime": null,
-        "aime25": null,
-        "gdpval_v2": null,
-        "critpt": null,
-        "mmmu_pro": null,
-        "apex_agents_aa": null,
-        "it_bench_sre": null,
-        "omniscience_accuracy": null,
-        "omniscience_hallucination_rate": null,
-        "omniscience_non_halluc": null
-      },
-      "pricing_per_m_tokens": {
-        "input": null,
-        "output": null,
-        "blended_3_1": null,
-        "blended_7_2_1": null,
-        "blended_1_1": null,
-        "cache_hit": null,
-        "cache_write": null
-      },
-      "intelligence_evaluation_total_cost_usd": null,
-      "cost_per_intelligence_task_usd": {
-        "total": null,
-        "input": null,
-        "output": null,
-        "cacheRead": null,
-        "cacheWrite": null,
-        "nonCacheInput": null,
-        "reasoning": null,
-        "answer": null
-      },
-      "cost_per_eval_breakdown_usd": {},
-      "time_per_task_seconds": null,
-      "output_tokens_per_task": null,
-      "performance": {
-        "output_speed_tps": null,
-        "ttft_seconds_total": null,
-        "ttft_seconds_answer": null,
-        "end_to_end_500tok": null
-      },
-      "output_speed_by_prompt_length": [],
-      "featured": false,
-      "openrouter_slug": null,
-      "note": null,
-      "has_rich_data": false,
-      "data_sources": {
-        "documented_free_api": true,
-        "page_enrichment": false,
-        "aa_pipeline": true
-      },
-      "short_name": "Motif 3 (Beta)",
-      "derived": {}
-    },
-    {
       "name": "DeepSeek V4 Pro (max)",
       "slug": "deepseek-v4-pro-0424",
       "aa_url": "https://artificialanalysis.ai/models/deepseek-v4-pro-0424",
@@ -6479,9 +6387,9 @@
       "output_modalities": null,
       "composite": {
         "intelligence_index_v4_1": 44.45,
-        "coding_index": null,
+        "coding_index": 56.1,
         "math_index": null,
-        "agentic_index": null,
+        "agentic_index": 49.8,
         "omniscience_index": -36.1
       },
       "benchmarks": {
@@ -6518,7 +6426,7 @@
         "cache_hit": 0.05,
         "cache_write": null
       },
-      "intelligence_evaluation_total_cost_usd": null,
+      "intelligence_evaluation_total_cost_usd": 311.57,
       "cost_per_intelligence_task_usd": {
         "total": 0.1878,
         "input": null,
@@ -7026,9 +6934,9 @@
       "output_modalities": null,
       "composite": {
         "intelligence_index_v4_1": 42.87,
-        "coding_index": null,
+        "coding_index": 58.2,
         "math_index": null,
-        "agentic_index": null,
+        "agentic_index": 43.7,
         "omniscience_index": -26.7
       },
       "benchmarks": {
@@ -7065,7 +6973,7 @@
         "cache_hit": 0.05,
         "cache_write": null
       },
-      "intelligence_evaluation_total_cost_usd": null,
+      "intelligence_evaluation_total_cost_usd": 211.65,
       "cost_per_intelligence_task_usd": {
         "total": 0.1658,
         "input": null,
@@ -22720,10 +22628,10 @@
     }
   ],
   "coverage": {
-    "total": 205,
+    "total": 204,
     "featured": 19,
     "with_rich_metrics": 197,
-    "with_documented_free_api": 33,
+    "with_documented_free_api": 32,
     "featured_without_rich_metrics": []
   }
 }
