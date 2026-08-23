@@ -38,6 +38,8 @@ fields + bounds), `http.py` (retries/backoff/rate-limit/atomic/cache),
   unknown raw fields.
 - `data/aa_pipeline_report.json` — per-source health + field/benchmark coverage.
 - `data/history/rich/*.delta.json` — bounded rich-dataset change deltas (104 files retained).
+- `data/openrouter_observations.json` — bounded provider endpoint observations from the public OpenRouter API.
+- `data/coding_agent_observations.json` — separate public Artificial Analysis coding-agent/harness observations.
 - `data/aa_cache/` — raw payloads (git-ignored), for reproducibility/debugging.
 
 ## Commands
@@ -57,6 +59,8 @@ python3.12 scripts/aa/demo_query.py
 python3 scripts/model_compass.py recommend coding
 python3 scripts/model_compass.py pareto intelligence_index cost
 python3 scripts/model_compass.py backup <slug>
+python3 scripts/model_compass.py agents
+python3 scripts/model_compass.py recommend-agent coding_agent_index
 
 # Offline unit tests (drift detection, scaling, dedup, merge, NaN)
 python3.12 scripts/aa/tests/test_pipeline.py

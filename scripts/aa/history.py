@@ -11,6 +11,10 @@ TRACKED_FIELDS = (
     "intelligence_index", "coding_index", "agentic_index", "omniscience_index",
     "context_tokens", "released", "deprecated", "is_open_weights",
 )
+MATERIALITY = {"intelligence_index": 0.1, "coding_index": 0.1,
+               "agentic_index": 0.1, "omniscience_index": 0.1,
+               "price_input": 0.01, "price_output": 0.01,
+               "speed_tps": 0.05}
 
 
 def _value(model: dict, field: str):
@@ -30,6 +34,16 @@ def _record(model: dict) -> dict:
             "speed_tps": _value(model, "performance.median_output_speed_tps")}
 
 
+def _material_change(field: str, before, after) -> bool:
+    if before == after:
+        return False
+    threshold = MATERIALITY.get(field)
+    if threshold is None or not isinstance(before, (int, float)) or not isinstance(after, (int, float)):
+        return True
+    scale = max(abs(before), abs(after), 1.0)
+    return abs(after - before) / scale >= threshold
+
+
 def snapshot_index(snapshot: dict) -> dict[str, dict]:
     return {m["slug"]: m for m in snapshot.get("models", []) if isinstance(m, dict) and m.get("slug")}
 
@@ -44,9 +58,10 @@ def diff_snapshots(previous: dict | None, current: dict, *, generated_at: str | 
         before, after = _record(old[slug]), _record(new[slug])
         changes = {}
         for field in (*TRACKED_FIELDS, "price_input", "price_output", "speed_tps"):
-            if before.get("fields", {}).get(field, before.get(field)) != after.get("fields", {}).get(field, after.get(field)):
-                changes[field] = {"before": before.get("fields", {}).get(field, before.get(field)),
-                                  "after": after.get("fields", {}).get(field, after.get(field))}
+            before_value = before.get("fields", {}).get(field, before.get(field))
+            after_value = after.get("fields", {}).get(field, after.get(field))
+            if _material_change(field, before_value, after_value):
+                changes[field] = {"before": before_value, "after": after_value}
         if changes:
             changed.append({"slug": slug, "name": after["name"], "changes": changes})
     stamp = generated_at or current.get("generated_at") or datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")

@@ -1,0 +1,3546 @@
+{
+  "version": 1,
+  "parser_version": "0.1.0",
+  "generated_at": "2026-08-23T05:59:16Z",
+  "source": "openrouter",
+  "source_url": "https://openrouter.ai/api/v1/models",
+  "model_catalog_count": 422,
+  "endpoint_models_requested": 25,
+  "endpoint_observation_count": 63,
+  "endpoint_errors": [],
+  "observations": [
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "meta/muse-spark-1.2-contributor",
+      "model_slug": "meta/muse-spark-1.2-contributor",
+      "provider_id": "meta",
+      "provider_name": "Meta",
+      "endpoint_id": "Meta | meta/muse-spark-1.2-contributor-20260805",
+      "context_tokens": 1048576,
+      "pricing": {
+        "input_per_million": 0.09999999999999999,
+        "output_per_million": 0.19999999999999998,
+        "raw": {
+          "prompt": "0.0000001",
+          "completion": "0.0000002",
+          "web_search": "0.0025",
+          "input_cache_read": "0.000000002",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 100.0,
+        "uptime_30m": 100.0,
+        "uptime_1d": 99.99859583759458
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "include_reasoning",
+          "max_tokens",
+          "reasoning",
+          "reasoning_effort",
+          "repetition_penalty",
+          "response_format",
+          "structured_outputs",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_k",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T05:59:16Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "meta/muse-spark-1.2-contributor"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "deepseek/deepseek-v4-flash-vision-exp",
+      "model_slug": "deepseek/deepseek-v4-flash-vision-exp",
+      "provider_id": "deepseek",
+      "provider_name": "DeepSeek",
+      "endpoint_id": "DeepSeek | deepseek/deepseek-v4-flash-vision-exp-20260821",
+      "context_tokens": 1048576,
+      "pricing": {
+        "input_per_million": 0.22,
+        "output_per_million": 0.66,
+        "raw": {
+          "prompt": "0.00000022",
+          "completion": "0.00000066",
+          "input_cache_read": "0.000000007",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 100.0,
+        "uptime_30m": 100.0,
+        "uptime_1d": 100.0
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "include_reasoning",
+          "logprobs",
+          "max_tokens",
+          "presence_penalty",
+          "reasoning",
+          "reasoning_effort",
+          "response_format",
+          "stop",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_logprobs",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T05:59:16Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "deepseek/deepseek-v4-flash-vision-exp"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "stealth/ox-alpha",
+      "model_slug": "stealth/ox-alpha",
+      "provider_id": "stealth",
+      "provider_name": "Stealth",
+      "endpoint_id": "Stealth | stealth/ox-alpha",
+      "context_tokens": 1048576,
+      "pricing": {
+        "input_per_million": 0.0,
+        "output_per_million": 0.0,
+        "raw": {
+          "prompt": "0",
+          "completion": "0",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 99.98637901157026,
+        "uptime_30m": 99.99315523421774,
+        "uptime_1d": 99.9853928713014
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "include_reasoning",
+          "max_tokens",
+          "reasoning",
+          "reasoning_effort",
+          "response_format",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_k",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T05:59:16Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "stealth/ox-alpha"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "tencent/hy-mt2-1.8b",
+      "model_slug": "tencent/hy-mt2-1.8b",
+      "provider_id": "tencent/fp8",
+      "provider_name": "Tencent",
+      "endpoint_id": "Tencent | tencent/hy-mt2-1.8b-20260521",
+      "context_tokens": 8192,
+      "pricing": {
+        "input_per_million": 0.044,
+        "output_per_million": 0.17700000000000002,
+        "raw": {
+          "prompt": "0.000000044",
+          "completion": "0.000000177",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": null,
+        "uptime_30m": null,
+        "uptime_1d": 100.0
+      },
+      "quantization": "fp8",
+      "capabilities": {
+        "supported_parameters": [
+          "max_completion_tokens",
+          "max_tokens",
+          "stop",
+          "temperature"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T05:59:16Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "tencent/hy-mt2-1.8b"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "tencent/hy-mt2-30b-a3b",
+      "model_slug": "tencent/hy-mt2-30b-a3b",
+      "provider_id": "tencent/fp8",
+      "provider_name": "Tencent",
+      "endpoint_id": "Tencent | tencent/hy-mt2-30b-a3b-20260521",
+      "context_tokens": 8192,
+      "pricing": {
+        "input_per_million": 0.074,
+        "output_per_million": 0.295,
+        "raw": {
+          "prompt": "0.000000074",
+          "completion": "0.000000295",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": null,
+        "uptime_30m": 100.0,
+        "uptime_1d": 100.0
+      },
+      "quantization": "fp8",
+      "capabilities": {
+        "supported_parameters": [
+          "max_completion_tokens",
+          "max_tokens",
+          "response_format",
+          "stop",
+          "structured_outputs",
+          "temperature"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T05:59:16Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "tencent/hy-mt2-30b-a3b"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "tencent/hy-mt2-7b",
+      "model_slug": "tencent/hy-mt2-7b",
+      "provider_id": "tencent/fp8",
+      "provider_name": "Tencent",
+      "endpoint_id": "Tencent | tencent/hy-mt2-7b-20260521",
+      "context_tokens": 8192,
+      "pricing": {
+        "input_per_million": 0.074,
+        "output_per_million": 0.295,
+        "raw": {
+          "prompt": "0.000000074",
+          "completion": "0.000000295",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": null,
+        "uptime_30m": null,
+        "uptime_1d": 100.0
+      },
+      "quantization": "fp8",
+      "capabilities": {
+        "supported_parameters": [
+          "max_completion_tokens",
+          "max_tokens",
+          "response_format",
+          "stop",
+          "structured_outputs",
+          "temperature"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T05:59:16Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "tencent/hy-mt2-7b"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "z-ai/glm-5.3",
+      "model_slug": "z-ai/glm-5.3",
+      "provider_id": "z-ai/fp8",
+      "provider_name": "Z.AI",
+      "endpoint_id": "Z.AI | z-ai/glm-5.3-20260816",
+      "context_tokens": 1048576,
+      "pricing": {
+        "input_per_million": 1.4,
+        "output_per_million": 4.4,
+        "raw": {
+          "prompt": "0.0000014",
+          "completion": "0.0000044",
+          "input_cache_read": "0.00000026",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 100.0,
+        "uptime_30m": 100.0,
+        "uptime_1d": 100.0
+      },
+      "quantization": "fp8",
+      "capabilities": {
+        "supported_parameters": [
+          "include_reasoning",
+          "max_tokens",
+          "reasoning",
+          "reasoning_effort",
+          "response_format",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_k",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T05:59:16Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "z-ai/glm-5.3"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "qwen/qwen3.8-27b",
+      "model_slug": "qwen/qwen3.8-27b",
+      "provider_id": "coreweave/fp8",
+      "provider_name": "CoreWeave",
+      "endpoint_id": "CoreWeave | qwen/qwen3.8-27b-20260814",
+      "context_tokens": 262144,
+      "pricing": {
+        "input_per_million": 0.39999999999999997,
+        "output_per_million": 3.0,
+        "raw": {
+          "prompt": "0.0000004",
+          "completion": "0.000003",
+          "input_cache_read": "0.00000015",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 100.0,
+        "uptime_30m": 100.0,
+        "uptime_1d": 98.16935733000767
+      },
+      "quantization": "fp8",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "include_reasoning",
+          "logprobs",
+          "max_tokens",
+          "presence_penalty",
+          "reasoning",
+          "reasoning_effort",
+          "repetition_penalty",
+          "response_format",
+          "seed",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_k",
+          "top_logprobs",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T05:59:16Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "qwen/qwen3.8-27b"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "qwen/qwen3.8-27b",
+      "model_slug": "qwen/qwen3.8-27b",
+      "provider_id": "chutes/fp8",
+      "provider_name": "Chutes",
+      "endpoint_id": "Chutes | qwen/qwen3.8-27b-20260814",
+      "context_tokens": 262144,
+      "pricing": {
+        "input_per_million": 0.39999999999999997,
+        "output_per_million": 3.0,
+        "raw": {
+          "prompt": "0.0000004",
+          "completion": "0.000003",
+          "input_cache_read": "0.00000004",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 100.0,
+        "uptime_30m": 99.79716024340772,
+        "uptime_1d": 99.50561587639228
+      },
+      "quantization": "fp8",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "include_reasoning",
+          "max_tokens",
+          "presence_penalty",
+          "reasoning",
+          "reasoning_effort",
+          "repetition_penalty",
+          "response_format",
+          "seed",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_k",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T05:59:16Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "qwen/qwen3.8-27b"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "qwen/qwen3.8-27b",
+      "model_slug": "qwen/qwen3.8-27b",
+      "provider_id": "akashml/bf16",
+      "provider_name": "AkashML",
+      "endpoint_id": "AkashML | qwen/qwen3.8-27b-20260814",
+      "context_tokens": 262144,
+      "pricing": {
+        "input_per_million": 0.39999999999999997,
+        "output_per_million": 3.0,
+        "raw": {
+          "prompt": "0.0000004",
+          "completion": "0.000003",
+          "input_cache_read": "0.00000005",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 100.0,
+        "uptime_30m": 100.0,
+        "uptime_1d": 99.92067141871695
+      },
+      "quantization": "bf16",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "include_reasoning",
+          "logprobs",
+          "max_tokens",
+          "presence_penalty",
+          "reasoning",
+          "reasoning_effort",
+          "repetition_penalty",
+          "response_format",
+          "seed",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_k",
+          "top_logprobs",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T05:59:16Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "qwen/qwen3.8-27b"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "qwen/qwen3.8-27b",
+      "model_slug": "qwen/qwen3.8-27b",
+      "provider_id": "reka/fp8",
+      "provider_name": "Reka",
+      "endpoint_id": "Reka | qwen/qwen3.8-27b-20260814",
+      "context_tokens": 262144,
+      "pricing": {
+        "input_per_million": 0.44999999999999996,
+        "output_per_million": 3.1999999999999997,
+        "raw": {
+          "prompt": "0.00000045",
+          "completion": "0.0000032",
+          "input_cache_read": "0.00000005",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 100.0,
+        "uptime_30m": 99.82110912343471,
+        "uptime_1d": 99.88787943741859
+      },
+      "quantization": "fp8",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "include_reasoning",
+          "logprobs",
+          "max_tokens",
+          "presence_penalty",
+          "reasoning",
+          "reasoning_effort",
+          "response_format",
+          "seed",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_k",
+          "top_logprobs",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T05:59:16Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "qwen/qwen3.8-27b"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "qwen/qwen3.8-27b",
+      "model_slug": "qwen/qwen3.8-27b",
+      "provider_id": "venice/fp8",
+      "provider_name": "Venice",
+      "endpoint_id": "Venice | qwen/qwen3.8-27b-20260814",
+      "context_tokens": 262144,
+      "pricing": {
+        "input_per_million": 0.44999999999999996,
+        "output_per_million": 3.1999999999999997,
+        "raw": {
+          "prompt": "0.00000045",
+          "completion": "0.0000032",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 100.0,
+        "uptime_30m": 100.0,
+        "uptime_1d": 99.16324435318276
+      },
+      "quantization": "fp8",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "include_reasoning",
+          "max_tokens",
+          "presence_penalty",
+          "reasoning",
+          "reasoning_effort",
+          "response_format",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "tools",
+          "top_k",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T05:59:16Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "qwen/qwen3.8-27b"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "qwen/qwen3.8-27b",
+      "model_slug": "qwen/qwen3.8-27b",
+      "provider_id": "parasail/fp8",
+      "provider_name": "Parasail",
+      "endpoint_id": "Parasail | qwen/qwen3.8-27b-20260814",
+      "context_tokens": 262144,
+      "pricing": {
+        "input_per_million": 0.44999999999999996,
+        "output_per_million": 3.1999999999999997,
+        "raw": {
+          "prompt": "0.00000045",
+          "completion": "0.0000032",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 100.0,
+        "uptime_30m": 100.0,
+        "uptime_1d": 99.57702582368655
+      },
+      "quantization": "fp8",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "include_reasoning",
+          "logit_bias",
+          "logprobs",
+          "max_tokens",
+          "presence_penalty",
+          "reasoning",
+          "reasoning_effort",
+          "repetition_penalty",
+          "response_format",
+          "seed",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_k",
+          "top_logprobs",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T05:59:16Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "qwen/qwen3.8-27b"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "qwen/qwen3.8-27b",
+      "model_slug": "qwen/qwen3.8-27b",
+      "provider_id": "io-net/fp8",
+      "provider_name": "Io Net",
+      "endpoint_id": "Io Net | qwen/qwen3.8-27b-20260814",
+      "context_tokens": 65500,
+      "pricing": {
+        "input_per_million": 0.48,
+        "output_per_million": 3.4,
+        "raw": {
+          "prompt": "0.00000048",
+          "completion": "0.0000034",
+          "input_cache_read": "0.00000025",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 100.0,
+        "uptime_30m": 100.0,
+        "uptime_1d": 99.36463536463536
+      },
+      "quantization": "fp8",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "include_reasoning",
+          "logprobs",
+          "max_tokens",
+          "presence_penalty",
+          "reasoning",
+          "reasoning_effort",
+          "response_format",
+          "seed",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "top_k",
+          "top_logprobs",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T05:59:16Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "qwen/qwen3.8-27b"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "qwen/qwen3.8-27b",
+      "model_slug": "qwen/qwen3.8-27b",
+      "provider_id": "alibaba",
+      "provider_name": "Alibaba",
+      "endpoint_id": "Alibaba | qwen/qwen3.8-27b-20260814",
+      "context_tokens": 1000000,
+      "pricing": {
+        "input_per_million": 0.5,
+        "output_per_million": 3.0,
+        "raw": {
+          "prompt": "0.0000005",
+          "completion": "0.000003",
+          "input_cache_read": "0.0000001",
+          "input_cache_write": "0.000000625",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 100.0,
+        "uptime_30m": 100.0,
+        "uptime_1d": 99.98181184352123
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "include_reasoning",
+          "logprobs",
+          "max_tokens",
+          "presence_penalty",
+          "reasoning",
+          "reasoning_effort",
+          "response_format",
+          "seed",
+          "stop",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_k",
+          "top_logprobs",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T05:59:16Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "qwen/qwen3.8-27b"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "dots-studio/dots-3-note-preview:free",
+      "model_slug": "dots-studio/dots-3-note-preview:free",
+      "provider_id": "atlas-cloud/fp8",
+      "provider_name": "AtlasCloud",
+      "endpoint_id": "AtlasCloud | dots-studio/dots-3-note-preview-20260813:free",
+      "context_tokens": 512000,
+      "pricing": {
+        "input_per_million": 0.0,
+        "output_per_million": 0.0,
+        "raw": {
+          "prompt": "0",
+          "completion": "0",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 100.0,
+        "uptime_30m": 100.0,
+        "uptime_1d": 99.97768740281369
+      },
+      "quantization": "fp8",
+      "capabilities": {
+        "supported_parameters": [
+          "include_reasoning",
+          "max_tokens",
+          "reasoning",
+          "response_format",
+          "structured_outputs",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T05:59:16Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "dots-studio/dots-3-note-preview:free"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "google/gemini-3.7-flash",
+      "model_slug": "google/gemini-3.7-flash",
+      "provider_id": "google-vertex/global",
+      "provider_name": "Google",
+      "endpoint_id": "Google | google/gemini-3.7-flash-20260813",
+      "context_tokens": 1048576,
+      "pricing": {
+        "input_per_million": 0.375,
+        "output_per_million": 1.875,
+        "raw": {
+          "prompt": "0.000000375",
+          "completion": "0.000001875",
+          "image": "0.000000375",
+          "audio": "0.000000375",
+          "input_audio_cache": "0.0000000375",
+          "web_search": "0.014",
+          "internal_reasoning": "0.000001875",
+          "input_cache_read": "0.0000000375",
+          "input_cache_write": "0.0000000208333333333333",
+          "discount": 0.75
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 99.89090548447882,
+        "uptime_30m": 99.82136424785527,
+        "uptime_1d": 99.60323766532098
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "include_reasoning",
+          "max_tokens",
+          "reasoning",
+          "reasoning_effort",
+          "response_format",
+          "seed",
+          "stop",
+          "structured_outputs",
+          "tool_choice",
+          "tools"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T05:59:16Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "google/gemini-3.7-flash"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "google/gemini-3.7-flash",
+      "model_slug": "google/gemini-3.7-flash",
+      "provider_id": "google-vertex/global/flex",
+      "provider_name": "Google",
+      "endpoint_id": "Google | google/gemini-3.7-flash-20260813",
+      "context_tokens": 1048576,
+      "pricing": {
+        "input_per_million": 0.1875,
+        "output_per_million": 0.9375,
+        "raw": {
+          "prompt": "0.0000001875",
+          "completion": "0.0000009375",
+          "image": "0.0000001875",
+          "audio": "0.0000001875",
+          "input_audio_cache": "0.00000001875",
+          "web_search": "0.014",
+          "internal_reasoning": "0.0000009375",
+          "input_cache_read": "0.00000001875",
+          "input_cache_write": "0.0000000104166666666667",
+          "discount": 0.75
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 99.89090548447882,
+        "uptime_30m": 99.82136424785527,
+        "uptime_1d": 99.60323766532098
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "include_reasoning",
+          "max_tokens",
+          "reasoning",
+          "reasoning_effort",
+          "response_format",
+          "seed",
+          "stop",
+          "structured_outputs",
+          "tool_choice",
+          "tools"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T05:59:16Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "google/gemini-3.7-flash"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "google/gemini-3.7-flash",
+      "model_slug": "google/gemini-3.7-flash",
+      "provider_id": "google-vertex/global/priority",
+      "provider_name": "Google",
+      "endpoint_id": "Google | google/gemini-3.7-flash-20260813",
+      "context_tokens": 1048576,
+      "pricing": {
+        "input_per_million": 0.675,
+        "output_per_million": 3.375,
+        "raw": {
+          "prompt": "0.000000675",
+          "completion": "0.000003375",
+          "image": "0.000000675",
+          "audio": "0.000000675",
+          "input_audio_cache": "0.0000000675",
+          "web_search": "0.014",
+          "internal_reasoning": "0.000003375",
+          "input_cache_read": "0.0000000675",
+          "input_cache_write": "0.0000000375",
+          "discount": 0.75
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 99.89090548447882,
+        "uptime_30m": 99.82136424785527,
+        "uptime_1d": 99.60323766532098
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "include_reasoning",
+          "max_tokens",
+          "reasoning",
+          "reasoning_effort",
+          "response_format",
+          "seed",
+          "stop",
+          "structured_outputs",
+          "tool_choice",
+          "tools"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T05:59:16Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "google/gemini-3.7-flash"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "google/gemini-3.7-flash",
+      "model_slug": "google/gemini-3.7-flash",
+      "provider_id": "google-ai-studio",
+      "provider_name": "Google AI Studio",
+      "endpoint_id": "Google AI Studio | google/gemini-3.7-flash-20260813",
+      "context_tokens": 1048576,
+      "pricing": {
+        "input_per_million": 0.75,
+        "output_per_million": 3.75,
+        "raw": {
+          "prompt": "0.00000075",
+          "completion": "0.00000375",
+          "image": "0.00000075",
+          "audio": "0.00000075",
+          "input_audio_cache": "0.000000075",
+          "web_search": "0.014",
+          "internal_reasoning": "0.00000375",
+          "input_cache_read": "0.000000075",
+          "input_cache_write": "0.0000000416666666666667",
+          "discount": 0.5
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 100.0,
+        "uptime_30m": 99.879427279578,
+        "uptime_1d": 99.78422430537961
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "include_reasoning",
+          "max_tokens",
+          "reasoning",
+          "reasoning_effort",
+          "response_format",
+          "seed",
+          "structured_outputs",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T05:59:16Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "google/gemini-3.7-flash"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "google/gemini-3.7-flash",
+      "model_slug": "google/gemini-3.7-flash",
+      "provider_id": "google-ai-studio/flex",
+      "provider_name": "Google AI Studio",
+      "endpoint_id": "Google AI Studio | google/gemini-3.7-flash-20260813",
+      "context_tokens": 1048576,
+      "pricing": {
+        "input_per_million": 0.375,
+        "output_per_million": 1.875,
+        "raw": {
+          "prompt": "0.000000375",
+          "completion": "0.000001875",
+          "image": "0.000000375",
+          "audio": "0.000000375",
+          "input_audio_cache": "0.0000000375",
+          "web_search": "0.014",
+          "internal_reasoning": "0.000001875",
+          "input_cache_read": "0.0000000375",
+          "input_cache_write": "0.0000000208333333333333",
+          "discount": 0.5
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 100.0,
+        "uptime_30m": 99.879427279578,
+        "uptime_1d": 99.78422430537961
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "include_reasoning",
+          "max_tokens",
+          "reasoning",
+          "reasoning_effort",
+          "response_format",
+          "seed",
+          "structured_outputs",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T05:59:16Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "google/gemini-3.7-flash"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "google/gemini-3.7-flash",
+      "model_slug": "google/gemini-3.7-flash",
+      "provider_id": "google-ai-studio/priority",
+      "provider_name": "Google AI Studio",
+      "endpoint_id": "Google AI Studio | google/gemini-3.7-flash-20260813",
+      "context_tokens": 1048576,
+      "pricing": {
+        "input_per_million": 1.35,
+        "output_per_million": 6.75,
+        "raw": {
+          "prompt": "0.00000135",
+          "completion": "0.00000675",
+          "image": "0.00000135",
+          "audio": "0.00000135",
+          "input_audio_cache": "0.000000135",
+          "web_search": "0.014",
+          "internal_reasoning": "0.00000675",
+          "input_cache_read": "0.000000135",
+          "input_cache_write": "0.000000075",
+          "discount": 0.5
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 100.0,
+        "uptime_30m": 99.879427279578,
+        "uptime_1d": 99.78422430537961
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "include_reasoning",
+          "max_tokens",
+          "reasoning",
+          "reasoning_effort",
+          "response_format",
+          "seed",
+          "structured_outputs",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T05:59:16Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "google/gemini-3.7-flash"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "google/gemini-3.7-flash:batch",
+      "model_slug": "google/gemini-3.7-flash:batch",
+      "provider_id": "google-vertex/global",
+      "provider_name": "Google",
+      "endpoint_id": "Google | google/gemini-3.7-flash-20260813:batch",
+      "context_tokens": 1048576,
+      "pricing": {
+        "input_per_million": 0.1875,
+        "output_per_million": 0.9375,
+        "raw": {
+          "prompt": "0.0000001875",
+          "completion": "0.0000009375",
+          "image": "0.0000001875",
+          "audio": "0.0000001875",
+          "input_audio_cache": "0.00000001875",
+          "web_search": "0.014",
+          "internal_reasoning": "0.0000009375",
+          "input_cache_read": "0.00000001875",
+          "input_cache_write": "0.0000000208333333333333",
+          "discount": 0.75
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": null,
+        "uptime_30m": null,
+        "uptime_1d": null
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "include_reasoning",
+          "max_tokens",
+          "reasoning",
+          "reasoning_effort",
+          "response_format",
+          "seed",
+          "stop",
+          "structured_outputs",
+          "tool_choice",
+          "tools"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T05:59:16Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "google/gemini-3.7-flash:batch"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "bytedance-seed/seed-2-1-turbo",
+      "model_slug": "bytedance-seed/seed-2-1-turbo",
+      "provider_id": "seed/fp8",
+      "provider_name": "Seed",
+      "endpoint_id": "Seed | bytedance-seed/seed-2-1-turbo-20260810",
+      "context_tokens": 262144,
+      "pricing": {
+        "input_per_million": 0.5,
+        "output_per_million": 2.5,
+        "raw": {
+          "prompt": "0.0000005",
+          "completion": "0.0000025",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": null,
+        "uptime_30m": null,
+        "uptime_1d": 100.0
+      },
+      "quantization": "fp8",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "include_reasoning",
+          "max_tokens",
+          "reasoning",
+          "response_format",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T05:59:16Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "bytedance-seed/seed-2-1-turbo"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "qwen/qwen3.8-2.4t-a95b",
+      "model_slug": "qwen/qwen3.8-2.4t-a95b",
+      "provider_id": "deepinfra/fp4",
+      "provider_name": "DeepInfra",
+      "endpoint_id": "DeepInfra | qwen/qwen3.8-2.4t-a95b-20260812",
+      "context_tokens": 262144,
+      "pricing": {
+        "input_per_million": 2.0,
+        "output_per_million": 6.0,
+        "raw": {
+          "prompt": "0.000002",
+          "completion": "0.000006",
+          "input_cache_read": "0.0000002",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": null,
+        "uptime_30m": 98.62068965517241,
+        "uptime_1d": 99.04468206348675
+      },
+      "quantization": "fp4",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "include_reasoning",
+          "logit_bias",
+          "max_tokens",
+          "min_p",
+          "presence_penalty",
+          "reasoning",
+          "reasoning_effort",
+          "repetition_penalty",
+          "response_format",
+          "seed",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_k",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T05:59:16Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "qwen/qwen3.8-2.4t-a95b"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "qwen/qwen3.8-2.4t-a95b",
+      "model_slug": "qwen/qwen3.8-2.4t-a95b",
+      "provider_id": "siliconflow/fp8",
+      "provider_name": "SiliconFlow",
+      "endpoint_id": "SiliconFlow | qwen/qwen3.8-2.4t-a95b-20260812",
+      "context_tokens": 1048576,
+      "pricing": {
+        "input_per_million": 2.0,
+        "output_per_million": 6.0,
+        "raw": {
+          "prompt": "0.000002",
+          "completion": "0.000006",
+          "input_cache_read": "0.00000025",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 100.0,
+        "uptime_30m": 100.0,
+        "uptime_1d": 99.9935258319306
+      },
+      "quantization": "fp8",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "include_reasoning",
+          "max_tokens",
+          "reasoning",
+          "reasoning_effort",
+          "response_format",
+          "structured_outputs",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_k",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T05:59:16Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "qwen/qwen3.8-2.4t-a95b"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "qwen/qwen3.8-2.4t-a95b",
+      "model_slug": "qwen/qwen3.8-2.4t-a95b",
+      "provider_id": "modal/nvfp4",
+      "provider_name": "Modal",
+      "endpoint_id": "Modal | qwen/qwen3.8-2.4t-a95b-20260812",
+      "context_tokens": 1000000,
+      "pricing": {
+        "input_per_million": 2.0,
+        "output_per_million": 6.0,
+        "raw": {
+          "prompt": "0.000002",
+          "completion": "0.000006",
+          "input_cache_read": "0.00000025",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 100.0,
+        "uptime_30m": 100.0,
+        "uptime_1d": 99.04500343299419
+      },
+      "quantization": "nvfp4",
+      "capabilities": {
+        "supported_parameters": [
+          "include_reasoning",
+          "max_tokens",
+          "reasoning",
+          "reasoning_effort",
+          "response_format",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T05:59:16Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "qwen/qwen3.8-2.4t-a95b"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "qwen/qwen3.8-2.4t-a95b",
+      "model_slug": "qwen/qwen3.8-2.4t-a95b",
+      "provider_id": "alibaba",
+      "provider_name": "Alibaba",
+      "endpoint_id": "Alibaba | qwen/qwen3.8-2.4t-a95b-20260812",
+      "context_tokens": 1000000,
+      "pricing": {
+        "input_per_million": 2.0,
+        "output_per_million": 6.0,
+        "raw": {
+          "prompt": "0.000002",
+          "completion": "0.000006",
+          "input_cache_read": "0.00000025",
+          "input_cache_write": "0.0000025",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": null,
+        "uptime_30m": null,
+        "uptime_1d": 99.98732733493854
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "include_reasoning",
+          "logprobs",
+          "max_tokens",
+          "presence_penalty",
+          "reasoning",
+          "reasoning_effort",
+          "seed",
+          "stop",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_k",
+          "top_logprobs",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T05:59:16Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "qwen/qwen3.8-2.4t-a95b"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "qwen/qwen3.8-2.4t-a95b",
+      "model_slug": "qwen/qwen3.8-2.4t-a95b",
+      "provider_id": "together",
+      "provider_name": "Together",
+      "endpoint_id": "Together | qwen/qwen3.8-2.4t-a95b-20260812",
+      "context_tokens": 1010000,
+      "pricing": {
+        "input_per_million": 2.5,
+        "output_per_million": 6.25,
+        "raw": {
+          "prompt": "0.0000025",
+          "completion": "0.00000625",
+          "input_cache_read": "0.0000005",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": null,
+        "uptime_30m": null,
+        "uptime_1d": 99.89509965532744
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "include_reasoning",
+          "logit_bias",
+          "logprobs",
+          "max_tokens",
+          "min_p",
+          "presence_penalty",
+          "reasoning",
+          "reasoning_effort",
+          "repetition_penalty",
+          "response_format",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_k",
+          "top_logprobs",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T05:59:16Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "qwen/qwen3.8-2.4t-a95b"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "qwen/qwen3.8-2.4t-a95b",
+      "model_slug": "qwen/qwen3.8-2.4t-a95b",
+      "provider_id": "venice",
+      "provider_name": "Venice",
+      "endpoint_id": "Venice | qwen/qwen3.8-2.4t-a95b-20260812",
+      "context_tokens": 262144,
+      "pricing": {
+        "input_per_million": 2.5,
+        "output_per_million": 7.5,
+        "raw": {
+          "prompt": "0.0000025",
+          "completion": "0.0000075",
+          "input_cache_read": "0.0000003125",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": null,
+        "uptime_30m": null,
+        "uptime_1d": 99.51443215538171
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "include_reasoning",
+          "max_tokens",
+          "presence_penalty",
+          "reasoning",
+          "reasoning_effort",
+          "stop",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_k",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T05:59:16Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "qwen/qwen3.8-2.4t-a95b"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "bytedance-seed/seed-2.0-code",
+      "model_slug": "bytedance-seed/seed-2.0-code",
+      "provider_id": "seed/fp8",
+      "provider_name": "Seed",
+      "endpoint_id": "Seed | bytedance-seed/seed-2.0-code-20260730",
+      "context_tokens": 262144,
+      "pricing": {
+        "input_per_million": 0.5,
+        "output_per_million": 3.0,
+        "raw": {
+          "prompt": "0.0000005",
+          "completion": "0.000003",
+          "discount": 0,
+          "overrides": [
+            {
+              "min_prompt_tokens": 128000,
+              "prompt": "0.000001",
+              "completion": "0.000006"
+            }
+          ]
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": null,
+        "uptime_30m": null,
+        "uptime_1d": 100.0
+      },
+      "quantization": "fp8",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "include_reasoning",
+          "max_tokens",
+          "reasoning",
+          "reasoning_effort",
+          "response_format",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T05:59:16Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "bytedance-seed/seed-2.0-code"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "deepseek/deepseek-v4-pro-0813",
+      "model_slug": "deepseek/deepseek-v4-pro-0813",
+      "provider_id": "deepseek",
+      "provider_name": "DeepSeek",
+      "endpoint_id": "DeepSeek | deepseek/deepseek-v4-pro-20260813",
+      "context_tokens": 1048576,
+      "pricing": {
+        "input_per_million": 0.66,
+        "output_per_million": 1.9800000000000002,
+        "raw": {
+          "prompt": "0.00000066",
+          "completion": "0.00000198",
+          "input_cache_read": "0.000000022",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 100.0,
+        "uptime_30m": 100.0,
+        "uptime_1d": 99.98446933116469
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "include_reasoning",
+          "logprobs",
+          "max_tokens",
+          "presence_penalty",
+          "reasoning",
+          "reasoning_effort",
+          "response_format",
+          "stop",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_logprobs",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T05:59:16Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "deepseek/deepseek-v4-pro-0813"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "deepseek/deepseek-v4-pro-0813",
+      "model_slug": "deepseek/deepseek-v4-pro-0813",
+      "provider_id": "gmicloud/fp8",
+      "provider_name": "GMICloud",
+      "endpoint_id": "GMICloud | deepseek/deepseek-v4-pro-20260813",
+      "context_tokens": 1048575,
+      "pricing": {
+        "input_per_million": 1.122,
+        "output_per_million": 3.366,
+        "raw": {
+          "prompt": "0.000001122",
+          "completion": "0.000003366",
+          "input_cache_read": "0.0000000374",
+          "discount": 0.15
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 100.0,
+        "uptime_30m": 99.9896351575456,
+        "uptime_1d": 99.84196320105751
+      },
+      "quantization": "fp8",
+      "capabilities": {
+        "supported_parameters": [
+          "include_reasoning",
+          "logprobs",
+          "max_tokens",
+          "reasoning",
+          "reasoning_effort",
+          "response_format",
+          "seed",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_logprobs",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T05:59:16Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "deepseek/deepseek-v4-pro-0813"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "deepseek/deepseek-v4-pro-0813",
+      "model_slug": "deepseek/deepseek-v4-pro-0813",
+      "provider_id": "alibaba",
+      "provider_name": "Alibaba",
+      "endpoint_id": "Alibaba | deepseek/deepseek-v4-pro-20260813",
+      "context_tokens": 1000000,
+      "pricing": {
+        "input_per_million": 1.1616,
+        "output_per_million": 3.4848,
+        "raw": {
+          "prompt": "0.0000011616",
+          "completion": "0.0000034848",
+          "input_cache_read": "0.00000011616",
+          "discount": 0,
+          "overrides": [
+            {
+              "utc_start": 0,
+              "utc_end": 1400,
+              "prompt": "0.0000011616",
+              "completion": "0.0000034848",
+              "input_cache_read": "0.00000011616"
+            },
+            {
+              "utc_start": 1400,
+              "utc_end": 0,
+              "prompt": "0.000000627",
+              "completion": "0.000001881",
+              "input_cache_read": "0.0000000627"
+            }
+          ]
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 100.0,
+        "uptime_30m": 99.8991935483871,
+        "uptime_1d": 99.98296303753553
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "include_reasoning",
+          "max_tokens",
+          "presence_penalty",
+          "reasoning",
+          "reasoning_effort",
+          "response_format",
+          "seed",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_k",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T05:59:16Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "deepseek/deepseek-v4-pro-0813"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "deepseek/deepseek-v4-pro-0813",
+      "model_slug": "deepseek/deepseek-v4-pro-0813",
+      "provider_id": "deepinfra/fp8",
+      "provider_name": "DeepInfra",
+      "endpoint_id": "DeepInfra | deepseek/deepseek-v4-pro-20260813",
+      "context_tokens": 1048576,
+      "pricing": {
+        "input_per_million": 1.3,
+        "output_per_million": 2.6,
+        "raw": {
+          "prompt": "0.0000013",
+          "completion": "0.0000026",
+          "input_cache_read": "0.0000001",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 100.0,
+        "uptime_30m": 100.0,
+        "uptime_1d": 94.04511278195488
+      },
+      "quantization": "fp8",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "include_reasoning",
+          "logit_bias",
+          "max_tokens",
+          "min_p",
+          "presence_penalty",
+          "reasoning",
+          "reasoning_effort",
+          "repetition_penalty",
+          "seed",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_k",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T05:59:16Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "deepseek/deepseek-v4-pro-0813"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "deepseek/deepseek-v4-pro-0813",
+      "model_slug": "deepseek/deepseek-v4-pro-0813",
+      "provider_id": "sail-research/fp4",
+      "provider_name": "Sail Research",
+      "endpoint_id": "Sail Research | deepseek/deepseek-v4-pro-20260813",
+      "context_tokens": 1048576,
+      "pricing": {
+        "input_per_million": 1.32,
+        "output_per_million": 3.9600000000000004,
+        "raw": {
+          "prompt": "0.00000132",
+          "completion": "0.00000396",
+          "input_cache_read": "0.000000044",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 100.0,
+        "uptime_30m": 100.0,
+        "uptime_1d": 99.79827321875251
+      },
+      "quantization": "fp4",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "include_reasoning",
+          "max_tokens",
+          "presence_penalty",
+          "reasoning",
+          "reasoning_effort",
+          "response_format",
+          "seed",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_k",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T05:59:16Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "deepseek/deepseek-v4-pro-0813"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "deepseek/deepseek-v4-pro-0813",
+      "model_slug": "deepseek/deepseek-v4-pro-0813",
+      "provider_id": "streamlake",
+      "provider_name": "StreamLake",
+      "endpoint_id": "StreamLake | deepseek/deepseek-v4-pro-20260813",
+      "context_tokens": 1024000,
+      "pricing": {
+        "input_per_million": 1.32,
+        "output_per_million": 3.9600000000000004,
+        "raw": {
+          "prompt": "0.00000132",
+          "completion": "0.00000396",
+          "input_cache_read": "0.000000044",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": null,
+        "uptime_30m": 100.0,
+        "uptime_1d": 99.44110060189166
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "include_reasoning",
+          "logprobs",
+          "max_tokens",
+          "reasoning",
+          "reasoning_effort",
+          "response_format",
+          "stop",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_logprobs",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T05:59:16Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "deepseek/deepseek-v4-pro-0813"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "deepseek/deepseek-v4-pro-0813",
+      "model_slug": "deepseek/deepseek-v4-pro-0813",
+      "provider_id": "together",
+      "provider_name": "Together",
+      "endpoint_id": "Together | deepseek/deepseek-v4-pro-20260813",
+      "context_tokens": 1048576,
+      "pricing": {
+        "input_per_million": 1.32,
+        "output_per_million": 3.9600000000000004,
+        "raw": {
+          "prompt": "0.00000132",
+          "completion": "0.00000396",
+          "input_cache_read": "0.00000013",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 100.0,
+        "uptime_30m": 100.0,
+        "uptime_1d": 99.2042469352014
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "include_reasoning",
+          "logit_bias",
+          "max_tokens",
+          "min_p",
+          "presence_penalty",
+          "reasoning",
+          "reasoning_effort",
+          "repetition_penalty",
+          "response_format",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_k",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T05:59:16Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "deepseek/deepseek-v4-pro-0813"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "deepseek/deepseek-v4-pro-0813",
+      "model_slug": "deepseek/deepseek-v4-pro-0813",
+      "provider_id": "novita/fp8",
+      "provider_name": "Novita",
+      "endpoint_id": "Novita | deepseek/deepseek-v4-pro-20260813",
+      "context_tokens": 1048576,
+      "pricing": {
+        "input_per_million": 1.32,
+        "output_per_million": 3.9600000000000004,
+        "raw": {
+          "prompt": "0.00000132",
+          "completion": "0.00000396",
+          "input_cache_read": "0.000000132",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 100.0,
+        "uptime_30m": 100.0,
+        "uptime_1d": 99.87593644128452
+      },
+      "quantization": "fp8",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "include_reasoning",
+          "max_tokens",
+          "presence_penalty",
+          "reasoning",
+          "reasoning_effort",
+          "repetition_penalty",
+          "response_format",
+          "seed",
+          "stop",
+          "temperature",
+          "top_k",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T05:59:16Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "deepseek/deepseek-v4-pro-0813"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "deepseek/deepseek-v4-pro-0813",
+      "model_slug": "deepseek/deepseek-v4-pro-0813",
+      "provider_id": "parasail/fp8",
+      "provider_name": "Parasail",
+      "endpoint_id": "Parasail | deepseek/deepseek-v4-pro-20260813",
+      "context_tokens": 1048576,
+      "pricing": {
+        "input_per_million": 1.32,
+        "output_per_million": 3.9600000000000004,
+        "raw": {
+          "prompt": "0.00000132",
+          "completion": "0.00000396",
+          "input_cache_read": "0.000000044",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 100.0,
+        "uptime_30m": 99.31428571428572,
+        "uptime_1d": 99.34757505773672
+      },
+      "quantization": "fp8",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "include_reasoning",
+          "logit_bias",
+          "logprobs",
+          "max_tokens",
+          "presence_penalty",
+          "reasoning",
+          "reasoning_effort",
+          "repetition_penalty",
+          "response_format",
+          "seed",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_k",
+          "top_logprobs",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T05:59:16Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "deepseek/deepseek-v4-pro-0813"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "deepseek/deepseek-v4-pro-0813",
+      "model_slug": "deepseek/deepseek-v4-pro-0813",
+      "provider_id": "siliconflow/fp8",
+      "provider_name": "SiliconFlow",
+      "endpoint_id": "SiliconFlow | deepseek/deepseek-v4-pro-20260813",
+      "context_tokens": 1048576,
+      "pricing": {
+        "input_per_million": 1.32,
+        "output_per_million": 3.9600000000000004,
+        "raw": {
+          "prompt": "0.00000132",
+          "completion": "0.00000396",
+          "input_cache_read": "0.00000044",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": null,
+        "uptime_30m": 100.0,
+        "uptime_1d": 98.93796928904823
+      },
+      "quantization": "fp8",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "include_reasoning",
+          "max_tokens",
+          "reasoning",
+          "reasoning_effort",
+          "response_format",
+          "temperature",
+          "top_k",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T05:59:16Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "deepseek/deepseek-v4-pro-0813"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "deepseek/deepseek-v4-pro-0813",
+      "model_slug": "deepseek/deepseek-v4-pro-0813",
+      "provider_id": "baseten/fp4",
+      "provider_name": "BaseTen",
+      "endpoint_id": "BaseTen | deepseek/deepseek-v4-pro-20260813",
+      "context_tokens": 1048576,
+      "pricing": {
+        "input_per_million": 1.32,
+        "output_per_million": 3.9600000000000004,
+        "raw": {
+          "prompt": "0.00000132",
+          "completion": "0.00000396",
+          "input_cache_read": "0.000000132",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": null,
+        "uptime_30m": 98.4126984126984,
+        "uptime_1d": 99.58009470204591
+      },
+      "quantization": "fp4",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "include_reasoning",
+          "max_tokens",
+          "presence_penalty",
+          "reasoning",
+          "reasoning_effort",
+          "stop",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T05:59:16Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "deepseek/deepseek-v4-pro-0813"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "deepseek/deepseek-v4-pro-0813",
+      "model_slug": "deepseek/deepseek-v4-pro-0813",
+      "provider_id": "digitalocean",
+      "provider_name": "DigitalOcean",
+      "endpoint_id": "DigitalOcean | deepseek/deepseek-v4-pro-20260813",
+      "context_tokens": 1048576,
+      "pricing": {
+        "input_per_million": 1.32,
+        "output_per_million": 3.9600000000000004,
+        "raw": {
+          "prompt": "0.00000132",
+          "completion": "0.00000396",
+          "input_cache_read": "0.000000044",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 100.0,
+        "uptime_30m": 100.0,
+        "uptime_1d": 99.92826827664535
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "include_reasoning",
+          "logprobs",
+          "max_tokens",
+          "reasoning",
+          "reasoning_effort",
+          "response_format",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_logprobs",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T05:59:16Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "deepseek/deepseek-v4-pro-0813"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "deepseek/deepseek-v4-pro-0813",
+      "model_slug": "deepseek/deepseek-v4-pro-0813",
+      "provider_id": "cloudflare",
+      "provider_name": "Cloudflare",
+      "endpoint_id": "Cloudflare | deepseek/deepseek-v4-pro-20260813",
+      "context_tokens": 1048576,
+      "pricing": {
+        "input_per_million": 1.32,
+        "output_per_million": 3.9600000000000004,
+        "raw": {
+          "prompt": "0.00000132",
+          "completion": "0.00000396",
+          "input_cache_read": "0.000000044",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 100.0,
+        "uptime_30m": 100.0,
+        "uptime_1d": 98.09113131368618
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "include_reasoning",
+          "logit_bias",
+          "logprobs",
+          "max_tokens",
+          "min_p",
+          "presence_penalty",
+          "reasoning",
+          "reasoning_effort",
+          "repetition_penalty",
+          "response_format",
+          "seed",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_k",
+          "top_logprobs",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T05:59:16Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "deepseek/deepseek-v4-pro-0813"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "deepseek/deepseek-v4-pro-0813",
+      "model_slug": "deepseek/deepseek-v4-pro-0813",
+      "provider_id": "fireworks",
+      "provider_name": "Fireworks",
+      "endpoint_id": "Fireworks | deepseek/deepseek-v4-pro-20260813",
+      "context_tokens": 1048576,
+      "pricing": {
+        "input_per_million": 1.32,
+        "output_per_million": 3.9600000000000004,
+        "raw": {
+          "prompt": "0.00000132",
+          "completion": "0.00000396",
+          "input_cache_read": "0.000000044",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": null,
+        "uptime_30m": 100.0,
+        "uptime_1d": 99.8664362036455
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "include_reasoning",
+          "logit_bias",
+          "logprobs",
+          "max_tokens",
+          "presence_penalty",
+          "reasoning",
+          "reasoning_effort",
+          "repetition_penalty",
+          "response_format",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_k",
+          "top_logprobs",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T05:59:16Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "deepseek/deepseek-v4-pro-0813"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "deepseek/deepseek-v4-pro-0813",
+      "model_slug": "deepseek/deepseek-v4-pro-0813",
+      "provider_id": "phala",
+      "provider_name": "Phala",
+      "endpoint_id": "Phala | deepseek/deepseek-v4-pro-20260813",
+      "context_tokens": 1048576,
+      "pricing": {
+        "input_per_million": 1.4500000000000002,
+        "output_per_million": 4.359999999999999,
+        "raw": {
+          "prompt": "0.00000145",
+          "completion": "0.00000436",
+          "input_cache_read": "0.00000015",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 100.0,
+        "uptime_30m": 100.0,
+        "uptime_1d": 99.95686866508518
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "include_reasoning",
+          "max_tokens",
+          "min_p",
+          "presence_penalty",
+          "reasoning",
+          "reasoning_effort",
+          "repetition_penalty",
+          "response_format",
+          "seed",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_k",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T05:59:16Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "deepseek/deepseek-v4-pro-0813"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "x-ai/grok-4.6",
+      "model_slug": "x-ai/grok-4.6",
+      "provider_id": "xai/zdr",
+      "provider_name": "xAI",
+      "endpoint_id": "xAI | x-ai/grok-4.6-20260810",
+      "context_tokens": 500000,
+      "pricing": {
+        "input_per_million": 2.0,
+        "output_per_million": 6.0,
+        "raw": {
+          "prompt": "0.000002",
+          "completion": "0.000006",
+          "web_search": "0.005",
+          "input_cache_read": "0.0000005",
+          "discount": 0,
+          "overrides": [
+            {
+              "min_prompt_tokens": 200000,
+              "prompt": "0.000004",
+              "completion": "0.000012",
+              "input_cache_read": "0.000001"
+            }
+          ]
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 100.0,
+        "uptime_30m": 99.90403071017275,
+        "uptime_1d": 99.94906337428536
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "include_reasoning",
+          "logprobs",
+          "max_tokens",
+          "reasoning",
+          "reasoning_effort",
+          "response_format",
+          "seed",
+          "structured_outputs",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_logprobs",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T05:59:16Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "x-ai/grok-4.6"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "x-ai/grok-4.6",
+      "model_slug": "x-ai/grok-4.6",
+      "provider_id": "xai/zdr/priority",
+      "provider_name": "xAI",
+      "endpoint_id": "xAI | x-ai/grok-4.6-20260810",
+      "context_tokens": 500000,
+      "pricing": {
+        "input_per_million": 4.0,
+        "output_per_million": 12.0,
+        "raw": {
+          "prompt": "0.000004",
+          "completion": "0.000012",
+          "web_search": "0.005",
+          "input_cache_read": "0.000001",
+          "discount": 0,
+          "overrides": [
+            {
+              "min_prompt_tokens": 200000,
+              "prompt": "0.000008",
+              "completion": "0.000024",
+              "input_cache_read": "0.000002"
+            }
+          ]
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 100.0,
+        "uptime_30m": 99.90403071017275,
+        "uptime_1d": 99.94906337428536
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "include_reasoning",
+          "logprobs",
+          "max_tokens",
+          "reasoning",
+          "reasoning_effort",
+          "response_format",
+          "seed",
+          "structured_outputs",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_logprobs",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T05:59:16Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "x-ai/grok-4.6"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "x-ai/grok-4.6",
+      "model_slug": "x-ai/grok-4.6",
+      "provider_id": "xai",
+      "provider_name": "xAI",
+      "endpoint_id": "xAI | x-ai/grok-4.6-20260810",
+      "context_tokens": 500000,
+      "pricing": {
+        "input_per_million": 2.0,
+        "output_per_million": 6.0,
+        "raw": {
+          "prompt": "0.000002",
+          "completion": "0.000006",
+          "web_search": "0.005",
+          "input_cache_read": "0.0000005",
+          "discount": 0,
+          "overrides": [
+            {
+              "min_prompt_tokens": 200000,
+              "prompt": "0.000004",
+              "completion": "0.000012",
+              "input_cache_read": "0.000001"
+            }
+          ]
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 99.97520456236053,
+        "uptime_30m": 99.93451688009313,
+        "uptime_1d": 99.91695594660209
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "include_reasoning",
+          "logprobs",
+          "max_tokens",
+          "reasoning",
+          "reasoning_effort",
+          "response_format",
+          "seed",
+          "structured_outputs",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_logprobs",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T05:59:16Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "x-ai/grok-4.6"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "x-ai/grok-4.6",
+      "model_slug": "x-ai/grok-4.6",
+      "provider_id": "xai/priority",
+      "provider_name": "xAI",
+      "endpoint_id": "xAI | x-ai/grok-4.6-20260810",
+      "context_tokens": 500000,
+      "pricing": {
+        "input_per_million": 4.0,
+        "output_per_million": 12.0,
+        "raw": {
+          "prompt": "0.000004",
+          "completion": "0.000012",
+          "web_search": "0.005",
+          "input_cache_read": "0.000001",
+          "discount": 0,
+          "overrides": [
+            {
+              "min_prompt_tokens": 200000,
+              "prompt": "0.000008",
+              "completion": "0.000024",
+              "input_cache_read": "0.000002"
+            }
+          ]
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 99.97520456236053,
+        "uptime_30m": 99.93451688009313,
+        "uptime_1d": 99.91695594660209
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "include_reasoning",
+          "logprobs",
+          "max_tokens",
+          "reasoning",
+          "reasoning_effort",
+          "response_format",
+          "seed",
+          "structured_outputs",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_logprobs",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T05:59:16Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "x-ai/grok-4.6"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "liquid/lfm-2.5-2.6b:free",
+      "model_slug": "liquid/lfm-2.5-2.6b:free",
+      "provider_id": "liquid/fp8",
+      "provider_name": "Liquid",
+      "endpoint_id": "Liquid | liquid/lfm-2.5-2.6b-20260811:free",
+      "context_tokens": 65536,
+      "pricing": {
+        "input_per_million": 0.0,
+        "output_per_million": 0.0,
+        "raw": {
+          "prompt": "0",
+          "completion": "0",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 99.52681388012618,
+        "uptime_30m": 98.36874051593323,
+        "uptime_1d": 96.75007373514336
+      },
+      "quantization": "fp8",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "include_reasoning",
+          "logprobs",
+          "max_completion_tokens",
+          "max_tokens",
+          "min_p",
+          "presence_penalty",
+          "reasoning",
+          "repetition_penalty",
+          "response_format",
+          "seed",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_k",
+          "top_logprobs",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T05:59:16Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "liquid/lfm-2.5-2.6b:free"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "nvidia/nemotron-3.5-lightning",
+      "model_slug": "nvidia/nemotron-3.5-lightning",
+      "provider_id": "deepinfra/bf16",
+      "provider_name": "DeepInfra",
+      "endpoint_id": "DeepInfra | nvidia/nemotron-3.5-lightning-20260807",
+      "context_tokens": 262144,
+      "pricing": {
+        "input_per_million": 0.08,
+        "output_per_million": 0.19999999999999998,
+        "raw": {
+          "prompt": "0.00000008",
+          "completion": "0.0000002",
+          "input_cache_read": "0.00000004",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 100.0,
+        "uptime_30m": 100.0,
+        "uptime_1d": 99.93855984271319
+      },
+      "quantization": "bf16",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "include_reasoning",
+          "logit_bias",
+          "max_tokens",
+          "min_p",
+          "presence_penalty",
+          "reasoning",
+          "repetition_penalty",
+          "response_format",
+          "seed",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_k",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T05:59:16Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "nvidia/nemotron-3.5-lightning"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "nvidia/nemotron-3.5-lightning",
+      "model_slug": "nvidia/nemotron-3.5-lightning",
+      "provider_id": "coreweave/bf16",
+      "provider_name": "CoreWeave",
+      "endpoint_id": "CoreWeave | nvidia/nemotron-3.5-lightning-20260807",
+      "context_tokens": 262144,
+      "pricing": {
+        "input_per_million": 0.09999999999999999,
+        "output_per_million": 0.25,
+        "raw": {
+          "prompt": "0.0000001",
+          "completion": "0.00000025",
+          "input_cache_read": "0.00000005",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 100.0,
+        "uptime_30m": 100.0,
+        "uptime_1d": 100.0
+      },
+      "quantization": "bf16",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "include_reasoning",
+          "logprobs",
+          "max_tokens",
+          "presence_penalty",
+          "reasoning",
+          "repetition_penalty",
+          "response_format",
+          "seed",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "top_k",
+          "top_logprobs",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T05:59:16Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "nvidia/nemotron-3.5-lightning"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "nvidia/nemotron-3.5-lightning:free",
+      "model_slug": "nvidia/nemotron-3.5-lightning:free",
+      "provider_id": "nvidia/nvfp4",
+      "provider_name": "Nvidia",
+      "endpoint_id": "Nvidia | nvidia/nemotron-3.5-lightning-20260807:free",
+      "context_tokens": 1000000,
+      "pricing": {
+        "input_per_million": 0.0,
+        "output_per_million": 0.0,
+        "raw": {
+          "prompt": "0",
+          "completion": "0",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 99.82682316721186,
+        "uptime_30m": 99.9477468959168,
+        "uptime_1d": 99.76815569164657
+      },
+      "quantization": "nvfp4",
+      "capabilities": {
+        "supported_parameters": [
+          "include_reasoning",
+          "max_tokens",
+          "reasoning",
+          "seed",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T05:59:16Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "nvidia/nemotron-3.5-lightning:free"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "sakana/sakana-namazu",
+      "model_slug": "sakana/sakana-namazu",
+      "provider_id": "sakana",
+      "provider_name": "Sakana AI",
+      "endpoint_id": "Sakana AI | sakana/namazu-20260811",
+      "context_tokens": 262144,
+      "pricing": {
+        "input_per_million": 0.95,
+        "output_per_million": 4.0,
+        "raw": {
+          "prompt": "0.00000095",
+          "completion": "0.000004",
+          "web_search": "0.007",
+          "input_cache_read": "0.00000015",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": null,
+        "uptime_30m": null,
+        "uptime_1d": 100.0
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "include_reasoning",
+          "reasoning",
+          "reasoning_effort",
+          "structured_outputs",
+          "tool_choice",
+          "tools",
+          "web_search_options"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T05:59:16Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "sakana/sakana-namazu"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "upstage/solar-pro4",
+      "model_slug": "upstage/solar-pro4",
+      "provider_id": "upstage",
+      "provider_name": "Upstage",
+      "endpoint_id": "Upstage | upstage/solar-pro4-20260810",
+      "context_tokens": 524288,
+      "pricing": {
+        "input_per_million": 0.03,
+        "output_per_million": 0.12,
+        "raw": {
+          "prompt": "0.00000003",
+          "completion": "0.00000012",
+          "input_cache_read": "0.000000006",
+          "discount": 0.9
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 100.0,
+        "uptime_30m": 100.0,
+        "uptime_1d": 99.99997912361347
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "include_reasoning",
+          "max_tokens",
+          "presence_penalty",
+          "reasoning",
+          "response_format",
+          "structured_outputs",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T05:59:16Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "upstage/solar-pro4"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "meta/muse-glimmer-30b",
+      "model_slug": "meta/muse-glimmer-30b",
+      "provider_id": "phala",
+      "provider_name": "Phala",
+      "endpoint_id": "Phala | meta/muse-glimmer-30b-20260810",
+      "context_tokens": 131072,
+      "pricing": {
+        "input_per_million": 0.3,
+        "output_per_million": 1.1,
+        "raw": {
+          "prompt": "0.0000003",
+          "completion": "0.0000011",
+          "input_cache_read": "0.00000004",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 100.0,
+        "uptime_30m": 99.86263736263736,
+        "uptime_1d": 99.98570049690774
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "include_reasoning",
+          "max_tokens",
+          "min_p",
+          "presence_penalty",
+          "reasoning",
+          "reasoning_effort",
+          "repetition_penalty",
+          "response_format",
+          "seed",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_k",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T05:59:16Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "meta/muse-glimmer-30b"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "meta/muse-glimmer-30b",
+      "model_slug": "meta/muse-glimmer-30b",
+      "provider_id": "parasail/bf16",
+      "provider_name": "Parasail",
+      "endpoint_id": "Parasail | meta/muse-glimmer-30b-20260810",
+      "context_tokens": 131072,
+      "pricing": {
+        "input_per_million": 0.3,
+        "output_per_million": 1.1,
+        "raw": {
+          "prompt": "0.0000003",
+          "completion": "0.0000011",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 100.0,
+        "uptime_30m": 100.0,
+        "uptime_1d": 99.91082245255082
+      },
+      "quantization": "bf16",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "include_reasoning",
+          "logit_bias",
+          "logprobs",
+          "max_tokens",
+          "presence_penalty",
+          "reasoning",
+          "reasoning_effort",
+          "repetition_penalty",
+          "response_format",
+          "seed",
+          "stop",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_k",
+          "top_logprobs",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T05:59:16Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "meta/muse-glimmer-30b"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "meta/muse-glimmer-30b",
+      "model_slug": "meta/muse-glimmer-30b",
+      "provider_id": "deepinfra/bf16",
+      "provider_name": "DeepInfra",
+      "endpoint_id": "DeepInfra | meta/muse-glimmer-30b-20260810",
+      "context_tokens": 131072,
+      "pricing": {
+        "input_per_million": 0.3,
+        "output_per_million": 1.2,
+        "raw": {
+          "prompt": "0.0000003",
+          "completion": "0.0000012",
+          "input_cache_read": "0.00000004",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 100.0,
+        "uptime_30m": 100.0,
+        "uptime_1d": 99.99212629424038
+      },
+      "quantization": "bf16",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "include_reasoning",
+          "logit_bias",
+          "max_tokens",
+          "min_p",
+          "presence_penalty",
+          "reasoning",
+          "reasoning_effort",
+          "repetition_penalty",
+          "response_format",
+          "seed",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_k",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T05:59:16Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "meta/muse-glimmer-30b"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "meta/muse-glimmer-30b",
+      "model_slug": "meta/muse-glimmer-30b",
+      "provider_id": "together",
+      "provider_name": "Together",
+      "endpoint_id": "Together | meta/muse-glimmer-30b-20260810",
+      "context_tokens": 131072,
+      "pricing": {
+        "input_per_million": 0.35,
+        "output_per_million": 1.5,
+        "raw": {
+          "prompt": "0.00000035",
+          "completion": "0.0000015",
+          "input_cache_read": "0.00000004",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 100.0,
+        "uptime_30m": 99.97222222222221,
+        "uptime_1d": 99.92390940256475
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "include_reasoning",
+          "logit_bias",
+          "max_tokens",
+          "min_p",
+          "presence_penalty",
+          "reasoning",
+          "reasoning_effort",
+          "repetition_penalty",
+          "response_format",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_k",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T05:59:16Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "meta/muse-glimmer-30b"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "meta/muse-glimmer-30b",
+      "model_slug": "meta/muse-glimmer-30b",
+      "provider_id": "fireworks",
+      "provider_name": "Fireworks",
+      "endpoint_id": "Fireworks | meta/muse-glimmer-30b-20260810",
+      "context_tokens": 131072,
+      "pricing": {
+        "input_per_million": 0.35,
+        "output_per_million": 1.5,
+        "raw": {
+          "prompt": "0.00000035",
+          "completion": "0.0000015",
+          "input_cache_read": "0.00000004",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "unavailable",
+        "uptime_5m": null,
+        "uptime_30m": 69.49152542372882,
+        "uptime_1d": 97.58530183727035
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "include_reasoning",
+          "logit_bias",
+          "logprobs",
+          "max_tokens",
+          "presence_penalty",
+          "reasoning",
+          "reasoning_effort",
+          "repetition_penalty",
+          "response_format",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_k",
+          "top_logprobs",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T05:59:16Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "meta/muse-glimmer-30b"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "meta/muse-spark-1.2",
+      "model_slug": "meta/muse-spark-1.2",
+      "provider_id": "meta",
+      "provider_name": "Meta",
+      "endpoint_id": "Meta | meta/muse-spark-1.2-20260805",
+      "context_tokens": 1048576,
+      "pricing": {
+        "input_per_million": 1.25,
+        "output_per_million": 4.25,
+        "raw": {
+          "prompt": "0.00000125",
+          "completion": "0.00000425",
+          "web_search": "0.0025",
+          "input_cache_read": "0.00000015",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 100.0,
+        "uptime_30m": 99.99105945462674,
+        "uptime_1d": 99.99778502157758
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "include_reasoning",
+          "max_tokens",
+          "reasoning",
+          "reasoning_effort",
+          "repetition_penalty",
+          "response_format",
+          "structured_outputs",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_k",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T05:59:16Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "meta/muse-spark-1.2"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "qwen/qwen3.8-max",
+      "model_slug": "qwen/qwen3.8-max",
+      "provider_id": "alibaba",
+      "provider_name": "Alibaba",
+      "endpoint_id": "Alibaba | qwen/qwen3.8-max-20260803",
+      "context_tokens": 1000000,
+      "pricing": {
+        "input_per_million": 2.0,
+        "output_per_million": 6.0,
+        "raw": {
+          "prompt": "0.000002",
+          "completion": "0.000006",
+          "input_cache_read": "0.00000025",
+          "input_cache_write": "0.0000025",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 100.0,
+        "uptime_30m": 100.0,
+        "uptime_1d": 100.0
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "include_reasoning",
+          "logprobs",
+          "max_tokens",
+          "presence_penalty",
+          "reasoning",
+          "reasoning_effort",
+          "response_format",
+          "seed",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_k",
+          "top_logprobs",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T05:59:16Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "qwen/qwen3.8-max"
+      }
+    }
+  ],
+  "response_headers": {
+    "content-type": "application/json"
+  }
+}

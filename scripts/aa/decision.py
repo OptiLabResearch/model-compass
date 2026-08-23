@@ -31,6 +31,7 @@ PROFILES: dict[str, dict[str, Any]] = {
     "premium": {"metric": "intelligence_index",
                  "weights": {"quality": 0.85, "cost": 0.05, "speed": 0.10}},
 }
+PROFILE_VERSION = "1.0"
 
 
 def _num(value: Any) -> float | None:
@@ -63,16 +64,19 @@ def _sources(model: dict) -> list[str]:
 class Profile:
     name: str
     constraints: dict[str, Any] = field(default_factory=dict)
+    version: str = PROFILE_VERSION
 
     @classmethod
     def from_dict(cls, name: str, values: dict[str, Any]) -> "Profile":
-        return cls(name=name, constraints=dict(values))
+        values = dict(values)
+        version = str(values.pop("version", "custom-1"))
+        return cls(name=name, constraints=values, version=version)
 
     @classmethod
     def named(cls, name: str) -> "Profile":
         if name not in PROFILES:
             raise ValueError(f"Unknown profile: {name}; choose from {sorted(PROFILES)}")
-        return cls(name=name, constraints=dict(PROFILES[name]))
+        return cls(name=name, constraints=dict(PROFILES[name]), version=PROFILE_VERSION)
 
 
 class DecisionEngine:
@@ -149,6 +153,38 @@ class DecisionEngine:
     def _metric_score(self, model: dict, metric: str) -> float | None:
         return _num(model.get(metric))
 
+    def _confidence(self, model: dict, metric: str, weights: dict[str, float]) -> dict[str, Any]:
+        metric_fields = [metric]
+        if weights.get("cost", 0) > 0:
+            metric_fields.append("cost")
+        if weights.get("speed", 0) > 0:
+            metric_fields.append("speed")
+        values = {metric: self._metric_score(model, metric), "cost": _cost(model), "speed": _speed(model)}
+        missing = [name for name in metric_fields if values.get(name) is None]
+        coverage = round((len(metric_fields) - len(missing)) / len(metric_fields), 3)
+        prov = model.get("provenance") or {}
+        source_count = len(_sources(model))
+        agreement = prov.get("source_agreement", "unknown")
+        age_days = None
+        stamp = prov.get("fetched_at") or model.get("fetched_at")
+        if stamp:
+            try:
+                when = datetime.fromisoformat(str(stamp).replace("Z", "+00:00"))
+                age_days = max(0.0, (datetime.now(timezone.utc) - when).total_seconds() / 86400)
+            except ValueError:
+                age_days = None
+        fresh = age_days is not None and age_days <= 14
+        if coverage >= 0.8 and (fresh or age_days is None) and source_count >= 2 and agreement != "disagree":
+            level = "high"
+        elif coverage >= 0.5 and agreement != "disagree":
+            level = "medium"
+        else:
+            level = "low"
+        return {"level": level, "evidence_coverage": coverage, "missing_metrics": missing,
+                "source_count": source_count, "source_agreement": agreement,
+                "freshness_days": round(age_days, 2) if age_days is not None else None,
+                "fresh": fresh if age_days is not None else "unknown"}
+
     def recommend(self, profile: str | Profile | dict[str, Any] | None = None, *, limit: int = 10,
                   available_only: bool = False) -> dict[str, Any]:
         if profile is None:
@@ -186,7 +222,8 @@ class DecisionEngine:
             if cost is not None: metrics_used.append("pricing.blended_3_1")
             ranked.append((score, m, {"score": round(score, 6), "metrics_used": metrics_used,
                                       "constraints_satisfied": reasons, "missing_metrics": [x for x, v in [("cost", cost), ("speed", speed)] if v is None],
-                                      "sources": _sources(m), "fresh": self._fresh(m, None)}))
+                                      "sources": _sources(m), "fresh": self._fresh(m, None),
+                                      "confidence": self._confidence(m, metric, weights)}))
         ranked.sort(key=lambda x: (-x[0], x[1].get("slug", "")))
         output = []
         for score, m, explanation in ranked[:limit]:
@@ -194,7 +231,8 @@ class DecisionEngine:
             row["recommendation_score"] = explanation["score"]
             row["explanation"] = explanation
             output.append(row)
-        return {"profile": p.name, "metric": metric, "candidate_count": len(ranked), "recommendations": output}
+        return {"profile": p.name, "profile_version": p.version, "metric": metric,
+                "candidate_count": len(ranked), "recommendations": output}
 
     def pareto(self, dimensions: list[str]) -> list[dict]:
         """Return non-dominated models; dimensions prefixed ``-`` are minimized.
