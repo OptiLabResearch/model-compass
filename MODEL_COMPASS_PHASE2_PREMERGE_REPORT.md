@@ -8,9 +8,9 @@
 
 ## Merge recommendation
 
-**Recommendation: merge PR #6 after the final CI check for the latest correction commit is green.**
+**Recommendation: PR #6 is ready to merge after it is marked ready for review.**
 
-The implementation is functionally ready. The branch is currently marked `MERGEABLE` by GitHub, but the PR is still a draft and its merge state is `UNSTABLE` because the latest bot-generated refresh commit does not have a newly attached CI check. The correction commit itself passed CI before the final refresh, and the final refresh workflow plus Cloudflare preview both passed. I pushed a final human-authored documentation/report commit after the refresh to cause the required CI workflow to run against the final branch tip; the final merge recommendation should be considered confirmed once that check reports success.
+The implementation is functionally ready. GitHub currently reports the branch as `MERGEABLE` with merge state `CLEAN`; both `validate` and Cloudflare Pages checks are green on the latest branch tip. The PR remains a draft because this task does not mark it ready or merge it automatically.
 
 PR #6 was **not merged automatically**.
 
@@ -157,7 +157,10 @@ The corrected live refresh workflow passed all of its steps:
 
 Focused correction commit:
 
-- `142cf76 fix: correct phase 2 provider and freshness semantics`
+- `142cf76` — fix Phase 2 provider and freshness semantics;
+- `552f7f6` — close version/freshness edge cases;
+- `b71cf8e` — reconcile retained provider coverage counts;
+- `3cd16d2` — block stale high-confidence recommendations and invalid-priority rotation stalls.
 
 Documentation/report follow-up:
 
