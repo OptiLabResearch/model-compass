@@ -98,21 +98,27 @@ class DecisionEngine:
                              "speed": _speed(model) is not None},
                 "access": self.access.get(model.get("slug"))}
 
-    def _fresh(self, model: dict, days: int | None) -> bool:
-        if days is None:
-            return True
+    def _freshness_state(self, model: dict, max_days: int = 14) -> tuple[str, float | None]:
         prov = model.get("provenance") or {}
         if prov.get("fresh") is False:
-            return False
+            return "stale", None
         stamp = prov.get("fetched_at") or model.get("fetched_at")
         if not stamp:
-            return False
+            return "unknown", None
         try:
             when = datetime.fromisoformat(str(stamp).replace("Z", "+00:00"))
             age = (datetime.now(timezone.utc) - when).total_seconds() / 86400
-            return 0 <= age <= days
+            if age < 0:
+                return "unknown", age
+            return ("fresh" if age <= max_days else "stale"), age
         except ValueError:
-            return False
+            return "unknown", None
+
+    def _fresh(self, model: dict, days: int | None) -> bool:
+        if days is None:
+            return True
+        state, _ = self._freshness_state(model, days)
+        return state == "fresh"
 
     def _matches(self, model: dict, c: dict[str, Any]) -> tuple[bool, list[str]]:
         reasons: list[str] = []
@@ -165,15 +171,8 @@ class DecisionEngine:
         prov = model.get("provenance") or {}
         source_count = len(_sources(model))
         agreement = prov.get("source_agreement", "unknown")
-        age_days = None
-        stamp = prov.get("fetched_at") or model.get("fetched_at")
-        if stamp:
-            try:
-                when = datetime.fromisoformat(str(stamp).replace("Z", "+00:00"))
-                age_days = max(0.0, (datetime.now(timezone.utc) - when).total_seconds() / 86400)
-            except ValueError:
-                age_days = None
-        fresh = age_days is not None and age_days <= 14
+        freshness, age_days = self._freshness_state(model)
+        fresh = freshness == "fresh"
         if coverage >= 0.8 and (fresh or age_days is None) and source_count >= 2 and agreement != "disagree":
             level = "high"
         elif coverage >= 0.5 and agreement != "disagree":
@@ -183,7 +182,7 @@ class DecisionEngine:
         return {"level": level, "evidence_coverage": coverage, "missing_metrics": missing,
                 "source_count": source_count, "source_agreement": agreement,
                 "freshness_days": round(age_days, 2) if age_days is not None else None,
-                "fresh": fresh if age_days is not None else "unknown"}
+                "fresh": freshness}
 
     def recommend(self, profile: str | Profile | dict[str, Any] | None = None, *, limit: int = 10,
                   available_only: bool = False) -> dict[str, Any]:
@@ -222,7 +221,7 @@ class DecisionEngine:
             if cost is not None: metrics_used.append("pricing.blended_3_1")
             ranked.append((score, m, {"score": round(score, 6), "metrics_used": metrics_used,
                                       "constraints_satisfied": reasons, "missing_metrics": [x for x, v in [("cost", cost), ("speed", speed)] if v is None],
-                                      "sources": _sources(m), "fresh": self._fresh(m, None),
+                                      "sources": _sources(m), "fresh": self._freshness_state(m)[0],
                                       "confidence": self._confidence(m, metric, weights)}))
         ranked.sort(key=lambda x: (-x[0], x[1].get("slug", "")))
         output = []

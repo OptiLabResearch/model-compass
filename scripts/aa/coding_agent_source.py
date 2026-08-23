@@ -22,6 +22,7 @@ PARSER_VERSION = "0.1.0"
 
 def parse_datasets(page: str, *, fetched_at: str) -> list[dict]:
     datasets = []
+    page_version = None
     for raw in re.findall(r'<script type="application/ld\+json">(.*?)</script>', page, re.S):
         try:
             payload = json.loads(html.unescape(raw))
@@ -38,8 +39,11 @@ def parse_datasets(page: str, *, fetched_at: str) -> list[dict]:
             label = row.get("label")
             if not label or metric not in row:
                 continue
+            version_match = re.search(r"\bv(\d+(?:\.\d+)*)\b", description, re.I)
+            if version_match:
+                page_version = version_match.group(1)
             item = {"agent_id": label, "agent_name": label,
-                    "benchmark_suite": name, "benchmark_version": "1.4",
+                    "benchmark_suite": name, "benchmark_version": version_match.group(1) if version_match else page_version,
                     "scores": {"coding_agent_index": row.get("codingAgentsIndex")},
                     "execution_time_seconds": row.get("codingAgentsMeanAgentWallTimeSec"),
                     "cost_per_task_usd": row.get("codingAgentsMeanCostUsd"),
@@ -54,9 +58,14 @@ def fetch(*, timeout: int = 30) -> dict:
     with urlopen(req, timeout=timeout) as response:
         page = response.read(5 * 1024 * 1024).decode("utf-8", "replace")
     observations = parse_datasets(page, fetched_at=fetched_at)
+    labels = sorted({o.get("agent_id") for o in observations if o.get("agent_id")})
+    suites = sorted({o.get("benchmark_suite") for o in observations})
     return {"version": 1, "parser_version": PARSER_VERSION, "generated_at": fetched_at,
             "source": "artificial_analysis_coding_agents", "source_url": URL,
             "methodology": "public JSON-LD datasets; agent/harness labels preserved verbatim",
+            "coverage": {"scope": "partial_public_jsonld", "complete_public_dataset": False,
+                         "agent_labels": len(labels), "dataset_names": suites,
+                         "note": "JSON-LD is a partial structured view; richer page/network datasets may exist."},
             "observation_count": len(observations), "observations": observations}
 
 

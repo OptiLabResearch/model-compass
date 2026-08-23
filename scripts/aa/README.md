@@ -39,6 +39,7 @@ fields + bounds), `http.py` (retries/backoff/rate-limit/atomic/cache),
 - `data/aa_pipeline_report.json` — per-source health + field/benchmark coverage.
 - `data/history/rich/*.delta.json` — bounded rich-dataset change deltas (104 files retained).
 - `data/openrouter_observations.json` — bounded provider endpoint observations from the public OpenRouter API.
+- `data/openrouter_sampling_state.json` — small rotating-cohort cursor; committed so weekly coverage advances.
 - `data/coding_agent_observations.json` — separate public Artificial Analysis coding-agent/harness observations.
 - `data/aa_cache/` — raw payloads (git-ignored), for reproducibility/debugging.
 

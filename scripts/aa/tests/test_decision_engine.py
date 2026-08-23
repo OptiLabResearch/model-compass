@@ -72,6 +72,22 @@ def test_profiles_are_configuration_not_scattered_logic():
     assert [r["slug"] for r in result["recommendations"]] == ["beta", "gamma"]
 
 
+def test_freshness_is_fresh_stale_or_unknown_not_always_true():
+    fresh = model("fresh", "F", 90, 1, 100)
+    fresh["provenance"]["fetched_at"] = "2026-08-23T00:00:00Z"
+    stale = model("stale", "S", 89, 1, 100)
+    stale["provenance"]["fetched_at"] = "2026-07-01T00:00:00Z"
+    unknown = model("unknown", "U", 88, 1, 100)
+    unknown["provenance"].pop("fetched_at")
+    rows = engine()
+    rows.models.extend([fresh, stale, unknown])
+    result = rows.recommend("premium", limit=10)
+    states = {r["slug"]: r["explanation"]["fresh"] for r in result["recommendations"]}
+    assert states["fresh"] == "fresh"
+    assert states["stale"] == "stale"
+    assert states["unknown"] == "unknown"
+
+
 if __name__ == "__main__":
     for name, fn in sorted(globals().items()):
         if name.startswith("test_") and callable(fn):

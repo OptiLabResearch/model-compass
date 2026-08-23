@@ -35,13 +35,17 @@ def normalize_openrouter_endpoint(raw: dict, *, fetched_at: str | None = None) -
     input_price = _float(pricing.get("prompt"))
     output_price = _float(pricing.get("completion"))
     status = raw.get("status")
+    model_id = raw.get("model_id")
+    provider_id = _provider_id(raw.get("tag") or raw.get("provider_name"))
+    endpoint_id = raw.get("name") or model_id
     return {
         "observation_type": "provider_endpoint",
-        "model_id": raw.get("model_id"),
-        "model_slug": raw.get("model_id"),
-        "provider_id": _provider_id(raw.get("tag") or raw.get("provider_name")),
+        "model_id": model_id,
+        "model_slug": model_id,
+        "provider_id": provider_id,
         "provider_name": raw.get("provider_name"),
-        "endpoint_id": raw.get("name") or raw.get("model_id"),
+        "endpoint_id": endpoint_id,
+        "identity_key": ":".join(str(x or "") for x in (model_id, provider_id, endpoint_id)),
         "context_tokens": raw.get("context_length"),
         "pricing": {
             "input_per_million": input_price * 1_000_000 if input_price is not None else None,

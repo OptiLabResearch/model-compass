@@ -8,6 +8,18 @@ def _number(value):
     return value if isinstance(value, (int, float)) else None
 
 
+def _availability_rank(row: dict) -> int:
+    status = (row.get("availability") or {}).get("status")
+    return 0 if status == "available" else 1 if status == "unknown" else 2
+
+
+def _value(row: dict, *path):
+    node = row
+    for key in path:
+        node = node.get(key) if isinstance(node, dict) else None
+    return _number(node)
+
+
 class ProviderDB:
     def __init__(self, observations=None):
         self.observations = list(observations or [])
@@ -23,11 +35,19 @@ class ProviderDB:
     def best_provider(self, model_id: str, profile: str = "interactive") -> dict | None:
         rows = self.providers(model_id)
         if profile == "batch":
-            rows = [r for r in rows if _number((r.get("performance") or {}).get("throughput_tps")) is not None] or rows
-            key = lambda r: ((r.get("pricing") or {}).get("input_per_million") or float("inf"), r.get("provider_id", ""))
+            key = lambda r: (_availability_rank(r),
+                             _value(r, "performance", "throughput_tps") is None,
+                             -(_value(r, "performance", "throughput_tps") or 0),
+                             _value(r, "pricing", "input_per_million") is None,
+                             _value(r, "pricing", "input_per_million") if _value(r, "pricing", "input_per_million") is not None else float("inf"),
+                             r.get("provider_id", ""))
         else:
-            rows = [r for r in rows if _number((r.get("performance") or {}).get("latency_seconds")) is not None] or rows
-            key = lambda r: ((r.get("performance") or {}).get("latency_seconds") or float("inf"), r.get("provider_id", ""))
+            key = lambda r: (_availability_rank(r),
+                             _value(r, "performance", "latency_seconds") is None,
+                             _value(r, "performance", "latency_seconds") if _value(r, "performance", "latency_seconds") is not None else float("inf"),
+                             _value(r, "pricing", "input_per_million") is None,
+                             _value(r, "pricing", "input_per_million") if _value(r, "pricing", "input_per_million") is not None else float("inf"),
+                             r.get("provider_id", ""))
         return min(rows, key=key) if rows else None
 
     def independent_fallbacks(self, model_id: str, primary_provider: str, limit: int = 10) -> list[dict]:

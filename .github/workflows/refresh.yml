@@ -62,7 +62,8 @@ jobs:
           git add public/data/models.json public/data/benchmarks.json \
             data/enrichment_cache.json data/history/ \
             data/aa_models_v2.json data/aa_pipeline_report.json \
-            data/openrouter_observations.json data/coding_agent_observations.json
+            data/openrouter_observations.json data/coding_agent_observations.json \
+            data/openrouter_sampling_state.json
           git diff --staged --quiet || git commit -m "data: weekly refresh $(date -u +%Y-%m-%d)"
           git push
 
