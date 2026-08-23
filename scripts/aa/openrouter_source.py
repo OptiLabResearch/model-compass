@@ -78,9 +78,10 @@ def fetch_observations(*, max_endpoints: int = 25, timeout: int = 30,
     models = payload.get("data") or []
     state = state or {}
     cursor = int(state.get("cursor", 0))
+    catalog_ids = {str(item.get("id")) for item in models if item.get("id")}
+    valid_priority_count = len({str(x) for x in state.get("priority_ids", []) if str(x) in catalog_ids})
     selected_ids = select_cohort(models, limit=max_endpoints, cursor=cursor,
                                  priority_ids=state.get("priority_ids"))
-    by_id = {item.get("id"): item for item in models}
     observations = []
     endpoint_errors = []
     for model_id in selected_ids:
@@ -94,8 +95,8 @@ def fetch_observations(*, max_endpoints: int = 25, timeout: int = 30,
             endpoint_errors.append({"model_id": model_id, "error": str(exc)})
     retained = merge_retained_observations((previous or {}).get("observations", []), observations,
                                            now=fetched_at, retention_days=retention_days)
-    remainder_count = max(len(models) - len(state.get("priority_ids", [])), 1)
-    next_cursor = (cursor + max(0, len(selected_ids) - len(state.get("priority_ids", [])))) % remainder_count
+    remainder_count = max(len(models) - valid_priority_count, 1)
+    next_cursor = (cursor + max(0, len(selected_ids) - valid_priority_count)) % remainder_count
     fresh_count = len({_observation_key(row) for row in observations})
     retained_count = len(retained) - fresh_count
     return {

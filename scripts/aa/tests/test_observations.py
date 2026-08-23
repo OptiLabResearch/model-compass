@@ -100,6 +100,7 @@ def test_rotating_cohort_is_deterministic_and_not_catalog_prefix():
     assert first == ["vendor/model-0", "vendor/model-1", "vendor/model-2"]
     assert second == ["vendor/model-3", "vendor/model-4", "vendor/model-5"]
     assert select_cohort(catalog, limit=3, cursor=0) == first
+    assert select_cohort(catalog, limit=3, cursor=0, priority_ids=["retired-a", "retired-b", "vendor/model-0"]) == ["vendor/model-0", "vendor/model-1", "vendor/model-2"]
 
 
 def test_retention_preserves_recent_observations_and_expires_old():

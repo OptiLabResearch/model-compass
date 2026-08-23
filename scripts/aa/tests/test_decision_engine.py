@@ -95,6 +95,13 @@ def test_naive_timestamp_is_interpreted_as_utc():
     assert result["recommendations"][0]["explanation"]["fresh"] == "fresh"
 
 
+def test_stale_complete_evidence_is_not_high_confidence():
+    row = model("stale-complete", "S", 87, 1, 100)
+    row["provenance"].update({"fetched_at": "2026-07-01T00:00:00Z", "sources": ["rsc", "api"]})
+    result = DecisionEngine([row]).recommend("premium")
+    assert result["recommendations"][0]["explanation"]["confidence"]["level"] != "high"
+
+
 if __name__ == "__main__":
     for name, fn in sorted(globals().items()):
         if name.startswith("test_") and callable(fn):

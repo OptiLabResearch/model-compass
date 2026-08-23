@@ -175,7 +175,7 @@ class DecisionEngine:
         agreement = prov.get("source_agreement", "unknown")
         freshness, age_days = self._freshness_state(model)
         fresh = freshness == "fresh"
-        if coverage >= 0.8 and (fresh or age_days is None) and source_count >= 2 and agreement != "disagree":
+        if coverage >= 0.8 and freshness == "fresh" and source_count >= 2 and agreement != "disagree":
             level = "high"
         elif coverage >= 0.5 and agreement != "disagree":
             level = "medium"

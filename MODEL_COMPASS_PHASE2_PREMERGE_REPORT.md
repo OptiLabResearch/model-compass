@@ -36,6 +36,8 @@ PR #6 was **not merged automatically**.
 
 Naive ISO timestamps are interpreted as UTC rather than raising an exception.
 
+Explicitly stale evidence cannot receive `high` confidence, even when its metric coverage and source count are otherwise strong.
+
 The recommendation explanation and nested confidence object use the same helper. Missing timestamps are no longer reported as fresh.
 
 **Tests:** fresh, stale, absent/malformed/unknown timestamp cases are covered.
@@ -72,6 +74,7 @@ This is an OpenRouter-local identity only. No fuzzy AA/OpenRouter canonical join
 - catalog IDs are sorted deterministically;
 - a persisted cursor selects the next bounded cohort;
 - optional priority IDs are supported without making them mandatory;
+- invalid/retired priority IDs are excluded from cursor arithmetic;
 - each refresh selects at most 25 model details;
 - `data/openrouter_sampling_state.json` stores the cursor and persists rotation;
 - previous observations are retained for 14 days using `last_seen` timestamps;
@@ -113,7 +116,7 @@ Live results:
 | OpenRouter selected this run | 25 models |
 | OpenRouter retained endpoint observations | 387 |
 | OpenRouter catalog models with detailed observations | 114 / 422 (27.01%) |
-| OpenRouter fresh/retained accounting | 75 fresh + 312 retained = 387 |
+| OpenRouter fresh/retained accounting | counters are identity-deduplicated and sum to the retained total |
 | OpenRouter endpoint errors | 0 |
 | Coding-agent observations | 27 |
 | Coding-agent live version | derived `1.4` from current public page |
@@ -131,7 +134,7 @@ python3 scripts/test_fetch_aa_models.py                  6 tests PASS
 python3 scripts/aa/tests/test_pipeline.py                9 tests PASS
 python3 scripts/aa/tests/test_decision_engine.py          5 tests PASS
 python3 scripts/aa/tests/test_history.py                 2 tests PASS
-python3 scripts/aa/tests/test_observations.py             9 tests PASS
+python3 scripts/aa/tests/test_observations.py             10 tests PASS
 python3 scripts/validate_site.py                          PASS (204 models)
 node scripts/test_browser_security.mjs                    PASS
 CLI access/provider/agent smoke tests                      PASS
@@ -148,7 +151,7 @@ The corrected live refresh workflow passed all of its steps:
 - generated-data commit;
 - failure handling step.
 
-Draft PR #6’s Cloudflare Pages preview check is green. The CI check was green for the correction commit before the final generated refresh commit. A final documentation commit was pushed afterward to make GitHub attach a fresh CI check to the latest branch tip; that latest check is the remaining merge gate.
+- The final correction CI check and Cloudflare preview are green on the latest branch tip.
 
 ## 4. Commits
 
