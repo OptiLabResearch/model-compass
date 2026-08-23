@@ -272,7 +272,7 @@ Identity rules:
 5. Context and capability fields remain source-specific unless an explicit reconciliation rule is later added.
 6. A provider observation cannot overwrite canonical benchmark truth.
 
-The current committed live artifact is `data/openrouter_observations.json` with 422 catalog models and 63 detailed endpoint observations from 25 bounded model-detail requests. Provider detail is intentionally bounded to avoid turning every weekly refresh into hundreds of unbounded requests.
+The current committed live artifact is `data/openrouter_observations.json` with 422 catalog models and 319 retained detailed endpoint observations from three bounded rotating cohorts (93 catalog models, 22.04% coverage).
 
 Supported queries:
 
@@ -467,6 +467,19 @@ New/changed implementation files include:
 - `data/history/rich/2026-08-23.delta.json`
 - `README.md`
 - `scripts/aa/README.md`
+
+## Pre-Merge Corrections
+
+The focused pre-merge review identified and corrected several issues without changing the Phase 2 architecture:
+
+- **Coding-agent version:** `coding_agent_source.py` no longer hard-codes `1.4`. It derives the version from public methodology/description text and returns `null` when unavailable. The checked-in fixture proves that a page stating v1.3 produces `benchmark_version: "1.3"`. The current live page at refresh time stated v1.4, which is now captured as a derived value rather than an assumption.
+- **Recommendation freshness:** the decision engine now centralizes freshness into `fresh`, `stale`, or `unknown`. Recommendation explanations and confidence use the same timestamp policy. Missing or malformed timestamps are `unknown`, not fresh.
+- **Provider ranking:** interactive recommendations prioritize availability and latency; batch recommendations prioritize availability, throughput, then cost. Zero-valued prices and measurements remain valid values. Missing metrics and deterministic ties have explicit tests.
+- **Provider identity:** observations now include a stable `(model_id, provider_id, endpoint_id)` identity key. OpenRouter's stable `tag` is preferred for provider identity, with normalized provider name as fallback.
+- **OpenRouter sampling:** the adapter now sorts the catalog deterministically, rotates a persisted cursor cohort, retains recent observations for 14 days, records selected IDs/cursor/coverage, and commits the small sampling state. It no longer repeatedly queries the upstream catalog prefix.
+- **Coding-agent coverage:** the artifact now explicitly reports `scope: partial_public_jsonld`, `complete_public_dataset: false`, dataset names, label coverage, and a note that richer page/network data may exist. The 27 observations are not presented as the complete public Coding Agent dataset.
+
+The correction pass was committed as `142cf76 fix: correct phase 2 provider and freshness semantics`.
 
 ## 16. Current limitations
 
