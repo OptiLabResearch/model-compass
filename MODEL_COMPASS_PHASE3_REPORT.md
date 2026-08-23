@@ -1,5 +1,7 @@
 # Model Compass Phase 3 Report
 
+**Verified commit:** `b022d5188801203a78d56966b95c122037578754` on `feat/model-compass-phase3`.
+
 **Status:** COMPLETE AS A BOUNDED PHASE 3 FOUNDATION — implementation correctness blockers from the independent review are resolved. Endpoint Accuracy and Coding Agents remain explicitly experimental/manual because public coverage is partial and rotating. PR #7 is **safe to merge as a Phase 3 foundation after the final PR checks pass**; it must not be merged until those checks are re-run on the final commit. Phase 4 was not started.
 
 ## Scope and decision
