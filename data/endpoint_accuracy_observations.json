@@ -1,11 +1,1003 @@
 {
   "coverage": {
     "endpoints": 30,
-    "index_versions": [
-      "1.0"
-    ],
-    "models": 2
+    "models": 2,
+    "partial": true,
+    "requested_models": 3,
+    "retained_stale_models": 0,
+    "retention_days": 14,
+    "scope": "bounded_public_jsonld",
+    "successful_models": 2
   },
+  "errors": [
+    {
+      "attempted_at": "2026-08-23T18:18:55Z",
+      "error": "Endpoint Accuracy JSON-LD dataset not found",
+      "error_type": "ValueError",
+      "model_slug": "deepseek-v4-pro"
+    }
+  ],
+  "generated_at": "2026-08-23T18:18:55Z",
+  "model_results": [
+    {
+      "coverage": {
+        "endpoints": 14
+      },
+      "fetched_at": "2026-08-23T18:18:55Z",
+      "model_slug": "glm-5-2",
+      "observations": [
+        {
+          "accuracy": {
+            "as_reference_percent": 100.0,
+            "lower": 100.0,
+            "mid": 100.0,
+            "upper": 100.0
+          },
+          "classification": "unknown",
+          "components": {},
+          "derived_classification": "reference_consistent",
+          "endpoint_id": "SGLang",
+          "identity_key": "glm-5-2:sglang:SGLang",
+          "index_version": "1.0",
+          "measurement_date": null,
+          "model_name": "GLM-5.2 (max)",
+          "model_slug": "glm-5-2",
+          "notes": null,
+          "observation_type": "endpoint_accuracy",
+          "output_tokens_per_task": null,
+          "provenance": {
+            "fetched_at": "2026-08-23T18:18:55Z",
+            "parser_version": "0.3.0",
+            "point_in_time": true,
+            "source": "artificial_analysis_endpoint_accuracy",
+            "source_url": "https://artificialanalysis.ai/models/glm-5-2/providers"
+          },
+          "provider_id": "sglang",
+          "provider_name": "SGLang",
+          "reference": {},
+          "repeat_counts": {},
+          "source_model_id": "glm-5-2"
+        },
+        {
+          "accuracy": {
+            "as_reference_percent": 101.9,
+            "lower": 96.9,
+            "mid": 101.9,
+            "upper": 106.9
+          },
+          "classification": "unknown",
+          "components": {},
+          "derived_classification": "reference_consistent",
+          "endpoint_id": "/providers/togetherai",
+          "identity_key": "glm-5-2:togetherai:/providers/togetherai",
+          "index_version": "1.0",
+          "measurement_date": null,
+          "model_name": "GLM-5.2 (max)",
+          "model_slug": "glm-5-2",
+          "notes": null,
+          "observation_type": "endpoint_accuracy",
+          "output_tokens_per_task": null,
+          "provenance": {
+            "fetched_at": "2026-08-23T18:18:55Z",
+            "parser_version": "0.3.0",
+            "point_in_time": true,
+            "source": "artificial_analysis_endpoint_accuracy",
+            "source_url": "https://artificialanalysis.ai/models/glm-5-2/providers"
+          },
+          "provider_id": "togetherai",
+          "provider_name": "Together AI",
+          "reference": {},
+          "repeat_counts": {},
+          "source_model_id": "glm-5-2"
+        },
+        {
+          "accuracy": {
+            "as_reference_percent": 100.3,
+            "lower": 94.42999999999999,
+            "mid": 100.3,
+            "upper": 106.17
+          },
+          "classification": "unknown",
+          "components": {},
+          "derived_classification": "reference_consistent",
+          "endpoint_id": "/providers/nebius",
+          "identity_key": "glm-5-2:nebius:/providers/nebius",
+          "index_version": "1.0",
+          "measurement_date": null,
+          "model_name": "GLM-5.2 (max)",
+          "model_slug": "glm-5-2",
+          "notes": null,
+          "observation_type": "endpoint_accuracy",
+          "output_tokens_per_task": null,
+          "provenance": {
+            "fetched_at": "2026-08-23T18:18:55Z",
+            "parser_version": "0.3.0",
+            "point_in_time": true,
+            "source": "artificial_analysis_endpoint_accuracy",
+            "source_url": "https://artificialanalysis.ai/models/glm-5-2/providers"
+          },
+          "provider_id": "nebius",
+          "provider_name": "Nebius (FP4)",
+          "reference": {},
+          "repeat_counts": {},
+          "source_model_id": "glm-5-2"
+        },
+        {
+          "accuracy": {
+            "as_reference_percent": 100.27,
+            "lower": 95.22999999999999,
+            "mid": 100.27,
+            "upper": 105.31
+          },
+          "classification": "unknown",
+          "components": {},
+          "derived_classification": "reference_consistent",
+          "endpoint_id": "/providers/fireworks",
+          "identity_key": "glm-5-2:fireworks:/providers/fireworks",
+          "index_version": "1.0",
+          "measurement_date": null,
+          "model_name": "GLM-5.2 (max)",
+          "model_slug": "glm-5-2",
+          "notes": null,
+          "observation_type": "endpoint_accuracy",
+          "output_tokens_per_task": null,
+          "provenance": {
+            "fetched_at": "2026-08-23T18:18:55Z",
+            "parser_version": "0.3.0",
+            "point_in_time": true,
+            "source": "artificial_analysis_endpoint_accuracy",
+            "source_url": "https://artificialanalysis.ai/models/glm-5-2/providers"
+          },
+          "provider_id": "fireworks",
+          "provider_name": "Fireworks",
+          "reference": {},
+          "repeat_counts": {},
+          "source_model_id": "glm-5-2"
+        },
+        {
+          "accuracy": {
+            "as_reference_percent": 100.19,
+            "lower": 95.52,
+            "mid": 100.19,
+            "upper": 104.86
+          },
+          "classification": "unknown",
+          "components": {},
+          "derived_classification": "reference_consistent",
+          "endpoint_id": "/providers/friendli-ai",
+          "identity_key": "glm-5-2:friendli-ai:/providers/friendli-ai",
+          "index_version": "1.0",
+          "measurement_date": null,
+          "model_name": "GLM-5.2 (max)",
+          "model_slug": "glm-5-2",
+          "notes": null,
+          "observation_type": "endpoint_accuracy",
+          "output_tokens_per_task": null,
+          "provenance": {
+            "fetched_at": "2026-08-23T18:18:55Z",
+            "parser_version": "0.3.0",
+            "point_in_time": true,
+            "source": "artificial_analysis_endpoint_accuracy",
+            "source_url": "https://artificialanalysis.ai/models/glm-5-2/providers"
+          },
+          "provider_id": "friendli-ai",
+          "provider_name": "FriendliAI",
+          "reference": {},
+          "repeat_counts": {},
+          "source_model_id": "glm-5-2"
+        },
+        {
+          "accuracy": {
+            "as_reference_percent": 99.0,
+            "lower": 93.7,
+            "mid": 99.0,
+            "upper": 104.3
+          },
+          "classification": "unknown",
+          "components": {},
+          "derived_classification": "reference_consistent",
+          "endpoint_id": "/providers/siliconflow",
+          "identity_key": "glm-5-2:siliconflow:/providers/siliconflow",
+          "index_version": "1.0",
+          "measurement_date": null,
+          "model_name": "GLM-5.2 (max)",
+          "model_slug": "glm-5-2",
+          "notes": null,
+          "observation_type": "endpoint_accuracy",
+          "output_tokens_per_task": null,
+          "provenance": {
+            "fetched_at": "2026-08-23T18:18:55Z",
+            "parser_version": "0.3.0",
+            "point_in_time": true,
+            "source": "artificial_analysis_endpoint_accuracy",
+            "source_url": "https://artificialanalysis.ai/models/glm-5-2/providers"
+          },
+          "provider_id": "siliconflow",
+          "provider_name": "SiliconFlow (FP8)",
+          "reference": {},
+          "repeat_counts": {},
+          "source_model_id": "glm-5-2"
+        },
+        {
+          "accuracy": {
+            "as_reference_percent": 98.31,
+            "lower": 93.46000000000001,
+            "mid": 98.31,
+            "upper": 103.16
+          },
+          "classification": "unknown",
+          "components": {},
+          "derived_classification": "reference_consistent",
+          "endpoint_id": "/providers/parasail",
+          "identity_key": "glm-5-2:parasail:/providers/parasail",
+          "index_version": "1.0",
+          "measurement_date": null,
+          "model_name": "GLM-5.2 (max)",
+          "model_slug": "glm-5-2",
+          "notes": null,
+          "observation_type": "endpoint_accuracy",
+          "output_tokens_per_task": null,
+          "provenance": {
+            "fetched_at": "2026-08-23T18:18:55Z",
+            "parser_version": "0.3.0",
+            "point_in_time": true,
+            "source": "artificial_analysis_endpoint_accuracy",
+            "source_url": "https://artificialanalysis.ai/models/glm-5-2/providers"
+          },
+          "provider_id": "parasail",
+          "provider_name": "Parasail (NVFP4)",
+          "reference": {},
+          "repeat_counts": {},
+          "source_model_id": "glm-5-2"
+        },
+        {
+          "accuracy": {
+            "as_reference_percent": 98.07,
+            "lower": 91.92999999999999,
+            "mid": 98.07,
+            "upper": 104.21
+          },
+          "classification": "unknown",
+          "components": {},
+          "derived_classification": "reference_consistent",
+          "endpoint_id": "/providers/wafer",
+          "identity_key": "glm-5-2:wafer:/providers/wafer",
+          "index_version": "1.0",
+          "measurement_date": null,
+          "model_name": "GLM-5.2 (max)",
+          "model_slug": "glm-5-2",
+          "notes": null,
+          "observation_type": "endpoint_accuracy",
+          "output_tokens_per_task": null,
+          "provenance": {
+            "fetched_at": "2026-08-23T18:18:55Z",
+            "parser_version": "0.3.0",
+            "point_in_time": true,
+            "source": "artificial_analysis_endpoint_accuracy",
+            "source_url": "https://artificialanalysis.ai/models/glm-5-2/providers"
+          },
+          "provider_id": "wafer",
+          "provider_name": "Wafer",
+          "reference": {},
+          "repeat_counts": {},
+          "source_model_id": "glm-5-2"
+        },
+        {
+          "accuracy": {
+            "as_reference_percent": 98.02,
+            "lower": 93.57,
+            "mid": 98.02,
+            "upper": 102.47
+          },
+          "classification": "unknown",
+          "components": {},
+          "derived_classification": "reference_consistent",
+          "endpoint_id": "/providers/baseten",
+          "identity_key": "glm-5-2:baseten:/providers/baseten",
+          "index_version": "1.0",
+          "measurement_date": null,
+          "model_name": "GLM-5.2 (max)",
+          "model_slug": "glm-5-2",
+          "notes": null,
+          "observation_type": "endpoint_accuracy",
+          "output_tokens_per_task": null,
+          "provenance": {
+            "fetched_at": "2026-08-23T18:18:55Z",
+            "parser_version": "0.3.0",
+            "point_in_time": true,
+            "source": "artificial_analysis_endpoint_accuracy",
+            "source_url": "https://artificialanalysis.ai/models/glm-5-2/providers"
+          },
+          "provider_id": "baseten",
+          "provider_name": "Baseten",
+          "reference": {},
+          "repeat_counts": {},
+          "source_model_id": "glm-5-2"
+        },
+        {
+          "accuracy": {
+            "as_reference_percent": 97.7,
+            "lower": 92.06,
+            "mid": 97.7,
+            "upper": 103.34
+          },
+          "classification": "unknown",
+          "components": {},
+          "derived_classification": "reference_consistent",
+          "endpoint_id": "/providers/novita",
+          "identity_key": "glm-5-2:novita:/providers/novita",
+          "index_version": "1.0",
+          "measurement_date": null,
+          "model_name": "GLM-5.2 (max)",
+          "model_slug": "glm-5-2",
+          "notes": null,
+          "observation_type": "endpoint_accuracy",
+          "output_tokens_per_task": null,
+          "provenance": {
+            "fetched_at": "2026-08-23T18:18:55Z",
+            "parser_version": "0.3.0",
+            "point_in_time": true,
+            "source": "artificial_analysis_endpoint_accuracy",
+            "source_url": "https://artificialanalysis.ai/models/glm-5-2/providers"
+          },
+          "provider_id": "novita",
+          "provider_name": "Novita (FP8)",
+          "reference": {},
+          "repeat_counts": {},
+          "source_model_id": "glm-5-2"
+        },
+        {
+          "accuracy": {
+            "as_reference_percent": 97.07,
+            "lower": 92.05,
+            "mid": 97.07,
+            "upper": 102.08999999999999
+          },
+          "classification": "unknown",
+          "components": {},
+          "derived_classification": "reference_consistent",
+          "endpoint_id": "/providers/coreweave",
+          "identity_key": "glm-5-2:coreweave:/providers/coreweave",
+          "index_version": "1.0",
+          "measurement_date": null,
+          "model_name": "GLM-5.2 (max)",
+          "model_slug": "glm-5-2",
+          "notes": null,
+          "observation_type": "endpoint_accuracy",
+          "output_tokens_per_task": null,
+          "provenance": {
+            "fetched_at": "2026-08-23T18:18:55Z",
+            "parser_version": "0.3.0",
+            "point_in_time": true,
+            "source": "artificial_analysis_endpoint_accuracy",
+            "source_url": "https://artificialanalysis.ai/models/glm-5-2/providers"
+          },
+          "provider_id": "coreweave",
+          "provider_name": "CoreWeave",
+          "reference": {},
+          "repeat_counts": {},
+          "source_model_id": "glm-5-2"
+        },
+        {
+          "accuracy": {
+            "as_reference_percent": 95.15,
+            "lower": 90.23,
+            "mid": 95.15,
+            "upper": 100.07000000000001
+          },
+          "classification": "unknown",
+          "components": {},
+          "derived_classification": "reference_consistent",
+          "endpoint_id": "/providers/makora",
+          "identity_key": "glm-5-2:makora:/providers/makora",
+          "index_version": "1.0",
+          "measurement_date": null,
+          "model_name": "GLM-5.2 (max)",
+          "model_slug": "glm-5-2",
+          "notes": null,
+          "observation_type": "endpoint_accuracy",
+          "output_tokens_per_task": null,
+          "provenance": {
+            "fetched_at": "2026-08-23T18:18:55Z",
+            "parser_version": "0.3.0",
+            "point_in_time": true,
+            "source": "artificial_analysis_endpoint_accuracy",
+            "source_url": "https://artificialanalysis.ai/models/glm-5-2/providers"
+          },
+          "provider_id": "makora",
+          "provider_name": "Makora (NVFP4)",
+          "reference": {},
+          "repeat_counts": {},
+          "source_model_id": "glm-5-2"
+        },
+        {
+          "accuracy": {
+            "as_reference_percent": 74.83,
+            "lower": 70.08,
+            "mid": 74.83,
+            "upper": 79.58
+          },
+          "classification": "unknown",
+          "components": {},
+          "derived_classification": "below_reference",
+          "endpoint_id": "/providers/scaleway",
+          "identity_key": "glm-5-2:scaleway:/providers/scaleway",
+          "index_version": "1.0",
+          "measurement_date": null,
+          "model_name": "GLM-5.2 (max)",
+          "model_slug": "glm-5-2",
+          "notes": null,
+          "observation_type": "endpoint_accuracy",
+          "output_tokens_per_task": null,
+          "provenance": {
+            "fetched_at": "2026-08-23T18:18:55Z",
+            "parser_version": "0.3.0",
+            "point_in_time": true,
+            "source": "artificial_analysis_endpoint_accuracy",
+            "source_url": "https://artificialanalysis.ai/models/glm-5-2/providers"
+          },
+          "provider_id": "scaleway",
+          "provider_name": "Scaleway",
+          "reference": {},
+          "repeat_counts": {},
+          "source_model_id": "glm-5-2"
+        },
+        {
+          "accuracy": {
+            "as_reference_percent": 73.04,
+            "lower": 67.65,
+            "mid": 73.04,
+            "upper": 78.43
+          },
+          "classification": "unknown",
+          "components": {},
+          "derived_classification": "below_reference",
+          "endpoint_id": "/providers/deepinfra",
+          "identity_key": "glm-5-2:deepinfra:/providers/deepinfra",
+          "index_version": "1.0",
+          "measurement_date": null,
+          "model_name": "GLM-5.2 (max)",
+          "model_slug": "glm-5-2",
+          "notes": null,
+          "observation_type": "endpoint_accuracy",
+          "output_tokens_per_task": null,
+          "provenance": {
+            "fetched_at": "2026-08-23T18:18:55Z",
+            "parser_version": "0.3.0",
+            "point_in_time": true,
+            "source": "artificial_analysis_endpoint_accuracy",
+            "source_url": "https://artificialanalysis.ai/models/glm-5-2/providers"
+          },
+          "provider_id": "deepinfra",
+          "provider_name": "DeepInfra (FP4)",
+          "reference": {},
+          "repeat_counts": {},
+          "source_model_id": "glm-5-2"
+        }
+      ]
+    },
+    {
+      "coverage": {
+        "endpoints": 16
+      },
+      "fetched_at": "2026-08-23T18:18:55Z",
+      "model_slug": "gpt-oss-120b",
+      "observations": [
+        {
+          "accuracy": {
+            "as_reference_percent": 100.0,
+            "lower": 100.0,
+            "mid": 100.0,
+            "upper": 100.0
+          },
+          "classification": "unknown",
+          "components": {},
+          "derived_classification": "reference_consistent",
+          "endpoint_id": "SGLang",
+          "identity_key": "gpt-oss-120b:sglang:SGLang",
+          "index_version": "1.0",
+          "measurement_date": null,
+          "model_name": "gpt-oss-120b (high)",
+          "model_slug": "gpt-oss-120b",
+          "notes": null,
+          "observation_type": "endpoint_accuracy",
+          "output_tokens_per_task": null,
+          "provenance": {
+            "fetched_at": "2026-08-23T18:18:55Z",
+            "parser_version": "0.3.0",
+            "point_in_time": true,
+            "source": "artificial_analysis_endpoint_accuracy",
+            "source_url": "https://artificialanalysis.ai/models/gpt-oss-120b/providers"
+          },
+          "provider_id": "sglang",
+          "provider_name": "SGLang",
+          "reference": {},
+          "repeat_counts": {},
+          "source_model_id": "gpt-oss-120b"
+        },
+        {
+          "accuracy": {
+            "as_reference_percent": 100.77,
+            "lower": 92.67,
+            "mid": 100.77,
+            "upper": 108.86999999999999
+          },
+          "classification": "unknown",
+          "components": {},
+          "derived_classification": "reference_consistent",
+          "endpoint_id": "/providers/amazon_bedrock",
+          "identity_key": "gpt-oss-120b:amazon_bedrock:/providers/amazon_bedrock",
+          "index_version": "1.0",
+          "measurement_date": null,
+          "model_name": "gpt-oss-120b (high)",
+          "model_slug": "gpt-oss-120b",
+          "notes": null,
+          "observation_type": "endpoint_accuracy",
+          "output_tokens_per_task": null,
+          "provenance": {
+            "fetched_at": "2026-08-23T18:18:55Z",
+            "parser_version": "0.3.0",
+            "point_in_time": true,
+            "source": "artificial_analysis_endpoint_accuracy",
+            "source_url": "https://artificialanalysis.ai/models/gpt-oss-120b/providers"
+          },
+          "provider_id": "amazon_bedrock",
+          "provider_name": "Amazon",
+          "reference": {},
+          "repeat_counts": {},
+          "source_model_id": "gpt-oss-120b"
+        },
+        {
+          "accuracy": {
+            "as_reference_percent": 98.15,
+            "lower": 91.03,
+            "mid": 98.15,
+            "upper": 105.27000000000001
+          },
+          "classification": "unknown",
+          "components": {},
+          "derived_classification": "reference_consistent",
+          "endpoint_id": "/providers/sambanova",
+          "identity_key": "gpt-oss-120b:sambanova:/providers/sambanova",
+          "index_version": "1.0",
+          "measurement_date": null,
+          "model_name": "gpt-oss-120b (high)",
+          "model_slug": "gpt-oss-120b",
+          "notes": null,
+          "observation_type": "endpoint_accuracy",
+          "output_tokens_per_task": null,
+          "provenance": {
+            "fetched_at": "2026-08-23T18:18:55Z",
+            "parser_version": "0.3.0",
+            "point_in_time": true,
+            "source": "artificial_analysis_endpoint_accuracy",
+            "source_url": "https://artificialanalysis.ai/models/gpt-oss-120b/providers"
+          },
+          "provider_id": "sambanova",
+          "provider_name": "SambaNova",
+          "reference": {},
+          "repeat_counts": {},
+          "source_model_id": "gpt-oss-120b"
+        },
+        {
+          "accuracy": {
+            "as_reference_percent": 97.9,
+            "lower": 89.81,
+            "mid": 97.9,
+            "upper": 105.99000000000001
+          },
+          "classification": "unknown",
+          "components": {},
+          "derived_classification": "reference_consistent",
+          "endpoint_id": "/providers/parasail",
+          "identity_key": "gpt-oss-120b:parasail:/providers/parasail",
+          "index_version": "1.0",
+          "measurement_date": null,
+          "model_name": "gpt-oss-120b (high)",
+          "model_slug": "gpt-oss-120b",
+          "notes": null,
+          "observation_type": "endpoint_accuracy",
+          "output_tokens_per_task": null,
+          "provenance": {
+            "fetched_at": "2026-08-23T18:18:55Z",
+            "parser_version": "0.3.0",
+            "point_in_time": true,
+            "source": "artificial_analysis_endpoint_accuracy",
+            "source_url": "https://artificialanalysis.ai/models/gpt-oss-120b/providers"
+          },
+          "provider_id": "parasail",
+          "provider_name": "Parasail",
+          "reference": {},
+          "repeat_counts": {},
+          "source_model_id": "gpt-oss-120b"
+        },
+        {
+          "accuracy": {
+            "as_reference_percent": 97.63,
+            "lower": 90.53,
+            "mid": 97.63,
+            "upper": 104.72999999999999
+          },
+          "classification": "unknown",
+          "components": {},
+          "derived_classification": "reference_consistent",
+          "endpoint_id": "/providers/coreweave",
+          "identity_key": "gpt-oss-120b:coreweave:/providers/coreweave",
+          "index_version": "1.0",
+          "measurement_date": null,
+          "model_name": "gpt-oss-120b (high)",
+          "model_slug": "gpt-oss-120b",
+          "notes": null,
+          "observation_type": "endpoint_accuracy",
+          "output_tokens_per_task": null,
+          "provenance": {
+            "fetched_at": "2026-08-23T18:18:55Z",
+            "parser_version": "0.3.0",
+            "point_in_time": true,
+            "source": "artificial_analysis_endpoint_accuracy",
+            "source_url": "https://artificialanalysis.ai/models/gpt-oss-120b/providers"
+          },
+          "provider_id": "coreweave",
+          "provider_name": "CoreWeave",
+          "reference": {},
+          "repeat_counts": {},
+          "source_model_id": "gpt-oss-120b"
+        },
+        {
+          "accuracy": {
+            "as_reference_percent": 97.01,
+            "lower": 86.74000000000001,
+            "mid": 97.01,
+            "upper": 107.28
+          },
+          "classification": "unknown",
+          "components": {},
+          "derived_classification": "reference_consistent",
+          "endpoint_id": "/providers/deepinfra",
+          "identity_key": "gpt-oss-120b:deepinfra:/providers/deepinfra",
+          "index_version": "1.0",
+          "measurement_date": null,
+          "model_name": "gpt-oss-120b (high)",
+          "model_slug": "gpt-oss-120b",
+          "notes": null,
+          "observation_type": "endpoint_accuracy",
+          "output_tokens_per_task": null,
+          "provenance": {
+            "fetched_at": "2026-08-23T18:18:55Z",
+            "parser_version": "0.3.0",
+            "point_in_time": true,
+            "source": "artificial_analysis_endpoint_accuracy",
+            "source_url": "https://artificialanalysis.ai/models/gpt-oss-120b/providers"
+          },
+          "provider_id": "deepinfra",
+          "provider_name": "DeepInfra",
+          "reference": {},
+          "repeat_counts": {},
+          "source_model_id": "gpt-oss-120b"
+        },
+        {
+          "accuracy": {
+            "as_reference_percent": 96.61,
+            "lower": 88.67,
+            "mid": 96.61,
+            "upper": 104.55
+          },
+          "classification": "unknown",
+          "components": {},
+          "derived_classification": "reference_consistent",
+          "endpoint_id": "/providers/scaleway",
+          "identity_key": "gpt-oss-120b:scaleway:/providers/scaleway",
+          "index_version": "1.0",
+          "measurement_date": null,
+          "model_name": "gpt-oss-120b (high)",
+          "model_slug": "gpt-oss-120b",
+          "notes": null,
+          "observation_type": "endpoint_accuracy",
+          "output_tokens_per_task": null,
+          "provenance": {
+            "fetched_at": "2026-08-23T18:18:55Z",
+            "parser_version": "0.3.0",
+            "point_in_time": true,
+            "source": "artificial_analysis_endpoint_accuracy",
+            "source_url": "https://artificialanalysis.ai/models/gpt-oss-120b/providers"
+          },
+          "provider_id": "scaleway",
+          "provider_name": "Scaleway",
+          "reference": {},
+          "repeat_counts": {},
+          "source_model_id": "gpt-oss-120b"
+        },
+        {
+          "accuracy": {
+            "as_reference_percent": 96.59,
+            "lower": 88.09,
+            "mid": 96.59,
+            "upper": 105.09
+          },
+          "classification": "unknown",
+          "components": {},
+          "derived_classification": "reference_consistent",
+          "endpoint_id": "/providers/nebius",
+          "identity_key": "gpt-oss-120b:nebius:/providers/nebius",
+          "index_version": "1.0",
+          "measurement_date": null,
+          "model_name": "gpt-oss-120b (high)",
+          "model_slug": "gpt-oss-120b",
+          "notes": null,
+          "observation_type": "endpoint_accuracy",
+          "output_tokens_per_task": null,
+          "provenance": {
+            "fetched_at": "2026-08-23T18:18:55Z",
+            "parser_version": "0.3.0",
+            "point_in_time": true,
+            "source": "artificial_analysis_endpoint_accuracy",
+            "source_url": "https://artificialanalysis.ai/models/gpt-oss-120b/providers"
+          },
+          "provider_id": "nebius",
+          "provider_name": "Nebius (Base)",
+          "reference": {},
+          "repeat_counts": {},
+          "source_model_id": "gpt-oss-120b"
+        },
+        {
+          "accuracy": {
+            "as_reference_percent": 92.9,
+            "lower": 85.7,
+            "mid": 92.9,
+            "upper": 100.10000000000001
+          },
+          "classification": "unknown",
+          "components": {},
+          "derived_classification": "reference_consistent",
+          "endpoint_id": "/providers/azure",
+          "identity_key": "gpt-oss-120b:azure:/providers/azure",
+          "index_version": "1.0",
+          "measurement_date": null,
+          "model_name": "gpt-oss-120b (high)",
+          "model_slug": "gpt-oss-120b",
+          "notes": null,
+          "observation_type": "endpoint_accuracy",
+          "output_tokens_per_task": null,
+          "provenance": {
+            "fetched_at": "2026-08-23T18:18:55Z",
+            "parser_version": "0.3.0",
+            "point_in_time": true,
+            "source": "artificial_analysis_endpoint_accuracy",
+            "source_url": "https://artificialanalysis.ai/models/gpt-oss-120b/providers"
+          },
+          "provider_id": "azure",
+          "provider_name": "Azure",
+          "reference": {},
+          "repeat_counts": {},
+          "source_model_id": "gpt-oss-120b"
+        },
+        {
+          "accuracy": {
+            "as_reference_percent": 90.84,
+            "lower": 81.83,
+            "mid": 90.84,
+            "upper": 99.85000000000001
+          },
+          "classification": "unknown",
+          "components": {},
+          "derived_classification": "below_reference",
+          "endpoint_id": "/providers/novita",
+          "identity_key": "gpt-oss-120b:novita:/providers/novita",
+          "index_version": "1.0",
+          "measurement_date": null,
+          "model_name": "gpt-oss-120b (high)",
+          "model_slug": "gpt-oss-120b",
+          "notes": null,
+          "observation_type": "endpoint_accuracy",
+          "output_tokens_per_task": null,
+          "provenance": {
+            "fetched_at": "2026-08-23T18:18:55Z",
+            "parser_version": "0.3.0",
+            "point_in_time": true,
+            "source": "artificial_analysis_endpoint_accuracy",
+            "source_url": "https://artificialanalysis.ai/models/gpt-oss-120b/providers"
+          },
+          "provider_id": "novita",
+          "provider_name": "Novita",
+          "reference": {},
+          "repeat_counts": {},
+          "source_model_id": "gpt-oss-120b"
+        },
+        {
+          "accuracy": {
+            "as_reference_percent": 87.28,
+            "lower": 79.36,
+            "mid": 87.28,
+            "upper": 95.2
+          },
+          "classification": "unknown",
+          "components": {},
+          "derived_classification": "below_reference",
+          "endpoint_id": "/providers/cerebras",
+          "identity_key": "gpt-oss-120b:cerebras:/providers/cerebras",
+          "index_version": "1.0",
+          "measurement_date": null,
+          "model_name": "gpt-oss-120b (high)",
+          "model_slug": "gpt-oss-120b",
+          "notes": null,
+          "observation_type": "endpoint_accuracy",
+          "output_tokens_per_task": null,
+          "provenance": {
+            "fetched_at": "2026-08-23T18:18:55Z",
+            "parser_version": "0.3.0",
+            "point_in_time": true,
+            "source": "artificial_analysis_endpoint_accuracy",
+            "source_url": "https://artificialanalysis.ai/models/gpt-oss-120b/providers"
+          },
+          "provider_id": "cerebras",
+          "provider_name": "Cerebras",
+          "reference": {},
+          "repeat_counts": {},
+          "source_model_id": "gpt-oss-120b"
+        },
+        {
+          "accuracy": {
+            "as_reference_percent": 86.36,
+            "lower": 77.73,
+            "mid": 86.36,
+            "upper": 94.99
+          },
+          "classification": "unknown",
+          "components": {},
+          "derived_classification": "below_reference",
+          "endpoint_id": "/providers/groq",
+          "identity_key": "gpt-oss-120b:groq:/providers/groq",
+          "index_version": "1.0",
+          "measurement_date": null,
+          "model_name": "gpt-oss-120b (high)",
+          "model_slug": "gpt-oss-120b",
+          "notes": null,
+          "observation_type": "endpoint_accuracy",
+          "output_tokens_per_task": null,
+          "provenance": {
+            "fetched_at": "2026-08-23T18:18:55Z",
+            "parser_version": "0.3.0",
+            "point_in_time": true,
+            "source": "artificial_analysis_endpoint_accuracy",
+            "source_url": "https://artificialanalysis.ai/models/gpt-oss-120b/providers"
+          },
+          "provider_id": "groq",
+          "provider_name": "Groq",
+          "reference": {},
+          "repeat_counts": {},
+          "source_model_id": "gpt-oss-120b"
+        },
+        {
+          "accuracy": {
+            "as_reference_percent": 84.4,
+            "lower": 75.59,
+            "mid": 84.4,
+            "upper": 93.21000000000001
+          },
+          "classification": "unknown",
+          "components": {},
+          "derived_classification": "below_reference",
+          "endpoint_id": "/providers/deepinfra",
+          "identity_key": "gpt-oss-120b:deepinfra:/providers/deepinfra",
+          "index_version": "1.0",
+          "measurement_date": null,
+          "model_name": "gpt-oss-120b (high)",
+          "model_slug": "gpt-oss-120b",
+          "notes": null,
+          "observation_type": "endpoint_accuracy",
+          "output_tokens_per_task": null,
+          "provenance": {
+            "fetched_at": "2026-08-23T18:18:55Z",
+            "parser_version": "0.3.0",
+            "point_in_time": true,
+            "source": "artificial_analysis_endpoint_accuracy",
+            "source_url": "https://artificialanalysis.ai/models/gpt-oss-120b/providers"
+          },
+          "provider_id": "deepinfra",
+          "provider_name": "DeepInfra (Turbo)",
+          "reference": {},
+          "repeat_counts": {},
+          "source_model_id": "gpt-oss-120b"
+        },
+        {
+          "accuracy": {
+            "as_reference_percent": 82.59,
+            "lower": 74.53,
+            "mid": 82.59,
+            "upper": 90.65
+          },
+          "classification": "unknown",
+          "components": {},
+          "derived_classification": "below_reference",
+          "endpoint_id": "/providers/togetherai",
+          "identity_key": "gpt-oss-120b:togetherai:/providers/togetherai",
+          "index_version": "1.0",
+          "measurement_date": null,
+          "model_name": "gpt-oss-120b (high)",
+          "model_slug": "gpt-oss-120b",
+          "notes": null,
+          "observation_type": "endpoint_accuracy",
+          "output_tokens_per_task": null,
+          "provenance": {
+            "fetched_at": "2026-08-23T18:18:55Z",
+            "parser_version": "0.3.0",
+            "point_in_time": true,
+            "source": "artificial_analysis_endpoint_accuracy",
+            "source_url": "https://artificialanalysis.ai/models/gpt-oss-120b/providers"
+          },
+          "provider_id": "togetherai",
+          "provider_name": "Together AI",
+          "reference": {},
+          "repeat_counts": {},
+          "source_model_id": "gpt-oss-120b"
+        },
+        {
+          "accuracy": {
+            "as_reference_percent": 72.2,
+            "lower": 65.41,
+            "mid": 72.2,
+            "upper": 78.99000000000001
+          },
+          "classification": "unknown",
+          "components": {},
+          "derived_classification": "below_reference",
+          "endpoint_id": "/providers/google",
+          "identity_key": "gpt-oss-120b:google:/providers/google",
+          "index_version": "1.0",
+          "measurement_date": null,
+          "model_name": "gpt-oss-120b (high)",
+          "model_slug": "gpt-oss-120b",
+          "notes": null,
+          "observation_type": "endpoint_accuracy",
+          "output_tokens_per_task": null,
+          "provenance": {
+            "fetched_at": "2026-08-23T18:18:55Z",
+            "parser_version": "0.3.0",
+            "point_in_time": true,
+            "source": "artificial_analysis_endpoint_accuracy",
+            "source_url": "https://artificialanalysis.ai/models/gpt-oss-120b/providers"
+          },
+          "provider_id": "google",
+          "provider_name": "Google Vertex",
+          "reference": {},
+          "repeat_counts": {},
+          "source_model_id": "gpt-oss-120b"
+        },
+        {
+          "accuracy": {
+            "as_reference_percent": 69.83,
+            "lower": 61.33,
+            "mid": 69.83,
+            "upper": 78.33
+          },
+          "classification": "unknown",
+          "components": {},
+          "derived_classification": "below_reference",
+          "endpoint_id": "/providers/cloudflare",
+          "identity_key": "gpt-oss-120b:cloudflare:/providers/cloudflare",
+          "index_version": "1.0",
+          "measurement_date": null,
+          "model_name": "gpt-oss-120b (high)",
+          "model_slug": "gpt-oss-120b",
+          "notes": null,
+          "observation_type": "endpoint_accuracy",
+          "output_tokens_per_task": null,
+          "provenance": {
+            "fetched_at": "2026-08-23T18:18:55Z",
+            "parser_version": "0.3.0",
+            "point_in_time": true,
+            "source": "artificial_analysis_endpoint_accuracy",
+            "source_url": "https://artificialanalysis.ai/models/gpt-oss-120b/providers"
+          },
+          "provider_id": "cloudflare",
+          "provider_name": "Cloudflare",
+          "reference": {},
+          "repeat_counts": {},
+          "source_model_id": "gpt-oss-120b"
+        }
+      ]
+    }
+  ],
   "observation_count": 30,
   "observations": [
     {
@@ -17,6 +1009,7 @@
       },
       "classification": "unknown",
       "components": {},
+      "derived_classification": "reference_consistent",
       "endpoint_id": "SGLang",
       "identity_key": "glm-5-2:sglang:SGLang",
       "index_version": "1.0",
@@ -27,8 +1020,8 @@
       "observation_type": "endpoint_accuracy",
       "output_tokens_per_task": null,
       "provenance": {
-        "fetched_at": "2026-08-23T17:38:32Z",
-        "parser_version": "0.2.0",
+        "fetched_at": "2026-08-23T18:18:55Z",
+        "parser_version": "0.3.0",
         "point_in_time": true,
         "source": "artificial_analysis_endpoint_accuracy",
         "source_url": "https://artificialanalysis.ai/models/glm-5-2/providers"
@@ -48,6 +1041,7 @@
       },
       "classification": "unknown",
       "components": {},
+      "derived_classification": "reference_consistent",
       "endpoint_id": "/providers/togetherai",
       "identity_key": "glm-5-2:togetherai:/providers/togetherai",
       "index_version": "1.0",
@@ -58,8 +1052,8 @@
       "observation_type": "endpoint_accuracy",
       "output_tokens_per_task": null,
       "provenance": {
-        "fetched_at": "2026-08-23T17:38:32Z",
-        "parser_version": "0.2.0",
+        "fetched_at": "2026-08-23T18:18:55Z",
+        "parser_version": "0.3.0",
         "point_in_time": true,
         "source": "artificial_analysis_endpoint_accuracy",
         "source_url": "https://artificialanalysis.ai/models/glm-5-2/providers"
@@ -79,6 +1073,7 @@
       },
       "classification": "unknown",
       "components": {},
+      "derived_classification": "reference_consistent",
       "endpoint_id": "/providers/nebius",
       "identity_key": "glm-5-2:nebius:/providers/nebius",
       "index_version": "1.0",
@@ -89,8 +1084,8 @@
       "observation_type": "endpoint_accuracy",
       "output_tokens_per_task": null,
       "provenance": {
-        "fetched_at": "2026-08-23T17:38:32Z",
-        "parser_version": "0.2.0",
+        "fetched_at": "2026-08-23T18:18:55Z",
+        "parser_version": "0.3.0",
         "point_in_time": true,
         "source": "artificial_analysis_endpoint_accuracy",
         "source_url": "https://artificialanalysis.ai/models/glm-5-2/providers"
@@ -110,6 +1105,7 @@
       },
       "classification": "unknown",
       "components": {},
+      "derived_classification": "reference_consistent",
       "endpoint_id": "/providers/fireworks",
       "identity_key": "glm-5-2:fireworks:/providers/fireworks",
       "index_version": "1.0",
@@ -120,8 +1116,8 @@
       "observation_type": "endpoint_accuracy",
       "output_tokens_per_task": null,
       "provenance": {
-        "fetched_at": "2026-08-23T17:38:32Z",
-        "parser_version": "0.2.0",
+        "fetched_at": "2026-08-23T18:18:55Z",
+        "parser_version": "0.3.0",
         "point_in_time": true,
         "source": "artificial_analysis_endpoint_accuracy",
         "source_url": "https://artificialanalysis.ai/models/glm-5-2/providers"
@@ -141,6 +1137,7 @@
       },
       "classification": "unknown",
       "components": {},
+      "derived_classification": "reference_consistent",
       "endpoint_id": "/providers/friendli-ai",
       "identity_key": "glm-5-2:friendli-ai:/providers/friendli-ai",
       "index_version": "1.0",
@@ -151,8 +1148,8 @@
       "observation_type": "endpoint_accuracy",
       "output_tokens_per_task": null,
       "provenance": {
-        "fetched_at": "2026-08-23T17:38:32Z",
-        "parser_version": "0.2.0",
+        "fetched_at": "2026-08-23T18:18:55Z",
+        "parser_version": "0.3.0",
         "point_in_time": true,
         "source": "artificial_analysis_endpoint_accuracy",
         "source_url": "https://artificialanalysis.ai/models/glm-5-2/providers"
@@ -172,6 +1169,7 @@
       },
       "classification": "unknown",
       "components": {},
+      "derived_classification": "reference_consistent",
       "endpoint_id": "/providers/siliconflow",
       "identity_key": "glm-5-2:siliconflow:/providers/siliconflow",
       "index_version": "1.0",
@@ -182,8 +1180,8 @@
       "observation_type": "endpoint_accuracy",
       "output_tokens_per_task": null,
       "provenance": {
-        "fetched_at": "2026-08-23T17:38:32Z",
-        "parser_version": "0.2.0",
+        "fetched_at": "2026-08-23T18:18:55Z",
+        "parser_version": "0.3.0",
         "point_in_time": true,
         "source": "artificial_analysis_endpoint_accuracy",
         "source_url": "https://artificialanalysis.ai/models/glm-5-2/providers"
@@ -203,6 +1201,7 @@
       },
       "classification": "unknown",
       "components": {},
+      "derived_classification": "reference_consistent",
       "endpoint_id": "/providers/parasail",
       "identity_key": "glm-5-2:parasail:/providers/parasail",
       "index_version": "1.0",
@@ -213,8 +1212,8 @@
       "observation_type": "endpoint_accuracy",
       "output_tokens_per_task": null,
       "provenance": {
-        "fetched_at": "2026-08-23T17:38:32Z",
-        "parser_version": "0.2.0",
+        "fetched_at": "2026-08-23T18:18:55Z",
+        "parser_version": "0.3.0",
         "point_in_time": true,
         "source": "artificial_analysis_endpoint_accuracy",
         "source_url": "https://artificialanalysis.ai/models/glm-5-2/providers"
@@ -234,6 +1233,7 @@
       },
       "classification": "unknown",
       "components": {},
+      "derived_classification": "reference_consistent",
       "endpoint_id": "/providers/wafer",
       "identity_key": "glm-5-2:wafer:/providers/wafer",
       "index_version": "1.0",
@@ -244,8 +1244,8 @@
       "observation_type": "endpoint_accuracy",
       "output_tokens_per_task": null,
       "provenance": {
-        "fetched_at": "2026-08-23T17:38:32Z",
-        "parser_version": "0.2.0",
+        "fetched_at": "2026-08-23T18:18:55Z",
+        "parser_version": "0.3.0",
         "point_in_time": true,
         "source": "artificial_analysis_endpoint_accuracy",
         "source_url": "https://artificialanalysis.ai/models/glm-5-2/providers"
@@ -265,6 +1265,7 @@
       },
       "classification": "unknown",
       "components": {},
+      "derived_classification": "reference_consistent",
       "endpoint_id": "/providers/baseten",
       "identity_key": "glm-5-2:baseten:/providers/baseten",
       "index_version": "1.0",
@@ -275,8 +1276,8 @@
       "observation_type": "endpoint_accuracy",
       "output_tokens_per_task": null,
       "provenance": {
-        "fetched_at": "2026-08-23T17:38:32Z",
-        "parser_version": "0.2.0",
+        "fetched_at": "2026-08-23T18:18:55Z",
+        "parser_version": "0.3.0",
         "point_in_time": true,
         "source": "artificial_analysis_endpoint_accuracy",
         "source_url": "https://artificialanalysis.ai/models/glm-5-2/providers"
@@ -296,6 +1297,7 @@
       },
       "classification": "unknown",
       "components": {},
+      "derived_classification": "reference_consistent",
       "endpoint_id": "/providers/novita",
       "identity_key": "glm-5-2:novita:/providers/novita",
       "index_version": "1.0",
@@ -306,8 +1308,8 @@
       "observation_type": "endpoint_accuracy",
       "output_tokens_per_task": null,
       "provenance": {
-        "fetched_at": "2026-08-23T17:38:32Z",
-        "parser_version": "0.2.0",
+        "fetched_at": "2026-08-23T18:18:55Z",
+        "parser_version": "0.3.0",
         "point_in_time": true,
         "source": "artificial_analysis_endpoint_accuracy",
         "source_url": "https://artificialanalysis.ai/models/glm-5-2/providers"
@@ -327,6 +1329,7 @@
       },
       "classification": "unknown",
       "components": {},
+      "derived_classification": "reference_consistent",
       "endpoint_id": "/providers/coreweave",
       "identity_key": "glm-5-2:coreweave:/providers/coreweave",
       "index_version": "1.0",
@@ -337,8 +1340,8 @@
       "observation_type": "endpoint_accuracy",
       "output_tokens_per_task": null,
       "provenance": {
-        "fetched_at": "2026-08-23T17:38:32Z",
-        "parser_version": "0.2.0",
+        "fetched_at": "2026-08-23T18:18:55Z",
+        "parser_version": "0.3.0",
         "point_in_time": true,
         "source": "artificial_analysis_endpoint_accuracy",
         "source_url": "https://artificialanalysis.ai/models/glm-5-2/providers"
@@ -358,6 +1361,7 @@
       },
       "classification": "unknown",
       "components": {},
+      "derived_classification": "reference_consistent",
       "endpoint_id": "/providers/makora",
       "identity_key": "glm-5-2:makora:/providers/makora",
       "index_version": "1.0",
@@ -368,8 +1372,8 @@
       "observation_type": "endpoint_accuracy",
       "output_tokens_per_task": null,
       "provenance": {
-        "fetched_at": "2026-08-23T17:38:32Z",
-        "parser_version": "0.2.0",
+        "fetched_at": "2026-08-23T18:18:55Z",
+        "parser_version": "0.3.0",
         "point_in_time": true,
         "source": "artificial_analysis_endpoint_accuracy",
         "source_url": "https://artificialanalysis.ai/models/glm-5-2/providers"
@@ -389,6 +1393,7 @@
       },
       "classification": "unknown",
       "components": {},
+      "derived_classification": "below_reference",
       "endpoint_id": "/providers/scaleway",
       "identity_key": "glm-5-2:scaleway:/providers/scaleway",
       "index_version": "1.0",
@@ -399,8 +1404,8 @@
       "observation_type": "endpoint_accuracy",
       "output_tokens_per_task": null,
       "provenance": {
-        "fetched_at": "2026-08-23T17:38:32Z",
-        "parser_version": "0.2.0",
+        "fetched_at": "2026-08-23T18:18:55Z",
+        "parser_version": "0.3.0",
         "point_in_time": true,
         "source": "artificial_analysis_endpoint_accuracy",
         "source_url": "https://artificialanalysis.ai/models/glm-5-2/providers"
@@ -420,6 +1425,7 @@
       },
       "classification": "unknown",
       "components": {},
+      "derived_classification": "below_reference",
       "endpoint_id": "/providers/deepinfra",
       "identity_key": "glm-5-2:deepinfra:/providers/deepinfra",
       "index_version": "1.0",
@@ -430,8 +1436,8 @@
       "observation_type": "endpoint_accuracy",
       "output_tokens_per_task": null,
       "provenance": {
-        "fetched_at": "2026-08-23T17:38:32Z",
-        "parser_version": "0.2.0",
+        "fetched_at": "2026-08-23T18:18:55Z",
+        "parser_version": "0.3.0",
         "point_in_time": true,
         "source": "artificial_analysis_endpoint_accuracy",
         "source_url": "https://artificialanalysis.ai/models/glm-5-2/providers"
@@ -451,6 +1457,7 @@
       },
       "classification": "unknown",
       "components": {},
+      "derived_classification": "reference_consistent",
       "endpoint_id": "SGLang",
       "identity_key": "gpt-oss-120b:sglang:SGLang",
       "index_version": "1.0",
@@ -461,8 +1468,8 @@
       "observation_type": "endpoint_accuracy",
       "output_tokens_per_task": null,
       "provenance": {
-        "fetched_at": "2026-08-23T17:38:33Z",
-        "parser_version": "0.2.0",
+        "fetched_at": "2026-08-23T18:18:55Z",
+        "parser_version": "0.3.0",
         "point_in_time": true,
         "source": "artificial_analysis_endpoint_accuracy",
         "source_url": "https://artificialanalysis.ai/models/gpt-oss-120b/providers"
@@ -482,6 +1489,7 @@
       },
       "classification": "unknown",
       "components": {},
+      "derived_classification": "reference_consistent",
       "endpoint_id": "/providers/amazon_bedrock",
       "identity_key": "gpt-oss-120b:amazon_bedrock:/providers/amazon_bedrock",
       "index_version": "1.0",
@@ -492,8 +1500,8 @@
       "observation_type": "endpoint_accuracy",
       "output_tokens_per_task": null,
       "provenance": {
-        "fetched_at": "2026-08-23T17:38:33Z",
-        "parser_version": "0.2.0",
+        "fetched_at": "2026-08-23T18:18:55Z",
+        "parser_version": "0.3.0",
         "point_in_time": true,
         "source": "artificial_analysis_endpoint_accuracy",
         "source_url": "https://artificialanalysis.ai/models/gpt-oss-120b/providers"
@@ -513,6 +1521,7 @@
       },
       "classification": "unknown",
       "components": {},
+      "derived_classification": "reference_consistent",
       "endpoint_id": "/providers/sambanova",
       "identity_key": "gpt-oss-120b:sambanova:/providers/sambanova",
       "index_version": "1.0",
@@ -523,8 +1532,8 @@
       "observation_type": "endpoint_accuracy",
       "output_tokens_per_task": null,
       "provenance": {
-        "fetched_at": "2026-08-23T17:38:33Z",
-        "parser_version": "0.2.0",
+        "fetched_at": "2026-08-23T18:18:55Z",
+        "parser_version": "0.3.0",
         "point_in_time": true,
         "source": "artificial_analysis_endpoint_accuracy",
         "source_url": "https://artificialanalysis.ai/models/gpt-oss-120b/providers"
@@ -544,6 +1553,7 @@
       },
       "classification": "unknown",
       "components": {},
+      "derived_classification": "reference_consistent",
       "endpoint_id": "/providers/parasail",
       "identity_key": "gpt-oss-120b:parasail:/providers/parasail",
       "index_version": "1.0",
@@ -554,8 +1564,8 @@
       "observation_type": "endpoint_accuracy",
       "output_tokens_per_task": null,
       "provenance": {
-        "fetched_at": "2026-08-23T17:38:33Z",
-        "parser_version": "0.2.0",
+        "fetched_at": "2026-08-23T18:18:55Z",
+        "parser_version": "0.3.0",
         "point_in_time": true,
         "source": "artificial_analysis_endpoint_accuracy",
         "source_url": "https://artificialanalysis.ai/models/gpt-oss-120b/providers"
@@ -575,6 +1585,7 @@
       },
       "classification": "unknown",
       "components": {},
+      "derived_classification": "reference_consistent",
       "endpoint_id": "/providers/coreweave",
       "identity_key": "gpt-oss-120b:coreweave:/providers/coreweave",
       "index_version": "1.0",
@@ -585,8 +1596,8 @@
       "observation_type": "endpoint_accuracy",
       "output_tokens_per_task": null,
       "provenance": {
-        "fetched_at": "2026-08-23T17:38:33Z",
-        "parser_version": "0.2.0",
+        "fetched_at": "2026-08-23T18:18:55Z",
+        "parser_version": "0.3.0",
         "point_in_time": true,
         "source": "artificial_analysis_endpoint_accuracy",
         "source_url": "https://artificialanalysis.ai/models/gpt-oss-120b/providers"
@@ -606,6 +1617,7 @@
       },
       "classification": "unknown",
       "components": {},
+      "derived_classification": "reference_consistent",
       "endpoint_id": "/providers/deepinfra",
       "identity_key": "gpt-oss-120b:deepinfra:/providers/deepinfra",
       "index_version": "1.0",
@@ -616,8 +1628,8 @@
       "observation_type": "endpoint_accuracy",
       "output_tokens_per_task": null,
       "provenance": {
-        "fetched_at": "2026-08-23T17:38:33Z",
-        "parser_version": "0.2.0",
+        "fetched_at": "2026-08-23T18:18:55Z",
+        "parser_version": "0.3.0",
         "point_in_time": true,
         "source": "artificial_analysis_endpoint_accuracy",
         "source_url": "https://artificialanalysis.ai/models/gpt-oss-120b/providers"
@@ -637,6 +1649,7 @@
       },
       "classification": "unknown",
       "components": {},
+      "derived_classification": "reference_consistent",
       "endpoint_id": "/providers/scaleway",
       "identity_key": "gpt-oss-120b:scaleway:/providers/scaleway",
       "index_version": "1.0",
@@ -647,8 +1660,8 @@
       "observation_type": "endpoint_accuracy",
       "output_tokens_per_task": null,
       "provenance": {
-        "fetched_at": "2026-08-23T17:38:33Z",
-        "parser_version": "0.2.0",
+        "fetched_at": "2026-08-23T18:18:55Z",
+        "parser_version": "0.3.0",
         "point_in_time": true,
         "source": "artificial_analysis_endpoint_accuracy",
         "source_url": "https://artificialanalysis.ai/models/gpt-oss-120b/providers"
@@ -668,6 +1681,7 @@
       },
       "classification": "unknown",
       "components": {},
+      "derived_classification": "reference_consistent",
       "endpoint_id": "/providers/nebius",
       "identity_key": "gpt-oss-120b:nebius:/providers/nebius",
       "index_version": "1.0",
@@ -678,8 +1692,8 @@
       "observation_type": "endpoint_accuracy",
       "output_tokens_per_task": null,
       "provenance": {
-        "fetched_at": "2026-08-23T17:38:33Z",
-        "parser_version": "0.2.0",
+        "fetched_at": "2026-08-23T18:18:55Z",
+        "parser_version": "0.3.0",
         "point_in_time": true,
         "source": "artificial_analysis_endpoint_accuracy",
         "source_url": "https://artificialanalysis.ai/models/gpt-oss-120b/providers"
@@ -699,6 +1713,7 @@
       },
       "classification": "unknown",
       "components": {},
+      "derived_classification": "reference_consistent",
       "endpoint_id": "/providers/azure",
       "identity_key": "gpt-oss-120b:azure:/providers/azure",
       "index_version": "1.0",
@@ -709,8 +1724,8 @@
       "observation_type": "endpoint_accuracy",
       "output_tokens_per_task": null,
       "provenance": {
-        "fetched_at": "2026-08-23T17:38:33Z",
-        "parser_version": "0.2.0",
+        "fetched_at": "2026-08-23T18:18:55Z",
+        "parser_version": "0.3.0",
         "point_in_time": true,
         "source": "artificial_analysis_endpoint_accuracy",
         "source_url": "https://artificialanalysis.ai/models/gpt-oss-120b/providers"
@@ -730,6 +1745,7 @@
       },
       "classification": "unknown",
       "components": {},
+      "derived_classification": "below_reference",
       "endpoint_id": "/providers/novita",
       "identity_key": "gpt-oss-120b:novita:/providers/novita",
       "index_version": "1.0",
@@ -740,8 +1756,8 @@
       "observation_type": "endpoint_accuracy",
       "output_tokens_per_task": null,
       "provenance": {
-        "fetched_at": "2026-08-23T17:38:33Z",
-        "parser_version": "0.2.0",
+        "fetched_at": "2026-08-23T18:18:55Z",
+        "parser_version": "0.3.0",
         "point_in_time": true,
         "source": "artificial_analysis_endpoint_accuracy",
         "source_url": "https://artificialanalysis.ai/models/gpt-oss-120b/providers"
@@ -761,6 +1777,7 @@
       },
       "classification": "unknown",
       "components": {},
+      "derived_classification": "below_reference",
       "endpoint_id": "/providers/cerebras",
       "identity_key": "gpt-oss-120b:cerebras:/providers/cerebras",
       "index_version": "1.0",
@@ -771,8 +1788,8 @@
       "observation_type": "endpoint_accuracy",
       "output_tokens_per_task": null,
       "provenance": {
-        "fetched_at": "2026-08-23T17:38:33Z",
-        "parser_version": "0.2.0",
+        "fetched_at": "2026-08-23T18:18:55Z",
+        "parser_version": "0.3.0",
         "point_in_time": true,
         "source": "artificial_analysis_endpoint_accuracy",
         "source_url": "https://artificialanalysis.ai/models/gpt-oss-120b/providers"
@@ -792,6 +1809,7 @@
       },
       "classification": "unknown",
       "components": {},
+      "derived_classification": "below_reference",
       "endpoint_id": "/providers/groq",
       "identity_key": "gpt-oss-120b:groq:/providers/groq",
       "index_version": "1.0",
@@ -802,8 +1820,8 @@
       "observation_type": "endpoint_accuracy",
       "output_tokens_per_task": null,
       "provenance": {
-        "fetched_at": "2026-08-23T17:38:33Z",
-        "parser_version": "0.2.0",
+        "fetched_at": "2026-08-23T18:18:55Z",
+        "parser_version": "0.3.0",
         "point_in_time": true,
         "source": "artificial_analysis_endpoint_accuracy",
         "source_url": "https://artificialanalysis.ai/models/gpt-oss-120b/providers"
@@ -823,6 +1841,7 @@
       },
       "classification": "unknown",
       "components": {},
+      "derived_classification": "below_reference",
       "endpoint_id": "/providers/deepinfra",
       "identity_key": "gpt-oss-120b:deepinfra:/providers/deepinfra",
       "index_version": "1.0",
@@ -833,8 +1852,8 @@
       "observation_type": "endpoint_accuracy",
       "output_tokens_per_task": null,
       "provenance": {
-        "fetched_at": "2026-08-23T17:38:33Z",
-        "parser_version": "0.2.0",
+        "fetched_at": "2026-08-23T18:18:55Z",
+        "parser_version": "0.3.0",
         "point_in_time": true,
         "source": "artificial_analysis_endpoint_accuracy",
         "source_url": "https://artificialanalysis.ai/models/gpt-oss-120b/providers"
@@ -854,6 +1873,7 @@
       },
       "classification": "unknown",
       "components": {},
+      "derived_classification": "below_reference",
       "endpoint_id": "/providers/togetherai",
       "identity_key": "gpt-oss-120b:togetherai:/providers/togetherai",
       "index_version": "1.0",
@@ -864,8 +1884,8 @@
       "observation_type": "endpoint_accuracy",
       "output_tokens_per_task": null,
       "provenance": {
-        "fetched_at": "2026-08-23T17:38:33Z",
-        "parser_version": "0.2.0",
+        "fetched_at": "2026-08-23T18:18:55Z",
+        "parser_version": "0.3.0",
         "point_in_time": true,
         "source": "artificial_analysis_endpoint_accuracy",
         "source_url": "https://artificialanalysis.ai/models/gpt-oss-120b/providers"
@@ -885,6 +1905,7 @@
       },
       "classification": "unknown",
       "components": {},
+      "derived_classification": "below_reference",
       "endpoint_id": "/providers/google",
       "identity_key": "gpt-oss-120b:google:/providers/google",
       "index_version": "1.0",
@@ -895,8 +1916,8 @@
       "observation_type": "endpoint_accuracy",
       "output_tokens_per_task": null,
       "provenance": {
-        "fetched_at": "2026-08-23T17:38:33Z",
-        "parser_version": "0.2.0",
+        "fetched_at": "2026-08-23T18:18:55Z",
+        "parser_version": "0.3.0",
         "point_in_time": true,
         "source": "artificial_analysis_endpoint_accuracy",
         "source_url": "https://artificialanalysis.ai/models/gpt-oss-120b/providers"
@@ -916,6 +1937,7 @@
       },
       "classification": "unknown",
       "components": {},
+      "derived_classification": "below_reference",
       "endpoint_id": "/providers/cloudflare",
       "identity_key": "gpt-oss-120b:cloudflare:/providers/cloudflare",
       "index_version": "1.0",
@@ -926,8 +1948,8 @@
       "observation_type": "endpoint_accuracy",
       "output_tokens_per_task": null,
       "provenance": {
-        "fetched_at": "2026-08-23T17:38:33Z",
-        "parser_version": "0.2.0",
+        "fetched_at": "2026-08-23T18:18:55Z",
+        "parser_version": "0.3.0",
         "point_in_time": true,
         "source": "artificial_analysis_endpoint_accuracy",
         "source_url": "https://artificialanalysis.ai/models/gpt-oss-120b/providers"
@@ -939,7 +1961,7 @@
       "source_model_id": "gpt-oss-120b"
     }
   ],
-  "parser_version": "0.2.0",
+  "parser_version": "0.3.0",
   "source": "artificial_analysis_endpoint_accuracy",
-  "version": 1
+  "version": 2
 }

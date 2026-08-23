@@ -5,8 +5,8 @@
   "source": "openrouter",
   "source_url": "https://openrouter.ai/api/v1/models",
   "model_catalog_count": 422,
-  "endpoint_models_requested": 25,
-  "endpoint_observation_count": 445,
+  "endpoint_models_requested": 26,
+  "endpoint_observation_count": 465,
   "endpoint_errors": [],
   "observations": [
     {
@@ -25675,13 +25675,1133 @@
       "provider_id": "z-ai/fp8",
       "provider_name": "Z.AI",
       "quantization": "fp8"
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "openai/gpt-oss-120b",
+      "model_slug": "openai/gpt-oss-120b",
+      "provider_id": "coreweave/fp4",
+      "provider_name": "CoreWeave",
+      "endpoint_id": "CoreWeave | openai/gpt-oss-120b",
+      "identity_key": "openai/gpt-oss-120b:coreweave/fp4:CoreWeave | openai/gpt-oss-120b",
+      "context_tokens": 131072,
+      "pricing": {
+        "input_per_million": 0.03,
+        "output_per_million": 0.16999999999999998,
+        "raw": {
+          "prompt": "0.00000003",
+          "completion": "0.00000017",
+          "input_cache_read": "0.00000003",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 98.74755729259194,
+        "uptime_30m": 98.31452401033509,
+        "uptime_1d": 99.37579895986343
+      },
+      "quantization": "fp4",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "include_reasoning",
+          "logprobs",
+          "max_tokens",
+          "presence_penalty",
+          "reasoning",
+          "reasoning_effort",
+          "repetition_penalty",
+          "response_format",
+          "seed",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_k",
+          "top_logprobs",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T00:00:00Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "openai/gpt-oss-120b"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "openai/gpt-oss-120b",
+      "model_slug": "openai/gpt-oss-120b",
+      "provider_id": "deepinfra/bf16",
+      "provider_name": "DeepInfra",
+      "endpoint_id": "DeepInfra | openai/gpt-oss-120b",
+      "identity_key": "openai/gpt-oss-120b:deepinfra/bf16:DeepInfra | openai/gpt-oss-120b",
+      "context_tokens": 131072,
+      "pricing": {
+        "input_per_million": 0.037,
+        "output_per_million": 0.16999999999999998,
+        "raw": {
+          "prompt": "0.000000037",
+          "completion": "0.00000017",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 99.97102778917888,
+        "uptime_30m": 99.7426493401307,
+        "uptime_1d": 98.03296820505906
+      },
+      "quantization": "bf16",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "include_reasoning",
+          "logit_bias",
+          "max_tokens",
+          "min_p",
+          "presence_penalty",
+          "reasoning",
+          "reasoning_effort",
+          "repetition_penalty",
+          "response_format",
+          "seed",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_k",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T00:00:00Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "openai/gpt-oss-120b"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "openai/gpt-oss-120b",
+      "model_slug": "openai/gpt-oss-120b",
+      "provider_id": "akashml/bf16",
+      "provider_name": "AkashML",
+      "endpoint_id": "AkashML | openai/gpt-oss-120b",
+      "identity_key": "openai/gpt-oss-120b:akashml/bf16:AkashML | openai/gpt-oss-120b",
+      "context_tokens": 131072,
+      "pricing": {
+        "input_per_million": 0.037,
+        "output_per_million": 0.49,
+        "raw": {
+          "prompt": "0.000000037",
+          "completion": "0.00000049",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 100.0,
+        "uptime_30m": 99.97662641215427,
+        "uptime_1d": 99.93753863339195
+      },
+      "quantization": "bf16",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "include_reasoning",
+          "logprobs",
+          "max_tokens",
+          "presence_penalty",
+          "reasoning",
+          "reasoning_effort",
+          "repetition_penalty",
+          "response_format",
+          "seed",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_k",
+          "top_logprobs",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T00:00:00Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "openai/gpt-oss-120b"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "openai/gpt-oss-120b",
+      "model_slug": "openai/gpt-oss-120b",
+      "provider_id": "novita/fp4",
+      "provider_name": "Novita",
+      "endpoint_id": "Novita | openai/gpt-oss-120b",
+      "identity_key": "openai/gpt-oss-120b:novita/fp4:Novita | openai/gpt-oss-120b",
+      "context_tokens": 131072,
+      "pricing": {
+        "input_per_million": 0.049999999999999996,
+        "output_per_million": 0.25,
+        "raw": {
+          "prompt": "0.00000005",
+          "completion": "0.00000025",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "unavailable",
+        "uptime_5m": 100.0,
+        "uptime_30m": 93.68583728888397,
+        "uptime_1d": 97.34768299443526
+      },
+      "quantization": "fp4",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "include_reasoning",
+          "logprobs",
+          "max_tokens",
+          "presence_penalty",
+          "reasoning",
+          "reasoning_effort",
+          "repetition_penalty",
+          "response_format",
+          "seed",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_k",
+          "top_logprobs",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T00:00:00Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "openai/gpt-oss-120b"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "openai/gpt-oss-120b",
+      "model_slug": "openai/gpt-oss-120b",
+      "provider_id": "siliconflow/fp8",
+      "provider_name": "SiliconFlow",
+      "endpoint_id": "SiliconFlow | openai/gpt-oss-120b",
+      "identity_key": "openai/gpt-oss-120b:siliconflow/fp8:SiliconFlow | openai/gpt-oss-120b",
+      "context_tokens": 131072,
+      "pricing": {
+        "input_per_million": 0.049999999999999996,
+        "output_per_million": 0.44999999999999996,
+        "raw": {
+          "prompt": "0.00000005",
+          "completion": "0.00000045",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": null,
+        "uptime_30m": null,
+        "uptime_1d": 89.25037903530271
+      },
+      "quantization": "fp8",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "include_reasoning",
+          "max_tokens",
+          "reasoning",
+          "reasoning_effort",
+          "response_format",
+          "structured_outputs",
+          "temperature",
+          "top_k",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T00:00:00Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "openai/gpt-oss-120b"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "openai/gpt-oss-120b",
+      "model_slug": "openai/gpt-oss-120b",
+      "provider_id": "digitalocean",
+      "provider_name": "DigitalOcean",
+      "endpoint_id": "DigitalOcean | openai/gpt-oss-120b",
+      "identity_key": "openai/gpt-oss-120b:digitalocean:DigitalOcean | openai/gpt-oss-120b",
+      "context_tokens": 128000,
+      "pricing": {
+        "input_per_million": 0.055,
+        "output_per_million": 0.385,
+        "raw": {
+          "prompt": "0.000000055",
+          "completion": "0.000000385",
+          "input_cache_read": "0.00000002",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 100.0,
+        "uptime_30m": 100.0,
+        "uptime_1d": 99.97980279239343
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "include_reasoning",
+          "logprobs",
+          "max_tokens",
+          "reasoning",
+          "reasoning_effort",
+          "temperature",
+          "top_logprobs",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T00:00:00Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "openai/gpt-oss-120b"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "openai/gpt-oss-120b",
+      "model_slug": "openai/gpt-oss-120b",
+      "provider_id": "mancer/fp8",
+      "provider_name": "Mancer 2",
+      "endpoint_id": "Mancer 2 | openai/gpt-oss-120b",
+      "identity_key": "openai/gpt-oss-120b:mancer/fp8:Mancer 2 | openai/gpt-oss-120b",
+      "context_tokens": 131072,
+      "pricing": {
+        "input_per_million": 0.08499999999999999,
+        "output_per_million": 0.5,
+        "raw": {
+          "prompt": "0.000000085",
+          "completion": "0.0000005",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 100.0,
+        "uptime_30m": 100.0,
+        "uptime_1d": 99.0348861951939
+      },
+      "quantization": "fp8",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "include_reasoning",
+          "logit_bias",
+          "logprobs",
+          "max_tokens",
+          "min_p",
+          "presence_penalty",
+          "reasoning",
+          "reasoning_effort",
+          "repetition_penalty",
+          "response_format",
+          "seed",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_a",
+          "top_k",
+          "top_logprobs",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T00:00:00Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "openai/gpt-oss-120b"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "openai/gpt-oss-120b",
+      "model_slug": "openai/gpt-oss-120b",
+      "provider_id": "google-vertex/global",
+      "provider_name": "Google",
+      "endpoint_id": "Google | openai/gpt-oss-120b",
+      "identity_key": "openai/gpt-oss-120b:google-vertex/global:Google | openai/gpt-oss-120b",
+      "context_tokens": 131072,
+      "pricing": {
+        "input_per_million": 0.09,
+        "output_per_million": 0.36,
+        "raw": {
+          "prompt": "0.00000009",
+          "completion": "0.00000036",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "unavailable",
+        "uptime_5m": 73.56687898089172,
+        "uptime_30m": 78.40440165061898,
+        "uptime_1d": 79.35404442439346
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "include_reasoning",
+          "max_tokens",
+          "reasoning",
+          "reasoning_effort",
+          "repetition_penalty",
+          "response_format",
+          "seed",
+          "structured_outputs",
+          "temperature",
+          "top_k",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T00:00:00Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "openai/gpt-oss-120b"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "openai/gpt-oss-120b",
+      "model_slug": "openai/gpt-oss-120b",
+      "provider_id": "baseten/fp4",
+      "provider_name": "BaseTen",
+      "endpoint_id": "BaseTen | openai/gpt-oss-120b",
+      "identity_key": "openai/gpt-oss-120b:baseten/fp4:BaseTen | openai/gpt-oss-120b",
+      "context_tokens": 128072,
+      "pricing": {
+        "input_per_million": 0.09999999999999999,
+        "output_per_million": 0.5,
+        "raw": {
+          "prompt": "0.0000001",
+          "completion": "0.0000005",
+          "input_cache_read": "0.0000001",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 100.0,
+        "uptime_30m": 99.41729099774051,
+        "uptime_1d": 99.47261703152178
+      },
+      "quantization": "fp4",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "include_reasoning",
+          "max_tokens",
+          "presence_penalty",
+          "reasoning",
+          "reasoning_effort",
+          "response_format",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T00:00:00Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "openai/gpt-oss-120b"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "openai/gpt-oss-120b",
+      "model_slug": "openai/gpt-oss-120b",
+      "provider_id": "parasail/fp4",
+      "provider_name": "Parasail",
+      "endpoint_id": "Parasail | openai/gpt-oss-120b",
+      "identity_key": "openai/gpt-oss-120b:parasail/fp4:Parasail | openai/gpt-oss-120b",
+      "context_tokens": 131072,
+      "pricing": {
+        "input_per_million": 0.09999999999999999,
+        "output_per_million": 0.75,
+        "raw": {
+          "prompt": "0.0000001",
+          "completion": "0.00000075",
+          "input_cache_read": "0.000000055",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 100.0,
+        "uptime_30m": 99.98650472334683,
+        "uptime_1d": 99.98392959944017
+      },
+      "quantization": "fp4",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "include_reasoning",
+          "logit_bias",
+          "logprobs",
+          "max_tokens",
+          "presence_penalty",
+          "reasoning",
+          "reasoning_effort",
+          "repetition_penalty",
+          "response_format",
+          "seed",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_k",
+          "top_logprobs",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T00:00:00Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "openai/gpt-oss-120b"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "openai/gpt-oss-120b",
+      "model_slug": "openai/gpt-oss-120b",
+      "provider_id": "sambanova",
+      "provider_name": "SambaNova",
+      "endpoint_id": "SambaNova | openai/gpt-oss-120b",
+      "identity_key": "openai/gpt-oss-120b:sambanova:SambaNova | openai/gpt-oss-120b",
+      "context_tokens": 131072,
+      "pricing": {
+        "input_per_million": 0.14,
+        "output_per_million": 0.95,
+        "raw": {
+          "prompt": "0.00000014",
+          "completion": "0.00000095",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 98.01980198019803,
+        "uptime_30m": 99.61622807017544,
+        "uptime_1d": 99.7099442961205
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "include_reasoning",
+          "max_tokens",
+          "reasoning",
+          "reasoning_effort",
+          "stop",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_k",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T00:00:00Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "openai/gpt-oss-120b"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "openai/gpt-oss-120b",
+      "model_slug": "openai/gpt-oss-120b",
+      "provider_id": "amazon-bedrock/eu-west-1",
+      "provider_name": "Amazon Bedrock",
+      "endpoint_id": "Amazon Bedrock | openai/gpt-oss-120b",
+      "identity_key": "openai/gpt-oss-120b:amazon-bedrock/eu-west-1:Amazon Bedrock | openai/gpt-oss-120b",
+      "context_tokens": 131072,
+      "pricing": {
+        "input_per_million": 0.15,
+        "output_per_million": 0.6,
+        "raw": {
+          "prompt": "0.00000015",
+          "completion": "0.0000006",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": null,
+        "uptime_30m": null,
+        "uptime_1d": null
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "include_reasoning",
+          "max_tokens",
+          "reasoning",
+          "reasoning_effort",
+          "stop",
+          "temperature",
+          "top_k",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T00:00:00Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "openai/gpt-oss-120b"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "openai/gpt-oss-120b",
+      "model_slug": "openai/gpt-oss-120b",
+      "provider_id": "deepinfra/turbo",
+      "provider_name": "DeepInfra",
+      "endpoint_id": "DeepInfra | openai/gpt-oss-120b",
+      "identity_key": "openai/gpt-oss-120b:deepinfra/turbo:DeepInfra | openai/gpt-oss-120b",
+      "context_tokens": 131072,
+      "pricing": {
+        "input_per_million": 0.15,
+        "output_per_million": 0.6,
+        "raw": {
+          "prompt": "0.00000015",
+          "completion": "0.0000006",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 100.0,
+        "uptime_30m": 100.0,
+        "uptime_1d": 99.8527332130492
+      },
+      "quantization": "bf16",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "include_reasoning",
+          "logit_bias",
+          "max_tokens",
+          "min_p",
+          "presence_penalty",
+          "reasoning",
+          "reasoning_effort",
+          "repetition_penalty",
+          "response_format",
+          "seed",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_k",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T00:00:00Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "openai/gpt-oss-120b"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "openai/gpt-oss-120b",
+      "model_slug": "openai/gpt-oss-120b",
+      "provider_id": "groq",
+      "provider_name": "Groq",
+      "endpoint_id": "Groq | openai/gpt-oss-120b",
+      "identity_key": "openai/gpt-oss-120b:groq:Groq | openai/gpt-oss-120b",
+      "context_tokens": 131072,
+      "pricing": {
+        "input_per_million": 0.15,
+        "output_per_million": 0.6,
+        "raw": {
+          "prompt": "0.00000015",
+          "completion": "0.0000006",
+          "input_cache_read": "0.000000075",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 100.0,
+        "uptime_30m": 100.0,
+        "uptime_1d": 99.97613167060673
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "include_reasoning",
+          "max_tokens",
+          "reasoning",
+          "reasoning_effort",
+          "response_format",
+          "seed",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T00:00:00Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "openai/gpt-oss-120b"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "openai/gpt-oss-120b",
+      "model_slug": "openai/gpt-oss-120b",
+      "provider_id": "phala",
+      "provider_name": "Phala",
+      "endpoint_id": "Phala | openai/gpt-oss-120b",
+      "identity_key": "openai/gpt-oss-120b:phala:Phala | openai/gpt-oss-120b",
+      "context_tokens": 131072,
+      "pricing": {
+        "input_per_million": 0.15,
+        "output_per_million": 0.6,
+        "raw": {
+          "prompt": "0.00000015",
+          "completion": "0.0000006",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 100.0,
+        "uptime_30m": 100.0,
+        "uptime_1d": 99.99116165336005
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "include_reasoning",
+          "logprobs",
+          "max_tokens",
+          "min_p",
+          "presence_penalty",
+          "reasoning",
+          "reasoning_effort",
+          "repetition_penalty",
+          "response_format",
+          "seed",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_k",
+          "top_logprobs",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T00:00:00Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "openai/gpt-oss-120b"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "openai/gpt-oss-120b",
+      "model_slug": "openai/gpt-oss-120b",
+      "provider_id": "amazon-bedrock",
+      "provider_name": "Amazon Bedrock",
+      "endpoint_id": "Amazon Bedrock | openai/gpt-oss-120b",
+      "identity_key": "openai/gpt-oss-120b:amazon-bedrock:Amazon Bedrock | openai/gpt-oss-120b",
+      "context_tokens": 131072,
+      "pricing": {
+        "input_per_million": 0.15,
+        "output_per_million": 0.6,
+        "raw": {
+          "prompt": "0.00000015",
+          "completion": "0.0000006",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 100.0,
+        "uptime_30m": 99.13269731136167,
+        "uptime_1d": 99.0005779790001
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "include_reasoning",
+          "max_tokens",
+          "reasoning",
+          "reasoning_effort",
+          "stop",
+          "temperature",
+          "top_k",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T00:00:00Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "openai/gpt-oss-120b"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "openai/gpt-oss-120b",
+      "model_slug": "openai/gpt-oss-120b",
+      "provider_id": "together",
+      "provider_name": "Together",
+      "endpoint_id": "Together | openai/gpt-oss-120b",
+      "identity_key": "openai/gpt-oss-120b:together:Together | openai/gpt-oss-120b",
+      "context_tokens": 131072,
+      "pricing": {
+        "input_per_million": 0.15,
+        "output_per_million": 0.6,
+        "raw": {
+          "prompt": "0.00000015",
+          "completion": "0.0000006",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 100.0,
+        "uptime_30m": 100.0,
+        "uptime_1d": 97.74674788354326
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "include_reasoning",
+          "logit_bias",
+          "max_tokens",
+          "min_p",
+          "presence_penalty",
+          "reasoning",
+          "reasoning_effort",
+          "repetition_penalty",
+          "response_format",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_k",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T00:00:00Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "openai/gpt-oss-120b"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "openai/gpt-oss-120b",
+      "model_slug": "openai/gpt-oss-120b",
+      "provider_id": "nebius/fp4",
+      "provider_name": "Nebius",
+      "endpoint_id": "Nebius | openai/gpt-oss-120b",
+      "identity_key": "openai/gpt-oss-120b:nebius/fp4:Nebius | openai/gpt-oss-120b",
+      "context_tokens": 131072,
+      "pricing": {
+        "input_per_million": 0.15,
+        "output_per_million": 0.6,
+        "raw": {
+          "prompt": "0.00000015",
+          "completion": "0.0000006",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 100.0,
+        "uptime_30m": 98.84146341463415,
+        "uptime_1d": 98.93550832022987
+      },
+      "quantization": "fp4",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "include_reasoning",
+          "logit_bias",
+          "max_tokens",
+          "presence_penalty",
+          "reasoning",
+          "reasoning_effort",
+          "repetition_penalty",
+          "response_format",
+          "seed",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_k",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T00:00:00Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "openai/gpt-oss-120b"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "openai/gpt-oss-120b",
+      "model_slug": "openai/gpt-oss-120b",
+      "provider_id": "mara",
+      "provider_name": "Mara",
+      "endpoint_id": "Mara | openai/gpt-oss-120b",
+      "identity_key": "openai/gpt-oss-120b:mara:Mara | openai/gpt-oss-120b",
+      "context_tokens": 131072,
+      "pricing": {
+        "input_per_million": 0.15,
+        "output_per_million": 0.75,
+        "raw": {
+          "prompt": "0.00000015",
+          "completion": "0.00000075",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 100.0,
+        "uptime_30m": 99.9015748031496,
+        "uptime_1d": 99.5263105737786
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "include_reasoning",
+          "logprobs",
+          "max_tokens",
+          "reasoning",
+          "reasoning_effort",
+          "response_format",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_k",
+          "top_logprobs",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T00:00:00Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "openai/gpt-oss-120b"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "openai/gpt-oss-120b",
+      "model_slug": "openai/gpt-oss-120b",
+      "provider_id": "cerebras/fp16",
+      "provider_name": "Cerebras",
+      "endpoint_id": "Cerebras | openai/gpt-oss-120b",
+      "identity_key": "openai/gpt-oss-120b:cerebras/fp16:Cerebras | openai/gpt-oss-120b",
+      "context_tokens": 131072,
+      "pricing": {
+        "input_per_million": 0.35,
+        "output_per_million": 0.75,
+        "raw": {
+          "prompt": "0.00000035",
+          "completion": "0.00000075",
+          "input_cache_read": "0.00000035",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 100.0,
+        "uptime_30m": 99.99457200238831,
+        "uptime_1d": 99.99339629664316
+      },
+      "quantization": "fp16",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "include_reasoning",
+          "logit_bias",
+          "logprobs",
+          "max_tokens",
+          "presence_penalty",
+          "reasoning",
+          "reasoning_effort",
+          "response_format",
+          "seed",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_logprobs",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-23T00:00:00Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "openai/gpt-oss-120b"
+      }
     }
   ],
   "coverage": {
     "catalog_models": 422,
-    "models_with_observations": 138,
+    "models_with_observations": 139,
     "proportion": 0.327,
-    "fresh_observations": 59,
+    "fresh_observations": 20,
     "retained_observations": 386,
     "retention_days": 14
   },

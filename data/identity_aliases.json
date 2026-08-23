@@ -1,5 +1,30 @@
 {
-  "version": 1,
-  "description": "Audited cross-source aliases only; empty by default. Never store credentials here.",
-  "mappings": []
+  "version": 2,
+  "description": "Audited public cross-source aliases only; no credentials.",
+  "mappings": [
+    {
+      "relation": "model_to_model",
+      "source_entity_id": "openai/gpt-oss-120b",
+      "target_entity_id": "gpt-oss-120b",
+      "evidence": "Artificial Analysis model page identifies the model as OpenAI gpt-oss-120b; its raw_fields.openrouter_api_id is openai/gpt-oss-120b; OpenRouter public model ID is identical.",
+      "first_verified": "2026-08-23",
+      "review": "manual audited alias; verified against public AA model data and OpenRouter model catalog"
+    },
+    {
+      "relation": "provider_to_provider",
+      "source_entity_id": "coreweave",
+      "target_entity_id": "coreweave",
+      "evidence": "OpenRouter endpoint tag coreweave and Artificial Analysis provider detail endpoint coreweave refer to the same named provider; manual audited alias.",
+      "first_verified": "2026-08-23",
+      "review": "manual audited provider alias; no fuzzy provider matching"
+    },
+    {
+      "relation": "provider_to_provider",
+      "source_entity_id": "deepinfra",
+      "target_entity_id": "deepinfra",
+      "evidence": "OpenRouter endpoint tag deepinfra and Artificial Analysis provider detail endpoint deepinfra refer to the same named provider; manual audited alias.",
+      "first_verified": "2026-08-23",
+      "review": "manual audited provider alias; no fuzzy provider matching"
+    }
+  ]
 }

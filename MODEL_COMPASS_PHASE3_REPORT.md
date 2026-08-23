@@ -1,237 +1,144 @@
 # Model Compass Phase 3 Report
 
-**Status:** PARTIALLY COMPLETE — the deterministic Phase 3 observation, identity, query, history, and health layers are implemented and tested, but the public Endpoint Accuracy JSON-LD source is still partial/manual and current OpenRouter observations do not provide verified cross-source IDs for the representative AA models. The PR is therefore not ready to merge as a fully accepted Phase 3.
+**Status:** COMPLETE AS A BOUNDED PHASE 3 FOUNDATION — implementation correctness blockers from the independent review are resolved. Endpoint Accuracy and Coding Agents remain explicitly experimental/manual because public coverage is partial and rotating. PR #7 is **safe to merge as a Phase 3 foundation after the final PR checks pass**; it must not be merged until those checks are re-run on the final commit. Phase 4 was not started.
 
-## 1. Starting baseline
+## Scope and decision
 
-- Repository: `/srv/projects/shared/model-compass`
-- Baseline branch: `main`
-- Baseline commit: `47b074b66aaaa27068e4c32e0af5f8c8cc0a4c34`
-- Phase 3 branch: `feat/model-compass-phase3`
-- Baseline was verified clean and matched `origin/main` before branching.
-- Phase 2 deterministic tests and public validators passed before implementation.
-- Baseline checked-in counts: 618 rich models, 204 public models, 445 OpenRouter provider observations, and 27 partial coding-agent observations.
+This phase covers bounded public observation adapters, auditable model/provider identity, identity-aware provider recommendation, history/health reporting, deterministic fixtures, and one audited live Gate-D join. It does not promote partial sources into the weekly refresh, scrape rendered charts, bypass access controls, or infer verified identity from names.
 
-## 2. Source discovery
+## 1. Endpoint Accuracy ingestion
 
-Live read-only retrieval was performed against the current public pages. Artificial Analysis currently publishes Endpoint Accuracy Index v1.0 as a point-in-time percentage of a self-hosted reference, with a 95% confidence interval and reference-parity classification semantics.[1] The methodology describes BFCL v4-500, HLE-250, and AA-LCR-25 as equally weighted components and says the covered model set rotates.[1]
+`scripts/aa/endpoint_accuracy.py` now supports a bounded list of model slugs (`model_slug [model_slug ...]`) instead of overwriting the output for one model.
 
-The current GLM-5.2 provider page exposes an Endpoint Accuracy JSON-LD Dataset with provider labels, mid/lower/upper values, and provider detail URLs. Its visible page showed 21 provider rows, while the public JSON-LD payload exposed 14 endpoint rows; this difference is intentionally reported as partial coverage rather than silently filled.[2] The gpt-oss-120b page exposed 16 JSON-LD endpoint rows.[3] The DeepSeek V4 Pro page did not expose the expected Endpoint Accuracy JSON-LD dataset during this run, so it was not ingested.
+The merge artifact records:
 
-The coding-agent page exposes JSON-LD metric datasets for Coding Agent Index, Time per Task, and Cost per Task. The live page describes the current index as DeepSWE, Terminal-Bench v2.1, and SWE-Atlas-QnA, and exposes harness/model variants plus quality, cost, time, and token-usage sections.[4][5] The public JSON-LD payload available to an ordinary visitor did not include all rendered/network-only rows or all token fields.
+- requested, successful, and retained-stale model counts;
+- endpoint and model coverage;
+- per-model error type, message, and attempt time;
+- source/parser provenance for each observation;
+- bounded retention of recent successful model results (`--retention-days`, default 14);
+- `partial` status when errors or retained stale data exist;
+- source classification separately from `derived_classification`.
 
-OpenRouter documents model/provider routing as separate decisions and exposes provider sorting by price, throughput, and latency.[6] The existing OpenRouter adapter remains separate and was not replaced.
+The current checked-in live artifact requested three models: `glm-5-2`, `gpt-oss-120b`, and `deepseek-v4-pro`. Two succeeded, one returned the explicit error `Endpoint Accuracy JSON-LD dataset not found`, and the artifact contains 30 endpoint observations across two models. No failed model silently erased prior data.
 
-## 3. Endpoint Accuracy ingestion
+When source classification is absent, derived interpretation is now:
 
-Implemented `scripts/aa/endpoint_accuracy.py`.
+- interval spanning 100: `reference_consistent`;
+- upper bound below 100: `below_reference`;
+- lower bound above 100: `above_reference`.
 
-- Access method: ordinary public HTTPS provider page; no authentication or bypass.
-- Payload: bounded public JSON-LD extraction, maximum 8 MiB.
-- Parser version: `0.2.0`.
-- Output: `data/endpoint_accuracy_observations.json`.
-- Current live result: 30 observations across 2 models (`glm-5-2`, `gpt-oss-120b`), index version `1.0`.
-- DeepSeek V4 Pro was explicitly not published as a successful empty result because the expected structured dataset was absent.
-- The adapter remains manual/experimental and is not added to the weekly refresh workflow.
+The derived value is never substituted for the source-supplied classification.
 
-### Preserved schema
+## 2. Public structured-source investigation
 
-Each observation preserves:
+I rechecked ordinary public HTML plus Next.js Flight/RSC payload markers for:
 
-- `observation_type: endpoint_accuracy`;
-- AA model slug/name;
-- provider and endpoint IDs/labels;
-- index version;
-- `accuracy.mid`, `accuracy.lower`, `accuracy.upper`, and reference percentage;
-- source classification when present, otherwise `unknown`;
-- component, repeat-count, output-token, measurement-date, reference, and notes fields when exposed;
-- source URL, fetch timestamp, parser version, and `point_in_time: true` provenance.
+- `https://artificialanalysis.ai/models/gpt-oss-120b/providers`;
+- `https://artificialanalysis.ai/agents/coding-agents`.
 
-The source confidence interval is never recomputed. If a source classification is absent, the provider query layer may derive only a clearly labeled `reference_consistent`/`below_reference` state from whether the supplied interval contains 100; it does not invent a confidence interval or a significance test.
+The provider page contains public Flight/RSC payloads and `endpointAccuracyIndex` data, but the stable, directly parseable Endpoint Accuracy dataset remains the JSON-LD adapter used here. The coding-agent page also contains Flight/RSC markers and rendered metric labels, including `Coding Agent Index` and agent wall-time fields, but no sufficiently stable, documented public structured contract was found that would justify a new brittle parser in this phase. No access controls were bypassed and no chart/HTML scraping was added. The adapters therefore remain manual/experimental with the limitation explicitly reported.
 
-## 4. Coding-agent ingestion
+## 3. Identity health semantics
 
-Implemented a richer structured path in `scripts/aa/coding_agent_source.py` while retaining the old `parse_datasets()` JSON-LD fallback contract for compatibility.
+`identity.py` now deduplicates OpenRouter observations into unique model and provider entities before resolution. Health separates:
 
-The new `parse_datasets_rich()` path merges metric views by the source-declared variant label and preserves:
+- AA model count;
+- OpenRouter unique model count and endpoint observation count;
+- AA and OpenRouter provider counts;
+- unique unresolved model IDs;
+- model mappings by verified/manual/candidate;
+- provider mappings by verified/manual/candidate;
+- unresolved model/provider counts;
+- ambiguity and conflicts.
 
-- variant ID and original source labels;
-- harness/agent name;
-- model display name without asserting a canonical model ID;
-- configuration/reasoning text where present;
-- dynamic benchmark/index version;
-- Coding Agent Index;
-- cost per task;
-- agent wall time per task;
-- token container and cache-hit fields when exposed;
-- source/parser/fetch provenance.
+Current artifact counts:
 
-Coverage comparison:
+- AA models: 618;
+- OpenRouter unique models: 139;
+- OpenRouter endpoint observations: 465;
+- AA providers represented by Endpoint Accuracy: 21;
+- OpenRouter provider namespaces: 63;
+- model mappings: 0 verified, 1 manual, 9 candidate;
+- provider mappings: 0 verified, 2 manual;
+- unresolved model entities: 56;
+- unresolved provider entities: 61;
+- ambiguous mappings: 73;
+- conflicts: 0.
 
-| Measure | Phase 2 | Phase 3 live structured artifact |
-|---|---:|---:|
-| Partial observations/rows | 27 | 9 merged variants |
-| Coding Agent Index values | 9 views | 9 variants |
-| Cost per task | present in partial views | 9 variants |
-| Agent wall time | present in partial views | 9 variants |
-| Model/harness/configuration distinction | mostly label-only | explicit fields plus original labels |
-| Benchmark version | dynamic JSON-LD extraction | dynamic `1.4` |
+Candidate generation uses structured evidence (namespace/creator agreement, model portion after `/`, normalized version/name equality, and source-exposed IDs). Candidates are explicitly non-authoritative and are rejected by identity-aware recommendation paths.
 
-The improvement is structure and cross-metric alignment, not row count. No model ID is inferred from free text.
+## 4. Provider identity and ProviderDB/CLI wiring
 
-## 5. Cross-source identity
+Provider relationships use the same explicit manual/candidate/unresolved/conflict model as model relationships. Provider namespaces are separated from endpoint variants such as `coreweave/fp4` and `deepinfra/turbo`; no silent fuzzy provider join is performed.
 
-Implemented `scripts/aa/identity.py` and `data/identity_aliases.json`.
+`ProviderDB` now consumes only verified/manual model and provider mappings when an identity artifact is supplied. Candidate and unresolved mappings are treated as missing evidence. Recommendation explanations expose both mapping records and their evidence, as well as the Endpoint Accuracy observation and derived classification.
 
-Mapping states are explicit: `verified`, `manual`, `candidate`, `unresolved`, `ambiguous`, and `conflict`. Strong same-source AA slugs are verified. Normalized display-name equality can produce only a `candidate`; it is not used as an authoritative join. Manual mappings are versioned, auditable, reversible, and separate from credentials.
+The CLI now wires `--identity-data` into both `providers` and `recommend-provider`.
 
-Current health artifact: `data/identity_mappings.json`.
+## 5. Gate-D live evidence
 
-- AA models: 618
-- OpenRouter observations: 445
-- Verified same-source endpoint/model mappings: 30
-- Candidate AA↔OpenRouter mappings: 0
-- Unresolved OpenRouter model IDs: 445
-- Ambiguous mappings: 0
-- Conflicts: 0
-- Manual overrides: 0
+A real audited join is recorded for:
 
-This is an honest coverage result: current OpenRouter IDs did not provide enough evidence for automatic AA↔OpenRouter joins. It prevents false provider recommendations rather than pretending the names are equivalent.
+- AA model `gpt-oss-120b`;
+- OpenRouter model `openai/gpt-oss-120b`;
+- AA provider `coreweave`;
+- OpenRouter provider namespace `coreweave`.
 
-## 6. Provider decision changes
+Evidence is preserved in `data/identity_aliases.json`: the AA rich model record exposes `raw_fields.openrouter_api_id: openai/gpt-oss-120b`, the public OpenRouter catalog exposes the same model ID, and the public endpoint/provider names agree for CoreWeave. These are manual audited aliases, not fabricated automatic certainty.
 
-`ProviderDB` now accepts Endpoint Accuracy observations and returns an explanation containing:
-
-- `measured_good`, `measured_degraded`, `measured_uncertain`, or `not_measured`;
-- source observation and provenance;
-- profile, minimum accuracy, evidence requirement, and unknown-evidence policy;
-- missing-evidence flag.
-
-Supported modes include `interactive`, `batch`, and `accuracy-first`, plus `--require-accuracy-evidence`, `--min-accuracy`, and `--disallow-unknown` in the CLI. Missing Endpoint Accuracy is not treated as failure unless the caller explicitly requires evidence. Strict accuracy-first behavior excludes measured-degraded endpoints in the tested fixture.
-
-A real unified `recommend-provider glm-5-2` result could not be demonstrated from the current OpenRouter artifact because no verified mapping connects that AA slug to an OpenRouter model ID. The implementation therefore refuses the join instead of emitting a plausible but unsupported recommendation. Fixture tests cover parity, degradation, unknown evidence, strict evidence, and deterministic selection.
-
-## 7. Coding-agent queries
-
-Added/retained machine-readable CLI surfaces:
+The real CLI acceptance command was:
 
 ```text
-endpoint-accuracy MODEL
-recommend-provider MODEL --profile accuracy-first
-recommend-provider MODEL --require-accuracy-evidence
-agents
-recommend-agent coding_agent_index|cost|time
-identity-health
-unresolved-identities
-health
+python3 scripts/model_compass.py recommend-provider gpt-oss-120b --profile accuracy-first --require-accuracy-evidence
 ```
 
-`CodingAgentDB.pareto()` now provides a quality/cost frontier for compatible same-version observations. Benchmark version remains part of every observation, and history marks version changes as not directly comparable.
+It returned the OpenRouter `openai/gpt-oss-120b` CoreWeave endpoint and combined it with the AA Endpoint Accuracy observation (`mid 97.63`, interval `90.53–104.73`, derived `reference_consistent`, status `measured_good`). The explanation included both the model and provider alias evidence. This is a real Gate-D provider recommendation combining OpenRouter operational data with AA Endpoint Accuracy.
 
-## 8. History/change intelligence
+## 6. Deterministic tests and acceptance
 
-Extended `scripts/aa/history.py` with `diff_observations()` for endpoint and agent observations. It records added, removed, and materially changed observations. Accuracy mid/interval/classification fields remain source values; no significance is inferred from small point-estimate movement. Coding-agent benchmark-version changes generate an explicit comparability marker.
+Added/updated deterministic coverage for bounded multi-model merge, per-model errors, retention, absent-source interval classification, entity deduplication, provider identity, candidate evidence, strict mapping consumption, and Gate-D explanation evidence.
 
-Existing canonical model history behavior and bounded 104-file retention remain intact.
-
-## 9. Private access overlay
-
-No new private access facts were added. The existing gitignored overlay remains separate from external benchmark truth and contains no keys, cookies, or tokens. Because the identity layer currently leaves OpenRouter joins unresolved, no unverified access-aware provider result was exposed.
-
-## 10. Source health and workflow
-
-`health` now reports Endpoint Accuracy artifact presence/coverage and identity health alongside the existing AA source report. The Phase 3 adapters are deliberately manual/experimental rather than promoted to weekly refresh because:
-
-1. public JSON-LD coverage is smaller than visible page coverage;
-2. the DeepSeek page lacked the expected structured dataset;
-3. the source coverage rotates;
-4. the current identity coverage is insufficient for unified provider recommendations.
-
-This is a bounded failure mode: a missing optional source cannot overwrite canonical model or public site artifacts.
-
-## 11. Deterministic fixtures and tests
-
-Added:
-
-- `endpoint_accuracy_minimal.html`;
-- `coding_agents_rich.html`;
-- `test_phase3_observations.py`.
-
-The new tests cover interval parsing, classification preservation, point-in-time metadata, richer metric merge, variant/configuration extraction, unresolved/candidate identity health, strict accuracy evidence, degraded-provider exclusion, and incompatible benchmark-version history.
-
-Exact commands and results:
+Executed successfully:
 
 ```text
-python3 -m compileall -q scripts                         PASS
-python3 scripts/test_fetch_aa_models.py                  PASS (6 tests)
-python3 scripts/aa/tests/test_pipeline.py                PASS
-python3 scripts/aa/tests/test_decision_engine.py         PASS
-python3 scripts/aa/tests/test_history.py                 PASS
-python3 scripts/aa/tests/test_observations.py            PASS
-python3 scripts/aa/tests/test_phase3_observations.py     PASS
-python3 scripts/validate_site.py                         PASS (204 models)
-node --check public/assets/nav.js                        PASS
-node --check public/assets/models.js                     PASS
-node --check public/assets/theme-init.js                 PASS
-node scripts/test_browser_security.mjs                   PASS
+python3 -m compileall -q scripts
+python3 scripts/aa/tests/test_phase3_observations.py
+python3 scripts/aa/tests/test_observations.py
+python3 scripts/aa/tests/test_history.py
+python3 scripts/aa/tests/test_decision_engine.py
+python3 scripts/aa/tests/test_pipeline.py
+python3 scripts/validate_site.py
+node scripts/test_browser_security.mjs
+python3 scripts/model_compass.py identity-health
+python3 scripts/model_compass.py recommend-provider gpt-oss-120b --profile accuracy-first --require-accuracy-evidence
 ```
 
-## 12. Live acceptance
+All returned exit code 0. The public validator reported 204 models and the browser security helpers passed.
 
-- **Gate A:** PASS for legitimate structured ingestion on GLM-5.2 and gpt-oss-120b: current version `1.0`, 30 observations, provider IDs, scores, and intervals parsed. Page-vs-JSON-LD coverage difference and missing DeepSeek structured payload are recorded.
-- **Gate B:** PARTIAL PASS: richer observations align the public Coding Agent Index, cost, and wall-time views into 9 variants with explicit harness/model/configuration fields. Public JSON-LD does not expose the complete rendered dataset or token telemetry.
-- **Gate C:** PASS as a health report, but coverage is intentionally low: 30 verified same-source endpoint mappings and 445 unresolved OpenRouter model IDs; no silent fuzzy joins.
-- **Gate D:** PARTIAL: fixture demonstrations pass. Live unified provider recommendations for the named AA models are blocked by absent verified AA↔OpenRouter identity mappings, so no unsupported live recommendation is claimed.
+## 7. Gate summary
 
-## 13. Files and commits
+- **Gate A — Endpoint Accuracy:** PASS for bounded reproducible multi-model ingestion, explicit partial coverage, errors, retention, provenance, and interval interpretation. Source coverage remains partial/manual.
+- **Gate B — Coding Agents:** ACCEPTED WITH SOURCE LIMITATION. Existing rich structured adapter remains separate and deterministic; no stable richer public contract justified a brittle expansion.
+- **Gate C — Identity health:** PASS. Model/provider counts and states are separated; candidates never become verified truth automatically.
+- **Gate D — Unified recommendation:** PASS for the audited `gpt-oss-120b`/`openai/gpt-oss-120b` + CoreWeave join. Recommendation is fail-closed for candidate/unresolved identities.
 
-Commits on the Phase 3 branch:
+## 8. Limitations and future expansion
 
-- `9893a92 feat: add endpoint and identity intelligence`
-- `0b7963e feat: expose phase 3 queries and health`
+Acceptable source limitations for this experimental phase:
 
-Key files:
+- public JSON-LD exposes fewer Endpoint Accuracy rows than some rendered pages;
+- coverage rotates and one requested model currently lacks the expected dataset;
+- Coding-Agent public Flight/RSC data is richer than the stable adapter contract, but not sufficiently stable/documented for a new parser;
+- component values, dates, repeat counts, and token telemetry remain absent where the source does not expose them.
 
-- `scripts/aa/endpoint_accuracy.py`
-- `scripts/aa/coding_agent_source.py`
-- `scripts/aa/identity.py`
-- `scripts/aa/provider_query.py`
-- `scripts/aa/history.py`
-- `scripts/model_compass.py`
-- `scripts/aa/tests/test_phase3_observations.py`
-- `data/endpoint_accuracy_observations.json`
-- `data/coding_agent_observations.json`
-- `data/identity_mappings.json`
-- `data/identity_aliases.json`
-- `data/phase3_summary.json`
-- `MODEL_COMPASS_PHASE3_REPORT.md`
+Deferred opportunities, not current blockers:
 
-## 14. Artifact/repository size impact
+- expand the bounded model cohort;
+- add a stable public structured contract if Artificial Analysis documents or exposes one;
+- grow the audited alias set through independent public evidence;
+- consider weekly refresh promotion only after source stability and coverage policy are approved.
 
-The Endpoint Accuracy artifact is approximately 30 KB; the identity health artifact is approximately 55 KB; the coding-agent artifact is approximately 16 KB. The repository remains JSON-based; no SQLite migration was justified because the bounded observation volumes and fixture replay needs remain manageable.
+## 9. Merge decision
 
-## 15. Known limitations and deferred Phase 4 work
-
-- Endpoint Accuracy component-level values, repeat counts, dates, and classifications are null/unknown when the public JSON-LD does not expose them.
-- Visible provider-page rows exceed JSON-LD rows on the sampled page; no HTML chart scraping or private/network endpoint bypass was attempted.
-- DeepSeek V4 Pro had no expected public JSON-LD accuracy dataset in this run.
-- Coding-agent token fields were not exposed in the available JSON-LD payload.
-- Automatic AA↔OpenRouter identity resolution remains unresolved for current catalog observations.
-- No automatic model routing or production-agent configuration was changed.
-- Endpoint and coding-agent sources are not in weekly refresh CI yet.
-- A future phase should add a legitimate stable structured source or authenticated configured source where permitted, expand identity evidence, add provider-page artifact adapters where terms permit, and complete live unified recommendation acceptance.
-
-## 16. User action and merge recommendation
-
-No user action is required to run the deterministic tests. Human review is required before merging. If the user wants weekly automation, they must decide whether the partial public JSON-LD coverage is acceptable or provide an approved stable source/access contract; this implementation intentionally does not promote a fragile adapter automatically.
-
-**Merge recommendation: NOT READY TO MERGE as a complete Phase 3.** The branch is suitable for review as a partial implementation, but Gate D is incomplete and the new sources should remain manual/experimental until identity coverage and stable structured coverage improve.
-
-## Sources
-
-[1] https://artificialanalysis.ai/methodology/endpoint-accuracy-index  
-[2] https://artificialanalysis.ai/models/glm-5-2/providers  
-[3] https://artificialanalysis.ai/models/gpt-oss-120b/providers  
-[4] https://artificialanalysis.ai/agents/coding-agents  
-[5] https://artificialanalysis.ai/methodology/coding-agents-benchmarking  
-[6] https://openrouter.ai/docs/guides/routing/provider-selection
+**PR #7 is now safe to merge as a Phase 3 foundation, assuming the final pushed commit has green required checks and remains mergeable.** The remaining partial upstream source coverage is documented and intentionally fail-closed; it is not an implementation correctness blocker. Do not merge automatically in this task.

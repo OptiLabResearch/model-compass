@@ -1,9 +1,4 @@
-"""Public Artificial Analysis Endpoint Accuracy observation adapter.
-
-The provider page publishes a bounded JSON-LD Dataset to ordinary visitors. The
-adapter keeps endpoint measurements separate from canonical model records and
-preserves source uncertainty/classification instead of deriving significance.
-"""
+"""Bounded public Artificial Analysis Endpoint Accuracy adapter."""
 from __future__ import annotations
 import argparse
 from datetime import datetime, timezone
@@ -11,14 +6,15 @@ import html
 import json
 from pathlib import Path
 import re
-from urllib.parse import urljoin, urlparse
+from urllib.parse import urlparse
 from urllib.request import Request, urlopen
 
 from .http import atomic_write_json
 
 BASE = "https://artificialanalysis.ai"
-PARSER_VERSION = "0.2.0"
+PARSER_VERSION = "0.3.0"
 MAX_BYTES = 8 * 1024 * 1024
+DEFAULT_RETENTION_DAYS = 14
 
 
 def _jsonld(page: str) -> list[dict]:
@@ -52,6 +48,18 @@ def _provider_id(label: str, details_url: str | None) -> str:
     return re.sub(r"[^a-z0-9]+", "-", label.lower()).strip("-")
 
 
+def _derived_classification(scores: dict) -> str:
+    lower, upper = scores.get("lower"), scores.get("upper")
+    if lower is not None and upper is not None:
+        if lower <= 100 <= upper:
+            return "reference_consistent"
+        if upper < 100:
+            return "below_reference"
+        if lower > 100:
+            return "above_reference"
+    return "unknown"
+
+
 def parse_page(page: str, *, source_url: str, fetched_at: str) -> dict:
     payloads = _jsonld(page)
     model_match = re.search(r"/models/([^/]+)/providers", source_url)
@@ -69,36 +77,35 @@ def parse_page(page: str, *, source_url: str, fetched_at: str) -> dict:
         if not label or not scores:
             continue
         details = row.get("detailsUrl")
+        source_classification = row.get("classification") or row.get("referenceClassification")
         observations.append({
-            "observation_type": "endpoint_accuracy",
-            "source_model_id": model_slug,
+            "observation_type": "endpoint_accuracy", "source_model_id": model_slug,
             "model_slug": model_slug,
             "model_name": (accuracy.get("name") or "").split(":", 1)[-1].strip() or model_slug,
-            "provider_id": _provider_id(label, details),
-            "provider_name": label,
+            "provider_id": _provider_id(label, details), "provider_name": label,
             "endpoint_id": details or label,
             "identity_key": ":".join(str(x or "") for x in (model_slug, _provider_id(label, details), details or label)),
             "index_version": version.group(1) if version else None,
             "accuracy": {"mid": scores.get("mid"), "as_reference_percent": scores.get("mid"),
                          "lower": scores.get("lower"), "upper": scores.get("upper")},
-            "classification": row.get("classification") or row.get("referenceClassification") or "unknown",
-            "components": row.get("components") or {},
-            "output_tokens_per_task": row.get("outputTokensPerTask"),
+            "classification": source_classification or "unknown",
+            "derived_classification": _derived_classification(scores) if not source_classification else None,
+            "components": row.get("components") or {}, "output_tokens_per_task": row.get("outputTokensPerTask"),
             "repeat_counts": row.get("repeatCounts") or {},
             "measurement_date": row.get("measurementDate") or row.get("measuredAt"),
-            "reference": row.get("reference") or {},
-            "notes": row.get("notes"),
-            "provenance": {"source": "artificial_analysis_endpoint_accuracy",
-                           "source_url": source_url, "fetched_at": fetched_at,
-                           "parser_version": PARSER_VERSION, "point_in_time": True},
+            "reference": row.get("reference") or {}, "notes": row.get("notes"),
+            "provenance": {"source": "artificial_analysis_endpoint_accuracy", "source_url": source_url,
+                           "fetched_at": fetched_at, "parser_version": PARSER_VERSION,
+                           "point_in_time": True},
         })
-    return {"version": 1, "parser_version": PARSER_VERSION,
-            "generated_at": fetched_at, "source": "artificial_analysis_endpoint_accuracy",
-            "source_url": source_url, "index_version": version.group(1) if version else None,
+    return {"version": 1, "parser_version": PARSER_VERSION, "generated_at": fetched_at,
+            "source": "artificial_analysis_endpoint_accuracy", "source_url": source_url,
+            "index_version": version.group(1) if version else None,
             "coverage": {"scope": "public_jsonld", "models": 1 if observations else 0,
                          "endpoints": len(observations),
                          "measurement_dates": sorted({o["measurement_date"] for o in observations if o["measurement_date"]}),
-                         "classification_values": sorted({o["classification"] for o in observations})},
+                         "classification_values": sorted({o["classification"] for o in observations}),
+                         "derived_classification_values": sorted({o["derived_classification"] for o in observations if o["derived_classification"]})},
             "observation_count": len(observations), "observations": observations}
 
 
@@ -113,14 +120,73 @@ def fetch(model_slug: str, *, timeout: int = 30) -> dict:
     return parse_page(page.decode("utf-8", "replace"), source_url=url, fetched_at=stamp)
 
 
+def merge_models(previous: dict | None, fresh: list[dict], errors: list[dict], *, now: str,
+                 retention_days: int = DEFAULT_RETENTION_DAYS) -> dict:
+    """Merge bounded model results, retaining recent successful observations only."""
+    now_dt = datetime.fromisoformat(now.replace("Z", "+00:00"))
+    normalized_fresh = []
+    for result in fresh:
+        if result.get("model_slug"):
+            normalized_fresh.append(result)
+            continue
+        grouped = {}
+        for observation in result.get("observations", []):
+            grouped.setdefault(observation.get("model_slug"), []).append(observation)
+        for slug, observations in grouped.items():
+            normalized_fresh.append({"model_slug": slug, "fetched_at": result.get("generated_at"), "observations": observations, "coverage": {"endpoints": len(observations)}})
+    fresh = normalized_fresh
+    by_model = {r.get("model_slug"): r for r in fresh if r.get("model_slug")}
+    retained = {}
+    for row in (previous or {}).get("model_results", []):
+        slug = row.get("model_slug")
+        if not slug or slug in by_model:
+            continue
+        stamp = row.get("fetched_at") or row.get("provenance", {}).get("fetched_at")
+        try:
+            age = (now_dt - datetime.fromisoformat(str(stamp).replace("Z", "+00:00"))).total_seconds() / 86400
+        except (TypeError, ValueError):
+            continue
+        if 0 <= age <= retention_days:
+            copy = dict(row)
+            copy["retained"] = True
+            copy["stale_after_days"] = retention_days
+            retained[slug] = copy
+    all_results = {**retained, **{r["model_slug"]: r for r in fresh}}
+    observations = [o for r in all_results.values() for o in r.get("observations", [])]
+    return {"version": 2, "parser_version": PARSER_VERSION, "generated_at": now,
+            "source": "artificial_analysis_endpoint_accuracy", "model_results": [all_results[k] for k in sorted(all_results)],
+            "errors": sorted(errors, key=lambda x: x.get("model_slug", "")),
+            "coverage": {"scope": "bounded_public_jsonld", "requested_models": len(set(by_model) | {e.get("model_slug") for e in errors}),
+                         "successful_models": len(fresh), "retained_stale_models": len(retained),
+                         "models": len({o.get("model_slug") for o in observations}), "endpoints": len(observations),
+                         "retention_days": retention_days, "partial": bool(errors or retained)},
+            "observation_count": len(observations), "observations": observations}
+
+
+def fetch_many(model_slugs: list[str], *, timeout: int = 30, previous: dict | None = None,
+               retention_days: int = DEFAULT_RETENTION_DAYS) -> dict:
+    now = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+    fresh, errors = [], []
+    for slug in list(dict.fromkeys(model_slugs)):
+        try:
+            result = fetch(slug, timeout=timeout)
+            result["fetched_at"] = now
+            fresh.append(result)
+        except Exception as exc:
+            errors.append({"model_slug": slug, "error_type": type(exc).__name__, "error": str(exc), "attempted_at": now})
+    return merge_models(previous, fresh, errors, now=now, retention_days=retention_days)
+
+
 def main(argv=None) -> int:
-    parser = argparse.ArgumentParser(description="Fetch public Endpoint Accuracy observations")
-    parser.add_argument("model_slug")
+    parser = argparse.ArgumentParser(description="Fetch bounded public Endpoint Accuracy observations")
+    parser.add_argument("model_slugs", nargs="+", help="bounded list of AA model slugs")
     parser.add_argument("--output", type=Path, default=Path("data/endpoint_accuracy_observations.json"))
+    parser.add_argument("--retention-days", type=int, default=DEFAULT_RETENTION_DAYS)
     args = parser.parse_args(argv)
-    result = fetch(args.model_slug)
+    previous = json.loads(args.output.read_text(encoding="utf-8")) if args.output.exists() else None
+    result = fetch_many(args.model_slugs, previous=previous, retention_days=max(1, args.retention_days))
     atomic_write_json(args.output, result)
-    print(f"Endpoint Accuracy observations={result['observation_count']}")
+    print(f"Endpoint Accuracy models={result['coverage']['models']} observations={result['observation_count']} errors={len(result['errors'])} retained={result['coverage']['retained_stale_models']}")
     return 0
 
 

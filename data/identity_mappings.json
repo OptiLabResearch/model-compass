@@ -1,160 +1,3692 @@
 {
-  "ambiguous": [],
+  "ambiguous": [
+    {
+      "candidates": [
+        "claude-2",
+        "claude-21",
+        "claude-3-5-haiku",
+        "claude-3-7-sonnet",
+        "claude-3-7-sonnet-thinking",
+        "claude-3-haiku",
+        "claude-3-opus",
+        "claude-3-sonnet",
+        "claude-35-sonnet",
+        "claude-35-sonnet-june-24",
+        "claude-4-1-opus",
+        "claude-4-1-opus-thinking",
+        "claude-4-5-haiku",
+        "claude-4-5-haiku-reasoning",
+        "claude-4-5-sonnet",
+        "claude-4-5-sonnet-thinking",
+        "claude-4-opus",
+        "claude-4-opus-thinking",
+        "claude-4-sonnet",
+        "claude-4-sonnet-thinking",
+        "claude-fable-5",
+        "claude-instant",
+        "claude-opus-4-5",
+        "claude-opus-4-5-thinking",
+        "claude-opus-4-6",
+        "claude-opus-4-6-adaptive",
+        "claude-opus-4-7",
+        "claude-opus-4-7-non-reasoning",
+        "claude-opus-4-8",
+        "claude-opus-5",
+        "claude-opus-5-high",
+        "claude-opus-5-low",
+        "claude-opus-5-medium",
+        "claude-opus-5-xhigh",
+        "claude-sonnet-4-6",
+        "claude-sonnet-4-6-adaptive",
+        "claude-sonnet-4-6-non-reasoning-low-effort",
+        "claude-sonnet-5",
+        "claude-sonnet-5-high",
+        "claude-sonnet-5-low",
+        "claude-sonnet-5-medium",
+        "claude-sonnet-5-non-reasoning",
+        "claude-sonnet-5-xhigh"
+      ],
+      "relation": "model_to_model",
+      "source_entity_id": "anthropic/claude-fable-5:batch"
+    },
+    {
+      "candidates": [
+        "claude-2",
+        "claude-21",
+        "claude-3-5-haiku",
+        "claude-3-7-sonnet",
+        "claude-3-7-sonnet-thinking",
+        "claude-3-haiku",
+        "claude-3-opus",
+        "claude-3-sonnet",
+        "claude-35-sonnet",
+        "claude-35-sonnet-june-24",
+        "claude-4-1-opus",
+        "claude-4-1-opus-thinking",
+        "claude-4-5-haiku",
+        "claude-4-5-haiku-reasoning",
+        "claude-4-5-sonnet",
+        "claude-4-5-sonnet-thinking",
+        "claude-4-opus",
+        "claude-4-opus-thinking",
+        "claude-4-sonnet",
+        "claude-4-sonnet-thinking",
+        "claude-fable-5",
+        "claude-instant",
+        "claude-opus-4-5",
+        "claude-opus-4-5-thinking",
+        "claude-opus-4-6",
+        "claude-opus-4-6-adaptive",
+        "claude-opus-4-7",
+        "claude-opus-4-7-non-reasoning",
+        "claude-opus-4-8",
+        "claude-opus-5",
+        "claude-opus-5-high",
+        "claude-opus-5-low",
+        "claude-opus-5-medium",
+        "claude-opus-5-xhigh",
+        "claude-sonnet-4-6",
+        "claude-sonnet-4-6-adaptive",
+        "claude-sonnet-4-6-non-reasoning-low-effort",
+        "claude-sonnet-5",
+        "claude-sonnet-5-high",
+        "claude-sonnet-5-low",
+        "claude-sonnet-5-medium",
+        "claude-sonnet-5-non-reasoning",
+        "claude-sonnet-5-xhigh"
+      ],
+      "relation": "model_to_model",
+      "source_entity_id": "anthropic/claude-haiku-4.5"
+    },
+    {
+      "candidates": [
+        "claude-2",
+        "claude-21",
+        "claude-3-5-haiku",
+        "claude-3-7-sonnet",
+        "claude-3-7-sonnet-thinking",
+        "claude-3-haiku",
+        "claude-3-opus",
+        "claude-3-sonnet",
+        "claude-35-sonnet",
+        "claude-35-sonnet-june-24",
+        "claude-4-1-opus",
+        "claude-4-1-opus-thinking",
+        "claude-4-5-haiku",
+        "claude-4-5-haiku-reasoning",
+        "claude-4-5-sonnet",
+        "claude-4-5-sonnet-thinking",
+        "claude-4-opus",
+        "claude-4-opus-thinking",
+        "claude-4-sonnet",
+        "claude-4-sonnet-thinking",
+        "claude-fable-5",
+        "claude-instant",
+        "claude-opus-4-5",
+        "claude-opus-4-5-thinking",
+        "claude-opus-4-6",
+        "claude-opus-4-6-adaptive",
+        "claude-opus-4-7",
+        "claude-opus-4-7-non-reasoning",
+        "claude-opus-4-8",
+        "claude-opus-5",
+        "claude-opus-5-high",
+        "claude-opus-5-low",
+        "claude-opus-5-medium",
+        "claude-opus-5-xhigh",
+        "claude-sonnet-4-6",
+        "claude-sonnet-4-6-adaptive",
+        "claude-sonnet-4-6-non-reasoning-low-effort",
+        "claude-sonnet-5",
+        "claude-sonnet-5-high",
+        "claude-sonnet-5-low",
+        "claude-sonnet-5-medium",
+        "claude-sonnet-5-non-reasoning",
+        "claude-sonnet-5-xhigh"
+      ],
+      "relation": "model_to_model",
+      "source_entity_id": "anthropic/claude-haiku-4.5:batch"
+    },
+    {
+      "candidates": [
+        "claude-2",
+        "claude-21",
+        "claude-3-5-haiku",
+        "claude-3-7-sonnet",
+        "claude-3-7-sonnet-thinking",
+        "claude-3-haiku",
+        "claude-3-opus",
+        "claude-3-sonnet",
+        "claude-35-sonnet",
+        "claude-35-sonnet-june-24",
+        "claude-4-1-opus",
+        "claude-4-1-opus-thinking",
+        "claude-4-5-haiku",
+        "claude-4-5-haiku-reasoning",
+        "claude-4-5-sonnet",
+        "claude-4-5-sonnet-thinking",
+        "claude-4-opus",
+        "claude-4-opus-thinking",
+        "claude-4-sonnet",
+        "claude-4-sonnet-thinking",
+        "claude-fable-5",
+        "claude-instant",
+        "claude-opus-4-5",
+        "claude-opus-4-5-thinking",
+        "claude-opus-4-6",
+        "claude-opus-4-6-adaptive",
+        "claude-opus-4-7",
+        "claude-opus-4-7-non-reasoning",
+        "claude-opus-4-8",
+        "claude-opus-5",
+        "claude-opus-5-high",
+        "claude-opus-5-low",
+        "claude-opus-5-medium",
+        "claude-opus-5-xhigh",
+        "claude-sonnet-4-6",
+        "claude-sonnet-4-6-adaptive",
+        "claude-sonnet-4-6-non-reasoning-low-effort",
+        "claude-sonnet-5",
+        "claude-sonnet-5-high",
+        "claude-sonnet-5-low",
+        "claude-sonnet-5-medium",
+        "claude-sonnet-5-non-reasoning",
+        "claude-sonnet-5-xhigh"
+      ],
+      "relation": "model_to_model",
+      "source_entity_id": "anthropic/claude-opus-4"
+    },
+    {
+      "candidates": [
+        "claude-2",
+        "claude-21",
+        "claude-3-5-haiku",
+        "claude-3-7-sonnet",
+        "claude-3-7-sonnet-thinking",
+        "claude-3-haiku",
+        "claude-3-opus",
+        "claude-3-sonnet",
+        "claude-35-sonnet",
+        "claude-35-sonnet-june-24",
+        "claude-4-1-opus",
+        "claude-4-1-opus-thinking",
+        "claude-4-5-haiku",
+        "claude-4-5-haiku-reasoning",
+        "claude-4-5-sonnet",
+        "claude-4-5-sonnet-thinking",
+        "claude-4-opus",
+        "claude-4-opus-thinking",
+        "claude-4-sonnet",
+        "claude-4-sonnet-thinking",
+        "claude-fable-5",
+        "claude-instant",
+        "claude-opus-4-5",
+        "claude-opus-4-5-thinking",
+        "claude-opus-4-6",
+        "claude-opus-4-6-adaptive",
+        "claude-opus-4-7",
+        "claude-opus-4-7-non-reasoning",
+        "claude-opus-4-8",
+        "claude-opus-5",
+        "claude-opus-5-high",
+        "claude-opus-5-low",
+        "claude-opus-5-medium",
+        "claude-opus-5-xhigh",
+        "claude-sonnet-4-6",
+        "claude-sonnet-4-6-adaptive",
+        "claude-sonnet-4-6-non-reasoning-low-effort",
+        "claude-sonnet-5",
+        "claude-sonnet-5-high",
+        "claude-sonnet-5-low",
+        "claude-sonnet-5-medium",
+        "claude-sonnet-5-non-reasoning",
+        "claude-sonnet-5-xhigh"
+      ],
+      "relation": "model_to_model",
+      "source_entity_id": "anthropic/claude-opus-4.1"
+    },
+    {
+      "candidates": [
+        "claude-2",
+        "claude-21",
+        "claude-3-5-haiku",
+        "claude-3-7-sonnet",
+        "claude-3-7-sonnet-thinking",
+        "claude-3-haiku",
+        "claude-3-opus",
+        "claude-3-sonnet",
+        "claude-35-sonnet",
+        "claude-35-sonnet-june-24",
+        "claude-4-1-opus",
+        "claude-4-1-opus-thinking",
+        "claude-4-5-haiku",
+        "claude-4-5-haiku-reasoning",
+        "claude-4-5-sonnet",
+        "claude-4-5-sonnet-thinking",
+        "claude-4-opus",
+        "claude-4-opus-thinking",
+        "claude-4-sonnet",
+        "claude-4-sonnet-thinking",
+        "claude-fable-5",
+        "claude-instant",
+        "claude-opus-4-5",
+        "claude-opus-4-5-thinking",
+        "claude-opus-4-6",
+        "claude-opus-4-6-adaptive",
+        "claude-opus-4-7",
+        "claude-opus-4-7-non-reasoning",
+        "claude-opus-4-8",
+        "claude-opus-5",
+        "claude-opus-5-high",
+        "claude-opus-5-low",
+        "claude-opus-5-medium",
+        "claude-opus-5-xhigh",
+        "claude-sonnet-4-6",
+        "claude-sonnet-4-6-adaptive",
+        "claude-sonnet-4-6-non-reasoning-low-effort",
+        "claude-sonnet-5",
+        "claude-sonnet-5-high",
+        "claude-sonnet-5-low",
+        "claude-sonnet-5-medium",
+        "claude-sonnet-5-non-reasoning",
+        "claude-sonnet-5-xhigh"
+      ],
+      "relation": "model_to_model",
+      "source_entity_id": "anthropic/claude-opus-4.1:batch"
+    },
+    {
+      "candidates": [
+        "claude-2",
+        "claude-21",
+        "claude-3-5-haiku",
+        "claude-3-7-sonnet",
+        "claude-3-7-sonnet-thinking",
+        "claude-3-haiku",
+        "claude-3-opus",
+        "claude-3-sonnet",
+        "claude-35-sonnet",
+        "claude-35-sonnet-june-24",
+        "claude-4-1-opus",
+        "claude-4-1-opus-thinking",
+        "claude-4-5-haiku",
+        "claude-4-5-haiku-reasoning",
+        "claude-4-5-sonnet",
+        "claude-4-5-sonnet-thinking",
+        "claude-4-opus",
+        "claude-4-opus-thinking",
+        "claude-4-sonnet",
+        "claude-4-sonnet-thinking",
+        "claude-fable-5",
+        "claude-instant",
+        "claude-opus-4-5",
+        "claude-opus-4-5-thinking",
+        "claude-opus-4-6",
+        "claude-opus-4-6-adaptive",
+        "claude-opus-4-7",
+        "claude-opus-4-7-non-reasoning",
+        "claude-opus-4-8",
+        "claude-opus-5",
+        "claude-opus-5-high",
+        "claude-opus-5-low",
+        "claude-opus-5-medium",
+        "claude-opus-5-xhigh",
+        "claude-sonnet-4-6",
+        "claude-sonnet-4-6-adaptive",
+        "claude-sonnet-4-6-non-reasoning-low-effort",
+        "claude-sonnet-5",
+        "claude-sonnet-5-high",
+        "claude-sonnet-5-low",
+        "claude-sonnet-5-medium",
+        "claude-sonnet-5-non-reasoning",
+        "claude-sonnet-5-xhigh"
+      ],
+      "relation": "model_to_model",
+      "source_entity_id": "anthropic/claude-opus-4.5:batch"
+    },
+    {
+      "candidates": [
+        "claude-2",
+        "claude-21",
+        "claude-3-5-haiku",
+        "claude-3-7-sonnet",
+        "claude-3-7-sonnet-thinking",
+        "claude-3-haiku",
+        "claude-3-opus",
+        "claude-3-sonnet",
+        "claude-35-sonnet",
+        "claude-35-sonnet-june-24",
+        "claude-4-1-opus",
+        "claude-4-1-opus-thinking",
+        "claude-4-5-haiku",
+        "claude-4-5-haiku-reasoning",
+        "claude-4-5-sonnet",
+        "claude-4-5-sonnet-thinking",
+        "claude-4-opus",
+        "claude-4-opus-thinking",
+        "claude-4-sonnet",
+        "claude-4-sonnet-thinking",
+        "claude-fable-5",
+        "claude-instant",
+        "claude-opus-4-5",
+        "claude-opus-4-5-thinking",
+        "claude-opus-4-6",
+        "claude-opus-4-6-adaptive",
+        "claude-opus-4-7",
+        "claude-opus-4-7-non-reasoning",
+        "claude-opus-4-8",
+        "claude-opus-5",
+        "claude-opus-5-high",
+        "claude-opus-5-low",
+        "claude-opus-5-medium",
+        "claude-opus-5-xhigh",
+        "claude-sonnet-4-6",
+        "claude-sonnet-4-6-adaptive",
+        "claude-sonnet-4-6-non-reasoning-low-effort",
+        "claude-sonnet-5",
+        "claude-sonnet-5-high",
+        "claude-sonnet-5-low",
+        "claude-sonnet-5-medium",
+        "claude-sonnet-5-non-reasoning",
+        "claude-sonnet-5-xhigh"
+      ],
+      "relation": "model_to_model",
+      "source_entity_id": "anthropic/claude-opus-4.6:batch"
+    },
+    {
+      "candidates": [
+        "claude-2",
+        "claude-21",
+        "claude-3-5-haiku",
+        "claude-3-7-sonnet",
+        "claude-3-7-sonnet-thinking",
+        "claude-3-haiku",
+        "claude-3-opus",
+        "claude-3-sonnet",
+        "claude-35-sonnet",
+        "claude-35-sonnet-june-24",
+        "claude-4-1-opus",
+        "claude-4-1-opus-thinking",
+        "claude-4-5-haiku",
+        "claude-4-5-haiku-reasoning",
+        "claude-4-5-sonnet",
+        "claude-4-5-sonnet-thinking",
+        "claude-4-opus",
+        "claude-4-opus-thinking",
+        "claude-4-sonnet",
+        "claude-4-sonnet-thinking",
+        "claude-fable-5",
+        "claude-instant",
+        "claude-opus-4-5",
+        "claude-opus-4-5-thinking",
+        "claude-opus-4-6",
+        "claude-opus-4-6-adaptive",
+        "claude-opus-4-7",
+        "claude-opus-4-7-non-reasoning",
+        "claude-opus-4-8",
+        "claude-opus-5",
+        "claude-opus-5-high",
+        "claude-opus-5-low",
+        "claude-opus-5-medium",
+        "claude-opus-5-xhigh",
+        "claude-sonnet-4-6",
+        "claude-sonnet-4-6-adaptive",
+        "claude-sonnet-4-6-non-reasoning-low-effort",
+        "claude-sonnet-5",
+        "claude-sonnet-5-high",
+        "claude-sonnet-5-low",
+        "claude-sonnet-5-medium",
+        "claude-sonnet-5-non-reasoning",
+        "claude-sonnet-5-xhigh"
+      ],
+      "relation": "model_to_model",
+      "source_entity_id": "anthropic/claude-opus-4.7-fast"
+    },
+    {
+      "candidates": [
+        "claude-2",
+        "claude-21",
+        "claude-3-5-haiku",
+        "claude-3-7-sonnet",
+        "claude-3-7-sonnet-thinking",
+        "claude-3-haiku",
+        "claude-3-opus",
+        "claude-3-sonnet",
+        "claude-35-sonnet",
+        "claude-35-sonnet-june-24",
+        "claude-4-1-opus",
+        "claude-4-1-opus-thinking",
+        "claude-4-5-haiku",
+        "claude-4-5-haiku-reasoning",
+        "claude-4-5-sonnet",
+        "claude-4-5-sonnet-thinking",
+        "claude-4-opus",
+        "claude-4-opus-thinking",
+        "claude-4-sonnet",
+        "claude-4-sonnet-thinking",
+        "claude-fable-5",
+        "claude-instant",
+        "claude-opus-4-5",
+        "claude-opus-4-5-thinking",
+        "claude-opus-4-6",
+        "claude-opus-4-6-adaptive",
+        "claude-opus-4-7",
+        "claude-opus-4-7-non-reasoning",
+        "claude-opus-4-8",
+        "claude-opus-5",
+        "claude-opus-5-high",
+        "claude-opus-5-low",
+        "claude-opus-5-medium",
+        "claude-opus-5-xhigh",
+        "claude-sonnet-4-6",
+        "claude-sonnet-4-6-adaptive",
+        "claude-sonnet-4-6-non-reasoning-low-effort",
+        "claude-sonnet-5",
+        "claude-sonnet-5-high",
+        "claude-sonnet-5-low",
+        "claude-sonnet-5-medium",
+        "claude-sonnet-5-non-reasoning",
+        "claude-sonnet-5-xhigh"
+      ],
+      "relation": "model_to_model",
+      "source_entity_id": "anthropic/claude-opus-4.7:batch"
+    },
+    {
+      "candidates": [
+        "claude-2",
+        "claude-21",
+        "claude-3-5-haiku",
+        "claude-3-7-sonnet",
+        "claude-3-7-sonnet-thinking",
+        "claude-3-haiku",
+        "claude-3-opus",
+        "claude-3-sonnet",
+        "claude-35-sonnet",
+        "claude-35-sonnet-june-24",
+        "claude-4-1-opus",
+        "claude-4-1-opus-thinking",
+        "claude-4-5-haiku",
+        "claude-4-5-haiku-reasoning",
+        "claude-4-5-sonnet",
+        "claude-4-5-sonnet-thinking",
+        "claude-4-opus",
+        "claude-4-opus-thinking",
+        "claude-4-sonnet",
+        "claude-4-sonnet-thinking",
+        "claude-fable-5",
+        "claude-instant",
+        "claude-opus-4-5",
+        "claude-opus-4-5-thinking",
+        "claude-opus-4-6",
+        "claude-opus-4-6-adaptive",
+        "claude-opus-4-7",
+        "claude-opus-4-7-non-reasoning",
+        "claude-opus-4-8",
+        "claude-opus-5",
+        "claude-opus-5-high",
+        "claude-opus-5-low",
+        "claude-opus-5-medium",
+        "claude-opus-5-xhigh",
+        "claude-sonnet-4-6",
+        "claude-sonnet-4-6-adaptive",
+        "claude-sonnet-4-6-non-reasoning-low-effort",
+        "claude-sonnet-5",
+        "claude-sonnet-5-high",
+        "claude-sonnet-5-low",
+        "claude-sonnet-5-medium",
+        "claude-sonnet-5-non-reasoning",
+        "claude-sonnet-5-xhigh"
+      ],
+      "relation": "model_to_model",
+      "source_entity_id": "anthropic/claude-opus-4.8-fast"
+    },
+    {
+      "candidates": [
+        "claude-2",
+        "claude-21",
+        "claude-3-5-haiku",
+        "claude-3-7-sonnet",
+        "claude-3-7-sonnet-thinking",
+        "claude-3-haiku",
+        "claude-3-opus",
+        "claude-3-sonnet",
+        "claude-35-sonnet",
+        "claude-35-sonnet-june-24",
+        "claude-4-1-opus",
+        "claude-4-1-opus-thinking",
+        "claude-4-5-haiku",
+        "claude-4-5-haiku-reasoning",
+        "claude-4-5-sonnet",
+        "claude-4-5-sonnet-thinking",
+        "claude-4-opus",
+        "claude-4-opus-thinking",
+        "claude-4-sonnet",
+        "claude-4-sonnet-thinking",
+        "claude-fable-5",
+        "claude-instant",
+        "claude-opus-4-5",
+        "claude-opus-4-5-thinking",
+        "claude-opus-4-6",
+        "claude-opus-4-6-adaptive",
+        "claude-opus-4-7",
+        "claude-opus-4-7-non-reasoning",
+        "claude-opus-4-8",
+        "claude-opus-5",
+        "claude-opus-5-high",
+        "claude-opus-5-low",
+        "claude-opus-5-medium",
+        "claude-opus-5-xhigh",
+        "claude-sonnet-4-6",
+        "claude-sonnet-4-6-adaptive",
+        "claude-sonnet-4-6-non-reasoning-low-effort",
+        "claude-sonnet-5",
+        "claude-sonnet-5-high",
+        "claude-sonnet-5-low",
+        "claude-sonnet-5-medium",
+        "claude-sonnet-5-non-reasoning",
+        "claude-sonnet-5-xhigh"
+      ],
+      "relation": "model_to_model",
+      "source_entity_id": "anthropic/claude-opus-4.8:batch"
+    },
+    {
+      "candidates": [
+        "claude-2",
+        "claude-21",
+        "claude-3-5-haiku",
+        "claude-3-7-sonnet",
+        "claude-3-7-sonnet-thinking",
+        "claude-3-haiku",
+        "claude-3-opus",
+        "claude-3-sonnet",
+        "claude-35-sonnet",
+        "claude-35-sonnet-june-24",
+        "claude-4-1-opus",
+        "claude-4-1-opus-thinking",
+        "claude-4-5-haiku",
+        "claude-4-5-haiku-reasoning",
+        "claude-4-5-sonnet",
+        "claude-4-5-sonnet-thinking",
+        "claude-4-opus",
+        "claude-4-opus-thinking",
+        "claude-4-sonnet",
+        "claude-4-sonnet-thinking",
+        "claude-fable-5",
+        "claude-instant",
+        "claude-opus-4-5",
+        "claude-opus-4-5-thinking",
+        "claude-opus-4-6",
+        "claude-opus-4-6-adaptive",
+        "claude-opus-4-7",
+        "claude-opus-4-7-non-reasoning",
+        "claude-opus-4-8",
+        "claude-opus-5",
+        "claude-opus-5-high",
+        "claude-opus-5-low",
+        "claude-opus-5-medium",
+        "claude-opus-5-xhigh",
+        "claude-sonnet-4-6",
+        "claude-sonnet-4-6-adaptive",
+        "claude-sonnet-4-6-non-reasoning-low-effort",
+        "claude-sonnet-5",
+        "claude-sonnet-5-high",
+        "claude-sonnet-5-low",
+        "claude-sonnet-5-medium",
+        "claude-sonnet-5-non-reasoning",
+        "claude-sonnet-5-xhigh"
+      ],
+      "relation": "model_to_model",
+      "source_entity_id": "anthropic/claude-opus-5-fast"
+    },
+    {
+      "candidates": [
+        "claude-2",
+        "claude-21",
+        "claude-3-5-haiku",
+        "claude-3-7-sonnet",
+        "claude-3-7-sonnet-thinking",
+        "claude-3-haiku",
+        "claude-3-opus",
+        "claude-3-sonnet",
+        "claude-35-sonnet",
+        "claude-35-sonnet-june-24",
+        "claude-4-1-opus",
+        "claude-4-1-opus-thinking",
+        "claude-4-5-haiku",
+        "claude-4-5-haiku-reasoning",
+        "claude-4-5-sonnet",
+        "claude-4-5-sonnet-thinking",
+        "claude-4-opus",
+        "claude-4-opus-thinking",
+        "claude-4-sonnet",
+        "claude-4-sonnet-thinking",
+        "claude-fable-5",
+        "claude-instant",
+        "claude-opus-4-5",
+        "claude-opus-4-5-thinking",
+        "claude-opus-4-6",
+        "claude-opus-4-6-adaptive",
+        "claude-opus-4-7",
+        "claude-opus-4-7-non-reasoning",
+        "claude-opus-4-8",
+        "claude-opus-5",
+        "claude-opus-5-high",
+        "claude-opus-5-low",
+        "claude-opus-5-medium",
+        "claude-opus-5-xhigh",
+        "claude-sonnet-4-6",
+        "claude-sonnet-4-6-adaptive",
+        "claude-sonnet-4-6-non-reasoning-low-effort",
+        "claude-sonnet-5",
+        "claude-sonnet-5-high",
+        "claude-sonnet-5-low",
+        "claude-sonnet-5-medium",
+        "claude-sonnet-5-non-reasoning",
+        "claude-sonnet-5-xhigh"
+      ],
+      "relation": "model_to_model",
+      "source_entity_id": "anthropic/claude-opus-5:batch"
+    },
+    {
+      "candidates": [
+        "claude-2",
+        "claude-21",
+        "claude-3-5-haiku",
+        "claude-3-7-sonnet",
+        "claude-3-7-sonnet-thinking",
+        "claude-3-haiku",
+        "claude-3-opus",
+        "claude-3-sonnet",
+        "claude-35-sonnet",
+        "claude-35-sonnet-june-24",
+        "claude-4-1-opus",
+        "claude-4-1-opus-thinking",
+        "claude-4-5-haiku",
+        "claude-4-5-haiku-reasoning",
+        "claude-4-5-sonnet",
+        "claude-4-5-sonnet-thinking",
+        "claude-4-opus",
+        "claude-4-opus-thinking",
+        "claude-4-sonnet",
+        "claude-4-sonnet-thinking",
+        "claude-fable-5",
+        "claude-instant",
+        "claude-opus-4-5",
+        "claude-opus-4-5-thinking",
+        "claude-opus-4-6",
+        "claude-opus-4-6-adaptive",
+        "claude-opus-4-7",
+        "claude-opus-4-7-non-reasoning",
+        "claude-opus-4-8",
+        "claude-opus-5",
+        "claude-opus-5-high",
+        "claude-opus-5-low",
+        "claude-opus-5-medium",
+        "claude-opus-5-xhigh",
+        "claude-sonnet-4-6",
+        "claude-sonnet-4-6-adaptive",
+        "claude-sonnet-4-6-non-reasoning-low-effort",
+        "claude-sonnet-5",
+        "claude-sonnet-5-high",
+        "claude-sonnet-5-low",
+        "claude-sonnet-5-medium",
+        "claude-sonnet-5-non-reasoning",
+        "claude-sonnet-5-xhigh"
+      ],
+      "relation": "model_to_model",
+      "source_entity_id": "anthropic/claude-sonnet-4"
+    },
+    {
+      "candidates": [
+        "claude-2",
+        "claude-21",
+        "claude-3-5-haiku",
+        "claude-3-7-sonnet",
+        "claude-3-7-sonnet-thinking",
+        "claude-3-haiku",
+        "claude-3-opus",
+        "claude-3-sonnet",
+        "claude-35-sonnet",
+        "claude-35-sonnet-june-24",
+        "claude-4-1-opus",
+        "claude-4-1-opus-thinking",
+        "claude-4-5-haiku",
+        "claude-4-5-haiku-reasoning",
+        "claude-4-5-sonnet",
+        "claude-4-5-sonnet-thinking",
+        "claude-4-opus",
+        "claude-4-opus-thinking",
+        "claude-4-sonnet",
+        "claude-4-sonnet-thinking",
+        "claude-fable-5",
+        "claude-instant",
+        "claude-opus-4-5",
+        "claude-opus-4-5-thinking",
+        "claude-opus-4-6",
+        "claude-opus-4-6-adaptive",
+        "claude-opus-4-7",
+        "claude-opus-4-7-non-reasoning",
+        "claude-opus-4-8",
+        "claude-opus-5",
+        "claude-opus-5-high",
+        "claude-opus-5-low",
+        "claude-opus-5-medium",
+        "claude-opus-5-xhigh",
+        "claude-sonnet-4-6",
+        "claude-sonnet-4-6-adaptive",
+        "claude-sonnet-4-6-non-reasoning-low-effort",
+        "claude-sonnet-5",
+        "claude-sonnet-5-high",
+        "claude-sonnet-5-low",
+        "claude-sonnet-5-medium",
+        "claude-sonnet-5-non-reasoning",
+        "claude-sonnet-5-xhigh"
+      ],
+      "relation": "model_to_model",
+      "source_entity_id": "anthropic/claude-sonnet-4.5"
+    },
+    {
+      "candidates": [
+        "claude-2",
+        "claude-21",
+        "claude-3-5-haiku",
+        "claude-3-7-sonnet",
+        "claude-3-7-sonnet-thinking",
+        "claude-3-haiku",
+        "claude-3-opus",
+        "claude-3-sonnet",
+        "claude-35-sonnet",
+        "claude-35-sonnet-june-24",
+        "claude-4-1-opus",
+        "claude-4-1-opus-thinking",
+        "claude-4-5-haiku",
+        "claude-4-5-haiku-reasoning",
+        "claude-4-5-sonnet",
+        "claude-4-5-sonnet-thinking",
+        "claude-4-opus",
+        "claude-4-opus-thinking",
+        "claude-4-sonnet",
+        "claude-4-sonnet-thinking",
+        "claude-fable-5",
+        "claude-instant",
+        "claude-opus-4-5",
+        "claude-opus-4-5-thinking",
+        "claude-opus-4-6",
+        "claude-opus-4-6-adaptive",
+        "claude-opus-4-7",
+        "claude-opus-4-7-non-reasoning",
+        "claude-opus-4-8",
+        "claude-opus-5",
+        "claude-opus-5-high",
+        "claude-opus-5-low",
+        "claude-opus-5-medium",
+        "claude-opus-5-xhigh",
+        "claude-sonnet-4-6",
+        "claude-sonnet-4-6-adaptive",
+        "claude-sonnet-4-6-non-reasoning-low-effort",
+        "claude-sonnet-5",
+        "claude-sonnet-5-high",
+        "claude-sonnet-5-low",
+        "claude-sonnet-5-medium",
+        "claude-sonnet-5-non-reasoning",
+        "claude-sonnet-5-xhigh"
+      ],
+      "relation": "model_to_model",
+      "source_entity_id": "anthropic/claude-sonnet-4.5:batch"
+    },
+    {
+      "candidates": [
+        "claude-2",
+        "claude-21",
+        "claude-3-5-haiku",
+        "claude-3-7-sonnet",
+        "claude-3-7-sonnet-thinking",
+        "claude-3-haiku",
+        "claude-3-opus",
+        "claude-3-sonnet",
+        "claude-35-sonnet",
+        "claude-35-sonnet-june-24",
+        "claude-4-1-opus",
+        "claude-4-1-opus-thinking",
+        "claude-4-5-haiku",
+        "claude-4-5-haiku-reasoning",
+        "claude-4-5-sonnet",
+        "claude-4-5-sonnet-thinking",
+        "claude-4-opus",
+        "claude-4-opus-thinking",
+        "claude-4-sonnet",
+        "claude-4-sonnet-thinking",
+        "claude-fable-5",
+        "claude-instant",
+        "claude-opus-4-5",
+        "claude-opus-4-5-thinking",
+        "claude-opus-4-6",
+        "claude-opus-4-6-adaptive",
+        "claude-opus-4-7",
+        "claude-opus-4-7-non-reasoning",
+        "claude-opus-4-8",
+        "claude-opus-5",
+        "claude-opus-5-high",
+        "claude-opus-5-low",
+        "claude-opus-5-medium",
+        "claude-opus-5-xhigh",
+        "claude-sonnet-4-6",
+        "claude-sonnet-4-6-adaptive",
+        "claude-sonnet-4-6-non-reasoning-low-effort",
+        "claude-sonnet-5",
+        "claude-sonnet-5-high",
+        "claude-sonnet-5-low",
+        "claude-sonnet-5-medium",
+        "claude-sonnet-5-non-reasoning",
+        "claude-sonnet-5-xhigh"
+      ],
+      "relation": "model_to_model",
+      "source_entity_id": "anthropic/claude-sonnet-4.6:batch"
+    },
+    {
+      "candidates": [
+        "claude-2",
+        "claude-21",
+        "claude-3-5-haiku",
+        "claude-3-7-sonnet",
+        "claude-3-7-sonnet-thinking",
+        "claude-3-haiku",
+        "claude-3-opus",
+        "claude-3-sonnet",
+        "claude-35-sonnet",
+        "claude-35-sonnet-june-24",
+        "claude-4-1-opus",
+        "claude-4-1-opus-thinking",
+        "claude-4-5-haiku",
+        "claude-4-5-haiku-reasoning",
+        "claude-4-5-sonnet",
+        "claude-4-5-sonnet-thinking",
+        "claude-4-opus",
+        "claude-4-opus-thinking",
+        "claude-4-sonnet",
+        "claude-4-sonnet-thinking",
+        "claude-fable-5",
+        "claude-instant",
+        "claude-opus-4-5",
+        "claude-opus-4-5-thinking",
+        "claude-opus-4-6",
+        "claude-opus-4-6-adaptive",
+        "claude-opus-4-7",
+        "claude-opus-4-7-non-reasoning",
+        "claude-opus-4-8",
+        "claude-opus-5",
+        "claude-opus-5-high",
+        "claude-opus-5-low",
+        "claude-opus-5-medium",
+        "claude-opus-5-xhigh",
+        "claude-sonnet-4-6",
+        "claude-sonnet-4-6-adaptive",
+        "claude-sonnet-4-6-non-reasoning-low-effort",
+        "claude-sonnet-5",
+        "claude-sonnet-5-high",
+        "claude-sonnet-5-low",
+        "claude-sonnet-5-medium",
+        "claude-sonnet-5-non-reasoning",
+        "claude-sonnet-5-xhigh"
+      ],
+      "relation": "model_to_model",
+      "source_entity_id": "anthropic/claude-sonnet-5:batch"
+    },
+    {
+      "candidates": [
+        "ernie-4-5-300b-a47b",
+        "ernie-5-0-thinking-preview"
+      ],
+      "relation": "model_to_model",
+      "source_entity_id": "baidu/ernie-4.5-vl-424b-a47b"
+    },
+    {
+      "candidates": [
+        "doubao-seed-code",
+        "seed-oss-36b-instruct"
+      ],
+      "relation": "model_to_model",
+      "source_entity_id": "bytedance-seed/seed-1.6"
+    },
+    {
+      "candidates": [
+        "doubao-seed-code",
+        "seed-oss-36b-instruct"
+      ],
+      "relation": "model_to_model",
+      "source_entity_id": "bytedance-seed/seed-1.6-flash"
+    },
+    {
+      "candidates": [
+        "doubao-seed-code",
+        "seed-oss-36b-instruct"
+      ],
+      "relation": "model_to_model",
+      "source_entity_id": "bytedance-seed/seed-2-1-turbo"
+    },
+    {
+      "candidates": [
+        "doubao-seed-code",
+        "seed-oss-36b-instruct"
+      ],
+      "relation": "model_to_model",
+      "source_entity_id": "bytedance-seed/seed-2.0-code"
+    },
+    {
+      "candidates": [
+        "doubao-seed-code",
+        "seed-oss-36b-instruct"
+      ],
+      "relation": "model_to_model",
+      "source_entity_id": "bytedance-seed/seed-2.0-lite"
+    },
+    {
+      "candidates": [
+        "doubao-seed-code",
+        "seed-oss-36b-instruct"
+      ],
+      "relation": "model_to_model",
+      "source_entity_id": "bytedance-seed/seed-2.0-mini"
+    },
+    {
+      "candidates": [
+        "command-a",
+        "command-a-plus",
+        "command-r-03-2024",
+        "command-r-plus-04-2024",
+        "north-mini-code",
+        "tiny-aya-global"
+      ],
+      "relation": "model_to_model",
+      "source_entity_id": "cohere/command-r-08-2024"
+    },
+    {
+      "candidates": [
+        "command-a",
+        "command-a-plus",
+        "command-r-03-2024",
+        "command-r-plus-04-2024",
+        "north-mini-code",
+        "tiny-aya-global"
+      ],
+      "relation": "model_to_model",
+      "source_entity_id": "cohere/command-r-plus-08-2024"
+    },
+    {
+      "candidates": [
+        "command-a",
+        "command-a-plus",
+        "command-r-03-2024",
+        "command-r-plus-04-2024",
+        "north-mini-code",
+        "tiny-aya-global"
+      ],
+      "relation": "model_to_model",
+      "source_entity_id": "cohere/command-r7b-12-2024"
+    },
+    {
+      "candidates": [
+        "command-a",
+        "command-a-plus",
+        "command-r-03-2024",
+        "command-r-plus-04-2024",
+        "north-mini-code",
+        "tiny-aya-global"
+      ],
+      "relation": "model_to_model",
+      "source_entity_id": "cohere/north-mini-code:free"
+    },
+    {
+      "candidates": [
+        "deepseek-coder-v2",
+        "deepseek-coder-v2-lite",
+        "deepseek-llm-67b-chat",
+        "deepseek-r1",
+        "deepseek-r1-0120",
+        "deepseek-r1-distill-llama-70b",
+        "deepseek-r1-distill-llama-8b",
+        "deepseek-r1-distill-qwen-1-5b",
+        "deepseek-r1-distill-qwen-14b",
+        "deepseek-r1-distill-qwen-32b",
+        "deepseek-r1-qwen3-8b",
+        "deepseek-v2",
+        "deepseek-v2-5",
+        "deepseek-v2-5-sep-2024",
+        "deepseek-v3",
+        "deepseek-v3-0324",
+        "deepseek-v3-1",
+        "deepseek-v3-1-reasoning",
+        "deepseek-v3-1-terminus",
+        "deepseek-v3-1-terminus-reasoning",
+        "deepseek-v3-2",
+        "deepseek-v3-2-0925",
+        "deepseek-v3-2-reasoning",
+        "deepseek-v3-2-reasoning-0925",
+        "deepseek-v3-2-speciale",
+        "deepseek-v4-flash",
+        "deepseek-v4-flash-0420",
+        "deepseek-v4-flash-0420-high",
+        "deepseek-v4-flash-high",
+        "deepseek-v4-flash-non-reasoning",
+        "deepseek-v4-pro",
+        "deepseek-v4-pro-0424",
+        "deepseek-v4-pro-0424-high",
+        "deepseek-v4-pro-0424-non-reasoning",
+        "deepseek-v4-pro-high",
+        "deepseek-v4-pro-non-reasoning"
+      ],
+      "relation": "model_to_model",
+      "source_entity_id": "deepseek/deepseek-chat"
+    },
+    {
+      "candidates": [
+        "deepseek-coder-v2",
+        "deepseek-coder-v2-lite",
+        "deepseek-llm-67b-chat",
+        "deepseek-r1",
+        "deepseek-r1-0120",
+        "deepseek-r1-distill-llama-70b",
+        "deepseek-r1-distill-llama-8b",
+        "deepseek-r1-distill-qwen-1-5b",
+        "deepseek-r1-distill-qwen-14b",
+        "deepseek-r1-distill-qwen-32b",
+        "deepseek-r1-qwen3-8b",
+        "deepseek-v2",
+        "deepseek-v2-5",
+        "deepseek-v2-5-sep-2024",
+        "deepseek-v3",
+        "deepseek-v3-0324",
+        "deepseek-v3-1",
+        "deepseek-v3-1-reasoning",
+        "deepseek-v3-1-terminus",
+        "deepseek-v3-1-terminus-reasoning",
+        "deepseek-v3-2",
+        "deepseek-v3-2-0925",
+        "deepseek-v3-2-reasoning",
+        "deepseek-v3-2-reasoning-0925",
+        "deepseek-v3-2-speciale",
+        "deepseek-v4-flash",
+        "deepseek-v4-flash-0420",
+        "deepseek-v4-flash-0420-high",
+        "deepseek-v4-flash-high",
+        "deepseek-v4-flash-non-reasoning",
+        "deepseek-v4-pro",
+        "deepseek-v4-pro-0424",
+        "deepseek-v4-pro-0424-high",
+        "deepseek-v4-pro-0424-non-reasoning",
+        "deepseek-v4-pro-high",
+        "deepseek-v4-pro-non-reasoning"
+      ],
+      "relation": "model_to_model",
+      "source_entity_id": "deepseek/deepseek-chat-v3-0324"
+    },
+    {
+      "candidates": [
+        "deepseek-coder-v2",
+        "deepseek-coder-v2-lite",
+        "deepseek-llm-67b-chat",
+        "deepseek-r1",
+        "deepseek-r1-0120",
+        "deepseek-r1-distill-llama-70b",
+        "deepseek-r1-distill-llama-8b",
+        "deepseek-r1-distill-qwen-1-5b",
+        "deepseek-r1-distill-qwen-14b",
+        "deepseek-r1-distill-qwen-32b",
+        "deepseek-r1-qwen3-8b",
+        "deepseek-v2",
+        "deepseek-v2-5",
+        "deepseek-v2-5-sep-2024",
+        "deepseek-v3",
+        "deepseek-v3-0324",
+        "deepseek-v3-1",
+        "deepseek-v3-1-reasoning",
+        "deepseek-v3-1-terminus",
+        "deepseek-v3-1-terminus-reasoning",
+        "deepseek-v3-2",
+        "deepseek-v3-2-0925",
+        "deepseek-v3-2-reasoning",
+        "deepseek-v3-2-reasoning-0925",
+        "deepseek-v3-2-speciale",
+        "deepseek-v4-flash",
+        "deepseek-v4-flash-0420",
+        "deepseek-v4-flash-0420-high",
+        "deepseek-v4-flash-high",
+        "deepseek-v4-flash-non-reasoning",
+        "deepseek-v4-pro",
+        "deepseek-v4-pro-0424",
+        "deepseek-v4-pro-0424-high",
+        "deepseek-v4-pro-0424-non-reasoning",
+        "deepseek-v4-pro-high",
+        "deepseek-v4-pro-non-reasoning"
+      ],
+      "relation": "model_to_model",
+      "source_entity_id": "deepseek/deepseek-chat-v3.1"
+    },
+    {
+      "candidates": [
+        "deepseek-v3-2-0925",
+        "deepseek-v3-2-reasoning-0925",
+        "deepseek-coder-v2",
+        "deepseek-coder-v2-lite",
+        "deepseek-llm-67b-chat",
+        "deepseek-r1",
+        "deepseek-r1-0120",
+        "deepseek-r1-distill-llama-70b",
+        "deepseek-r1-distill-llama-8b",
+        "deepseek-r1-distill-qwen-1-5b",
+        "deepseek-r1-distill-qwen-14b",
+        "deepseek-r1-distill-qwen-32b",
+        "deepseek-r1-qwen3-8b",
+        "deepseek-v2",
+        "deepseek-v2-5",
+        "deepseek-v2-5-sep-2024",
+        "deepseek-v3",
+        "deepseek-v3-0324",
+        "deepseek-v3-1",
+        "deepseek-v3-1-reasoning",
+        "deepseek-v3-1-terminus",
+        "deepseek-v3-1-terminus-reasoning",
+        "deepseek-v3-2",
+        "deepseek-v3-2-reasoning",
+        "deepseek-v3-2-speciale",
+        "deepseek-v4-flash",
+        "deepseek-v4-flash-0420",
+        "deepseek-v4-flash-0420-high",
+        "deepseek-v4-flash-high",
+        "deepseek-v4-flash-non-reasoning",
+        "deepseek-v4-pro",
+        "deepseek-v4-pro-0424",
+        "deepseek-v4-pro-0424-high",
+        "deepseek-v4-pro-0424-non-reasoning",
+        "deepseek-v4-pro-high",
+        "deepseek-v4-pro-non-reasoning"
+      ],
+      "relation": "model_to_model",
+      "source_entity_id": "deepseek/deepseek-v3.2-exp"
+    },
+    {
+      "candidates": [
+        "deepseek-coder-v2",
+        "deepseek-coder-v2-lite",
+        "deepseek-llm-67b-chat",
+        "deepseek-r1",
+        "deepseek-r1-0120",
+        "deepseek-r1-distill-llama-70b",
+        "deepseek-r1-distill-llama-8b",
+        "deepseek-r1-distill-qwen-1-5b",
+        "deepseek-r1-distill-qwen-14b",
+        "deepseek-r1-distill-qwen-32b",
+        "deepseek-r1-qwen3-8b",
+        "deepseek-v2",
+        "deepseek-v2-5",
+        "deepseek-v2-5-sep-2024",
+        "deepseek-v3",
+        "deepseek-v3-0324",
+        "deepseek-v3-1",
+        "deepseek-v3-1-reasoning",
+        "deepseek-v3-1-terminus",
+        "deepseek-v3-1-terminus-reasoning",
+        "deepseek-v3-2",
+        "deepseek-v3-2-0925",
+        "deepseek-v3-2-reasoning",
+        "deepseek-v3-2-reasoning-0925",
+        "deepseek-v3-2-speciale",
+        "deepseek-v4-flash",
+        "deepseek-v4-flash-0420",
+        "deepseek-v4-flash-0420-high",
+        "deepseek-v4-flash-high",
+        "deepseek-v4-flash-non-reasoning",
+        "deepseek-v4-pro",
+        "deepseek-v4-pro-0424",
+        "deepseek-v4-pro-0424-high",
+        "deepseek-v4-pro-0424-non-reasoning",
+        "deepseek-v4-pro-high",
+        "deepseek-v4-pro-non-reasoning"
+      ],
+      "relation": "model_to_model",
+      "source_entity_id": "deepseek/deepseek-v4-flash-0731"
+    },
+    {
+      "candidates": [
+        "deepseek-coder-v2",
+        "deepseek-coder-v2-lite",
+        "deepseek-llm-67b-chat",
+        "deepseek-r1",
+        "deepseek-r1-0120",
+        "deepseek-r1-distill-llama-70b",
+        "deepseek-r1-distill-llama-8b",
+        "deepseek-r1-distill-qwen-1-5b",
+        "deepseek-r1-distill-qwen-14b",
+        "deepseek-r1-distill-qwen-32b",
+        "deepseek-r1-qwen3-8b",
+        "deepseek-v2",
+        "deepseek-v2-5",
+        "deepseek-v2-5-sep-2024",
+        "deepseek-v3",
+        "deepseek-v3-0324",
+        "deepseek-v3-1",
+        "deepseek-v3-1-reasoning",
+        "deepseek-v3-1-terminus",
+        "deepseek-v3-1-terminus-reasoning",
+        "deepseek-v3-2",
+        "deepseek-v3-2-0925",
+        "deepseek-v3-2-reasoning",
+        "deepseek-v3-2-reasoning-0925",
+        "deepseek-v3-2-speciale",
+        "deepseek-v4-flash",
+        "deepseek-v4-flash-0420",
+        "deepseek-v4-flash-0420-high",
+        "deepseek-v4-flash-high",
+        "deepseek-v4-flash-non-reasoning",
+        "deepseek-v4-pro",
+        "deepseek-v4-pro-0424",
+        "deepseek-v4-pro-0424-high",
+        "deepseek-v4-pro-0424-non-reasoning",
+        "deepseek-v4-pro-high",
+        "deepseek-v4-pro-non-reasoning"
+      ],
+      "relation": "model_to_model",
+      "source_entity_id": "deepseek/deepseek-v4-flash-vision-exp"
+    },
+    {
+      "candidates": [
+        "deepseek-coder-v2",
+        "deepseek-coder-v2-lite",
+        "deepseek-llm-67b-chat",
+        "deepseek-r1",
+        "deepseek-r1-0120",
+        "deepseek-r1-distill-llama-70b",
+        "deepseek-r1-distill-llama-8b",
+        "deepseek-r1-distill-qwen-1-5b",
+        "deepseek-r1-distill-qwen-14b",
+        "deepseek-r1-distill-qwen-32b",
+        "deepseek-r1-qwen3-8b",
+        "deepseek-v2",
+        "deepseek-v2-5",
+        "deepseek-v2-5-sep-2024",
+        "deepseek-v3",
+        "deepseek-v3-0324",
+        "deepseek-v3-1",
+        "deepseek-v3-1-reasoning",
+        "deepseek-v3-1-terminus",
+        "deepseek-v3-1-terminus-reasoning",
+        "deepseek-v3-2",
+        "deepseek-v3-2-0925",
+        "deepseek-v3-2-reasoning",
+        "deepseek-v3-2-reasoning-0925",
+        "deepseek-v3-2-speciale",
+        "deepseek-v4-flash",
+        "deepseek-v4-flash-0420",
+        "deepseek-v4-flash-0420-high",
+        "deepseek-v4-flash-high",
+        "deepseek-v4-flash-non-reasoning",
+        "deepseek-v4-pro",
+        "deepseek-v4-pro-0424",
+        "deepseek-v4-pro-0424-high",
+        "deepseek-v4-pro-0424-non-reasoning",
+        "deepseek-v4-pro-high",
+        "deepseek-v4-pro-non-reasoning"
+      ],
+      "relation": "model_to_model",
+      "source_entity_id": "deepseek/deepseek-v4-pro-0813"
+    },
+    {
+      "candidates": [
+        "diffusiongemma-26b-a4b",
+        "gemini-1-0-pro",
+        "gemini-1-0-ultra",
+        "gemini-1-5-flash",
+        "gemini-1-5-flash-8b",
+        "gemini-1-5-flash-may-2024",
+        "gemini-1-5-pro",
+        "gemini-1-5-pro-may-2024",
+        "gemini-2-0-flash",
+        "gemini-2-0-flash-experimental",
+        "gemini-2-0-flash-lite-001",
+        "gemini-2-0-flash-lite-preview",
+        "gemini-2-0-flash-thinking-exp-0121",
+        "gemini-2-0-flash-thinking-exp-1219",
+        "gemini-2-0-pro-experimental-02-05",
+        "gemini-2-5-flash",
+        "gemini-2-5-flash-04-2025",
+        "gemini-2-5-flash-lite",
+        "gemini-2-5-flash-lite-preview-09-2025",
+        "gemini-2-5-flash-lite-preview-09-2025-reasoning",
+        "gemini-2-5-flash-lite-reasoning",
+        "gemini-2-5-flash-preview-09-2025",
+        "gemini-2-5-flash-preview-09-2025-reasoning",
+        "gemini-2-5-flash-reasoning",
+        "gemini-2-5-flash-reasoning-04-2025",
+        "gemini-2-5-pro",
+        "gemini-2-5-pro-03-25",
+        "gemini-2-5-pro-05-06",
+        "gemini-3-1-flash-lite-preview",
+        "gemini-3-1-pro-preview",
+        "gemini-3-5-flash",
+        "gemini-3-5-flash-lite",
+        "gemini-3-5-flash-medium",
+        "gemini-3-5-flash-minimal",
+        "gemini-3-6-flash",
+        "gemini-3-7-flash",
+        "gemini-3-7-flash-low",
+        "gemini-3-7-flash-medium",
+        "gemini-3-deep-think",
+        "gemini-3-flash",
+        "gemini-3-flash-reasoning",
+        "gemini-3-pro",
+        "gemini-3-pro-low",
+        "gemma-3-12b",
+        "gemma-3-1b",
+        "gemma-3-270m",
+        "gemma-3-27b",
+        "gemma-3-4b",
+        "gemma-3n-e2b",
+        "gemma-3n-e4b",
+        "gemma-3n-e4b-preview-0520",
+        "gemma-4-12b",
+        "gemma-4-12b-non-reasoning",
+        "gemma-4-26b-a4b",
+        "gemma-4-26b-a4b-non-reasoning",
+        "gemma-4-31b",
+        "gemma-4-31b-non-reasoning",
+        "gemma-4-e2b",
+        "gemma-4-e2b-non-reasoning",
+        "gemma-4-e4b",
+        "gemma-4-e4b-non-reasoning",
+        "palm-2"
+      ],
+      "relation": "model_to_model",
+      "source_entity_id": "google/gemini-2.5-flash-image"
+    },
+    {
+      "candidates": [
+        "diffusiongemma-26b-a4b",
+        "gemini-1-0-pro",
+        "gemini-1-0-ultra",
+        "gemini-1-5-flash",
+        "gemini-1-5-flash-8b",
+        "gemini-1-5-flash-may-2024",
+        "gemini-1-5-pro",
+        "gemini-1-5-pro-may-2024",
+        "gemini-2-0-flash",
+        "gemini-2-0-flash-experimental",
+        "gemini-2-0-flash-lite-001",
+        "gemini-2-0-flash-lite-preview",
+        "gemini-2-0-flash-thinking-exp-0121",
+        "gemini-2-0-flash-thinking-exp-1219",
+        "gemini-2-0-pro-experimental-02-05",
+        "gemini-2-5-flash",
+        "gemini-2-5-flash-04-2025",
+        "gemini-2-5-flash-lite",
+        "gemini-2-5-flash-lite-preview-09-2025",
+        "gemini-2-5-flash-lite-preview-09-2025-reasoning",
+        "gemini-2-5-flash-lite-reasoning",
+        "gemini-2-5-flash-preview-09-2025",
+        "gemini-2-5-flash-preview-09-2025-reasoning",
+        "gemini-2-5-flash-reasoning",
+        "gemini-2-5-flash-reasoning-04-2025",
+        "gemini-2-5-pro",
+        "gemini-2-5-pro-03-25",
+        "gemini-2-5-pro-05-06",
+        "gemini-3-1-flash-lite-preview",
+        "gemini-3-1-pro-preview",
+        "gemini-3-5-flash",
+        "gemini-3-5-flash-lite",
+        "gemini-3-5-flash-medium",
+        "gemini-3-5-flash-minimal",
+        "gemini-3-6-flash",
+        "gemini-3-7-flash",
+        "gemini-3-7-flash-low",
+        "gemini-3-7-flash-medium",
+        "gemini-3-deep-think",
+        "gemini-3-flash",
+        "gemini-3-flash-reasoning",
+        "gemini-3-pro",
+        "gemini-3-pro-low",
+        "gemma-3-12b",
+        "gemma-3-1b",
+        "gemma-3-270m",
+        "gemma-3-27b",
+        "gemma-3-4b",
+        "gemma-3n-e2b",
+        "gemma-3n-e4b",
+        "gemma-3n-e4b-preview-0520",
+        "gemma-4-12b",
+        "gemma-4-12b-non-reasoning",
+        "gemma-4-26b-a4b",
+        "gemma-4-26b-a4b-non-reasoning",
+        "gemma-4-31b",
+        "gemma-4-31b-non-reasoning",
+        "gemma-4-e2b",
+        "gemma-4-e2b-non-reasoning",
+        "gemma-4-e4b",
+        "gemma-4-e4b-non-reasoning",
+        "palm-2"
+      ],
+      "relation": "model_to_model",
+      "source_entity_id": "google/gemini-2.5-flash-lite:batch"
+    },
+    {
+      "candidates": [
+        "diffusiongemma-26b-a4b",
+        "gemini-1-0-pro",
+        "gemini-1-0-ultra",
+        "gemini-1-5-flash",
+        "gemini-1-5-flash-8b",
+        "gemini-1-5-flash-may-2024",
+        "gemini-1-5-pro",
+        "gemini-1-5-pro-may-2024",
+        "gemini-2-0-flash",
+        "gemini-2-0-flash-experimental",
+        "gemini-2-0-flash-lite-001",
+        "gemini-2-0-flash-lite-preview",
+        "gemini-2-0-flash-thinking-exp-0121",
+        "gemini-2-0-flash-thinking-exp-1219",
+        "gemini-2-0-pro-experimental-02-05",
+        "gemini-2-5-flash",
+        "gemini-2-5-flash-04-2025",
+        "gemini-2-5-flash-lite",
+        "gemini-2-5-flash-lite-preview-09-2025",
+        "gemini-2-5-flash-lite-preview-09-2025-reasoning",
+        "gemini-2-5-flash-lite-reasoning",
+        "gemini-2-5-flash-preview-09-2025",
+        "gemini-2-5-flash-preview-09-2025-reasoning",
+        "gemini-2-5-flash-reasoning",
+        "gemini-2-5-flash-reasoning-04-2025",
+        "gemini-2-5-pro",
+        "gemini-2-5-pro-03-25",
+        "gemini-2-5-pro-05-06",
+        "gemini-3-1-flash-lite-preview",
+        "gemini-3-1-pro-preview",
+        "gemini-3-5-flash",
+        "gemini-3-5-flash-lite",
+        "gemini-3-5-flash-medium",
+        "gemini-3-5-flash-minimal",
+        "gemini-3-6-flash",
+        "gemini-3-7-flash",
+        "gemini-3-7-flash-low",
+        "gemini-3-7-flash-medium",
+        "gemini-3-deep-think",
+        "gemini-3-flash",
+        "gemini-3-flash-reasoning",
+        "gemini-3-pro",
+        "gemini-3-pro-low",
+        "gemma-3-12b",
+        "gemma-3-1b",
+        "gemma-3-270m",
+        "gemma-3-27b",
+        "gemma-3-4b",
+        "gemma-3n-e2b",
+        "gemma-3n-e4b",
+        "gemma-3n-e4b-preview-0520",
+        "gemma-4-12b",
+        "gemma-4-12b-non-reasoning",
+        "gemma-4-26b-a4b",
+        "gemma-4-26b-a4b-non-reasoning",
+        "gemma-4-31b",
+        "gemma-4-31b-non-reasoning",
+        "gemma-4-e2b",
+        "gemma-4-e2b-non-reasoning",
+        "gemma-4-e4b",
+        "gemma-4-e4b-non-reasoning",
+        "palm-2"
+      ],
+      "relation": "model_to_model",
+      "source_entity_id": "google/gemini-2.5-flash:batch"
+    },
+    {
+      "candidates": [
+        "diffusiongemma-26b-a4b",
+        "gemini-1-0-pro",
+        "gemini-1-0-ultra",
+        "gemini-1-5-flash",
+        "gemini-1-5-flash-8b",
+        "gemini-1-5-flash-may-2024",
+        "gemini-1-5-pro",
+        "gemini-1-5-pro-may-2024",
+        "gemini-2-0-flash",
+        "gemini-2-0-flash-experimental",
+        "gemini-2-0-flash-lite-001",
+        "gemini-2-0-flash-lite-preview",
+        "gemini-2-0-flash-thinking-exp-0121",
+        "gemini-2-0-flash-thinking-exp-1219",
+        "gemini-2-0-pro-experimental-02-05",
+        "gemini-2-5-flash",
+        "gemini-2-5-flash-04-2025",
+        "gemini-2-5-flash-lite",
+        "gemini-2-5-flash-lite-preview-09-2025",
+        "gemini-2-5-flash-lite-preview-09-2025-reasoning",
+        "gemini-2-5-flash-lite-reasoning",
+        "gemini-2-5-flash-preview-09-2025",
+        "gemini-2-5-flash-preview-09-2025-reasoning",
+        "gemini-2-5-flash-reasoning",
+        "gemini-2-5-flash-reasoning-04-2025",
+        "gemini-2-5-pro",
+        "gemini-2-5-pro-03-25",
+        "gemini-2-5-pro-05-06",
+        "gemini-3-1-flash-lite-preview",
+        "gemini-3-1-pro-preview",
+        "gemini-3-5-flash",
+        "gemini-3-5-flash-lite",
+        "gemini-3-5-flash-medium",
+        "gemini-3-5-flash-minimal",
+        "gemini-3-6-flash",
+        "gemini-3-7-flash",
+        "gemini-3-7-flash-low",
+        "gemini-3-7-flash-medium",
+        "gemini-3-deep-think",
+        "gemini-3-flash",
+        "gemini-3-flash-reasoning",
+        "gemini-3-pro",
+        "gemini-3-pro-low",
+        "gemma-3-12b",
+        "gemma-3-1b",
+        "gemma-3-270m",
+        "gemma-3-27b",
+        "gemma-3-4b",
+        "gemma-3n-e2b",
+        "gemma-3n-e4b",
+        "gemma-3n-e4b-preview-0520",
+        "gemma-4-12b",
+        "gemma-4-12b-non-reasoning",
+        "gemma-4-26b-a4b",
+        "gemma-4-26b-a4b-non-reasoning",
+        "gemma-4-31b",
+        "gemma-4-31b-non-reasoning",
+        "gemma-4-e2b",
+        "gemma-4-e2b-non-reasoning",
+        "gemma-4-e4b",
+        "gemma-4-e4b-non-reasoning",
+        "palm-2"
+      ],
+      "relation": "model_to_model",
+      "source_entity_id": "google/gemini-2.5-pro:batch"
+    },
+    {
+      "candidates": [
+        "diffusiongemma-26b-a4b",
+        "gemini-1-0-pro",
+        "gemini-1-0-ultra",
+        "gemini-1-5-flash",
+        "gemini-1-5-flash-8b",
+        "gemini-1-5-flash-may-2024",
+        "gemini-1-5-pro",
+        "gemini-1-5-pro-may-2024",
+        "gemini-2-0-flash",
+        "gemini-2-0-flash-experimental",
+        "gemini-2-0-flash-lite-001",
+        "gemini-2-0-flash-lite-preview",
+        "gemini-2-0-flash-thinking-exp-0121",
+        "gemini-2-0-flash-thinking-exp-1219",
+        "gemini-2-0-pro-experimental-02-05",
+        "gemini-2-5-flash",
+        "gemini-2-5-flash-04-2025",
+        "gemini-2-5-flash-lite",
+        "gemini-2-5-flash-lite-preview-09-2025",
+        "gemini-2-5-flash-lite-preview-09-2025-reasoning",
+        "gemini-2-5-flash-lite-reasoning",
+        "gemini-2-5-flash-preview-09-2025",
+        "gemini-2-5-flash-preview-09-2025-reasoning",
+        "gemini-2-5-flash-reasoning",
+        "gemini-2-5-flash-reasoning-04-2025",
+        "gemini-2-5-pro",
+        "gemini-2-5-pro-03-25",
+        "gemini-2-5-pro-05-06",
+        "gemini-3-1-flash-lite-preview",
+        "gemini-3-1-pro-preview",
+        "gemini-3-5-flash",
+        "gemini-3-5-flash-lite",
+        "gemini-3-5-flash-medium",
+        "gemini-3-5-flash-minimal",
+        "gemini-3-6-flash",
+        "gemini-3-7-flash",
+        "gemini-3-7-flash-low",
+        "gemini-3-7-flash-medium",
+        "gemini-3-deep-think",
+        "gemini-3-flash",
+        "gemini-3-flash-reasoning",
+        "gemini-3-pro",
+        "gemini-3-pro-low",
+        "gemma-3-12b",
+        "gemma-3-1b",
+        "gemma-3-270m",
+        "gemma-3-27b",
+        "gemma-3-4b",
+        "gemma-3n-e2b",
+        "gemma-3n-e4b",
+        "gemma-3n-e4b-preview-0520",
+        "gemma-4-12b",
+        "gemma-4-12b-non-reasoning",
+        "gemma-4-26b-a4b",
+        "gemma-4-26b-a4b-non-reasoning",
+        "gemma-4-31b",
+        "gemma-4-31b-non-reasoning",
+        "gemma-4-e2b",
+        "gemma-4-e2b-non-reasoning",
+        "gemma-4-e4b",
+        "gemma-4-e4b-non-reasoning",
+        "palm-2"
+      ],
+      "relation": "model_to_model",
+      "source_entity_id": "google/gemini-3-flash-preview"
+    },
+    {
+      "candidates": [
+        "diffusiongemma-26b-a4b",
+        "gemini-1-0-pro",
+        "gemini-1-0-ultra",
+        "gemini-1-5-flash",
+        "gemini-1-5-flash-8b",
+        "gemini-1-5-flash-may-2024",
+        "gemini-1-5-pro",
+        "gemini-1-5-pro-may-2024",
+        "gemini-2-0-flash",
+        "gemini-2-0-flash-experimental",
+        "gemini-2-0-flash-lite-001",
+        "gemini-2-0-flash-lite-preview",
+        "gemini-2-0-flash-thinking-exp-0121",
+        "gemini-2-0-flash-thinking-exp-1219",
+        "gemini-2-0-pro-experimental-02-05",
+        "gemini-2-5-flash",
+        "gemini-2-5-flash-04-2025",
+        "gemini-2-5-flash-lite",
+        "gemini-2-5-flash-lite-preview-09-2025",
+        "gemini-2-5-flash-lite-preview-09-2025-reasoning",
+        "gemini-2-5-flash-lite-reasoning",
+        "gemini-2-5-flash-preview-09-2025",
+        "gemini-2-5-flash-preview-09-2025-reasoning",
+        "gemini-2-5-flash-reasoning",
+        "gemini-2-5-flash-reasoning-04-2025",
+        "gemini-2-5-pro",
+        "gemini-2-5-pro-03-25",
+        "gemini-2-5-pro-05-06",
+        "gemini-3-1-flash-lite-preview",
+        "gemini-3-1-pro-preview",
+        "gemini-3-5-flash",
+        "gemini-3-5-flash-lite",
+        "gemini-3-5-flash-medium",
+        "gemini-3-5-flash-minimal",
+        "gemini-3-6-flash",
+        "gemini-3-7-flash",
+        "gemini-3-7-flash-low",
+        "gemini-3-7-flash-medium",
+        "gemini-3-deep-think",
+        "gemini-3-flash",
+        "gemini-3-flash-reasoning",
+        "gemini-3-pro",
+        "gemini-3-pro-low",
+        "gemma-3-12b",
+        "gemma-3-1b",
+        "gemma-3-270m",
+        "gemma-3-27b",
+        "gemma-3-4b",
+        "gemma-3n-e2b",
+        "gemma-3n-e4b",
+        "gemma-3n-e4b-preview-0520",
+        "gemma-4-12b",
+        "gemma-4-12b-non-reasoning",
+        "gemma-4-26b-a4b",
+        "gemma-4-26b-a4b-non-reasoning",
+        "gemma-4-31b",
+        "gemma-4-31b-non-reasoning",
+        "gemma-4-e2b",
+        "gemma-4-e2b-non-reasoning",
+        "gemma-4-e4b",
+        "gemma-4-e4b-non-reasoning",
+        "palm-2"
+      ],
+      "relation": "model_to_model",
+      "source_entity_id": "google/gemini-3-flash-preview:batch"
+    },
+    {
+      "candidates": [
+        "diffusiongemma-26b-a4b",
+        "gemini-1-0-pro",
+        "gemini-1-0-ultra",
+        "gemini-1-5-flash",
+        "gemini-1-5-flash-8b",
+        "gemini-1-5-flash-may-2024",
+        "gemini-1-5-pro",
+        "gemini-1-5-pro-may-2024",
+        "gemini-2-0-flash",
+        "gemini-2-0-flash-experimental",
+        "gemini-2-0-flash-lite-001",
+        "gemini-2-0-flash-lite-preview",
+        "gemini-2-0-flash-thinking-exp-0121",
+        "gemini-2-0-flash-thinking-exp-1219",
+        "gemini-2-0-pro-experimental-02-05",
+        "gemini-2-5-flash",
+        "gemini-2-5-flash-04-2025",
+        "gemini-2-5-flash-lite",
+        "gemini-2-5-flash-lite-preview-09-2025",
+        "gemini-2-5-flash-lite-preview-09-2025-reasoning",
+        "gemini-2-5-flash-lite-reasoning",
+        "gemini-2-5-flash-preview-09-2025",
+        "gemini-2-5-flash-preview-09-2025-reasoning",
+        "gemini-2-5-flash-reasoning",
+        "gemini-2-5-flash-reasoning-04-2025",
+        "gemini-2-5-pro",
+        "gemini-2-5-pro-03-25",
+        "gemini-2-5-pro-05-06",
+        "gemini-3-1-flash-lite-preview",
+        "gemini-3-1-pro-preview",
+        "gemini-3-5-flash",
+        "gemini-3-5-flash-lite",
+        "gemini-3-5-flash-medium",
+        "gemini-3-5-flash-minimal",
+        "gemini-3-6-flash",
+        "gemini-3-7-flash",
+        "gemini-3-7-flash-low",
+        "gemini-3-7-flash-medium",
+        "gemini-3-deep-think",
+        "gemini-3-flash",
+        "gemini-3-flash-reasoning",
+        "gemini-3-pro",
+        "gemini-3-pro-low",
+        "gemma-3-12b",
+        "gemma-3-1b",
+        "gemma-3-270m",
+        "gemma-3-27b",
+        "gemma-3-4b",
+        "gemma-3n-e2b",
+        "gemma-3n-e4b",
+        "gemma-3n-e4b-preview-0520",
+        "gemma-4-12b",
+        "gemma-4-12b-non-reasoning",
+        "gemma-4-26b-a4b",
+        "gemma-4-26b-a4b-non-reasoning",
+        "gemma-4-31b",
+        "gemma-4-31b-non-reasoning",
+        "gemma-4-e2b",
+        "gemma-4-e2b-non-reasoning",
+        "gemma-4-e4b",
+        "gemma-4-e4b-non-reasoning",
+        "palm-2"
+      ],
+      "relation": "model_to_model",
+      "source_entity_id": "google/gemini-3-pro-image"
+    },
+    {
+      "candidates": [
+        "diffusiongemma-26b-a4b",
+        "gemini-1-0-pro",
+        "gemini-1-0-ultra",
+        "gemini-1-5-flash",
+        "gemini-1-5-flash-8b",
+        "gemini-1-5-flash-may-2024",
+        "gemini-1-5-pro",
+        "gemini-1-5-pro-may-2024",
+        "gemini-2-0-flash",
+        "gemini-2-0-flash-experimental",
+        "gemini-2-0-flash-lite-001",
+        "gemini-2-0-flash-lite-preview",
+        "gemini-2-0-flash-thinking-exp-0121",
+        "gemini-2-0-flash-thinking-exp-1219",
+        "gemini-2-0-pro-experimental-02-05",
+        "gemini-2-5-flash",
+        "gemini-2-5-flash-04-2025",
+        "gemini-2-5-flash-lite",
+        "gemini-2-5-flash-lite-preview-09-2025",
+        "gemini-2-5-flash-lite-preview-09-2025-reasoning",
+        "gemini-2-5-flash-lite-reasoning",
+        "gemini-2-5-flash-preview-09-2025",
+        "gemini-2-5-flash-preview-09-2025-reasoning",
+        "gemini-2-5-flash-reasoning",
+        "gemini-2-5-flash-reasoning-04-2025",
+        "gemini-2-5-pro",
+        "gemini-2-5-pro-03-25",
+        "gemini-2-5-pro-05-06",
+        "gemini-3-1-flash-lite-preview",
+        "gemini-3-1-pro-preview",
+        "gemini-3-5-flash",
+        "gemini-3-5-flash-lite",
+        "gemini-3-5-flash-medium",
+        "gemini-3-5-flash-minimal",
+        "gemini-3-6-flash",
+        "gemini-3-7-flash",
+        "gemini-3-7-flash-low",
+        "gemini-3-7-flash-medium",
+        "gemini-3-deep-think",
+        "gemini-3-flash",
+        "gemini-3-flash-reasoning",
+        "gemini-3-pro",
+        "gemini-3-pro-low",
+        "gemma-3-12b",
+        "gemma-3-1b",
+        "gemma-3-270m",
+        "gemma-3-27b",
+        "gemma-3-4b",
+        "gemma-3n-e2b",
+        "gemma-3n-e4b",
+        "gemma-3n-e4b-preview-0520",
+        "gemma-4-12b",
+        "gemma-4-12b-non-reasoning",
+        "gemma-4-26b-a4b",
+        "gemma-4-26b-a4b-non-reasoning",
+        "gemma-4-31b",
+        "gemma-4-31b-non-reasoning",
+        "gemma-4-e2b",
+        "gemma-4-e2b-non-reasoning",
+        "gemma-4-e4b",
+        "gemma-4-e4b-non-reasoning",
+        "palm-2"
+      ],
+      "relation": "model_to_model",
+      "source_entity_id": "google/gemini-3-pro-image-preview"
+    },
+    {
+      "candidates": [
+        "diffusiongemma-26b-a4b",
+        "gemini-1-0-pro",
+        "gemini-1-0-ultra",
+        "gemini-1-5-flash",
+        "gemini-1-5-flash-8b",
+        "gemini-1-5-flash-may-2024",
+        "gemini-1-5-pro",
+        "gemini-1-5-pro-may-2024",
+        "gemini-2-0-flash",
+        "gemini-2-0-flash-experimental",
+        "gemini-2-0-flash-lite-001",
+        "gemini-2-0-flash-lite-preview",
+        "gemini-2-0-flash-thinking-exp-0121",
+        "gemini-2-0-flash-thinking-exp-1219",
+        "gemini-2-0-pro-experimental-02-05",
+        "gemini-2-5-flash",
+        "gemini-2-5-flash-04-2025",
+        "gemini-2-5-flash-lite",
+        "gemini-2-5-flash-lite-preview-09-2025",
+        "gemini-2-5-flash-lite-preview-09-2025-reasoning",
+        "gemini-2-5-flash-lite-reasoning",
+        "gemini-2-5-flash-preview-09-2025",
+        "gemini-2-5-flash-preview-09-2025-reasoning",
+        "gemini-2-5-flash-reasoning",
+        "gemini-2-5-flash-reasoning-04-2025",
+        "gemini-2-5-pro",
+        "gemini-2-5-pro-03-25",
+        "gemini-2-5-pro-05-06",
+        "gemini-3-1-flash-lite-preview",
+        "gemini-3-1-pro-preview",
+        "gemini-3-5-flash",
+        "gemini-3-5-flash-lite",
+        "gemini-3-5-flash-medium",
+        "gemini-3-5-flash-minimal",
+        "gemini-3-6-flash",
+        "gemini-3-7-flash",
+        "gemini-3-7-flash-low",
+        "gemini-3-7-flash-medium",
+        "gemini-3-deep-think",
+        "gemini-3-flash",
+        "gemini-3-flash-reasoning",
+        "gemini-3-pro",
+        "gemini-3-pro-low",
+        "gemma-3-12b",
+        "gemma-3-1b",
+        "gemma-3-270m",
+        "gemma-3-27b",
+        "gemma-3-4b",
+        "gemma-3n-e2b",
+        "gemma-3n-e4b",
+        "gemma-3n-e4b-preview-0520",
+        "gemma-4-12b",
+        "gemma-4-12b-non-reasoning",
+        "gemma-4-26b-a4b",
+        "gemma-4-26b-a4b-non-reasoning",
+        "gemma-4-31b",
+        "gemma-4-31b-non-reasoning",
+        "gemma-4-e2b",
+        "gemma-4-e2b-non-reasoning",
+        "gemma-4-e4b",
+        "gemma-4-e4b-non-reasoning",
+        "palm-2"
+      ],
+      "relation": "model_to_model",
+      "source_entity_id": "google/gemini-3.1-flash-image"
+    },
+    {
+      "candidates": [
+        "diffusiongemma-26b-a4b",
+        "gemini-1-0-pro",
+        "gemini-1-0-ultra",
+        "gemini-1-5-flash",
+        "gemini-1-5-flash-8b",
+        "gemini-1-5-flash-may-2024",
+        "gemini-1-5-pro",
+        "gemini-1-5-pro-may-2024",
+        "gemini-2-0-flash",
+        "gemini-2-0-flash-experimental",
+        "gemini-2-0-flash-lite-001",
+        "gemini-2-0-flash-lite-preview",
+        "gemini-2-0-flash-thinking-exp-0121",
+        "gemini-2-0-flash-thinking-exp-1219",
+        "gemini-2-0-pro-experimental-02-05",
+        "gemini-2-5-flash",
+        "gemini-2-5-flash-04-2025",
+        "gemini-2-5-flash-lite",
+        "gemini-2-5-flash-lite-preview-09-2025",
+        "gemini-2-5-flash-lite-preview-09-2025-reasoning",
+        "gemini-2-5-flash-lite-reasoning",
+        "gemini-2-5-flash-preview-09-2025",
+        "gemini-2-5-flash-preview-09-2025-reasoning",
+        "gemini-2-5-flash-reasoning",
+        "gemini-2-5-flash-reasoning-04-2025",
+        "gemini-2-5-pro",
+        "gemini-2-5-pro-03-25",
+        "gemini-2-5-pro-05-06",
+        "gemini-3-1-flash-lite-preview",
+        "gemini-3-1-pro-preview",
+        "gemini-3-5-flash",
+        "gemini-3-5-flash-lite",
+        "gemini-3-5-flash-medium",
+        "gemini-3-5-flash-minimal",
+        "gemini-3-6-flash",
+        "gemini-3-7-flash",
+        "gemini-3-7-flash-low",
+        "gemini-3-7-flash-medium",
+        "gemini-3-deep-think",
+        "gemini-3-flash",
+        "gemini-3-flash-reasoning",
+        "gemini-3-pro",
+        "gemini-3-pro-low",
+        "gemma-3-12b",
+        "gemma-3-1b",
+        "gemma-3-270m",
+        "gemma-3-27b",
+        "gemma-3-4b",
+        "gemma-3n-e2b",
+        "gemma-3n-e4b",
+        "gemma-3n-e4b-preview-0520",
+        "gemma-4-12b",
+        "gemma-4-12b-non-reasoning",
+        "gemma-4-26b-a4b",
+        "gemma-4-26b-a4b-non-reasoning",
+        "gemma-4-31b",
+        "gemma-4-31b-non-reasoning",
+        "gemma-4-e2b",
+        "gemma-4-e2b-non-reasoning",
+        "gemma-4-e4b",
+        "gemma-4-e4b-non-reasoning",
+        "palm-2"
+      ],
+      "relation": "model_to_model",
+      "source_entity_id": "google/gemini-3.1-flash-image-preview"
+    },
+    {
+      "candidates": [
+        "diffusiongemma-26b-a4b",
+        "gemini-1-0-pro",
+        "gemini-1-0-ultra",
+        "gemini-1-5-flash",
+        "gemini-1-5-flash-8b",
+        "gemini-1-5-flash-may-2024",
+        "gemini-1-5-pro",
+        "gemini-1-5-pro-may-2024",
+        "gemini-2-0-flash",
+        "gemini-2-0-flash-experimental",
+        "gemini-2-0-flash-lite-001",
+        "gemini-2-0-flash-lite-preview",
+        "gemini-2-0-flash-thinking-exp-0121",
+        "gemini-2-0-flash-thinking-exp-1219",
+        "gemini-2-0-pro-experimental-02-05",
+        "gemini-2-5-flash",
+        "gemini-2-5-flash-04-2025",
+        "gemini-2-5-flash-lite",
+        "gemini-2-5-flash-lite-preview-09-2025",
+        "gemini-2-5-flash-lite-preview-09-2025-reasoning",
+        "gemini-2-5-flash-lite-reasoning",
+        "gemini-2-5-flash-preview-09-2025",
+        "gemini-2-5-flash-preview-09-2025-reasoning",
+        "gemini-2-5-flash-reasoning",
+        "gemini-2-5-flash-reasoning-04-2025",
+        "gemini-2-5-pro",
+        "gemini-2-5-pro-03-25",
+        "gemini-2-5-pro-05-06",
+        "gemini-3-1-flash-lite-preview",
+        "gemini-3-1-pro-preview",
+        "gemini-3-5-flash",
+        "gemini-3-5-flash-lite",
+        "gemini-3-5-flash-medium",
+        "gemini-3-5-flash-minimal",
+        "gemini-3-6-flash",
+        "gemini-3-7-flash",
+        "gemini-3-7-flash-low",
+        "gemini-3-7-flash-medium",
+        "gemini-3-deep-think",
+        "gemini-3-flash",
+        "gemini-3-flash-reasoning",
+        "gemini-3-pro",
+        "gemini-3-pro-low",
+        "gemma-3-12b",
+        "gemma-3-1b",
+        "gemma-3-270m",
+        "gemma-3-27b",
+        "gemma-3-4b",
+        "gemma-3n-e2b",
+        "gemma-3n-e4b",
+        "gemma-3n-e4b-preview-0520",
+        "gemma-4-12b",
+        "gemma-4-12b-non-reasoning",
+        "gemma-4-26b-a4b",
+        "gemma-4-26b-a4b-non-reasoning",
+        "gemma-4-31b",
+        "gemma-4-31b-non-reasoning",
+        "gemma-4-e2b",
+        "gemma-4-e2b-non-reasoning",
+        "gemma-4-e4b",
+        "gemma-4-e4b-non-reasoning",
+        "palm-2"
+      ],
+      "relation": "model_to_model",
+      "source_entity_id": "google/gemini-3.1-flash-lite"
+    },
+    {
+      "candidates": [
+        "diffusiongemma-26b-a4b",
+        "gemini-1-0-pro",
+        "gemini-1-0-ultra",
+        "gemini-1-5-flash",
+        "gemini-1-5-flash-8b",
+        "gemini-1-5-flash-may-2024",
+        "gemini-1-5-pro",
+        "gemini-1-5-pro-may-2024",
+        "gemini-2-0-flash",
+        "gemini-2-0-flash-experimental",
+        "gemini-2-0-flash-lite-001",
+        "gemini-2-0-flash-lite-preview",
+        "gemini-2-0-flash-thinking-exp-0121",
+        "gemini-2-0-flash-thinking-exp-1219",
+        "gemini-2-0-pro-experimental-02-05",
+        "gemini-2-5-flash",
+        "gemini-2-5-flash-04-2025",
+        "gemini-2-5-flash-lite",
+        "gemini-2-5-flash-lite-preview-09-2025",
+        "gemini-2-5-flash-lite-preview-09-2025-reasoning",
+        "gemini-2-5-flash-lite-reasoning",
+        "gemini-2-5-flash-preview-09-2025",
+        "gemini-2-5-flash-preview-09-2025-reasoning",
+        "gemini-2-5-flash-reasoning",
+        "gemini-2-5-flash-reasoning-04-2025",
+        "gemini-2-5-pro",
+        "gemini-2-5-pro-03-25",
+        "gemini-2-5-pro-05-06",
+        "gemini-3-1-flash-lite-preview",
+        "gemini-3-1-pro-preview",
+        "gemini-3-5-flash",
+        "gemini-3-5-flash-lite",
+        "gemini-3-5-flash-medium",
+        "gemini-3-5-flash-minimal",
+        "gemini-3-6-flash",
+        "gemini-3-7-flash",
+        "gemini-3-7-flash-low",
+        "gemini-3-7-flash-medium",
+        "gemini-3-deep-think",
+        "gemini-3-flash",
+        "gemini-3-flash-reasoning",
+        "gemini-3-pro",
+        "gemini-3-pro-low",
+        "gemma-3-12b",
+        "gemma-3-1b",
+        "gemma-3-270m",
+        "gemma-3-27b",
+        "gemma-3-4b",
+        "gemma-3n-e2b",
+        "gemma-3n-e4b",
+        "gemma-3n-e4b-preview-0520",
+        "gemma-4-12b",
+        "gemma-4-12b-non-reasoning",
+        "gemma-4-26b-a4b",
+        "gemma-4-26b-a4b-non-reasoning",
+        "gemma-4-31b",
+        "gemma-4-31b-non-reasoning",
+        "gemma-4-e2b",
+        "gemma-4-e2b-non-reasoning",
+        "gemma-4-e4b",
+        "gemma-4-e4b-non-reasoning",
+        "palm-2"
+      ],
+      "relation": "model_to_model",
+      "source_entity_id": "google/gemini-3.1-flash-lite-image"
+    },
+    {
+      "candidates": [
+        "diffusiongemma-26b-a4b",
+        "gemini-1-0-pro",
+        "gemini-1-0-ultra",
+        "gemini-1-5-flash",
+        "gemini-1-5-flash-8b",
+        "gemini-1-5-flash-may-2024",
+        "gemini-1-5-pro",
+        "gemini-1-5-pro-may-2024",
+        "gemini-2-0-flash",
+        "gemini-2-0-flash-experimental",
+        "gemini-2-0-flash-lite-001",
+        "gemini-2-0-flash-lite-preview",
+        "gemini-2-0-flash-thinking-exp-0121",
+        "gemini-2-0-flash-thinking-exp-1219",
+        "gemini-2-0-pro-experimental-02-05",
+        "gemini-2-5-flash",
+        "gemini-2-5-flash-04-2025",
+        "gemini-2-5-flash-lite",
+        "gemini-2-5-flash-lite-preview-09-2025",
+        "gemini-2-5-flash-lite-preview-09-2025-reasoning",
+        "gemini-2-5-flash-lite-reasoning",
+        "gemini-2-5-flash-preview-09-2025",
+        "gemini-2-5-flash-preview-09-2025-reasoning",
+        "gemini-2-5-flash-reasoning",
+        "gemini-2-5-flash-reasoning-04-2025",
+        "gemini-2-5-pro",
+        "gemini-2-5-pro-03-25",
+        "gemini-2-5-pro-05-06",
+        "gemini-3-1-flash-lite-preview",
+        "gemini-3-1-pro-preview",
+        "gemini-3-5-flash",
+        "gemini-3-5-flash-lite",
+        "gemini-3-5-flash-medium",
+        "gemini-3-5-flash-minimal",
+        "gemini-3-6-flash",
+        "gemini-3-7-flash",
+        "gemini-3-7-flash-low",
+        "gemini-3-7-flash-medium",
+        "gemini-3-deep-think",
+        "gemini-3-flash",
+        "gemini-3-flash-reasoning",
+        "gemini-3-pro",
+        "gemini-3-pro-low",
+        "gemma-3-12b",
+        "gemma-3-1b",
+        "gemma-3-270m",
+        "gemma-3-27b",
+        "gemma-3-4b",
+        "gemma-3n-e2b",
+        "gemma-3n-e4b",
+        "gemma-3n-e4b-preview-0520",
+        "gemma-4-12b",
+        "gemma-4-12b-non-reasoning",
+        "gemma-4-26b-a4b",
+        "gemma-4-26b-a4b-non-reasoning",
+        "gemma-4-31b",
+        "gemma-4-31b-non-reasoning",
+        "gemma-4-e2b",
+        "gemma-4-e2b-non-reasoning",
+        "gemma-4-e4b",
+        "gemma-4-e4b-non-reasoning",
+        "palm-2"
+      ],
+      "relation": "model_to_model",
+      "source_entity_id": "google/gemini-3.1-flash-lite:batch"
+    },
+    {
+      "candidates": [
+        "diffusiongemma-26b-a4b",
+        "gemini-1-0-pro",
+        "gemini-1-0-ultra",
+        "gemini-1-5-flash",
+        "gemini-1-5-flash-8b",
+        "gemini-1-5-flash-may-2024",
+        "gemini-1-5-pro",
+        "gemini-1-5-pro-may-2024",
+        "gemini-2-0-flash",
+        "gemini-2-0-flash-experimental",
+        "gemini-2-0-flash-lite-001",
+        "gemini-2-0-flash-lite-preview",
+        "gemini-2-0-flash-thinking-exp-0121",
+        "gemini-2-0-flash-thinking-exp-1219",
+        "gemini-2-0-pro-experimental-02-05",
+        "gemini-2-5-flash",
+        "gemini-2-5-flash-04-2025",
+        "gemini-2-5-flash-lite",
+        "gemini-2-5-flash-lite-preview-09-2025",
+        "gemini-2-5-flash-lite-preview-09-2025-reasoning",
+        "gemini-2-5-flash-lite-reasoning",
+        "gemini-2-5-flash-preview-09-2025",
+        "gemini-2-5-flash-preview-09-2025-reasoning",
+        "gemini-2-5-flash-reasoning",
+        "gemini-2-5-flash-reasoning-04-2025",
+        "gemini-2-5-pro",
+        "gemini-2-5-pro-03-25",
+        "gemini-2-5-pro-05-06",
+        "gemini-3-1-flash-lite-preview",
+        "gemini-3-1-pro-preview",
+        "gemini-3-5-flash",
+        "gemini-3-5-flash-lite",
+        "gemini-3-5-flash-medium",
+        "gemini-3-5-flash-minimal",
+        "gemini-3-6-flash",
+        "gemini-3-7-flash",
+        "gemini-3-7-flash-low",
+        "gemini-3-7-flash-medium",
+        "gemini-3-deep-think",
+        "gemini-3-flash",
+        "gemini-3-flash-reasoning",
+        "gemini-3-pro",
+        "gemini-3-pro-low",
+        "gemma-3-12b",
+        "gemma-3-1b",
+        "gemma-3-270m",
+        "gemma-3-27b",
+        "gemma-3-4b",
+        "gemma-3n-e2b",
+        "gemma-3n-e4b",
+        "gemma-3n-e4b-preview-0520",
+        "gemma-4-12b",
+        "gemma-4-12b-non-reasoning",
+        "gemma-4-26b-a4b",
+        "gemma-4-26b-a4b-non-reasoning",
+        "gemma-4-31b",
+        "gemma-4-31b-non-reasoning",
+        "gemma-4-e2b",
+        "gemma-4-e2b-non-reasoning",
+        "gemma-4-e4b",
+        "gemma-4-e4b-non-reasoning",
+        "palm-2"
+      ],
+      "relation": "model_to_model",
+      "source_entity_id": "google/gemini-3.1-pro-preview-customtools"
+    },
+    {
+      "candidates": [
+        "diffusiongemma-26b-a4b",
+        "gemini-1-0-pro",
+        "gemini-1-0-ultra",
+        "gemini-1-5-flash",
+        "gemini-1-5-flash-8b",
+        "gemini-1-5-flash-may-2024",
+        "gemini-1-5-pro",
+        "gemini-1-5-pro-may-2024",
+        "gemini-2-0-flash",
+        "gemini-2-0-flash-experimental",
+        "gemini-2-0-flash-lite-001",
+        "gemini-2-0-flash-lite-preview",
+        "gemini-2-0-flash-thinking-exp-0121",
+        "gemini-2-0-flash-thinking-exp-1219",
+        "gemini-2-0-pro-experimental-02-05",
+        "gemini-2-5-flash",
+        "gemini-2-5-flash-04-2025",
+        "gemini-2-5-flash-lite",
+        "gemini-2-5-flash-lite-preview-09-2025",
+        "gemini-2-5-flash-lite-preview-09-2025-reasoning",
+        "gemini-2-5-flash-lite-reasoning",
+        "gemini-2-5-flash-preview-09-2025",
+        "gemini-2-5-flash-preview-09-2025-reasoning",
+        "gemini-2-5-flash-reasoning",
+        "gemini-2-5-flash-reasoning-04-2025",
+        "gemini-2-5-pro",
+        "gemini-2-5-pro-03-25",
+        "gemini-2-5-pro-05-06",
+        "gemini-3-1-flash-lite-preview",
+        "gemini-3-1-pro-preview",
+        "gemini-3-5-flash",
+        "gemini-3-5-flash-lite",
+        "gemini-3-5-flash-medium",
+        "gemini-3-5-flash-minimal",
+        "gemini-3-6-flash",
+        "gemini-3-7-flash",
+        "gemini-3-7-flash-low",
+        "gemini-3-7-flash-medium",
+        "gemini-3-deep-think",
+        "gemini-3-flash",
+        "gemini-3-flash-reasoning",
+        "gemini-3-pro",
+        "gemini-3-pro-low",
+        "gemma-3-12b",
+        "gemma-3-1b",
+        "gemma-3-270m",
+        "gemma-3-27b",
+        "gemma-3-4b",
+        "gemma-3n-e2b",
+        "gemma-3n-e4b",
+        "gemma-3n-e4b-preview-0520",
+        "gemma-4-12b",
+        "gemma-4-12b-non-reasoning",
+        "gemma-4-26b-a4b",
+        "gemma-4-26b-a4b-non-reasoning",
+        "gemma-4-31b",
+        "gemma-4-31b-non-reasoning",
+        "gemma-4-e2b",
+        "gemma-4-e2b-non-reasoning",
+        "gemma-4-e4b",
+        "gemma-4-e4b-non-reasoning",
+        "palm-2"
+      ],
+      "relation": "model_to_model",
+      "source_entity_id": "google/gemini-3.1-pro-preview:batch"
+    },
+    {
+      "candidates": [
+        "diffusiongemma-26b-a4b",
+        "gemini-1-0-pro",
+        "gemini-1-0-ultra",
+        "gemini-1-5-flash",
+        "gemini-1-5-flash-8b",
+        "gemini-1-5-flash-may-2024",
+        "gemini-1-5-pro",
+        "gemini-1-5-pro-may-2024",
+        "gemini-2-0-flash",
+        "gemini-2-0-flash-experimental",
+        "gemini-2-0-flash-lite-001",
+        "gemini-2-0-flash-lite-preview",
+        "gemini-2-0-flash-thinking-exp-0121",
+        "gemini-2-0-flash-thinking-exp-1219",
+        "gemini-2-0-pro-experimental-02-05",
+        "gemini-2-5-flash",
+        "gemini-2-5-flash-04-2025",
+        "gemini-2-5-flash-lite",
+        "gemini-2-5-flash-lite-preview-09-2025",
+        "gemini-2-5-flash-lite-preview-09-2025-reasoning",
+        "gemini-2-5-flash-lite-reasoning",
+        "gemini-2-5-flash-preview-09-2025",
+        "gemini-2-5-flash-preview-09-2025-reasoning",
+        "gemini-2-5-flash-reasoning",
+        "gemini-2-5-flash-reasoning-04-2025",
+        "gemini-2-5-pro",
+        "gemini-2-5-pro-03-25",
+        "gemini-2-5-pro-05-06",
+        "gemini-3-1-flash-lite-preview",
+        "gemini-3-1-pro-preview",
+        "gemini-3-5-flash",
+        "gemini-3-5-flash-lite",
+        "gemini-3-5-flash-medium",
+        "gemini-3-5-flash-minimal",
+        "gemini-3-6-flash",
+        "gemini-3-7-flash",
+        "gemini-3-7-flash-low",
+        "gemini-3-7-flash-medium",
+        "gemini-3-deep-think",
+        "gemini-3-flash",
+        "gemini-3-flash-reasoning",
+        "gemini-3-pro",
+        "gemini-3-pro-low",
+        "gemma-3-12b",
+        "gemma-3-1b",
+        "gemma-3-270m",
+        "gemma-3-27b",
+        "gemma-3-4b",
+        "gemma-3n-e2b",
+        "gemma-3n-e4b",
+        "gemma-3n-e4b-preview-0520",
+        "gemma-4-12b",
+        "gemma-4-12b-non-reasoning",
+        "gemma-4-26b-a4b",
+        "gemma-4-26b-a4b-non-reasoning",
+        "gemma-4-31b",
+        "gemma-4-31b-non-reasoning",
+        "gemma-4-e2b",
+        "gemma-4-e2b-non-reasoning",
+        "gemma-4-e4b",
+        "gemma-4-e4b-non-reasoning",
+        "palm-2"
+      ],
+      "relation": "model_to_model",
+      "source_entity_id": "google/gemini-3.5-flash-lite:batch"
+    },
+    {
+      "candidates": [
+        "diffusiongemma-26b-a4b",
+        "gemini-1-0-pro",
+        "gemini-1-0-ultra",
+        "gemini-1-5-flash",
+        "gemini-1-5-flash-8b",
+        "gemini-1-5-flash-may-2024",
+        "gemini-1-5-pro",
+        "gemini-1-5-pro-may-2024",
+        "gemini-2-0-flash",
+        "gemini-2-0-flash-experimental",
+        "gemini-2-0-flash-lite-001",
+        "gemini-2-0-flash-lite-preview",
+        "gemini-2-0-flash-thinking-exp-0121",
+        "gemini-2-0-flash-thinking-exp-1219",
+        "gemini-2-0-pro-experimental-02-05",
+        "gemini-2-5-flash",
+        "gemini-2-5-flash-04-2025",
+        "gemini-2-5-flash-lite",
+        "gemini-2-5-flash-lite-preview-09-2025",
+        "gemini-2-5-flash-lite-preview-09-2025-reasoning",
+        "gemini-2-5-flash-lite-reasoning",
+        "gemini-2-5-flash-preview-09-2025",
+        "gemini-2-5-flash-preview-09-2025-reasoning",
+        "gemini-2-5-flash-reasoning",
+        "gemini-2-5-flash-reasoning-04-2025",
+        "gemini-2-5-pro",
+        "gemini-2-5-pro-03-25",
+        "gemini-2-5-pro-05-06",
+        "gemini-3-1-flash-lite-preview",
+        "gemini-3-1-pro-preview",
+        "gemini-3-5-flash",
+        "gemini-3-5-flash-lite",
+        "gemini-3-5-flash-medium",
+        "gemini-3-5-flash-minimal",
+        "gemini-3-6-flash",
+        "gemini-3-7-flash",
+        "gemini-3-7-flash-low",
+        "gemini-3-7-flash-medium",
+        "gemini-3-deep-think",
+        "gemini-3-flash",
+        "gemini-3-flash-reasoning",
+        "gemini-3-pro",
+        "gemini-3-pro-low",
+        "gemma-3-12b",
+        "gemma-3-1b",
+        "gemma-3-270m",
+        "gemma-3-27b",
+        "gemma-3-4b",
+        "gemma-3n-e2b",
+        "gemma-3n-e4b",
+        "gemma-3n-e4b-preview-0520",
+        "gemma-4-12b",
+        "gemma-4-12b-non-reasoning",
+        "gemma-4-26b-a4b",
+        "gemma-4-26b-a4b-non-reasoning",
+        "gemma-4-31b",
+        "gemma-4-31b-non-reasoning",
+        "gemma-4-e2b",
+        "gemma-4-e2b-non-reasoning",
+        "gemma-4-e4b",
+        "gemma-4-e4b-non-reasoning",
+        "palm-2"
+      ],
+      "relation": "model_to_model",
+      "source_entity_id": "google/gemini-3.5-flash:batch"
+    },
+    {
+      "candidates": [
+        "diffusiongemma-26b-a4b",
+        "gemini-1-0-pro",
+        "gemini-1-0-ultra",
+        "gemini-1-5-flash",
+        "gemini-1-5-flash-8b",
+        "gemini-1-5-flash-may-2024",
+        "gemini-1-5-pro",
+        "gemini-1-5-pro-may-2024",
+        "gemini-2-0-flash",
+        "gemini-2-0-flash-experimental",
+        "gemini-2-0-flash-lite-001",
+        "gemini-2-0-flash-lite-preview",
+        "gemini-2-0-flash-thinking-exp-0121",
+        "gemini-2-0-flash-thinking-exp-1219",
+        "gemini-2-0-pro-experimental-02-05",
+        "gemini-2-5-flash",
+        "gemini-2-5-flash-04-2025",
+        "gemini-2-5-flash-lite",
+        "gemini-2-5-flash-lite-preview-09-2025",
+        "gemini-2-5-flash-lite-preview-09-2025-reasoning",
+        "gemini-2-5-flash-lite-reasoning",
+        "gemini-2-5-flash-preview-09-2025",
+        "gemini-2-5-flash-preview-09-2025-reasoning",
+        "gemini-2-5-flash-reasoning",
+        "gemini-2-5-flash-reasoning-04-2025",
+        "gemini-2-5-pro",
+        "gemini-2-5-pro-03-25",
+        "gemini-2-5-pro-05-06",
+        "gemini-3-1-flash-lite-preview",
+        "gemini-3-1-pro-preview",
+        "gemini-3-5-flash",
+        "gemini-3-5-flash-lite",
+        "gemini-3-5-flash-medium",
+        "gemini-3-5-flash-minimal",
+        "gemini-3-6-flash",
+        "gemini-3-7-flash",
+        "gemini-3-7-flash-low",
+        "gemini-3-7-flash-medium",
+        "gemini-3-deep-think",
+        "gemini-3-flash",
+        "gemini-3-flash-reasoning",
+        "gemini-3-pro",
+        "gemini-3-pro-low",
+        "gemma-3-12b",
+        "gemma-3-1b",
+        "gemma-3-270m",
+        "gemma-3-27b",
+        "gemma-3-4b",
+        "gemma-3n-e2b",
+        "gemma-3n-e4b",
+        "gemma-3n-e4b-preview-0520",
+        "gemma-4-12b",
+        "gemma-4-12b-non-reasoning",
+        "gemma-4-26b-a4b",
+        "gemma-4-26b-a4b-non-reasoning",
+        "gemma-4-31b",
+        "gemma-4-31b-non-reasoning",
+        "gemma-4-e2b",
+        "gemma-4-e2b-non-reasoning",
+        "gemma-4-e4b",
+        "gemma-4-e4b-non-reasoning",
+        "palm-2"
+      ],
+      "relation": "model_to_model",
+      "source_entity_id": "google/gemini-3.6-flash:batch"
+    },
+    {
+      "candidates": [
+        "diffusiongemma-26b-a4b",
+        "gemini-1-0-pro",
+        "gemini-1-0-ultra",
+        "gemini-1-5-flash",
+        "gemini-1-5-flash-8b",
+        "gemini-1-5-flash-may-2024",
+        "gemini-1-5-pro",
+        "gemini-1-5-pro-may-2024",
+        "gemini-2-0-flash",
+        "gemini-2-0-flash-experimental",
+        "gemini-2-0-flash-lite-001",
+        "gemini-2-0-flash-lite-preview",
+        "gemini-2-0-flash-thinking-exp-0121",
+        "gemini-2-0-flash-thinking-exp-1219",
+        "gemini-2-0-pro-experimental-02-05",
+        "gemini-2-5-flash",
+        "gemini-2-5-flash-04-2025",
+        "gemini-2-5-flash-lite",
+        "gemini-2-5-flash-lite-preview-09-2025",
+        "gemini-2-5-flash-lite-preview-09-2025-reasoning",
+        "gemini-2-5-flash-lite-reasoning",
+        "gemini-2-5-flash-preview-09-2025",
+        "gemini-2-5-flash-preview-09-2025-reasoning",
+        "gemini-2-5-flash-reasoning",
+        "gemini-2-5-flash-reasoning-04-2025",
+        "gemini-2-5-pro",
+        "gemini-2-5-pro-03-25",
+        "gemini-2-5-pro-05-06",
+        "gemini-3-1-flash-lite-preview",
+        "gemini-3-1-pro-preview",
+        "gemini-3-5-flash",
+        "gemini-3-5-flash-lite",
+        "gemini-3-5-flash-medium",
+        "gemini-3-5-flash-minimal",
+        "gemini-3-6-flash",
+        "gemini-3-7-flash",
+        "gemini-3-7-flash-low",
+        "gemini-3-7-flash-medium",
+        "gemini-3-deep-think",
+        "gemini-3-flash",
+        "gemini-3-flash-reasoning",
+        "gemini-3-pro",
+        "gemini-3-pro-low",
+        "gemma-3-12b",
+        "gemma-3-1b",
+        "gemma-3-270m",
+        "gemma-3-27b",
+        "gemma-3-4b",
+        "gemma-3n-e2b",
+        "gemma-3n-e4b",
+        "gemma-3n-e4b-preview-0520",
+        "gemma-4-12b",
+        "gemma-4-12b-non-reasoning",
+        "gemma-4-26b-a4b",
+        "gemma-4-26b-a4b-non-reasoning",
+        "gemma-4-31b",
+        "gemma-4-31b-non-reasoning",
+        "gemma-4-e2b",
+        "gemma-4-e2b-non-reasoning",
+        "gemma-4-e4b",
+        "gemma-4-e4b-non-reasoning",
+        "palm-2"
+      ],
+      "relation": "model_to_model",
+      "source_entity_id": "google/gemini-3.7-flash:batch"
+    },
+    {
+      "candidates": [
+        "diffusiongemma-26b-a4b",
+        "gemini-1-0-pro",
+        "gemini-1-0-ultra",
+        "gemini-1-5-flash",
+        "gemini-1-5-flash-8b",
+        "gemini-1-5-flash-may-2024",
+        "gemini-1-5-pro",
+        "gemini-1-5-pro-may-2024",
+        "gemini-2-0-flash",
+        "gemini-2-0-flash-experimental",
+        "gemini-2-0-flash-lite-001",
+        "gemini-2-0-flash-lite-preview",
+        "gemini-2-0-flash-thinking-exp-0121",
+        "gemini-2-0-flash-thinking-exp-1219",
+        "gemini-2-0-pro-experimental-02-05",
+        "gemini-2-5-flash",
+        "gemini-2-5-flash-04-2025",
+        "gemini-2-5-flash-lite",
+        "gemini-2-5-flash-lite-preview-09-2025",
+        "gemini-2-5-flash-lite-preview-09-2025-reasoning",
+        "gemini-2-5-flash-lite-reasoning",
+        "gemini-2-5-flash-preview-09-2025",
+        "gemini-2-5-flash-preview-09-2025-reasoning",
+        "gemini-2-5-flash-reasoning",
+        "gemini-2-5-flash-reasoning-04-2025",
+        "gemini-2-5-pro",
+        "gemini-2-5-pro-03-25",
+        "gemini-2-5-pro-05-06",
+        "gemini-3-1-flash-lite-preview",
+        "gemini-3-1-pro-preview",
+        "gemini-3-5-flash",
+        "gemini-3-5-flash-lite",
+        "gemini-3-5-flash-medium",
+        "gemini-3-5-flash-minimal",
+        "gemini-3-6-flash",
+        "gemini-3-7-flash",
+        "gemini-3-7-flash-low",
+        "gemini-3-7-flash-medium",
+        "gemini-3-deep-think",
+        "gemini-3-flash",
+        "gemini-3-flash-reasoning",
+        "gemini-3-pro",
+        "gemini-3-pro-low",
+        "gemma-3-12b",
+        "gemma-3-1b",
+        "gemma-3-270m",
+        "gemma-3-27b",
+        "gemma-3-4b",
+        "gemma-3n-e2b",
+        "gemma-3n-e4b",
+        "gemma-3n-e4b-preview-0520",
+        "gemma-4-12b",
+        "gemma-4-12b-non-reasoning",
+        "gemma-4-26b-a4b",
+        "gemma-4-26b-a4b-non-reasoning",
+        "gemma-4-31b",
+        "gemma-4-31b-non-reasoning",
+        "gemma-4-e2b",
+        "gemma-4-e2b-non-reasoning",
+        "gemma-4-e4b",
+        "gemma-4-e4b-non-reasoning",
+        "palm-2"
+      ],
+      "relation": "model_to_model",
+      "source_entity_id": "google/gemma-2-27b-it"
+    },
+    {
+      "candidates": [
+        "diffusiongemma-26b-a4b",
+        "gemini-1-0-pro",
+        "gemini-1-0-ultra",
+        "gemini-1-5-flash",
+        "gemini-1-5-flash-8b",
+        "gemini-1-5-flash-may-2024",
+        "gemini-1-5-pro",
+        "gemini-1-5-pro-may-2024",
+        "gemini-2-0-flash",
+        "gemini-2-0-flash-experimental",
+        "gemini-2-0-flash-lite-001",
+        "gemini-2-0-flash-lite-preview",
+        "gemini-2-0-flash-thinking-exp-0121",
+        "gemini-2-0-flash-thinking-exp-1219",
+        "gemini-2-0-pro-experimental-02-05",
+        "gemini-2-5-flash",
+        "gemini-2-5-flash-04-2025",
+        "gemini-2-5-flash-lite",
+        "gemini-2-5-flash-lite-preview-09-2025",
+        "gemini-2-5-flash-lite-preview-09-2025-reasoning",
+        "gemini-2-5-flash-lite-reasoning",
+        "gemini-2-5-flash-preview-09-2025",
+        "gemini-2-5-flash-preview-09-2025-reasoning",
+        "gemini-2-5-flash-reasoning",
+        "gemini-2-5-flash-reasoning-04-2025",
+        "gemini-2-5-pro",
+        "gemini-2-5-pro-03-25",
+        "gemini-2-5-pro-05-06",
+        "gemini-3-1-flash-lite-preview",
+        "gemini-3-1-pro-preview",
+        "gemini-3-5-flash",
+        "gemini-3-5-flash-lite",
+        "gemini-3-5-flash-medium",
+        "gemini-3-5-flash-minimal",
+        "gemini-3-6-flash",
+        "gemini-3-7-flash",
+        "gemini-3-7-flash-low",
+        "gemini-3-7-flash-medium",
+        "gemini-3-deep-think",
+        "gemini-3-flash",
+        "gemini-3-flash-reasoning",
+        "gemini-3-pro",
+        "gemini-3-pro-low",
+        "gemma-3-12b",
+        "gemma-3-1b",
+        "gemma-3-270m",
+        "gemma-3-27b",
+        "gemma-3-4b",
+        "gemma-3n-e2b",
+        "gemma-3n-e4b",
+        "gemma-3n-e4b-preview-0520",
+        "gemma-4-12b",
+        "gemma-4-12b-non-reasoning",
+        "gemma-4-26b-a4b",
+        "gemma-4-26b-a4b-non-reasoning",
+        "gemma-4-31b",
+        "gemma-4-31b-non-reasoning",
+        "gemma-4-e2b",
+        "gemma-4-e2b-non-reasoning",
+        "gemma-4-e4b",
+        "gemma-4-e4b-non-reasoning",
+        "palm-2"
+      ],
+      "relation": "model_to_model",
+      "source_entity_id": "google/gemma-3-12b-it"
+    },
+    {
+      "candidates": [
+        "diffusiongemma-26b-a4b",
+        "gemini-1-0-pro",
+        "gemini-1-0-ultra",
+        "gemini-1-5-flash",
+        "gemini-1-5-flash-8b",
+        "gemini-1-5-flash-may-2024",
+        "gemini-1-5-pro",
+        "gemini-1-5-pro-may-2024",
+        "gemini-2-0-flash",
+        "gemini-2-0-flash-experimental",
+        "gemini-2-0-flash-lite-001",
+        "gemini-2-0-flash-lite-preview",
+        "gemini-2-0-flash-thinking-exp-0121",
+        "gemini-2-0-flash-thinking-exp-1219",
+        "gemini-2-0-pro-experimental-02-05",
+        "gemini-2-5-flash",
+        "gemini-2-5-flash-04-2025",
+        "gemini-2-5-flash-lite",
+        "gemini-2-5-flash-lite-preview-09-2025",
+        "gemini-2-5-flash-lite-preview-09-2025-reasoning",
+        "gemini-2-5-flash-lite-reasoning",
+        "gemini-2-5-flash-preview-09-2025",
+        "gemini-2-5-flash-preview-09-2025-reasoning",
+        "gemini-2-5-flash-reasoning",
+        "gemini-2-5-flash-reasoning-04-2025",
+        "gemini-2-5-pro",
+        "gemini-2-5-pro-03-25",
+        "gemini-2-5-pro-05-06",
+        "gemini-3-1-flash-lite-preview",
+        "gemini-3-1-pro-preview",
+        "gemini-3-5-flash",
+        "gemini-3-5-flash-lite",
+        "gemini-3-5-flash-medium",
+        "gemini-3-5-flash-minimal",
+        "gemini-3-6-flash",
+        "gemini-3-7-flash",
+        "gemini-3-7-flash-low",
+        "gemini-3-7-flash-medium",
+        "gemini-3-deep-think",
+        "gemini-3-flash",
+        "gemini-3-flash-reasoning",
+        "gemini-3-pro",
+        "gemini-3-pro-low",
+        "gemma-3-12b",
+        "gemma-3-1b",
+        "gemma-3-270m",
+        "gemma-3-27b",
+        "gemma-3-4b",
+        "gemma-3n-e2b",
+        "gemma-3n-e4b",
+        "gemma-3n-e4b-preview-0520",
+        "gemma-4-12b",
+        "gemma-4-12b-non-reasoning",
+        "gemma-4-26b-a4b",
+        "gemma-4-26b-a4b-non-reasoning",
+        "gemma-4-31b",
+        "gemma-4-31b-non-reasoning",
+        "gemma-4-e2b",
+        "gemma-4-e2b-non-reasoning",
+        "gemma-4-e4b",
+        "gemma-4-e4b-non-reasoning",
+        "palm-2"
+      ],
+      "relation": "model_to_model",
+      "source_entity_id": "google/gemma-3-27b-it"
+    },
+    {
+      "candidates": [
+        "diffusiongemma-26b-a4b",
+        "gemini-1-0-pro",
+        "gemini-1-0-ultra",
+        "gemini-1-5-flash",
+        "gemini-1-5-flash-8b",
+        "gemini-1-5-flash-may-2024",
+        "gemini-1-5-pro",
+        "gemini-1-5-pro-may-2024",
+        "gemini-2-0-flash",
+        "gemini-2-0-flash-experimental",
+        "gemini-2-0-flash-lite-001",
+        "gemini-2-0-flash-lite-preview",
+        "gemini-2-0-flash-thinking-exp-0121",
+        "gemini-2-0-flash-thinking-exp-1219",
+        "gemini-2-0-pro-experimental-02-05",
+        "gemini-2-5-flash",
+        "gemini-2-5-flash-04-2025",
+        "gemini-2-5-flash-lite",
+        "gemini-2-5-flash-lite-preview-09-2025",
+        "gemini-2-5-flash-lite-preview-09-2025-reasoning",
+        "gemini-2-5-flash-lite-reasoning",
+        "gemini-2-5-flash-preview-09-2025",
+        "gemini-2-5-flash-preview-09-2025-reasoning",
+        "gemini-2-5-flash-reasoning",
+        "gemini-2-5-flash-reasoning-04-2025",
+        "gemini-2-5-pro",
+        "gemini-2-5-pro-03-25",
+        "gemini-2-5-pro-05-06",
+        "gemini-3-1-flash-lite-preview",
+        "gemini-3-1-pro-preview",
+        "gemini-3-5-flash",
+        "gemini-3-5-flash-lite",
+        "gemini-3-5-flash-medium",
+        "gemini-3-5-flash-minimal",
+        "gemini-3-6-flash",
+        "gemini-3-7-flash",
+        "gemini-3-7-flash-low",
+        "gemini-3-7-flash-medium",
+        "gemini-3-deep-think",
+        "gemini-3-flash",
+        "gemini-3-flash-reasoning",
+        "gemini-3-pro",
+        "gemini-3-pro-low",
+        "gemma-3-12b",
+        "gemma-3-1b",
+        "gemma-3-270m",
+        "gemma-3-27b",
+        "gemma-3-4b",
+        "gemma-3n-e2b",
+        "gemma-3n-e4b",
+        "gemma-3n-e4b-preview-0520",
+        "gemma-4-12b",
+        "gemma-4-12b-non-reasoning",
+        "gemma-4-26b-a4b",
+        "gemma-4-26b-a4b-non-reasoning",
+        "gemma-4-31b",
+        "gemma-4-31b-non-reasoning",
+        "gemma-4-e2b",
+        "gemma-4-e2b-non-reasoning",
+        "gemma-4-e4b",
+        "gemma-4-e4b-non-reasoning",
+        "palm-2"
+      ],
+      "relation": "model_to_model",
+      "source_entity_id": "google/gemma-3-4b-it"
+    },
+    {
+      "candidates": [
+        "diffusiongemma-26b-a4b",
+        "gemini-1-0-pro",
+        "gemini-1-0-ultra",
+        "gemini-1-5-flash",
+        "gemini-1-5-flash-8b",
+        "gemini-1-5-flash-may-2024",
+        "gemini-1-5-pro",
+        "gemini-1-5-pro-may-2024",
+        "gemini-2-0-flash",
+        "gemini-2-0-flash-experimental",
+        "gemini-2-0-flash-lite-001",
+        "gemini-2-0-flash-lite-preview",
+        "gemini-2-0-flash-thinking-exp-0121",
+        "gemini-2-0-flash-thinking-exp-1219",
+        "gemini-2-0-pro-experimental-02-05",
+        "gemini-2-5-flash",
+        "gemini-2-5-flash-04-2025",
+        "gemini-2-5-flash-lite",
+        "gemini-2-5-flash-lite-preview-09-2025",
+        "gemini-2-5-flash-lite-preview-09-2025-reasoning",
+        "gemini-2-5-flash-lite-reasoning",
+        "gemini-2-5-flash-preview-09-2025",
+        "gemini-2-5-flash-preview-09-2025-reasoning",
+        "gemini-2-5-flash-reasoning",
+        "gemini-2-5-flash-reasoning-04-2025",
+        "gemini-2-5-pro",
+        "gemini-2-5-pro-03-25",
+        "gemini-2-5-pro-05-06",
+        "gemini-3-1-flash-lite-preview",
+        "gemini-3-1-pro-preview",
+        "gemini-3-5-flash",
+        "gemini-3-5-flash-lite",
+        "gemini-3-5-flash-medium",
+        "gemini-3-5-flash-minimal",
+        "gemini-3-6-flash",
+        "gemini-3-7-flash",
+        "gemini-3-7-flash-low",
+        "gemini-3-7-flash-medium",
+        "gemini-3-deep-think",
+        "gemini-3-flash",
+        "gemini-3-flash-reasoning",
+        "gemini-3-pro",
+        "gemini-3-pro-low",
+        "gemma-3-12b",
+        "gemma-3-1b",
+        "gemma-3-270m",
+        "gemma-3-27b",
+        "gemma-3-4b",
+        "gemma-3n-e2b",
+        "gemma-3n-e4b",
+        "gemma-3n-e4b-preview-0520",
+        "gemma-4-12b",
+        "gemma-4-12b-non-reasoning",
+        "gemma-4-26b-a4b",
+        "gemma-4-26b-a4b-non-reasoning",
+        "gemma-4-31b",
+        "gemma-4-31b-non-reasoning",
+        "gemma-4-e2b",
+        "gemma-4-e2b-non-reasoning",
+        "gemma-4-e4b",
+        "gemma-4-e4b-non-reasoning",
+        "palm-2"
+      ],
+      "relation": "model_to_model",
+      "source_entity_id": "google/gemma-3n-e4b-it"
+    },
+    {
+      "candidates": [
+        "diffusiongemma-26b-a4b",
+        "gemini-1-0-pro",
+        "gemini-1-0-ultra",
+        "gemini-1-5-flash",
+        "gemini-1-5-flash-8b",
+        "gemini-1-5-flash-may-2024",
+        "gemini-1-5-pro",
+        "gemini-1-5-pro-may-2024",
+        "gemini-2-0-flash",
+        "gemini-2-0-flash-experimental",
+        "gemini-2-0-flash-lite-001",
+        "gemini-2-0-flash-lite-preview",
+        "gemini-2-0-flash-thinking-exp-0121",
+        "gemini-2-0-flash-thinking-exp-1219",
+        "gemini-2-0-pro-experimental-02-05",
+        "gemini-2-5-flash",
+        "gemini-2-5-flash-04-2025",
+        "gemini-2-5-flash-lite",
+        "gemini-2-5-flash-lite-preview-09-2025",
+        "gemini-2-5-flash-lite-preview-09-2025-reasoning",
+        "gemini-2-5-flash-lite-reasoning",
+        "gemini-2-5-flash-preview-09-2025",
+        "gemini-2-5-flash-preview-09-2025-reasoning",
+        "gemini-2-5-flash-reasoning",
+        "gemini-2-5-flash-reasoning-04-2025",
+        "gemini-2-5-pro",
+        "gemini-2-5-pro-03-25",
+        "gemini-2-5-pro-05-06",
+        "gemini-3-1-flash-lite-preview",
+        "gemini-3-1-pro-preview",
+        "gemini-3-5-flash",
+        "gemini-3-5-flash-lite",
+        "gemini-3-5-flash-medium",
+        "gemini-3-5-flash-minimal",
+        "gemini-3-6-flash",
+        "gemini-3-7-flash",
+        "gemini-3-7-flash-low",
+        "gemini-3-7-flash-medium",
+        "gemini-3-deep-think",
+        "gemini-3-flash",
+        "gemini-3-flash-reasoning",
+        "gemini-3-pro",
+        "gemini-3-pro-low",
+        "gemma-3-12b",
+        "gemma-3-1b",
+        "gemma-3-270m",
+        "gemma-3-27b",
+        "gemma-3-4b",
+        "gemma-3n-e2b",
+        "gemma-3n-e4b",
+        "gemma-3n-e4b-preview-0520",
+        "gemma-4-12b",
+        "gemma-4-12b-non-reasoning",
+        "gemma-4-26b-a4b",
+        "gemma-4-26b-a4b-non-reasoning",
+        "gemma-4-31b",
+        "gemma-4-31b-non-reasoning",
+        "gemma-4-e2b",
+        "gemma-4-e2b-non-reasoning",
+        "gemma-4-e4b",
+        "gemma-4-e4b-non-reasoning",
+        "palm-2"
+      ],
+      "relation": "model_to_model",
+      "source_entity_id": "google/gemma-4-26b-a4b-it"
+    },
+    {
+      "candidates": [
+        "diffusiongemma-26b-a4b",
+        "gemini-1-0-pro",
+        "gemini-1-0-ultra",
+        "gemini-1-5-flash",
+        "gemini-1-5-flash-8b",
+        "gemini-1-5-flash-may-2024",
+        "gemini-1-5-pro",
+        "gemini-1-5-pro-may-2024",
+        "gemini-2-0-flash",
+        "gemini-2-0-flash-experimental",
+        "gemini-2-0-flash-lite-001",
+        "gemini-2-0-flash-lite-preview",
+        "gemini-2-0-flash-thinking-exp-0121",
+        "gemini-2-0-flash-thinking-exp-1219",
+        "gemini-2-0-pro-experimental-02-05",
+        "gemini-2-5-flash",
+        "gemini-2-5-flash-04-2025",
+        "gemini-2-5-flash-lite",
+        "gemini-2-5-flash-lite-preview-09-2025",
+        "gemini-2-5-flash-lite-preview-09-2025-reasoning",
+        "gemini-2-5-flash-lite-reasoning",
+        "gemini-2-5-flash-preview-09-2025",
+        "gemini-2-5-flash-preview-09-2025-reasoning",
+        "gemini-2-5-flash-reasoning",
+        "gemini-2-5-flash-reasoning-04-2025",
+        "gemini-2-5-pro",
+        "gemini-2-5-pro-03-25",
+        "gemini-2-5-pro-05-06",
+        "gemini-3-1-flash-lite-preview",
+        "gemini-3-1-pro-preview",
+        "gemini-3-5-flash",
+        "gemini-3-5-flash-lite",
+        "gemini-3-5-flash-medium",
+        "gemini-3-5-flash-minimal",
+        "gemini-3-6-flash",
+        "gemini-3-7-flash",
+        "gemini-3-7-flash-low",
+        "gemini-3-7-flash-medium",
+        "gemini-3-deep-think",
+        "gemini-3-flash",
+        "gemini-3-flash-reasoning",
+        "gemini-3-pro",
+        "gemini-3-pro-low",
+        "gemma-3-12b",
+        "gemma-3-1b",
+        "gemma-3-270m",
+        "gemma-3-27b",
+        "gemma-3-4b",
+        "gemma-3n-e2b",
+        "gemma-3n-e4b",
+        "gemma-3n-e4b-preview-0520",
+        "gemma-4-12b",
+        "gemma-4-12b-non-reasoning",
+        "gemma-4-26b-a4b",
+        "gemma-4-26b-a4b-non-reasoning",
+        "gemma-4-31b",
+        "gemma-4-31b-non-reasoning",
+        "gemma-4-e2b",
+        "gemma-4-e2b-non-reasoning",
+        "gemma-4-e4b",
+        "gemma-4-e4b-non-reasoning",
+        "palm-2"
+      ],
+      "relation": "model_to_model",
+      "source_entity_id": "google/gemma-4-26b-a4b-it:free"
+    },
+    {
+      "candidates": [
+        "diffusiongemma-26b-a4b",
+        "gemini-1-0-pro",
+        "gemini-1-0-ultra",
+        "gemini-1-5-flash",
+        "gemini-1-5-flash-8b",
+        "gemini-1-5-flash-may-2024",
+        "gemini-1-5-pro",
+        "gemini-1-5-pro-may-2024",
+        "gemini-2-0-flash",
+        "gemini-2-0-flash-experimental",
+        "gemini-2-0-flash-lite-001",
+        "gemini-2-0-flash-lite-preview",
+        "gemini-2-0-flash-thinking-exp-0121",
+        "gemini-2-0-flash-thinking-exp-1219",
+        "gemini-2-0-pro-experimental-02-05",
+        "gemini-2-5-flash",
+        "gemini-2-5-flash-04-2025",
+        "gemini-2-5-flash-lite",
+        "gemini-2-5-flash-lite-preview-09-2025",
+        "gemini-2-5-flash-lite-preview-09-2025-reasoning",
+        "gemini-2-5-flash-lite-reasoning",
+        "gemini-2-5-flash-preview-09-2025",
+        "gemini-2-5-flash-preview-09-2025-reasoning",
+        "gemini-2-5-flash-reasoning",
+        "gemini-2-5-flash-reasoning-04-2025",
+        "gemini-2-5-pro",
+        "gemini-2-5-pro-03-25",
+        "gemini-2-5-pro-05-06",
+        "gemini-3-1-flash-lite-preview",
+        "gemini-3-1-pro-preview",
+        "gemini-3-5-flash",
+        "gemini-3-5-flash-lite",
+        "gemini-3-5-flash-medium",
+        "gemini-3-5-flash-minimal",
+        "gemini-3-6-flash",
+        "gemini-3-7-flash",
+        "gemini-3-7-flash-low",
+        "gemini-3-7-flash-medium",
+        "gemini-3-deep-think",
+        "gemini-3-flash",
+        "gemini-3-flash-reasoning",
+        "gemini-3-pro",
+        "gemini-3-pro-low",
+        "gemma-3-12b",
+        "gemma-3-1b",
+        "gemma-3-270m",
+        "gemma-3-27b",
+        "gemma-3-4b",
+        "gemma-3n-e2b",
+        "gemma-3n-e4b",
+        "gemma-3n-e4b-preview-0520",
+        "gemma-4-12b",
+        "gemma-4-12b-non-reasoning",
+        "gemma-4-26b-a4b",
+        "gemma-4-26b-a4b-non-reasoning",
+        "gemma-4-31b",
+        "gemma-4-31b-non-reasoning",
+        "gemma-4-e2b",
+        "gemma-4-e2b-non-reasoning",
+        "gemma-4-e4b",
+        "gemma-4-e4b-non-reasoning",
+        "palm-2"
+      ],
+      "relation": "model_to_model",
+      "source_entity_id": "google/gemma-4-31b-it"
+    },
+    {
+      "candidates": [
+        "diffusiongemma-26b-a4b",
+        "gemini-1-0-pro",
+        "gemini-1-0-ultra",
+        "gemini-1-5-flash",
+        "gemini-1-5-flash-8b",
+        "gemini-1-5-flash-may-2024",
+        "gemini-1-5-pro",
+        "gemini-1-5-pro-may-2024",
+        "gemini-2-0-flash",
+        "gemini-2-0-flash-experimental",
+        "gemini-2-0-flash-lite-001",
+        "gemini-2-0-flash-lite-preview",
+        "gemini-2-0-flash-thinking-exp-0121",
+        "gemini-2-0-flash-thinking-exp-1219",
+        "gemini-2-0-pro-experimental-02-05",
+        "gemini-2-5-flash",
+        "gemini-2-5-flash-04-2025",
+        "gemini-2-5-flash-lite",
+        "gemini-2-5-flash-lite-preview-09-2025",
+        "gemini-2-5-flash-lite-preview-09-2025-reasoning",
+        "gemini-2-5-flash-lite-reasoning",
+        "gemini-2-5-flash-preview-09-2025",
+        "gemini-2-5-flash-preview-09-2025-reasoning",
+        "gemini-2-5-flash-reasoning",
+        "gemini-2-5-flash-reasoning-04-2025",
+        "gemini-2-5-pro",
+        "gemini-2-5-pro-03-25",
+        "gemini-2-5-pro-05-06",
+        "gemini-3-1-flash-lite-preview",
+        "gemini-3-1-pro-preview",
+        "gemini-3-5-flash",
+        "gemini-3-5-flash-lite",
+        "gemini-3-5-flash-medium",
+        "gemini-3-5-flash-minimal",
+        "gemini-3-6-flash",
+        "gemini-3-7-flash",
+        "gemini-3-7-flash-low",
+        "gemini-3-7-flash-medium",
+        "gemini-3-deep-think",
+        "gemini-3-flash",
+        "gemini-3-flash-reasoning",
+        "gemini-3-pro",
+        "gemini-3-pro-low",
+        "gemma-3-12b",
+        "gemma-3-1b",
+        "gemma-3-270m",
+        "gemma-3-27b",
+        "gemma-3-4b",
+        "gemma-3n-e2b",
+        "gemma-3n-e4b",
+        "gemma-3n-e4b-preview-0520",
+        "gemma-4-12b",
+        "gemma-4-12b-non-reasoning",
+        "gemma-4-26b-a4b",
+        "gemma-4-26b-a4b-non-reasoning",
+        "gemma-4-31b",
+        "gemma-4-31b-non-reasoning",
+        "gemma-4-e2b",
+        "gemma-4-e2b-non-reasoning",
+        "gemma-4-e4b",
+        "gemma-4-e4b-non-reasoning",
+        "palm-2"
+      ],
+      "relation": "model_to_model",
+      "source_entity_id": "google/gemma-4-31b-it:free"
+    },
+    {
+      "candidates": [
+        "diffusiongemma-26b-a4b",
+        "gemini-1-0-pro",
+        "gemini-1-0-ultra",
+        "gemini-1-5-flash",
+        "gemini-1-5-flash-8b",
+        "gemini-1-5-flash-may-2024",
+        "gemini-1-5-pro",
+        "gemini-1-5-pro-may-2024",
+        "gemini-2-0-flash",
+        "gemini-2-0-flash-experimental",
+        "gemini-2-0-flash-lite-001",
+        "gemini-2-0-flash-lite-preview",
+        "gemini-2-0-flash-thinking-exp-0121",
+        "gemini-2-0-flash-thinking-exp-1219",
+        "gemini-2-0-pro-experimental-02-05",
+        "gemini-2-5-flash",
+        "gemini-2-5-flash-04-2025",
+        "gemini-2-5-flash-lite",
+        "gemini-2-5-flash-lite-preview-09-2025",
+        "gemini-2-5-flash-lite-preview-09-2025-reasoning",
+        "gemini-2-5-flash-lite-reasoning",
+        "gemini-2-5-flash-preview-09-2025",
+        "gemini-2-5-flash-preview-09-2025-reasoning",
+        "gemini-2-5-flash-reasoning",
+        "gemini-2-5-flash-reasoning-04-2025",
+        "gemini-2-5-pro",
+        "gemini-2-5-pro-03-25",
+        "gemini-2-5-pro-05-06",
+        "gemini-3-1-flash-lite-preview",
+        "gemini-3-1-pro-preview",
+        "gemini-3-5-flash",
+        "gemini-3-5-flash-lite",
+        "gemini-3-5-flash-medium",
+        "gemini-3-5-flash-minimal",
+        "gemini-3-6-flash",
+        "gemini-3-7-flash",
+        "gemini-3-7-flash-low",
+        "gemini-3-7-flash-medium",
+        "gemini-3-deep-think",
+        "gemini-3-flash",
+        "gemini-3-flash-reasoning",
+        "gemini-3-pro",
+        "gemini-3-pro-low",
+        "gemma-3-12b",
+        "gemma-3-1b",
+        "gemma-3-270m",
+        "gemma-3-27b",
+        "gemma-3-4b",
+        "gemma-3n-e2b",
+        "gemma-3n-e4b",
+        "gemma-3n-e4b-preview-0520",
+        "gemma-4-12b",
+        "gemma-4-12b-non-reasoning",
+        "gemma-4-26b-a4b",
+        "gemma-4-26b-a4b-non-reasoning",
+        "gemma-4-31b",
+        "gemma-4-31b-non-reasoning",
+        "gemma-4-e2b",
+        "gemma-4-e2b-non-reasoning",
+        "gemma-4-e4b",
+        "gemma-4-e4b-non-reasoning",
+        "palm-2"
+      ],
+      "relation": "model_to_model",
+      "source_entity_id": "google/lyria-3-clip-preview"
+    },
+    {
+      "candidates": [
+        "diffusiongemma-26b-a4b",
+        "gemini-1-0-pro",
+        "gemini-1-0-ultra",
+        "gemini-1-5-flash",
+        "gemini-1-5-flash-8b",
+        "gemini-1-5-flash-may-2024",
+        "gemini-1-5-pro",
+        "gemini-1-5-pro-may-2024",
+        "gemini-2-0-flash",
+        "gemini-2-0-flash-experimental",
+        "gemini-2-0-flash-lite-001",
+        "gemini-2-0-flash-lite-preview",
+        "gemini-2-0-flash-thinking-exp-0121",
+        "gemini-2-0-flash-thinking-exp-1219",
+        "gemini-2-0-pro-experimental-02-05",
+        "gemini-2-5-flash",
+        "gemini-2-5-flash-04-2025",
+        "gemini-2-5-flash-lite",
+        "gemini-2-5-flash-lite-preview-09-2025",
+        "gemini-2-5-flash-lite-preview-09-2025-reasoning",
+        "gemini-2-5-flash-lite-reasoning",
+        "gemini-2-5-flash-preview-09-2025",
+        "gemini-2-5-flash-preview-09-2025-reasoning",
+        "gemini-2-5-flash-reasoning",
+        "gemini-2-5-flash-reasoning-04-2025",
+        "gemini-2-5-pro",
+        "gemini-2-5-pro-03-25",
+        "gemini-2-5-pro-05-06",
+        "gemini-3-1-flash-lite-preview",
+        "gemini-3-1-pro-preview",
+        "gemini-3-5-flash",
+        "gemini-3-5-flash-lite",
+        "gemini-3-5-flash-medium",
+        "gemini-3-5-flash-minimal",
+        "gemini-3-6-flash",
+        "gemini-3-7-flash",
+        "gemini-3-7-flash-low",
+        "gemini-3-7-flash-medium",
+        "gemini-3-deep-think",
+        "gemini-3-flash",
+        "gemini-3-flash-reasoning",
+        "gemini-3-pro",
+        "gemini-3-pro-low",
+        "gemma-3-12b",
+        "gemma-3-1b",
+        "gemma-3-270m",
+        "gemma-3-27b",
+        "gemma-3-4b",
+        "gemma-3n-e2b",
+        "gemma-3n-e4b",
+        "gemma-3n-e4b-preview-0520",
+        "gemma-4-12b",
+        "gemma-4-12b-non-reasoning",
+        "gemma-4-26b-a4b",
+        "gemma-4-26b-a4b-non-reasoning",
+        "gemma-4-31b",
+        "gemma-4-31b-non-reasoning",
+        "gemma-4-e2b",
+        "gemma-4-e2b-non-reasoning",
+        "gemma-4-e4b",
+        "gemma-4-e4b-non-reasoning",
+        "palm-2"
+      ],
+      "relation": "model_to_model",
+      "source_entity_id": "google/lyria-3-pro-preview"
+    },
+    {
+      "candidates": [
+        "llama-2-chat-13b",
+        "llama-2-chat-70b",
+        "llama-2-chat-7b",
+        "llama-3-1-instruct-405b",
+        "llama-3-1-instruct-70b",
+        "llama-3-1-instruct-8b",
+        "llama-3-2-instruct-11b-vision",
+        "llama-3-2-instruct-1b",
+        "llama-3-2-instruct-3b",
+        "llama-3-2-instruct-90b-vision",
+        "llama-3-3-instruct-70b",
+        "llama-3-instruct-70b",
+        "llama-3-instruct-8b",
+        "llama-4-maverick",
+        "llama-4-scout",
+        "llama-65b",
+        "muse-glimmer",
+        "muse-spark",
+        "muse-spark-1-1",
+        "muse-spark-1-2"
+      ],
+      "relation": "model_to_model",
+      "source_entity_id": "meta/muse-glimmer-30b"
+    },
+    {
+      "candidates": [
+        "llama-2-chat-13b",
+        "llama-2-chat-70b",
+        "llama-2-chat-7b",
+        "llama-3-1-instruct-405b",
+        "llama-3-1-instruct-70b",
+        "llama-3-1-instruct-8b",
+        "llama-3-2-instruct-11b-vision",
+        "llama-3-2-instruct-1b",
+        "llama-3-2-instruct-3b",
+        "llama-3-2-instruct-90b-vision",
+        "llama-3-3-instruct-70b",
+        "llama-3-instruct-70b",
+        "llama-3-instruct-8b",
+        "llama-4-maverick",
+        "llama-4-scout",
+        "llama-65b",
+        "muse-glimmer",
+        "muse-spark",
+        "muse-spark-1-1",
+        "muse-spark-1-2"
+      ],
+      "relation": "model_to_model",
+      "source_entity_id": "meta/muse-spark-1.2-contributor"
+    },
+    {
+      "candidates": [
+        "llama-3-1-nemotron-instruct-70b",
+        "llama-3-1-nemotron-nano-4b-reasoning",
+        "llama-3-1-nemotron-ultra-253b-v1-reasoning",
+        "llama-3-3-nemotron-super-49b",
+        "llama-3-3-nemotron-super-49b-reasoning",
+        "llama-nemotron-super-49b-v1-5",
+        "llama-nemotron-super-49b-v1-5-reasoning",
+        "nemotron-3-5-lightning",
+        "nemotron-3-nano-omni-30b-a3b",
+        "nemotron-cascade-2-30b-a3b",
+        "nvidia-nemotron-3-nano-30b-a3b",
+        "nvidia-nemotron-3-nano-30b-a3b-reasoning",
+        "nvidia-nemotron-3-nano-4b",
+        "nvidia-nemotron-3-super-120b-a12b",
+        "nvidia-nemotron-3-ultra-550b-a55b",
+        "nvidia-nemotron-nano-12b-v2-vl",
+        "nvidia-nemotron-nano-12b-v2-vl-reasoning",
+        "nvidia-nemotron-nano-9b-v2",
+        "nvidia-nemotron-nano-9b-v2-reasoning"
+      ],
+      "relation": "model_to_model",
+      "source_entity_id": "nvidia/nemotron-3.5-lightning:free"
+    },
+    {
+      "candidates": [
+        "hy3",
+        "hy3-non-reasoning",
+        "hy3-preview"
+      ],
+      "relation": "model_to_model",
+      "source_entity_id": "tencent/hy-mt2-1.8b"
+    },
+    {
+      "candidates": [
+        "hy3",
+        "hy3-non-reasoning",
+        "hy3-preview"
+      ],
+      "relation": "model_to_model",
+      "source_entity_id": "tencent/hy-mt2-30b-a3b"
+    },
+    {
+      "candidates": [
+        "hy3",
+        "hy3-non-reasoning",
+        "hy3-preview"
+      ],
+      "relation": "model_to_model",
+      "source_entity_id": "tencent/hy-mt2-7b"
+    }
+  ],
   "conflicts": [],
   "generated_at": "2026-08-23T00:00:00Z",
   "health": {
-    "aa_models": 618,
-    "ambiguous": 0,
-    "candidate": 0,
+    "aa_model_count": 618,
+    "aa_provider_count": 21,
+    "ambiguous": 73,
     "conflict": 0,
-    "manual": 0,
-    "openrouter_models": 445,
-    "unresolved": 445,
-    "verified": 30
+    "model_mappings": {
+      "candidate": 9,
+      "manual": 1,
+      "verified": 0
+    },
+    "openrouter_endpoint_count": 465,
+    "openrouter_model_count": 139,
+    "openrouter_provider_count": 63,
+    "provider_mappings": {
+      "candidate": 0,
+      "manual": 2,
+      "verified": 0
+    },
+    "unique_unresolved_model_ids": [
+      "aion-labs/aion-2.0",
+      "aion-labs/aion-3.0",
+      "aion-labs/aion-3.0-mini",
+      "aion-labs/aion-rp-llama-3.1-8b",
+      "amazon/nova-2-lite-v1",
+      "amazon/nova-lite-v1",
+      "amazon/nova-micro-v1",
+      "amazon/nova-premier-v1",
+      "amazon/nova-pro-v1",
+      "anthracite-org/magnum-v4-72b",
+      "anthropic/claude-3-haiku",
+      "anthropic/claude-fable-5",
+      "anthropic/claude-opus-4.5",
+      "anthropic/claude-opus-4.6",
+      "anthropic/claude-opus-4.7",
+      "anthropic/claude-opus-4.8",
+      "anthropic/claude-opus-5",
+      "anthropic/claude-sonnet-4.6",
+      "anthropic/claude-sonnet-5",
+      "arcee-ai/virtuoso-large",
+      "bytedance/ui-tars-1.5-7b",
+      "cognitivecomputations/dolphin-mistral-24b-venice-edition",
+      "cohere/command-a",
+      "deepseek/deepseek-r1",
+      "deepseek/deepseek-r1-0528",
+      "deepseek/deepseek-r1-distill-llama-70b",
+      "deepseek/deepseek-v3.1-terminus",
+      "deepseek/deepseek-v3.2",
+      "deepseek/deepseek-v4-flash",
+      "deepseek/deepseek-v4-pro",
+      "dots-studio/dots-3-note-preview:free",
+      "google/gemini-2.5-flash",
+      "google/gemini-2.5-flash-lite",
+      "google/gemini-2.5-pro",
+      "google/gemini-3.1-flash-lite-preview",
+      "google/gemini-3.1-pro-preview",
+      "google/gemini-3.5-flash",
+      "google/gemini-3.5-flash-lite",
+      "google/gemini-3.6-flash",
+      "google/gemini-3.7-flash",
+      "gryphe/mythomax-l2-13b",
+      "ibm-granite/granite-4.0-h-micro",
+      "inclusionai/ling-2.6-1t",
+      "inclusionai/ling-2.6-flash",
+      "inclusionai/ling-3.0-flash",
+      "inclusionai/ring-2.6-1t",
+      "kwaipilot/kat-coder-air-v2.5",
+      "kwaipilot/kat-coder-pro-v2.5",
+      "liquid/lfm-2.5-2.6b:free",
+      "mancer/weaver",
+      "meta/muse-spark-1.2",
+      "nvidia/nemotron-3.5-lightning",
+      "sakana/sakana-namazu",
+      "stealth/ox-alpha",
+      "upstage/solar-pro4",
+      "z-ai/glm-5.3"
+    ],
+    "unresolved_models": 56,
+    "unresolved_providers": 61
   },
   "mappings": [
     {
-      "confidence": 1.0,
-      "evidence": "same Artificial Analysis stable slug",
+      "confidence": 0.95,
+      "evidence": "OpenRouter model portion equals AA slug; normalized model name/version equality; non-authoritative",
       "last_verified": "2026-08-23T00:00:00Z",
-      "relation": "endpoint_model_to_model",
-      "source": "artificial_analysis_endpoint_accuracy",
-      "source_entity_id": "glm-5-2",
-      "state": "verified",
+      "relation": "model_to_model",
+      "source": "openrouter",
+      "source_entity_id": "arcee-ai/trinity-large-thinking",
+      "state": "candidate",
       "target": "artificial_analysis",
-      "target_entity_id": "glm-5-2"
+      "target_entity_id": "trinity-large-thinking"
+    },
+    {
+      "confidence": 0.95,
+      "evidence": "OpenRouter model portion equals AA slug; normalized model name/version equality; non-authoritative",
+      "last_verified": "2026-08-23T00:00:00Z",
+      "relation": "model_to_model",
+      "source": "openrouter",
+      "source_entity_id": "ibm-granite/granite-4.1-8b",
+      "state": "candidate",
+      "target": "artificial_analysis",
+      "target_entity_id": "granite-4-1-8b"
+    },
+    {
+      "confidence": 0.95,
+      "evidence": "OpenRouter model portion equals AA slug; normalized model name/version equality; OpenRouter namespace agrees with AA creator; non-authoritative",
+      "last_verified": "2026-08-23T00:00:00Z",
+      "relation": "model_to_model",
+      "source": "openrouter",
+      "source_entity_id": "inception/mercury-2",
+      "state": "candidate",
+      "target": "artificial_analysis",
+      "target_entity_id": "mercury-2"
+    },
+    {
+      "confidence": 0.95,
+      "evidence": "OpenRouter model portion equals AA slug; normalized model name/version equality; non-authoritative",
+      "last_verified": "2026-08-23T00:00:00Z",
+      "relation": "model_to_model",
+      "source": "openrouter",
+      "source_entity_id": "kwaipilot/kat-coder-pro-v2",
+      "state": "candidate",
+      "target": "artificial_analysis",
+      "target_entity_id": "kat-coder-pro-v2"
+    },
+    {
+      "confidence": 0.95,
+      "evidence": "OpenRouter model portion equals AA slug; normalized model name/version equality; non-authoritative",
+      "last_verified": "2026-08-23T00:00:00Z",
+      "relation": "model_to_model",
+      "source": "openrouter",
+      "source_entity_id": "meituan/longcat-2.0",
+      "state": "candidate",
+      "target": "artificial_analysis",
+      "target_entity_id": "longcat-2-0"
     },
     {
       "confidence": 1.0,
-      "evidence": "same Artificial Analysis stable slug",
+      "evidence": "Artificial Analysis model page identifies the model as OpenAI gpt-oss-120b; its raw_fields.openrouter_api_id is openai/gpt-oss-120b; OpenRouter public model ID is identical.",
       "last_verified": "2026-08-23T00:00:00Z",
-      "relation": "endpoint_model_to_model",
-      "source": "artificial_analysis_endpoint_accuracy",
-      "source_entity_id": "glm-5-2",
-      "state": "verified",
+      "relation": "model_to_model",
+      "source": "openrouter",
+      "source_entity_id": "openai/gpt-oss-120b",
+      "state": "manual",
       "target": "artificial_analysis",
-      "target_entity_id": "glm-5-2"
+      "target_entity_id": "gpt-oss-120b"
+    },
+    {
+      "confidence": 0.95,
+      "evidence": "OpenRouter model portion equals AA slug; normalized model name/version equality; non-authoritative",
+      "last_verified": "2026-08-23T00:00:00Z",
+      "relation": "model_to_model",
+      "source": "openrouter",
+      "source_entity_id": "qwen/qwen3.8-2.4t-a95b",
+      "state": "candidate",
+      "target": "artificial_analysis",
+      "target_entity_id": "qwen3-8-2-4t-a95b"
+    },
+    {
+      "confidence": 0.95,
+      "evidence": "OpenRouter model portion equals AA slug; normalized model name/version equality; non-authoritative",
+      "last_verified": "2026-08-23T00:00:00Z",
+      "relation": "model_to_model",
+      "source": "openrouter",
+      "source_entity_id": "qwen/qwen3.8-27b",
+      "state": "candidate",
+      "target": "artificial_analysis",
+      "target_entity_id": "qwen3-8-27b"
+    },
+    {
+      "confidence": 0.95,
+      "evidence": "OpenRouter model portion equals AA slug; normalized model name/version equality; non-authoritative",
+      "last_verified": "2026-08-23T00:00:00Z",
+      "relation": "model_to_model",
+      "source": "openrouter",
+      "source_entity_id": "qwen/qwen3.8-max",
+      "state": "candidate",
+      "target": "artificial_analysis",
+      "target_entity_id": "qwen3-8-max"
+    },
+    {
+      "confidence": 0.95,
+      "evidence": "OpenRouter model portion equals AA slug; normalized model name/version equality; non-authoritative",
+      "last_verified": "2026-08-23T00:00:00Z",
+      "relation": "model_to_model",
+      "source": "openrouter",
+      "source_entity_id": "x-ai/grok-4.6",
+      "state": "candidate",
+      "target": "artificial_analysis",
+      "target_entity_id": "grok-4-6"
     },
     {
       "confidence": 1.0,
-      "evidence": "same Artificial Analysis stable slug",
+      "evidence": "OpenRouter endpoint tag coreweave and Artificial Analysis provider detail endpoint coreweave refer to the same named provider; manual audited alias.",
       "last_verified": "2026-08-23T00:00:00Z",
-      "relation": "endpoint_model_to_model",
-      "source": "artificial_analysis_endpoint_accuracy",
-      "source_entity_id": "glm-5-2",
-      "state": "verified",
+      "relation": "provider_to_provider",
+      "source": "openrouter",
+      "source_entity_id": "coreweave",
+      "state": "manual",
       "target": "artificial_analysis",
-      "target_entity_id": "glm-5-2"
+      "target_entity_id": "coreweave"
     },
     {
       "confidence": 1.0,
-      "evidence": "same Artificial Analysis stable slug",
+      "evidence": "OpenRouter endpoint tag deepinfra and Artificial Analysis provider detail endpoint deepinfra refer to the same named provider; manual audited alias.",
       "last_verified": "2026-08-23T00:00:00Z",
-      "relation": "endpoint_model_to_model",
-      "source": "artificial_analysis_endpoint_accuracy",
-      "source_entity_id": "glm-5-2",
-      "state": "verified",
+      "relation": "provider_to_provider",
+      "source": "openrouter",
+      "source_entity_id": "deepinfra",
+      "state": "manual",
       "target": "artificial_analysis",
-      "target_entity_id": "glm-5-2"
-    },
-    {
-      "confidence": 1.0,
-      "evidence": "same Artificial Analysis stable slug",
-      "last_verified": "2026-08-23T00:00:00Z",
-      "relation": "endpoint_model_to_model",
-      "source": "artificial_analysis_endpoint_accuracy",
-      "source_entity_id": "glm-5-2",
-      "state": "verified",
-      "target": "artificial_analysis",
-      "target_entity_id": "glm-5-2"
-    },
-    {
-      "confidence": 1.0,
-      "evidence": "same Artificial Analysis stable slug",
-      "last_verified": "2026-08-23T00:00:00Z",
-      "relation": "endpoint_model_to_model",
-      "source": "artificial_analysis_endpoint_accuracy",
-      "source_entity_id": "glm-5-2",
-      "state": "verified",
-      "target": "artificial_analysis",
-      "target_entity_id": "glm-5-2"
-    },
-    {
-      "confidence": 1.0,
-      "evidence": "same Artificial Analysis stable slug",
-      "last_verified": "2026-08-23T00:00:00Z",
-      "relation": "endpoint_model_to_model",
-      "source": "artificial_analysis_endpoint_accuracy",
-      "source_entity_id": "glm-5-2",
-      "state": "verified",
-      "target": "artificial_analysis",
-      "target_entity_id": "glm-5-2"
-    },
-    {
-      "confidence": 1.0,
-      "evidence": "same Artificial Analysis stable slug",
-      "last_verified": "2026-08-23T00:00:00Z",
-      "relation": "endpoint_model_to_model",
-      "source": "artificial_analysis_endpoint_accuracy",
-      "source_entity_id": "glm-5-2",
-      "state": "verified",
-      "target": "artificial_analysis",
-      "target_entity_id": "glm-5-2"
-    },
-    {
-      "confidence": 1.0,
-      "evidence": "same Artificial Analysis stable slug",
-      "last_verified": "2026-08-23T00:00:00Z",
-      "relation": "endpoint_model_to_model",
-      "source": "artificial_analysis_endpoint_accuracy",
-      "source_entity_id": "glm-5-2",
-      "state": "verified",
-      "target": "artificial_analysis",
-      "target_entity_id": "glm-5-2"
-    },
-    {
-      "confidence": 1.0,
-      "evidence": "same Artificial Analysis stable slug",
-      "last_verified": "2026-08-23T00:00:00Z",
-      "relation": "endpoint_model_to_model",
-      "source": "artificial_analysis_endpoint_accuracy",
-      "source_entity_id": "glm-5-2",
-      "state": "verified",
-      "target": "artificial_analysis",
-      "target_entity_id": "glm-5-2"
-    },
-    {
-      "confidence": 1.0,
-      "evidence": "same Artificial Analysis stable slug",
-      "last_verified": "2026-08-23T00:00:00Z",
-      "relation": "endpoint_model_to_model",
-      "source": "artificial_analysis_endpoint_accuracy",
-      "source_entity_id": "glm-5-2",
-      "state": "verified",
-      "target": "artificial_analysis",
-      "target_entity_id": "glm-5-2"
-    },
-    {
-      "confidence": 1.0,
-      "evidence": "same Artificial Analysis stable slug",
-      "last_verified": "2026-08-23T00:00:00Z",
-      "relation": "endpoint_model_to_model",
-      "source": "artificial_analysis_endpoint_accuracy",
-      "source_entity_id": "glm-5-2",
-      "state": "verified",
-      "target": "artificial_analysis",
-      "target_entity_id": "glm-5-2"
-    },
-    {
-      "confidence": 1.0,
-      "evidence": "same Artificial Analysis stable slug",
-      "last_verified": "2026-08-23T00:00:00Z",
-      "relation": "endpoint_model_to_model",
-      "source": "artificial_analysis_endpoint_accuracy",
-      "source_entity_id": "glm-5-2",
-      "state": "verified",
-      "target": "artificial_analysis",
-      "target_entity_id": "glm-5-2"
+      "target_entity_id": "deepinfra"
     },
     {
       "confidence": 1.0,
@@ -166,171 +3698,6 @@
       "state": "verified",
       "target": "artificial_analysis",
       "target_entity_id": "glm-5-2"
-    },
-    {
-      "confidence": 1.0,
-      "evidence": "same Artificial Analysis stable slug",
-      "last_verified": "2026-08-23T00:00:00Z",
-      "relation": "endpoint_model_to_model",
-      "source": "artificial_analysis_endpoint_accuracy",
-      "source_entity_id": "gpt-oss-120b",
-      "state": "verified",
-      "target": "artificial_analysis",
-      "target_entity_id": "gpt-oss-120b"
-    },
-    {
-      "confidence": 1.0,
-      "evidence": "same Artificial Analysis stable slug",
-      "last_verified": "2026-08-23T00:00:00Z",
-      "relation": "endpoint_model_to_model",
-      "source": "artificial_analysis_endpoint_accuracy",
-      "source_entity_id": "gpt-oss-120b",
-      "state": "verified",
-      "target": "artificial_analysis",
-      "target_entity_id": "gpt-oss-120b"
-    },
-    {
-      "confidence": 1.0,
-      "evidence": "same Artificial Analysis stable slug",
-      "last_verified": "2026-08-23T00:00:00Z",
-      "relation": "endpoint_model_to_model",
-      "source": "artificial_analysis_endpoint_accuracy",
-      "source_entity_id": "gpt-oss-120b",
-      "state": "verified",
-      "target": "artificial_analysis",
-      "target_entity_id": "gpt-oss-120b"
-    },
-    {
-      "confidence": 1.0,
-      "evidence": "same Artificial Analysis stable slug",
-      "last_verified": "2026-08-23T00:00:00Z",
-      "relation": "endpoint_model_to_model",
-      "source": "artificial_analysis_endpoint_accuracy",
-      "source_entity_id": "gpt-oss-120b",
-      "state": "verified",
-      "target": "artificial_analysis",
-      "target_entity_id": "gpt-oss-120b"
-    },
-    {
-      "confidence": 1.0,
-      "evidence": "same Artificial Analysis stable slug",
-      "last_verified": "2026-08-23T00:00:00Z",
-      "relation": "endpoint_model_to_model",
-      "source": "artificial_analysis_endpoint_accuracy",
-      "source_entity_id": "gpt-oss-120b",
-      "state": "verified",
-      "target": "artificial_analysis",
-      "target_entity_id": "gpt-oss-120b"
-    },
-    {
-      "confidence": 1.0,
-      "evidence": "same Artificial Analysis stable slug",
-      "last_verified": "2026-08-23T00:00:00Z",
-      "relation": "endpoint_model_to_model",
-      "source": "artificial_analysis_endpoint_accuracy",
-      "source_entity_id": "gpt-oss-120b",
-      "state": "verified",
-      "target": "artificial_analysis",
-      "target_entity_id": "gpt-oss-120b"
-    },
-    {
-      "confidence": 1.0,
-      "evidence": "same Artificial Analysis stable slug",
-      "last_verified": "2026-08-23T00:00:00Z",
-      "relation": "endpoint_model_to_model",
-      "source": "artificial_analysis_endpoint_accuracy",
-      "source_entity_id": "gpt-oss-120b",
-      "state": "verified",
-      "target": "artificial_analysis",
-      "target_entity_id": "gpt-oss-120b"
-    },
-    {
-      "confidence": 1.0,
-      "evidence": "same Artificial Analysis stable slug",
-      "last_verified": "2026-08-23T00:00:00Z",
-      "relation": "endpoint_model_to_model",
-      "source": "artificial_analysis_endpoint_accuracy",
-      "source_entity_id": "gpt-oss-120b",
-      "state": "verified",
-      "target": "artificial_analysis",
-      "target_entity_id": "gpt-oss-120b"
-    },
-    {
-      "confidence": 1.0,
-      "evidence": "same Artificial Analysis stable slug",
-      "last_verified": "2026-08-23T00:00:00Z",
-      "relation": "endpoint_model_to_model",
-      "source": "artificial_analysis_endpoint_accuracy",
-      "source_entity_id": "gpt-oss-120b",
-      "state": "verified",
-      "target": "artificial_analysis",
-      "target_entity_id": "gpt-oss-120b"
-    },
-    {
-      "confidence": 1.0,
-      "evidence": "same Artificial Analysis stable slug",
-      "last_verified": "2026-08-23T00:00:00Z",
-      "relation": "endpoint_model_to_model",
-      "source": "artificial_analysis_endpoint_accuracy",
-      "source_entity_id": "gpt-oss-120b",
-      "state": "verified",
-      "target": "artificial_analysis",
-      "target_entity_id": "gpt-oss-120b"
-    },
-    {
-      "confidence": 1.0,
-      "evidence": "same Artificial Analysis stable slug",
-      "last_verified": "2026-08-23T00:00:00Z",
-      "relation": "endpoint_model_to_model",
-      "source": "artificial_analysis_endpoint_accuracy",
-      "source_entity_id": "gpt-oss-120b",
-      "state": "verified",
-      "target": "artificial_analysis",
-      "target_entity_id": "gpt-oss-120b"
-    },
-    {
-      "confidence": 1.0,
-      "evidence": "same Artificial Analysis stable slug",
-      "last_verified": "2026-08-23T00:00:00Z",
-      "relation": "endpoint_model_to_model",
-      "source": "artificial_analysis_endpoint_accuracy",
-      "source_entity_id": "gpt-oss-120b",
-      "state": "verified",
-      "target": "artificial_analysis",
-      "target_entity_id": "gpt-oss-120b"
-    },
-    {
-      "confidence": 1.0,
-      "evidence": "same Artificial Analysis stable slug",
-      "last_verified": "2026-08-23T00:00:00Z",
-      "relation": "endpoint_model_to_model",
-      "source": "artificial_analysis_endpoint_accuracy",
-      "source_entity_id": "gpt-oss-120b",
-      "state": "verified",
-      "target": "artificial_analysis",
-      "target_entity_id": "gpt-oss-120b"
-    },
-    {
-      "confidence": 1.0,
-      "evidence": "same Artificial Analysis stable slug",
-      "last_verified": "2026-08-23T00:00:00Z",
-      "relation": "endpoint_model_to_model",
-      "source": "artificial_analysis_endpoint_accuracy",
-      "source_entity_id": "gpt-oss-120b",
-      "state": "verified",
-      "target": "artificial_analysis",
-      "target_entity_id": "gpt-oss-120b"
-    },
-    {
-      "confidence": 1.0,
-      "evidence": "same Artificial Analysis stable slug",
-      "last_verified": "2026-08-23T00:00:00Z",
-      "relation": "endpoint_model_to_model",
-      "source": "artificial_analysis_endpoint_accuracy",
-      "source_entity_id": "gpt-oss-120b",
-      "state": "verified",
-      "target": "artificial_analysis",
-      "target_entity_id": "gpt-oss-120b"
     },
     {
       "confidence": 1.0,
@@ -346,1785 +3713,473 @@
   ],
   "unresolved": [
     {
-      "source": "openrouter",
+      "relation": "model_to_model",
       "source_entity_id": "aion-labs/aion-2.0"
     },
     {
-      "source": "openrouter",
+      "relation": "model_to_model",
       "source_entity_id": "aion-labs/aion-3.0"
     },
     {
-      "source": "openrouter",
+      "relation": "model_to_model",
       "source_entity_id": "aion-labs/aion-3.0-mini"
     },
     {
-      "source": "openrouter",
+      "relation": "model_to_model",
       "source_entity_id": "aion-labs/aion-rp-llama-3.1-8b"
     },
     {
-      "source": "openrouter",
+      "relation": "model_to_model",
       "source_entity_id": "amazon/nova-2-lite-v1"
     },
     {
-      "source": "openrouter",
-      "source_entity_id": "amazon/nova-2-lite-v1"
-    },
-    {
-      "source": "openrouter",
+      "relation": "model_to_model",
       "source_entity_id": "amazon/nova-lite-v1"
     },
     {
-      "source": "openrouter",
-      "source_entity_id": "amazon/nova-lite-v1"
-    },
-    {
-      "source": "openrouter",
+      "relation": "model_to_model",
       "source_entity_id": "amazon/nova-micro-v1"
     },
     {
-      "source": "openrouter",
-      "source_entity_id": "amazon/nova-micro-v1"
-    },
-    {
-      "source": "openrouter",
+      "relation": "model_to_model",
       "source_entity_id": "amazon/nova-premier-v1"
     },
     {
-      "source": "openrouter",
+      "relation": "model_to_model",
       "source_entity_id": "amazon/nova-pro-v1"
     },
     {
-      "source": "openrouter",
-      "source_entity_id": "amazon/nova-pro-v1"
-    },
-    {
-      "source": "openrouter",
+      "relation": "model_to_model",
       "source_entity_id": "anthracite-org/magnum-v4-72b"
     },
     {
-      "source": "openrouter",
+      "relation": "model_to_model",
       "source_entity_id": "anthropic/claude-3-haiku"
     },
     {
-      "source": "openrouter",
+      "relation": "model_to_model",
       "source_entity_id": "anthropic/claude-fable-5"
     },
     {
-      "source": "openrouter",
-      "source_entity_id": "anthropic/claude-fable-5"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "anthropic/claude-fable-5"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "anthropic/claude-fable-5"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "anthropic/claude-fable-5"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "anthropic/claude-fable-5"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "anthropic/claude-fable-5:batch"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "anthropic/claude-haiku-4.5"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "anthropic/claude-haiku-4.5"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "anthropic/claude-haiku-4.5"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "anthropic/claude-haiku-4.5"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "anthropic/claude-haiku-4.5"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "anthropic/claude-haiku-4.5"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "anthropic/claude-haiku-4.5"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "anthropic/claude-haiku-4.5"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "anthropic/claude-haiku-4.5:batch"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "anthropic/claude-opus-4"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "anthropic/claude-opus-4.1"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "anthropic/claude-opus-4.1"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "anthropic/claude-opus-4.1:batch"
-    },
-    {
-      "source": "openrouter",
+      "relation": "model_to_model",
       "source_entity_id": "anthropic/claude-opus-4.5"
     },
     {
-      "source": "openrouter",
-      "source_entity_id": "anthropic/claude-opus-4.5"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "anthropic/claude-opus-4.5"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "anthropic/claude-opus-4.5"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "anthropic/claude-opus-4.5"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "anthropic/claude-opus-4.5"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "anthropic/claude-opus-4.5:batch"
-    },
-    {
-      "source": "openrouter",
+      "relation": "model_to_model",
       "source_entity_id": "anthropic/claude-opus-4.6"
     },
     {
-      "source": "openrouter",
-      "source_entity_id": "anthropic/claude-opus-4.6"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "anthropic/claude-opus-4.6"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "anthropic/claude-opus-4.6"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "anthropic/claude-opus-4.6"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "anthropic/claude-opus-4.6"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "anthropic/claude-opus-4.6:batch"
-    },
-    {
-      "source": "openrouter",
+      "relation": "model_to_model",
       "source_entity_id": "anthropic/claude-opus-4.7"
     },
     {
-      "source": "openrouter",
-      "source_entity_id": "anthropic/claude-opus-4.7"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "anthropic/claude-opus-4.7"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "anthropic/claude-opus-4.7"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "anthropic/claude-opus-4.7"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "anthropic/claude-opus-4.7"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "anthropic/claude-opus-4.7"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "anthropic/claude-opus-4.7"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "anthropic/claude-opus-4.7-fast"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "anthropic/claude-opus-4.7:batch"
-    },
-    {
-      "source": "openrouter",
+      "relation": "model_to_model",
       "source_entity_id": "anthropic/claude-opus-4.8"
     },
     {
-      "source": "openrouter",
-      "source_entity_id": "anthropic/claude-opus-4.8"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "anthropic/claude-opus-4.8"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "anthropic/claude-opus-4.8"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "anthropic/claude-opus-4.8"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "anthropic/claude-opus-4.8"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "anthropic/claude-opus-4.8"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "anthropic/claude-opus-4.8"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "anthropic/claude-opus-4.8"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "anthropic/claude-opus-4.8"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "anthropic/claude-opus-4.8-fast"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "anthropic/claude-opus-4.8:batch"
-    },
-    {
-      "source": "openrouter",
+      "relation": "model_to_model",
       "source_entity_id": "anthropic/claude-opus-5"
     },
     {
-      "source": "openrouter",
-      "source_entity_id": "anthropic/claude-opus-5"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "anthropic/claude-opus-5"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "anthropic/claude-opus-5"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "anthropic/claude-opus-5"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "anthropic/claude-opus-5"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "anthropic/claude-opus-5"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "anthropic/claude-opus-5"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "anthropic/claude-opus-5"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "anthropic/claude-opus-5-fast"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "anthropic/claude-opus-5:batch"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "anthropic/claude-sonnet-4"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "anthropic/claude-sonnet-4"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "anthropic/claude-sonnet-4"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "anthropic/claude-sonnet-4"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "anthropic/claude-sonnet-4"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "anthropic/claude-sonnet-4.5"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "anthropic/claude-sonnet-4.5"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "anthropic/claude-sonnet-4.5"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "anthropic/claude-sonnet-4.5"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "anthropic/claude-sonnet-4.5"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "anthropic/claude-sonnet-4.5"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "anthropic/claude-sonnet-4.5"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "anthropic/claude-sonnet-4.5:batch"
-    },
-    {
-      "source": "openrouter",
+      "relation": "model_to_model",
       "source_entity_id": "anthropic/claude-sonnet-4.6"
     },
     {
-      "source": "openrouter",
-      "source_entity_id": "anthropic/claude-sonnet-4.6"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "anthropic/claude-sonnet-4.6"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "anthropic/claude-sonnet-4.6"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "anthropic/claude-sonnet-4.6"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "anthropic/claude-sonnet-4.6"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "anthropic/claude-sonnet-4.6"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "anthropic/claude-sonnet-4.6"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "anthropic/claude-sonnet-4.6"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "anthropic/claude-sonnet-4.6:batch"
-    },
-    {
-      "source": "openrouter",
+      "relation": "model_to_model",
       "source_entity_id": "anthropic/claude-sonnet-5"
     },
     {
-      "source": "openrouter",
-      "source_entity_id": "anthropic/claude-sonnet-5"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "anthropic/claude-sonnet-5"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "anthropic/claude-sonnet-5"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "anthropic/claude-sonnet-5"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "anthropic/claude-sonnet-5"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "anthropic/claude-sonnet-5"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "anthropic/claude-sonnet-5"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "anthropic/claude-sonnet-5"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "anthropic/claude-sonnet-5:batch"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "arcee-ai/trinity-large-thinking"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "arcee-ai/trinity-large-thinking"
-    },
-    {
-      "source": "openrouter",
+      "relation": "model_to_model",
       "source_entity_id": "arcee-ai/virtuoso-large"
     },
     {
-      "source": "openrouter",
-      "source_entity_id": "baidu/ernie-4.5-vl-424b-a47b"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "bytedance-seed/seed-1.6"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "bytedance-seed/seed-1.6-flash"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "bytedance-seed/seed-2-1-turbo"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "bytedance-seed/seed-2.0-code"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "bytedance-seed/seed-2.0-lite"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "bytedance-seed/seed-2.0-mini"
-    },
-    {
-      "source": "openrouter",
+      "relation": "model_to_model",
       "source_entity_id": "bytedance/ui-tars-1.5-7b"
     },
     {
-      "source": "openrouter",
+      "relation": "model_to_model",
       "source_entity_id": "cognitivecomputations/dolphin-mistral-24b-venice-edition"
     },
     {
-      "source": "openrouter",
+      "relation": "model_to_model",
       "source_entity_id": "cohere/command-a"
     },
     {
-      "source": "openrouter",
-      "source_entity_id": "cohere/command-r-08-2024"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "cohere/command-r-plus-08-2024"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "cohere/command-r7b-12-2024"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "cohere/north-mini-code:free"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "deepseek/deepseek-chat"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "deepseek/deepseek-chat"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "deepseek/deepseek-chat"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "deepseek/deepseek-chat-v3-0324"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "deepseek/deepseek-chat-v3-0324"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "deepseek/deepseek-chat-v3-0324"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "deepseek/deepseek-chat-v3-0324"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "deepseek/deepseek-chat-v3-0324"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "deepseek/deepseek-chat-v3.1"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "deepseek/deepseek-chat-v3.1"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "deepseek/deepseek-chat-v3.1"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "deepseek/deepseek-chat-v3.1"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "deepseek/deepseek-chat-v3.1"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "deepseek/deepseek-chat-v3.1"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "deepseek/deepseek-chat-v3.1"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "deepseek/deepseek-chat-v3.1"
-    },
-    {
-      "source": "openrouter",
+      "relation": "model_to_model",
       "source_entity_id": "deepseek/deepseek-r1"
     },
     {
-      "source": "openrouter",
+      "relation": "model_to_model",
       "source_entity_id": "deepseek/deepseek-r1-0528"
     },
     {
-      "source": "openrouter",
-      "source_entity_id": "deepseek/deepseek-r1-0528"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "deepseek/deepseek-r1-0528"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "deepseek/deepseek-r1-0528"
-    },
-    {
-      "source": "openrouter",
+      "relation": "model_to_model",
       "source_entity_id": "deepseek/deepseek-r1-distill-llama-70b"
     },
     {
-      "source": "openrouter",
+      "relation": "model_to_model",
       "source_entity_id": "deepseek/deepseek-v3.1-terminus"
     },
     {
-      "source": "openrouter",
-      "source_entity_id": "deepseek/deepseek-v3.1-terminus"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "deepseek/deepseek-v3.1-terminus"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "deepseek/deepseek-v3.1-terminus"
-    },
-    {
-      "source": "openrouter",
+      "relation": "model_to_model",
       "source_entity_id": "deepseek/deepseek-v3.2"
     },
     {
-      "source": "openrouter",
-      "source_entity_id": "deepseek/deepseek-v3.2"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "deepseek/deepseek-v3.2"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "deepseek/deepseek-v3.2"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "deepseek/deepseek-v3.2"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "deepseek/deepseek-v3.2"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "deepseek/deepseek-v3.2"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "deepseek/deepseek-v3.2"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "deepseek/deepseek-v3.2"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "deepseek/deepseek-v3.2"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "deepseek/deepseek-v3.2"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "deepseek/deepseek-v3.2"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "deepseek/deepseek-v3.2"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "deepseek/deepseek-v3.2"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "deepseek/deepseek-v3.2-exp"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "deepseek/deepseek-v3.2-exp"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "deepseek/deepseek-v3.2-exp"
-    },
-    {
-      "source": "openrouter",
+      "relation": "model_to_model",
       "source_entity_id": "deepseek/deepseek-v4-flash"
     },
     {
-      "source": "openrouter",
-      "source_entity_id": "deepseek/deepseek-v4-flash"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "deepseek/deepseek-v4-flash"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "deepseek/deepseek-v4-flash"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "deepseek/deepseek-v4-flash"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "deepseek/deepseek-v4-flash"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "deepseek/deepseek-v4-flash"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "deepseek/deepseek-v4-flash"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "deepseek/deepseek-v4-flash"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "deepseek/deepseek-v4-flash"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "deepseek/deepseek-v4-flash"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "deepseek/deepseek-v4-flash"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "deepseek/deepseek-v4-flash"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "deepseek/deepseek-v4-flash"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "deepseek/deepseek-v4-flash"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "deepseek/deepseek-v4-flash"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "deepseek/deepseek-v4-flash"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "deepseek/deepseek-v4-flash-0731"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "deepseek/deepseek-v4-flash-0731"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "deepseek/deepseek-v4-flash-0731"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "deepseek/deepseek-v4-flash-0731"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "deepseek/deepseek-v4-flash-0731"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "deepseek/deepseek-v4-flash-0731"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "deepseek/deepseek-v4-flash-0731"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "deepseek/deepseek-v4-flash-0731"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "deepseek/deepseek-v4-flash-0731"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "deepseek/deepseek-v4-flash-0731"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "deepseek/deepseek-v4-flash-0731"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "deepseek/deepseek-v4-flash-0731"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "deepseek/deepseek-v4-flash-0731"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "deepseek/deepseek-v4-flash-0731"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "deepseek/deepseek-v4-flash-0731"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "deepseek/deepseek-v4-flash-0731"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "deepseek/deepseek-v4-flash-0731"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "deepseek/deepseek-v4-flash-0731"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "deepseek/deepseek-v4-flash-0731"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "deepseek/deepseek-v4-flash-0731"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "deepseek/deepseek-v4-flash-0731"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "deepseek/deepseek-v4-flash-0731"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "deepseek/deepseek-v4-flash-0731"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "deepseek/deepseek-v4-flash-0731"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "deepseek/deepseek-v4-flash-0731"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "deepseek/deepseek-v4-flash-0731"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "deepseek/deepseek-v4-flash-0731"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "deepseek/deepseek-v4-flash-0731"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "deepseek/deepseek-v4-flash-0731"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "deepseek/deepseek-v4-flash-0731"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "deepseek/deepseek-v4-flash-vision-exp"
-    },
-    {
-      "source": "openrouter",
+      "relation": "model_to_model",
       "source_entity_id": "deepseek/deepseek-v4-pro"
     },
     {
-      "source": "openrouter",
-      "source_entity_id": "deepseek/deepseek-v4-pro"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "deepseek/deepseek-v4-pro"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "deepseek/deepseek-v4-pro"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "deepseek/deepseek-v4-pro"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "deepseek/deepseek-v4-pro"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "deepseek/deepseek-v4-pro"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "deepseek/deepseek-v4-pro"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "deepseek/deepseek-v4-pro"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "deepseek/deepseek-v4-pro"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "deepseek/deepseek-v4-pro"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "deepseek/deepseek-v4-pro"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "deepseek/deepseek-v4-pro"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "deepseek/deepseek-v4-pro"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "deepseek/deepseek-v4-pro"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "deepseek/deepseek-v4-pro"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "deepseek/deepseek-v4-pro"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "deepseek/deepseek-v4-pro-0813"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "deepseek/deepseek-v4-pro-0813"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "deepseek/deepseek-v4-pro-0813"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "deepseek/deepseek-v4-pro-0813"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "deepseek/deepseek-v4-pro-0813"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "deepseek/deepseek-v4-pro-0813"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "deepseek/deepseek-v4-pro-0813"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "deepseek/deepseek-v4-pro-0813"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "deepseek/deepseek-v4-pro-0813"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "deepseek/deepseek-v4-pro-0813"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "deepseek/deepseek-v4-pro-0813"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "deepseek/deepseek-v4-pro-0813"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "deepseek/deepseek-v4-pro-0813"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "deepseek/deepseek-v4-pro-0813"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "deepseek/deepseek-v4-pro-0813"
-    },
-    {
-      "source": "openrouter",
+      "relation": "model_to_model",
       "source_entity_id": "dots-studio/dots-3-note-preview:free"
     },
     {
-      "source": "openrouter",
+      "relation": "model_to_model",
       "source_entity_id": "google/gemini-2.5-flash"
     },
     {
-      "source": "openrouter",
-      "source_entity_id": "google/gemini-2.5-flash"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "google/gemini-2.5-flash"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "google/gemini-2.5-flash"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "google/gemini-2.5-flash"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "google/gemini-2.5-flash"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "google/gemini-2.5-flash"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "google/gemini-2.5-flash-image"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "google/gemini-2.5-flash-image"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "google/gemini-2.5-flash-image"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "google/gemini-2.5-flash-image"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "google/gemini-2.5-flash-image"
-    },
-    {
-      "source": "openrouter",
+      "relation": "model_to_model",
       "source_entity_id": "google/gemini-2.5-flash-lite"
     },
     {
-      "source": "openrouter",
-      "source_entity_id": "google/gemini-2.5-flash-lite"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "google/gemini-2.5-flash-lite"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "google/gemini-2.5-flash-lite"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "google/gemini-2.5-flash-lite"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "google/gemini-2.5-flash-lite:batch"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "google/gemini-2.5-flash:batch"
-    },
-    {
-      "source": "openrouter",
+      "relation": "model_to_model",
       "source_entity_id": "google/gemini-2.5-pro"
     },
     {
-      "source": "openrouter",
-      "source_entity_id": "google/gemini-2.5-pro"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "google/gemini-2.5-pro"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "google/gemini-2.5-pro"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "google/gemini-2.5-pro"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "google/gemini-2.5-pro"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "google/gemini-2.5-pro"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "google/gemini-2.5-pro"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "google/gemini-2.5-pro:batch"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "google/gemini-3-flash-preview"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "google/gemini-3-flash-preview"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "google/gemini-3-flash-preview"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "google/gemini-3-flash-preview"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "google/gemini-3-flash-preview"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "google/gemini-3-flash-preview"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "google/gemini-3-flash-preview:batch"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "google/gemini-3-pro-image"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "google/gemini-3-pro-image"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "google/gemini-3-pro-image-preview"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "google/gemini-3-pro-image-preview"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "google/gemini-3.1-flash-image"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "google/gemini-3.1-flash-image"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "google/gemini-3.1-flash-image-preview"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "google/gemini-3.1-flash-lite"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "google/gemini-3.1-flash-lite"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "google/gemini-3.1-flash-lite"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "google/gemini-3.1-flash-lite"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "google/gemini-3.1-flash-lite"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "google/gemini-3.1-flash-lite"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "google/gemini-3.1-flash-lite"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "google/gemini-3.1-flash-lite-image"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "google/gemini-3.1-flash-lite-image"
-    },
-    {
-      "source": "openrouter",
+      "relation": "model_to_model",
       "source_entity_id": "google/gemini-3.1-flash-lite-preview"
     },
     {
-      "source": "openrouter",
-      "source_entity_id": "google/gemini-3.1-flash-lite-preview"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "google/gemini-3.1-flash-lite-preview"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "google/gemini-3.1-flash-lite:batch"
-    },
-    {
-      "source": "openrouter",
+      "relation": "model_to_model",
       "source_entity_id": "google/gemini-3.1-pro-preview"
     },
     {
-      "source": "openrouter",
-      "source_entity_id": "google/gemini-3.1-pro-preview"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "google/gemini-3.1-pro-preview"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "google/gemini-3.1-pro-preview"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "google/gemini-3.1-pro-preview"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "google/gemini-3.1-pro-preview"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "google/gemini-3.1-pro-preview-customtools"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "google/gemini-3.1-pro-preview:batch"
-    },
-    {
-      "source": "openrouter",
+      "relation": "model_to_model",
       "source_entity_id": "google/gemini-3.5-flash"
     },
     {
-      "source": "openrouter",
-      "source_entity_id": "google/gemini-3.5-flash"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "google/gemini-3.5-flash"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "google/gemini-3.5-flash"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "google/gemini-3.5-flash"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "google/gemini-3.5-flash"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "google/gemini-3.5-flash"
-    },
-    {
-      "source": "openrouter",
+      "relation": "model_to_model",
       "source_entity_id": "google/gemini-3.5-flash-lite"
     },
     {
-      "source": "openrouter",
-      "source_entity_id": "google/gemini-3.5-flash-lite"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "google/gemini-3.5-flash-lite"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "google/gemini-3.5-flash-lite"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "google/gemini-3.5-flash-lite"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "google/gemini-3.5-flash-lite"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "google/gemini-3.5-flash-lite"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "google/gemini-3.5-flash-lite:batch"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "google/gemini-3.5-flash:batch"
-    },
-    {
-      "source": "openrouter",
+      "relation": "model_to_model",
       "source_entity_id": "google/gemini-3.6-flash"
     },
     {
-      "source": "openrouter",
-      "source_entity_id": "google/gemini-3.6-flash"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "google/gemini-3.6-flash"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "google/gemini-3.6-flash"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "google/gemini-3.6-flash"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "google/gemini-3.6-flash"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "google/gemini-3.6-flash"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "google/gemini-3.6-flash:batch"
-    },
-    {
-      "source": "openrouter",
+      "relation": "model_to_model",
       "source_entity_id": "google/gemini-3.7-flash"
     },
     {
-      "source": "openrouter",
-      "source_entity_id": "google/gemini-3.7-flash"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "google/gemini-3.7-flash"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "google/gemini-3.7-flash"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "google/gemini-3.7-flash"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "google/gemini-3.7-flash"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "google/gemini-3.7-flash:batch"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "google/gemma-2-27b-it"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "google/gemma-3-12b-it"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "google/gemma-3-27b-it"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "google/gemma-3-27b-it"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "google/gemma-3-27b-it"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "google/gemma-3-27b-it"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "google/gemma-3-27b-it"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "google/gemma-3-4b-it"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "google/gemma-3n-e4b-it"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "google/gemma-4-26b-a4b-it"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "google/gemma-4-26b-a4b-it"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "google/gemma-4-26b-a4b-it"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "google/gemma-4-26b-a4b-it"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "google/gemma-4-26b-a4b-it"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "google/gemma-4-26b-a4b-it"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "google/gemma-4-26b-a4b-it"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "google/gemma-4-26b-a4b-it"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "google/gemma-4-26b-a4b-it"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "google/gemma-4-26b-a4b-it:free"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "google/gemma-4-31b-it"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "google/gemma-4-31b-it"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "google/gemma-4-31b-it"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "google/gemma-4-31b-it"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "google/gemma-4-31b-it"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "google/gemma-4-31b-it"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "google/gemma-4-31b-it"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "google/gemma-4-31b-it"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "google/gemma-4-31b-it"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "google/gemma-4-31b-it"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "google/gemma-4-31b-it"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "google/gemma-4-31b-it"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "google/gemma-4-31b-it"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "google/gemma-4-31b-it"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "google/gemma-4-31b-it"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "google/gemma-4-31b-it"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "google/gemma-4-31b-it"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "google/gemma-4-31b-it:free"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "google/lyria-3-clip-preview"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "google/lyria-3-pro-preview"
-    },
-    {
-      "source": "openrouter",
+      "relation": "model_to_model",
       "source_entity_id": "gryphe/mythomax-l2-13b"
     },
     {
-      "source": "openrouter",
-      "source_entity_id": "gryphe/mythomax-l2-13b"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "gryphe/mythomax-l2-13b"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "gryphe/mythomax-l2-13b"
-    },
-    {
-      "source": "openrouter",
+      "relation": "model_to_model",
       "source_entity_id": "ibm-granite/granite-4.0-h-micro"
     },
     {
-      "source": "openrouter",
-      "source_entity_id": "ibm-granite/granite-4.1-8b"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "inception/mercury-2"
-    },
-    {
-      "source": "openrouter",
+      "relation": "model_to_model",
       "source_entity_id": "inclusionai/ling-2.6-1t"
     },
     {
-      "source": "openrouter",
+      "relation": "model_to_model",
       "source_entity_id": "inclusionai/ling-2.6-flash"
     },
     {
-      "source": "openrouter",
+      "relation": "model_to_model",
       "source_entity_id": "inclusionai/ling-3.0-flash"
     },
     {
-      "source": "openrouter",
-      "source_entity_id": "inclusionai/ling-3.0-flash"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "inclusionai/ling-3.0-flash"
-    },
-    {
-      "source": "openrouter",
+      "relation": "model_to_model",
       "source_entity_id": "inclusionai/ring-2.6-1t"
     },
     {
-      "source": "openrouter",
+      "relation": "model_to_model",
       "source_entity_id": "kwaipilot/kat-coder-air-v2.5"
     },
     {
-      "source": "openrouter",
-      "source_entity_id": "kwaipilot/kat-coder-pro-v2"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "kwaipilot/kat-coder-pro-v2"
-    },
-    {
-      "source": "openrouter",
+      "relation": "model_to_model",
       "source_entity_id": "kwaipilot/kat-coder-pro-v2.5"
     },
     {
-      "source": "openrouter",
+      "relation": "model_to_model",
       "source_entity_id": "liquid/lfm-2.5-2.6b:free"
     },
     {
-      "source": "openrouter",
+      "relation": "model_to_model",
       "source_entity_id": "mancer/weaver"
     },
     {
-      "source": "openrouter",
-      "source_entity_id": "meituan/longcat-2.0"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "meta/muse-glimmer-30b"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "meta/muse-glimmer-30b"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "meta/muse-glimmer-30b"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "meta/muse-glimmer-30b"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "meta/muse-glimmer-30b"
-    },
-    {
-      "source": "openrouter",
+      "relation": "model_to_model",
       "source_entity_id": "meta/muse-spark-1.2"
     },
     {
-      "source": "openrouter",
-      "source_entity_id": "meta/muse-spark-1.2-contributor"
-    },
-    {
-      "source": "openrouter",
+      "relation": "model_to_model",
       "source_entity_id": "nvidia/nemotron-3.5-lightning"
     },
     {
-      "source": "openrouter",
-      "source_entity_id": "nvidia/nemotron-3.5-lightning"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "nvidia/nemotron-3.5-lightning:free"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "qwen/qwen3.8-2.4t-a95b"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "qwen/qwen3.8-2.4t-a95b"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "qwen/qwen3.8-2.4t-a95b"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "qwen/qwen3.8-2.4t-a95b"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "qwen/qwen3.8-2.4t-a95b"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "qwen/qwen3.8-2.4t-a95b"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "qwen/qwen3.8-27b"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "qwen/qwen3.8-27b"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "qwen/qwen3.8-27b"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "qwen/qwen3.8-27b"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "qwen/qwen3.8-27b"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "qwen/qwen3.8-27b"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "qwen/qwen3.8-27b"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "qwen/qwen3.8-27b"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "qwen/qwen3.8-max"
-    },
-    {
-      "source": "openrouter",
+      "relation": "model_to_model",
       "source_entity_id": "sakana/sakana-namazu"
     },
     {
-      "source": "openrouter",
+      "relation": "model_to_model",
       "source_entity_id": "stealth/ox-alpha"
     },
     {
-      "source": "openrouter",
-      "source_entity_id": "tencent/hy-mt2-1.8b"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "tencent/hy-mt2-30b-a3b"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "tencent/hy-mt2-7b"
-    },
-    {
-      "source": "openrouter",
+      "relation": "model_to_model",
       "source_entity_id": "upstage/solar-pro4"
     },
     {
-      "source": "openrouter",
-      "source_entity_id": "x-ai/grok-4.6"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "x-ai/grok-4.6"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "x-ai/grok-4.6"
-    },
-    {
-      "source": "openrouter",
-      "source_entity_id": "x-ai/grok-4.6"
-    },
-    {
-      "source": "openrouter",
+      "relation": "model_to_model",
       "source_entity_id": "z-ai/glm-5.3"
+    },
+    {
+      "relation": "provider_to_provider",
+      "source_entity_id": "aion-labs"
+    },
+    {
+      "relation": "provider_to_provider",
+      "source_entity_id": "akashml"
+    },
+    {
+      "relation": "provider_to_provider",
+      "source_entity_id": "alibaba"
+    },
+    {
+      "relation": "provider_to_provider",
+      "source_entity_id": "amazon-bedrock"
+    },
+    {
+      "relation": "provider_to_provider",
+      "source_entity_id": "ambient"
+    },
+    {
+      "relation": "provider_to_provider",
+      "source_entity_id": "anthropic"
+    },
+    {
+      "relation": "provider_to_provider",
+      "source_entity_id": "arcee-ai"
+    },
+    {
+      "relation": "provider_to_provider",
+      "source_entity_id": "atlas-cloud"
+    },
+    {
+      "relation": "provider_to_provider",
+      "source_entity_id": "azure"
+    },
+    {
+      "relation": "provider_to_provider",
+      "source_entity_id": "baidu"
+    },
+    {
+      "relation": "provider_to_provider",
+      "source_entity_id": "baseten"
+    },
+    {
+      "relation": "provider_to_provider",
+      "source_entity_id": "cerebras"
+    },
+    {
+      "relation": "provider_to_provider",
+      "source_entity_id": "chutes"
+    },
+    {
+      "relation": "provider_to_provider",
+      "source_entity_id": "claude-on-aws"
+    },
+    {
+      "relation": "provider_to_provider",
+      "source_entity_id": "cloudflare"
+    },
+    {
+      "relation": "provider_to_provider",
+      "source_entity_id": "cohere"
+    },
+    {
+      "relation": "provider_to_provider",
+      "source_entity_id": "crusoe"
+    },
+    {
+      "relation": "provider_to_provider",
+      "source_entity_id": "darkbloom"
+    },
+    {
+      "relation": "provider_to_provider",
+      "source_entity_id": "decart"
+    },
+    {
+      "relation": "provider_to_provider",
+      "source_entity_id": "deepseek"
+    },
+    {
+      "relation": "provider_to_provider",
+      "source_entity_id": "digitalocean"
+    },
+    {
+      "relation": "provider_to_provider",
+      "source_entity_id": "fireworks"
+    },
+    {
+      "relation": "provider_to_provider",
+      "source_entity_id": "friendli"
+    },
+    {
+      "relation": "provider_to_provider",
+      "source_entity_id": "gmicloud"
+    },
+    {
+      "relation": "provider_to_provider",
+      "source_entity_id": "google-ai-studio"
+    },
+    {
+      "relation": "provider_to_provider",
+      "source_entity_id": "google-vertex"
+    },
+    {
+      "relation": "provider_to_provider",
+      "source_entity_id": "groq"
+    },
+    {
+      "relation": "provider_to_provider",
+      "source_entity_id": "inception"
+    },
+    {
+      "relation": "provider_to_provider",
+      "source_entity_id": "inceptron"
+    },
+    {
+      "relation": "provider_to_provider",
+      "source_entity_id": "io-net"
+    },
+    {
+      "relation": "provider_to_provider",
+      "source_entity_id": "ionstream"
+    },
+    {
+      "relation": "provider_to_provider",
+      "source_entity_id": "liquid"
+    },
+    {
+      "relation": "provider_to_provider",
+      "source_entity_id": "mancer"
+    },
+    {
+      "relation": "provider_to_provider",
+      "source_entity_id": "mara"
+    },
+    {
+      "relation": "provider_to_provider",
+      "source_entity_id": "meta"
+    },
+    {
+      "relation": "provider_to_provider",
+      "source_entity_id": "modal"
+    },
+    {
+      "relation": "provider_to_provider",
+      "source_entity_id": "modelrun"
+    },
+    {
+      "relation": "provider_to_provider",
+      "source_entity_id": "morph"
+    },
+    {
+      "relation": "provider_to_provider",
+      "source_entity_id": "nebius"
+    },
+    {
+      "relation": "provider_to_provider",
+      "source_entity_id": "nextbit"
+    },
+    {
+      "relation": "provider_to_provider",
+      "source_entity_id": "novita"
+    },
+    {
+      "relation": "provider_to_provider",
+      "source_entity_id": "nvidia"
+    },
+    {
+      "relation": "provider_to_provider",
+      "source_entity_id": "open-inference"
+    },
+    {
+      "relation": "provider_to_provider",
+      "source_entity_id": "parasail"
+    },
+    {
+      "relation": "provider_to_provider",
+      "source_entity_id": "phala"
+    },
+    {
+      "relation": "provider_to_provider",
+      "source_entity_id": "reka"
+    },
+    {
+      "relation": "provider_to_provider",
+      "source_entity_id": "relace"
+    },
+    {
+      "relation": "provider_to_provider",
+      "source_entity_id": "sail-research"
+    },
+    {
+      "relation": "provider_to_provider",
+      "source_entity_id": "sakana"
+    },
+    {
+      "relation": "provider_to_provider",
+      "source_entity_id": "sambanova"
+    },
+    {
+      "relation": "provider_to_provider",
+      "source_entity_id": "seed"
+    },
+    {
+      "relation": "provider_to_provider",
+      "source_entity_id": "siliconflow"
+    },
+    {
+      "relation": "provider_to_provider",
+      "source_entity_id": "stealth"
+    },
+    {
+      "relation": "provider_to_provider",
+      "source_entity_id": "streamlake"
+    },
+    {
+      "relation": "provider_to_provider",
+      "source_entity_id": "tencent"
+    },
+    {
+      "relation": "provider_to_provider",
+      "source_entity_id": "together"
+    },
+    {
+      "relation": "provider_to_provider",
+      "source_entity_id": "upstage"
+    },
+    {
+      "relation": "provider_to_provider",
+      "source_entity_id": "venice"
+    },
+    {
+      "relation": "provider_to_provider",
+      "source_entity_id": "wafer"
+    },
+    {
+      "relation": "provider_to_provider",
+      "source_entity_id": "xai"
+    },
+    {
+      "relation": "provider_to_provider",
+      "source_entity_id": "z-ai"
     }
   ],
-  "version": 1
+  "version": 2
 }

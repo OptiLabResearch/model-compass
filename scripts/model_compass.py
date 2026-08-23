@@ -75,9 +75,9 @@ def main(argv=None) -> int:
         accuracy = load_json(Path(args.accuracy_data)) if Path(args.accuracy_data).exists() else {}
         print(json.dumps({"status": report.get("status", "unknown"), "stale": report.get("stale", True), "generated_at": report.get("generated_at"), "sources": report.get("sources", {}), "total_models": report.get("total_models"), "endpoint_accuracy": {"status": "fresh" if accuracy else "not_present", "coverage": accuracy.get("coverage", {})}, "identity": identity.get("health", {})}, indent=2, sort_keys=True)); return 0
     if args.command == "providers":
-        print(json.dumps(ProviderDB.from_file(args.providers_data, args.accuracy_data).providers(args.model_id), indent=2, sort_keys=True)); return 0
+        print(json.dumps(ProviderDB.from_file(args.providers_data, args.accuracy_data, args.identity_data).providers(args.model_id), indent=2, sort_keys=True)); return 0
     if args.command == "recommend-provider":
-        result = ProviderDB.from_file(args.providers_data, args.accuracy_data).best_provider(args.model_id, args.profile, require_accuracy_evidence=args.require_accuracy_evidence, min_accuracy=args.min_accuracy, allow_unknown=not args.disallow_unknown)
+        result = ProviderDB.from_file(args.providers_data, args.accuracy_data, args.identity_data).best_provider(args.model_id, args.profile, require_accuracy_evidence=args.require_accuracy_evidence, min_accuracy=args.min_accuracy, allow_unknown=not args.disallow_unknown)
         print(json.dumps(result or {"error": "model/provider not found", "model_id": args.model_id}, indent=2, sort_keys=True)); return 0 if result else 1
     if args.command == "endpoint-accuracy":
         data = load_json(Path(args.accuracy_data)) if Path(args.accuracy_data).exists() else {"observations": []}
