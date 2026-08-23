@@ -31,6 +31,7 @@ jobs:
           python3 scripts/aa/tests/test_decision_engine.py
           python3 scripts/aa/tests/test_history.py
           python3 scripts/aa/tests/test_observations.py
+          python3 scripts/aa/tests/test_phase3_observations.py
           python3 scripts/validate_site.py
           node --check public/assets/nav.js
           node --check public/assets/models.js

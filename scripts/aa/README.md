@@ -41,6 +41,9 @@ fields + bounds), `http.py` (retries/backoff/rate-limit/atomic/cache),
 - `data/openrouter_observations.json` — bounded provider endpoint observations from the public OpenRouter API.
 - `data/openrouter_sampling_state.json` — small rotating-cohort cursor; committed so weekly coverage advances.
 - `data/coding_agent_observations.json` — separate public Artificial Analysis coding-agent/harness observations.
+- `data/endpoint_accuracy_observations.json` — separate point-in-time provider endpoint accuracy observations.
+- `data/identity_mappings.json` — explicit cross-source mapping health; unresolved joins remain unresolved.
+- `data/identity_aliases.json` — versioned manual mapping file, empty by default.
 - `data/aa_cache/` — raw payloads (git-ignored), for reproducibility/debugging.
 
 ## Commands
@@ -62,6 +65,9 @@ python3 scripts/model_compass.py pareto intelligence_index cost
 python3 scripts/model_compass.py backup <slug>
 python3 scripts/model_compass.py agents
 python3 scripts/model_compass.py recommend-agent coding_agent_index
+python3 scripts/model_compass.py endpoint-accuracy glm-5-2
+python3 scripts/model_compass.py recommend-provider glm-5-2 --profile accuracy-first --require-accuracy-evidence
+python3 scripts/model_compass.py identity-health
 
 # Offline unit tests (drift detection, scaling, dedup, merge, NaN)
 python3.12 scripts/aa/tests/test_pipeline.py
@@ -124,9 +130,14 @@ time-series) you would need a **Pro** or **Commercial** key.
 - The orchestrator refuses to overwrite a good dataset when no source is
   healthy, and reports per-source errors in `data/aa_pipeline_report.json`.
 - Drift of unexpected normalized fields is logged as a warning.
-- Raw payloads are preserved under `data/aa_cache/` so a structure change can
-  be inspected directly.
+- Raw payloads are preserved under `data/aa_cache/` so a structure change can be inspected directly.
 
+Phase 3 public adapters use bounded JSON-LD payloads from ordinary visitor pages.
+Endpoint Accuracy preserves the source mid/lower/upper interval, classification,
+measurement date, and point-in-time provenance. Coding-agent metric views are
+merged by the source-declared variant label and keep harness/model/configuration
+text separate from canonical model IDs. These adapters remain manual/experimental
+until the public payload is stable enough for bounded weekly refresh integration.
 To adapt to an AA change: fetch the current leaderboard RSC, inspect the raw
 payload in `data/aa_cache/`, then update `_extract_rows` / `normalize_row` in
 `rsc_source.py` and bump `RSC_PARSER_VERSION` in `source_base.py`.

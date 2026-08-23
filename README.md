@@ -32,6 +32,8 @@ node scripts/test_browser_security.mjs
 - `data/history/` contains dated public CSV snapshots and bounded rich-dataset delta files.
 - `data/openrouter_observations.json` contains bounded provider-endpoint observations.
 - `data/coding_agent_observations.json` contains separate model+harness coding-agent observations.
+- `data/endpoint_accuracy_observations.json` contains point-in-time Artificial Analysis endpoint measurements.
+- `data/identity_mappings.json` contains auditable cross-source mapping health; `data/identity_aliases.json` is the empty-by-default manual override file.
 - `.github/workflows/` contains read-only pull-request checks and the scheduled refresh.
 
 ## Data refresh
@@ -62,9 +64,14 @@ python3 scripts/model_compass.py recommend-provider openai/gpt-5 --profile inter
 python3 scripts/model_compass.py agents
 python3 scripts/model_compass.py recommend-agent cost
 python3 scripts/model_compass.py access
+python3 scripts/model_compass.py endpoint-accuracy glm-5-2
+python3 scripts/model_compass.py recommend-provider glm-5-2 --profile accuracy-first --require-accuracy-evidence
+python3 scripts/model_compass.py identity-health
+python3 scripts/model_compass.py unresolved-identities
 ```
 
 Provider observations are operational facts from OpenRouter and do not overwrite Artificial Analysis benchmark fields. Coding-agent observations retain the public agent/harness label and are not flattened into base-model records.
+Endpoint Accuracy observations are separate point-in-time measurements. Their source confidence intervals and classification are preserved; missing coverage is reported as `not_measured`, not as an accuracy failure. The public JSON-LD adapter is intentionally bounded and may be run manually when upstream coverage changes.
 
 ## Deployment
 
