@@ -155,9 +155,9 @@ Focused correction commit:
 
 Documentation/report follow-up:
 
-- `0deb3b2 docs: record phase 2 premerge corrections`
-
-The branch also contains the prior Phase 2 commits and the generated refresh commits, including:
+- `0deb3b2` — record pre-merge correction details in the Phase 2 report;
+- `5b8a8f3` — add this pre-merge report;
+- `79573b8` — update final provider coverage after the corrected workflow refresh.
 
 - `40555ad feat: add provider and coding agent intelligence`
 - `92612ed data: weekly refresh 2026-08-23`
