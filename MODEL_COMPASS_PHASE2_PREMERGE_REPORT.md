@@ -79,7 +79,7 @@ This is an OpenRouter-local identity only. No fuzzy AA/OpenRouter canonical join
 - output records selected IDs, cursor before/after, fresh/retained counts, catalog coverage, and retention policy;
 - retained legacy observations receive a stable identity key during migration.
 
-This avoids uncontrolled growth while ensuring subsequent weekly runs advance through the catalog.
+This avoids uncontrolled growth while ensuring subsequent weekly runs advance through the catalog. Fresh/retained counters are computed from deduplicated observation identity keys, so their sum equals the retained artifact count even when a run returns duplicate endpoint rows.
 
 ### Honest coding-agent coverage
 
@@ -113,6 +113,7 @@ Live results:
 | OpenRouter selected this run | 25 models |
 | OpenRouter retained endpoint observations | 387 |
 | OpenRouter catalog models with detailed observations | 114 / 422 (27.01%) |
+| OpenRouter fresh/retained accounting | 75 fresh + 312 retained = 387 |
 | OpenRouter endpoint errors | 0 |
 | Coding-agent observations | 27 |
 | Coding-agent live version | derived `1.4` from current public page |

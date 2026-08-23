@@ -49,8 +49,9 @@ def _observation_key(row: dict) -> tuple:
 def merge_retained_observations(previous: list[dict], fresh: list[dict], *, now: str,
                                 retention_days: int = 14) -> list[dict]:
     now_dt = datetime.fromisoformat(now.replace("Z", "+00:00"))
-    merged = {_observation_key(row): row for row in fresh}
-    for row in fresh:
+    fresh_unique = {_observation_key(row): row for row in fresh}
+    merged = dict(fresh_unique)
+    for row in fresh_unique.values():
         row.setdefault("provenance", {})["last_seen"] = now
     for row in previous:
         row.setdefault("identity_key", ":".join(str(x or "") for x in _observation_key(row)))
@@ -95,8 +96,8 @@ def fetch_observations(*, max_endpoints: int = 25, timeout: int = 30,
                                            now=fetched_at, retention_days=retention_days)
     remainder_count = max(len(models) - len(state.get("priority_ids", [])), 1)
     next_cursor = (cursor + max(0, len(selected_ids) - len(state.get("priority_ids", [])))) % remainder_count
-    fresh_keys = {_observation_key(row) for row in observations}
-    retained_count = len(retained) - len(observations)
+    fresh_count = len({_observation_key(row) for row in observations})
+    retained_count = len(retained) - fresh_count
     return {
         "version": 1, "parser_version": PARSER_VERSION, "generated_at": fetched_at,
         "source": "openrouter", "source_url": MODELS_URL,
@@ -106,7 +107,7 @@ def fetch_observations(*, max_endpoints: int = 25, timeout: int = 30,
         "coverage": {"catalog_models": len(models),
                      "models_with_observations": len({row.get("model_id") for row in retained}),
                      "proportion": round(len({row.get("model_id") for row in retained}) / len(models), 4) if models else 0,
-                     "fresh_observations": len(fresh_keys), "retained_observations": retained_count,
+                     "fresh_observations": fresh_count, "retained_observations": retained_count,
                      "retention_days": retention_days},
         "selection": {"cursor_before": cursor, "cursor_after": next_cursor,
                       "selected_model_ids": selected_ids},

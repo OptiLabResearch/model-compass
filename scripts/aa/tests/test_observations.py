@@ -109,6 +109,8 @@ def test_retention_preserves_recent_observations_and_expires_old():
     expired = merge_retained_observations(previous, [], now="2026-08-30T00:00:00Z", retention_days=7)
     assert len(kept) == 1
     assert expired == []
+    duplicate = merge_retained_observations(previous, previous + previous, now="2026-08-23T00:00:00Z", retention_days=7)
+    assert len(duplicate) == 1
 
 
 if __name__ == "__main__":
