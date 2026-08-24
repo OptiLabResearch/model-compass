@@ -75,7 +75,7 @@ python3 scripts/model_compass.py unresolved-identities
 ```
 
 Provider observations are operational facts from OpenRouter and do not overwrite Artificial Analysis benchmark fields. Coding-agent observations retain the public agent/harness label and are not flattened into base-model records.
-Endpoint Accuracy observations are separate point-in-time measurements. Their source confidence intervals and classification are preserved; missing coverage is reported as `not_measured`, not as an accuracy failure. The public JSON-LD adapter is intentionally bounded to the audited Gate-D cohort in the weekly process. Acquisition or identity failures stop generation without overwriting the last good artifacts.
+Endpoint Accuracy observations are separate point-in-time measurements. Their source confidence intervals and classification are preserved; missing coverage is reported as `not_measured`, not as an accuracy failure. The public JSON-LD adapter is intentionally bounded to the audited Gate-D cohort in the weekly process. Endpoint Accuracy failures preserve the prior input artifact; any required-source or identity failure stops derived artifacts from being published.
 
 Identity-aware recommendations require audited model and exact provider-endpoint mappings. Provider namespaces and display names are never fallback joins; variants such as DeepInfra Base and Turbo remain distinct.
 
