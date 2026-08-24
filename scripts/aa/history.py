@@ -49,17 +49,34 @@ def diff_snapshots(previous: dict | None, current: dict, *, generated_at: str | 
 
 def diff_observations(previous: dict | None, current: dict, *, key="identity_key", fields=(), generated_at=None) -> dict:
     """Diff endpoint/agent observations without comparing incompatible versions as scores."""
-    old = {o.get(key): o for o in (previous or {}).get("observations", []) if o.get(key)}
-    new = {o.get(key): o for o in current.get("observations", []) if o.get(key)}
+    def observation_index(artifact):
+        rows = [o for o in (artifact or {}).get("observations", []) if o.get(key)]
+        index = {o[key]: o for o in rows}
+        if len(index) != len(rows):
+            raise ValueError(f"duplicate observation key: {key}")
+        return index
+    old = observation_index(previous)
+    new = observation_index(current)
     added, removed, changed = sorted(set(new) - set(old)), sorted(set(old) - set(new)), []
-    for ident in sorted(set(old) & set(new)):
-        changes = {}
-        for field in fields:
-            before, after = _value(old[ident], field), _value(new[ident], field)
-            if _material_change(field, before, after): changes[field] = {"before": before, "after": after}
-        if changes: changed.append({"identity_key": ident, "changes": changes})
-    if current.get("benchmark_version") != (previous or {}).get("benchmark_version"):
-        changed.append({"identity_key": "__metadata__", "changes": {"benchmark_version": {"before": (previous or {}).get("benchmark_version"), "after": current.get("benchmark_version")}, "comparability": "not directly comparable across versions"}})
+    def artifact_version(artifact):
+        artifact = artifact or {}
+        coverage = artifact.get("coverage") or {}
+        direct = artifact.get("benchmark_version") or artifact.get("index_version") or coverage.get("benchmark_version")
+        if direct:
+            return str(direct)
+        values = {str(o.get("benchmark_version") or o.get("index_version")) for o in artifact.get("observations", []) if o.get("benchmark_version") or o.get("index_version")}
+        return next(iter(values)) if len(values) == 1 else None
+    old_version, new_version = artifact_version(previous), artifact_version(current)
+    comparable = old_version == new_version
+    if comparable:
+        for ident in sorted(set(old) & set(new)):
+            changes = {}
+            for field in fields:
+                before, after = _value(old[ident], field), _value(new[ident], field)
+                if _material_change(field, before, after): changes[field] = {"before": before, "after": after}
+            if changes: changed.append({"identity_key": ident, "changes": changes})
+    else:
+        changed.append({"identity_key": "__metadata__", "changes": {"benchmark_version": {"before": old_version, "after": new_version}, "comparability": "not directly comparable across versions"}})
     return {"version": 1, "generated_at": generated_at or current.get("generated_at"), "counts": {"previous": len(old), "current": len(new), "added": len(added), "removed": len(removed), "changed": len(changed)}, "added": added, "removed": removed, "changed": changed}
 
 

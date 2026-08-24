@@ -48,3 +48,9 @@ Before submitting, run the repository validation and browser-security tests. For
 ## Commits and pull requests
 
 Use concise imperative subjects; reserve `data: weekly refresh YYYY-MM-DD` for generated refreshes. Keep commits focused. PRs should describe user-visible effects, checks performed, data changes, and screenshots for UI work. Follow `SECURITY.md` for vulnerability reports.
+
+## Durable project control
+
+Read `docs/STATUS.md` first, then the active plan it links, before roadmap work. `docs/PROJECT.md` owns stable scope, `docs/ARCHITECTURE.md` owns accepted source-authority boundaries, and `docs/ROADMAP.md` owns phase order and acceptance outcomes. Keep transient investigation detail in the active plan and concise accepted evidence in `docs/reports/`; do not duplicate it across files.
+
+For every substantive phase, record explicit acceptance criteria before implementation, verify against current `origin/main`, run the full CI command set plus phase-specific deterministic tests, review generated-artifact reproducibility, and obtain an independent correctness review before declaring the phase accepted. Identity-aware recommendations must fail closed: only explicit `verified` or audited `manual` mappings are authoritative, and mappings must preserve provider endpoint variants rather than collapsing to a provider namespace.

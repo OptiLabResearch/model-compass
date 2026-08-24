@@ -54,9 +54,12 @@ def _entity_rows(rows: list[dict], key: str) -> dict[str, dict]:
     return entities
 
 
-def _provider_entity_id(value: str | None) -> str | None:
-    """Collapse endpoint variant tags to the provider namespace only."""
-    return value.split("/", 1)[0] if value else None
+def openrouter_endpoint_entity_id(row: dict) -> str | None:
+    """Return a fail-closed operational endpoint identity including its variant."""
+    model_id, provider_id, endpoint_id = row.get("model_id"), row.get("provider_id"), row.get("endpoint_id")
+    if not model_id or not provider_id or not endpoint_id:
+        return None
+    return ":".join((str(model_id), str(provider_id), str(endpoint_id)))
 
 
 def _alias_for(aliases: list[dict], relation: str, source_id: str) -> dict | None:
@@ -70,8 +73,10 @@ def resolve(aa_models: list[dict], openrouter: list[dict], endpoint_accuracy: li
     aliases = aliases or []
     aa_by_slug = _entity_rows(aa_models, "slug")
     or_models = _entity_rows(openrouter, "model_id")
-    aa_providers = {_provider_entity_id(o.get("provider_id")): o for o in endpoint_accuracy or [] if _provider_entity_id(o.get("provider_id"))}
-    or_providers = {_provider_entity_id(o.get("provider_id")): o for o in openrouter if _provider_entity_id(o.get("provider_id"))}
+    aa_endpoints = {o.get("identity_key"): o for o in endpoint_accuracy or [] if o.get("identity_key")}
+    or_endpoints = {openrouter_endpoint_entity_id(o): o for o in openrouter if openrouter_endpoint_entity_id(o)}
+    aa_providers = {o.get("provider_namespace") or (o.get("provider_id") or "").split("/", 1)[0] for o in endpoint_accuracy or [] if o.get("provider_id")}
+    or_providers = {(o.get("provider_id") or "").split("/", 1)[0] for o in openrouter if o.get("provider_id")}
     mappings, unresolved, ambiguous, conflicts = [], [], [], []
 
     for source_id, row in sorted(or_models.items()):
@@ -96,20 +101,18 @@ def resolve(aa_models: list[dict], openrouter: list[dict], endpoint_accuracy: li
         else:
             unresolved.append({"relation": "model_to_model", "source_entity_id": source_id})
 
-    for source_id, row in sorted(or_providers.items()):
-        if not source_id:
-            continue
-        explicit = _alias_for(aliases, "provider_to_provider", source_id)
+    for source_id, row in sorted(or_endpoints.items()):
+        explicit = _alias_for(aliases, "provider_endpoint_to_endpoint", source_id)
         if explicit:
             target = explicit.get("target_entity_id")
-            if target not in aa_providers:
-                conflicts.append({"relation": "provider_to_provider", "source_entity_id": source_id, "target_entity_id": target, "reason": "manual target does not exist"})
+            if target not in aa_endpoints:
+                conflicts.append({"relation": "provider_endpoint_to_endpoint", "source_entity_id": source_id, "target_entity_id": target, "reason": "manual target does not exist"})
             else:
-                mappings.append({"relation": "provider_to_provider", "source": "openrouter", "source_entity_id": source_id,
+                mappings.append({"relation": "provider_endpoint_to_endpoint", "source": "openrouter", "source_entity_id": source_id,
                                  "target": "artificial_analysis", "target_entity_id": target, "state": "manual", "confidence": 1.0,
                                  "evidence": explicit.get("evidence", "audited manual provider alias"), "last_verified": verified_at})
         else:
-            unresolved.append({"relation": "provider_to_provider", "source_entity_id": source_id})
+            unresolved.append({"relation": "provider_endpoint_to_endpoint", "source_entity_id": source_id})
 
     for slug in sorted({r.get("model_slug") for r in endpoint_accuracy or [] if r.get("model_slug") and r.get("model_slug") in aa_by_slug}):
         mappings.append({"relation": "endpoint_model_to_model", "source": "artificial_analysis_endpoint_accuracy",
@@ -117,16 +120,16 @@ def resolve(aa_models: list[dict], openrouter: list[dict], endpoint_accuracy: li
                          "state": "verified", "confidence": 1.0, "evidence": "same Artificial Analysis stable slug", "last_verified": verified_at})
 
     model_maps = [m for m in mappings if m["relation"] == "model_to_model"]
-    provider_maps = [m for m in mappings if m["relation"] == "provider_to_provider"]
+    endpoint_maps = [m for m in mappings if m["relation"] == "provider_endpoint_to_endpoint"]
     health = {
         "aa_model_count": len(aa_by_slug), "openrouter_model_count": len(or_models),
-        "openrouter_endpoint_count": len(openrouter), "aa_provider_count": len(aa_providers),
+        "openrouter_endpoint_count": len(openrouter), "aa_endpoint_count": len(aa_endpoints), "aa_provider_count": len(aa_providers),
         "openrouter_provider_count": len(or_providers), "unique_unresolved_model_ids": sorted({x["source_entity_id"] for x in unresolved if x["relation"] == "model_to_model"}),
         "model_mappings": {s: sum(m["state"] == s for m in model_maps) for s in ("verified", "manual", "candidate")},
-        "provider_mappings": {s: sum(m["state"] == s for m in provider_maps) for s in ("verified", "manual", "candidate")},
+        "endpoint_mappings": {s: sum(m["state"] == s for m in endpoint_maps) for s in ("verified", "manual", "candidate")},
         "unresolved_models": sum(x["relation"] == "model_to_model" for x in unresolved),
-        "unresolved_providers": sum(x["relation"] == "provider_to_provider" for x in unresolved),
+        "unresolved_endpoints": sum(x["relation"] == "provider_endpoint_to_endpoint" for x in unresolved),
         "ambiguous": len(ambiguous), "conflict": len(conflicts),
     }
-    return {"version": 2, "generated_at": verified_at, "mappings": mappings,
+    return {"version": 3, "generated_at": verified_at, "mappings": mappings,
             "unresolved": unresolved, "ambiguous": ambiguous, "conflicts": conflicts, "health": health}

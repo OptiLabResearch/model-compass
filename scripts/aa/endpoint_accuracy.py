@@ -2,6 +2,7 @@
 from __future__ import annotations
 import argparse
 from datetime import datetime, timezone
+from collections import Counter
 import html
 import json
 from pathlib import Path
@@ -12,7 +13,7 @@ from urllib.request import Request, urlopen
 from .http import atomic_write_json
 
 BASE = "https://artificialanalysis.ai"
-PARSER_VERSION = "0.3.0"
+PARSER_VERSION = "0.4.0"
 MAX_BYTES = 8 * 1024 * 1024
 DEFAULT_RETENTION_DAYS = 14
 
@@ -48,6 +49,21 @@ def _provider_id(label: str, details_url: str | None) -> str:
     return re.sub(r"[^a-z0-9]+", "-", label.lower()).strip("-")
 
 
+def _variant_provider_ids(rows: list[dict]) -> list[str]:
+    """Qualify labels when one provider URL represents multiple variants."""
+    bases = [_provider_id(row["label"], row.get("detailsUrl")) for row in rows]
+    counts = Counter((base, row.get("detailsUrl") or "") for base, row in zip(bases, rows))
+    result = []
+    for base, row in zip(bases, rows):
+        if counts[(base, row.get("detailsUrl") or "")] == 1:
+            result.append(base)
+            continue
+        label_id = re.sub(r"[^a-z0-9]+", "-", row["label"].lower()).strip("-")
+        suffix = label_id.removeprefix(base).strip("-") or "base"
+        result.append(f"{base}/{suffix}")
+    return result
+
+
 def _derived_classification(scores: dict) -> str:
     lower, upper = scores.get("lower"), scores.get("upper")
     if lower is not None and upper is not None:
@@ -71,20 +87,20 @@ def parse_page(page: str, *, source_url: str, fetched_at: str) -> dict:
     description = accuracy.get("description") or ""
     version = re.search(r"\bv(\d+(?:\.\d+)*)\b", description, re.I)
     observations = []
-    for row in accuracy.get("data") or []:
+    source_rows = [row for row in accuracy.get("data") or [] if row.get("label") and _values(row.get("endpointAccuracyIndex"))]
+    provider_ids = _variant_provider_ids(source_rows)
+    for row, provider_id in zip(source_rows, provider_ids):
         label = row.get("label")
         scores = _values(row.get("endpointAccuracyIndex"))
-        if not label or not scores:
-            continue
         details = row.get("detailsUrl")
         source_classification = row.get("classification") or row.get("referenceClassification")
         observations.append({
             "observation_type": "endpoint_accuracy", "source_model_id": model_slug,
             "model_slug": model_slug,
             "model_name": (accuracy.get("name") or "").split(":", 1)[-1].strip() or model_slug,
-            "provider_id": _provider_id(label, details), "provider_name": label,
+            "provider_id": provider_id, "provider_namespace": provider_id.split("/", 1)[0], "provider_name": label,
             "endpoint_id": details or label,
-            "identity_key": ":".join(str(x or "") for x in (model_slug, _provider_id(label, details), details or label)),
+            "identity_key": ":".join(str(x or "") for x in (model_slug, provider_id, details or label)),
             "index_version": version.group(1) if version else None,
             "accuracy": {"mid": scores.get("mid"), "as_reference_percent": scores.get("mid"),
                          "lower": scores.get("lower"), "upper": scores.get("upper")},
@@ -153,12 +169,18 @@ def merge_models(previous: dict | None, fresh: list[dict], errors: list[dict], *
             retained[slug] = copy
     all_results = {**retained, **{r["model_slug"]: r for r in fresh}}
     observations = [o for r in all_results.values() for o in r.get("observations", [])]
+    identities = [o.get("identity_key") for o in observations if o.get("identity_key")]
+    if len(identities) != len(set(identities)):
+        raise ValueError("Endpoint Accuracy observations contain duplicate identity keys")
+    index_versions = sorted({o.get("index_version") for o in observations if o.get("index_version")})
     return {"version": 2, "parser_version": PARSER_VERSION, "generated_at": now,
             "source": "artificial_analysis_endpoint_accuracy", "model_results": [all_results[k] for k in sorted(all_results)],
             "errors": sorted(errors, key=lambda x: x.get("model_slug", "")),
+            "index_version": index_versions[0] if len(index_versions) == 1 else None,
             "coverage": {"scope": "bounded_public_jsonld", "requested_models": len(set(by_model) | {e.get("model_slug") for e in errors}),
                          "successful_models": len(fresh), "retained_stale_models": len(retained),
                          "models": len({o.get("model_slug") for o in observations}), "endpoints": len(observations),
+                         "index_versions": index_versions,
                          "retention_days": retention_days, "partial": bool(errors or retained)},
             "observation_count": len(observations), "observations": observations}
 
@@ -185,6 +207,9 @@ def main(argv=None) -> int:
     args = parser.parse_args(argv)
     previous = json.loads(args.output.read_text(encoding="utf-8")) if args.output.exists() else None
     result = fetch_many(args.model_slugs, previous=previous, retention_days=max(1, args.retention_days))
+    if result["errors"] or result["coverage"]["successful_models"] != result["coverage"]["requested_models"]:
+        print(f"Endpoint Accuracy acquisition failed closed: errors={len(result['errors'])} successful={result['coverage']['successful_models']} requested={result['coverage']['requested_models']}")
+        return 1
     atomic_write_json(args.output, result)
     print(f"Endpoint Accuracy models={result['coverage']['models']} observations={result['observation_count']} errors={len(result['errors'])} retained={result['coverage']['retained_stale_models']}")
     return 0

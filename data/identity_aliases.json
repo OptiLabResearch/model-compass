@@ -1,5 +1,5 @@
 {
-  "version": 2,
+  "version": 3,
   "description": "Audited public cross-source aliases only; no credentials.",
   "mappings": [
     {
@@ -11,18 +11,18 @@
       "review": "manual audited alias; verified against public AA model data and OpenRouter model catalog"
     },
     {
-      "relation": "provider_to_provider",
-      "source_entity_id": "coreweave",
-      "target_entity_id": "coreweave",
-      "evidence": "OpenRouter endpoint tag coreweave and Artificial Analysis provider detail endpoint coreweave refer to the same named provider; manual audited alias.",
+      "relation": "provider_endpoint_to_endpoint",
+      "source_entity_id": "openai/gpt-oss-120b:coreweave/fp4:CoreWeave | openai/gpt-oss-120b",
+      "target_entity_id": "gpt-oss-120b:coreweave:/providers/coreweave",
+      "evidence": "For gpt-oss-120b, OpenRouter's CoreWeave fp4 endpoint and AA's CoreWeave endpoint row describe the same provider variant; exact model+variant mapping, not a namespace join.",
       "first_verified": "2026-08-23",
       "review": "manual audited provider alias; no fuzzy provider matching"
     },
     {
-      "relation": "provider_to_provider",
-      "source_entity_id": "deepinfra",
-      "target_entity_id": "deepinfra",
-      "evidence": "OpenRouter endpoint tag deepinfra and Artificial Analysis provider detail endpoint deepinfra refer to the same named provider; manual audited alias.",
+      "relation": "provider_endpoint_to_endpoint",
+      "source_entity_id": "openai/gpt-oss-120b:deepinfra/turbo:DeepInfra | openai/gpt-oss-120b",
+      "target_entity_id": "gpt-oss-120b:deepinfra/turbo:/providers/deepinfra",
+      "evidence": "For gpt-oss-120b, both sources explicitly label the endpoint Turbo; exact model+variant mapping to AA's below-reference Turbo observation.",
       "first_verified": "2026-08-23",
       "review": "manual audited provider alias; no fuzzy provider matching"
     }

@@ -2,6 +2,7 @@
 from __future__ import annotations
 from pathlib import Path
 import json
+from .identity import openrouter_endpoint_entity_id
 
 
 def _number(value):
@@ -24,6 +25,7 @@ class ProviderDB:
     def __init__(self, observations=None, accuracy=None, identity=None):
         self.observations = list(observations or [])
         self.accuracy = list(accuracy or [])
+        self.identity_configured = identity is not None
         self.identity = identity or {}
         self.mappings = [m for m in self.identity.get("mappings", []) if m.get("state") in {"verified", "manual"}]
 
@@ -34,9 +36,11 @@ class ProviderDB:
         accuracy = []
         if accuracy_path and Path(accuracy_path).exists():
             accuracy = json.loads(Path(accuracy_path).read_text(encoding="utf-8")).get("observations", [])
-        identity = {}
+        identity = None
         if identity_path and Path(identity_path).exists():
             identity = json.loads(Path(identity_path).read_text(encoding="utf-8"))
+        elif identity_path:
+            identity = {}
         return cls(data.get("observations", []), accuracy, identity)
 
     def _model_mapping(self, aa_model_id: str) -> dict | None:
@@ -45,33 +49,34 @@ class ProviderDB:
 
     def providers(self, model_id: str) -> list[dict]:
         mapped = self._model_mapping(model_id)
+        if self.identity_configured and not mapped:
+            return []
         operational_id = mapped.get("source_entity_id") if mapped else model_id
         return [o for o in self.observations if o.get("model_id") == operational_id]
 
     def _accuracy_for(self, row: dict, aa_model_id: str | None = None) -> tuple[dict | None, dict | None]:
-        provider = row.get("provider_id") or ""
-        provider_namespace = provider.split("/", 1)[0]
         model_map = self._model_mapping(aa_model_id or row.get("model_id", ""))
-        if self.identity and not model_map:
+        if self.identity_configured and not model_map:
             return None, None
-        provider_map = next((m for m in self.mappings if m.get("relation") == "provider_to_provider"
-                             and m.get("source_entity_id") == provider_namespace), None)
-        allowed_providers = {provider, provider_namespace}
-        if provider_map:
-            allowed_providers.add(provider_map.get("target_entity_id"))
+        endpoint_map = next((m for m in self.mappings if m.get("relation") == "provider_endpoint_to_endpoint"
+                             and m.get("source_entity_id") == openrouter_endpoint_entity_id(row)), None)
+        if self.identity_configured and not endpoint_map:
+            return None, None
         for a in self.accuracy:
             if aa_model_id and a.get("model_slug") != aa_model_id:
                 continue
             if not aa_model_id and a.get("model_slug") not in {None, row.get("model_id")}:
                 continue
-            if a.get("provider_id") in allowed_providers or (a.get("provider_name") or "").lower() == (row.get("provider_name") or "").lower():
-                return a, provider_map
-        return None, provider_map
+            if endpoint_map and a.get("identity_key") == endpoint_map.get("target_entity_id"):
+                return a, endpoint_map
+            if not self.identity_configured and (a.get("provider_id") == row.get("provider_id") or (a.get("provider_name") or "").lower() == (row.get("provider_name") or "").lower()):
+                return a, None
+        return None, endpoint_map
 
     def _quality(self, row: dict, aa_model_id: str | None = None) -> dict:
-        obs, provider_map = self._accuracy_for(row, aa_model_id)
+        obs, endpoint_map = self._accuracy_for(row, aa_model_id)
         if not obs:
-            return {"status": "not_measured", "observation": None, "mapping_evidence": {"model": self._model_mapping(aa_model_id or row.get("model_id", "")), "provider": provider_map}}
+            return {"status": "not_measured", "observation": None, "mapping_evidence": {"model": self._model_mapping(aa_model_id or row.get("model_id", "")), "provider_endpoint": endpoint_map}}
         classification = obs.get("classification") or obs.get("derived_classification") or "unknown"
         interval = obs.get("accuracy") or {}
         if classification == "unknown":
@@ -79,7 +84,7 @@ class ProviderDB:
                 classification = "reference_consistent" if interval["lower"] <= 100 <= interval["upper"] else "below_reference" if interval["upper"] < 100 else "above_reference"
         status = "measured_good" if classification in {"within_reference", "reference_consistent", "at_reference"} else "measured_degraded" if classification in {"below_reference", "significantly_below", "outside_reference", "above_reference"} else "measured_uncertain"
         return {"status": status, "classification": classification, "observation": obs,
-                "mapping_evidence": {"model": self._model_mapping(aa_model_id or row.get("model_id", "")), "provider": provider_map}}
+                "mapping_evidence": {"model": self._model_mapping(aa_model_id or row.get("model_id", "")), "provider_endpoint": endpoint_map}}
 
     def best_provider(self, model_id: str, profile: str = "interactive", *, require_accuracy_evidence: bool = False,
                       min_accuracy: float | None = None, allow_unknown: bool = True) -> dict | None:
@@ -106,7 +111,7 @@ class ProviderDB:
             return None
         _, row, quality = min(ranked, key=lambda x: x[0])
         result = dict(row); result["endpoint_quality"] = quality
-        result["decision"] = {"profile": profile, "require_accuracy_evidence": require_accuracy_evidence, "min_accuracy": min_accuracy, "allow_unknown": allow_unknown, "missing_evidence": quality["status"] == "not_measured", "identity_policy": "verified_or_manual_only" if self.identity else "direct_fixture_identity"}
+        result["decision"] = {"profile": profile, "require_accuracy_evidence": require_accuracy_evidence, "min_accuracy": min_accuracy, "allow_unknown": allow_unknown, "missing_evidence": quality["status"] == "not_measured", "identity_policy": "verified_or_manual_exact_endpoint_only" if self.identity_configured else "direct_fixture_identity"}
         return result
 
     def independent_fallbacks(self, model_id: str, primary_provider: str, limit: int = 10) -> list[dict]:
