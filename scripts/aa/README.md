@@ -43,7 +43,7 @@ fields + bounds), `http.py` (retries/backoff/rate-limit/atomic/cache),
 - `data/coding_agent_observations.json` — separate public Artificial Analysis coding-agent/harness observations.
 - `data/endpoint_accuracy_observations.json` — separate point-in-time provider endpoint accuracy observations.
 - `data/identity_mappings.json` — explicit cross-source mapping health; unresolved joins remain unresolved.
-- `data/identity_aliases.json` — versioned manual mapping file, empty by default.
+- `data/identity_aliases.json` — small versioned set of audited exact manual mappings.
 - `data/aa_cache/` — raw payloads (git-ignored), for reproducibility/debugging.
 
 ## Commands
@@ -68,6 +68,12 @@ python3 scripts/model_compass.py recommend-agent coding_agent_index
 python3 scripts/model_compass.py endpoint-accuracy glm-5-2
 python3 scripts/model_compass.py recommend-provider glm-5-2 --profile accuracy-first --require-accuracy-evidence
 python3 scripts/model_compass.py identity-health
+
+# Reproduce the Phase 3 Gate-D inputs and deterministic derived artifacts
+python3 scripts/aa/openrouter_source.py --max-endpoints 25
+python3 -m scripts.aa.endpoint_accuracy gpt-oss-120b
+python3 -m scripts.aa.coding_agent_source
+python3 -m scripts.aa.phase3_artifacts
 
 # Offline unit tests (drift detection, scaling, dedup, merge, NaN)
 python3.12 scripts/aa/tests/test_pipeline.py
@@ -136,8 +142,9 @@ Phase 3 public adapters use bounded JSON-LD payloads from ordinary visitor pages
 Endpoint Accuracy preserves the source mid/lower/upper interval, classification,
 measurement date, and point-in-time provenance. Coding-agent metric views are
 merged by the source-declared variant label and keep harness/model/configuration
-text separate from canonical model IDs. These adapters remain manual/experimental
-until the public payload is stable enough for bounded weekly refresh integration.
+text separate from canonical model IDs. The weekly refresh acquires only the
+audited Gate-D Endpoint Accuracy cohort and fails closed if its current evidence
+cannot be fetched; broader source-contract and coverage work remains Phase 4.
 To adapt to an AA change: fetch the current leaderboard RSC, inspect the raw
 payload in `data/aa_cache/`, then update `_extract_rows` / `normalize_row` in
 `rsc_source.py` and bump `RSC_PARSER_VERSION` in `source_base.py`.

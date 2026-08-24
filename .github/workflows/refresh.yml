@@ -55,11 +55,11 @@ jobs:
       - name: Refresh Gate-D Endpoint Accuracy evidence
         run: python3 -m scripts.aa.endpoint_accuracy gpt-oss-120b
 
-      - name: Build and validate Phase 3 derived artifacts
-        run: python3 -m scripts.aa.phase3_artifacts
-
       - name: Refresh coding-agent observations (public AA page)
         run: python3 -m scripts.aa.coding_agent_source
+
+      - name: Build and validate Phase 3 derived artifacts
+        run: python3 -m scripts.aa.phase3_artifacts
 
       - name: Commit and push if changed
         run: |

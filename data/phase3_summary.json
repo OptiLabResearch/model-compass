@@ -1,7 +1,7 @@
 {
   "version": 2,
   "phase": 3,
-  "generated_at": "2026-08-24T07:38:57Z",
+  "generated_at": "2026-08-24T07:39:00Z",
   "sources": {
     "aa_models": 618,
     "openrouter_observations": 621,
@@ -143,7 +143,7 @@
       "state": "manual",
       "confidence": 1.0,
       "evidence": "Artificial Analysis model page identifies the model as OpenAI gpt-oss-120b; its raw_fields.openrouter_api_id is openai/gpt-oss-120b; OpenRouter public model ID is identical.",
-      "last_verified": "2026-08-24T07:38:57Z"
+      "last_verified": "2026-08-23"
     },
     "provider_endpoint_mapping": {
       "relation": "provider_endpoint_to_endpoint",
@@ -154,7 +154,7 @@
       "state": "manual",
       "confidence": 1.0,
       "evidence": "For gpt-oss-120b, OpenRouter's CoreWeave fp4 endpoint and AA's CoreWeave endpoint row describe the same provider variant; exact model+variant mapping, not a namespace join.",
-      "last_verified": "2026-08-24T07:38:57Z"
+      "last_verified": "2026-08-23"
     },
     "identity_policy": "verified_or_manual_exact_endpoint_only"
   }

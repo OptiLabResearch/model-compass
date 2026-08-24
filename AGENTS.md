@@ -13,7 +13,7 @@ There are two data pipelines:
 
 ## Data pipeline and deployment
 
-The weekly refresh (`.github/workflows/refresh.yml`, Sundays 19:00 UTC) runs: (1) `python3 -m scripts.aa.orchestrate` to merge the three AA sources into `data/aa_models_v2.json`, (2) `python3 scripts/build_site_from_aa.py` to produce the site's `public/data/models.json`, (3) exports the dated history CSV and `public/data/benchmarks.json`, then commits only when data changed. Cloudflare Pages auto-deploys from `main` (there is no deploy Action), so a merged refresh is live within minutes — no manual deploy step.
+The weekly refresh (`.github/workflows/refresh.yml`, Sundays 19:00 UTC) runs: (1) `python3 -m scripts.aa.orchestrate` to merge the three AA sources into `data/aa_models_v2.json`, (2) derives the public site/history artifacts, (3) refreshes OpenRouter, the bounded Gate-D Endpoint Accuracy cohort, and coding-agent observations, and (4) deterministically rebuilds Phase 3 identity/summary artifacts before committing only when data changed. Cloudflare Pages auto-deploys from `main` (there is no deploy Action), so a merged refresh is live within minutes — no manual deploy step.
 
 The pipeline fails closed and opens a `data-refresh` labeled GitHub issue on failure. If a refresh fails, check in order: the `AA_API_KEY` secret (HTTP 401 = auth/key), a retired/renamed AA endpoint (HTTP 410 — AA retires legacy `/api/v2/data/*` endpoints 2026-11-04; do not reintroduce them), an RSC leaderboard payload change (the `roles`/`models` tables drift — inspect the raw payload in `data/aa_cache/` and update `rsc_source.py`), a `FEATURED_SLUGS` entry renamed upstream, or a stale third-party snapshot. The Pro endpoint `/api/v2/language/models` is the only upgrade path for more fields and needs a paid key. `scripts/aa/orchestrate.py` hard-fails if the index version (4.1) changes — update the constant rather than weakening the check.
 
@@ -31,6 +31,7 @@ On Windows use `py -3` in place of `python3`. `validate_site.py`, `test_fetch_aa
 - `python3 scripts/build_site_from_aa.py` builds the site's `public/data/models.json` from the rich dataset.
 - `python3 scripts/export_history_csv.py` writes today's CSV snapshot.
 - `python3 scripts/export_benchmarks_json.py` writes `public/data/benchmarks.json`.
+- `python3 -m scripts.aa.endpoint_accuracy gpt-oss-120b` refreshes the fail-closed Gate-D Endpoint Accuracy cohort; `python3 -m scripts.aa.phase3_artifacts` validates inputs and regenerates identity/summary artifacts.
 - `python3 scripts/aa/tests/test_pipeline.py` and `python3 scripts/aa/crossvalidate.py` test and cross-validate the pipeline.
 - `python3 -c "import sys;sys.path.insert(0,'scripts');from aa.query import AADB;db=AADB()"` queries the dataset (best coding/value/backup etc.).
 - Rich snapshot deltas are written under `data/history/rich/` and retained for 104 files; `--offline` is cache-only and never attempts a network request.

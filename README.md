@@ -33,7 +33,7 @@ node scripts/test_browser_security.mjs
 - `data/openrouter_observations.json` contains bounded provider-endpoint observations.
 - `data/coding_agent_observations.json` contains separate model+harness coding-agent observations.
 - `data/endpoint_accuracy_observations.json` contains point-in-time Artificial Analysis endpoint measurements.
-- `data/identity_mappings.json` contains auditable cross-source mapping health; `data/identity_aliases.json` is the empty-by-default manual override file.
+- `data/identity_mappings.json` contains generated cross-source mapping health; `data/identity_aliases.json` contains the small audited manual mapping set used to generate it.
 - `.github/workflows/` contains read-only pull-request checks and the scheduled refresh.
 
 ## Data refresh
@@ -49,6 +49,10 @@ python3 -m scripts.aa.orchestrate
 python3 scripts/build_site_from_aa.py
 python3 scripts/export_history_csv.py
 python3 scripts/export_benchmarks_json.py
+python3 scripts/aa/openrouter_source.py --max-endpoints 25
+python3 -m scripts.aa.endpoint_accuracy gpt-oss-120b
+python3 -m scripts.aa.coding_agent_source
+python3 -m scripts.aa.phase3_artifacts
 python3 scripts/validate_site.py
 ```
 
@@ -71,7 +75,9 @@ python3 scripts/model_compass.py unresolved-identities
 ```
 
 Provider observations are operational facts from OpenRouter and do not overwrite Artificial Analysis benchmark fields. Coding-agent observations retain the public agent/harness label and are not flattened into base-model records.
-Endpoint Accuracy observations are separate point-in-time measurements. Their source confidence intervals and classification are preserved; missing coverage is reported as `not_measured`, not as an accuracy failure. The public JSON-LD adapter is intentionally bounded and may be run manually when upstream coverage changes.
+Endpoint Accuracy observations are separate point-in-time measurements. Their source confidence intervals and classification are preserved; missing coverage is reported as `not_measured`, not as an accuracy failure. The public JSON-LD adapter is intentionally bounded to the audited Gate-D cohort in the weekly process. Acquisition or identity failures stop generation without overwriting the last good artifacts.
+
+Identity-aware recommendations require audited model and exact provider-endpoint mappings. Provider namespaces and display names are never fallback joins; variants such as DeepInfra Base and Turbo remain distinct.
 
 ## Deployment
 

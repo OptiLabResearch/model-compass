@@ -64,6 +64,14 @@ delta = diff_observations(old,new,key="variant_id",fields=["score"])
 assert delta["counts"]["changed"] == 1 and delta["changed"][0]["identity_key"] == "__metadata__"
 ok("observation history and incompatible-version marker")
 
+old_mixed = {"observations": [{"identity_key": "a", "index_version": "1.0", "accuracy": {"mid": 90}}, {"identity_key": "b", "index_version": "1.1", "accuracy": {"mid": 95}}]}
+new_mixed = {"observations": [{"identity_key": "a", "index_version": "1.1", "accuracy": {"mid": 99}}, {"identity_key": "b", "index_version": "1.0", "accuracy": {"mid": 95}}]}
+mixed_delta = diff_observations(old_mixed, new_mixed, fields=["accuracy.mid"])
+assert len(mixed_delta["changed"]) == 2
+assert all(row["changes"]["comparability"] == "not directly comparable across versions" for row in mixed_delta["changed"])
+assert all("accuracy.mid" not in row["changes"] for row in mixed_delta["changed"])
+ok("mixed Endpoint Accuracy versions are compared per identity without score drift")
+
 variant_payload = {"name": "Endpoint Accuracy Index", "description": "v1.0", "data": [
     {"label": "CoreWeave", "detailsUrl": "/providers/coreweave", "endpointAccuracyIndex": [{"name": "mid", "value": 100}, {"name": "lower", "value": 95}, {"name": "upper", "value": 105}]},
     {"label": "DeepInfra", "detailsUrl": "/providers/deepinfra", "endpointAccuracyIndex": [{"name": "mid", "value": 97.01}, {"name": "lower", "value": 86.74}, {"name": "upper", "value": 107.28}]},
@@ -88,7 +96,9 @@ aliases = {"mappings": [
     {"relation": "provider_endpoint_to_endpoint", "source_entity_id": "openai/gpt-oss-120b:deepinfra/turbo:DeepInfra | openai/gpt-oss-120b", "target_entity_id": variant_rows["deepinfra/turbo"]["identity_key"], "evidence": "fixture exact Turbo mapping"},
 ]}
 aa = {"generated_at": "2026-08-23T00:00:00Z", "models": [{"slug": "gpt-oss-120b", "name": "gpt-oss-120b"}]}
-openrouter_artifact = {"generated_at": "2026-08-23T00:00:00Z", "endpoint_observation_count": len(operational), "observations": operational}
+for row in operational:
+    row["provenance"] = {"last_seen": "2026-08-23T00:00:00Z"}
+openrouter_artifact = {"generated_at": "2026-08-23T00:00:00Z", "endpoint_observation_count": len(operational), "endpoint_errors": [], "selection": {"selected_model_ids": ["openai/gpt-oss-120b"]}, "observations": operational}
 accuracy_artifact = merge_models(None, [variant_result], [], now="2026-08-23T00:00:00Z")
 identity, summary = build_artifacts(aa, openrouter_artifact, accuracy_artifact, aliases)
 identity_again, summary_again = build_artifacts(aa, openrouter_artifact, accuracy_artifact, aliases)
@@ -101,6 +111,14 @@ assert gate_db._quality(turbo, "gpt-oss-120b")["classification"] == "below_refer
 without_coreweave = {**identity, "mappings": [m for m in identity["mappings"] if m.get("source_entity_id") != "openai/gpt-oss-120b:coreweave/fp4:CoreWeave | openai/gpt-oss-120b"]}
 assert ProviderDB(operational, accuracy_artifact["observations"], without_coreweave).best_provider("gpt-oss-120b", "accuracy-first", require_accuracy_evidence=True) is None
 ok("exact Gate-D mappings, Turbo evidence, and missing-CoreWeave fail closure")
+
+failed_openrouter = {**openrouter_artifact, "endpoint_errors": [{"model_id": "openai/gpt-oss-120b", "error": "timeout"}]}
+try:
+    build_artifacts(aa, failed_openrouter, accuracy_artifact, aliases)
+    raise AssertionError("Gate-D OpenRouter acquisition failure was accepted")
+except ValueError as exc:
+    assert "failed for the Gate-D model" in str(exc)
+ok("Gate-D OpenRouter acquisition failure is rejected")
 
 with tempfile.TemporaryDirectory() as directory:
     output = Path(directory) / "accuracy.json"

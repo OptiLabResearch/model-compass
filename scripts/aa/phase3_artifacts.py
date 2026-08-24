@@ -39,6 +39,20 @@ def validate_inputs(aa: dict, openrouter: dict, accuracy: dict, coding: dict | N
         raise ValueError("Endpoint Accuracy index-version metadata is inconsistent")
     if not aa.get("models"):
         raise ValueError("AA canonical model artifact is empty")
+    selected = (openrouter.get("selection") or {}).get("selected_model_ids", [])
+    gate_source_model = "openai/gpt-oss-120b"
+    if gate_source_model not in selected:
+        raise ValueError("OpenRouter acquisition did not select the Gate-D model")
+    if any(row.get("model_id") == gate_source_model for row in openrouter.get("endpoint_errors", [])):
+        raise ValueError("OpenRouter acquisition failed for the Gate-D model")
+    openrouter_stamp = openrouter.get("generated_at")
+    gate_rows = [row for row in openrouter.get("observations", []) if row.get("model_id") == gate_source_model]
+    if not gate_rows or any((row.get("provenance") or {}).get("last_seen") != openrouter_stamp for row in gate_rows):
+        raise ValueError("OpenRouter Gate-D observations are not fresh acquisition results")
+    accuracy_stamp = accuracy.get("generated_at")
+    gate_result = next((row for row in accuracy.get("model_results", []) if row.get("model_slug") == GATE_MODEL), None)
+    if not gate_result or gate_result.get("retained") or gate_result.get("fetched_at") != accuracy_stamp:
+        raise ValueError("Endpoint Accuracy Gate-D evidence is not a fresh acquisition result")
     if coding is not None:
         _count_matches(coding, "observation_count", "observations")
         variants = [row.get("variant_id") for row in coding.get("observations", [])]
@@ -52,7 +66,8 @@ def validate_inputs(aa: dict, openrouter: dict, accuracy: dict, coding: dict | N
 def build_artifacts(aa: dict, openrouter: dict, accuracy: dict, aliases: dict,
                     coding: dict | None = None) -> tuple[dict, dict]:
     validate_inputs(aa, openrouter, accuracy, coding)
-    stamps = [value for value in (aa.get("generated_at"), openrouter.get("generated_at"), accuracy.get("generated_at")) if value]
+    stamps = [value for value in (aa.get("generated_at"), openrouter.get("generated_at"), accuracy.get("generated_at"),
+                                  (coding or {}).get("generated_at")) if value]
     generated_at = max(stamps) if stamps else "unknown"
     identity = resolve(aa["models"], openrouter.get("observations", []), accuracy.get("observations", []),
                        aliases.get("mappings", []), verified_at=generated_at)

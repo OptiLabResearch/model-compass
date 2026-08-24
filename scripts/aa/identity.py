@@ -88,7 +88,8 @@ def resolve(aa_models: list[dict], openrouter: list[dict], endpoint_accuracy: li
             else:
                 mappings.append({"relation": "model_to_model", "source": "openrouter", "source_entity_id": source_id,
                                  "target": "artificial_analysis", "target_entity_id": target, "state": "manual", "confidence": 1.0,
-                                 "evidence": explicit.get("evidence", "audited manual alias"), "last_verified": verified_at})
+                                 "evidence": explicit.get("evidence", "audited manual alias"),
+                                 "last_verified": explicit.get("last_verified") or explicit.get("first_verified") or verified_at})
             continue
         evidence = _model_evidence(source_id, row, aa_models)
         if len(evidence) == 1 and evidence[0]["score"] >= 4:
@@ -110,7 +111,8 @@ def resolve(aa_models: list[dict], openrouter: list[dict], endpoint_accuracy: li
             else:
                 mappings.append({"relation": "provider_endpoint_to_endpoint", "source": "openrouter", "source_entity_id": source_id,
                                  "target": "artificial_analysis", "target_entity_id": target, "state": "manual", "confidence": 1.0,
-                                 "evidence": explicit.get("evidence", "audited manual provider alias"), "last_verified": verified_at})
+                                 "evidence": explicit.get("evidence", "audited manual provider alias"),
+                                 "last_verified": explicit.get("last_verified") or explicit.get("first_verified") or verified_at})
         else:
             unresolved.append({"relation": "provider_endpoint_to_endpoint", "source_entity_id": source_id})
 
