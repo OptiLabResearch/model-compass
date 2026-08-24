@@ -1,7 +1,103 @@
 {
-  "version": 3,
+  "version": 4,
   "generated_at": "2026-08-24T07:39:00Z",
   "mappings": [
+    {
+      "relation": "model_to_model",
+      "source": "openrouter",
+      "source_entity_id": "amazon/nova-lite-v1",
+      "target": "artificial_analysis",
+      "target_entity_id": "nova-lite",
+      "state": "candidate",
+      "confidence": 0.95,
+      "method": "source_metadata_exact",
+      "evidence": "snapshot open_weights.openrouter_api_id exactly equals OpenRouter model ID; non-authoritative",
+      "last_verified": "2026-08-24T07:39:00Z"
+    },
+    {
+      "relation": "model_to_model",
+      "source": "openrouter",
+      "source_entity_id": "amazon/nova-micro-v1",
+      "target": "artificial_analysis",
+      "target_entity_id": "nova-micro",
+      "state": "candidate",
+      "confidence": 0.95,
+      "method": "source_metadata_exact",
+      "evidence": "snapshot open_weights.openrouter_api_id exactly equals OpenRouter model ID; non-authoritative",
+      "last_verified": "2026-08-24T07:39:00Z"
+    },
+    {
+      "relation": "model_to_model",
+      "source": "openrouter",
+      "source_entity_id": "amazon/nova-premier-v1",
+      "target": "artificial_analysis",
+      "target_entity_id": "nova-premier",
+      "state": "candidate",
+      "confidence": 0.95,
+      "method": "source_metadata_exact",
+      "evidence": "snapshot open_weights.openrouter_api_id exactly equals OpenRouter model ID; non-authoritative",
+      "last_verified": "2026-08-24T07:39:00Z"
+    },
+    {
+      "relation": "model_to_model",
+      "source": "openrouter",
+      "source_entity_id": "amazon/nova-pro-v1",
+      "target": "artificial_analysis",
+      "target_entity_id": "nova-pro",
+      "state": "candidate",
+      "confidence": 0.95,
+      "method": "source_metadata_exact",
+      "evidence": "snapshot open_weights.openrouter_api_id exactly equals OpenRouter model ID; non-authoritative",
+      "last_verified": "2026-08-24T07:39:00Z"
+    },
+    {
+      "relation": "model_to_model",
+      "source": "openrouter",
+      "source_entity_id": "anthropic/claude-3-haiku",
+      "target": "artificial_analysis",
+      "target_entity_id": "claude-3-haiku",
+      "state": "candidate",
+      "confidence": 0.95,
+      "method": "source_metadata_exact",
+      "evidence": "snapshot open_weights.openrouter_api_id exactly equals OpenRouter model ID; OpenRouter model portion equals AA slug; normalized model name/version equality; OpenRouter namespace agrees with AA creator; non-authoritative",
+      "last_verified": "2026-08-24T07:39:00Z"
+    },
+    {
+      "relation": "model_to_model",
+      "source": "openrouter",
+      "source_entity_id": "anthropic/claude-fable-5",
+      "target": "artificial_analysis",
+      "target_entity_id": "claude-fable-5",
+      "state": "candidate",
+      "confidence": 0.95,
+      "method": "source_metadata_exact",
+      "evidence": "snapshot open_weights.openrouter_api_id exactly equals OpenRouter model ID; OpenRouter model portion equals AA slug; normalized model name/version equality; OpenRouter namespace agrees with AA creator; non-authoritative",
+      "last_verified": "2026-08-24T07:39:00Z"
+    },
+    {
+      "relation": "model_to_model",
+      "source": "openrouter",
+      "source_entity_id": "anthropic/claude-opus-4.8",
+      "target": "artificial_analysis",
+      "target_entity_id": "claude-opus-4-8",
+      "state": "candidate",
+      "confidence": 0.95,
+      "method": "source_metadata_exact",
+      "evidence": "snapshot open_weights.openrouter_api_id exactly equals OpenRouter model ID; OpenRouter model portion equals AA slug; normalized model name/version equality; OpenRouter namespace agrees with AA creator; non-authoritative",
+      "last_verified": "2026-08-24T07:39:00Z"
+    },
+    {
+      "relation": "model_to_model",
+      "source": "openrouter",
+      "source_entity_id": "anthropic/claude-sonnet-5",
+      "target": "artificial_analysis",
+      "target_entity_id": "claude-sonnet-5",
+      "state": "candidate",
+      "confidence": 0.95,
+      "method": "source_metadata_exact",
+      "evidence": "snapshot open_weights.openrouter_api_id exactly equals OpenRouter model ID; OpenRouter model portion equals AA slug; normalized model name/version equality; OpenRouter namespace agrees with AA creator; non-authoritative",
+      "last_verified": "2026-08-24T07:39:00Z"
+    },
     {
       "relation": "model_to_model",
       "source": "openrouter",
@@ -10,7 +106,152 @@
       "target_entity_id": "trinity-large-thinking",
       "state": "candidate",
       "confidence": 0.95,
-      "evidence": "OpenRouter model portion equals AA slug; normalized model name/version equality; non-authoritative",
+      "method": "source_metadata_exact",
+      "evidence": "snapshot open_weights.openrouter_api_id exactly equals OpenRouter model ID; OpenRouter model portion equals AA slug; normalized model name/version equality; non-authoritative",
+      "last_verified": "2026-08-24T07:39:00Z"
+    },
+    {
+      "relation": "model_to_model",
+      "source": "openrouter",
+      "source_entity_id": "cohere/command-a",
+      "target": "artificial_analysis",
+      "target_entity_id": "command-a",
+      "state": "candidate",
+      "confidence": 0.95,
+      "method": "source_metadata_exact",
+      "evidence": "snapshot open_weights.openrouter_api_id exactly equals OpenRouter model ID; OpenRouter model portion equals AA slug; normalized model name/version equality; OpenRouter namespace agrees with AA creator; non-authoritative",
+      "last_verified": "2026-08-24T07:39:00Z"
+    },
+    {
+      "relation": "model_to_model",
+      "source": "openrouter",
+      "source_entity_id": "deepseek/deepseek-chat",
+      "target": "artificial_analysis",
+      "target_entity_id": "deepseek-v3",
+      "state": "candidate",
+      "confidence": 0.95,
+      "method": "source_metadata_exact",
+      "evidence": "snapshot open_weights.openrouter_api_id exactly equals OpenRouter model ID; OpenRouter namespace agrees with AA creator; non-authoritative",
+      "last_verified": "2026-08-24T07:39:00Z"
+    },
+    {
+      "relation": "model_to_model",
+      "source": "openrouter",
+      "source_entity_id": "deepseek/deepseek-chat-v3-0324",
+      "target": "artificial_analysis",
+      "target_entity_id": "deepseek-v3-0324",
+      "state": "candidate",
+      "confidence": 0.95,
+      "method": "source_metadata_exact",
+      "evidence": "snapshot open_weights.openrouter_api_id exactly equals OpenRouter model ID; OpenRouter namespace agrees with AA creator; non-authoritative",
+      "last_verified": "2026-08-24T07:39:00Z"
+    },
+    {
+      "relation": "model_to_model",
+      "source": "openrouter",
+      "source_entity_id": "deepseek/deepseek-r1",
+      "target": "artificial_analysis",
+      "target_entity_id": "deepseek-r1-0120",
+      "state": "candidate",
+      "confidence": 0.95,
+      "method": "source_metadata_exact",
+      "evidence": "snapshot open_weights.openrouter_api_id exactly equals OpenRouter model ID; OpenRouter namespace agrees with AA creator; non-authoritative",
+      "last_verified": "2026-08-24T07:39:00Z"
+    },
+    {
+      "relation": "model_to_model",
+      "source": "openrouter",
+      "source_entity_id": "deepseek/deepseek-r1-0528",
+      "target": "artificial_analysis",
+      "target_entity_id": "deepseek-r1",
+      "state": "candidate",
+      "confidence": 0.95,
+      "method": "source_metadata_exact",
+      "evidence": "snapshot open_weights.openrouter_api_id exactly equals OpenRouter model ID; normalized model name/version equality; OpenRouter namespace agrees with AA creator; non-authoritative",
+      "last_verified": "2026-08-24T07:39:00Z"
+    },
+    {
+      "relation": "model_to_model",
+      "source": "openrouter",
+      "source_entity_id": "deepseek/deepseek-r1-distill-llama-70b",
+      "target": "artificial_analysis",
+      "target_entity_id": "deepseek-r1-distill-llama-70b",
+      "state": "candidate",
+      "confidence": 0.95,
+      "method": "source_metadata_exact",
+      "evidence": "snapshot open_weights.openrouter_api_id exactly equals OpenRouter model ID; OpenRouter model portion equals AA slug; normalized model name/version equality; OpenRouter namespace agrees with AA creator; non-authoritative",
+      "last_verified": "2026-08-24T07:39:00Z"
+    },
+    {
+      "relation": "model_to_model",
+      "source": "openrouter",
+      "source_entity_id": "google/gemini-3.1-flash-lite-preview",
+      "target": "artificial_analysis",
+      "target_entity_id": "gemini-3-1-flash-lite-preview",
+      "state": "candidate",
+      "confidence": 0.95,
+      "method": "source_metadata_exact",
+      "evidence": "snapshot open_weights.openrouter_api_id exactly equals OpenRouter model ID; OpenRouter model portion equals AA slug; normalized model name/version equality; OpenRouter namespace agrees with AA creator; non-authoritative",
+      "last_verified": "2026-08-24T07:39:00Z"
+    },
+    {
+      "relation": "model_to_model",
+      "source": "openrouter",
+      "source_entity_id": "google/gemini-3.1-pro-preview",
+      "target": "artificial_analysis",
+      "target_entity_id": "gemini-3-1-pro-preview",
+      "state": "candidate",
+      "confidence": 0.95,
+      "method": "source_metadata_exact",
+      "evidence": "snapshot open_weights.openrouter_api_id exactly equals OpenRouter model ID; AA RSC hostApiId exactly equals OpenRouter model ID; provider-host corroboration only; OpenRouter model portion equals AA slug; normalized model name/version equality; OpenRouter namespace agrees with AA creator; non-authoritative",
+      "last_verified": "2026-08-24T07:39:00Z"
+    },
+    {
+      "relation": "model_to_model",
+      "source": "openrouter",
+      "source_entity_id": "google/gemma-3-12b-it",
+      "target": "artificial_analysis",
+      "target_entity_id": "gemma-3-12b",
+      "state": "candidate",
+      "confidence": 0.95,
+      "method": "source_metadata_exact",
+      "evidence": "snapshot open_weights.openrouter_api_id exactly equals OpenRouter model ID; OpenRouter namespace agrees with AA creator; non-authoritative",
+      "last_verified": "2026-08-24T07:39:00Z"
+    },
+    {
+      "relation": "model_to_model",
+      "source": "openrouter",
+      "source_entity_id": "google/gemma-3-27b-it",
+      "target": "artificial_analysis",
+      "target_entity_id": "gemma-3-27b",
+      "state": "candidate",
+      "confidence": 0.95,
+      "method": "source_metadata_exact",
+      "evidence": "snapshot open_weights.openrouter_api_id exactly equals OpenRouter model ID; AA RSC hostApiId exactly equals OpenRouter model ID; provider-host corroboration only; OpenRouter namespace agrees with AA creator; non-authoritative",
+      "last_verified": "2026-08-24T07:39:00Z"
+    },
+    {
+      "relation": "model_to_model",
+      "source": "openrouter",
+      "source_entity_id": "google/gemma-3-4b-it",
+      "target": "artificial_analysis",
+      "target_entity_id": "gemma-3-4b",
+      "state": "candidate",
+      "confidence": 0.95,
+      "method": "source_metadata_exact",
+      "evidence": "snapshot open_weights.openrouter_api_id exactly equals OpenRouter model ID; AA RSC hostApiId exactly equals OpenRouter model ID; provider-host corroboration only; OpenRouter namespace agrees with AA creator; non-authoritative",
+      "last_verified": "2026-08-24T07:39:00Z"
+    },
+    {
+      "relation": "model_to_model",
+      "source": "openrouter",
+      "source_entity_id": "ibm-granite/granite-4.0-h-micro",
+      "target": "artificial_analysis",
+      "target_entity_id": "granite-4-0-micro",
+      "state": "candidate",
+      "confidence": 0.95,
+      "method": "source_metadata_exact",
+      "evidence": "snapshot open_weights.openrouter_api_id exactly equals OpenRouter model ID; non-authoritative",
       "last_verified": "2026-08-24T07:39:00Z"
     },
     {
@@ -21,7 +262,8 @@
       "target_entity_id": "granite-4-1-8b",
       "state": "candidate",
       "confidence": 0.95,
-      "evidence": "OpenRouter model portion equals AA slug; normalized model name/version equality; non-authoritative",
+      "method": "source_metadata_exact",
+      "evidence": "snapshot open_weights.openrouter_api_id exactly equals OpenRouter model ID; AA RSC hostApiId exactly equals OpenRouter model ID; provider-host corroboration only; OpenRouter model portion equals AA slug; normalized model name/version equality; non-authoritative",
       "last_verified": "2026-08-24T07:39:00Z"
     },
     {
@@ -32,7 +274,44 @@
       "target_entity_id": "mercury-2",
       "state": "candidate",
       "confidence": 0.95,
-      "evidence": "OpenRouter model portion equals AA slug; normalized model name/version equality; OpenRouter namespace agrees with AA creator; non-authoritative",
+      "method": "source_metadata_exact",
+      "evidence": "snapshot open_weights.openrouter_api_id exactly equals OpenRouter model ID; OpenRouter model portion equals AA slug; normalized model name/version equality; OpenRouter namespace agrees with AA creator; non-authoritative",
+      "last_verified": "2026-08-24T07:39:00Z"
+    },
+    {
+      "relation": "model_to_model",
+      "source": "openrouter",
+      "source_entity_id": "inclusionai/ling-2.6-1t",
+      "target": "artificial_analysis",
+      "target_entity_id": "ling-2-6-1t",
+      "state": "candidate",
+      "confidence": 0.95,
+      "method": "source_metadata_exact",
+      "evidence": "snapshot open_weights.openrouter_api_id exactly equals OpenRouter model ID; OpenRouter model portion equals AA slug; normalized model name/version equality; OpenRouter namespace agrees with AA creator; non-authoritative",
+      "last_verified": "2026-08-24T07:39:00Z"
+    },
+    {
+      "relation": "model_to_model",
+      "source": "openrouter",
+      "source_entity_id": "inclusionai/ling-2.6-flash",
+      "target": "artificial_analysis",
+      "target_entity_id": "ling-2-6-flash",
+      "state": "candidate",
+      "confidence": 0.95,
+      "method": "source_metadata_exact",
+      "evidence": "snapshot open_weights.openrouter_api_id exactly equals OpenRouter model ID; AA RSC hostApiId exactly equals OpenRouter model ID; provider-host corroboration only; OpenRouter model portion equals AA slug; normalized model name/version equality; OpenRouter namespace agrees with AA creator; non-authoritative",
+      "last_verified": "2026-08-24T07:39:00Z"
+    },
+    {
+      "relation": "model_to_model",
+      "source": "openrouter",
+      "source_entity_id": "inclusionai/ring-2.6-1t",
+      "target": "artificial_analysis",
+      "target_entity_id": "ring-2-6-1t",
+      "state": "candidate",
+      "confidence": 0.95,
+      "method": "source_metadata_exact",
+      "evidence": "snapshot open_weights.openrouter_api_id exactly equals OpenRouter model ID; OpenRouter model portion equals AA slug; normalized model name/version equality; OpenRouter namespace agrees with AA creator; non-authoritative",
       "last_verified": "2026-08-24T07:39:00Z"
     },
     {
@@ -43,6 +322,7 @@
       "target_entity_id": "kat-coder-pro-v2",
       "state": "candidate",
       "confidence": 0.95,
+      "method": "normalized_heuristic",
       "evidence": "OpenRouter model portion equals AA slug; normalized model name/version equality; non-authoritative",
       "last_verified": "2026-08-24T07:39:00Z"
     },
@@ -54,7 +334,68 @@
       "target_entity_id": "longcat-2-0",
       "state": "candidate",
       "confidence": 0.95,
+      "method": "normalized_heuristic",
       "evidence": "OpenRouter model portion equals AA slug; normalized model name/version equality; non-authoritative",
+      "last_verified": "2026-08-24T07:39:00Z"
+    },
+    {
+      "relation": "model_to_model",
+      "source": "openrouter",
+      "source_entity_id": "meta-llama/llama-3.1-70b-instruct",
+      "target": "artificial_analysis",
+      "target_entity_id": "llama-3-1-instruct-70b",
+      "state": "candidate",
+      "confidence": 0.95,
+      "method": "source_metadata_exact",
+      "evidence": "snapshot open_weights.openrouter_api_id exactly equals OpenRouter model ID; non-authoritative",
+      "last_verified": "2026-08-24T07:39:00Z"
+    },
+    {
+      "relation": "model_to_model",
+      "source": "openrouter",
+      "source_entity_id": "meta-llama/llama-3.1-8b-instruct",
+      "target": "artificial_analysis",
+      "target_entity_id": "llama-3-1-instruct-8b",
+      "state": "candidate",
+      "confidence": 0.95,
+      "method": "source_metadata_exact",
+      "evidence": "snapshot open_weights.openrouter_api_id exactly equals OpenRouter model ID; non-authoritative",
+      "last_verified": "2026-08-24T07:39:00Z"
+    },
+    {
+      "relation": "model_to_model",
+      "source": "openrouter",
+      "source_entity_id": "meta-llama/llama-3.2-1b-instruct",
+      "target": "artificial_analysis",
+      "target_entity_id": "llama-3-2-instruct-1b",
+      "state": "candidate",
+      "confidence": 0.95,
+      "method": "source_metadata_exact",
+      "evidence": "snapshot open_weights.openrouter_api_id exactly equals OpenRouter model ID; non-authoritative",
+      "last_verified": "2026-08-24T07:39:00Z"
+    },
+    {
+      "relation": "model_to_model",
+      "source": "openrouter",
+      "source_entity_id": "meta-llama/llama-3.2-3b-instruct",
+      "target": "artificial_analysis",
+      "target_entity_id": "llama-3-2-instruct-3b",
+      "state": "candidate",
+      "confidence": 0.95,
+      "method": "source_metadata_exact",
+      "evidence": "snapshot open_weights.openrouter_api_id exactly equals OpenRouter model ID; non-authoritative",
+      "last_verified": "2026-08-24T07:39:00Z"
+    },
+    {
+      "relation": "model_to_model",
+      "source": "openrouter",
+      "source_entity_id": "meta-llama/llama-3.3-70b-instruct",
+      "target": "artificial_analysis",
+      "target_entity_id": "llama-3-3-instruct-70b",
+      "state": "candidate",
+      "confidence": 0.95,
+      "method": "source_metadata_exact",
+      "evidence": "snapshot open_weights.openrouter_api_id exactly equals OpenRouter model ID; non-authoritative",
       "last_verified": "2026-08-24T07:39:00Z"
     },
     {
@@ -65,7 +406,8 @@
       "target_entity_id": "llama-4-maverick",
       "state": "candidate",
       "confidence": 0.95,
-      "evidence": "OpenRouter model portion equals AA slug; normalized model name/version equality; non-authoritative",
+      "method": "source_metadata_exact",
+      "evidence": "snapshot open_weights.openrouter_api_id exactly equals OpenRouter model ID; OpenRouter model portion equals AA slug; normalized model name/version equality; non-authoritative",
       "last_verified": "2026-08-24T07:39:00Z"
     },
     {
@@ -76,7 +418,8 @@
       "target_entity_id": "llama-4-scout",
       "state": "candidate",
       "confidence": 0.95,
-      "evidence": "OpenRouter model portion equals AA slug; normalized model name/version equality; non-authoritative",
+      "method": "source_metadata_exact",
+      "evidence": "snapshot open_weights.openrouter_api_id exactly equals OpenRouter model ID; OpenRouter model portion equals AA slug; normalized model name/version equality; non-authoritative",
       "last_verified": "2026-08-24T07:39:00Z"
     },
     {
@@ -87,7 +430,116 @@
       "target_entity_id": "phi-4",
       "state": "candidate",
       "confidence": 0.95,
-      "evidence": "OpenRouter model portion equals AA slug; normalized model name/version equality; non-authoritative",
+      "method": "source_metadata_exact",
+      "evidence": "AA RSC hostApiId exactly equals OpenRouter model ID; provider-host corroboration only; OpenRouter model portion equals AA slug; normalized model name/version equality; non-authoritative",
+      "last_verified": "2026-08-24T07:39:00Z"
+    },
+    {
+      "relation": "model_to_model",
+      "source": "openrouter",
+      "source_entity_id": "minimax/minimax-m1",
+      "target": "artificial_analysis",
+      "target_entity_id": "minimax-m1-40k",
+      "state": "candidate",
+      "confidence": 0.95,
+      "method": "source_metadata_exact",
+      "evidence": "snapshot open_weights.openrouter_api_id exactly equals OpenRouter model ID; OpenRouter namespace agrees with AA creator; non-authoritative",
+      "last_verified": "2026-08-24T07:39:00Z"
+    },
+    {
+      "relation": "model_to_model",
+      "source": "openrouter",
+      "source_entity_id": "minimax/minimax-m2",
+      "target": "artificial_analysis",
+      "target_entity_id": "minimax-m2",
+      "state": "candidate",
+      "confidence": 0.95,
+      "method": "source_metadata_exact",
+      "evidence": "snapshot open_weights.openrouter_api_id exactly equals OpenRouter model ID; OpenRouter model portion equals AA slug; normalized model name/version equality; OpenRouter namespace agrees with AA creator; non-authoritative",
+      "last_verified": "2026-08-24T07:39:00Z"
+    },
+    {
+      "relation": "model_to_model",
+      "source": "openrouter",
+      "source_entity_id": "minimax/minimax-m2.1",
+      "target": "artificial_analysis",
+      "target_entity_id": "minimax-m2-1",
+      "state": "candidate",
+      "confidence": 0.95,
+      "method": "source_metadata_exact",
+      "evidence": "snapshot open_weights.openrouter_api_id exactly equals OpenRouter model ID; AA RSC hostApiId exactly equals OpenRouter model ID; provider-host corroboration only; OpenRouter model portion equals AA slug; normalized model name/version equality; OpenRouter namespace agrees with AA creator; non-authoritative",
+      "last_verified": "2026-08-24T07:39:00Z"
+    },
+    {
+      "relation": "model_to_model",
+      "source": "openrouter",
+      "source_entity_id": "minimax/minimax-m2.5",
+      "target": "artificial_analysis",
+      "target_entity_id": "minimax-m2-5",
+      "state": "candidate",
+      "confidence": 0.95,
+      "method": "source_metadata_exact",
+      "evidence": "snapshot open_weights.openrouter_api_id exactly equals OpenRouter model ID; OpenRouter model portion equals AA slug; normalized model name/version equality; OpenRouter namespace agrees with AA creator; non-authoritative",
+      "last_verified": "2026-08-24T07:39:00Z"
+    },
+    {
+      "relation": "model_to_model",
+      "source": "openrouter",
+      "source_entity_id": "minimax/minimax-m2.7",
+      "target": "artificial_analysis",
+      "target_entity_id": "minimax-m2-7",
+      "state": "candidate",
+      "confidence": 0.95,
+      "method": "source_metadata_exact",
+      "evidence": "snapshot open_weights.openrouter_api_id exactly equals OpenRouter model ID; OpenRouter model portion equals AA slug; normalized model name/version equality; OpenRouter namespace agrees with AA creator; non-authoritative",
+      "last_verified": "2026-08-24T07:39:00Z"
+    },
+    {
+      "relation": "model_to_model",
+      "source": "openrouter",
+      "source_entity_id": "minimax/minimax-m3",
+      "target": "artificial_analysis",
+      "target_entity_id": "minimax-m3",
+      "state": "candidate",
+      "confidence": 0.95,
+      "method": "source_metadata_exact",
+      "evidence": "snapshot open_weights.openrouter_api_id exactly equals OpenRouter model ID; OpenRouter model portion equals AA slug; normalized model name/version equality; OpenRouter namespace agrees with AA creator; non-authoritative",
+      "last_verified": "2026-08-24T07:39:00Z"
+    },
+    {
+      "relation": "model_to_model",
+      "source": "openrouter",
+      "source_entity_id": "mistralai/ministral-14b-2512",
+      "target": "artificial_analysis",
+      "target_entity_id": "ministral-3-14b",
+      "state": "candidate",
+      "confidence": 0.95,
+      "method": "source_metadata_exact",
+      "evidence": "snapshot open_weights.openrouter_api_id exactly equals OpenRouter model ID; non-authoritative",
+      "last_verified": "2026-08-24T07:39:00Z"
+    },
+    {
+      "relation": "model_to_model",
+      "source": "openrouter",
+      "source_entity_id": "mistralai/ministral-3b-2512",
+      "target": "artificial_analysis",
+      "target_entity_id": "ministral-3-3b",
+      "state": "candidate",
+      "confidence": 0.95,
+      "method": "source_metadata_exact",
+      "evidence": "snapshot open_weights.openrouter_api_id exactly equals OpenRouter model ID; non-authoritative",
+      "last_verified": "2026-08-24T07:39:00Z"
+    },
+    {
+      "relation": "model_to_model",
+      "source": "openrouter",
+      "source_entity_id": "mistralai/ministral-8b-2512",
+      "target": "artificial_analysis",
+      "target_entity_id": "ministral-3-8b",
+      "state": "candidate",
+      "confidence": 0.95,
+      "method": "source_metadata_exact",
+      "evidence": "snapshot open_weights.openrouter_api_id exactly equals OpenRouter model ID; non-authoritative",
       "last_verified": "2026-08-24T07:39:00Z"
     },
     {
@@ -98,18 +550,20 @@
       "target_entity_id": "mistral-large",
       "state": "candidate",
       "confidence": 0.95,
-      "evidence": "OpenRouter model portion equals AA slug; normalized model name/version equality; non-authoritative",
+      "method": "source_metadata_exact",
+      "evidence": "snapshot open_weights.openrouter_api_id exactly equals OpenRouter model ID; OpenRouter model portion equals AA slug; normalized model name/version equality; non-authoritative",
       "last_verified": "2026-08-24T07:39:00Z"
     },
     {
       "relation": "model_to_model",
       "source": "openrouter",
-      "source_entity_id": "mistralai/mistral-large-2407",
+      "source_entity_id": "mistralai/mistral-large-2512",
       "target": "artificial_analysis",
-      "target_entity_id": "mistral-large-2407",
+      "target_entity_id": "mistral-large-3",
       "state": "candidate",
       "confidence": 0.95,
-      "evidence": "OpenRouter model portion equals AA slug; normalized model name/version equality; non-authoritative",
+      "method": "source_metadata_exact",
+      "evidence": "snapshot open_weights.openrouter_api_id exactly equals OpenRouter model ID; non-authoritative",
       "last_verified": "2026-08-24T07:39:00Z"
     },
     {
@@ -120,7 +574,8 @@
       "target_entity_id": "mistral-medium-3",
       "state": "candidate",
       "confidence": 0.95,
-      "evidence": "OpenRouter model portion equals AA slug; normalized model name/version equality; non-authoritative",
+      "method": "source_metadata_exact",
+      "evidence": "snapshot open_weights.openrouter_api_id exactly equals OpenRouter model ID; OpenRouter model portion equals AA slug; normalized model name/version equality; non-authoritative",
       "last_verified": "2026-08-24T07:39:00Z"
     },
     {
@@ -131,7 +586,8 @@
       "target_entity_id": "mistral-medium-3-5",
       "state": "candidate",
       "confidence": 0.95,
-      "evidence": "OpenRouter model portion equals AA slug; normalized model name/version equality; non-authoritative",
+      "method": "source_metadata_exact",
+      "evidence": "snapshot open_weights.openrouter_api_id exactly equals OpenRouter model ID; OpenRouter model portion equals AA slug; normalized model name/version equality; non-authoritative",
       "last_verified": "2026-08-24T07:39:00Z"
     },
     {
@@ -142,7 +598,8 @@
       "target_entity_id": "mistral-medium-3-1",
       "state": "candidate",
       "confidence": 0.95,
-      "evidence": "OpenRouter model portion equals AA slug; normalized model name/version equality; non-authoritative",
+      "method": "source_metadata_exact",
+      "evidence": "snapshot open_weights.openrouter_api_id exactly equals OpenRouter model ID; OpenRouter model portion equals AA slug; normalized model name/version equality; non-authoritative",
       "last_verified": "2026-08-24T07:39:00Z"
     },
     {
@@ -153,7 +610,56 @@
       "target_entity_id": "mistral-saba",
       "state": "candidate",
       "confidence": 0.95,
+      "method": "normalized_heuristic",
       "evidence": "OpenRouter model portion equals AA slug; normalized model name/version equality; non-authoritative",
+      "last_verified": "2026-08-24T07:39:00Z"
+    },
+    {
+      "relation": "model_to_model",
+      "source": "openrouter",
+      "source_entity_id": "mistralai/mistral-small-24b-instruct-2501",
+      "target": "artificial_analysis",
+      "target_entity_id": "mistral-small-3",
+      "state": "candidate",
+      "confidence": 0.95,
+      "method": "source_metadata_exact",
+      "evidence": "snapshot open_weights.openrouter_api_id exactly equals OpenRouter model ID; non-authoritative",
+      "last_verified": "2026-08-24T07:39:00Z"
+    },
+    {
+      "relation": "model_to_model",
+      "source": "openrouter",
+      "source_entity_id": "mistralai/mistral-small-3.1-24b-instruct",
+      "target": "artificial_analysis",
+      "target_entity_id": "mistral-small-3-1",
+      "state": "candidate",
+      "confidence": 0.95,
+      "method": "source_metadata_exact",
+      "evidence": "snapshot open_weights.openrouter_api_id exactly equals OpenRouter model ID; non-authoritative",
+      "last_verified": "2026-08-24T07:39:00Z"
+    },
+    {
+      "relation": "model_to_model",
+      "source": "openrouter",
+      "source_entity_id": "mistralai/mistral-small-3.2-24b-instruct",
+      "target": "artificial_analysis",
+      "target_entity_id": "mistral-small-3-2",
+      "state": "candidate",
+      "confidence": 0.95,
+      "method": "source_metadata_exact",
+      "evidence": "snapshot open_weights.openrouter_api_id exactly equals OpenRouter model ID; non-authoritative",
+      "last_verified": "2026-08-24T07:39:00Z"
+    },
+    {
+      "relation": "model_to_model",
+      "source": "openrouter",
+      "source_entity_id": "mistralai/mixtral-8x22b-instruct",
+      "target": "artificial_analysis",
+      "target_entity_id": "mistral-8x22b-instruct",
+      "state": "candidate",
+      "confidence": 0.95,
+      "method": "source_metadata_exact",
+      "evidence": "snapshot open_weights.openrouter_api_id exactly equals OpenRouter model ID; normalized model name/version equality; non-authoritative",
       "last_verified": "2026-08-24T07:39:00Z"
     },
     {
@@ -164,7 +670,8 @@
       "target_entity_id": "kimi-k2",
       "state": "candidate",
       "confidence": 0.95,
-      "evidence": "OpenRouter model portion equals AA slug; normalized model name/version equality; non-authoritative",
+      "method": "source_metadata_exact",
+      "evidence": "snapshot open_weights.openrouter_api_id exactly equals OpenRouter model ID; OpenRouter model portion equals AA slug; normalized model name/version equality; non-authoritative",
       "last_verified": "2026-08-24T07:39:00Z"
     },
     {
@@ -175,7 +682,8 @@
       "target_entity_id": "kimi-k2-0905",
       "state": "candidate",
       "confidence": 0.95,
-      "evidence": "OpenRouter model portion equals AA slug; normalized model name/version equality; non-authoritative",
+      "method": "source_metadata_exact",
+      "evidence": "snapshot open_weights.openrouter_api_id exactly equals OpenRouter model ID; AA RSC hostApiId exactly equals OpenRouter model ID; provider-host corroboration only; OpenRouter model portion equals AA slug; normalized model name/version equality; non-authoritative",
       "last_verified": "2026-08-24T07:39:00Z"
     },
     {
@@ -186,7 +694,8 @@
       "target_entity_id": "kimi-k2-thinking",
       "state": "candidate",
       "confidence": 0.95,
-      "evidence": "OpenRouter model portion equals AA slug; normalized model name/version equality; non-authoritative",
+      "method": "source_metadata_exact",
+      "evidence": "snapshot open_weights.openrouter_api_id exactly equals OpenRouter model ID; OpenRouter model portion equals AA slug; normalized model name/version equality; non-authoritative",
       "last_verified": "2026-08-24T07:39:00Z"
     },
     {
@@ -197,7 +706,8 @@
       "target_entity_id": "kimi-k2-7-code",
       "state": "candidate",
       "confidence": 0.95,
-      "evidence": "OpenRouter model portion equals AA slug; normalized model name/version equality; non-authoritative",
+      "method": "source_metadata_exact",
+      "evidence": "snapshot open_weights.openrouter_api_id exactly equals OpenRouter model ID; OpenRouter model portion equals AA slug; normalized model name/version equality; non-authoritative",
       "last_verified": "2026-08-24T07:39:00Z"
     },
     {
@@ -208,6 +718,7 @@
       "target_entity_id": "gpt-oss-120b",
       "state": "manual",
       "confidence": 1.0,
+      "method": "manual_alias",
       "evidence": "Artificial Analysis model page identifies the model as OpenAI gpt-oss-120b; its raw_fields.openrouter_api_id is openai/gpt-oss-120b; OpenRouter public model ID is identical.",
       "last_verified": "2026-08-23"
     },
@@ -219,6 +730,7 @@
       "target_entity_id": "qwen3-8-2-4t-a95b",
       "state": "candidate",
       "confidence": 0.95,
+      "method": "normalized_heuristic",
       "evidence": "OpenRouter model portion equals AA slug; normalized model name/version equality; non-authoritative",
       "last_verified": "2026-08-24T07:39:00Z"
     },
@@ -230,6 +742,7 @@
       "target_entity_id": "qwen3-8-27b",
       "state": "candidate",
       "confidence": 0.95,
+      "method": "normalized_heuristic",
       "evidence": "OpenRouter model portion equals AA slug; normalized model name/version equality; non-authoritative",
       "last_verified": "2026-08-24T07:39:00Z"
     },
@@ -241,6 +754,7 @@
       "target_entity_id": "qwen3-8-max",
       "state": "candidate",
       "confidence": 0.95,
+      "method": "normalized_heuristic",
       "evidence": "OpenRouter model portion equals AA slug; normalized model name/version equality; non-authoritative",
       "last_verified": "2026-08-24T07:39:00Z"
     },
@@ -252,6 +766,7 @@
       "target_entity_id": "grok-4-6",
       "state": "candidate",
       "confidence": 0.95,
+      "method": "normalized_heuristic",
       "evidence": "OpenRouter model portion equals AA slug; normalized model name/version equality; non-authoritative",
       "last_verified": "2026-08-24T07:39:00Z"
     },
@@ -263,6 +778,7 @@
       "target_entity_id": "gpt-oss-120b:coreweave:/providers/coreweave",
       "state": "manual",
       "confidence": 1.0,
+      "method": "manual_alias",
       "evidence": "For gpt-oss-120b, OpenRouter's CoreWeave fp4 endpoint and AA's CoreWeave endpoint row describe the same provider variant; exact model+variant mapping, not a namespace join.",
       "last_verified": "2026-08-23"
     },
@@ -274,6 +790,7 @@
       "target_entity_id": "gpt-oss-120b:deepinfra/turbo:/providers/deepinfra",
       "state": "manual",
       "confidence": 1.0,
+      "method": "manual_alias",
       "evidence": "For gpt-oss-120b, both sources explicitly label the endpoint Turbo; exact model+variant mapping to AA's below-reference Turbo observation.",
       "last_verified": "2026-08-23"
     },
@@ -319,43 +836,7 @@
     },
     {
       "relation": "model_to_model",
-      "source_entity_id": "amazon/nova-2-lite-v1"
-    },
-    {
-      "relation": "model_to_model",
-      "source_entity_id": "amazon/nova-lite-v1"
-    },
-    {
-      "relation": "model_to_model",
-      "source_entity_id": "amazon/nova-micro-v1"
-    },
-    {
-      "relation": "model_to_model",
-      "source_entity_id": "amazon/nova-premier-v1"
-    },
-    {
-      "relation": "model_to_model",
-      "source_entity_id": "amazon/nova-pro-v1"
-    },
-    {
-      "relation": "model_to_model",
       "source_entity_id": "anthracite-org/magnum-v4-72b"
-    },
-    {
-      "relation": "model_to_model",
-      "source_entity_id": "anthropic/claude-3-haiku"
-    },
-    {
-      "relation": "model_to_model",
-      "source_entity_id": "anthropic/claude-fable-5"
-    },
-    {
-      "relation": "model_to_model",
-      "source_entity_id": "anthropic/claude-opus-4.5"
-    },
-    {
-      "relation": "model_to_model",
-      "source_entity_id": "anthropic/claude-opus-4.6"
     },
     {
       "relation": "model_to_model",
@@ -363,19 +844,7 @@
     },
     {
       "relation": "model_to_model",
-      "source_entity_id": "anthropic/claude-opus-4.8"
-    },
-    {
-      "relation": "model_to_model",
       "source_entity_id": "anthropic/claude-opus-5"
-    },
-    {
-      "relation": "model_to_model",
-      "source_entity_id": "anthropic/claude-sonnet-4.6"
-    },
-    {
-      "relation": "model_to_model",
-      "source_entity_id": "anthropic/claude-sonnet-5"
     },
     {
       "relation": "model_to_model",
@@ -391,43 +860,7 @@
     },
     {
       "relation": "model_to_model",
-      "source_entity_id": "cohere/command-a"
-    },
-    {
-      "relation": "model_to_model",
-      "source_entity_id": "deepseek/deepseek-r1"
-    },
-    {
-      "relation": "model_to_model",
-      "source_entity_id": "deepseek/deepseek-r1-0528"
-    },
-    {
-      "relation": "model_to_model",
-      "source_entity_id": "deepseek/deepseek-r1-distill-llama-70b"
-    },
-    {
-      "relation": "model_to_model",
-      "source_entity_id": "deepseek/deepseek-v3.1-terminus"
-    },
-    {
-      "relation": "model_to_model",
-      "source_entity_id": "deepseek/deepseek-v3.2"
-    },
-    {
-      "relation": "model_to_model",
-      "source_entity_id": "deepseek/deepseek-v4-flash"
-    },
-    {
-      "relation": "model_to_model",
-      "source_entity_id": "deepseek/deepseek-v4-pro"
-    },
-    {
-      "relation": "model_to_model",
       "source_entity_id": "dots-studio/dots-3-note-preview:free"
-    },
-    {
-      "relation": "model_to_model",
-      "source_entity_id": "google/gemini-2.5-flash"
     },
     {
       "relation": "model_to_model",
@@ -436,18 +869,6 @@
     {
       "relation": "model_to_model",
       "source_entity_id": "google/gemini-2.5-pro"
-    },
-    {
-      "relation": "model_to_model",
-      "source_entity_id": "google/gemini-3.1-flash-lite-preview"
-    },
-    {
-      "relation": "model_to_model",
-      "source_entity_id": "google/gemini-3.1-pro-preview"
-    },
-    {
-      "relation": "model_to_model",
-      "source_entity_id": "google/gemini-3.5-flash"
     },
     {
       "relation": "model_to_model",
@@ -467,23 +888,7 @@
     },
     {
       "relation": "model_to_model",
-      "source_entity_id": "ibm-granite/granite-4.0-h-micro"
-    },
-    {
-      "relation": "model_to_model",
-      "source_entity_id": "inclusionai/ling-2.6-1t"
-    },
-    {
-      "relation": "model_to_model",
-      "source_entity_id": "inclusionai/ling-2.6-flash"
-    },
-    {
-      "relation": "model_to_model",
       "source_entity_id": "inclusionai/ling-3.0-flash"
-    },
-    {
-      "relation": "model_to_model",
-      "source_entity_id": "inclusionai/ring-2.6-1t"
     },
     {
       "relation": "model_to_model",
@@ -503,26 +908,6 @@
     },
     {
       "relation": "model_to_model",
-      "source_entity_id": "meta-llama/llama-3.1-70b-instruct"
-    },
-    {
-      "relation": "model_to_model",
-      "source_entity_id": "meta-llama/llama-3.1-8b-instruct"
-    },
-    {
-      "relation": "model_to_model",
-      "source_entity_id": "meta-llama/llama-3.2-1b-instruct"
-    },
-    {
-      "relation": "model_to_model",
-      "source_entity_id": "meta-llama/llama-3.2-3b-instruct"
-    },
-    {
-      "relation": "model_to_model",
-      "source_entity_id": "meta-llama/llama-3.3-70b-instruct"
-    },
-    {
-      "relation": "model_to_model",
       "source_entity_id": "meta-llama/llama-guard-4-12b"
     },
     {
@@ -539,35 +924,7 @@
     },
     {
       "relation": "model_to_model",
-      "source_entity_id": "minimax/minimax-m2"
-    },
-    {
-      "relation": "model_to_model",
-      "source_entity_id": "minimax/minimax-m2.1"
-    },
-    {
-      "relation": "model_to_model",
-      "source_entity_id": "minimax/minimax-m2.5"
-    },
-    {
-      "relation": "model_to_model",
-      "source_entity_id": "minimax/minimax-m2.7"
-    },
-    {
-      "relation": "model_to_model",
-      "source_entity_id": "minimax/minimax-m3"
-    },
-    {
-      "relation": "model_to_model",
       "source_entity_id": "mistralai/codestral-2508"
-    },
-    {
-      "relation": "model_to_model",
-      "source_entity_id": "mistralai/ministral-14b-2512"
-    },
-    {
-      "relation": "model_to_model",
-      "source_entity_id": "mistralai/ministral-3b-2512"
     },
     {
       "relation": "model_to_model",
@@ -575,47 +932,11 @@
     },
     {
       "relation": "model_to_model",
-      "source_entity_id": "mistralai/ministral-8b-2512"
-    },
-    {
-      "relation": "model_to_model",
-      "source_entity_id": "mistralai/mistral-large-2512"
-    },
-    {
-      "relation": "model_to_model",
       "source_entity_id": "mistralai/mistral-nemo"
     },
     {
       "relation": "model_to_model",
-      "source_entity_id": "mistralai/mistral-small-24b-instruct-2501"
-    },
-    {
-      "relation": "model_to_model",
-      "source_entity_id": "mistralai/mistral-small-2603"
-    },
-    {
-      "relation": "model_to_model",
-      "source_entity_id": "mistralai/mistral-small-3.1-24b-instruct"
-    },
-    {
-      "relation": "model_to_model",
-      "source_entity_id": "mistralai/mistral-small-3.2-24b-instruct"
-    },
-    {
-      "relation": "model_to_model",
-      "source_entity_id": "mistralai/mixtral-8x22b-instruct"
-    },
-    {
-      "relation": "model_to_model",
       "source_entity_id": "mistralai/voxtral-small-24b-2507"
-    },
-    {
-      "relation": "model_to_model",
-      "source_entity_id": "moonshotai/kimi-k2.5"
-    },
-    {
-      "relation": "model_to_model",
-      "source_entity_id": "moonshotai/kimi-k2.6"
     },
     {
       "relation": "model_to_model",
@@ -3121,6 +3442,19 @@
   "ambiguous": [
     {
       "relation": "model_to_model",
+      "source_entity_id": "amazon/nova-2-lite-v1",
+      "method": "source_metadata_exact",
+      "candidates": [
+        "nova-2-0-lite",
+        "nova-2-0-lite-reasoning-low",
+        "nova-2-0-lite-reasoning-medium"
+      ],
+      "evidence": [
+        "snapshot open_weights.openrouter_api_id exactly equals OpenRouter model ID"
+      ]
+    },
+    {
+      "relation": "model_to_model",
       "source_entity_id": "anthropic/claude-fable-5:batch",
       "candidates": [
         "claude-2",
@@ -3171,50 +3505,14 @@
     {
       "relation": "model_to_model",
       "source_entity_id": "anthropic/claude-haiku-4.5",
+      "method": "source_metadata_exact",
       "candidates": [
-        "claude-2",
-        "claude-21",
-        "claude-3-5-haiku",
-        "claude-3-7-sonnet",
-        "claude-3-7-sonnet-thinking",
-        "claude-3-haiku",
-        "claude-3-opus",
-        "claude-3-sonnet",
-        "claude-35-sonnet",
-        "claude-35-sonnet-june-24",
-        "claude-4-1-opus",
-        "claude-4-1-opus-thinking",
         "claude-4-5-haiku",
-        "claude-4-5-haiku-reasoning",
-        "claude-4-5-sonnet",
-        "claude-4-5-sonnet-thinking",
-        "claude-4-opus",
-        "claude-4-opus-thinking",
-        "claude-4-sonnet",
-        "claude-4-sonnet-thinking",
-        "claude-fable-5",
-        "claude-instant",
-        "claude-opus-4-5",
-        "claude-opus-4-5-thinking",
-        "claude-opus-4-6",
-        "claude-opus-4-6-adaptive",
-        "claude-opus-4-7",
-        "claude-opus-4-7-non-reasoning",
-        "claude-opus-4-8",
-        "claude-opus-5",
-        "claude-opus-5-high",
-        "claude-opus-5-low",
-        "claude-opus-5-medium",
-        "claude-opus-5-xhigh",
-        "claude-sonnet-4-6",
-        "claude-sonnet-4-6-adaptive",
-        "claude-sonnet-4-6-non-reasoning-low-effort",
-        "claude-sonnet-5",
-        "claude-sonnet-5-high",
-        "claude-sonnet-5-low",
-        "claude-sonnet-5-medium",
-        "claude-sonnet-5-non-reasoning",
-        "claude-sonnet-5-xhigh"
+        "claude-4-5-haiku-reasoning"
+      ],
+      "evidence": [
+        "OpenRouter namespace agrees with AA creator",
+        "snapshot open_weights.openrouter_api_id exactly equals OpenRouter model ID"
       ]
     },
     {
@@ -3269,99 +3567,27 @@
     {
       "relation": "model_to_model",
       "source_entity_id": "anthropic/claude-opus-4",
+      "method": "source_metadata_exact",
       "candidates": [
-        "claude-2",
-        "claude-21",
-        "claude-3-5-haiku",
-        "claude-3-7-sonnet",
-        "claude-3-7-sonnet-thinking",
-        "claude-3-haiku",
-        "claude-3-opus",
-        "claude-3-sonnet",
-        "claude-35-sonnet",
-        "claude-35-sonnet-june-24",
-        "claude-4-1-opus",
-        "claude-4-1-opus-thinking",
-        "claude-4-5-haiku",
-        "claude-4-5-haiku-reasoning",
-        "claude-4-5-sonnet",
-        "claude-4-5-sonnet-thinking",
         "claude-4-opus",
-        "claude-4-opus-thinking",
-        "claude-4-sonnet",
-        "claude-4-sonnet-thinking",
-        "claude-fable-5",
-        "claude-instant",
-        "claude-opus-4-5",
-        "claude-opus-4-5-thinking",
-        "claude-opus-4-6",
-        "claude-opus-4-6-adaptive",
-        "claude-opus-4-7",
-        "claude-opus-4-7-non-reasoning",
-        "claude-opus-4-8",
-        "claude-opus-5",
-        "claude-opus-5-high",
-        "claude-opus-5-low",
-        "claude-opus-5-medium",
-        "claude-opus-5-xhigh",
-        "claude-sonnet-4-6",
-        "claude-sonnet-4-6-adaptive",
-        "claude-sonnet-4-6-non-reasoning-low-effort",
-        "claude-sonnet-5",
-        "claude-sonnet-5-high",
-        "claude-sonnet-5-low",
-        "claude-sonnet-5-medium",
-        "claude-sonnet-5-non-reasoning",
-        "claude-sonnet-5-xhigh"
+        "claude-4-opus-thinking"
+      ],
+      "evidence": [
+        "OpenRouter namespace agrees with AA creator",
+        "snapshot open_weights.openrouter_api_id exactly equals OpenRouter model ID"
       ]
     },
     {
       "relation": "model_to_model",
       "source_entity_id": "anthropic/claude-opus-4.1",
+      "method": "source_metadata_exact",
       "candidates": [
-        "claude-2",
-        "claude-21",
-        "claude-3-5-haiku",
-        "claude-3-7-sonnet",
-        "claude-3-7-sonnet-thinking",
-        "claude-3-haiku",
-        "claude-3-opus",
-        "claude-3-sonnet",
-        "claude-35-sonnet",
-        "claude-35-sonnet-june-24",
         "claude-4-1-opus",
-        "claude-4-1-opus-thinking",
-        "claude-4-5-haiku",
-        "claude-4-5-haiku-reasoning",
-        "claude-4-5-sonnet",
-        "claude-4-5-sonnet-thinking",
-        "claude-4-opus",
-        "claude-4-opus-thinking",
-        "claude-4-sonnet",
-        "claude-4-sonnet-thinking",
-        "claude-fable-5",
-        "claude-instant",
-        "claude-opus-4-5",
-        "claude-opus-4-5-thinking",
-        "claude-opus-4-6",
-        "claude-opus-4-6-adaptive",
-        "claude-opus-4-7",
-        "claude-opus-4-7-non-reasoning",
-        "claude-opus-4-8",
-        "claude-opus-5",
-        "claude-opus-5-high",
-        "claude-opus-5-low",
-        "claude-opus-5-medium",
-        "claude-opus-5-xhigh",
-        "claude-sonnet-4-6",
-        "claude-sonnet-4-6-adaptive",
-        "claude-sonnet-4-6-non-reasoning-low-effort",
-        "claude-sonnet-5",
-        "claude-sonnet-5-high",
-        "claude-sonnet-5-low",
-        "claude-sonnet-5-medium",
-        "claude-sonnet-5-non-reasoning",
-        "claude-sonnet-5-xhigh"
+        "claude-4-1-opus-thinking"
+      ],
+      "evidence": [
+        "OpenRouter namespace agrees with AA creator",
+        "snapshot open_weights.openrouter_api_id exactly equals OpenRouter model ID"
       ]
     },
     {
@@ -3415,6 +3641,21 @@
     },
     {
       "relation": "model_to_model",
+      "source_entity_id": "anthropic/claude-opus-4.5",
+      "method": "source_metadata_exact",
+      "candidates": [
+        "claude-opus-4-5",
+        "claude-opus-4-5-thinking"
+      ],
+      "evidence": [
+        "OpenRouter model portion equals AA slug",
+        "OpenRouter namespace agrees with AA creator",
+        "normalized model name/version equality",
+        "snapshot open_weights.openrouter_api_id exactly equals OpenRouter model ID"
+      ]
+    },
+    {
+      "relation": "model_to_model",
       "source_entity_id": "anthropic/claude-opus-4.5:batch",
       "candidates": [
         "claude-2",
@@ -3460,6 +3701,21 @@
         "claude-sonnet-5-medium",
         "claude-sonnet-5-non-reasoning",
         "claude-sonnet-5-xhigh"
+      ]
+    },
+    {
+      "relation": "model_to_model",
+      "source_entity_id": "anthropic/claude-opus-4.6",
+      "method": "source_metadata_exact",
+      "candidates": [
+        "claude-opus-4-6",
+        "claude-opus-4-6-adaptive"
+      ],
+      "evidence": [
+        "OpenRouter model portion equals AA slug",
+        "OpenRouter namespace agrees with AA creator",
+        "normalized model name/version equality",
+        "snapshot open_weights.openrouter_api_id exactly equals OpenRouter model ID"
       ]
     },
     {
@@ -3808,99 +4064,27 @@
     {
       "relation": "model_to_model",
       "source_entity_id": "anthropic/claude-sonnet-4",
+      "method": "source_metadata_exact",
       "candidates": [
-        "claude-2",
-        "claude-21",
-        "claude-3-5-haiku",
-        "claude-3-7-sonnet",
-        "claude-3-7-sonnet-thinking",
-        "claude-3-haiku",
-        "claude-3-opus",
-        "claude-3-sonnet",
-        "claude-35-sonnet",
-        "claude-35-sonnet-june-24",
-        "claude-4-1-opus",
-        "claude-4-1-opus-thinking",
-        "claude-4-5-haiku",
-        "claude-4-5-haiku-reasoning",
-        "claude-4-5-sonnet",
-        "claude-4-5-sonnet-thinking",
-        "claude-4-opus",
-        "claude-4-opus-thinking",
         "claude-4-sonnet",
-        "claude-4-sonnet-thinking",
-        "claude-fable-5",
-        "claude-instant",
-        "claude-opus-4-5",
-        "claude-opus-4-5-thinking",
-        "claude-opus-4-6",
-        "claude-opus-4-6-adaptive",
-        "claude-opus-4-7",
-        "claude-opus-4-7-non-reasoning",
-        "claude-opus-4-8",
-        "claude-opus-5",
-        "claude-opus-5-high",
-        "claude-opus-5-low",
-        "claude-opus-5-medium",
-        "claude-opus-5-xhigh",
-        "claude-sonnet-4-6",
-        "claude-sonnet-4-6-adaptive",
-        "claude-sonnet-4-6-non-reasoning-low-effort",
-        "claude-sonnet-5",
-        "claude-sonnet-5-high",
-        "claude-sonnet-5-low",
-        "claude-sonnet-5-medium",
-        "claude-sonnet-5-non-reasoning",
-        "claude-sonnet-5-xhigh"
+        "claude-4-sonnet-thinking"
+      ],
+      "evidence": [
+        "OpenRouter namespace agrees with AA creator",
+        "snapshot open_weights.openrouter_api_id exactly equals OpenRouter model ID"
       ]
     },
     {
       "relation": "model_to_model",
       "source_entity_id": "anthropic/claude-sonnet-4.5",
+      "method": "source_metadata_exact",
       "candidates": [
-        "claude-2",
-        "claude-21",
-        "claude-3-5-haiku",
-        "claude-3-7-sonnet",
-        "claude-3-7-sonnet-thinking",
-        "claude-3-haiku",
-        "claude-3-opus",
-        "claude-3-sonnet",
-        "claude-35-sonnet",
-        "claude-35-sonnet-june-24",
-        "claude-4-1-opus",
-        "claude-4-1-opus-thinking",
-        "claude-4-5-haiku",
-        "claude-4-5-haiku-reasoning",
         "claude-4-5-sonnet",
-        "claude-4-5-sonnet-thinking",
-        "claude-4-opus",
-        "claude-4-opus-thinking",
-        "claude-4-sonnet",
-        "claude-4-sonnet-thinking",
-        "claude-fable-5",
-        "claude-instant",
-        "claude-opus-4-5",
-        "claude-opus-4-5-thinking",
-        "claude-opus-4-6",
-        "claude-opus-4-6-adaptive",
-        "claude-opus-4-7",
-        "claude-opus-4-7-non-reasoning",
-        "claude-opus-4-8",
-        "claude-opus-5",
-        "claude-opus-5-high",
-        "claude-opus-5-low",
-        "claude-opus-5-medium",
-        "claude-opus-5-xhigh",
-        "claude-sonnet-4-6",
-        "claude-sonnet-4-6-adaptive",
-        "claude-sonnet-4-6-non-reasoning-low-effort",
-        "claude-sonnet-5",
-        "claude-sonnet-5-high",
-        "claude-sonnet-5-low",
-        "claude-sonnet-5-medium",
-        "claude-sonnet-5-non-reasoning",
-        "claude-sonnet-5-xhigh"
+        "claude-4-5-sonnet-thinking"
+      ],
+      "evidence": [
+        "OpenRouter namespace agrees with AA creator",
+        "snapshot open_weights.openrouter_api_id exactly equals OpenRouter model ID"
       ]
     },
     {
@@ -3950,6 +4134,22 @@
         "claude-sonnet-5-medium",
         "claude-sonnet-5-non-reasoning",
         "claude-sonnet-5-xhigh"
+      ]
+    },
+    {
+      "relation": "model_to_model",
+      "source_entity_id": "anthropic/claude-sonnet-4.6",
+      "method": "source_metadata_exact",
+      "candidates": [
+        "claude-sonnet-4-6",
+        "claude-sonnet-4-6-adaptive",
+        "claude-sonnet-4-6-non-reasoning-low-effort"
+      ],
+      "evidence": [
+        "OpenRouter model portion equals AA slug",
+        "OpenRouter namespace agrees with AA creator",
+        "normalized model name/version equality",
+        "snapshot open_weights.openrouter_api_id exactly equals OpenRouter model ID"
       ]
     },
     {
@@ -4156,170 +4356,78 @@
     },
     {
       "relation": "model_to_model",
-      "source_entity_id": "deepseek/deepseek-chat",
-      "candidates": [
-        "deepseek-coder-v2",
-        "deepseek-coder-v2-lite",
-        "deepseek-llm-67b-chat",
-        "deepseek-r1",
-        "deepseek-r1-0120",
-        "deepseek-r1-distill-llama-70b",
-        "deepseek-r1-distill-llama-8b",
-        "deepseek-r1-distill-qwen-1-5b",
-        "deepseek-r1-distill-qwen-14b",
-        "deepseek-r1-distill-qwen-32b",
-        "deepseek-r1-qwen3-8b",
-        "deepseek-v2",
-        "deepseek-v2-5",
-        "deepseek-v2-5-sep-2024",
-        "deepseek-v3",
-        "deepseek-v3-0324",
-        "deepseek-v3-1",
-        "deepseek-v3-1-reasoning",
-        "deepseek-v3-1-terminus",
-        "deepseek-v3-1-terminus-reasoning",
-        "deepseek-v3-2",
-        "deepseek-v3-2-0925",
-        "deepseek-v3-2-reasoning",
-        "deepseek-v3-2-reasoning-0925",
-        "deepseek-v3-2-speciale",
-        "deepseek-v4-flash",
-        "deepseek-v4-flash-0420",
-        "deepseek-v4-flash-0420-high",
-        "deepseek-v4-flash-high",
-        "deepseek-v4-flash-non-reasoning",
-        "deepseek-v4-pro",
-        "deepseek-v4-pro-0424",
-        "deepseek-v4-pro-0424-high",
-        "deepseek-v4-pro-0424-non-reasoning",
-        "deepseek-v4-pro-high",
-        "deepseek-v4-pro-non-reasoning"
-      ]
-    },
-    {
-      "relation": "model_to_model",
-      "source_entity_id": "deepseek/deepseek-chat-v3-0324",
-      "candidates": [
-        "deepseek-coder-v2",
-        "deepseek-coder-v2-lite",
-        "deepseek-llm-67b-chat",
-        "deepseek-r1",
-        "deepseek-r1-0120",
-        "deepseek-r1-distill-llama-70b",
-        "deepseek-r1-distill-llama-8b",
-        "deepseek-r1-distill-qwen-1-5b",
-        "deepseek-r1-distill-qwen-14b",
-        "deepseek-r1-distill-qwen-32b",
-        "deepseek-r1-qwen3-8b",
-        "deepseek-v2",
-        "deepseek-v2-5",
-        "deepseek-v2-5-sep-2024",
-        "deepseek-v3",
-        "deepseek-v3-0324",
-        "deepseek-v3-1",
-        "deepseek-v3-1-reasoning",
-        "deepseek-v3-1-terminus",
-        "deepseek-v3-1-terminus-reasoning",
-        "deepseek-v3-2",
-        "deepseek-v3-2-0925",
-        "deepseek-v3-2-reasoning",
-        "deepseek-v3-2-reasoning-0925",
-        "deepseek-v3-2-speciale",
-        "deepseek-v4-flash",
-        "deepseek-v4-flash-0420",
-        "deepseek-v4-flash-0420-high",
-        "deepseek-v4-flash-high",
-        "deepseek-v4-flash-non-reasoning",
-        "deepseek-v4-pro",
-        "deepseek-v4-pro-0424",
-        "deepseek-v4-pro-0424-high",
-        "deepseek-v4-pro-0424-non-reasoning",
-        "deepseek-v4-pro-high",
-        "deepseek-v4-pro-non-reasoning"
-      ]
-    },
-    {
-      "relation": "model_to_model",
       "source_entity_id": "deepseek/deepseek-chat-v3.1",
+      "method": "source_metadata_exact",
       "candidates": [
-        "deepseek-coder-v2",
-        "deepseek-coder-v2-lite",
-        "deepseek-llm-67b-chat",
-        "deepseek-r1",
-        "deepseek-r1-0120",
-        "deepseek-r1-distill-llama-70b",
-        "deepseek-r1-distill-llama-8b",
-        "deepseek-r1-distill-qwen-1-5b",
-        "deepseek-r1-distill-qwen-14b",
-        "deepseek-r1-distill-qwen-32b",
-        "deepseek-r1-qwen3-8b",
-        "deepseek-v2",
-        "deepseek-v2-5",
-        "deepseek-v2-5-sep-2024",
-        "deepseek-v3",
-        "deepseek-v3-0324",
         "deepseek-v3-1",
-        "deepseek-v3-1-reasoning",
+        "deepseek-v3-1-reasoning"
+      ],
+      "evidence": [
+        "OpenRouter namespace agrees with AA creator",
+        "snapshot open_weights.openrouter_api_id exactly equals OpenRouter model ID"
+      ]
+    },
+    {
+      "relation": "model_to_model",
+      "source_entity_id": "deepseek/deepseek-v3.1-terminus",
+      "method": "source_metadata_exact",
+      "candidates": [
         "deepseek-v3-1-terminus",
-        "deepseek-v3-1-terminus-reasoning",
+        "deepseek-v3-1-terminus-reasoning"
+      ],
+      "evidence": [
+        "AA RSC hostApiId exactly equals OpenRouter model ID; provider-host corroboration only",
+        "OpenRouter model portion equals AA slug",
+        "OpenRouter namespace agrees with AA creator",
+        "normalized model name/version equality",
+        "snapshot open_weights.openrouter_api_id exactly equals OpenRouter model ID"
+      ]
+    },
+    {
+      "relation": "model_to_model",
+      "source_entity_id": "deepseek/deepseek-v3.2",
+      "method": "source_metadata_exact",
+      "candidates": [
         "deepseek-v3-2",
-        "deepseek-v3-2-0925",
-        "deepseek-v3-2-reasoning",
-        "deepseek-v3-2-reasoning-0925",
-        "deepseek-v3-2-speciale",
-        "deepseek-v4-flash",
-        "deepseek-v4-flash-0420",
-        "deepseek-v4-flash-0420-high",
-        "deepseek-v4-flash-high",
-        "deepseek-v4-flash-non-reasoning",
-        "deepseek-v4-pro",
-        "deepseek-v4-pro-0424",
-        "deepseek-v4-pro-0424-high",
-        "deepseek-v4-pro-0424-non-reasoning",
-        "deepseek-v4-pro-high",
-        "deepseek-v4-pro-non-reasoning"
+        "deepseek-v3-2-reasoning"
+      ],
+      "evidence": [
+        "OpenRouter model portion equals AA slug",
+        "OpenRouter namespace agrees with AA creator",
+        "normalized model name/version equality",
+        "snapshot open_weights.openrouter_api_id exactly equals OpenRouter model ID"
       ]
     },
     {
       "relation": "model_to_model",
       "source_entity_id": "deepseek/deepseek-v3.2-exp",
+      "method": "source_metadata_exact",
       "candidates": [
         "deepseek-v3-2-0925",
-        "deepseek-v3-2-reasoning-0925",
-        "deepseek-coder-v2",
-        "deepseek-coder-v2-lite",
-        "deepseek-llm-67b-chat",
-        "deepseek-r1",
-        "deepseek-r1-0120",
-        "deepseek-r1-distill-llama-70b",
-        "deepseek-r1-distill-llama-8b",
-        "deepseek-r1-distill-qwen-1-5b",
-        "deepseek-r1-distill-qwen-14b",
-        "deepseek-r1-distill-qwen-32b",
-        "deepseek-r1-qwen3-8b",
-        "deepseek-v2",
-        "deepseek-v2-5",
-        "deepseek-v2-5-sep-2024",
-        "deepseek-v3",
-        "deepseek-v3-0324",
-        "deepseek-v3-1",
-        "deepseek-v3-1-reasoning",
-        "deepseek-v3-1-terminus",
-        "deepseek-v3-1-terminus-reasoning",
-        "deepseek-v3-2",
-        "deepseek-v3-2-reasoning",
-        "deepseek-v3-2-speciale",
+        "deepseek-v3-2-reasoning-0925"
+      ],
+      "evidence": [
+        "OpenRouter namespace agrees with AA creator",
+        "normalized model name/version equality",
+        "snapshot open_weights.openrouter_api_id exactly equals OpenRouter model ID"
+      ]
+    },
+    {
+      "relation": "model_to_model",
+      "source_entity_id": "deepseek/deepseek-v4-flash",
+      "method": "source_metadata_exact",
+      "candidates": [
         "deepseek-v4-flash",
         "deepseek-v4-flash-0420",
         "deepseek-v4-flash-0420-high",
-        "deepseek-v4-flash-high",
-        "deepseek-v4-flash-non-reasoning",
-        "deepseek-v4-pro",
-        "deepseek-v4-pro-0424",
-        "deepseek-v4-pro-0424-high",
-        "deepseek-v4-pro-0424-non-reasoning",
-        "deepseek-v4-pro-high",
-        "deepseek-v4-pro-non-reasoning"
+        "deepseek-v4-flash-high"
+      ],
+      "evidence": [
+        "AA RSC hostApiId exactly equals OpenRouter model ID; provider-host corroboration only",
+        "OpenRouter model portion equals AA slug",
+        "OpenRouter namespace agrees with AA creator",
+        "normalized model name/version equality",
+        "snapshot open_weights.openrouter_api_id exactly equals OpenRouter model ID"
       ]
     },
     {
@@ -4408,6 +4516,21 @@
     },
     {
       "relation": "model_to_model",
+      "source_entity_id": "deepseek/deepseek-v4-pro",
+      "method": "source_metadata_exact",
+      "candidates": [
+        "deepseek-v4-pro",
+        "deepseek-v4-pro-high"
+      ],
+      "evidence": [
+        "OpenRouter model portion equals AA slug",
+        "OpenRouter namespace agrees with AA creator",
+        "normalized model name/version equality",
+        "snapshot open_weights.openrouter_api_id exactly equals OpenRouter model ID"
+      ]
+    },
+    {
+      "relation": "model_to_model",
       "source_entity_id": "deepseek/deepseek-v4-pro-0813",
       "candidates": [
         "deepseek-coder-v2",
@@ -4446,6 +4569,22 @@
         "deepseek-v4-pro-0424-non-reasoning",
         "deepseek-v4-pro-high",
         "deepseek-v4-pro-non-reasoning"
+      ]
+    },
+    {
+      "relation": "model_to_model",
+      "source_entity_id": "google/gemini-2.5-flash",
+      "method": "source_metadata_exact",
+      "candidates": [
+        "gemini-2-5-flash",
+        "gemini-2-5-flash-reasoning"
+      ],
+      "evidence": [
+        "AA RSC hostApiId exactly equals OpenRouter model ID; provider-host corroboration only",
+        "OpenRouter model portion equals AA slug",
+        "OpenRouter namespace agrees with AA creator",
+        "normalized model name/version equality",
+        "snapshot open_weights.openrouter_api_id exactly equals OpenRouter model ID"
       ]
     },
     {
@@ -4723,69 +4862,14 @@
     {
       "relation": "model_to_model",
       "source_entity_id": "google/gemini-3-flash-preview",
+      "method": "source_metadata_exact",
       "candidates": [
-        "diffusiongemma-26b-a4b",
-        "gemini-1-0-pro",
-        "gemini-1-0-ultra",
-        "gemini-1-5-flash",
-        "gemini-1-5-flash-8b",
-        "gemini-1-5-flash-may-2024",
-        "gemini-1-5-pro",
-        "gemini-1-5-pro-may-2024",
-        "gemini-2-0-flash",
-        "gemini-2-0-flash-experimental",
-        "gemini-2-0-flash-lite-001",
-        "gemini-2-0-flash-lite-preview",
-        "gemini-2-0-flash-thinking-exp-0121",
-        "gemini-2-0-flash-thinking-exp-1219",
-        "gemini-2-0-pro-experimental-02-05",
-        "gemini-2-5-flash",
-        "gemini-2-5-flash-04-2025",
-        "gemini-2-5-flash-lite",
-        "gemini-2-5-flash-lite-preview-09-2025",
-        "gemini-2-5-flash-lite-preview-09-2025-reasoning",
-        "gemini-2-5-flash-lite-reasoning",
-        "gemini-2-5-flash-preview-09-2025",
-        "gemini-2-5-flash-preview-09-2025-reasoning",
-        "gemini-2-5-flash-reasoning",
-        "gemini-2-5-flash-reasoning-04-2025",
-        "gemini-2-5-pro",
-        "gemini-2-5-pro-03-25",
-        "gemini-2-5-pro-05-06",
-        "gemini-3-1-flash-lite-preview",
-        "gemini-3-1-pro-preview",
-        "gemini-3-5-flash",
-        "gemini-3-5-flash-lite",
-        "gemini-3-5-flash-medium",
-        "gemini-3-5-flash-minimal",
-        "gemini-3-6-flash",
-        "gemini-3-7-flash",
-        "gemini-3-7-flash-low",
-        "gemini-3-7-flash-medium",
-        "gemini-3-deep-think",
         "gemini-3-flash",
-        "gemini-3-flash-reasoning",
-        "gemini-3-pro",
-        "gemini-3-pro-low",
-        "gemma-3-12b",
-        "gemma-3-1b",
-        "gemma-3-270m",
-        "gemma-3-27b",
-        "gemma-3-4b",
-        "gemma-3n-e2b",
-        "gemma-3n-e4b",
-        "gemma-3n-e4b-preview-0520",
-        "gemma-4-12b",
-        "gemma-4-12b-non-reasoning",
-        "gemma-4-26b-a4b",
-        "gemma-4-26b-a4b-non-reasoning",
-        "gemma-4-31b",
-        "gemma-4-31b-non-reasoning",
-        "gemma-4-e2b",
-        "gemma-4-e2b-non-reasoning",
-        "gemma-4-e4b",
-        "gemma-4-e4b-non-reasoning",
-        "palm-2"
+        "gemini-3-flash-reasoning"
+      ],
+      "evidence": [
+        "OpenRouter namespace agrees with AA creator",
+        "snapshot open_weights.openrouter_api_id exactly equals OpenRouter model ID"
       ]
     },
     {
@@ -5470,6 +5554,21 @@
     },
     {
       "relation": "model_to_model",
+      "source_entity_id": "google/gemini-3.5-flash",
+      "method": "source_metadata_exact",
+      "candidates": [
+        "gemini-3-5-flash",
+        "gemini-3-5-flash-medium"
+      ],
+      "evidence": [
+        "OpenRouter model portion equals AA slug",
+        "OpenRouter namespace agrees with AA creator",
+        "normalized model name/version equality",
+        "snapshot open_weights.openrouter_api_id exactly equals OpenRouter model ID"
+      ]
+    },
+    {
+      "relation": "model_to_model",
       "source_entity_id": "google/gemini-3.5-flash-lite:batch",
       "candidates": [
         "diffusiongemma-26b-a4b",
@@ -5810,210 +5909,6 @@
     },
     {
       "relation": "model_to_model",
-      "source_entity_id": "google/gemma-3-12b-it",
-      "candidates": [
-        "diffusiongemma-26b-a4b",
-        "gemini-1-0-pro",
-        "gemini-1-0-ultra",
-        "gemini-1-5-flash",
-        "gemini-1-5-flash-8b",
-        "gemini-1-5-flash-may-2024",
-        "gemini-1-5-pro",
-        "gemini-1-5-pro-may-2024",
-        "gemini-2-0-flash",
-        "gemini-2-0-flash-experimental",
-        "gemini-2-0-flash-lite-001",
-        "gemini-2-0-flash-lite-preview",
-        "gemini-2-0-flash-thinking-exp-0121",
-        "gemini-2-0-flash-thinking-exp-1219",
-        "gemini-2-0-pro-experimental-02-05",
-        "gemini-2-5-flash",
-        "gemini-2-5-flash-04-2025",
-        "gemini-2-5-flash-lite",
-        "gemini-2-5-flash-lite-preview-09-2025",
-        "gemini-2-5-flash-lite-preview-09-2025-reasoning",
-        "gemini-2-5-flash-lite-reasoning",
-        "gemini-2-5-flash-preview-09-2025",
-        "gemini-2-5-flash-preview-09-2025-reasoning",
-        "gemini-2-5-flash-reasoning",
-        "gemini-2-5-flash-reasoning-04-2025",
-        "gemini-2-5-pro",
-        "gemini-2-5-pro-03-25",
-        "gemini-2-5-pro-05-06",
-        "gemini-3-1-flash-lite-preview",
-        "gemini-3-1-pro-preview",
-        "gemini-3-5-flash",
-        "gemini-3-5-flash-lite",
-        "gemini-3-5-flash-medium",
-        "gemini-3-5-flash-minimal",
-        "gemini-3-6-flash",
-        "gemini-3-7-flash",
-        "gemini-3-7-flash-low",
-        "gemini-3-7-flash-medium",
-        "gemini-3-deep-think",
-        "gemini-3-flash",
-        "gemini-3-flash-reasoning",
-        "gemini-3-pro",
-        "gemini-3-pro-low",
-        "gemma-3-12b",
-        "gemma-3-1b",
-        "gemma-3-270m",
-        "gemma-3-27b",
-        "gemma-3-4b",
-        "gemma-3n-e2b",
-        "gemma-3n-e4b",
-        "gemma-3n-e4b-preview-0520",
-        "gemma-4-12b",
-        "gemma-4-12b-non-reasoning",
-        "gemma-4-26b-a4b",
-        "gemma-4-26b-a4b-non-reasoning",
-        "gemma-4-31b",
-        "gemma-4-31b-non-reasoning",
-        "gemma-4-e2b",
-        "gemma-4-e2b-non-reasoning",
-        "gemma-4-e4b",
-        "gemma-4-e4b-non-reasoning",
-        "palm-2"
-      ]
-    },
-    {
-      "relation": "model_to_model",
-      "source_entity_id": "google/gemma-3-27b-it",
-      "candidates": [
-        "diffusiongemma-26b-a4b",
-        "gemini-1-0-pro",
-        "gemini-1-0-ultra",
-        "gemini-1-5-flash",
-        "gemini-1-5-flash-8b",
-        "gemini-1-5-flash-may-2024",
-        "gemini-1-5-pro",
-        "gemini-1-5-pro-may-2024",
-        "gemini-2-0-flash",
-        "gemini-2-0-flash-experimental",
-        "gemini-2-0-flash-lite-001",
-        "gemini-2-0-flash-lite-preview",
-        "gemini-2-0-flash-thinking-exp-0121",
-        "gemini-2-0-flash-thinking-exp-1219",
-        "gemini-2-0-pro-experimental-02-05",
-        "gemini-2-5-flash",
-        "gemini-2-5-flash-04-2025",
-        "gemini-2-5-flash-lite",
-        "gemini-2-5-flash-lite-preview-09-2025",
-        "gemini-2-5-flash-lite-preview-09-2025-reasoning",
-        "gemini-2-5-flash-lite-reasoning",
-        "gemini-2-5-flash-preview-09-2025",
-        "gemini-2-5-flash-preview-09-2025-reasoning",
-        "gemini-2-5-flash-reasoning",
-        "gemini-2-5-flash-reasoning-04-2025",
-        "gemini-2-5-pro",
-        "gemini-2-5-pro-03-25",
-        "gemini-2-5-pro-05-06",
-        "gemini-3-1-flash-lite-preview",
-        "gemini-3-1-pro-preview",
-        "gemini-3-5-flash",
-        "gemini-3-5-flash-lite",
-        "gemini-3-5-flash-medium",
-        "gemini-3-5-flash-minimal",
-        "gemini-3-6-flash",
-        "gemini-3-7-flash",
-        "gemini-3-7-flash-low",
-        "gemini-3-7-flash-medium",
-        "gemini-3-deep-think",
-        "gemini-3-flash",
-        "gemini-3-flash-reasoning",
-        "gemini-3-pro",
-        "gemini-3-pro-low",
-        "gemma-3-12b",
-        "gemma-3-1b",
-        "gemma-3-270m",
-        "gemma-3-27b",
-        "gemma-3-4b",
-        "gemma-3n-e2b",
-        "gemma-3n-e4b",
-        "gemma-3n-e4b-preview-0520",
-        "gemma-4-12b",
-        "gemma-4-12b-non-reasoning",
-        "gemma-4-26b-a4b",
-        "gemma-4-26b-a4b-non-reasoning",
-        "gemma-4-31b",
-        "gemma-4-31b-non-reasoning",
-        "gemma-4-e2b",
-        "gemma-4-e2b-non-reasoning",
-        "gemma-4-e4b",
-        "gemma-4-e4b-non-reasoning",
-        "palm-2"
-      ]
-    },
-    {
-      "relation": "model_to_model",
-      "source_entity_id": "google/gemma-3-4b-it",
-      "candidates": [
-        "diffusiongemma-26b-a4b",
-        "gemini-1-0-pro",
-        "gemini-1-0-ultra",
-        "gemini-1-5-flash",
-        "gemini-1-5-flash-8b",
-        "gemini-1-5-flash-may-2024",
-        "gemini-1-5-pro",
-        "gemini-1-5-pro-may-2024",
-        "gemini-2-0-flash",
-        "gemini-2-0-flash-experimental",
-        "gemini-2-0-flash-lite-001",
-        "gemini-2-0-flash-lite-preview",
-        "gemini-2-0-flash-thinking-exp-0121",
-        "gemini-2-0-flash-thinking-exp-1219",
-        "gemini-2-0-pro-experimental-02-05",
-        "gemini-2-5-flash",
-        "gemini-2-5-flash-04-2025",
-        "gemini-2-5-flash-lite",
-        "gemini-2-5-flash-lite-preview-09-2025",
-        "gemini-2-5-flash-lite-preview-09-2025-reasoning",
-        "gemini-2-5-flash-lite-reasoning",
-        "gemini-2-5-flash-preview-09-2025",
-        "gemini-2-5-flash-preview-09-2025-reasoning",
-        "gemini-2-5-flash-reasoning",
-        "gemini-2-5-flash-reasoning-04-2025",
-        "gemini-2-5-pro",
-        "gemini-2-5-pro-03-25",
-        "gemini-2-5-pro-05-06",
-        "gemini-3-1-flash-lite-preview",
-        "gemini-3-1-pro-preview",
-        "gemini-3-5-flash",
-        "gemini-3-5-flash-lite",
-        "gemini-3-5-flash-medium",
-        "gemini-3-5-flash-minimal",
-        "gemini-3-6-flash",
-        "gemini-3-7-flash",
-        "gemini-3-7-flash-low",
-        "gemini-3-7-flash-medium",
-        "gemini-3-deep-think",
-        "gemini-3-flash",
-        "gemini-3-flash-reasoning",
-        "gemini-3-pro",
-        "gemini-3-pro-low",
-        "gemma-3-12b",
-        "gemma-3-1b",
-        "gemma-3-270m",
-        "gemma-3-27b",
-        "gemma-3-4b",
-        "gemma-3n-e2b",
-        "gemma-3n-e4b",
-        "gemma-3n-e4b-preview-0520",
-        "gemma-4-12b",
-        "gemma-4-12b-non-reasoning",
-        "gemma-4-26b-a4b",
-        "gemma-4-26b-a4b-non-reasoning",
-        "gemma-4-31b",
-        "gemma-4-31b-non-reasoning",
-        "gemma-4-e2b",
-        "gemma-4-e2b-non-reasoning",
-        "gemma-4-e4b",
-        "gemma-4-e4b-non-reasoning",
-        "palm-2"
-      ]
-    },
-    {
-      "relation": "model_to_model",
       "source_entity_id": "google/gemma-3n-e4b-it",
       "candidates": [
         "diffusiongemma-26b-a4b",
@@ -6083,69 +5978,15 @@
     {
       "relation": "model_to_model",
       "source_entity_id": "google/gemma-4-26b-a4b-it",
+      "method": "source_metadata_exact",
       "candidates": [
-        "diffusiongemma-26b-a4b",
-        "gemini-1-0-pro",
-        "gemini-1-0-ultra",
-        "gemini-1-5-flash",
-        "gemini-1-5-flash-8b",
-        "gemini-1-5-flash-may-2024",
-        "gemini-1-5-pro",
-        "gemini-1-5-pro-may-2024",
-        "gemini-2-0-flash",
-        "gemini-2-0-flash-experimental",
-        "gemini-2-0-flash-lite-001",
-        "gemini-2-0-flash-lite-preview",
-        "gemini-2-0-flash-thinking-exp-0121",
-        "gemini-2-0-flash-thinking-exp-1219",
-        "gemini-2-0-pro-experimental-02-05",
-        "gemini-2-5-flash",
-        "gemini-2-5-flash-04-2025",
-        "gemini-2-5-flash-lite",
-        "gemini-2-5-flash-lite-preview-09-2025",
-        "gemini-2-5-flash-lite-preview-09-2025-reasoning",
-        "gemini-2-5-flash-lite-reasoning",
-        "gemini-2-5-flash-preview-09-2025",
-        "gemini-2-5-flash-preview-09-2025-reasoning",
-        "gemini-2-5-flash-reasoning",
-        "gemini-2-5-flash-reasoning-04-2025",
-        "gemini-2-5-pro",
-        "gemini-2-5-pro-03-25",
-        "gemini-2-5-pro-05-06",
-        "gemini-3-1-flash-lite-preview",
-        "gemini-3-1-pro-preview",
-        "gemini-3-5-flash",
-        "gemini-3-5-flash-lite",
-        "gemini-3-5-flash-medium",
-        "gemini-3-5-flash-minimal",
-        "gemini-3-6-flash",
-        "gemini-3-7-flash",
-        "gemini-3-7-flash-low",
-        "gemini-3-7-flash-medium",
-        "gemini-3-deep-think",
-        "gemini-3-flash",
-        "gemini-3-flash-reasoning",
-        "gemini-3-pro",
-        "gemini-3-pro-low",
-        "gemma-3-12b",
-        "gemma-3-1b",
-        "gemma-3-270m",
-        "gemma-3-27b",
-        "gemma-3-4b",
-        "gemma-3n-e2b",
-        "gemma-3n-e4b",
-        "gemma-3n-e4b-preview-0520",
-        "gemma-4-12b",
-        "gemma-4-12b-non-reasoning",
         "gemma-4-26b-a4b",
-        "gemma-4-26b-a4b-non-reasoning",
-        "gemma-4-31b",
-        "gemma-4-31b-non-reasoning",
-        "gemma-4-e2b",
-        "gemma-4-e2b-non-reasoning",
-        "gemma-4-e4b",
-        "gemma-4-e4b-non-reasoning",
-        "palm-2"
+        "gemma-4-26b-a4b-non-reasoning"
+      ],
+      "evidence": [
+        "AA RSC hostApiId exactly equals OpenRouter model ID; provider-host corroboration only",
+        "OpenRouter namespace agrees with AA creator",
+        "snapshot open_weights.openrouter_api_id exactly equals OpenRouter model ID"
       ]
     },
     {
@@ -6219,69 +6060,15 @@
     {
       "relation": "model_to_model",
       "source_entity_id": "google/gemma-4-31b-it",
+      "method": "source_metadata_exact",
       "candidates": [
-        "diffusiongemma-26b-a4b",
-        "gemini-1-0-pro",
-        "gemini-1-0-ultra",
-        "gemini-1-5-flash",
-        "gemini-1-5-flash-8b",
-        "gemini-1-5-flash-may-2024",
-        "gemini-1-5-pro",
-        "gemini-1-5-pro-may-2024",
-        "gemini-2-0-flash",
-        "gemini-2-0-flash-experimental",
-        "gemini-2-0-flash-lite-001",
-        "gemini-2-0-flash-lite-preview",
-        "gemini-2-0-flash-thinking-exp-0121",
-        "gemini-2-0-flash-thinking-exp-1219",
-        "gemini-2-0-pro-experimental-02-05",
-        "gemini-2-5-flash",
-        "gemini-2-5-flash-04-2025",
-        "gemini-2-5-flash-lite",
-        "gemini-2-5-flash-lite-preview-09-2025",
-        "gemini-2-5-flash-lite-preview-09-2025-reasoning",
-        "gemini-2-5-flash-lite-reasoning",
-        "gemini-2-5-flash-preview-09-2025",
-        "gemini-2-5-flash-preview-09-2025-reasoning",
-        "gemini-2-5-flash-reasoning",
-        "gemini-2-5-flash-reasoning-04-2025",
-        "gemini-2-5-pro",
-        "gemini-2-5-pro-03-25",
-        "gemini-2-5-pro-05-06",
-        "gemini-3-1-flash-lite-preview",
-        "gemini-3-1-pro-preview",
-        "gemini-3-5-flash",
-        "gemini-3-5-flash-lite",
-        "gemini-3-5-flash-medium",
-        "gemini-3-5-flash-minimal",
-        "gemini-3-6-flash",
-        "gemini-3-7-flash",
-        "gemini-3-7-flash-low",
-        "gemini-3-7-flash-medium",
-        "gemini-3-deep-think",
-        "gemini-3-flash",
-        "gemini-3-flash-reasoning",
-        "gemini-3-pro",
-        "gemini-3-pro-low",
-        "gemma-3-12b",
-        "gemma-3-1b",
-        "gemma-3-270m",
-        "gemma-3-27b",
-        "gemma-3-4b",
-        "gemma-3n-e2b",
-        "gemma-3n-e4b",
-        "gemma-3n-e4b-preview-0520",
-        "gemma-4-12b",
-        "gemma-4-12b-non-reasoning",
-        "gemma-4-26b-a4b",
-        "gemma-4-26b-a4b-non-reasoning",
         "gemma-4-31b",
-        "gemma-4-31b-non-reasoning",
-        "gemma-4-e2b",
-        "gemma-4-e2b-non-reasoning",
-        "gemma-4-e4b",
-        "gemma-4-e4b-non-reasoning",
-        "palm-2"
+        "gemma-4-31b-non-reasoning"
+      ],
+      "evidence": [
+        "AA RSC hostApiId exactly equals OpenRouter model ID; provider-host corroboration only",
+        "OpenRouter namespace agrees with AA creator",
+        "snapshot open_weights.openrouter_api_id exactly equals OpenRouter model ID"
       ]
     },
     {
@@ -6555,19 +6342,6 @@
     },
     {
       "relation": "model_to_model",
-      "source_entity_id": "minimax/minimax-m1",
-      "candidates": [
-        "minimax-m1-40k",
-        "minimax-m1-80k",
-        "minimax-m2",
-        "minimax-m2-1",
-        "minimax-m2-5",
-        "minimax-m2-7",
-        "minimax-m3"
-      ]
-    },
-    {
-      "relation": "model_to_model",
       "source_entity_id": "minimax/minimax-m2-her",
       "candidates": [
         "minimax-m1-40k",
@@ -6590,6 +6364,62 @@
         "minimax-m2-5",
         "minimax-m2-7",
         "minimax-m3"
+      ]
+    },
+    {
+      "relation": "model_to_model",
+      "source_entity_id": "mistralai/mistral-large-2407",
+      "method": "source_metadata_exact",
+      "candidates": [
+        "mistral-large-2",
+        "mistral-large-2407"
+      ],
+      "evidence": [
+        "OpenRouter model portion equals AA slug",
+        "normalized model name/version equality",
+        "snapshot open_weights.openrouter_api_id exactly equals OpenRouter model ID"
+      ]
+    },
+    {
+      "relation": "model_to_model",
+      "source_entity_id": "mistralai/mistral-small-2603",
+      "method": "source_metadata_exact",
+      "candidates": [
+        "mistral-small-4",
+        "mistral-small-4-non-reasoning"
+      ],
+      "evidence": [
+        "snapshot open_weights.openrouter_api_id exactly equals OpenRouter model ID"
+      ]
+    },
+    {
+      "relation": "model_to_model",
+      "source_entity_id": "moonshotai/kimi-k2.5",
+      "method": "source_metadata_exact",
+      "candidates": [
+        "kimi-k2-5",
+        "kimi-k2-5-non-reasoning"
+      ],
+      "evidence": [
+        "AA RSC hostApiId exactly equals OpenRouter model ID; provider-host corroboration only",
+        "OpenRouter model portion equals AA slug",
+        "normalized model name/version equality",
+        "snapshot open_weights.openrouter_api_id exactly equals OpenRouter model ID"
+      ]
+    },
+    {
+      "relation": "model_to_model",
+      "source_entity_id": "moonshotai/kimi-k2.6",
+      "method": "source_metadata_exact",
+      "candidates": [
+        "kimi-k2-6",
+        "kimi-k2-6-non-reasoning"
+      ],
+      "evidence": [
+        "AA RSC hostApiId exactly equals OpenRouter model ID; provider-host corroboration only",
+        "OpenRouter model portion equals AA slug",
+        "normalized model name/version equality",
+        "snapshot open_weights.openrouter_api_id exactly equals OpenRouter model ID"
       ]
     },
     {
@@ -6658,81 +6488,32 @@
       "aion-labs/aion-3.0",
       "aion-labs/aion-3.0-mini",
       "aion-labs/aion-rp-llama-3.1-8b",
-      "amazon/nova-2-lite-v1",
-      "amazon/nova-lite-v1",
-      "amazon/nova-micro-v1",
-      "amazon/nova-premier-v1",
-      "amazon/nova-pro-v1",
       "anthracite-org/magnum-v4-72b",
-      "anthropic/claude-3-haiku",
-      "anthropic/claude-fable-5",
-      "anthropic/claude-opus-4.5",
-      "anthropic/claude-opus-4.6",
       "anthropic/claude-opus-4.7",
-      "anthropic/claude-opus-4.8",
       "anthropic/claude-opus-5",
-      "anthropic/claude-sonnet-4.6",
-      "anthropic/claude-sonnet-5",
       "arcee-ai/virtuoso-large",
       "bytedance/ui-tars-1.5-7b",
       "cognitivecomputations/dolphin-mistral-24b-venice-edition",
-      "cohere/command-a",
-      "deepseek/deepseek-r1",
-      "deepseek/deepseek-r1-0528",
-      "deepseek/deepseek-r1-distill-llama-70b",
-      "deepseek/deepseek-v3.1-terminus",
-      "deepseek/deepseek-v3.2",
-      "deepseek/deepseek-v4-flash",
-      "deepseek/deepseek-v4-pro",
       "dots-studio/dots-3-note-preview:free",
-      "google/gemini-2.5-flash",
       "google/gemini-2.5-flash-lite",
       "google/gemini-2.5-pro",
-      "google/gemini-3.1-flash-lite-preview",
-      "google/gemini-3.1-pro-preview",
-      "google/gemini-3.5-flash",
       "google/gemini-3.5-flash-lite",
       "google/gemini-3.6-flash",
       "google/gemini-3.7-flash",
       "gryphe/mythomax-l2-13b",
-      "ibm-granite/granite-4.0-h-micro",
-      "inclusionai/ling-2.6-1t",
-      "inclusionai/ling-2.6-flash",
       "inclusionai/ling-3.0-flash",
-      "inclusionai/ring-2.6-1t",
       "kwaipilot/kat-coder-air-v2.5",
       "kwaipilot/kat-coder-pro-v2.5",
       "liquid/lfm-2.5-2.6b:free",
       "mancer/weaver",
-      "meta-llama/llama-3.1-70b-instruct",
-      "meta-llama/llama-3.1-8b-instruct",
-      "meta-llama/llama-3.2-1b-instruct",
-      "meta-llama/llama-3.2-3b-instruct",
-      "meta-llama/llama-3.3-70b-instruct",
       "meta-llama/llama-guard-4-12b",
       "meta/muse-spark-1.1",
       "meta/muse-spark-1.2",
       "microsoft/wizardlm-2-8x22b",
-      "minimax/minimax-m2",
-      "minimax/minimax-m2.1",
-      "minimax/minimax-m2.5",
-      "minimax/minimax-m2.7",
-      "minimax/minimax-m3",
       "mistralai/codestral-2508",
-      "mistralai/ministral-14b-2512",
-      "mistralai/ministral-3b-2512",
       "mistralai/ministral-8b",
-      "mistralai/ministral-8b-2512",
-      "mistralai/mistral-large-2512",
       "mistralai/mistral-nemo",
-      "mistralai/mistral-small-24b-instruct-2501",
-      "mistralai/mistral-small-2603",
-      "mistralai/mistral-small-3.1-24b-instruct",
-      "mistralai/mistral-small-3.2-24b-instruct",
-      "mistralai/mixtral-8x22b-instruct",
       "mistralai/voxtral-small-24b-2507",
-      "moonshotai/kimi-k2.5",
-      "moonshotai/kimi-k2.6",
       "moonshotai/kimi-k2.7-code:batch",
       "nvidia/nemotron-3.5-lightning",
       "sakana/sakana-namazu",
@@ -6743,16 +6524,21 @@
     "model_mappings": {
       "verified": 0,
       "manual": 1,
-      "candidate": 22
+      "candidate": 63
+    },
+    "model_mapping_methods": {
+      "manual_alias": 1,
+      "normalized_heuristic": 7,
+      "source_metadata_exact": 56
     },
     "endpoint_mappings": {
       "verified": 0,
       "manual": 2,
       "candidate": 0
     },
-    "unresolved_models": 85,
+    "unresolved_models": 36,
     "unresolved_endpoints": 619,
-    "ambiguous": 77,
+    "ambiguous": 85,
     "conflict": 0
   }
 }

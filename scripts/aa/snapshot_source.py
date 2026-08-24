@@ -258,6 +258,14 @@ def _normalize(entry: dict) -> dict:
     rec["intelligence_eval_total_cost_usd"] = _num(
         val("intelligence_index_cost_total"), 2)
 
+    openrouter_id = _find_value(entry, ("openrouter_api_id", "openrouterApiId"))
+    if isinstance(openrouter_id, str) and openrouter_id.strip():
+        rec["identity_evidence"].append({
+            "kind": "openrouter_model_id", "entity_id": openrouter_id.strip(),
+            "source": "snapshot", "source_field": "open_weights.openrouter_api_id",
+            "authority": "candidate",
+        })
+
     perf = rec["performance"]
     perf["median_output_speed_tps"] = _perf(val("output_tokens_per_second",
                                                 "median_output_tokens_per_second",

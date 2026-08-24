@@ -155,6 +155,20 @@ def merge_records(results: list[SourceResult]) -> list[dict]:
                     if key not in seen_hosts:
                         existing.append(host)
                         seen_hosts.add(key)
+            elif k == "identity_evidence" and isinstance(v, list):
+                existing = dst.setdefault("identity_evidence", [])
+                if not isinstance(existing, list):
+                    existing = dst["identity_evidence"] = []
+                seen = {(e.get("kind"), e.get("entity_id"), e.get("source"), e.get("source_field"))
+                        for e in existing if isinstance(e, dict)}
+                for evidence in v:
+                    if not isinstance(evidence, dict):
+                        continue
+                    key = (evidence.get("kind"), evidence.get("entity_id"),
+                           evidence.get("source"), evidence.get("source_field"))
+                    if key not in seen:
+                        existing.append(evidence)
+                        seen.add(key)
             elif isinstance(v, dict):
                 if k not in dst or not isinstance(dst[k], dict):
                     dst[k] = {}
@@ -177,6 +191,11 @@ def merge_records(results: list[SourceResult]) -> list[dict]:
         sources = prov.setdefault("sources", [])
         if src_name not in sources:
             sources.append(src_name)
+    for model in merged.values():
+        model["identity_evidence"] = sorted(
+            model.get("identity_evidence") or [],
+            key=lambda e: tuple(str(e.get(k) or "") for k in ("kind", "entity_id", "source", "source_field")),
+        )
     return list(merged.values())
 
 

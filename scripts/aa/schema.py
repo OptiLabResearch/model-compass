@@ -94,6 +94,7 @@ def model_record_template() -> dict:
             "by_prompt_length": [],    # list of dicts
         },
         "hosts": [],             # list of provider/host info dicts
+        "identity_evidence": [], # source-qualified external identity claims
         "raw_fields": {},        # preserved unknown/extra raw fields
     }
 

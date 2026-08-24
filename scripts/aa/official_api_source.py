@@ -81,6 +81,13 @@ def normalize_model(item: dict, intelligence_index_version: Any = None) -> dict:
     rec["creator"] = creator
     rec["creator_slug"] = creator_slug
     rec["released"] = item.get("release_date")
+    openrouter_id = _text(item.get("openrouter_api_id"))
+    if openrouter_id:
+        rec["identity_evidence"].append({
+            "kind": "openrouter_model_id", "entity_id": openrouter_id,
+            "source": "official_api", "source_field": "openrouter_api_id",
+            "authority": "authoritative",
+        })
 
     # The Free API reports composite indices on the SAME 0..100 scale as the
     # RSC source (verified: docs example 62.9; legacy parser uses no ×100;
@@ -150,6 +157,7 @@ def normalize_model(item: dict, intelligence_index_version: Any = None) -> dict:
         "price_1m_blended_3_to_1", "price_1m_blended_7_to_2_to_1", "price_1m_blended_1_to_1",
         "median_output_tokens_per_second", "median_time_to_first_token_seconds",
         "median_time_to_first_answer_token_seconds", "median_end_to_end_response_time_seconds",
+        "openrouter_api_id",
     }
     rec["raw_fields"] = {k: v for k, v in item.items() if k not in known and v is not None}
     return rec
