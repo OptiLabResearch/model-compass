@@ -149,7 +149,7 @@ def merge_models(previous: dict | None, fresh: list[dict], errors: list[dict], *
         for observation in result.get("observations", []):
             grouped.setdefault(observation.get("model_slug"), []).append(observation)
         for slug, observations in grouped.items():
-            normalized_fresh.append({"model_slug": slug, "fetched_at": result.get("generated_at"), "observations": observations, "coverage": {"endpoints": len(observations)}})
+            normalized_fresh.append({"model_slug": slug, "fetched_at": result.get("fetched_at") or result.get("generated_at"), "observations": observations, "coverage": {"endpoints": len(observations)}})
     fresh = normalized_fresh
     by_model = {r.get("model_slug"): r for r in fresh if r.get("model_slug")}
     retained = {}

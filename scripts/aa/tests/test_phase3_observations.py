@@ -31,6 +31,11 @@ assert merged["coverage"]["retained_stale_models"] == 1 and merged["errors"][0][
 assert merged["coverage"]["models"] == 2
 ok("bounded multi-model merge, per-model errors, and retention")
 
+boundary_result = {**endpoint, "generated_at": "2026-08-22T23:59:59Z", "fetched_at": "2026-08-23T00:00:00Z"}
+boundary_merged = merge_models(None, [boundary_result], [], now="2026-08-23T00:00:00Z")
+assert boundary_merged["model_results"][0]["fetched_at"] == boundary_merged["generated_at"]
+ok("single acquisition timestamp survives a network second boundary")
+
 agents = parse_datasets_rich((FIX / "coding_agents_rich.html").read_text(), fetched_at="2026-08-23T00:00:00Z")
 assert len(agents) == 1 and agents[0]["scores"]["coding_agent_index"] == 0.8
 assert agents[0]["cost_per_task_usd"] == 0.12 and agents[0]["configuration"] == "xhigh"
