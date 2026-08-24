@@ -19,7 +19,7 @@ def _count_matches(artifact: dict, count_field: str, rows_field: str) -> None:
         raise ValueError(f"{count_field}={expected!r} does not match {rows_field} count {actual}")
 
 
-def validate_inputs(aa: dict, openrouter: dict, accuracy: dict) -> None:
+def validate_inputs(aa: dict, openrouter: dict, accuracy: dict, coding: dict | None = None) -> None:
     _count_matches(openrouter, "endpoint_observation_count", "observations")
     _count_matches(accuracy, "observation_count", "observations")
     if accuracy.get("errors"):
@@ -39,10 +39,19 @@ def validate_inputs(aa: dict, openrouter: dict, accuracy: dict) -> None:
         raise ValueError("Endpoint Accuracy index-version metadata is inconsistent")
     if not aa.get("models"):
         raise ValueError("AA canonical model artifact is empty")
+    if coding is not None:
+        _count_matches(coding, "observation_count", "observations")
+        variants = [row.get("variant_id") for row in coding.get("observations", [])]
+        if not variants or any(not value for value in variants) or len(variants) != len(set(variants)):
+            raise ValueError("Coding-agent variant IDs must be present and unique")
+        versions = sorted({row.get("benchmark_version") for row in coding.get("observations", []) if row.get("benchmark_version")})
+        if len(versions) != 1 or (coding.get("coverage") or {}).get("benchmark_version") != versions[0]:
+            raise ValueError("Coding-agent benchmark-version metadata is inconsistent")
 
 
-def build_artifacts(aa: dict, openrouter: dict, accuracy: dict, aliases: dict) -> tuple[dict, dict]:
-    validate_inputs(aa, openrouter, accuracy)
+def build_artifacts(aa: dict, openrouter: dict, accuracy: dict, aliases: dict,
+                    coding: dict | None = None) -> tuple[dict, dict]:
+    validate_inputs(aa, openrouter, accuracy, coding)
     stamps = [value for value in (aa.get("generated_at"), openrouter.get("generated_at"), accuracy.get("generated_at")) if value]
     generated_at = max(stamps) if stamps else "unknown"
     identity = resolve(aa["models"], openrouter.get("observations", []), accuracy.get("observations", []),
@@ -67,6 +76,8 @@ def build_artifacts(aa: dict, openrouter: dict, accuracy: dict, aliases: dict) -
             "endpoint_accuracy_observations": len(accuracy.get("observations", [])),
             "endpoint_accuracy_models": (accuracy.get("coverage") or {}).get("models"),
             "endpoint_accuracy_index_versions": (accuracy.get("coverage") or {}).get("index_versions", []),
+            "coding_agent_observations": len((coding or {}).get("observations", [])),
+            "coding_agent_benchmark_version": ((coding or {}).get("coverage") or {}).get("benchmark_version"),
         },
         "identity": identity["health"],
         "gate_d": {
@@ -90,12 +101,13 @@ def main(argv=None) -> int:
     parser.add_argument("--openrouter", type=Path, default=REPO / "data/openrouter_observations.json")
     parser.add_argument("--accuracy", type=Path, default=REPO / "data/endpoint_accuracy_observations.json")
     parser.add_argument("--aliases", type=Path, default=REPO / "data/identity_aliases.json")
+    parser.add_argument("--coding", type=Path, default=REPO / "data/coding_agent_observations.json")
     parser.add_argument("--identity-output", type=Path, default=REPO / "data/identity_mappings.json")
     parser.add_argument("--summary-output", type=Path, default=REPO / "data/phase3_summary.json")
     args = parser.parse_args(argv)
     load = lambda path: json.loads(path.read_text(encoding="utf-8"))
     identity, summary = build_artifacts(load(args.aa), load(args.openrouter), load(args.accuracy),
-                                        {"mappings": load_aliases(args.aliases)})
+                                        {"mappings": load_aliases(args.aliases)}, load(args.coding))
     atomic_write_json(args.identity_output, identity)
     atomic_write_json(args.summary_output, summary)
     print(f"Phase 3 artifacts: mappings={len(identity['mappings'])} conflicts=0 gate_d={summary['gate_d']['provider_id']}")

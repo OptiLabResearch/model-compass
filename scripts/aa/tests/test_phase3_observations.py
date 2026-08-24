@@ -13,6 +13,7 @@ from aa.history import diff_observations
 from aa.phase3_artifacts import build_artifacts
 
 FIX = Path(__file__).parent / "fixtures"
+REPO = Path(__file__).resolve().parents[3]
 
 def ok(name): print("PASS", name)
 
@@ -112,4 +113,23 @@ with tempfile.TemporaryDirectory() as directory:
     finally:
         endpoint_module.fetch_many = original_fetch_many
 ok("acquisition failure does not overwrite the last good artifact")
+
+load = lambda name: json.loads((REPO / "data" / name).read_text(encoding="utf-8"))
+real_aa, real_openrouter = load("aa_models_v2.json"), load("openrouter_observations.json")
+real_accuracy, real_aliases = load("endpoint_accuracy_observations.json"), load("identity_aliases.json")
+real_coding = load("coding_agent_observations.json")
+real_identity, real_summary = build_artifacts(real_aa, real_openrouter, real_accuracy, real_aliases, real_coding)
+assert real_identity == load("identity_mappings.json") and real_summary == load("phase3_summary.json")
+real_db = ProviderDB(real_openrouter["observations"], real_accuracy["observations"], real_identity)
+real_gate = real_db.best_provider("gpt-oss-120b", "accuracy-first", require_accuracy_evidence=True)
+assert real_gate["provider_id"] == "coreweave/fp4"
+assert real_gate["endpoint_quality"]["mapping_evidence"]["provider_endpoint"]["state"] == "manual"
+real_without_coreweave = {**real_identity, "mappings": [m for m in real_identity["mappings"] if m.get("source_entity_id") != "openai/gpt-oss-120b:coreweave/fp4:CoreWeave | openai/gpt-oss-120b"]}
+assert ProviderDB(real_openrouter["observations"], real_accuracy["observations"], real_without_coreweave).best_provider("gpt-oss-120b", "accuracy-first", require_accuracy_evidence=True) is None
+real_turbo = next(row for row in real_db.providers("gpt-oss-120b") if row.get("provider_id") == "deepinfra/turbo")
+assert real_db._quality(real_turbo, "gpt-oss-120b")["classification"] == "below_reference"
+old_coding = {**real_coding, "coverage": {**real_coding["coverage"], "benchmark_version": "0.9"}, "observations": [{**row, "benchmark_version": "0.9"} for row in real_coding["observations"]]}
+coding_delta = diff_observations(old_coding, real_coding, key="variant_id", fields=["scores.coding_agent_index"])
+assert coding_delta["counts"]["current"] == real_coding["observation_count"] and coding_delta["changed"] == [{"identity_key": "__metadata__", "changes": {"benchmark_version": {"before": "0.9", "after": real_coding["coverage"]["benchmark_version"]}, "comparability": "not directly comparable across versions"}}]
+ok("checked-in artifacts reproduce the real Gate-D explanation and history semantics")
 print("All phase3 observation tests passed.")
