@@ -1,6 +1,6 @@
 # Phase 3 Closure Report
 
-Status: independent engineering gate passed on `8cb0105`; final remote PR checks are pending.
+Status: accepted 2026-08-24. Independent engineering review, local CI, and pushed PR checks passed.
 
 ## Outcome
 
@@ -35,4 +35,4 @@ The weekly workflow runs this sequence after the canonical AA/site build. Gate-m
 
 The synchronized candidate tip is based on `origin/main` `1fbd925`. The complete repository CI command set passed locally after live acquisition and deterministic regeneration. Regression coverage includes missing model/endpoint mappings, candidate rejection, Base/Turbo collision, Turbo evidence, CoreWeave removal, both source acquisition failures, artifact reproduction/count/version invariants, mixed-version history, and the checked-in real Gate-D explanation.
 
-An independent Sol review of the first synchronized tip found workflow ordering, retained OpenRouter Gate evidence, mixed-version history, stale documentation, and a timestamp-boundary freshness bug. Two repair/review cycles followed. The final immutable `8cb0105` review passed with no substantive correctness blocker; pushed PR checks remain before formal acceptance.
+An independent Sol review of the first synchronized tip found workflow ordering, retained OpenRouter Gate evidence, mixed-version history, stale documentation, and a timestamp-boundary freshness bug. Two repair/review cycles followed. The final immutable `8cb0105` engineering review passed with no substantive correctness blocker. PR head `038856d` then passed the required GitHub `validate` check and Cloudflare preview.
