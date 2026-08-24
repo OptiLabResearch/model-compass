@@ -1,4 +1,6 @@
 {
-  "cursor": 150,
-  "priority_ids": []
+  "cursor": 174,
+  "priority_ids": [
+    "openai/gpt-oss-120b"
+  ]
 }

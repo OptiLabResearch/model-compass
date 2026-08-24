@@ -26,6 +26,7 @@ except ImportError:
 MODELS_URL = "https://openrouter.ai/api/v1/models"
 ENDPOINT_URL = "https://openrouter.ai/api/v1/models/{model}/endpoints"
 PARSER_VERSION = "0.1.0"
+DEFAULT_PRIORITY_IDS = ["openai/gpt-oss-120b"]
 
 
 def select_cohort(catalog: list[dict], *, limit: int, cursor: int = 0,
@@ -79,9 +80,10 @@ def fetch_observations(*, max_endpoints: int = 25, timeout: int = 30,
     state = state or {}
     cursor = int(state.get("cursor", 0))
     catalog_ids = {str(item.get("id")) for item in models if item.get("id")}
-    valid_priority_count = len({str(x) for x in state.get("priority_ids", []) if str(x) in catalog_ids})
+    priority_ids = state.get("priority_ids") or DEFAULT_PRIORITY_IDS
+    valid_priority_count = len({str(x) for x in priority_ids if str(x) in catalog_ids})
     selected_ids = select_cohort(models, limit=max_endpoints, cursor=cursor,
-                                 priority_ids=state.get("priority_ids"))
+                                 priority_ids=priority_ids)
     observations = []
     endpoint_errors = []
     for model_id in selected_ids:
@@ -112,7 +114,7 @@ def fetch_observations(*, max_endpoints: int = 25, timeout: int = 30,
                      "retention_days": retention_days},
         "selection": {"cursor_before": cursor, "cursor_after": next_cursor,
                       "selected_model_ids": selected_ids},
-        "next_state": {"cursor": next_cursor, "priority_ids": state.get("priority_ids", [])},
+        "next_state": {"cursor": next_cursor, "priority_ids": priority_ids},
         "response_headers": response.headers,
     }
 

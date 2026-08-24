@@ -1,12 +1,12 @@
 {
   "version": 1,
   "parser_version": "0.1.0",
-  "generated_at": "2026-08-23T19:16:12Z",
+  "generated_at": "2026-08-24T07:38:57Z",
   "source": "openrouter",
   "source_url": "https://openrouter.ai/api/v1/models",
   "model_catalog_count": 422,
   "endpoint_models_requested": 25,
-  "endpoint_observation_count": 529,
+  "endpoint_observation_count": 621,
   "endpoint_errors": [],
   "observations": [
     {
@@ -28615,6 +28615,4065 @@
       }
     },
     {
+      "observation_type": "provider_endpoint",
+      "model_id": "mistralai/ministral-3b-2512",
+      "model_slug": "mistralai/ministral-3b-2512",
+      "provider_id": "mistral",
+      "provider_name": "Mistral",
+      "endpoint_id": "Mistral | mistralai/ministral-3b-2512",
+      "identity_key": "mistralai/ministral-3b-2512:mistral:Mistral | mistralai/ministral-3b-2512",
+      "context_tokens": 131072,
+      "pricing": {
+        "input_per_million": 0.09999999999999999,
+        "output_per_million": 0.09999999999999999,
+        "raw": {
+          "prompt": "0.0000001",
+          "completion": "0.0000001",
+          "input_cache_read": "0.00000001",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 100.0,
+        "uptime_30m": 99.95783259540374,
+        "uptime_1d": 99.8835744680851
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "max_tokens",
+          "presence_penalty",
+          "response_format",
+          "seed",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-24T07:38:57Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "mistralai/ministral-3b-2512",
+        "last_seen": "2026-08-24T07:38:57Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "mistralai/ministral-8b",
+      "model_slug": "mistralai/ministral-8b",
+      "provider_id": "mistral/zdr",
+      "provider_name": "Mistral",
+      "endpoint_id": "Mistral | mistralai/ministral-8b",
+      "identity_key": "mistralai/ministral-8b:mistral/zdr:Mistral | mistralai/ministral-8b",
+      "context_tokens": 128000,
+      "pricing": {
+        "input_per_million": 0.11,
+        "output_per_million": 0.11,
+        "raw": {
+          "prompt": "0.00000011",
+          "completion": "0.00000011",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": null,
+        "uptime_30m": null,
+        "uptime_1d": 0.0
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "max_tokens",
+          "presence_penalty",
+          "response_format",
+          "seed",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-24T07:38:57Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "mistralai/ministral-8b",
+        "last_seen": "2026-08-24T07:38:57Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "mistralai/ministral-8b-2512",
+      "model_slug": "mistralai/ministral-8b-2512",
+      "provider_id": "mistral",
+      "provider_name": "Mistral",
+      "endpoint_id": "Mistral | mistralai/ministral-8b-2512",
+      "identity_key": "mistralai/ministral-8b-2512:mistral:Mistral | mistralai/ministral-8b-2512",
+      "context_tokens": 262144,
+      "pricing": {
+        "input_per_million": 0.15,
+        "output_per_million": 0.15,
+        "raw": {
+          "prompt": "0.00000015",
+          "completion": "0.00000015",
+          "input_cache_read": "0.000000015",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 99.95784148397976,
+        "uptime_30m": 99.88291204628418,
+        "uptime_1d": 99.97261289127319
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "max_tokens",
+          "presence_penalty",
+          "response_format",
+          "seed",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-24T07:38:57Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "mistralai/ministral-8b-2512",
+        "last_seen": "2026-08-24T07:38:57Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "mistralai/mistral-large",
+      "model_slug": "mistralai/mistral-large",
+      "provider_id": "mistral",
+      "provider_name": "Mistral",
+      "endpoint_id": "Mistral | mistralai/mistral-large",
+      "identity_key": "mistralai/mistral-large:mistral:Mistral | mistralai/mistral-large",
+      "context_tokens": 128000,
+      "pricing": {
+        "input_per_million": 2.0,
+        "output_per_million": 6.0,
+        "raw": {
+          "prompt": "0.000002",
+          "completion": "0.000006",
+          "input_cache_read": "0.0000002",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": null,
+        "uptime_30m": 99.57264957264957,
+        "uptime_1d": 99.9233789866871
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "max_tokens",
+          "presence_penalty",
+          "response_format",
+          "seed",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-24T07:38:57Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "mistralai/mistral-large",
+        "last_seen": "2026-08-24T07:38:57Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "mistralai/mistral-large-2407",
+      "model_slug": "mistralai/mistral-large-2407",
+      "provider_id": "mistral",
+      "provider_name": "Mistral",
+      "endpoint_id": "Mistral | mistralai/mistral-large-2407",
+      "identity_key": "mistralai/mistral-large-2407:mistral:Mistral | mistralai/mistral-large-2407",
+      "context_tokens": 131072,
+      "pricing": {
+        "input_per_million": 2.0,
+        "output_per_million": 6.0,
+        "raw": {
+          "prompt": "0.000002",
+          "completion": "0.000006",
+          "input_cache_read": "0.0000002",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 100.0,
+        "uptime_30m": 100.0,
+        "uptime_1d": 100.0
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "max_tokens",
+          "presence_penalty",
+          "response_format",
+          "seed",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-24T07:38:57Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "mistralai/mistral-large-2407",
+        "last_seen": "2026-08-24T07:38:57Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "mistralai/mistral-large-2512",
+      "model_slug": "mistralai/mistral-large-2512",
+      "provider_id": "mistral",
+      "provider_name": "Mistral",
+      "endpoint_id": "Mistral | mistralai/mistral-large-2512",
+      "identity_key": "mistralai/mistral-large-2512:mistral:Mistral | mistralai/mistral-large-2512",
+      "context_tokens": 262144,
+      "pricing": {
+        "input_per_million": 0.5,
+        "output_per_million": 1.5,
+        "raw": {
+          "prompt": "0.0000005",
+          "completion": "0.0000015",
+          "input_cache_read": "0.00000005",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 100.0,
+        "uptime_30m": 99.95710609093508,
+        "uptime_1d": 99.97067596099065
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "max_tokens",
+          "presence_penalty",
+          "response_format",
+          "seed",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-24T07:38:57Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "mistralai/mistral-large-2512",
+        "last_seen": "2026-08-24T07:38:57Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "mistralai/mistral-medium-3",
+      "model_slug": "mistralai/mistral-medium-3",
+      "provider_id": "mistral",
+      "provider_name": "Mistral",
+      "endpoint_id": "Mistral | mistralai/mistral-medium-3",
+      "identity_key": "mistralai/mistral-medium-3:mistral:Mistral | mistralai/mistral-medium-3",
+      "context_tokens": 131072,
+      "pricing": {
+        "input_per_million": 0.39999999999999997,
+        "output_per_million": 2.0,
+        "raw": {
+          "prompt": "0.0000004",
+          "completion": "0.000002",
+          "input_cache_read": "0.00000004",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": null,
+        "uptime_30m": null,
+        "uptime_1d": 99.99189101524489
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "max_tokens",
+          "presence_penalty",
+          "response_format",
+          "seed",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-24T07:38:57Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "mistralai/mistral-medium-3",
+        "last_seen": "2026-08-24T07:38:57Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "mistralai/mistral-medium-3-5",
+      "model_slug": "mistralai/mistral-medium-3-5",
+      "provider_id": "mistral",
+      "provider_name": "Mistral",
+      "endpoint_id": "Mistral | mistralai/mistral-medium-3.5-20260430",
+      "identity_key": "mistralai/mistral-medium-3-5:mistral:Mistral | mistralai/mistral-medium-3.5-20260430",
+      "context_tokens": 262144,
+      "pricing": {
+        "input_per_million": 1.5,
+        "output_per_million": 7.5,
+        "raw": {
+          "prompt": "0.0000015",
+          "completion": "0.0000075",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 100.0,
+        "uptime_30m": 100.0,
+        "uptime_1d": 99.99244667351502
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "include_reasoning",
+          "max_tokens",
+          "presence_penalty",
+          "reasoning",
+          "reasoning_effort",
+          "response_format",
+          "seed",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-24T07:38:57Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "mistralai/mistral-medium-3-5",
+        "last_seen": "2026-08-24T07:38:57Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "mistralai/mistral-medium-3.1",
+      "model_slug": "mistralai/mistral-medium-3.1",
+      "provider_id": "mistral",
+      "provider_name": "Mistral",
+      "endpoint_id": "Mistral | mistralai/mistral-medium-3.1",
+      "identity_key": "mistralai/mistral-medium-3.1:mistral:Mistral | mistralai/mistral-medium-3.1",
+      "context_tokens": 131072,
+      "pricing": {
+        "input_per_million": 0.39999999999999997,
+        "output_per_million": 2.0,
+        "raw": {
+          "prompt": "0.0000004",
+          "completion": "0.000002",
+          "input_cache_read": "0.00000004",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 100.0,
+        "uptime_30m": 100.0,
+        "uptime_1d": 99.96233596320818
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "max_tokens",
+          "presence_penalty",
+          "response_format",
+          "seed",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-24T07:38:57Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "mistralai/mistral-medium-3.1",
+        "last_seen": "2026-08-24T07:38:57Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "mistralai/mistral-nemo",
+      "model_slug": "mistralai/mistral-nemo",
+      "provider_id": "deepinfra/fp8",
+      "provider_name": "DeepInfra",
+      "endpoint_id": "DeepInfra | mistralai/mistral-nemo",
+      "identity_key": "mistralai/mistral-nemo:deepinfra/fp8:DeepInfra | mistralai/mistral-nemo",
+      "context_tokens": 131072,
+      "pricing": {
+        "input_per_million": 0.019000000000000003,
+        "output_per_million": 0.03,
+        "raw": {
+          "prompt": "0.000000019",
+          "completion": "0.00000003",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 98.92750525190726,
+        "uptime_30m": 99.25100805929821,
+        "uptime_1d": 95.47743661291946
+      },
+      "quantization": "fp8",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "logit_bias",
+          "max_tokens",
+          "min_p",
+          "presence_penalty",
+          "repetition_penalty",
+          "response_format",
+          "seed",
+          "stop",
+          "temperature",
+          "top_k",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-24T07:38:57Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "mistralai/mistral-nemo",
+        "last_seen": "2026-08-24T07:38:57Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "mistralai/mistral-nemo",
+      "model_slug": "mistralai/mistral-nemo",
+      "provider_id": "io-net/fp16",
+      "provider_name": "Io Net",
+      "endpoint_id": "Io Net | mistralai/mistral-nemo",
+      "identity_key": "mistralai/mistral-nemo:io-net/fp16:Io Net | mistralai/mistral-nemo",
+      "context_tokens": 128000,
+      "pricing": {
+        "input_per_million": 0.044,
+        "output_per_million": 0.16,
+        "raw": {
+          "prompt": "0.000000044",
+          "completion": "0.00000016",
+          "input_cache_read": "0.000000029",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 99.7867803837953,
+        "uptime_30m": 97.87274096385542,
+        "uptime_1d": 95.95435586086329
+      },
+      "quantization": "fp16",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "max_tokens",
+          "presence_penalty",
+          "seed",
+          "stop",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_k",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-24T07:38:57Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "mistralai/mistral-nemo",
+        "last_seen": "2026-08-24T07:38:57Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "mistralai/mistral-nemo",
+      "model_slug": "mistralai/mistral-nemo",
+      "provider_id": "novita/fp8",
+      "provider_name": "Novita",
+      "endpoint_id": "Novita | mistralai/mistral-nemo",
+      "identity_key": "mistralai/mistral-nemo:novita/fp8:Novita | mistralai/mistral-nemo",
+      "context_tokens": 60288,
+      "pricing": {
+        "input_per_million": 0.04,
+        "output_per_million": 0.16999999999999998,
+        "raw": {
+          "prompt": "0.00000004",
+          "completion": "0.00000017",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "unavailable",
+        "uptime_5m": 45.152091254752854,
+        "uptime_30m": 50.397303154346254,
+        "uptime_1d": 58.89312020246636
+      },
+      "quantization": "fp8",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "logprobs",
+          "max_tokens",
+          "presence_penalty",
+          "repetition_penalty",
+          "response_format",
+          "seed",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "top_k",
+          "top_logprobs",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-24T07:38:57Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "mistralai/mistral-nemo",
+        "last_seen": "2026-08-24T07:38:57Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "mistralai/mistral-nemo",
+      "model_slug": "mistralai/mistral-nemo",
+      "provider_id": "parasail/fp8",
+      "provider_name": "Parasail",
+      "endpoint_id": "Parasail | mistralai/mistral-nemo",
+      "identity_key": "mistralai/mistral-nemo:parasail/fp8:Parasail | mistralai/mistral-nemo",
+      "context_tokens": 131072,
+      "pricing": {
+        "input_per_million": 0.03,
+        "output_per_million": 0.03,
+        "raw": {
+          "prompt": "0.00000003",
+          "completion": "0.00000003",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 99.63235294117648,
+        "uptime_30m": 99.77666108319376,
+        "uptime_1d": 99.92604374111745
+      },
+      "quantization": "fp8",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "logit_bias",
+          "logprobs",
+          "max_tokens",
+          "presence_penalty",
+          "repetition_penalty",
+          "response_format",
+          "seed",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "top_k",
+          "top_logprobs",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-24T07:38:57Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "mistralai/mistral-nemo",
+        "last_seen": "2026-08-24T07:38:57Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "mistralai/mistral-saba",
+      "model_slug": "mistralai/mistral-saba",
+      "provider_id": "mistral",
+      "provider_name": "Mistral",
+      "endpoint_id": "Mistral | mistralai/mistral-saba-2502",
+      "identity_key": "mistralai/mistral-saba:mistral:Mistral | mistralai/mistral-saba-2502",
+      "context_tokens": 32768,
+      "pricing": {
+        "input_per_million": 0.19999999999999998,
+        "output_per_million": 0.6,
+        "raw": {
+          "prompt": "0.0000002",
+          "completion": "0.0000006",
+          "input_cache_read": "0.00000002",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": null,
+        "uptime_30m": null,
+        "uptime_1d": 100.0
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "max_tokens",
+          "presence_penalty",
+          "response_format",
+          "seed",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-24T07:38:57Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "mistralai/mistral-saba",
+        "last_seen": "2026-08-24T07:38:57Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "mistralai/mistral-small-24b-instruct-2501",
+      "model_slug": "mistralai/mistral-small-24b-instruct-2501",
+      "provider_id": "deepinfra/fp8",
+      "provider_name": "DeepInfra",
+      "endpoint_id": "DeepInfra | mistralai/mistral-small-24b-instruct-2501",
+      "identity_key": "mistralai/mistral-small-24b-instruct-2501:deepinfra/fp8:DeepInfra | mistralai/mistral-small-24b-instruct-2501",
+      "context_tokens": 32768,
+      "pricing": {
+        "input_per_million": 0.049999999999999996,
+        "output_per_million": 0.08,
+        "raw": {
+          "prompt": "0.00000005",
+          "completion": "0.00000008",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 100.0,
+        "uptime_30m": 100.0,
+        "uptime_1d": 99.99801753654134
+      },
+      "quantization": "fp8",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "logit_bias",
+          "max_tokens",
+          "min_p",
+          "presence_penalty",
+          "repetition_penalty",
+          "response_format",
+          "seed",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "top_k",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-24T07:38:57Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "mistralai/mistral-small-24b-instruct-2501",
+        "last_seen": "2026-08-24T07:38:57Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "mistralai/mistral-small-2603",
+      "model_slug": "mistralai/mistral-small-2603",
+      "provider_id": "mistral",
+      "provider_name": "Mistral",
+      "endpoint_id": "Mistral | mistralai/mistral-small-2603",
+      "identity_key": "mistralai/mistral-small-2603:mistral:Mistral | mistralai/mistral-small-2603",
+      "context_tokens": 262144,
+      "pricing": {
+        "input_per_million": 0.15,
+        "output_per_million": 0.6,
+        "raw": {
+          "prompt": "0.00000015",
+          "completion": "0.0000006",
+          "input_cache_read": "0.000000015",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 100.0,
+        "uptime_30m": 100.0,
+        "uptime_1d": 99.98010532742744
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "include_reasoning",
+          "max_tokens",
+          "presence_penalty",
+          "reasoning",
+          "reasoning_effort",
+          "response_format",
+          "seed",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-24T07:38:57Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "mistralai/mistral-small-2603",
+        "last_seen": "2026-08-24T07:38:57Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "mistralai/mistral-small-2603",
+      "model_slug": "mistralai/mistral-small-2603",
+      "provider_id": "mistral/zdr",
+      "provider_name": "Mistral",
+      "endpoint_id": "Mistral | mistralai/mistral-small-2603",
+      "identity_key": "mistralai/mistral-small-2603:mistral/zdr:Mistral | mistralai/mistral-small-2603",
+      "context_tokens": 262144,
+      "pricing": {
+        "input_per_million": 0.165,
+        "output_per_million": 0.66,
+        "raw": {
+          "prompt": "0.000000165",
+          "completion": "0.00000066",
+          "input_cache_read": "0.0000000165",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "unavailable",
+        "uptime_5m": null,
+        "uptime_30m": null,
+        "uptime_1d": 0.0
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "include_reasoning",
+          "max_tokens",
+          "presence_penalty",
+          "reasoning",
+          "reasoning_effort",
+          "response_format",
+          "seed",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-24T07:38:57Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "mistralai/mistral-small-2603",
+        "last_seen": "2026-08-24T07:38:57Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "mistralai/mistral-small-2603",
+      "model_slug": "mistralai/mistral-small-2603",
+      "provider_id": "venice/fp8",
+      "provider_name": "Venice",
+      "endpoint_id": "Venice | mistralai/mistral-small-2603",
+      "identity_key": "mistralai/mistral-small-2603:venice/fp8:Venice | mistralai/mistral-small-2603",
+      "context_tokens": 256000,
+      "pricing": {
+        "input_per_million": 0.1875,
+        "output_per_million": 0.75,
+        "raw": {
+          "prompt": "0.0000001875",
+          "completion": "0.00000075",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 100.0,
+        "uptime_30m": 100.0,
+        "uptime_1d": 99.90449569065922
+      },
+      "quantization": "fp8",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "include_reasoning",
+          "max_tokens",
+          "presence_penalty",
+          "reasoning",
+          "reasoning_effort",
+          "response_format",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "top_k",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-24T07:38:57Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "mistralai/mistral-small-2603",
+        "last_seen": "2026-08-24T07:38:57Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "mistralai/mistral-small-3.1-24b-instruct",
+      "model_slug": "mistralai/mistral-small-3.1-24b-instruct",
+      "provider_id": "cloudflare",
+      "provider_name": "Cloudflare",
+      "endpoint_id": "Cloudflare | mistralai/mistral-small-3.1-24b-instruct-2503",
+      "identity_key": "mistralai/mistral-small-3.1-24b-instruct:cloudflare:Cloudflare | mistralai/mistral-small-3.1-24b-instruct-2503",
+      "context_tokens": 128000,
+      "pricing": {
+        "input_per_million": 0.351,
+        "output_per_million": 0.5549999999999999,
+        "raw": {
+          "prompt": "0.000000351",
+          "completion": "0.000000555",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 100.0,
+        "uptime_30m": 100.0,
+        "uptime_1d": 100.0
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "logit_bias",
+          "logprobs",
+          "max_tokens",
+          "min_p",
+          "presence_penalty",
+          "repetition_penalty",
+          "seed",
+          "stop",
+          "temperature",
+          "top_k",
+          "top_logprobs",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-24T07:38:57Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "mistralai/mistral-small-3.1-24b-instruct",
+        "last_seen": "2026-08-24T07:38:57Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "mistralai/mistral-small-3.2-24b-instruct",
+      "model_slug": "mistralai/mistral-small-3.2-24b-instruct",
+      "provider_id": "deepinfra/fp8",
+      "provider_name": "DeepInfra",
+      "endpoint_id": "DeepInfra | mistralai/mistral-small-3.2-24b-instruct-2506",
+      "identity_key": "mistralai/mistral-small-3.2-24b-instruct:deepinfra/fp8:DeepInfra | mistralai/mistral-small-3.2-24b-instruct-2506",
+      "context_tokens": 128000,
+      "pricing": {
+        "input_per_million": 0.075,
+        "output_per_million": 0.19999999999999998,
+        "raw": {
+          "prompt": "0.000000075",
+          "completion": "0.0000002",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 99.96073812328228,
+        "uptime_30m": 99.96578690127077,
+        "uptime_1d": 99.79618500672984
+      },
+      "quantization": "fp8",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "logit_bias",
+          "max_tokens",
+          "min_p",
+          "presence_penalty",
+          "repetition_penalty",
+          "response_format",
+          "seed",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_k",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-24T07:38:57Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "mistralai/mistral-small-3.2-24b-instruct",
+        "last_seen": "2026-08-24T07:38:57Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "mistralai/mistral-small-3.2-24b-instruct",
+      "model_slug": "mistralai/mistral-small-3.2-24b-instruct",
+      "provider_id": "parasail/bf16",
+      "provider_name": "Parasail",
+      "endpoint_id": "Parasail | mistralai/mistral-small-3.2-24b-instruct-2506",
+      "identity_key": "mistralai/mistral-small-3.2-24b-instruct:parasail/bf16:Parasail | mistralai/mistral-small-3.2-24b-instruct-2506",
+      "context_tokens": 131072,
+      "pricing": {
+        "input_per_million": 0.09,
+        "output_per_million": 0.3,
+        "raw": {
+          "prompt": "0.00000009",
+          "completion": "0.0000003",
+          "input_cache_read": "0.00000005",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 100.0,
+        "uptime_30m": 99.28100659077292,
+        "uptime_1d": 99.67946066672181
+      },
+      "quantization": "bf16",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "logit_bias",
+          "logprobs",
+          "max_tokens",
+          "presence_penalty",
+          "repetition_penalty",
+          "response_format",
+          "seed",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "top_k",
+          "top_logprobs",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-24T07:38:57Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "mistralai/mistral-small-3.2-24b-instruct",
+        "last_seen": "2026-08-24T07:38:57Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "mistralai/mixtral-8x22b-instruct",
+      "model_slug": "mistralai/mixtral-8x22b-instruct",
+      "provider_id": "mistral",
+      "provider_name": "Mistral",
+      "endpoint_id": "Mistral | mistralai/mixtral-8x22b-instruct",
+      "identity_key": "mistralai/mixtral-8x22b-instruct:mistral:Mistral | mistralai/mixtral-8x22b-instruct",
+      "context_tokens": 65536,
+      "pricing": {
+        "input_per_million": 2.0,
+        "output_per_million": 6.0,
+        "raw": {
+          "prompt": "0.000002",
+          "completion": "0.000006",
+          "input_cache_read": "0.0000002",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 100.0,
+        "uptime_30m": 100.0,
+        "uptime_1d": 100.0
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "max_tokens",
+          "presence_penalty",
+          "response_format",
+          "seed",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-24T07:38:57Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "mistralai/mixtral-8x22b-instruct",
+        "last_seen": "2026-08-24T07:38:57Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "mistralai/voxtral-small-24b-2507",
+      "model_slug": "mistralai/voxtral-small-24b-2507",
+      "provider_id": "mistral",
+      "provider_name": "Mistral",
+      "endpoint_id": "Mistral | mistralai/voxtral-small-24b-2507",
+      "identity_key": "mistralai/voxtral-small-24b-2507:mistral:Mistral | mistralai/voxtral-small-24b-2507",
+      "context_tokens": 32000,
+      "pricing": {
+        "input_per_million": 0.09999999999999999,
+        "output_per_million": 0.3,
+        "raw": {
+          "prompt": "0.0000001",
+          "completion": "0.0000003",
+          "audio": "0.0001",
+          "input_cache_read": "0.00000001",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 100.0,
+        "uptime_30m": 99.60668633235005,
+        "uptime_1d": 99.60543621218764
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "max_tokens",
+          "presence_penalty",
+          "response_format",
+          "seed",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-24T07:38:57Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "mistralai/voxtral-small-24b-2507",
+        "last_seen": "2026-08-24T07:38:57Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "moonshotai/kimi-k2",
+      "model_slug": "moonshotai/kimi-k2",
+      "provider_id": "novita/fp8",
+      "provider_name": "Novita",
+      "endpoint_id": "Novita | moonshotai/kimi-k2",
+      "identity_key": "moonshotai/kimi-k2:novita/fp8:Novita | moonshotai/kimi-k2",
+      "context_tokens": 131072,
+      "pricing": {
+        "input_per_million": 0.5700000000000001,
+        "output_per_million": 2.3,
+        "raw": {
+          "prompt": "0.00000057",
+          "completion": "0.0000023",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 100.0,
+        "uptime_30m": 100.0,
+        "uptime_1d": 100.0
+      },
+      "quantization": "fp8",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "max_tokens",
+          "presence_penalty",
+          "repetition_penalty",
+          "seed",
+          "stop",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_k",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-24T07:38:57Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "moonshotai/kimi-k2",
+        "last_seen": "2026-08-24T07:38:57Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "moonshotai/kimi-k2-0905",
+      "model_slug": "moonshotai/kimi-k2-0905",
+      "provider_id": "novita/fp8",
+      "provider_name": "Novita",
+      "endpoint_id": "Novita | moonshotai/kimi-k2-0905",
+      "identity_key": "moonshotai/kimi-k2-0905:novita/fp8:Novita | moonshotai/kimi-k2-0905",
+      "context_tokens": 262144,
+      "pricing": {
+        "input_per_million": 0.6,
+        "output_per_million": 2.5,
+        "raw": {
+          "prompt": "0.0000006",
+          "completion": "0.0000025",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 100.0,
+        "uptime_30m": 100.0,
+        "uptime_1d": 100.0
+      },
+      "quantization": "fp8",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "max_tokens",
+          "presence_penalty",
+          "repetition_penalty",
+          "response_format",
+          "seed",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_k",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-24T07:38:57Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "moonshotai/kimi-k2-0905",
+        "last_seen": "2026-08-24T07:38:57Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "moonshotai/kimi-k2-thinking",
+      "model_slug": "moonshotai/kimi-k2-thinking",
+      "provider_id": "google-vertex",
+      "provider_name": "Google",
+      "endpoint_id": "Google | moonshotai/kimi-k2-thinking-20251106",
+      "identity_key": "moonshotai/kimi-k2-thinking:google-vertex:Google | moonshotai/kimi-k2-thinking-20251106",
+      "context_tokens": 262144,
+      "pricing": {
+        "input_per_million": 0.6,
+        "output_per_million": 2.5,
+        "raw": {
+          "prompt": "0.0000006",
+          "completion": "0.0000025",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": null,
+        "uptime_30m": null,
+        "uptime_1d": 100.0
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "include_reasoning",
+          "logprobs",
+          "max_tokens",
+          "presence_penalty",
+          "reasoning",
+          "repetition_penalty",
+          "response_format",
+          "seed",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_k",
+          "top_logprobs",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-24T07:38:57Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "moonshotai/kimi-k2-thinking",
+        "last_seen": "2026-08-24T07:38:57Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "moonshotai/kimi-k2-thinking",
+      "model_slug": "moonshotai/kimi-k2-thinking",
+      "provider_id": "novita/bf16",
+      "provider_name": "Novita",
+      "endpoint_id": "Novita | moonshotai/kimi-k2-thinking-20251106",
+      "identity_key": "moonshotai/kimi-k2-thinking:novita/bf16:Novita | moonshotai/kimi-k2-thinking-20251106",
+      "context_tokens": 262144,
+      "pricing": {
+        "input_per_million": 0.6,
+        "output_per_million": 2.5,
+        "raw": {
+          "prompt": "0.0000006",
+          "completion": "0.0000025",
+          "input_cache_read": "0.00000015",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 100.0,
+        "uptime_30m": 99.69969969969969,
+        "uptime_1d": 99.86283833211412
+      },
+      "quantization": "bf16",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "include_reasoning",
+          "max_tokens",
+          "presence_penalty",
+          "reasoning",
+          "repetition_penalty",
+          "response_format",
+          "seed",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_k",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-24T07:38:57Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "moonshotai/kimi-k2-thinking",
+        "last_seen": "2026-08-24T07:38:57Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "moonshotai/kimi-k2.5",
+      "model_slug": "moonshotai/kimi-k2.5",
+      "provider_id": "amazon-bedrock/us-east-2",
+      "provider_name": "Amazon Bedrock",
+      "endpoint_id": "Amazon Bedrock | moonshotai/kimi-k2.5-0127",
+      "identity_key": "moonshotai/kimi-k2.5:amazon-bedrock/us-east-2:Amazon Bedrock | moonshotai/kimi-k2.5-0127",
+      "context_tokens": 262144,
+      "pricing": {
+        "input_per_million": 0.6,
+        "output_per_million": 3.0,
+        "raw": {
+          "prompt": "0.0000006",
+          "completion": "0.000003",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 100.0,
+        "uptime_30m": 100.0,
+        "uptime_1d": 99.93302076356329
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "include_reasoning",
+          "max_tokens",
+          "reasoning",
+          "seed",
+          "stop",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_k",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-24T07:38:57Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "moonshotai/kimi-k2.5",
+        "last_seen": "2026-08-24T07:38:57Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "moonshotai/kimi-k2.5",
+      "model_slug": "moonshotai/kimi-k2.5",
+      "provider_id": "atlas-cloud/int4",
+      "provider_name": "AtlasCloud",
+      "endpoint_id": "AtlasCloud | moonshotai/kimi-k2.5-0127",
+      "identity_key": "moonshotai/kimi-k2.5:atlas-cloud/int4:AtlasCloud | moonshotai/kimi-k2.5-0127",
+      "context_tokens": 262144,
+      "pricing": {
+        "input_per_million": 0.49,
+        "output_per_million": 2.5,
+        "raw": {
+          "prompt": "0.00000049",
+          "completion": "0.0000025",
+          "input_cache_read": "0.0000002",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 99.10179640718563,
+        "uptime_30m": 98.96587383660807,
+        "uptime_1d": 99.62701328058773
+      },
+      "quantization": "int4",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "include_reasoning",
+          "logit_bias",
+          "max_tokens",
+          "min_p",
+          "presence_penalty",
+          "reasoning",
+          "repetition_penalty",
+          "response_format",
+          "seed",
+          "structured_outputs",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_k",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-24T07:38:57Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "moonshotai/kimi-k2.5",
+        "last_seen": "2026-08-24T07:38:57Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "moonshotai/kimi-k2.5",
+      "model_slug": "moonshotai/kimi-k2.5",
+      "provider_id": "deepinfra/fp4",
+      "provider_name": "DeepInfra",
+      "endpoint_id": "DeepInfra | moonshotai/kimi-k2.5-0127",
+      "identity_key": "moonshotai/kimi-k2.5:deepinfra/fp4:DeepInfra | moonshotai/kimi-k2.5-0127",
+      "context_tokens": 262144,
+      "pricing": {
+        "input_per_million": 0.44999999999999996,
+        "output_per_million": 2.25,
+        "raw": {
+          "prompt": "0.00000045",
+          "completion": "0.00000225",
+          "input_cache_read": "0.00000007",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 100.0,
+        "uptime_30m": 99.77908689248895,
+        "uptime_1d": 99.91678081687361
+      },
+      "quantization": "fp4",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "include_reasoning",
+          "logit_bias",
+          "max_tokens",
+          "min_p",
+          "presence_penalty",
+          "reasoning",
+          "repetition_penalty",
+          "response_format",
+          "seed",
+          "stop",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_k",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-24T07:38:57Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "moonshotai/kimi-k2.5",
+        "last_seen": "2026-08-24T07:38:57Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "moonshotai/kimi-k2.5",
+      "model_slug": "moonshotai/kimi-k2.5",
+      "provider_id": "digitalocean",
+      "provider_name": "DigitalOcean",
+      "endpoint_id": "DigitalOcean | moonshotai/kimi-k2.5-0127",
+      "identity_key": "moonshotai/kimi-k2.5:digitalocean:DigitalOcean | moonshotai/kimi-k2.5-0127",
+      "context_tokens": 262144,
+      "pricing": {
+        "input_per_million": 0.5,
+        "output_per_million": 2.7,
+        "raw": {
+          "prompt": "0.0000005",
+          "completion": "0.0000027",
+          "input_cache_read": "0.000000203",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 100.0,
+        "uptime_30m": 100.0,
+        "uptime_1d": 99.74454479530621
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "include_reasoning",
+          "logprobs",
+          "max_tokens",
+          "reasoning",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_logprobs",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-24T07:38:57Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "moonshotai/kimi-k2.5",
+        "last_seen": "2026-08-24T07:38:57Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "moonshotai/kimi-k2.5",
+      "model_slug": "moonshotai/kimi-k2.5",
+      "provider_id": "moonshotai/int4",
+      "provider_name": "Moonshot AI",
+      "endpoint_id": "Moonshot AI | moonshotai/kimi-k2.5-0127",
+      "identity_key": "moonshotai/kimi-k2.5:moonshotai/int4:Moonshot AI | moonshotai/kimi-k2.5-0127",
+      "context_tokens": 262144,
+      "pricing": {
+        "input_per_million": 0.6,
+        "output_per_million": 3.0,
+        "raw": {
+          "prompt": "0.0000006",
+          "completion": "0.000003",
+          "input_cache_read": "0.0000001",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 100.0,
+        "uptime_30m": 99.92447129909365,
+        "uptime_1d": 99.9672678059988
+      },
+      "quantization": "int4",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "include_reasoning",
+          "max_tokens",
+          "presence_penalty",
+          "reasoning",
+          "response_format",
+          "stop",
+          "structured_outputs",
+          "tool_choice",
+          "tools"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-24T07:38:57Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "moonshotai/kimi-k2.5",
+        "last_seen": "2026-08-24T07:38:57Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "moonshotai/kimi-k2.5",
+      "model_slug": "moonshotai/kimi-k2.5",
+      "provider_id": "novita",
+      "provider_name": "Novita",
+      "endpoint_id": "Novita | moonshotai/kimi-k2.5-0127",
+      "identity_key": "moonshotai/kimi-k2.5:novita:Novita | moonshotai/kimi-k2.5-0127",
+      "context_tokens": 262144,
+      "pricing": {
+        "input_per_million": 0.5700000000000001,
+        "output_per_million": 2.8499999999999996,
+        "raw": {
+          "prompt": "0.00000057",
+          "completion": "0.00000285",
+          "input_cache_read": "0.000000095",
+          "discount": 0.05
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 100.0,
+        "uptime_30m": 98.91625615763546,
+        "uptime_1d": 99.75081196102587
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "include_reasoning",
+          "logprobs",
+          "max_tokens",
+          "presence_penalty",
+          "reasoning",
+          "repetition_penalty",
+          "response_format",
+          "seed",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_k",
+          "top_logprobs",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-24T07:38:57Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "moonshotai/kimi-k2.5",
+        "last_seen": "2026-08-24T07:38:57Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "moonshotai/kimi-k2.5",
+      "model_slug": "moonshotai/kimi-k2.5",
+      "provider_id": "phala",
+      "provider_name": "Phala",
+      "endpoint_id": "Phala | moonshotai/kimi-k2.5-0127",
+      "identity_key": "moonshotai/kimi-k2.5:phala:Phala | moonshotai/kimi-k2.5-0127",
+      "context_tokens": 262144,
+      "pricing": {
+        "input_per_million": 0.6,
+        "output_per_million": 3.0,
+        "raw": {
+          "prompt": "0.0000006",
+          "completion": "0.000003",
+          "input_cache_read": "0.00000022",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": null,
+        "uptime_30m": null,
+        "uptime_1d": 81.56133828996282
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "include_reasoning",
+          "max_tokens",
+          "min_p",
+          "presence_penalty",
+          "reasoning",
+          "repetition_penalty",
+          "response_format",
+          "seed",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_k",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-24T07:38:57Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "moonshotai/kimi-k2.5",
+        "last_seen": "2026-08-24T07:38:57Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "moonshotai/kimi-k2.5",
+      "model_slug": "moonshotai/kimi-k2.5",
+      "provider_id": "siliconflow/int4",
+      "provider_name": "SiliconFlow",
+      "endpoint_id": "SiliconFlow | moonshotai/kimi-k2.5-0127",
+      "identity_key": "moonshotai/kimi-k2.5:siliconflow/int4:SiliconFlow | moonshotai/kimi-k2.5-0127",
+      "context_tokens": 262144,
+      "pricing": {
+        "input_per_million": 0.44999999999999996,
+        "output_per_million": 2.25,
+        "raw": {
+          "prompt": "0.00000045",
+          "completion": "0.00000225",
+          "input_cache_read": "0.00000007",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 100.0,
+        "uptime_30m": 100.0,
+        "uptime_1d": 95.78840970350404
+      },
+      "quantization": "int4",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "include_reasoning",
+          "max_tokens",
+          "reasoning",
+          "response_format",
+          "structured_outputs",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_k",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-24T07:38:57Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "moonshotai/kimi-k2.5",
+        "last_seen": "2026-08-24T07:38:57Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "moonshotai/kimi-k2.5",
+      "model_slug": "moonshotai/kimi-k2.5",
+      "provider_id": "streamlake/fp8",
+      "provider_name": "StreamLake",
+      "endpoint_id": "StreamLake | moonshotai/kimi-k2.5-0127",
+      "identity_key": "moonshotai/kimi-k2.5:streamlake/fp8:StreamLake | moonshotai/kimi-k2.5-0127",
+      "context_tokens": 256000,
+      "pricing": {
+        "input_per_million": 0.54,
+        "output_per_million": 2.7,
+        "raw": {
+          "prompt": "0.00000054",
+          "completion": "0.0000027",
+          "input_cache_read": "0.00000009",
+          "discount": 0.1
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 100.0,
+        "uptime_30m": 99.91638795986621,
+        "uptime_1d": 99.74999412211886
+      },
+      "quantization": "fp8",
+      "capabilities": {
+        "supported_parameters": [
+          "include_reasoning",
+          "logprobs",
+          "max_tokens",
+          "presence_penalty",
+          "reasoning",
+          "response_format",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_logprobs",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-24T07:38:57Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "moonshotai/kimi-k2.5",
+        "last_seen": "2026-08-24T07:38:57Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "moonshotai/kimi-k2.5",
+      "model_slug": "moonshotai/kimi-k2.5",
+      "provider_id": "venice",
+      "provider_name": "Venice",
+      "endpoint_id": "Venice | moonshotai/kimi-k2.5-0127",
+      "identity_key": "moonshotai/kimi-k2.5:venice:Venice | moonshotai/kimi-k2.5-0127",
+      "context_tokens": 256000,
+      "pricing": {
+        "input_per_million": 0.532,
+        "output_per_million": 3.3249999999999997,
+        "raw": {
+          "prompt": "0.000000532",
+          "completion": "0.000003325",
+          "input_cache_read": "0.000000209",
+          "discount": 0.05
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 100.0,
+        "uptime_30m": 100.0,
+        "uptime_1d": 98.9985927705363
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "include_reasoning",
+          "logprobs",
+          "max_tokens",
+          "presence_penalty",
+          "reasoning",
+          "response_format",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_k",
+          "top_logprobs",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-24T07:38:57Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "moonshotai/kimi-k2.5",
+        "last_seen": "2026-08-24T07:38:57Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "moonshotai/kimi-k2.6",
+      "model_slug": "moonshotai/kimi-k2.6",
+      "provider_id": "atlas-cloud/int4",
+      "provider_name": "AtlasCloud",
+      "endpoint_id": "AtlasCloud | moonshotai/kimi-k2.6-20260420",
+      "identity_key": "moonshotai/kimi-k2.6:atlas-cloud/int4:AtlasCloud | moonshotai/kimi-k2.6-20260420",
+      "context_tokens": 262144,
+      "pricing": {
+        "input_per_million": 0.95,
+        "output_per_million": 4.0,
+        "raw": {
+          "prompt": "0.00000095",
+          "completion": "0.000004",
+          "input_cache_read": "0.00000016",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "unavailable",
+        "uptime_5m": null,
+        "uptime_30m": 61.47540983606557,
+        "uptime_1d": 94.37191760951552
+      },
+      "quantization": "int4",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "include_reasoning",
+          "logit_bias",
+          "max_tokens",
+          "min_p",
+          "presence_penalty",
+          "reasoning",
+          "repetition_penalty",
+          "response_format",
+          "seed",
+          "structured_outputs",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_k",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-24T07:38:57Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "moonshotai/kimi-k2.6",
+        "last_seen": "2026-08-24T07:38:57Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "moonshotai/kimi-k2.6",
+      "model_slug": "moonshotai/kimi-k2.6",
+      "provider_id": "baidu/fp4",
+      "provider_name": "Baidu",
+      "endpoint_id": "Baidu | moonshotai/kimi-k2.6-20260420",
+      "identity_key": "moonshotai/kimi-k2.6:baidu/fp4:Baidu | moonshotai/kimi-k2.6-20260420",
+      "context_tokens": 262144,
+      "pricing": {
+        "input_per_million": 0.95,
+        "output_per_million": 4.0,
+        "raw": {
+          "prompt": "0.00000095",
+          "completion": "0.000004",
+          "input_cache_read": "0.00000016",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 100.0,
+        "uptime_30m": 100.0,
+        "uptime_1d": 99.98200505975379
+      },
+      "quantization": "fp4",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "include_reasoning",
+          "max_tokens",
+          "presence_penalty",
+          "reasoning",
+          "response_format",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-24T07:38:57Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "moonshotai/kimi-k2.6",
+        "last_seen": "2026-08-24T07:38:57Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "moonshotai/kimi-k2.6",
+      "model_slug": "moonshotai/kimi-k2.6",
+      "provider_id": "baseten/fp4",
+      "provider_name": "BaseTen",
+      "endpoint_id": "BaseTen | moonshotai/kimi-k2.6-20260420",
+      "identity_key": "moonshotai/kimi-k2.6:baseten/fp4:BaseTen | moonshotai/kimi-k2.6-20260420",
+      "context_tokens": 262000,
+      "pricing": {
+        "input_per_million": 0.95,
+        "output_per_million": 4.0,
+        "raw": {
+          "prompt": "0.00000095",
+          "completion": "0.000004",
+          "input_cache_read": "0.00000016",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": null,
+        "uptime_30m": null,
+        "uptime_1d": null
+      },
+      "quantization": "fp4",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "include_reasoning",
+          "max_tokens",
+          "presence_penalty",
+          "reasoning",
+          "response_format",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-24T07:38:57Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "moonshotai/kimi-k2.6",
+        "last_seen": "2026-08-24T07:38:57Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "moonshotai/kimi-k2.6",
+      "model_slug": "moonshotai/kimi-k2.6",
+      "provider_id": "chutes/int4",
+      "provider_name": "Chutes",
+      "endpoint_id": "Chutes | moonshotai/kimi-k2.6-20260420",
+      "identity_key": "moonshotai/kimi-k2.6:chutes/int4:Chutes | moonshotai/kimi-k2.6-20260420",
+      "context_tokens": 262144,
+      "pricing": {
+        "input_per_million": 0.58,
+        "output_per_million": 3.4,
+        "raw": {
+          "prompt": "0.00000058",
+          "completion": "0.0000034",
+          "input_cache_read": "0.000000058",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 97.79411764705883,
+        "uptime_30m": 98.83612662942272,
+        "uptime_1d": 98.46694073312779
+      },
+      "quantization": "int4",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "include_reasoning",
+          "max_tokens",
+          "presence_penalty",
+          "reasoning",
+          "repetition_penalty",
+          "seed",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_k",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-24T07:38:57Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "moonshotai/kimi-k2.6",
+        "last_seen": "2026-08-24T07:38:57Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "moonshotai/kimi-k2.6",
+      "model_slug": "moonshotai/kimi-k2.6",
+      "provider_id": "cloudflare",
+      "provider_name": "Cloudflare",
+      "endpoint_id": "Cloudflare | moonshotai/kimi-k2.6-20260420",
+      "identity_key": "moonshotai/kimi-k2.6:cloudflare:Cloudflare | moonshotai/kimi-k2.6-20260420",
+      "context_tokens": 262144,
+      "pricing": {
+        "input_per_million": 0.95,
+        "output_per_million": 4.0,
+        "raw": {
+          "prompt": "0.00000095",
+          "completion": "0.000004",
+          "input_cache_read": "0.00000016",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 100.0,
+        "uptime_30m": 100.0,
+        "uptime_1d": 99.93460490463215
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "include_reasoning",
+          "logit_bias",
+          "logprobs",
+          "max_tokens",
+          "min_p",
+          "presence_penalty",
+          "reasoning",
+          "repetition_penalty",
+          "response_format",
+          "seed",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_k",
+          "top_logprobs",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-24T07:38:57Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "moonshotai/kimi-k2.6",
+        "last_seen": "2026-08-24T07:38:57Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "moonshotai/kimi-k2.6",
+      "model_slug": "moonshotai/kimi-k2.6",
+      "provider_id": "coreweave/fp4",
+      "provider_name": "CoreWeave",
+      "endpoint_id": "CoreWeave | moonshotai/kimi-k2.6-20260420",
+      "identity_key": "moonshotai/kimi-k2.6:coreweave/fp4:CoreWeave | moonshotai/kimi-k2.6-20260420",
+      "context_tokens": 262144,
+      "pricing": {
+        "input_per_million": 0.65,
+        "output_per_million": 3.41,
+        "raw": {
+          "prompt": "0.00000065",
+          "completion": "0.00000341",
+          "input_cache_read": "0.00000015",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 99.84411535463757,
+        "uptime_30m": 99.79666531110207,
+        "uptime_1d": 99.80422940152833
+      },
+      "quantization": "fp4",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "include_reasoning",
+          "logprobs",
+          "max_tokens",
+          "presence_penalty",
+          "reasoning",
+          "repetition_penalty",
+          "response_format",
+          "seed",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_k",
+          "top_logprobs",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-24T07:38:57Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "moonshotai/kimi-k2.6",
+        "last_seen": "2026-08-24T07:38:57Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "moonshotai/kimi-k2.6",
+      "model_slug": "moonshotai/kimi-k2.6",
+      "provider_id": "crusoe/bf16",
+      "provider_name": "Crusoe",
+      "endpoint_id": "Crusoe | moonshotai/kimi-k2.6-20260420",
+      "identity_key": "moonshotai/kimi-k2.6:crusoe/bf16:Crusoe | moonshotai/kimi-k2.6-20260420",
+      "context_tokens": 262144,
+      "pricing": {
+        "input_per_million": 0.7,
+        "output_per_million": 3.5,
+        "raw": {
+          "prompt": "0.0000007",
+          "completion": "0.0000035",
+          "input_cache_read": "0.00000035",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "unavailable",
+        "uptime_5m": 98.0,
+        "uptime_30m": 90.8119658119658,
+        "uptime_1d": 99.03926353835223
+      },
+      "quantization": "bf16",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "include_reasoning",
+          "logit_bias",
+          "max_tokens",
+          "min_p",
+          "presence_penalty",
+          "reasoning",
+          "repetition_penalty",
+          "response_format",
+          "seed",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_k",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-24T07:38:57Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "moonshotai/kimi-k2.6",
+        "last_seen": "2026-08-24T07:38:57Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "moonshotai/kimi-k2.6",
+      "model_slug": "moonshotai/kimi-k2.6",
+      "provider_id": "decart/fp4",
+      "provider_name": "Decart",
+      "endpoint_id": "Decart | moonshotai/kimi-k2.6-20260420",
+      "identity_key": "moonshotai/kimi-k2.6:decart/fp4:Decart | moonshotai/kimi-k2.6-20260420",
+      "context_tokens": 262144,
+      "pricing": {
+        "input_per_million": 0.5865,
+        "output_per_million": 2.4696000000000002,
+        "raw": {
+          "prompt": "0.0000005865",
+          "completion": "0.0000024696",
+          "input_cache_read": "0.0000000988",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "unavailable",
+        "uptime_5m": 100.0,
+        "uptime_30m": 84.21052631578947,
+        "uptime_1d": 97.59106162008136
+      },
+      "quantization": "fp4",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "include_reasoning",
+          "max_tokens",
+          "min_p",
+          "presence_penalty",
+          "reasoning",
+          "repetition_penalty",
+          "response_format",
+          "seed",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_k",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-24T07:38:57Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "moonshotai/kimi-k2.6",
+        "last_seen": "2026-08-24T07:38:57Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "moonshotai/kimi-k2.6",
+      "model_slug": "moonshotai/kimi-k2.6",
+      "provider_id": "deepinfra/fp4",
+      "provider_name": "DeepInfra",
+      "endpoint_id": "DeepInfra | moonshotai/kimi-k2.6-20260420",
+      "identity_key": "moonshotai/kimi-k2.6:deepinfra/fp4:DeepInfra | moonshotai/kimi-k2.6-20260420",
+      "context_tokens": 262144,
+      "pricing": {
+        "input_per_million": 0.75,
+        "output_per_million": 3.5,
+        "raw": {
+          "prompt": "0.00000075",
+          "completion": "0.0000035",
+          "input_cache_read": "0.00000015",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 98.87640449438202,
+        "uptime_30m": 98.52262234533703,
+        "uptime_1d": 99.75008381335527
+      },
+      "quantization": "fp4",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "include_reasoning",
+          "logit_bias",
+          "max_tokens",
+          "min_p",
+          "presence_penalty",
+          "reasoning",
+          "repetition_penalty",
+          "response_format",
+          "seed",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_k",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-24T07:38:57Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "moonshotai/kimi-k2.6",
+        "last_seen": "2026-08-24T07:38:57Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "moonshotai/kimi-k2.6",
+      "model_slug": "moonshotai/kimi-k2.6",
+      "provider_id": "digitalocean",
+      "provider_name": "DigitalOcean",
+      "endpoint_id": "DigitalOcean | moonshotai/kimi-k2.6-20260420",
+      "identity_key": "moonshotai/kimi-k2.6:digitalocean:DigitalOcean | moonshotai/kimi-k2.6-20260420",
+      "context_tokens": 262144,
+      "pricing": {
+        "input_per_million": 0.95,
+        "output_per_million": 4.0,
+        "raw": {
+          "prompt": "0.00000095",
+          "completion": "0.000004",
+          "input_cache_read": "0.00000019",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": null,
+        "uptime_30m": null,
+        "uptime_1d": 99.14219249781914
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "include_reasoning",
+          "logprobs",
+          "max_tokens",
+          "reasoning",
+          "response_format",
+          "structured_outputs",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_logprobs",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-24T07:38:57Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "moonshotai/kimi-k2.6",
+        "last_seen": "2026-08-24T07:38:57Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "moonshotai/kimi-k2.6",
+      "model_slug": "moonshotai/kimi-k2.6",
+      "provider_id": "fireworks",
+      "provider_name": "Fireworks",
+      "endpoint_id": "Fireworks | moonshotai/kimi-k2.6-20260420",
+      "identity_key": "moonshotai/kimi-k2.6:fireworks:Fireworks | moonshotai/kimi-k2.6-20260420",
+      "context_tokens": 262144,
+      "pricing": {
+        "input_per_million": 0.95,
+        "output_per_million": 4.0,
+        "raw": {
+          "prompt": "0.00000095",
+          "completion": "0.000004",
+          "input_cache_read": "0.00000016",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": null,
+        "uptime_30m": null,
+        "uptime_1d": 0.18231540565177756
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "include_reasoning",
+          "logit_bias",
+          "logprobs",
+          "max_tokens",
+          "presence_penalty",
+          "reasoning",
+          "repetition_penalty",
+          "response_format",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_k",
+          "top_logprobs",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-24T07:38:57Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "moonshotai/kimi-k2.6",
+        "last_seen": "2026-08-24T07:38:57Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "moonshotai/kimi-k2.6",
+      "model_slug": "moonshotai/kimi-k2.6",
+      "provider_id": "inceptron/int4",
+      "provider_name": "Inceptron",
+      "endpoint_id": "Inceptron | moonshotai/kimi-k2.6-20260420",
+      "identity_key": "moonshotai/kimi-k2.6:inceptron/int4:Inceptron | moonshotai/kimi-k2.6-20260420",
+      "context_tokens": 262144,
+      "pricing": {
+        "input_per_million": 0.6,
+        "output_per_million": 3.41,
+        "raw": {
+          "prompt": "0.0000006",
+          "completion": "0.00000341",
+          "input_cache_read": "0.0000002",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 98.47328244274809,
+        "uptime_30m": 98.82139619220308,
+        "uptime_1d": 99.90296349486677
+      },
+      "quantization": "int4",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "include_reasoning",
+          "logit_bias",
+          "logprobs",
+          "max_tokens",
+          "parallel_tool_calls",
+          "presence_penalty",
+          "reasoning",
+          "response_format",
+          "seed",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_logprobs",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-24T07:38:57Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "moonshotai/kimi-k2.6",
+        "last_seen": "2026-08-24T07:38:57Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "moonshotai/kimi-k2.6",
+      "model_slug": "moonshotai/kimi-k2.6",
+      "provider_id": "moonshotai/int4",
+      "provider_name": "Moonshot AI",
+      "endpoint_id": "Moonshot AI | moonshotai/kimi-k2.6-20260420",
+      "identity_key": "moonshotai/kimi-k2.6:moonshotai/int4:Moonshot AI | moonshotai/kimi-k2.6-20260420",
+      "context_tokens": 262144,
+      "pricing": {
+        "input_per_million": 0.95,
+        "output_per_million": 4.0,
+        "raw": {
+          "prompt": "0.00000095",
+          "completion": "0.000004",
+          "input_cache_read": "0.00000016",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 100.0,
+        "uptime_30m": 99.88974641675854,
+        "uptime_1d": 99.95755393577471
+      },
+      "quantization": "int4",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "include_reasoning",
+          "max_tokens",
+          "presence_penalty",
+          "reasoning",
+          "response_format",
+          "stop",
+          "structured_outputs",
+          "tool_choice",
+          "tools"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-24T07:38:57Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "moonshotai/kimi-k2.6",
+        "last_seen": "2026-08-24T07:38:57Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "moonshotai/kimi-k2.6",
+      "model_slug": "moonshotai/kimi-k2.6",
+      "provider_id": "novita",
+      "provider_name": "Novita",
+      "endpoint_id": "Novita | moonshotai/kimi-k2.6-20260420",
+      "identity_key": "moonshotai/kimi-k2.6:novita:Novita | moonshotai/kimi-k2.6-20260420",
+      "context_tokens": 262144,
+      "pricing": {
+        "input_per_million": 0.7999999999999999,
+        "output_per_million": 3.4,
+        "raw": {
+          "prompt": "0.0000008",
+          "completion": "0.0000034",
+          "input_cache_read": "0.00000016",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 100.0,
+        "uptime_30m": 99.7452229299363,
+        "uptime_1d": 99.95741646695319
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "include_reasoning",
+          "max_tokens",
+          "presence_penalty",
+          "reasoning",
+          "repetition_penalty",
+          "response_format",
+          "seed",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_k",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-24T07:38:57Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "moonshotai/kimi-k2.6",
+        "last_seen": "2026-08-24T07:38:57Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "moonshotai/kimi-k2.6",
+      "model_slug": "moonshotai/kimi-k2.6",
+      "provider_id": "parasail/int4",
+      "provider_name": "Parasail",
+      "endpoint_id": "Parasail | moonshotai/kimi-k2.6-20260420",
+      "identity_key": "moonshotai/kimi-k2.6:parasail/int4:Parasail | moonshotai/kimi-k2.6-20260420",
+      "context_tokens": 262144,
+      "pricing": {
+        "input_per_million": 0.75,
+        "output_per_million": 3.5,
+        "raw": {
+          "prompt": "0.00000075",
+          "completion": "0.0000035",
+          "input_cache_read": "0.00000016",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 91.66666666666666,
+        "uptime_30m": 98.61386138613861,
+        "uptime_1d": 99.84098137210358
+      },
+      "quantization": "int4",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "include_reasoning",
+          "logit_bias",
+          "logprobs",
+          "max_tokens",
+          "presence_penalty",
+          "reasoning",
+          "repetition_penalty",
+          "response_format",
+          "seed",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_k",
+          "top_logprobs",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-24T07:38:57Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "moonshotai/kimi-k2.6",
+        "last_seen": "2026-08-24T07:38:57Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "moonshotai/kimi-k2.6",
+      "model_slug": "moonshotai/kimi-k2.6",
+      "provider_id": "phala",
+      "provider_name": "Phala",
+      "endpoint_id": "Phala | moonshotai/kimi-k2.6-20260420",
+      "identity_key": "moonshotai/kimi-k2.6:phala:Phala | moonshotai/kimi-k2.6-20260420",
+      "context_tokens": 262144,
+      "pricing": {
+        "input_per_million": 1.0899999999999999,
+        "output_per_million": 4.6,
+        "raw": {
+          "prompt": "0.00000109",
+          "completion": "0.0000046",
+          "input_cache_read": "0.00000037",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": null,
+        "uptime_30m": 96.7948717948718,
+        "uptime_1d": 98.81015805363168
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "include_reasoning",
+          "max_tokens",
+          "min_p",
+          "presence_penalty",
+          "reasoning",
+          "repetition_penalty",
+          "response_format",
+          "seed",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_k",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-24T07:38:57Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "moonshotai/kimi-k2.6",
+        "last_seen": "2026-08-24T07:38:57Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "moonshotai/kimi-k2.6",
+      "model_slug": "moonshotai/kimi-k2.6",
+      "provider_id": "siliconflow/fp8",
+      "provider_name": "SiliconFlow",
+      "endpoint_id": "SiliconFlow | moonshotai/kimi-k2.6-20260420",
+      "identity_key": "moonshotai/kimi-k2.6:siliconflow/fp8:SiliconFlow | moonshotai/kimi-k2.6-20260420",
+      "context_tokens": 262144,
+      "pricing": {
+        "input_per_million": 0.77,
+        "output_per_million": 3.4,
+        "raw": {
+          "prompt": "0.00000077",
+          "completion": "0.0000034",
+          "input_cache_read": "0.00000014",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 97.67441860465115,
+        "uptime_30m": 98.94514767932489,
+        "uptime_1d": 99.61597982461168
+      },
+      "quantization": "fp8",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "include_reasoning",
+          "max_tokens",
+          "reasoning",
+          "response_format",
+          "structured_outputs",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_k",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-24T07:38:57Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "moonshotai/kimi-k2.6",
+        "last_seen": "2026-08-24T07:38:57Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "moonshotai/kimi-k2.6",
+      "model_slug": "moonshotai/kimi-k2.6",
+      "provider_id": "streamlake/fp8",
+      "provider_name": "StreamLake",
+      "endpoint_id": "StreamLake | moonshotai/kimi-k2.6-20260420",
+      "identity_key": "moonshotai/kimi-k2.6:streamlake/fp8:StreamLake | moonshotai/kimi-k2.6-20260420",
+      "context_tokens": 256000,
+      "pricing": {
+        "input_per_million": 0.5984999999999999,
+        "output_per_million": 2.52,
+        "raw": {
+          "prompt": "0.0000005985",
+          "completion": "0.00000252",
+          "input_cache_read": "0.0000001008",
+          "discount": 0.37
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 96.0,
+        "uptime_30m": 96.97247706422019,
+        "uptime_1d": 98.72093861947924
+      },
+      "quantization": "fp8",
+      "capabilities": {
+        "supported_parameters": [
+          "include_reasoning",
+          "logprobs",
+          "max_tokens",
+          "reasoning",
+          "response_format",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_logprobs",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-24T07:38:57Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "moonshotai/kimi-k2.6",
+        "last_seen": "2026-08-24T07:38:57Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "moonshotai/kimi-k2.6",
+      "model_slug": "moonshotai/kimi-k2.6",
+      "provider_id": "venice/int4",
+      "provider_name": "Venice",
+      "endpoint_id": "Venice | moonshotai/kimi-k2.6-20260420",
+      "identity_key": "moonshotai/kimi-k2.6:venice/int4:Venice | moonshotai/kimi-k2.6-20260420",
+      "context_tokens": 256000,
+      "pricing": {
+        "input_per_million": 0.75,
+        "output_per_million": 3.5,
+        "raw": {
+          "prompt": "0.00000075",
+          "completion": "0.0000035",
+          "input_cache_read": "0.00000016",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 92.10526315789474,
+        "uptime_30m": 97.36147757255937,
+        "uptime_1d": 99.71264367816092
+      },
+      "quantization": "int4",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "include_reasoning",
+          "max_tokens",
+          "presence_penalty",
+          "reasoning",
+          "response_format",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_k",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-24T07:38:57Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "moonshotai/kimi-k2.6",
+        "last_seen": "2026-08-24T07:38:57Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "moonshotai/kimi-k2.7-code",
+      "model_slug": "moonshotai/kimi-k2.7-code",
+      "provider_id": "alibaba/fp8",
+      "provider_name": "Alibaba",
+      "endpoint_id": "Alibaba | moonshotai/kimi-k2.7-code-20260612",
+      "identity_key": "moonshotai/kimi-k2.7-code:alibaba/fp8:Alibaba | moonshotai/kimi-k2.7-code-20260612",
+      "context_tokens": 262144,
+      "pricing": {
+        "input_per_million": 0.95,
+        "output_per_million": 4.0,
+        "raw": {
+          "prompt": "0.00000095",
+          "completion": "0.000004",
+          "input_cache_read": "0.00000019",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": null,
+        "uptime_30m": null,
+        "uptime_1d": 99.95389580451821
+      },
+      "quantization": "fp8",
+      "capabilities": {
+        "supported_parameters": [
+          "include_reasoning",
+          "logprobs",
+          "max_tokens",
+          "presence_penalty",
+          "reasoning",
+          "response_format",
+          "seed",
+          "structured_outputs",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_logprobs",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-24T07:38:57Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "moonshotai/kimi-k2.7-code",
+        "last_seen": "2026-08-24T07:38:57Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "moonshotai/kimi-k2.7-code",
+      "model_slug": "moonshotai/kimi-k2.7-code",
+      "provider_id": "ambient",
+      "provider_name": "Ambient",
+      "endpoint_id": "Ambient | moonshotai/kimi-k2.7-code-20260612",
+      "identity_key": "moonshotai/kimi-k2.7-code:ambient:Ambient | moonshotai/kimi-k2.7-code-20260612",
+      "context_tokens": 262144,
+      "pricing": {
+        "input_per_million": 0.69,
+        "output_per_million": 3.49,
+        "raw": {
+          "prompt": "0.00000069",
+          "completion": "0.00000349",
+          "input_cache_read": "0.00000014",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 98.27586206896551,
+        "uptime_30m": 99.77011494252874,
+        "uptime_1d": 99.83941054222558
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "include_reasoning",
+          "logprobs",
+          "max_tokens",
+          "reasoning",
+          "response_format",
+          "structured_outputs",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_logprobs",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-24T07:38:57Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "moonshotai/kimi-k2.7-code",
+        "last_seen": "2026-08-24T07:38:57Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "moonshotai/kimi-k2.7-code",
+      "model_slug": "moonshotai/kimi-k2.7-code",
+      "provider_id": "cloudflare",
+      "provider_name": "Cloudflare",
+      "endpoint_id": "Cloudflare | moonshotai/kimi-k2.7-code-20260612",
+      "identity_key": "moonshotai/kimi-k2.7-code:cloudflare:Cloudflare | moonshotai/kimi-k2.7-code-20260612",
+      "context_tokens": 262144,
+      "pricing": {
+        "input_per_million": 0.95,
+        "output_per_million": 4.0,
+        "raw": {
+          "prompt": "0.00000095",
+          "completion": "0.000004",
+          "input_cache_read": "0.00000019",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": null,
+        "uptime_30m": null,
+        "uptime_1d": 99.93423216047353
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "include_reasoning",
+          "logit_bias",
+          "logprobs",
+          "max_tokens",
+          "min_p",
+          "presence_penalty",
+          "reasoning",
+          "repetition_penalty",
+          "response_format",
+          "seed",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_k",
+          "top_logprobs",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-24T07:38:57Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "moonshotai/kimi-k2.7-code",
+        "last_seen": "2026-08-24T07:38:57Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "moonshotai/kimi-k2.7-code",
+      "model_slug": "moonshotai/kimi-k2.7-code",
+      "provider_id": "coreweave/int4",
+      "provider_name": "CoreWeave",
+      "endpoint_id": "CoreWeave | moonshotai/kimi-k2.7-code-20260612",
+      "identity_key": "moonshotai/kimi-k2.7-code:coreweave/int4:CoreWeave | moonshotai/kimi-k2.7-code-20260612",
+      "context_tokens": 262144,
+      "pricing": {
+        "input_per_million": 0.71,
+        "output_per_million": 3.5,
+        "raw": {
+          "prompt": "0.00000071",
+          "completion": "0.0000035",
+          "input_cache_read": "0.00000015",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 100.0,
+        "uptime_30m": 100.0,
+        "uptime_1d": 99.99557032115172
+      },
+      "quantization": "int4",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "include_reasoning",
+          "logprobs",
+          "max_tokens",
+          "presence_penalty",
+          "reasoning",
+          "repetition_penalty",
+          "response_format",
+          "seed",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_k",
+          "top_logprobs",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-24T07:38:57Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "moonshotai/kimi-k2.7-code",
+        "last_seen": "2026-08-24T07:38:57Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "moonshotai/kimi-k2.7-code",
+      "model_slug": "moonshotai/kimi-k2.7-code",
+      "provider_id": "deepinfra/fp4",
+      "provider_name": "DeepInfra",
+      "endpoint_id": "DeepInfra | moonshotai/kimi-k2.7-code-20260612",
+      "identity_key": "moonshotai/kimi-k2.7-code:deepinfra/fp4:DeepInfra | moonshotai/kimi-k2.7-code-20260612",
+      "context_tokens": 262144,
+      "pricing": {
+        "input_per_million": 0.6799999999999999,
+        "output_per_million": 3.4,
+        "raw": {
+          "prompt": "0.00000068",
+          "completion": "0.0000034",
+          "input_cache_read": "0.000000136",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": null,
+        "uptime_30m": 99.5575221238938,
+        "uptime_1d": 99.92756247736327
+      },
+      "quantization": "fp4",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "include_reasoning",
+          "logit_bias",
+          "max_tokens",
+          "min_p",
+          "presence_penalty",
+          "reasoning",
+          "repetition_penalty",
+          "response_format",
+          "seed",
+          "stop",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_k",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-24T07:38:57Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "moonshotai/kimi-k2.7-code",
+        "last_seen": "2026-08-24T07:38:57Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "moonshotai/kimi-k2.7-code",
+      "model_slug": "moonshotai/kimi-k2.7-code",
+      "provider_id": "gmicloud/fp8",
+      "provider_name": "GMICloud",
+      "endpoint_id": "GMICloud | moonshotai/kimi-k2.7-code-20260612",
+      "identity_key": "moonshotai/kimi-k2.7-code:gmicloud/fp8:GMICloud | moonshotai/kimi-k2.7-code-20260612",
+      "context_tokens": 262144,
+      "pricing": {
+        "input_per_million": 0.95,
+        "output_per_million": 4.0,
+        "raw": {
+          "prompt": "0.00000095",
+          "completion": "0.000004",
+          "input_cache_read": "0.00000019",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": null,
+        "uptime_30m": null,
+        "uptime_1d": 99.45121951219512
+      },
+      "quantization": "fp8",
+      "capabilities": {
+        "supported_parameters": [
+          "include_reasoning",
+          "logprobs",
+          "max_tokens",
+          "reasoning",
+          "response_format",
+          "seed",
+          "structured_outputs",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_logprobs",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-24T07:38:57Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "moonshotai/kimi-k2.7-code",
+        "last_seen": "2026-08-24T07:38:57Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "moonshotai/kimi-k2.7-code",
+      "model_slug": "moonshotai/kimi-k2.7-code",
+      "provider_id": "inceptron/int4",
+      "provider_name": "Inceptron",
+      "endpoint_id": "Inceptron | moonshotai/kimi-k2.7-code-20260612",
+      "identity_key": "moonshotai/kimi-k2.7-code:inceptron/int4:Inceptron | moonshotai/kimi-k2.7-code-20260612",
+      "context_tokens": 262144,
+      "pricing": {
+        "input_per_million": 0.67,
+        "output_per_million": 3.4,
+        "raw": {
+          "prompt": "0.00000067",
+          "completion": "0.0000034",
+          "input_cache_read": "0.00000017",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 100.0,
+        "uptime_30m": 100.0,
+        "uptime_1d": 99.8947022046726
+      },
+      "quantization": "int4",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "include_reasoning",
+          "logit_bias",
+          "logprobs",
+          "max_tokens",
+          "parallel_tool_calls",
+          "presence_penalty",
+          "reasoning",
+          "response_format",
+          "seed",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_logprobs",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-24T07:38:57Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "moonshotai/kimi-k2.7-code",
+        "last_seen": "2026-08-24T07:38:57Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "moonshotai/kimi-k2.7-code",
+      "model_slug": "moonshotai/kimi-k2.7-code",
+      "provider_id": "modelrun/fp4",
+      "provider_name": "ModelRun",
+      "endpoint_id": "ModelRun | moonshotai/kimi-k2.7-code-20260612",
+      "identity_key": "moonshotai/kimi-k2.7-code:modelrun/fp4:ModelRun | moonshotai/kimi-k2.7-code-20260612",
+      "context_tokens": 262144,
+      "pricing": {
+        "input_per_million": 0.85,
+        "output_per_million": 3.75,
+        "raw": {
+          "prompt": "0.00000085",
+          "completion": "0.00000375",
+          "input_cache_read": "0.00000016",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 100.0,
+        "uptime_30m": 100.0,
+        "uptime_1d": 68.39334459898609
+      },
+      "quantization": "fp4",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "include_reasoning",
+          "max_tokens",
+          "presence_penalty",
+          "reasoning",
+          "repetition_penalty",
+          "response_format",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_k",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-24T07:38:57Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "moonshotai/kimi-k2.7-code",
+        "last_seen": "2026-08-24T07:38:57Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "moonshotai/kimi-k2.7-code",
+      "model_slug": "moonshotai/kimi-k2.7-code",
+      "provider_id": "moonshotai/highspeed",
+      "provider_name": "Moonshot AI",
+      "endpoint_id": "Moonshot AI | moonshotai/kimi-k2.7-code-20260612",
+      "identity_key": "moonshotai/kimi-k2.7-code:moonshotai/highspeed:Moonshot AI | moonshotai/kimi-k2.7-code-20260612",
+      "context_tokens": 262144,
+      "pricing": {
+        "input_per_million": 1.9,
+        "output_per_million": 8.0,
+        "raw": {
+          "prompt": "0.0000019",
+          "completion": "0.000008",
+          "input_cache_read": "0.00000038",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 100.0,
+        "uptime_30m": 100.0,
+        "uptime_1d": 99.95293010120028
+      },
+      "quantization": "int4",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "include_reasoning",
+          "max_tokens",
+          "presence_penalty",
+          "reasoning",
+          "response_format",
+          "stop",
+          "structured_outputs",
+          "tool_choice",
+          "tools"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-24T07:38:57Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "moonshotai/kimi-k2.7-code",
+        "last_seen": "2026-08-24T07:38:57Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "moonshotai/kimi-k2.7-code",
+      "model_slug": "moonshotai/kimi-k2.7-code",
+      "provider_id": "moonshotai/int4",
+      "provider_name": "Moonshot AI",
+      "endpoint_id": "Moonshot AI | moonshotai/kimi-k2.7-code-20260612",
+      "identity_key": "moonshotai/kimi-k2.7-code:moonshotai/int4:Moonshot AI | moonshotai/kimi-k2.7-code-20260612",
+      "context_tokens": 262144,
+      "pricing": {
+        "input_per_million": 0.95,
+        "output_per_million": 4.0,
+        "raw": {
+          "prompt": "0.00000095",
+          "completion": "0.000004",
+          "input_cache_read": "0.00000019",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": null,
+        "uptime_30m": 100.0,
+        "uptime_1d": 99.5221027479092
+      },
+      "quantization": "int4",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "include_reasoning",
+          "max_tokens",
+          "presence_penalty",
+          "reasoning",
+          "response_format",
+          "stop",
+          "structured_outputs",
+          "tool_choice",
+          "tools"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-24T07:38:57Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "moonshotai/kimi-k2.7-code",
+        "last_seen": "2026-08-24T07:38:57Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "moonshotai/kimi-k2.7-code",
+      "model_slug": "moonshotai/kimi-k2.7-code",
+      "provider_id": "novita/int4",
+      "provider_name": "Novita",
+      "endpoint_id": "Novita | moonshotai/kimi-k2.7-code-20260612",
+      "identity_key": "moonshotai/kimi-k2.7-code:novita/int4:Novita | moonshotai/kimi-k2.7-code-20260612",
+      "context_tokens": 262144,
+      "pricing": {
+        "input_per_million": 0.912,
+        "output_per_million": 3.84,
+        "raw": {
+          "prompt": "0.000000912",
+          "completion": "0.00000384",
+          "input_cache_read": "0.0000001824",
+          "discount": 0.04
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": null,
+        "uptime_30m": 98.61111111111111,
+        "uptime_1d": 99.69289827255278
+      },
+      "quantization": "int4",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "include_reasoning",
+          "logprobs",
+          "max_tokens",
+          "presence_penalty",
+          "reasoning",
+          "repetition_penalty",
+          "response_format",
+          "seed",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_k",
+          "top_logprobs",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-24T07:38:57Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "moonshotai/kimi-k2.7-code",
+        "last_seen": "2026-08-24T07:38:57Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "moonshotai/kimi-k2.7-code",
+      "model_slug": "moonshotai/kimi-k2.7-code",
+      "provider_id": "parasail/int4",
+      "provider_name": "Parasail",
+      "endpoint_id": "Parasail | moonshotai/kimi-k2.7-code-20260612",
+      "identity_key": "moonshotai/kimi-k2.7-code:parasail/int4:Parasail | moonshotai/kimi-k2.7-code-20260612",
+      "context_tokens": 262144,
+      "pricing": {
+        "input_per_million": 0.76,
+        "output_per_million": 3.5,
+        "raw": {
+          "prompt": "0.00000076",
+          "completion": "0.0000035",
+          "input_cache_read": "0.00000016",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": null,
+        "uptime_30m": 100.0,
+        "uptime_1d": 99.89791453988624
+      },
+      "quantization": "int4",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "include_reasoning",
+          "logit_bias",
+          "logprobs",
+          "max_tokens",
+          "presence_penalty",
+          "reasoning",
+          "repetition_penalty",
+          "response_format",
+          "seed",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_k",
+          "top_logprobs",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-24T07:38:57Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "moonshotai/kimi-k2.7-code",
+        "last_seen": "2026-08-24T07:38:57Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "moonshotai/kimi-k2.7-code",
+      "model_slug": "moonshotai/kimi-k2.7-code",
+      "provider_id": "siliconflow/fp8",
+      "provider_name": "SiliconFlow",
+      "endpoint_id": "SiliconFlow | moonshotai/kimi-k2.7-code-20260612",
+      "identity_key": "moonshotai/kimi-k2.7-code:siliconflow/fp8:SiliconFlow | moonshotai/kimi-k2.7-code-20260612",
+      "context_tokens": 262144,
+      "pricing": {
+        "input_per_million": 0.85916,
+        "output_per_million": 3.8,
+        "raw": {
+          "prompt": "0.00000085916",
+          "completion": "0.0000038",
+          "input_cache_read": "0.00000017993",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": null,
+        "uptime_30m": 100.0,
+        "uptime_1d": 99.94883601944231
+      },
+      "quantization": "fp8",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "include_reasoning",
+          "max_tokens",
+          "reasoning",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_k",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-24T07:38:57Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "moonshotai/kimi-k2.7-code",
+        "last_seen": "2026-08-24T07:38:57Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "moonshotai/kimi-k2.7-code",
+      "model_slug": "moonshotai/kimi-k2.7-code",
+      "provider_id": "together",
+      "provider_name": "Together",
+      "endpoint_id": "Together | moonshotai/kimi-k2.7-code-20260612",
+      "identity_key": "moonshotai/kimi-k2.7-code:together:Together | moonshotai/kimi-k2.7-code-20260612",
+      "context_tokens": 262144,
+      "pricing": {
+        "input_per_million": 0.95,
+        "output_per_million": 4.0,
+        "raw": {
+          "prompt": "0.00000095",
+          "completion": "0.000004",
+          "input_cache_read": "0.00000019",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": null,
+        "uptime_30m": 100.0,
+        "uptime_1d": 99.01243599122165
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "include_reasoning",
+          "logit_bias",
+          "max_tokens",
+          "min_p",
+          "presence_penalty",
+          "reasoning",
+          "repetition_penalty",
+          "response_format",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_k",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-24T07:38:57Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "moonshotai/kimi-k2.7-code",
+        "last_seen": "2026-08-24T07:38:57Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "moonshotai/kimi-k2.7-code",
+      "model_slug": "moonshotai/kimi-k2.7-code",
+      "provider_id": "venice/int4",
+      "provider_name": "Venice",
+      "endpoint_id": "Venice | moonshotai/kimi-k2.7-code-20260612",
+      "identity_key": "moonshotai/kimi-k2.7-code:venice/int4:Venice | moonshotai/kimi-k2.7-code-20260612",
+      "context_tokens": 256000,
+      "pricing": {
+        "input_per_million": 0.75,
+        "output_per_million": 3.5,
+        "raw": {
+          "prompt": "0.00000075",
+          "completion": "0.0000035",
+          "input_cache_read": "0.00000016",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": null,
+        "uptime_30m": 100.0,
+        "uptime_1d": 99.94736149493355
+      },
+      "quantization": "int4",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "include_reasoning",
+          "max_tokens",
+          "presence_penalty",
+          "reasoning",
+          "response_format",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_k",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-24T07:38:57Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "moonshotai/kimi-k2.7-code",
+        "last_seen": "2026-08-24T07:38:57Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "moonshotai/kimi-k2.7-code:batch",
+      "model_slug": "moonshotai/kimi-k2.7-code:batch",
+      "provider_id": "together",
+      "provider_name": "Together",
+      "endpoint_id": "Together | moonshotai/kimi-k2.7-code-20260612:batch",
+      "identity_key": "moonshotai/kimi-k2.7-code:batch:together:Together | moonshotai/kimi-k2.7-code-20260612:batch",
+      "context_tokens": 262144,
+      "pricing": {
+        "input_per_million": 0.95,
+        "output_per_million": 4.0,
+        "raw": {
+          "prompt": "0.00000095",
+          "completion": "0.000004",
+          "input_cache_read": "0.00000019",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": null,
+        "uptime_30m": null,
+        "uptime_1d": null
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "include_reasoning",
+          "logit_bias",
+          "max_tokens",
+          "min_p",
+          "presence_penalty",
+          "reasoning",
+          "repetition_penalty",
+          "response_format",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_k",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-24T07:38:57Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "moonshotai/kimi-k2.7-code:batch",
+        "last_seen": "2026-08-24T07:38:57Z"
+      }
+    },
+    {
       "availability": {
         "status": "available",
         "uptime_1d": 100.0,
@@ -28778,6 +32837,1146 @@
       "provider_id": "nvidia/nvfp4",
       "provider_name": "Nvidia",
       "quantization": "nvfp4"
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "openai/gpt-oss-120b",
+      "model_slug": "openai/gpt-oss-120b",
+      "provider_id": "akashml/bf16",
+      "provider_name": "AkashML",
+      "endpoint_id": "AkashML | openai/gpt-oss-120b",
+      "identity_key": "openai/gpt-oss-120b:akashml/bf16:AkashML | openai/gpt-oss-120b",
+      "context_tokens": 131072,
+      "pricing": {
+        "input_per_million": 0.037,
+        "output_per_million": 0.49,
+        "raw": {
+          "prompt": "0.000000037",
+          "completion": "0.00000049",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 99.92826398852223,
+        "uptime_30m": 99.89078633836378,
+        "uptime_1d": 99.91826268390896
+      },
+      "quantization": "bf16",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "include_reasoning",
+          "logprobs",
+          "max_tokens",
+          "presence_penalty",
+          "reasoning",
+          "reasoning_effort",
+          "repetition_penalty",
+          "response_format",
+          "seed",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_k",
+          "top_logprobs",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-24T07:38:57Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "openai/gpt-oss-120b",
+        "last_seen": "2026-08-24T07:38:57Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "openai/gpt-oss-120b",
+      "model_slug": "openai/gpt-oss-120b",
+      "provider_id": "amazon-bedrock",
+      "provider_name": "Amazon Bedrock",
+      "endpoint_id": "Amazon Bedrock | openai/gpt-oss-120b",
+      "identity_key": "openai/gpt-oss-120b:amazon-bedrock:Amazon Bedrock | openai/gpt-oss-120b",
+      "context_tokens": 131072,
+      "pricing": {
+        "input_per_million": 0.15,
+        "output_per_million": 0.6,
+        "raw": {
+          "prompt": "0.00000015",
+          "completion": "0.0000006",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 100.0,
+        "uptime_30m": 99.61587708066581,
+        "uptime_1d": 99.36447488810308
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "include_reasoning",
+          "max_tokens",
+          "reasoning",
+          "reasoning_effort",
+          "stop",
+          "temperature",
+          "top_k",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-24T07:38:57Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "openai/gpt-oss-120b",
+        "last_seen": "2026-08-24T07:38:57Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "openai/gpt-oss-120b",
+      "model_slug": "openai/gpt-oss-120b",
+      "provider_id": "amazon-bedrock/eu-west-1",
+      "provider_name": "Amazon Bedrock",
+      "endpoint_id": "Amazon Bedrock | openai/gpt-oss-120b",
+      "identity_key": "openai/gpt-oss-120b:amazon-bedrock/eu-west-1:Amazon Bedrock | openai/gpt-oss-120b",
+      "context_tokens": 131072,
+      "pricing": {
+        "input_per_million": 0.15,
+        "output_per_million": 0.6,
+        "raw": {
+          "prompt": "0.00000015",
+          "completion": "0.0000006",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": null,
+        "uptime_30m": null,
+        "uptime_1d": 100.0
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "include_reasoning",
+          "max_tokens",
+          "reasoning",
+          "reasoning_effort",
+          "stop",
+          "temperature",
+          "top_k",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-24T07:38:57Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "openai/gpt-oss-120b",
+        "last_seen": "2026-08-24T07:38:57Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "openai/gpt-oss-120b",
+      "model_slug": "openai/gpt-oss-120b",
+      "provider_id": "baseten/fp4",
+      "provider_name": "BaseTen",
+      "endpoint_id": "BaseTen | openai/gpt-oss-120b",
+      "identity_key": "openai/gpt-oss-120b:baseten/fp4:BaseTen | openai/gpt-oss-120b",
+      "context_tokens": 128072,
+      "pricing": {
+        "input_per_million": 0.09999999999999999,
+        "output_per_million": 0.5,
+        "raw": {
+          "prompt": "0.0000001",
+          "completion": "0.0000005",
+          "input_cache_read": "0.0000001",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 100.0,
+        "uptime_30m": 100.0,
+        "uptime_1d": 99.58646060864852
+      },
+      "quantization": "fp4",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "include_reasoning",
+          "max_tokens",
+          "presence_penalty",
+          "reasoning",
+          "reasoning_effort",
+          "response_format",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-24T07:38:57Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "openai/gpt-oss-120b",
+        "last_seen": "2026-08-24T07:38:57Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "openai/gpt-oss-120b",
+      "model_slug": "openai/gpt-oss-120b",
+      "provider_id": "cerebras/fp16",
+      "provider_name": "Cerebras",
+      "endpoint_id": "Cerebras | openai/gpt-oss-120b",
+      "identity_key": "openai/gpt-oss-120b:cerebras/fp16:Cerebras | openai/gpt-oss-120b",
+      "context_tokens": 131072,
+      "pricing": {
+        "input_per_million": 0.35,
+        "output_per_million": 0.75,
+        "raw": {
+          "prompt": "0.00000035",
+          "completion": "0.00000075",
+          "input_cache_read": "0.00000035",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 100.0,
+        "uptime_30m": 100.0,
+        "uptime_1d": 99.99388986317581
+      },
+      "quantization": "fp16",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "include_reasoning",
+          "logit_bias",
+          "logprobs",
+          "max_tokens",
+          "presence_penalty",
+          "reasoning",
+          "reasoning_effort",
+          "response_format",
+          "seed",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_logprobs",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-24T07:38:57Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "openai/gpt-oss-120b",
+        "last_seen": "2026-08-24T07:38:57Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "openai/gpt-oss-120b",
+      "model_slug": "openai/gpt-oss-120b",
+      "provider_id": "coreweave/fp4",
+      "provider_name": "CoreWeave",
+      "endpoint_id": "CoreWeave | openai/gpt-oss-120b",
+      "identity_key": "openai/gpt-oss-120b:coreweave/fp4:CoreWeave | openai/gpt-oss-120b",
+      "context_tokens": 131072,
+      "pricing": {
+        "input_per_million": 0.03,
+        "output_per_million": 0.16999999999999998,
+        "raw": {
+          "prompt": "0.00000003",
+          "completion": "0.00000017",
+          "input_cache_read": "0.00000003",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 94.85526135272329,
+        "uptime_30m": 96.06673835826246,
+        "uptime_1d": 98.82096110713077
+      },
+      "quantization": "fp4",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "include_reasoning",
+          "logprobs",
+          "max_tokens",
+          "presence_penalty",
+          "reasoning",
+          "reasoning_effort",
+          "repetition_penalty",
+          "response_format",
+          "seed",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_k",
+          "top_logprobs",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-24T07:38:57Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "openai/gpt-oss-120b",
+        "last_seen": "2026-08-24T07:38:57Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "openai/gpt-oss-120b",
+      "model_slug": "openai/gpt-oss-120b",
+      "provider_id": "deepinfra/bf16",
+      "provider_name": "DeepInfra",
+      "endpoint_id": "DeepInfra | openai/gpt-oss-120b",
+      "identity_key": "openai/gpt-oss-120b:deepinfra/bf16:DeepInfra | openai/gpt-oss-120b",
+      "context_tokens": 131072,
+      "pricing": {
+        "input_per_million": 0.037,
+        "output_per_million": 0.16999999999999998,
+        "raw": {
+          "prompt": "0.000000037",
+          "completion": "0.00000017",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 99.50057625816365,
+        "uptime_30m": 99.9332363671046,
+        "uptime_1d": 99.6037153973991
+      },
+      "quantization": "bf16",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "include_reasoning",
+          "logit_bias",
+          "max_tokens",
+          "min_p",
+          "presence_penalty",
+          "reasoning",
+          "reasoning_effort",
+          "repetition_penalty",
+          "response_format",
+          "seed",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_k",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-24T07:38:57Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "openai/gpt-oss-120b",
+        "last_seen": "2026-08-24T07:38:57Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "openai/gpt-oss-120b",
+      "model_slug": "openai/gpt-oss-120b",
+      "provider_id": "deepinfra/turbo",
+      "provider_name": "DeepInfra",
+      "endpoint_id": "DeepInfra | openai/gpt-oss-120b",
+      "identity_key": "openai/gpt-oss-120b:deepinfra/turbo:DeepInfra | openai/gpt-oss-120b",
+      "context_tokens": 131072,
+      "pricing": {
+        "input_per_million": 0.15,
+        "output_per_million": 0.6,
+        "raw": {
+          "prompt": "0.00000015",
+          "completion": "0.0000006",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 100.0,
+        "uptime_30m": 99.90059642147118,
+        "uptime_1d": 99.91585284915142
+      },
+      "quantization": "bf16",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "include_reasoning",
+          "logit_bias",
+          "max_tokens",
+          "min_p",
+          "presence_penalty",
+          "reasoning",
+          "reasoning_effort",
+          "repetition_penalty",
+          "response_format",
+          "seed",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_k",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-24T07:38:57Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "openai/gpt-oss-120b",
+        "last_seen": "2026-08-24T07:38:57Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "openai/gpt-oss-120b",
+      "model_slug": "openai/gpt-oss-120b",
+      "provider_id": "digitalocean",
+      "provider_name": "DigitalOcean",
+      "endpoint_id": "DigitalOcean | openai/gpt-oss-120b",
+      "identity_key": "openai/gpt-oss-120b:digitalocean:DigitalOcean | openai/gpt-oss-120b",
+      "context_tokens": 128000,
+      "pricing": {
+        "input_per_million": 0.055,
+        "output_per_million": 0.385,
+        "raw": {
+          "prompt": "0.000000055",
+          "completion": "0.000000385",
+          "input_cache_read": "0.00000002",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 100.0,
+        "uptime_30m": 99.96946564885496,
+        "uptime_1d": 99.98074470479382
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "include_reasoning",
+          "logprobs",
+          "max_tokens",
+          "reasoning",
+          "reasoning_effort",
+          "temperature",
+          "top_logprobs",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-24T07:38:57Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "openai/gpt-oss-120b",
+        "last_seen": "2026-08-24T07:38:57Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "openai/gpt-oss-120b",
+      "model_slug": "openai/gpt-oss-120b",
+      "provider_id": "google-vertex/global",
+      "provider_name": "Google",
+      "endpoint_id": "Google | openai/gpt-oss-120b",
+      "identity_key": "openai/gpt-oss-120b:google-vertex/global:Google | openai/gpt-oss-120b",
+      "context_tokens": 131072,
+      "pricing": {
+        "input_per_million": 0.09,
+        "output_per_million": 0.36,
+        "raw": {
+          "prompt": "0.00000009",
+          "completion": "0.00000036",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "unavailable",
+        "uptime_5m": 59.53991880920162,
+        "uptime_30m": 74.62916316820599,
+        "uptime_1d": 81.2380556709597
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "include_reasoning",
+          "max_tokens",
+          "reasoning",
+          "reasoning_effort",
+          "repetition_penalty",
+          "response_format",
+          "seed",
+          "structured_outputs",
+          "temperature",
+          "top_k",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-24T07:38:57Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "openai/gpt-oss-120b",
+        "last_seen": "2026-08-24T07:38:57Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "openai/gpt-oss-120b",
+      "model_slug": "openai/gpt-oss-120b",
+      "provider_id": "groq",
+      "provider_name": "Groq",
+      "endpoint_id": "Groq | openai/gpt-oss-120b",
+      "identity_key": "openai/gpt-oss-120b:groq:Groq | openai/gpt-oss-120b",
+      "context_tokens": 131072,
+      "pricing": {
+        "input_per_million": 0.15,
+        "output_per_million": 0.6,
+        "raw": {
+          "prompt": "0.00000015",
+          "completion": "0.0000006",
+          "input_cache_read": "0.000000075",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 99.96899224806202,
+        "uptime_30m": 99.98467936091049,
+        "uptime_1d": 99.97487829241942
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "include_reasoning",
+          "max_tokens",
+          "reasoning",
+          "reasoning_effort",
+          "response_format",
+          "seed",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-24T07:38:57Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "openai/gpt-oss-120b",
+        "last_seen": "2026-08-24T07:38:57Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "openai/gpt-oss-120b",
+      "model_slug": "openai/gpt-oss-120b",
+      "provider_id": "mancer/fp8",
+      "provider_name": "Mancer 2",
+      "endpoint_id": "Mancer 2 | openai/gpt-oss-120b",
+      "identity_key": "openai/gpt-oss-120b:mancer/fp8:Mancer 2 | openai/gpt-oss-120b",
+      "context_tokens": 131072,
+      "pricing": {
+        "input_per_million": 0.08499999999999999,
+        "output_per_million": 0.5,
+        "raw": {
+          "prompt": "0.000000085",
+          "completion": "0.0000005",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 100.0,
+        "uptime_30m": 100.0,
+        "uptime_1d": 99.82307748236833
+      },
+      "quantization": "fp8",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "include_reasoning",
+          "logit_bias",
+          "logprobs",
+          "max_tokens",
+          "min_p",
+          "presence_penalty",
+          "reasoning",
+          "reasoning_effort",
+          "repetition_penalty",
+          "response_format",
+          "seed",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_a",
+          "top_k",
+          "top_logprobs",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-24T07:38:57Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "openai/gpt-oss-120b",
+        "last_seen": "2026-08-24T07:38:57Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "openai/gpt-oss-120b",
+      "model_slug": "openai/gpt-oss-120b",
+      "provider_id": "mara",
+      "provider_name": "Mara",
+      "endpoint_id": "Mara | openai/gpt-oss-120b",
+      "identity_key": "openai/gpt-oss-120b:mara:Mara | openai/gpt-oss-120b",
+      "context_tokens": 131072,
+      "pricing": {
+        "input_per_million": 0.15,
+        "output_per_million": 0.75,
+        "raw": {
+          "prompt": "0.00000015",
+          "completion": "0.00000075",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 100.0,
+        "uptime_30m": 98.80418535127056,
+        "uptime_1d": 99.63669181283844
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "include_reasoning",
+          "logprobs",
+          "max_tokens",
+          "reasoning",
+          "reasoning_effort",
+          "response_format",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_k",
+          "top_logprobs",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-24T07:38:57Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "openai/gpt-oss-120b",
+        "last_seen": "2026-08-24T07:38:57Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "openai/gpt-oss-120b",
+      "model_slug": "openai/gpt-oss-120b",
+      "provider_id": "nebius/fp4",
+      "provider_name": "Nebius",
+      "endpoint_id": "Nebius | openai/gpt-oss-120b",
+      "identity_key": "openai/gpt-oss-120b:nebius/fp4:Nebius | openai/gpt-oss-120b",
+      "context_tokens": 131072,
+      "pricing": {
+        "input_per_million": 0.15,
+        "output_per_million": 0.6,
+        "raw": {
+          "prompt": "0.00000015",
+          "completion": "0.0000006",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 98.63636363636363,
+        "uptime_30m": 98.82352941176471,
+        "uptime_1d": 98.96644935601844
+      },
+      "quantization": "fp4",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "include_reasoning",
+          "logit_bias",
+          "max_tokens",
+          "presence_penalty",
+          "reasoning",
+          "reasoning_effort",
+          "repetition_penalty",
+          "response_format",
+          "seed",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_k",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-24T07:38:57Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "openai/gpt-oss-120b",
+        "last_seen": "2026-08-24T07:38:57Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "openai/gpt-oss-120b",
+      "model_slug": "openai/gpt-oss-120b",
+      "provider_id": "novita/fp4",
+      "provider_name": "Novita",
+      "endpoint_id": "Novita | openai/gpt-oss-120b",
+      "identity_key": "openai/gpt-oss-120b:novita/fp4:Novita | openai/gpt-oss-120b",
+      "context_tokens": 131072,
+      "pricing": {
+        "input_per_million": 0.049999999999999996,
+        "output_per_million": 0.25,
+        "raw": {
+          "prompt": "0.00000005",
+          "completion": "0.00000025",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 100.0,
+        "uptime_30m": 99.98771196854264,
+        "uptime_1d": 97.08400931460146
+      },
+      "quantization": "fp4",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "include_reasoning",
+          "logprobs",
+          "max_tokens",
+          "presence_penalty",
+          "reasoning",
+          "reasoning_effort",
+          "repetition_penalty",
+          "response_format",
+          "seed",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_k",
+          "top_logprobs",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-24T07:38:57Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "openai/gpt-oss-120b",
+        "last_seen": "2026-08-24T07:38:57Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "openai/gpt-oss-120b",
+      "model_slug": "openai/gpt-oss-120b",
+      "provider_id": "parasail/fp4",
+      "provider_name": "Parasail",
+      "endpoint_id": "Parasail | openai/gpt-oss-120b",
+      "identity_key": "openai/gpt-oss-120b:parasail/fp4:Parasail | openai/gpt-oss-120b",
+      "context_tokens": 131072,
+      "pricing": {
+        "input_per_million": 0.09999999999999999,
+        "output_per_million": 0.75,
+        "raw": {
+          "prompt": "0.0000001",
+          "completion": "0.00000075",
+          "input_cache_read": "0.000000055",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 100.0,
+        "uptime_30m": 100.0,
+        "uptime_1d": 99.9861942809809
+      },
+      "quantization": "fp4",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "include_reasoning",
+          "logit_bias",
+          "logprobs",
+          "max_tokens",
+          "presence_penalty",
+          "reasoning",
+          "reasoning_effort",
+          "repetition_penalty",
+          "response_format",
+          "seed",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_k",
+          "top_logprobs",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-24T07:38:57Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "openai/gpt-oss-120b",
+        "last_seen": "2026-08-24T07:38:57Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "openai/gpt-oss-120b",
+      "model_slug": "openai/gpt-oss-120b",
+      "provider_id": "phala",
+      "provider_name": "Phala",
+      "endpoint_id": "Phala | openai/gpt-oss-120b",
+      "identity_key": "openai/gpt-oss-120b:phala:Phala | openai/gpt-oss-120b",
+      "context_tokens": 131072,
+      "pricing": {
+        "input_per_million": 0.15,
+        "output_per_million": 0.6,
+        "raw": {
+          "prompt": "0.00000015",
+          "completion": "0.0000006",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 100.0,
+        "uptime_30m": 99.85315712187959,
+        "uptime_1d": 99.9336782066587
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "include_reasoning",
+          "logprobs",
+          "max_tokens",
+          "min_p",
+          "presence_penalty",
+          "reasoning",
+          "reasoning_effort",
+          "repetition_penalty",
+          "response_format",
+          "seed",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_k",
+          "top_logprobs",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-24T07:38:57Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "openai/gpt-oss-120b",
+        "last_seen": "2026-08-24T07:38:57Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "openai/gpt-oss-120b",
+      "model_slug": "openai/gpt-oss-120b",
+      "provider_id": "sambanova",
+      "provider_name": "SambaNova",
+      "endpoint_id": "SambaNova | openai/gpt-oss-120b",
+      "identity_key": "openai/gpt-oss-120b:sambanova:SambaNova | openai/gpt-oss-120b",
+      "context_tokens": 131072,
+      "pricing": {
+        "input_per_million": 0.14,
+        "output_per_million": 0.95,
+        "raw": {
+          "prompt": "0.00000014",
+          "completion": "0.00000095",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 100.0,
+        "uptime_30m": 100.0,
+        "uptime_1d": 99.67958001448226
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "include_reasoning",
+          "max_tokens",
+          "reasoning",
+          "reasoning_effort",
+          "stop",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_k",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-24T07:38:57Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "openai/gpt-oss-120b",
+        "last_seen": "2026-08-24T07:38:57Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "openai/gpt-oss-120b",
+      "model_slug": "openai/gpt-oss-120b",
+      "provider_id": "siliconflow/fp8",
+      "provider_name": "SiliconFlow",
+      "endpoint_id": "SiliconFlow | openai/gpt-oss-120b",
+      "identity_key": "openai/gpt-oss-120b:siliconflow/fp8:SiliconFlow | openai/gpt-oss-120b",
+      "context_tokens": 131072,
+      "pricing": {
+        "input_per_million": 0.049999999999999996,
+        "output_per_million": 0.44999999999999996,
+        "raw": {
+          "prompt": "0.00000005",
+          "completion": "0.00000045",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 100.0,
+        "uptime_30m": 95.83083383323336,
+        "uptime_1d": 93.90233399362673
+      },
+      "quantization": "fp8",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "include_reasoning",
+          "max_tokens",
+          "reasoning",
+          "reasoning_effort",
+          "response_format",
+          "structured_outputs",
+          "temperature",
+          "top_k",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-24T07:38:57Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "openai/gpt-oss-120b",
+        "last_seen": "2026-08-24T07:38:57Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "openai/gpt-oss-120b",
+      "model_slug": "openai/gpt-oss-120b",
+      "provider_id": "together",
+      "provider_name": "Together",
+      "endpoint_id": "Together | openai/gpt-oss-120b",
+      "identity_key": "openai/gpt-oss-120b:together:Together | openai/gpt-oss-120b",
+      "context_tokens": 131072,
+      "pricing": {
+        "input_per_million": 0.15,
+        "output_per_million": 0.6,
+        "raw": {
+          "prompt": "0.00000015",
+          "completion": "0.0000006",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 100.0,
+        "uptime_30m": 99.90272373540856,
+        "uptime_1d": 98.49445440368443
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "include_reasoning",
+          "logit_bias",
+          "max_tokens",
+          "min_p",
+          "presence_penalty",
+          "reasoning",
+          "reasoning_effort",
+          "repetition_penalty",
+          "response_format",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_k",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-24T07:38:57Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "openai/gpt-oss-120b",
+        "last_seen": "2026-08-24T07:38:57Z"
+      }
     },
     {
       "availability": {
@@ -30250,46 +35449,48 @@
   ],
   "coverage": {
     "catalog_models": 422,
-    "models_with_observations": 160,
-    "proportion": 0.3791,
-    "fresh_observations": 91,
-    "retained_observations": 438,
+    "models_with_observations": 185,
+    "proportion": 0.4384,
+    "fresh_observations": 92,
+    "retained_observations": 529,
     "retention_days": 14
   },
   "selection": {
-    "cursor_before": 125,
-    "cursor_after": 150,
+    "cursor_before": 150,
+    "cursor_after": 174,
     "selected_model_ids": [
-      "meta-llama/llama-3.1-70b-instruct",
-      "meta-llama/llama-3.1-8b-instruct",
-      "meta-llama/llama-3.2-1b-instruct",
-      "meta-llama/llama-3.2-3b-instruct",
-      "meta-llama/llama-3.3-70b-instruct",
-      "meta-llama/llama-4-maverick",
-      "meta-llama/llama-4-scout",
-      "meta-llama/llama-guard-4-12b",
-      "meta/muse-glimmer-30b",
-      "meta/muse-spark-1.1",
-      "meta/muse-spark-1.2",
-      "meta/muse-spark-1.2-contributor",
-      "microsoft/phi-4",
-      "microsoft/wizardlm-2-8x22b",
-      "minimax/minimax-01",
-      "minimax/minimax-m1",
-      "minimax/minimax-m2",
-      "minimax/minimax-m2-her",
-      "minimax/minimax-m2.1",
-      "minimax/minimax-m2.5",
-      "minimax/minimax-m2.7",
-      "minimax/minimax-m3",
-      "minimax/minimax-m3:batch",
-      "mistralai/codestral-2508",
-      "mistralai/ministral-14b-2512"
+      "openai/gpt-oss-120b",
+      "mistralai/ministral-3b-2512",
+      "mistralai/ministral-8b",
+      "mistralai/ministral-8b-2512",
+      "mistralai/mistral-large",
+      "mistralai/mistral-large-2407",
+      "mistralai/mistral-large-2512",
+      "mistralai/mistral-medium-3",
+      "mistralai/mistral-medium-3-5",
+      "mistralai/mistral-medium-3.1",
+      "mistralai/mistral-nemo",
+      "mistralai/mistral-saba",
+      "mistralai/mistral-small-24b-instruct-2501",
+      "mistralai/mistral-small-2603",
+      "mistralai/mistral-small-3.1-24b-instruct",
+      "mistralai/mistral-small-3.2-24b-instruct",
+      "mistralai/mixtral-8x22b-instruct",
+      "mistralai/voxtral-small-24b-2507",
+      "moonshotai/kimi-k2",
+      "moonshotai/kimi-k2-0905",
+      "moonshotai/kimi-k2-thinking",
+      "moonshotai/kimi-k2.5",
+      "moonshotai/kimi-k2.6",
+      "moonshotai/kimi-k2.7-code",
+      "moonshotai/kimi-k2.7-code:batch"
     ]
   },
   "next_state": {
-    "cursor": 150,
-    "priority_ids": []
+    "cursor": 174,
+    "priority_ids": [
+      "openai/gpt-oss-120b"
+    ]
   },
   "response_headers": {
     "content-type": "application/json"

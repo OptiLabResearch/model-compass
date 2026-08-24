@@ -71,20 +71,26 @@ def normalize_openrouter_endpoint(raw: dict, *, fetched_at: str | None = None) -
 
 
 def normalize_coding_agent_observation(raw: dict, *, fetched_at: str, source: str) -> dict:
-    """Normalize a harness/model row without pretending it is a base-model fact."""
+    """Normalize a harness/model variant without pretending it is a base-model fact."""
+    tokens = raw.get("tokens") or {}
     return {
         "observation_type": "coding_agent",
+        "variant_id": raw.get("variant_id") or raw.get("agent_id") or raw.get("label"),
         "agent_id": raw.get("agent_id") or raw.get("harness"),
         "agent_name": raw.get("agent_name") or raw.get("harness"),
+        "harness": raw.get("harness") or raw.get("agent_name") or raw.get("agent_id"),
         "model_id": raw.get("model_id") or raw.get("model"),
+        "model_name": raw.get("model_name") or raw.get("model"),
         "configuration": raw.get("configuration") or raw.get("reasoning_level"),
         "benchmark_suite": raw.get("benchmark_suite"),
         "benchmark_version": raw.get("benchmark_version"),
         "scores": raw.get("scores") or {},
         "cost_per_task_usd": _float(raw.get("cost_per_task_usd")),
         "execution_time_seconds": _float(raw.get("execution_time_seconds")),
-        "tokens": raw.get("tokens"),
-        "turns": raw.get("turns"),
+        "tokens": tokens,
+        "total_tokens": _float(raw.get("total_tokens") or tokens.get("total")),
+        "turns": _float(raw.get("turns")),
+        "cache_hit_rate": _float(raw.get("cache_hit_rate")),
         "provenance": {"source": source, "fetched_at": fetched_at,
-                        "source_authority": source},
+                        "source_authority": source, "parser_version": raw.get("parser_version")},
     }
