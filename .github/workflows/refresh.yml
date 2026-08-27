@@ -29,22 +29,23 @@ jobs:
       # Data pipeline: build the rich private dataset, then derive the public
       # site models.json + benchmarks.json from it.
       #
-      # The legacy Free-API path (scripts/fetch_aa_models.py) is NOT used for
-      # the site anymore: AA's Free API now omits per-benchmark scores
-      # (Pro-only), leaving ~175 models with no benchmarks. The RSC leaderboard
-      # payload + API + snapshot carry full benchmarks + pricing + the latest
-      # models, and scripts/build_site_from_aa.py maps them onto the exact
-      # schema the frontend/validator expect.
+      # The rich RSC leaderboard pipeline is the active site source. The
+      # optional API and snapshot provide baseline validation and cross-checks;
+      # the retained Free-API/page-scrape script is not part of this workflow.
       - name: Build private AA dataset (RSC + API + snapshot)
         env:
           AA_API_KEY: ${{ secrets.AA_API_KEY }}
         run: python3 -m scripts.aa.orchestrate
 
+      - name: Set refresh date
+        id: refresh_date
+        run: echo "date=$(date -u +%F)" >> "$GITHUB_OUTPUT"
+
       - name: Build public site models.json from rich dataset
-        run: python3 scripts/build_site_from_aa.py
+        run: python3 scripts/build_site_from_aa.py --as-of "${{ steps.refresh_date.outputs.date }}"
 
       - name: Export dated history CSV
-        run: python3 scripts/export_history_csv.py
+        run: python3 scripts/export_history_csv.py --date "${{ steps.refresh_date.outputs.date }}"
 
       - name: Export static benchmarks JSON
         run: python3 scripts/export_benchmarks_json.py
@@ -87,10 +88,9 @@ jobs:
               `Run: ${context.serverUrl}/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}`,
               '',
               'Likely causes: `AA_API_KEY` missing or expired, a featured slug renamed',
-              'upstream, AA changed the /models page (legacy pipeline), or the RSC',
-              'leaderboard payload structure changed (scripts/aa/orchestrate.py is',
-              'designed to fail visibly rather than publish empty data — see the',
-              'pipeline report).',
+              'upstream, an RSC leaderboard payload change, or a stale third-party',
+              'snapshot. The pipeline is designed to fail visibly rather than publish',
+              'empty data — inspect the raw cache and pipeline report.',
             ].join('\n');
             const open = await github.rest.issues.listForRepo({
               owner: context.repo.owner, repo: context.repo.repo,

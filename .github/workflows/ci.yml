@@ -26,7 +26,10 @@ jobs:
       - name: Validate Python, site, data, and browser security
         run: |
           python3 -m compileall -q scripts
+          node -e "if (Number(process.versions.node.split('.')[0]) < 20) throw new Error('Node.js 20+ required')"
           python3 scripts/test_fetch_aa_models.py
+          python3 scripts/test_public_build.py
+          python3 scripts/test_prune_aa_cache.py
           python3 scripts/aa/tests/test_pipeline.py
           python3 scripts/aa/tests/test_decision_engine.py
           python3 scripts/aa/tests/test_history.py

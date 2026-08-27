@@ -1,7 +1,8 @@
 {
   "version": "4.1",
   "intelligence_index_version": "4.1",
-  "scraped_at": "2026-08-23T19:16:12Z",
+  "scraped_at": "2026-08-23T19:16:11Z",
+  "as_of": "2026-08-23",
   "source_url": "https://artificialanalysis.ai/leaderboards/providers",
   "scrape_method": "AA RSC leaderboard payload via scripts/aa pipeline",
   "intelligence_index_methodology": "AA Intelligence Index v4.1 = composite of 9 evaluations: GDPval-AA v2, \u03c4\u00b3-Banking, Terminal-Bench v2.1, SciCode, HLE, GPQA Diamond, CritPt, AA-Omniscience, AA-LCR",
@@ -2161,7 +2162,7 @@
       },
       "output_speed_by_prompt_length": [],
       "featured": true,
-      "openrouter_slug": "xiaomi/mimo-v2-5",
+      "openrouter_slug": "xiaomi/mimo-v2.5",
       "note": null,
       "has_rich_data": true,
       "data_sources": {

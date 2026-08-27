@@ -19,3 +19,9 @@ venv/
 data/aa_cache/
 # Private local access/channel overlay; never commit credentials or quotas.
 .model-compass-access.json
+
+# Test, coverage, and local log output
+.coverage
+coverage/
+htmlcov/
+*.log

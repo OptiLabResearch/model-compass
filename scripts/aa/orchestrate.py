@@ -5,7 +5,7 @@ truth for Hermes / our tools when making model-selection decisions.
 
 Design (adapter/source pattern so the AA extraction mechanism is replaceable):
 
-    RSCSource (rich, no key, ~412 models, full metrics)   <-- primary
+    RSCSource (rich, no key, full metrics)   <-- primary
     OfficialAPISource (stable baseline/IDs, needs AA_API_KEY)
     SnapshotSource (Oolong third-party, fallback/cross-check)
             |  each -> SourceResult (raw + normalized records + provenance)
@@ -17,15 +17,14 @@ Design (adapter/source pattern so the AA extraction mechanism is replaceable):
     emit: data/aa_models_v2.json      (normalized, all models, all fields)
           data/aa_pipeline_report.json (coverage + source + errors for debugging)
 
-The single-file legacy pipeline (scripts/fetch_aa_models.py) that builds the
-public static site continues to work independently on the public/data/models.json
-subset; this orchestrator feeds the private dataset and can also serve the
-legacy builder later.
+The retained single-file compatibility pipeline (scripts/fetch_aa_models.py)
+continues to work independently on the public/data/models.json subset; this
+orchestrator feeds the private dataset and the active rich public builder.
 
 Usage:
-    AA_API_KEY=... python3.12 scripts/aa/orchestrate.py            # full
-    python3.12 scripts/aa/orchestrate.py --no-api --no-snapshot    # RSC only
-    python3.12 scripts/aa/orchestrate.py --offline                 # stale cache only
+    AA_API_KEY=... python3 -m scripts.aa.orchestrate            # full
+    python3 -m scripts.aa.orchestrate --no-api --no-snapshot    # RSC only
+    python3 -m scripts.aa.orchestrate --offline                 # stale cache only
 """
 
 from __future__ import annotations

@@ -6,8 +6,8 @@ under data/history/, matching the column layout of the existing history files.
 Usage:
     python3 scripts/export_history_csv.py [--date YYYY-MM-DD]
 
-Writes data/history/<date>.csv (UTC today by default). Intended to run right
-after scripts/fetch_aa_models.py in the weekly refresh workflow.
+Writes data/history/<date>.csv (UTC today by default). Intended to run after
+scripts/build_site_from_aa.py in the weekly refresh workflow.
 """
 
 import csv

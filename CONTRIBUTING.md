@@ -26,6 +26,8 @@ Before opening a pull request, run:
 
 ```bash
 python3 -m py_compile scripts/*.py
+python3 scripts/test_public_build.py
+python3 scripts/test_prune_aa_cache.py
 python3 scripts/validate_site.py
 node --check public/assets/nav.js
 node --check public/assets/models.js
@@ -38,7 +40,7 @@ For UI changes, also check search, creator filters, presets, numeric filters, co
 
 Normal UI contributions do not require an API key. To intentionally refresh generated data, obtain your own Artificial Analysis key and place it in an ignored `.env` as described in the README. Never commit, print, or share that key.
 
-Generated changes should explain why the refresh was run and include `public/data/models.json`, `data/enrichment_cache.json`, and the matching history snapshot together.
+Generated changes should explain why the refresh was run and include the matching `public/data/models.json`, `public/data/benchmarks.json`, rich dataset/report, observation artifacts, and history snapshot. The transitional `data/enrichment_cache.json` is included only when the orchestrator changes it. Use `--as-of YYYY-MM-DD` when replaying a rich dataset so selection and metadata remain reproducible.
 
 ## Pull requests
 

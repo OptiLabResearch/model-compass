@@ -1,5 +1,9 @@
 # Phase 4 Source Contracts Plan
 
+## Durable report
+
+See [`docs/reports/phase-4-source-contracts.md`](../../reports/phase-4-source-contracts.md) for the current source-contract and implementation evidence record.
+
 ## Objective
 
 Strengthen upstream source boundaries and increase auditable identity diagnostics without weakening Phase 3's fail-closed recommendation policy or requiring a paid service tier.

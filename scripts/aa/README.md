@@ -1,12 +1,14 @@
 # Private Artificial Analysis pipeline (scripts/aa/)
 
 Adapters that collect Artificial Analysis model data into a single private
-normalized dataset for model-selection decisions. Built 2026-08-21.
+normalized dataset for model-selection decisions. The rich pipeline is active;
+the older Free-API/page-scrape script remains only for compatibility and tests.
 
 ## Why this exists
 
-The legacy pipeline (`scripts/fetch_aa_models.py`) builds the static-site
-`public/data/models.json` from the Free API + a brittle `/models` page scrape.
+The retained compatibility pipeline (`scripts/fetch_aa_models.py`) can build
+`public/data/models.json` from the Free API plus a best-effort page scrape, but it
+is not used by the site refresh.
 For internal model-selection/orchestration we wanted the **richest practical
 dataset** AA exposes publicly, not the narrow Free-API subset, and we wanted it
 robust to AA changing its site.
@@ -22,9 +24,9 @@ drifted again (camelCase `rows[]`, not the reference parser's snake_case
 
 | Source | File | Role | Key? | Notes |
 |---|---|---|---|---|
-| RSC leaderboard | `rsc_source.py` | **primary** | No | ~412 unique models, full metric set |
-| Official Free API | `official_api_source.py` | baseline / IDs / validation | `AA_API_KEY` | ~195 models, public subset only |
-| Oolong snapshot | `snapshot_source.py` | fallback / cross-check | No | MIT, daily, ~570 models |
+| RSC leaderboard | `rsc_source.py` | **primary** | No | Rich leaderboard table, full metric set |
+| Official Free API | `official_api_source.py` | baseline / IDs / validation | `AA_API_KEY` | Optional documented subset |
+| Oolong snapshot | `snapshot_source.py` | fallback / cross-check | No | MIT daily snapshot |
 
 Shared contract: `source_base.py` (`SourceResult`), `schema.py` (normalized
 fields + bounds), `http.py` (retries/backoff/rate-limit/atomic/cache),
@@ -32,8 +34,8 @@ fields + bounds), `http.py` (retries/backoff/rate-limit/atomic/cache),
 
 ## Outputs
 
-- `data/aa_models_v2.json` — merged normalized dataset (614 models as of
-  2026-08-21), each record includes source provenance (`merged.primary`,
+- `data/aa_models_v2.json` — merged normalized dataset; each record includes
+  source provenance (`merged.primary`,
   `merged.also_from`), original ids/slugs, normalized values, and preserved
   unknown raw fields.
 - `data/aa_pipeline_report.json` — per-source health + field/benchmark coverage.
@@ -50,14 +52,14 @@ fields + bounds), `http.py` (retries/backoff/rate-limit/atomic/cache),
 
 ```bash
 # Build the dataset (RSC + snapshot; API used if AA_API_KEY set)
-python3.12 -m scripts.aa.orchestrate
+python3 -m scripts.aa.orchestrate
 # Flags: --no-api --no-snapshot --offline (stale-only) --refresh (bypass cache)
 
 # Cross-validate RSC vs snapshot (and vs API with AA_API_KEY)
-python3.12 scripts/aa/crossvalidate.py --api
+python3 scripts/aa/crossvalidate.py --api
 
 # Query layer demo (best coding/value/agentic/speed/backup)
-python3.12 scripts/aa/demo_query.py
+python3 scripts/aa/demo_query.py
 
 # Stable decision CLI (JSON output)
 python3 scripts/model_compass.py recommend coding
@@ -76,7 +78,7 @@ python3 -m scripts.aa.coding_agent_source
 python3 -m scripts.aa.phase3_artifacts
 
 # Offline unit tests (drift detection, scaling, dedup, merge, NaN)
-python3.12 scripts/aa/tests/test_pipeline.py
+python3 scripts/aa/tests/test_pipeline.py
 ```
 
 ## Using the query layer
@@ -100,26 +102,17 @@ db.get('gpt-5-6-luna-low')               # fetch one record by slug
 ## Refresh / update
 
 Runs in the weekly GitHub workflow (`.github/workflows/refresh.yml`, Sundays
-19:00 UTC) right after the legacy site pipeline; `data/aa_models_v2.json` and
+19:00 UTC) before public derivation; `data/aa_models_v2.json` and
 `data/aa_pipeline_report.json` are committed when changed. Local refresh is the
 `orchestrate` command above.
 
-## Field / benchmark coverage (2026-08-21)
+## Field / benchmark coverage
 
-614 merged models. Field coverage varies by source and is recorded in
+Coverage varies by source and is recorded in
 `data/aa_pipeline_report.json` on every refresh:
 
-- intelligence_index 601/614, omniscience_index 480, context_tokens 609,
-  creator 614, is_open_weights 609, parameters 338, license 328
-- benchmarks: gpqa 576, hle 570, scicode 568, lcr 502, critpt 483,
-  omniscience_accuracy/non_halluc 480, ifbench 456, tau2 446,
-  terminalbench_hard 438, omniscience 371, mmmu_pro 240, gdpval 197,
-  aime25 189, livecodebench 216, tau_banking 166, apex_agents 30,
-  it_bench_sre 29
-- codding_index 166, agentic_index 146 (largely from the snapshot; the RSC
-  payload does not carry these two sub-indices for most rows)
-- performance: speed 366, percentile distributions 329
-- pricing: input 439
+- intelligence, metadata, licensing, benchmark, performance, and pricing
+  coverage varies by source and is recorded in the generated pipeline report.
 
 **Not available from any public source:** `math_index` (AA does not expose it).
 The official Free API also omits blending, percentile performance, context

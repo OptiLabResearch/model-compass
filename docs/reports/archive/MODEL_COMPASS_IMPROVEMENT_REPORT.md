@@ -1,7 +1,13 @@
 # Model Compass Improvement Report
 
+> Historical snapshot. This report records repository state and
+> verification from 2026-08-22/23. It is not an active source of
+> truth; see `docs/STATUS.md` and `docs/ARCHITECTURE.md` for current
+> guidance.
+
+
 **Date:** 2026-08-22 UTC
-**Repository:** `/srv/projects/shared/model-compass`
+**Repository:** `OptiLabResearch/model-compass`
 **Starting point:** `6dd03afb1f17e727abf5a0fcc4a1857e9e31372b`
 **Implementation commits:**
 
@@ -372,7 +378,7 @@ Committed in `eb4b446`:
 - `scripts/aa/orchestrate.py`
 - `scripts/aa/tests/test_pipeline.py`
 
-The previously created `REPOSITORY_REVIEW_DOSSIER.md` is retained in the repository as the audit artifact alongside this report. No credentials or private access overlay were created.
+The previously created `docs/reports/archive/REPOSITORY_REVIEW_DOSSIER.md` is retained in the repository as the audit artifact alongside this report. No credentials or private access overlay were created.
 
 ## 14. User action required
 

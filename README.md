@@ -28,13 +28,22 @@ node scripts/test_browser_security.mjs
 - `public/` is the complete deployable site and the only directory that should be published.
 - `public/data/models.json` is the browser's data source.
 - `scripts/` contains dependency-free refresh, export, validation, and security checks.
-- `data/enrichment_cache.json` is a legacy backfill cache retained for compatibility.
+- `data/enrichment_cache.json` is a transitional backfill input used by the orchestrator; it is not a canonical source.
 - `data/history/` contains dated public CSV snapshots and bounded rich-dataset delta files.
 - `data/openrouter_observations.json` contains bounded provider-endpoint observations.
 - `data/coding_agent_observations.json` contains separate model+harness coding-agent observations.
 - `data/endpoint_accuracy_observations.json` contains point-in-time Artificial Analysis endpoint measurements.
 - `data/identity_mappings.json` contains generated cross-source mapping health; `data/identity_aliases.json` contains the small audited manual mapping set used to generate it.
 - `.github/workflows/` contains read-only pull-request checks and the scheduled refresh.
+
+## Project documentation
+
+- [Project scope](docs/PROJECT.md)
+- [Architecture and source authority](docs/ARCHITECTURE.md)
+- [Current status](docs/STATUS.md)
+- [Roadmap](docs/ROADMAP.md)
+- [Active plans and accepted reports](docs/plans/active/ and docs/reports/)
+- [Pipeline operations](scripts/aa/README.md)
 
 ## Data refresh
 
@@ -56,7 +65,7 @@ python3 -m scripts.aa.phase3_artifacts
 python3 scripts/validate_site.py
 ```
 
-For deterministic parser work, use `python3 -m scripts.aa.orchestrate --offline` with cached payloads; it never attempts a network request. The legacy `scripts/fetch_aa_models.py` remains for reference/tests and is not the active site refresh path.
+For deterministic parser work, use `python3 -m scripts.aa.orchestrate --offline` with cached payloads; it never attempts a network request. The retained `scripts/fetch_aa_models.py` is a compatibility path for reference/tests; the rich pipeline is the active site refresh path. Use `--as-of YYYY-MM-DD` on the public builder when replaying a historical rich dataset.
 
 Never commit `.env` or paste API keys into issues, logs, screenshots, or pull requests.
 

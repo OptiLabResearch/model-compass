@@ -1,7 +1,13 @@
 # Model Compass Phase 2 Pre-Merge Correction Report
 
+> Historical snapshot. This report records repository state and
+> verification from 2026-08-22/23. It is not an active source of
+> truth; see `docs/STATUS.md` and `docs/ARCHITECTURE.md` for current
+> guidance.
+
+
 **Date:** 2026-08-23 UTC
-**Repository:** `/srv/projects/shared/model-compass`
+**Repository:** `OptiLabResearch/model-compass`
 **Branch:** `phase2-validation`
 **PR:** [#6](https://github.com/OptiLabResearch/model-compass/pull/6)
 **Scope:** focused pre-merge correction pass only; no Phase 3 implementation
@@ -195,7 +201,7 @@ The only procedural blocker is confirmation that the final branch tip has a gree
 
 ## 7. Phase 2 report update
 
-`MODEL_COMPASS_PHASE2_REPORT.md` now contains a **Pre-Merge Corrections** section documenting these fixes and the updated provider coverage. The report does not erase the original Phase 2 limitations; it records that the corrections were made afterward.
+`docs/reports/archive/MODEL_COMPASS_PHASE2_REPORT.md` now contains a **Pre-Merge Corrections** section documenting these fixes and the updated provider coverage. The report does not erase the original Phase 2 limitations; it records that the corrections were made afterward.
 
 ## 8. Phase 3 handoff notes — explicitly deferred
 

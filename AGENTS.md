@@ -1,57 +1,89 @@
 # Repository Guidelines
 
-## Project structure
+## Purpose and boundaries
 
-Model Compass is a dependency-free static site. `public/` is the complete deployment output: HTML lives at its root, shared browser code and styles are in `public/assets/`, and `public/data/models.json` is the UI data source. Never deploy the repository root.
+Model Compass is a durable, Codex-first model-intelligence project with a
+dependency-free static comparison site and deterministic data pipelines.
 
-Refresh and validation utilities live in `scripts/`. `data/enrichment_cache.json` and `data/history/` are legacy artifacts of the old Free-API pipeline (see below). CI and scheduled refresh configuration live in `.github/`.
+- `public/` is the complete Cloudflare Pages deployment output. Never deploy
+  the repository root.
+- `scripts/` contains source adapters, exports, validators, and the CLI.
+- `data/` contains committed generated/private artifacts; ignored raw payloads
+  live under `data/aa_cache/`.
 
-There are two data pipelines:
+## Authoritative project documents
 
-1. **Private rich dataset** (`scripts/aa/`) builds `data/aa_models_v2.json` from three sources: the AA leaderboard RSC payload (primary, no key, ~411 models with the full benchmark set), the official AA Free API (`AA_API_KEY`, baseline/IDs/validation), and a third-party daily snapshot (Oolong-Tea, fallback/cross-check). This is the master dataset for model-selection queries.
-2. **Public site data** (`scripts/build_site_from_aa.py`) derives `public/data/models.json` + `public/data/benchmarks.json` from that rich dataset.
+- `docs/PROJECT.md` — stable scope and non-goals.
+- `docs/ARCHITECTURE.md` — data flow, source authority, and identity boundaries.
+- `docs/STATUS.md` — current phase, branch, blockers, and next action.
+- `docs/ROADMAP.md` — phase order and acceptance outcomes.
+- `docs/plans/active/` — active implementation plans.
+- `docs/reports/` — accepted evidence; historical reports are archived.
+- `scripts/aa/README.md` — detailed source and pipeline operation.
 
-## Data pipeline and deployment
+Read `docs/STATUS.md` and its active plan before roadmap work.
 
-The weekly refresh (`.github/workflows/refresh.yml`, Sundays 19:00 UTC) runs: (1) `python3 -m scripts.aa.orchestrate` to merge the three AA sources into `data/aa_models_v2.json`, (2) derives the public site/history artifacts, (3) refreshes OpenRouter, the bounded Gate-D Endpoint Accuracy cohort, and coding-agent observations, and (4) deterministically rebuilds Phase 3 identity/summary artifacts before committing only when data changed. Cloudflare Pages auto-deploys from `main` (there is no deploy Action), so a merged refresh is live within minutes — no manual deploy step.
+## Architecture and data sources
 
-The pipeline fails closed and opens a `data-refresh` labeled GitHub issue on failure. If a refresh fails, check in order: the `AA_API_KEY` secret (HTTP 401 = auth/key), a retired/renamed AA endpoint (HTTP 410 — AA retires legacy `/api/v2/data/*` endpoints 2026-11-04; do not reintroduce them), an RSC leaderboard payload change (the `roles`/`models` tables drift — inspect the raw payload in `data/aa_cache/` and update `rsc_source.py`), a `FEATURED_SLUGS` entry renamed upstream, or a stale third-party snapshot. The Pro endpoint `/api/v2/language/models` is the only upgrade path for more fields and needs a paid key. `scripts/aa/orchestrate.py` hard-fails if the index version (4.1) changes — update the constant rather than weakening the check.
+`scripts.aa.orchestrate` builds `data/aa_models_v2.json` from:
 
-**Legacy script:** `scripts/fetch_aa_models.py` (Free API + `/models` page scrape) is retained for reference but **no longer feeds the site**, because AA's Free API now omits per-benchmark scores (Pro-only), which left most models without benchmarks.
+1. AA leaderboard RSC payload (primary rich source).
+2. Official AA Free API (optional `AA_API_KEY`, baseline/IDs/validation).
+3. Oolong snapshot (fallback/cross-check).
 
-## Local commands
+`data/enrichment_cache.json` is a transitional backfill input still read by
+the orchestrator; it is not a canonical source. `scripts/build_site_from_aa.py`
+derives `public/data/models.json` and `scripts/export_benchmarks_json.py`
+derives `public/data/benchmarks.json`.
 
-On Windows use `py -3` in place of `python3`. `validate_site.py`, `test_fetch_aa_models.py`, and `test_browser_security.mjs` need no `AA_API_KEY` — run them freely; only the private pipeline's API source needs it (and the pipeline skips it gracefully when unset). On Windows, `git status` may flag CRLF-only changes with empty diffs — check `git diff` for real content before committing.
+OpenRouter, Endpoint Accuracy, and coding-agent results are separate
+observation domains. Identity-aware recommendations consume only explicit
+`verified` or audited `manual` exact mappings; preserve provider endpoint
+variants and treat candidates, ambiguities, and unresolved joins as diagnostic
+only.
 
-- `python3 -m http.server 8000 --directory public` serves the site.
-- `python3 scripts/validate_site.py` checks the public boundary, CSP, HTML, data, fonts, and history.
-- `node scripts/test_browser_security.mjs` checks URL and HTML-sanitization regressions.
-- `python3 -m scripts.aa.orchestrate` builds the private rich dataset (`data/aa_models_v2.json`); `--no-api`/`--no-snapshot`/`--offline`/`--refresh` flags available; optional `AA_API_KEY`.
-- `python3 scripts/model_compass.py recommend coding --limit 10` provides deterministic recommendation/explanation JSON; `pareto`, `backup`, `explain`, `changes`, `health`, and `list` are also available. `.model-compass-access.json` is an optional gitignored availability overlay.
-- `python3 scripts/build_site_from_aa.py` builds the site's `public/data/models.json` from the rich dataset.
-- `python3 scripts/export_history_csv.py` writes today's CSV snapshot.
-- `python3 scripts/export_benchmarks_json.py` writes `public/data/benchmarks.json`.
-- `python3 -m scripts.aa.endpoint_accuracy gpt-oss-120b` refreshes the fail-closed Gate-D Endpoint Accuracy cohort; `python3 -m scripts.aa.phase3_artifacts` validates inputs and regenerates identity/summary artifacts.
-- `python3 scripts/aa/tests/test_pipeline.py` and `python3 scripts/aa/crossvalidate.py` test and cross-validate the pipeline.
-- `python3 -c "import sys;sys.path.insert(0,'scripts');from aa.query import AADB;db=AADB()"` queries the dataset (best coding/value/backup etc.).
-- Rich snapshot deltas are written under `data/history/rich/` and retained for 104 files; `--offline` is cache-only and never attempts a network request.
+## Refresh and deployment
 
-## Credentials
+The weekly refresh is defined by `.github/workflows/refresh.yml`: build rich
+data, derive public data, export history and benchmarks, refresh provider and
+agent observations, regenerate Phase 3 artifacts, then commit changed generated
+outputs. Cloudflare Pages publishes only `public/`.
 
-Use the ignored repository-root `.env` for local credentials and keep it mode `0600`. The only project credential is `AA_API_KEY`. Never read, print, commit, paste, or deploy secret values. GitHub and deployment credentials are managed outside repository files.
+The RSC payload is an upstream frontend contract. If it drifts, inspect ignored
+raw data under `data/aa_cache/` and update the adapter. Source failures and
+artifact invariant failures must remain visible; do not publish empty or
+ambiguous data.
 
-## Style and testing
+## Commands
 
-Use four spaces for Python and two for JavaScript. Prefer small, dependency-free changes. Treat missing benchmark values as unknown, not zero. Preserve the strict CSP, output allowlist, outbound URL allowlist, data validation, atomic writes, and formula-safe CSV export.
+Python 3.12+ and Node.js 20+ are used by CI.
 
-Before submitting, run the repository validation and browser-security tests. For UI work, exercise search, filters, presets, comparison, sorting, hash links, responsive layouts, and both themes.
+- `python3 -m http.server 8000 --directory public`
+- `python3 scripts/validate_site.py`
+- `node scripts/test_browser_security.mjs`
+- `python3 -m scripts.aa.orchestrate [--offline|--no-api|--no-snapshot|--refresh]`
+- `python3 scripts/build_site_from_aa.py [--as-of YYYY-MM-DD]`
+- `python3 scripts/export_history_csv.py [--date YYYY-MM-DD]`
+- `python3 scripts/export_benchmarks_json.py`
+- `python3 -m scripts.aa.phase3_artifacts`
+- `python3 scripts/model_compass.py recommend coding --limit 10`
+- `python3 scripts/aa/tests/test_pipeline.py`
+- `python3 scripts/aa/crossvalidate.py`
+- `python3 scripts/prune_aa_cache.py --max-age-days 30` (dry run)
 
-## Commits and pull requests
+The full validation command set is in `.github/workflows/ci.yml`. Build/export
+commands write generated artifacts; use temporary output paths for replay tests.
 
-Use concise imperative subjects; reserve `data: weekly refresh YYYY-MM-DD` for generated refreshes. Keep commits focused. PRs should describe user-visible effects, checks performed, data changes, and screenshots for UI work. Follow `SECURITY.md` for vulnerability reports.
+## Credentials and conventions
 
-## Durable project control
+Use an ignored repository-root `.env` with mode `0600` for the optional
+`AA_API_KEY`. Never read, print, commit, paste, or deploy credential values.
+Keep Python at four-space indentation and JavaScript at two spaces. Missing
+metrics remain unknown, not zero. Preserve strict CSP, public output
+allowlists, outbound URL allowlists, atomic writes, and formula-safe CSV
+export.
 
-Read `docs/STATUS.md` first, then the active plan it links, before roadmap work. `docs/PROJECT.md` owns stable scope, `docs/ARCHITECTURE.md` owns accepted source-authority boundaries, and `docs/ROADMAP.md` owns phase order and acceptance outcomes. Keep transient investigation detail in the active plan and concise accepted evidence in `docs/reports/`; do not duplicate it across files.
-
-For every substantive phase, record explicit acceptance criteria before implementation, verify against current `origin/main`, run the full CI command set plus phase-specific deterministic tests, review generated-artifact reproducibility, and obtain an independent correctness review before declaring the phase accepted. Identity-aware recommendations must fail closed: only explicit `verified` or audited `manual` mappings are authoritative, and mappings must preserve provider endpoint variants rather than collapsing to a provider namespace.
+Keep commits focused with imperative subjects. Generated refreshes use
+`data: weekly refresh YYYY-MM-DD`. Do not weaken tests or source-authority
+rules; review generated-artifact reproducibility and run an independent
+correctness review for substantive phases.
