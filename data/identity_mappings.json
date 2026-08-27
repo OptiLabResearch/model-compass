@@ -6531,6 +6531,16 @@
       "normalized_heuristic": 7,
       "source_metadata_exact": 56
     },
+    "model_ambiguity_methods": {
+      "source_metadata_exact": 24,
+      "unclassified": 61
+    },
+    "model_resolution_methods": {
+      "manual_alias": 1,
+      "normalized_heuristic": 7,
+      "source_metadata_exact": 80,
+      "unclassified": 61
+    },
     "endpoint_mappings": {
       "verified": 0,
       "manual": 2,

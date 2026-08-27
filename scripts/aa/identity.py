@@ -12,6 +12,17 @@ import re
 STATES = {"verified", "candidate", "unresolved", "ambiguous", "conflict", "manual"}
 
 
+def _is_authoritative_openrouter_evidence(evidence: dict) -> bool:
+    """Accept authority only from the explicitly approved official API field."""
+    return (
+        isinstance(evidence, dict)
+        and evidence.get("kind") == "openrouter_model_id"
+        and evidence.get("source") == "official_api"
+        and evidence.get("source_field") == "openrouter_api_id"
+        and evidence.get("authority") == "authoritative"
+    )
+
+
 def normalize_name(value: str | None) -> str:
     return re.sub(r"[^a-z0-9]+", "-", (value or "").lower()).strip("-")
 
@@ -79,11 +90,18 @@ def _authoritative_model_evidence(source_id: str, aa_models: list[dict]) -> list
     out = []
     for model in aa_models:
         for evidence in model_identity_evidence(model):
-            if (isinstance(evidence, dict) and evidence.get("kind") == "openrouter_model_id"
-                    and evidence.get("entity_id") == source_id
-                    and evidence.get("authority") == "authoritative"):
+            if (_is_authoritative_openrouter_evidence(evidence)
+                    and evidence.get("entity_id") == source_id):
                 out.append({"target_entity_id": model.get("slug"), "evidence": evidence})
     return sorted(out, key=lambda row: row["target_entity_id"] or "")
+
+
+def _method_counts(rows: list[dict]) -> dict[str, int]:
+    counts: dict[str, int] = {}
+    for row in rows:
+        method = row.get("method") or "unclassified"
+        counts[method] = counts.get(method, 0) + 1
+    return dict(sorted(counts.items()))
 
 
 def _entity_rows(rows: list[dict], key: str) -> dict[str, dict]:
@@ -135,7 +153,15 @@ def resolve(aa_models: list[dict], openrouter: list[dict], endpoint_accuracy: li
             continue
         authoritative = _authoritative_model_evidence(source_id, aa_models)
         authoritative_targets = sorted({e["target_entity_id"] for e in authoritative})
+        evidence = _model_evidence(source_id, row, aa_models)
+        candidate_targets = sorted({item["target_entity_id"] for item in evidence})
         if len(authoritative_targets) == 1:
+            conflicting_targets = [target for target in candidate_targets if target not in authoritative_targets]
+            if conflicting_targets:
+                conflicts.append({"relation": "model_to_model", "source_entity_id": source_id,
+                                  "candidates": sorted(set(authoritative_targets + conflicting_targets)),
+                                  "reason": "authoritative external ID conflicts with other source metadata"})
+                continue
             evidence = authoritative[0]["evidence"]
             mappings.append({"relation": "model_to_model", "source": "openrouter", "source_entity_id": source_id,
                              "target": "artificial_analysis", "target_entity_id": authoritative_targets[0],
@@ -147,7 +173,6 @@ def resolve(aa_models: list[dict], openrouter: list[dict], endpoint_accuracy: li
             conflicts.append({"relation": "model_to_model", "source_entity_id": source_id,
                               "candidates": authoritative_targets, "reason": "authoritative external ID maps to multiple AA variants"})
             continue
-        evidence = _model_evidence(source_id, row, aa_models)
         metadata_matches = [item for item in evidence if item.get("metadata")]
         if len(metadata_matches) == 1:
             item = metadata_matches[0]
@@ -193,6 +218,7 @@ def resolve(aa_models: list[dict], openrouter: list[dict], endpoint_accuracy: li
 
     model_maps = [m for m in mappings if m["relation"] == "model_to_model"]
     endpoint_maps = [m for m in mappings if m["relation"] == "provider_endpoint_to_endpoint"]
+    model_resolution_rows = model_maps + ambiguous
     health = {
         "aa_model_count": len(aa_by_slug), "openrouter_model_count": len(or_models),
         "openrouter_endpoint_count": len(openrouter), "aa_endpoint_count": len(aa_endpoints), "aa_provider_count": len(aa_providers),
@@ -200,6 +226,8 @@ def resolve(aa_models: list[dict], openrouter: list[dict], endpoint_accuracy: li
         "model_mappings": {s: sum(m["state"] == s for m in model_maps) for s in ("verified", "manual", "candidate")},
         "model_mapping_methods": {method: sum(m.get("method") == method for m in model_maps)
                                   for method in sorted({m.get("method") for m in model_maps if m.get("method")})},
+        "model_ambiguity_methods": _method_counts(ambiguous),
+        "model_resolution_methods": _method_counts(model_resolution_rows),
         "endpoint_mappings": {s: sum(m["state"] == s for m in endpoint_maps) for s in ("verified", "manual", "candidate")},
         "unresolved_models": sum(x["relation"] == "model_to_model" for x in unresolved),
         "unresolved_endpoints": sum(x["relation"] == "provider_endpoint_to_endpoint" for x in unresolved),
