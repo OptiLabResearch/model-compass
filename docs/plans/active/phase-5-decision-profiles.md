@@ -1,7 +1,8 @@
 # Phase 5 Decision Profiles Plan
 
-Status: active — implementation complete on 2026-08-27; acceptance is pending
-independent Sol review on `feat/model-compass-phase5`.
+Status: active — implementation and review repairs complete on 2026-08-27;
+acceptance is pending final independent Luna Max review on
+`feat/model-compass-phase5`.
 
 ## Durable scope
 
@@ -58,7 +59,7 @@ current behavior unless a shared correctness fix is required.
 
 - Commit `20023c6` adds the three profiles to `DecisionEngine`, carries the
   contract through `AADB` and the stable CLI, and documents the access overlay
-  and scoring semantics.
+  and scoring semantics. Review repairs are committed as `b511b11`.
 - Focused decision tests, CLI tests, Python compilation, and
   `python3 scripts/check.py --scope all` passed on 2026-08-27. The full matrix
   included pipeline, decision, observation, identity, deterministic replay,
@@ -66,7 +67,9 @@ current behavior unless a shared correctness fix is required.
 - `git diff --check origin/main...HEAD` passed, and bounded CLI smoke checks
   exercised all three profiles. Missing access remains fail-closed for
   `available-to-me`; missing marginal cost is excluded.
-- Primary implementation review found no remaining local issue. An
-  independent Sol review was attempted but the reviewer returned a platform
-  usage-limit error before producing a verdict, so this plan remains active
-  and Phase 5 is not yet marked accepted.
+- Luna Max’s initial independent review found three numeric-safety issues:
+  non-finite constraint values, non-finite result fields, and negative prices.
+  They are covered by regression tests and repaired in `b511b11`. A final
+  independent Luna Max re-review has been requested and has not yet returned
+  a verdict, so this plan remains active and Phase 5 is not yet marked
+  accepted.

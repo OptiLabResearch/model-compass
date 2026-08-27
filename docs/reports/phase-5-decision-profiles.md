@@ -1,8 +1,8 @@
 # Phase 5 Decision-Profile Report
 
-Status: implementation complete 2026-08-27; acceptance pending an independent
-Sol review. The implementation is committed as `20023c6` on
-`feat/model-compass-phase5`.
+Status: implementation and review repairs complete 2026-08-27; acceptance
+pending final independent Luna Max review. The implementation is committed as
+`20023c6`, with repairs in `b511b11`, on `feat/model-compass-phase5`.
 
 This report records the durable implementation and verification evidence for
 the three explainable recommendation profiles. The active execution plan is
@@ -36,14 +36,16 @@ network call, paid source, gateway, or router.
 
 ## Verification state
 
-`python3 scripts/check.py --scope all` passed on 2026-08-27 at commit
-`20023c6`, including Python syntax, CLI, public build/site contracts, pipeline,
+`python3 scripts/check.py --scope all` passed on 2026-08-27 at repair commit
+`b511b11`, including Python syntax, CLI, public build/site contracts, pipeline,
 decision, history, observation, identity, deterministic replay, and generated
 artifact comparison checks. `git diff --check origin/main...HEAD` also passed.
 The final documentation-only verification is recorded in the active plan.
 
-An independent Sol review was attempted for the acceptance gate, but the
-reviewer returned a platform usage-limit error before issuing a result. This
-report therefore intentionally does not mark Phase 5 accepted; the remaining
-action is to obtain that review, address any findings, and then close the plan
-and update `docs/STATUS.md`.
+Luna Max’s initial independent review found three findings covering non-finite
+constraint values, non-finite recommendation fields, and negative prices. The
+repairs and regression tests are in `b511b11`. A final independent Luna Max
+review has been requested but has not yet issued a verdict, so this report
+intentionally does not mark Phase 5 accepted; the remaining action is to
+record that verdict, address any further findings, and then close the plan and
+update `docs/STATUS.md`.
