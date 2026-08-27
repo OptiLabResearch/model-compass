@@ -91,16 +91,17 @@ def _node_version(*, verbose=False):
         raise CheckFailure(f"Node.js 20+ required; found {version}")
 
 
-def _git_paths(command):
+def _git_paths(command, *, strip=True):
     result = subprocess.run(command, cwd=REPO, capture_output=True, text=True, errors="replace")
     if result.returncode:
         return None
-    return {line.strip() for line in result.stdout.splitlines() if line.strip()}
+    lines = [line for line in result.stdout.splitlines() if line.strip()]
+    return {line.strip() for line in lines} if strip else set(lines)
 
 
 def changed_paths():
     """Return local changes, then the current commit's changes in CI."""
-    status = _git_paths(["git", "status", "--porcelain=v1"])
+    status = _git_paths(["git", "status", "--porcelain=v1"], strip=False)
     if status is None:
         return None
     paths = set()

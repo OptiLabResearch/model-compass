@@ -5,8 +5,8 @@
 - **Active branch / PR:** `feat/model-compass-phase4`; no PR yet.
 - **Verified:** Phase 3 is merged and green. Phase 4 contract research confirmed AA Free omits `openrouter_api_id`, AA Pro exposes it, and provider detail is Commercial-only. The current WIP preserves source-qualified official/snapshot/RSC identity evidence, emits exact third-party matches as candidates, and keeps collisions ambiguous. The shared public contract, deterministic `--as-of` builder replay, archive hygiene, and dry-run-first cache policy are now recorded in the Phase 4 report. The token-efficiency cleanup adds scoped agent guidance, bounded CLI diagnostics, named test selection, and a canonical quiet validation runner; local `python3 scripts/check.py --scope all` passed on 2026-08-27.
 - **Blocking findings:** Documented AA `openrouter_api_id` is Pro-only and provider detail is Commercial-only; no paid-tier change is justified. Snapshot/host metadata has useful coverage but one-to-many variant collisions, so it must remain candidate evidence.
-- **Unfinished:** Phase 4 remains open pending final diff review for this cleanup, synchronization with current `origin/main`, independent Sol review, and explicit acceptance before opening a PR.
-- **Next action:** Review and push this cleanup, then synchronize with `origin/main` and obtain the required independent Sol review.
+- **Unfinished:** Phase 4 remains open pending synchronization with current `origin/main`, independent Sol review, and explicit acceptance before opening a PR.
+- **Next action:** Synchronize with `origin/main` and obtain the required independent Sol review before explicit acceptance and PR opening. The agent-efficiency cleanup is committed and pushed as `008156b`.
 - **Human input required:** No.
 
 Last verified: 2026-08-27 UTC.

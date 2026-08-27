@@ -2,8 +2,9 @@
 from __future__ import annotations
 
 import unittest
+from unittest.mock import patch
 
-from check import auto_scope
+from check import auto_scope, changed_paths
 
 
 class AutoScopeTests(unittest.TestCase):
@@ -19,6 +20,10 @@ class AutoScopeTests(unittest.TestCase):
     def test_unknown_or_missing_changes_use_full_scope(self):
         self.assertEqual(auto_scope({"scripts/model_compass.py"}), "all")
         self.assertEqual(auto_scope(None), "all")
+
+    def test_unstaged_status_keeps_the_first_path_character(self):
+        with patch("check._git_paths", return_value={" M docs/STATUS.md"}):
+            self.assertEqual(changed_paths(), {"docs/STATUS.md"})
 
 
 if __name__ == "__main__":
