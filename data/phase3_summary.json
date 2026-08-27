@@ -1,10 +1,10 @@
 {
   "version": 2,
   "phase": 3,
-  "generated_at": "2026-08-27T16:35:43Z",
+  "generated_at": "2026-08-27T16:53:49Z",
   "sources": {
-    "aa_models": 620,
-    "openrouter_observations": 621,
+    "aa_models": 625,
+    "openrouter_observations": 667,
     "endpoint_accuracy_observations": 30,
     "endpoint_accuracy_models": 2,
     "endpoint_accuracy_index_versions": [
@@ -14,12 +14,12 @@
     "coding_agent_benchmark_version": "1.4"
   },
   "identity": {
-    "aa_model_count": 620,
-    "openrouter_model_count": 185,
-    "openrouter_endpoint_count": 621,
+    "aa_model_count": 625,
+    "openrouter_model_count": 207,
+    "openrouter_endpoint_count": 667,
     "aa_endpoint_count": 30,
     "aa_provider_count": 21,
-    "openrouter_provider_count": 67,
+    "openrouter_provider_count": 70,
     "unique_unresolved_model_ids": [
       "aion-labs/aion-2.0",
       "aion-labs/aion-3.0",
@@ -52,6 +52,12 @@
       "mistralai/mistral-nemo",
       "mistralai/voxtral-small-24b-2507",
       "moonshotai/kimi-k2.7-code:batch",
+      "morph/morph-v3-fast",
+      "morph/morph-v3-large",
+      "nex-agi/nex-n2-mini",
+      "nousresearch/hermes-3-llama-3.1-405b",
+      "nousresearch/hermes-4-405b",
+      "nousresearch/hermes-4-70b",
       "nvidia/nemotron-3.5-lightning",
       "qwen/qwen3.8-27b",
       "sakana/sakana-namazu",
@@ -62,31 +68,31 @@
     "model_mappings": {
       "verified": 0,
       "manual": 1,
-      "candidate": 62
+      "candidate": 69
     },
     "model_mapping_methods": {
       "manual_alias": 1,
-      "normalized_heuristic": 6,
-      "source_metadata_exact": 56
+      "normalized_heuristic": 9,
+      "source_metadata_exact": 60
     },
     "model_ambiguity_methods": {
-      "source_metadata_exact": 24,
-      "unclassified": 61
+      "source_metadata_exact": 25,
+      "unclassified": 69
     },
     "model_resolution_methods": {
       "manual_alias": 1,
-      "normalized_heuristic": 6,
-      "source_metadata_exact": 80,
-      "unclassified": 61
+      "normalized_heuristic": 9,
+      "source_metadata_exact": 85,
+      "unclassified": 69
     },
     "endpoint_mappings": {
       "verified": 0,
       "manual": 2,
       "candidate": 0
     },
-    "unresolved_models": 37,
-    "unresolved_endpoints": 619,
-    "ambiguous": 85,
+    "unresolved_models": 43,
+    "unresolved_endpoints": 665,
+    "ambiguous": 94,
     "conflict": 0
   },
   "gate_d": {

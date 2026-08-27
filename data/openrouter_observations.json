@@ -1,12 +1,12 @@
 {
   "version": 1,
   "parser_version": "0.1.0",
-  "generated_at": "2026-08-24T07:38:57Z",
+  "generated_at": "2026-08-27T16:53:47Z",
   "source": "openrouter",
   "source_url": "https://openrouter.ai/api/v1/models",
-  "model_catalog_count": 422,
+  "model_catalog_count": 418,
   "endpoint_models_requested": 25,
-  "endpoint_observation_count": 621,
+  "endpoint_observation_count": 667,
   "endpoint_errors": [],
   "observations": [
     {
@@ -32674,12 +32674,2288 @@
       }
     },
     {
+      "observation_type": "provider_endpoint",
+      "model_id": "moonshotai/kimi-k3",
+      "model_slug": "moonshotai/kimi-k3",
+      "provider_id": "alibaba",
+      "provider_name": "Alibaba",
+      "endpoint_id": "Alibaba | moonshotai/kimi-k3-20260715",
+      "identity_key": "moonshotai/kimi-k3:alibaba:Alibaba | moonshotai/kimi-k3-20260715",
+      "context_tokens": 1048576,
+      "pricing": {
+        "input_per_million": 3.45,
+        "output_per_million": 17.25,
+        "raw": {
+          "prompt": "0.00000345",
+          "completion": "0.00001725",
+          "input_cache_read": "0.000000345",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
       "availability": {
         "status": "available",
-        "uptime_1d": 100.0,
-        "uptime_30m": 100.0,
-        "uptime_5m": 100.0
+        "uptime_5m": 99.93823347745521,
+        "uptime_30m": 99.86120749479528,
+        "uptime_1d": 99.26470588235294
       },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "include_reasoning",
+          "logprobs",
+          "max_tokens",
+          "presence_penalty",
+          "reasoning",
+          "reasoning_effort",
+          "response_format",
+          "seed",
+          "structured_outputs",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_logprobs",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-27T16:53:47Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "moonshotai/kimi-k3",
+        "last_seen": "2026-08-27T16:53:47Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "moonshotai/kimi-k3",
+      "model_slug": "moonshotai/kimi-k3",
+      "provider_id": "baseten/fp8",
+      "provider_name": "BaseTen",
+      "endpoint_id": "BaseTen | moonshotai/kimi-k3-20260715",
+      "identity_key": "moonshotai/kimi-k3:baseten/fp8:BaseTen | moonshotai/kimi-k3-20260715",
+      "context_tokens": 1048576,
+      "pricing": {
+        "input_per_million": 3.0,
+        "output_per_million": 15.0,
+        "raw": {
+          "prompt": "0.000003",
+          "completion": "0.000015",
+          "input_cache_read": "0.0000003",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": null,
+        "uptime_30m": 100.0,
+        "uptime_1d": 99.72643097643098
+      },
+      "quantization": "fp8",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "include_reasoning",
+          "max_tokens",
+          "presence_penalty",
+          "reasoning",
+          "reasoning_effort",
+          "stop",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-27T16:53:47Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "moonshotai/kimi-k3",
+        "last_seen": "2026-08-27T16:53:47Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "moonshotai/kimi-k3",
+      "model_slug": "moonshotai/kimi-k3",
+      "provider_id": "chutes/mxfp4",
+      "provider_name": "Chutes",
+      "endpoint_id": "Chutes | moonshotai/kimi-k3-20260715",
+      "identity_key": "moonshotai/kimi-k3:chutes/mxfp4:Chutes | moonshotai/kimi-k3-20260715",
+      "context_tokens": 1048576,
+      "pricing": {
+        "input_per_million": 3.0,
+        "output_per_million": 15.0,
+        "raw": {
+          "prompt": "0.000003",
+          "completion": "0.000015",
+          "input_cache_read": "0.0000003",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 99.26470588235294,
+        "uptime_30m": 98.16612729234089,
+        "uptime_1d": 98.94879727255508
+      },
+      "quantization": "mxfp4",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "include_reasoning",
+          "max_tokens",
+          "presence_penalty",
+          "reasoning",
+          "reasoning_effort",
+          "repetition_penalty",
+          "response_format",
+          "seed",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "top_k",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-27T16:53:47Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "moonshotai/kimi-k3",
+        "last_seen": "2026-08-27T16:53:47Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "moonshotai/kimi-k3",
+      "model_slug": "moonshotai/kimi-k3",
+      "provider_id": "deepinfra/bf16",
+      "provider_name": "DeepInfra",
+      "endpoint_id": "DeepInfra | moonshotai/kimi-k3-20260715",
+      "identity_key": "moonshotai/kimi-k3:deepinfra/bf16:DeepInfra | moonshotai/kimi-k3-20260715",
+      "context_tokens": 1048576,
+      "pricing": {
+        "input_per_million": 2.8499999999999996,
+        "output_per_million": 14.25,
+        "raw": {
+          "prompt": "0.00000285",
+          "completion": "0.00001425",
+          "input_cache_read": "0.000000285",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 94.8936170212766,
+        "uptime_30m": 95.6232159847764,
+        "uptime_1d": 95.05124847609156
+      },
+      "quantization": "bf16",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "include_reasoning",
+          "logit_bias",
+          "max_tokens",
+          "min_p",
+          "presence_penalty",
+          "reasoning",
+          "reasoning_effort",
+          "repetition_penalty",
+          "response_format",
+          "seed",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_k",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-27T16:53:47Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "moonshotai/kimi-k3",
+        "last_seen": "2026-08-27T16:53:47Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "moonshotai/kimi-k3",
+      "model_slug": "moonshotai/kimi-k3",
+      "provider_id": "digitalocean",
+      "provider_name": "DigitalOcean",
+      "endpoint_id": "DigitalOcean | moonshotai/kimi-k3-20260715",
+      "identity_key": "moonshotai/kimi-k3:digitalocean:DigitalOcean | moonshotai/kimi-k3-20260715",
+      "context_tokens": 1048576,
+      "pricing": {
+        "input_per_million": 2.8499999999999996,
+        "output_per_million": 14.25,
+        "raw": {
+          "prompt": "0.00000285",
+          "completion": "0.00001425",
+          "input_cache_read": "0.000000285",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 98.5837922895358,
+        "uptime_30m": 98.30140386256107,
+        "uptime_1d": 99.58042143159678
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "include_reasoning",
+          "logprobs",
+          "max_tokens",
+          "reasoning",
+          "reasoning_effort",
+          "response_format",
+          "structured_outputs",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_logprobs",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-27T16:53:47Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "moonshotai/kimi-k3",
+        "last_seen": "2026-08-27T16:53:47Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "moonshotai/kimi-k3",
+      "model_slug": "moonshotai/kimi-k3",
+      "provider_id": "fireworks",
+      "provider_name": "Fireworks",
+      "endpoint_id": "Fireworks | moonshotai/kimi-k3-20260715",
+      "identity_key": "moonshotai/kimi-k3:fireworks:Fireworks | moonshotai/kimi-k3-20260715",
+      "context_tokens": 1048576,
+      "pricing": {
+        "input_per_million": 3.0,
+        "output_per_million": 15.0,
+        "raw": {
+          "prompt": "0.000003",
+          "completion": "0.000015",
+          "input_cache_read": "0.0000003",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 99.84848484848486,
+        "uptime_30m": 99.78787343114726,
+        "uptime_1d": 95.78579905234618
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "include_reasoning",
+          "logit_bias",
+          "logprobs",
+          "max_tokens",
+          "presence_penalty",
+          "reasoning",
+          "reasoning_effort",
+          "repetition_penalty",
+          "response_format",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_k",
+          "top_logprobs",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-27T16:53:47Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "moonshotai/kimi-k3",
+        "last_seen": "2026-08-27T16:53:47Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "moonshotai/kimi-k3",
+      "model_slug": "moonshotai/kimi-k3",
+      "provider_id": "fireworks/fast",
+      "provider_name": "Fireworks",
+      "endpoint_id": "Fireworks | moonshotai/kimi-k3-20260715",
+      "identity_key": "moonshotai/kimi-k3:fireworks/fast:Fireworks | moonshotai/kimi-k3-20260715",
+      "context_tokens": 1048576,
+      "pricing": {
+        "input_per_million": 4.5,
+        "output_per_million": 22.5,
+        "raw": {
+          "prompt": "0.0000045",
+          "completion": "0.0000225",
+          "input_cache_read": "0.00000045",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": null,
+        "uptime_30m": 100.0,
+        "uptime_1d": 98.71810018903592
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "include_reasoning",
+          "logit_bias",
+          "logprobs",
+          "max_tokens",
+          "presence_penalty",
+          "reasoning",
+          "reasoning_effort",
+          "repetition_penalty",
+          "response_format",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "top_k",
+          "top_logprobs",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-27T16:53:47Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "moonshotai/kimi-k3",
+        "last_seen": "2026-08-27T16:53:47Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "moonshotai/kimi-k3",
+      "model_slug": "moonshotai/kimi-k3",
+      "provider_id": "fireworks/us",
+      "provider_name": "Fireworks",
+      "endpoint_id": "Fireworks | moonshotai/kimi-k3-20260715",
+      "identity_key": "moonshotai/kimi-k3:fireworks/us:Fireworks | moonshotai/kimi-k3-20260715",
+      "context_tokens": 1048576,
+      "pricing": {
+        "input_per_million": 3.3000000000000003,
+        "output_per_million": 16.5,
+        "raw": {
+          "prompt": "0.0000033",
+          "completion": "0.0000165",
+          "input_cache_read": "0.00000033",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 98.70250231696015,
+        "uptime_30m": 99.09742500663658,
+        "uptime_1d": 97.26552430569689
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "include_reasoning",
+          "logit_bias",
+          "logprobs",
+          "max_tokens",
+          "presence_penalty",
+          "reasoning",
+          "reasoning_effort",
+          "repetition_penalty",
+          "response_format",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_k",
+          "top_logprobs",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-27T16:53:47Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "moonshotai/kimi-k3",
+        "last_seen": "2026-08-27T16:53:47Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "moonshotai/kimi-k3",
+      "model_slug": "moonshotai/kimi-k3",
+      "provider_id": "makora",
+      "provider_name": "Makora",
+      "endpoint_id": "Makora | moonshotai/kimi-k3-20260715",
+      "identity_key": "moonshotai/kimi-k3:makora:Makora | moonshotai/kimi-k3-20260715",
+      "context_tokens": 1048576,
+      "pricing": {
+        "input_per_million": 2.5500000000000003,
+        "output_per_million": 12.75,
+        "raw": {
+          "prompt": "0.00000255",
+          "completion": "0.00001275",
+          "input_cache_read": "0.00000025599999",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "unavailable",
+        "uptime_5m": 92.5,
+        "uptime_30m": 66.95842450765865,
+        "uptime_1d": 89.92042440318302
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "include_reasoning",
+          "logprobs",
+          "max_tokens",
+          "presence_penalty",
+          "reasoning",
+          "reasoning_effort",
+          "repetition_penalty",
+          "response_format",
+          "seed",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_k",
+          "top_logprobs",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-27T16:53:47Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "moonshotai/kimi-k3",
+        "last_seen": "2026-08-27T16:53:47Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "moonshotai/kimi-k3",
+      "model_slug": "moonshotai/kimi-k3",
+      "provider_id": "modal/mxfp4",
+      "provider_name": "Modal",
+      "endpoint_id": "Modal | moonshotai/kimi-k3-20260715",
+      "identity_key": "moonshotai/kimi-k3:modal/mxfp4:Modal | moonshotai/kimi-k3-20260715",
+      "context_tokens": 1048576,
+      "pricing": {
+        "input_per_million": 3.0,
+        "output_per_million": 15.0,
+        "raw": {
+          "prompt": "0.000003",
+          "completion": "0.000015",
+          "input_cache_read": "0.0000003",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 100.0,
+        "uptime_30m": 99.897101697822,
+        "uptime_1d": 99.87420216928794
+      },
+      "quantization": "mxfp4",
+      "capabilities": {
+        "supported_parameters": [
+          "include_reasoning",
+          "max_tokens",
+          "reasoning",
+          "reasoning_effort",
+          "response_format",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "tools",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-27T16:53:47Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "moonshotai/kimi-k3",
+        "last_seen": "2026-08-27T16:53:47Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "moonshotai/kimi-k3",
+      "model_slug": "moonshotai/kimi-k3",
+      "provider_id": "moonshotai/mxfp4",
+      "provider_name": "Moonshot AI",
+      "endpoint_id": "Moonshot AI | moonshotai/kimi-k3-20260715",
+      "identity_key": "moonshotai/kimi-k3:moonshotai/mxfp4:Moonshot AI | moonshotai/kimi-k3-20260715",
+      "context_tokens": 1048576,
+      "pricing": {
+        "input_per_million": 3.0,
+        "output_per_million": 15.0,
+        "raw": {
+          "prompt": "0.000003",
+          "completion": "0.000015",
+          "input_cache_read": "0.0000003",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 99.30203045685279,
+        "uptime_30m": 99.05585162183709,
+        "uptime_1d": 98.42224526027282
+      },
+      "quantization": "mxfp4",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "include_reasoning",
+          "max_tokens",
+          "presence_penalty",
+          "reasoning",
+          "reasoning_effort",
+          "response_format",
+          "stop",
+          "structured_outputs",
+          "tool_choice",
+          "tools"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-27T16:53:47Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "moonshotai/kimi-k3",
+        "last_seen": "2026-08-27T16:53:47Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "moonshotai/kimi-k3",
+      "model_slug": "moonshotai/kimi-k3",
+      "provider_id": "morph/fast",
+      "provider_name": "Morph",
+      "endpoint_id": "Morph | moonshotai/kimi-k3-20260715",
+      "identity_key": "moonshotai/kimi-k3:morph/fast:Morph | moonshotai/kimi-k3-20260715",
+      "context_tokens": 1048576,
+      "pricing": {
+        "input_per_million": 6.0,
+        "output_per_million": 22.5,
+        "raw": {
+          "prompt": "0.000006",
+          "completion": "0.0000225",
+          "input_cache_read": "0.0000006",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": null,
+        "uptime_30m": null,
+        "uptime_1d": 92.20977596741345
+      },
+      "quantization": "fp4",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "include_reasoning",
+          "logit_bias",
+          "logprobs",
+          "max_tokens",
+          "min_p",
+          "presence_penalty",
+          "reasoning",
+          "reasoning_effort",
+          "repetition_penalty",
+          "response_format",
+          "seed",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_k",
+          "top_logprobs",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-27T16:53:47Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "moonshotai/kimi-k3",
+        "last_seen": "2026-08-27T16:53:47Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "moonshotai/kimi-k3",
+      "model_slug": "moonshotai/kimi-k3",
+      "provider_id": "morph/fp4",
+      "provider_name": "Morph",
+      "endpoint_id": "Morph | moonshotai/kimi-k3-20260715",
+      "identity_key": "moonshotai/kimi-k3:morph/fp4:Morph | moonshotai/kimi-k3-20260715",
+      "context_tokens": 1048576,
+      "pricing": {
+        "input_per_million": 2.8,
+        "output_per_million": 14.0,
+        "raw": {
+          "prompt": "0.0000028",
+          "completion": "0.000014",
+          "input_cache_read": "0.00000029",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": null,
+        "uptime_30m": null,
+        "uptime_1d": 89.56318016928658
+      },
+      "quantization": "fp4",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "include_reasoning",
+          "logit_bias",
+          "logprobs",
+          "max_tokens",
+          "min_p",
+          "presence_penalty",
+          "reasoning",
+          "reasoning_effort",
+          "repetition_penalty",
+          "response_format",
+          "seed",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_k",
+          "top_logprobs",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-27T16:53:47Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "moonshotai/kimi-k3",
+        "last_seen": "2026-08-27T16:53:47Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "moonshotai/kimi-k3",
+      "model_slug": "moonshotai/kimi-k3",
+      "provider_id": "parasail/fp4",
+      "provider_name": "Parasail",
+      "endpoint_id": "Parasail | moonshotai/kimi-k3-20260715",
+      "identity_key": "moonshotai/kimi-k3:parasail/fp4:Parasail | moonshotai/kimi-k3-20260715",
+      "context_tokens": 1048576,
+      "pricing": {
+        "input_per_million": 3.0,
+        "output_per_million": 15.0,
+        "raw": {
+          "prompt": "0.000003",
+          "completion": "0.000015",
+          "input_cache_read": "0.0000003",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "unavailable",
+        "uptime_5m": 84.11214953271028,
+        "uptime_30m": 83.62369337979094,
+        "uptime_1d": 91.93831144083944
+      },
+      "quantization": "fp4",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "include_reasoning",
+          "logit_bias",
+          "logprobs",
+          "max_tokens",
+          "presence_penalty",
+          "reasoning",
+          "reasoning_effort",
+          "repetition_penalty",
+          "response_format",
+          "seed",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_k",
+          "top_logprobs",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-27T16:53:47Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "moonshotai/kimi-k3",
+        "last_seen": "2026-08-27T16:53:47Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "moonshotai/kimi-k3",
+      "model_slug": "moonshotai/kimi-k3",
+      "provider_id": "phala",
+      "provider_name": "Phala",
+      "endpoint_id": "Phala | moonshotai/kimi-k3-20260715",
+      "identity_key": "moonshotai/kimi-k3:phala:Phala | moonshotai/kimi-k3-20260715",
+      "context_tokens": 1048576,
+      "pricing": {
+        "input_per_million": 3.0,
+        "output_per_million": 15.0,
+        "raw": {
+          "prompt": "0.000003",
+          "completion": "0.000015",
+          "input_cache_read": "0.0000003",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 96.0551330798479,
+        "uptime_30m": 97.28313948326378,
+        "uptime_1d": 95.88853623737006
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "include_reasoning",
+          "logprobs",
+          "max_tokens",
+          "min_p",
+          "presence_penalty",
+          "reasoning",
+          "reasoning_effort",
+          "repetition_penalty",
+          "response_format",
+          "seed",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_k",
+          "top_logprobs",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-27T16:53:47Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "moonshotai/kimi-k3",
+        "last_seen": "2026-08-27T16:53:47Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "moonshotai/kimi-k3",
+      "model_slug": "moonshotai/kimi-k3",
+      "provider_id": "together",
+      "provider_name": "Together",
+      "endpoint_id": "Together | moonshotai/kimi-k3-20260715",
+      "identity_key": "moonshotai/kimi-k3:together:Together | moonshotai/kimi-k3-20260715",
+      "context_tokens": 1048576,
+      "pricing": {
+        "input_per_million": 3.0,
+        "output_per_million": 15.0,
+        "raw": {
+          "prompt": "0.000003",
+          "completion": "0.000015",
+          "input_cache_read": "0.0000003",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 97.5574712643678,
+        "uptime_30m": 98.7627695800227,
+        "uptime_1d": 99.23143215875068
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "include_reasoning",
+          "logit_bias",
+          "max_tokens",
+          "min_p",
+          "presence_penalty",
+          "reasoning",
+          "reasoning_effort",
+          "repetition_penalty",
+          "response_format",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_k",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-27T16:53:47Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "moonshotai/kimi-k3",
+        "last_seen": "2026-08-27T16:53:47Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "morph/morph-v3-fast",
+      "model_slug": "morph/morph-v3-fast",
+      "provider_id": "morph",
+      "provider_name": "Morph",
+      "endpoint_id": "Morph | morph/morph-v3-fast",
+      "identity_key": "morph/morph-v3-fast:morph:Morph | morph/morph-v3-fast",
+      "context_tokens": 81920,
+      "pricing": {
+        "input_per_million": 0.7999999999999999,
+        "output_per_million": 1.2,
+        "raw": {
+          "prompt": "0.0000008",
+          "completion": "0.0000012",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": null,
+        "uptime_30m": null,
+        "uptime_1d": 100.0
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "max_tokens",
+          "stop",
+          "temperature"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-27T16:53:47Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "morph/morph-v3-fast",
+        "last_seen": "2026-08-27T16:53:47Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "morph/morph-v3-large",
+      "model_slug": "morph/morph-v3-large",
+      "provider_id": "morph/fp8",
+      "provider_name": "Morph",
+      "endpoint_id": "Morph | morph/morph-v3-large",
+      "identity_key": "morph/morph-v3-large:morph/fp8:Morph | morph/morph-v3-large",
+      "context_tokens": 262144,
+      "pricing": {
+        "input_per_million": 0.8999999999999999,
+        "output_per_million": 1.9,
+        "raw": {
+          "prompt": "0.0000009",
+          "completion": "0.0000019",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": null,
+        "uptime_30m": null,
+        "uptime_1d": 100.0
+      },
+      "quantization": "fp8",
+      "capabilities": {
+        "supported_parameters": [
+          "logprobs",
+          "max_tokens",
+          "response_format",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "top_logprobs"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-27T16:53:47Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "morph/morph-v3-large",
+        "last_seen": "2026-08-27T16:53:47Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "nex-agi/nex-n2-mini",
+      "model_slug": "nex-agi/nex-n2-mini",
+      "provider_id": "nex-agi",
+      "provider_name": "Nex AGI",
+      "endpoint_id": "Nex AGI | nex-agi/nex-n2-mini",
+      "identity_key": "nex-agi/nex-n2-mini:nex-agi:Nex AGI | nex-agi/nex-n2-mini",
+      "context_tokens": 262144,
+      "pricing": {
+        "input_per_million": 0.024999999999999998,
+        "output_per_million": 0.09999999999999999,
+        "raw": {
+          "prompt": "0.000000025",
+          "completion": "0.0000001",
+          "input_cache_read": "0.0000000025",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 100.0,
+        "uptime_30m": 99.99106903634902,
+        "uptime_1d": 99.99269901005214
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "include_reasoning",
+          "logprobs",
+          "max_tokens",
+          "reasoning",
+          "response_format",
+          "structured_outputs",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_k",
+          "top_logprobs",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-27T16:53:47Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "nex-agi/nex-n2-mini",
+        "last_seen": "2026-08-27T16:53:47Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "nex-agi/nex-n2-pro",
+      "model_slug": "nex-agi/nex-n2-pro",
+      "provider_id": "nex-agi/fp8",
+      "provider_name": "Nex AGI",
+      "endpoint_id": "Nex AGI | nex-agi/nex-n2-pro",
+      "identity_key": "nex-agi/nex-n2-pro:nex-agi/fp8:Nex AGI | nex-agi/nex-n2-pro",
+      "context_tokens": 262144,
+      "pricing": {
+        "input_per_million": 0.25,
+        "output_per_million": 1.0,
+        "raw": {
+          "prompt": "0.00000025",
+          "completion": "0.000001",
+          "input_cache_read": "0.000000025",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": null,
+        "uptime_30m": null,
+        "uptime_1d": 99.75328947368422
+      },
+      "quantization": "fp8",
+      "capabilities": {
+        "supported_parameters": [
+          "include_reasoning",
+          "logprobs",
+          "max_tokens",
+          "reasoning",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_k",
+          "top_logprobs",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-27T16:53:47Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "nex-agi/nex-n2-pro",
+        "last_seen": "2026-08-27T16:53:47Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "nex-agi/nex-n2-pro",
+      "model_slug": "nex-agi/nex-n2-pro",
+      "provider_id": "siliconflow",
+      "provider_name": "SiliconFlow",
+      "endpoint_id": "SiliconFlow | nex-agi/nex-n2-pro",
+      "identity_key": "nex-agi/nex-n2-pro:siliconflow:SiliconFlow | nex-agi/nex-n2-pro",
+      "context_tokens": 262144,
+      "pricing": {
+        "input_per_million": 0.5,
+        "output_per_million": 2.5,
+        "raw": {
+          "prompt": "0.0000005",
+          "completion": "0.0000025",
+          "input_cache_read": "0.00000025",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": null,
+        "uptime_30m": null,
+        "uptime_1d": 99.52456418383518
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "include_reasoning",
+          "max_tokens",
+          "reasoning",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_k",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-27T16:53:47Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "nex-agi/nex-n2-pro",
+        "last_seen": "2026-08-27T16:53:47Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "nousresearch/hermes-3-llama-3.1-405b",
+      "model_slug": "nousresearch/hermes-3-llama-3.1-405b",
+      "provider_id": "deepinfra/fp8",
+      "provider_name": "DeepInfra",
+      "endpoint_id": "DeepInfra | nousresearch/hermes-3-llama-3.1-405b",
+      "identity_key": "nousresearch/hermes-3-llama-3.1-405b:deepinfra/fp8:DeepInfra | nousresearch/hermes-3-llama-3.1-405b",
+      "context_tokens": 131072,
+      "pricing": {
+        "input_per_million": 1.0,
+        "output_per_million": 1.0,
+        "raw": {
+          "prompt": "0.000001",
+          "completion": "0.000001",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 100.0,
+        "uptime_30m": 100.0,
+        "uptime_1d": 100.0
+      },
+      "quantization": "fp8",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "logit_bias",
+          "max_tokens",
+          "min_p",
+          "presence_penalty",
+          "repetition_penalty",
+          "response_format",
+          "seed",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "top_k",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-27T16:53:47Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "nousresearch/hermes-3-llama-3.1-405b",
+        "last_seen": "2026-08-27T16:53:47Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "nousresearch/hermes-3-llama-3.1-70b",
+      "model_slug": "nousresearch/hermes-3-llama-3.1-70b",
+      "provider_id": "deepinfra/fp8",
+      "provider_name": "DeepInfra",
+      "endpoint_id": "DeepInfra | nousresearch/hermes-3-llama-3.1-70b",
+      "identity_key": "nousresearch/hermes-3-llama-3.1-70b:deepinfra/fp8:DeepInfra | nousresearch/hermes-3-llama-3.1-70b",
+      "context_tokens": 131072,
+      "pricing": {
+        "input_per_million": 0.7,
+        "output_per_million": 0.7,
+        "raw": {
+          "prompt": "0.0000007",
+          "completion": "0.0000007",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 100.0,
+        "uptime_30m": 100.0,
+        "uptime_1d": 100.0
+      },
+      "quantization": "fp8",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "logit_bias",
+          "max_tokens",
+          "min_p",
+          "presence_penalty",
+          "repetition_penalty",
+          "response_format",
+          "seed",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "top_k",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-27T16:53:47Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "nousresearch/hermes-3-llama-3.1-70b",
+        "last_seen": "2026-08-27T16:53:47Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "nousresearch/hermes-4-405b",
+      "model_slug": "nousresearch/hermes-4-405b",
+      "provider_id": "nebius/fp8",
+      "provider_name": "Nebius",
+      "endpoint_id": "Nebius | nousresearch/hermes-4-405b",
+      "identity_key": "nousresearch/hermes-4-405b:nebius/fp8:Nebius | nousresearch/hermes-4-405b",
+      "context_tokens": 131072,
+      "pricing": {
+        "input_per_million": 1.0,
+        "output_per_million": 3.0,
+        "raw": {
+          "prompt": "0.000001",
+          "completion": "0.000003",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 100.0,
+        "uptime_30m": 100.0,
+        "uptime_1d": 100.0
+      },
+      "quantization": "fp8",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "include_reasoning",
+          "max_tokens",
+          "presence_penalty",
+          "reasoning",
+          "repetition_penalty",
+          "response_format",
+          "temperature",
+          "top_k",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-27T16:53:47Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "nousresearch/hermes-4-405b",
+        "last_seen": "2026-08-27T16:53:47Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "nousresearch/hermes-4-70b",
+      "model_slug": "nousresearch/hermes-4-70b",
+      "provider_id": "nebius/fp8",
+      "provider_name": "Nebius",
+      "endpoint_id": "Nebius | nousresearch/hermes-4-70b",
+      "identity_key": "nousresearch/hermes-4-70b:nebius/fp8:Nebius | nousresearch/hermes-4-70b",
+      "context_tokens": 131072,
+      "pricing": {
+        "input_per_million": 0.13,
+        "output_per_million": 0.39999999999999997,
+        "raw": {
+          "prompt": "0.00000013",
+          "completion": "0.0000004",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 100.0,
+        "uptime_30m": 100.0,
+        "uptime_1d": 100.0
+      },
+      "quantization": "fp8",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "include_reasoning",
+          "max_tokens",
+          "presence_penalty",
+          "reasoning",
+          "repetition_penalty",
+          "response_format",
+          "temperature",
+          "top_k",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-27T16:53:47Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "nousresearch/hermes-4-70b",
+        "last_seen": "2026-08-27T16:53:47Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "nvidia/nemotron-3-nano-30b-a3b",
+      "model_slug": "nvidia/nemotron-3-nano-30b-a3b",
+      "provider_id": "crusoe/fp8",
+      "provider_name": "Crusoe",
+      "endpoint_id": "Crusoe | nvidia/nemotron-3-nano-30b-a3b",
+      "identity_key": "nvidia/nemotron-3-nano-30b-a3b:crusoe/fp8:Crusoe | nvidia/nemotron-3-nano-30b-a3b",
+      "context_tokens": 262144,
+      "pricing": {
+        "input_per_million": 0.049999999999999996,
+        "output_per_million": 0.19999999999999998,
+        "raw": {
+          "prompt": "0.00000005",
+          "completion": "0.0000002",
+          "input_cache_read": "0.00000003",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 100.0,
+        "uptime_30m": 100.0,
+        "uptime_1d": 99.6132018642402
+      },
+      "quantization": "fp8",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "include_reasoning",
+          "logit_bias",
+          "max_tokens",
+          "min_p",
+          "presence_penalty",
+          "reasoning",
+          "repetition_penalty",
+          "response_format",
+          "seed",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "tools",
+          "top_k",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-27T16:53:47Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "nvidia/nemotron-3-nano-30b-a3b",
+        "last_seen": "2026-08-27T16:53:47Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "nvidia/nemotron-3-nano-30b-a3b",
+      "model_slug": "nvidia/nemotron-3-nano-30b-a3b",
+      "provider_id": "deepinfra/fp4",
+      "provider_name": "DeepInfra",
+      "endpoint_id": "DeepInfra | nvidia/nemotron-3-nano-30b-a3b",
+      "identity_key": "nvidia/nemotron-3-nano-30b-a3b:deepinfra/fp4:DeepInfra | nvidia/nemotron-3-nano-30b-a3b",
+      "context_tokens": 262144,
+      "pricing": {
+        "input_per_million": 0.049999999999999996,
+        "output_per_million": 0.19999999999999998,
+        "raw": {
+          "prompt": "0.00000005",
+          "completion": "0.0000002",
+          "input_cache_read": "0.000000025",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 100.0,
+        "uptime_30m": 100.0,
+        "uptime_1d": 99.8974659440457
+      },
+      "quantization": "fp4",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "include_reasoning",
+          "logit_bias",
+          "max_tokens",
+          "min_p",
+          "presence_penalty",
+          "reasoning",
+          "repetition_penalty",
+          "response_format",
+          "seed",
+          "stop",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_k",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-27T16:53:47Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "nvidia/nemotron-3-nano-30b-a3b",
+        "last_seen": "2026-08-27T16:53:47Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "nvidia/nemotron-3-nano-30b-a3b",
+      "model_slug": "nvidia/nemotron-3-nano-30b-a3b",
+      "provider_id": "nebius/fp8",
+      "provider_name": "Nebius",
+      "endpoint_id": "Nebius | nvidia/nemotron-3-nano-30b-a3b",
+      "identity_key": "nvidia/nemotron-3-nano-30b-a3b:nebius/fp8:Nebius | nvidia/nemotron-3-nano-30b-a3b",
+      "context_tokens": 262144,
+      "pricing": {
+        "input_per_million": 0.06,
+        "output_per_million": 0.24,
+        "raw": {
+          "prompt": "0.00000006",
+          "completion": "0.00000024",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 100.0,
+        "uptime_30m": 100.0,
+        "uptime_1d": 97.8437256863399
+      },
+      "quantization": "fp8",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "include_reasoning",
+          "logit_bias",
+          "max_tokens",
+          "presence_penalty",
+          "reasoning",
+          "repetition_penalty",
+          "response_format",
+          "seed",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_k",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-27T16:53:47Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "nvidia/nemotron-3-nano-30b-a3b",
+        "last_seen": "2026-08-27T16:53:47Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "nvidia/nemotron-3-nano-30b-a3b",
+      "model_slug": "nvidia/nemotron-3-nano-30b-a3b",
+      "provider_id": "novita/fp4",
+      "provider_name": "Novita",
+      "endpoint_id": "Novita | nvidia/nemotron-3-nano-30b-a3b",
+      "identity_key": "nvidia/nemotron-3-nano-30b-a3b:novita/fp4:Novita | nvidia/nemotron-3-nano-30b-a3b",
+      "context_tokens": 262144,
+      "pricing": {
+        "input_per_million": 0.049999999999999996,
+        "output_per_million": 0.19999999999999998,
+        "raw": {
+          "prompt": "0.00000005",
+          "completion": "0.0000002",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 100.0,
+        "uptime_30m": 100.0,
+        "uptime_1d": 99.97863323955698
+      },
+      "quantization": "fp4",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "include_reasoning",
+          "logprobs",
+          "max_tokens",
+          "presence_penalty",
+          "reasoning",
+          "repetition_penalty",
+          "response_format",
+          "seed",
+          "stop",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_k",
+          "top_logprobs",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-27T16:53:47Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "nvidia/nemotron-3-nano-30b-a3b",
+        "last_seen": "2026-08-27T16:53:47Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
+      "model_slug": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
+      "provider_id": "nvidia",
+      "provider_name": "Nvidia",
+      "endpoint_id": "Nvidia | nvidia/nemotron-3-nano-omni-30b-a3b-reasoning-20260428:free",
+      "identity_key": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free:nvidia:Nvidia | nvidia/nemotron-3-nano-omni-30b-a3b-reasoning-20260428:free",
+      "context_tokens": 256000,
+      "pricing": {
+        "input_per_million": 0.0,
+        "output_per_million": 0.0,
+        "raw": {
+          "prompt": "0",
+          "completion": "0",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "unavailable",
+        "uptime_5m": 65.91576885406464,
+        "uptime_30m": 67.57041723151077,
+        "uptime_1d": 84.31036065843674
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "include_reasoning",
+          "max_tokens",
+          "reasoning",
+          "seed",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-27T16:53:47Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
+        "last_seen": "2026-08-27T16:53:47Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "nvidia/nemotron-3-super-120b-a12b",
+      "model_slug": "nvidia/nemotron-3-super-120b-a12b",
+      "provider_id": "deepinfra/bf16",
+      "provider_name": "DeepInfra",
+      "endpoint_id": "DeepInfra | nvidia/nemotron-3-super-120b-a12b-20230311",
+      "identity_key": "nvidia/nemotron-3-super-120b-a12b:deepinfra/bf16:DeepInfra | nvidia/nemotron-3-super-120b-a12b-20230311",
+      "context_tokens": 262144,
+      "pricing": {
+        "input_per_million": 0.08499999999999999,
+        "output_per_million": 0.39999999999999997,
+        "raw": {
+          "prompt": "0.000000085",
+          "completion": "0.0000004",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 100.0,
+        "uptime_30m": 99.92862241256245,
+        "uptime_1d": 99.97547273385581
+      },
+      "quantization": "bf16",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "include_reasoning",
+          "logit_bias",
+          "max_tokens",
+          "min_p",
+          "presence_penalty",
+          "reasoning",
+          "reasoning_effort",
+          "repetition_penalty",
+          "response_format",
+          "seed",
+          "stop",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_k",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-27T16:53:47Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "nvidia/nemotron-3-super-120b-a12b",
+        "last_seen": "2026-08-27T16:53:47Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "nvidia/nemotron-3-super-120b-a12b",
+      "model_slug": "nvidia/nemotron-3-super-120b-a12b",
+      "provider_id": "digitalocean",
+      "provider_name": "DigitalOcean",
+      "endpoint_id": "DigitalOcean | nvidia/nemotron-3-super-120b-a12b-20230311",
+      "identity_key": "nvidia/nemotron-3-super-120b-a12b:digitalocean:DigitalOcean | nvidia/nemotron-3-super-120b-a12b-20230311",
+      "context_tokens": 1000000,
+      "pricing": {
+        "input_per_million": 0.3,
+        "output_per_million": 0.65,
+        "raw": {
+          "prompt": "0.0000003",
+          "completion": "0.00000065",
+          "input_cache_read": "0.00000006",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 99.46808510638297,
+        "uptime_30m": 99.93377483443709,
+        "uptime_1d": 99.8141822653368
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "include_reasoning",
+          "logprobs",
+          "max_tokens",
+          "reasoning",
+          "reasoning_effort",
+          "response_format",
+          "structured_outputs",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_logprobs",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-27T16:53:47Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "nvidia/nemotron-3-super-120b-a12b",
+        "last_seen": "2026-08-27T16:53:47Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "nvidia/nemotron-3-super-120b-a12b:free",
+      "model_slug": "nvidia/nemotron-3-super-120b-a12b:free",
+      "provider_id": "nvidia",
+      "provider_name": "Nvidia",
+      "endpoint_id": "Nvidia | nvidia/nemotron-3-super-120b-a12b-20230311:free",
+      "identity_key": "nvidia/nemotron-3-super-120b-a12b:free:nvidia:Nvidia | nvidia/nemotron-3-super-120b-a12b-20230311:free",
+      "context_tokens": 262144,
+      "pricing": {
+        "input_per_million": 0.0,
+        "output_per_million": 0.0,
+        "raw": {
+          "prompt": "0",
+          "completion": "0",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 99.80708523325148,
+        "uptime_30m": 99.58730646980416,
+        "uptime_1d": 99.61284373842435
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "include_reasoning",
+          "max_tokens",
+          "reasoning",
+          "reasoning_effort",
+          "response_format",
+          "seed",
+          "structured_outputs",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-27T16:53:47Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "nvidia/nemotron-3-super-120b-a12b:free",
+        "last_seen": "2026-08-27T16:53:47Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "nvidia/nemotron-3-ultra-550b-a55b",
+      "model_slug": "nvidia/nemotron-3-ultra-550b-a55b",
+      "provider_id": "baseten/fp4",
+      "provider_name": "BaseTen",
+      "endpoint_id": "BaseTen | nvidia/nemotron-3-ultra-550b-a55b-20260604",
+      "identity_key": "nvidia/nemotron-3-ultra-550b-a55b:baseten/fp4:BaseTen | nvidia/nemotron-3-ultra-550b-a55b-20260604",
+      "context_tokens": 202800,
+      "pricing": {
+        "input_per_million": 0.6,
+        "output_per_million": 2.4,
+        "raw": {
+          "prompt": "0.0000006",
+          "completion": "0.0000024",
+          "input_cache_read": "0.00000012",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 99.2,
+        "uptime_30m": 99.89088925259138,
+        "uptime_1d": 96.266860265179
+      },
+      "quantization": "fp4",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "include_reasoning",
+          "max_tokens",
+          "presence_penalty",
+          "reasoning",
+          "reasoning_effort",
+          "stop",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_k",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-27T16:53:47Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "nvidia/nemotron-3-ultra-550b-a55b",
+        "last_seen": "2026-08-27T16:53:47Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "nvidia/nemotron-3-ultra-550b-a55b",
+      "model_slug": "nvidia/nemotron-3-ultra-550b-a55b",
+      "provider_id": "deepinfra/fp4",
+      "provider_name": "DeepInfra",
+      "endpoint_id": "DeepInfra | nvidia/nemotron-3-ultra-550b-a55b-20260604",
+      "identity_key": "nvidia/nemotron-3-ultra-550b-a55b:deepinfra/fp4:DeepInfra | nvidia/nemotron-3-ultra-550b-a55b-20260604",
+      "context_tokens": 262144,
+      "pricing": {
+        "input_per_million": 0.5,
+        "output_per_million": 2.2,
+        "raw": {
+          "prompt": "0.0000005",
+          "completion": "0.0000022",
+          "input_cache_read": "0.0000001",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 100.0,
+        "uptime_30m": 100.0,
+        "uptime_1d": 99.90452431550094
+      },
+      "quantization": "fp4",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "include_reasoning",
+          "logit_bias",
+          "max_tokens",
+          "min_p",
+          "presence_penalty",
+          "reasoning",
+          "reasoning_effort",
+          "repetition_penalty",
+          "response_format",
+          "seed",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_k",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-27T16:53:47Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "nvidia/nemotron-3-ultra-550b-a55b",
+        "last_seen": "2026-08-27T16:53:47Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "nvidia/nemotron-3-ultra-550b-a55b",
+      "model_slug": "nvidia/nemotron-3-ultra-550b-a55b",
+      "provider_id": "together",
+      "provider_name": "Together",
+      "endpoint_id": "Together | nvidia/nemotron-3-ultra-550b-a55b-20260604",
+      "identity_key": "nvidia/nemotron-3-ultra-550b-a55b:together:Together | nvidia/nemotron-3-ultra-550b-a55b-20260604",
+      "context_tokens": 512288,
+      "pricing": {
+        "input_per_million": 0.6,
+        "output_per_million": 3.5999999999999996,
+        "raw": {
+          "prompt": "0.0000006",
+          "completion": "0.0000036",
+          "input_cache_read": "0.0000002",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 99.68602825745683,
+        "uptime_30m": 99.73931933381608,
+        "uptime_1d": 98.968610251859
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "include_reasoning",
+          "logit_bias",
+          "max_tokens",
+          "min_p",
+          "presence_penalty",
+          "reasoning",
+          "reasoning_effort",
+          "repetition_penalty",
+          "response_format",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_k",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-27T16:53:47Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "nvidia/nemotron-3-ultra-550b-a55b",
+        "last_seen": "2026-08-27T16:53:47Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "nvidia/nemotron-3-ultra-550b-a55b",
+      "model_slug": "nvidia/nemotron-3-ultra-550b-a55b",
+      "provider_id": "venice/fp8",
+      "provider_name": "Venice",
+      "endpoint_id": "Venice | nvidia/nemotron-3-ultra-550b-a55b-20260604",
+      "identity_key": "nvidia/nemotron-3-ultra-550b-a55b:venice/fp8:Venice | nvidia/nemotron-3-ultra-550b-a55b-20260604",
+      "context_tokens": 256000,
+      "pricing": {
+        "input_per_million": 0.625,
+        "output_per_million": 3.125,
+        "raw": {
+          "prompt": "0.000000625",
+          "completion": "0.000003125",
+          "input_cache_read": "0.0000001875",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 100.0,
+        "uptime_30m": 100.0,
+        "uptime_1d": 94.72665823895153
+      },
+      "quantization": "fp8",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "include_reasoning",
+          "max_tokens",
+          "presence_penalty",
+          "reasoning",
+          "reasoning_effort",
+          "response_format",
+          "stop",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_k",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-27T16:53:47Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "nvidia/nemotron-3-ultra-550b-a55b",
+        "last_seen": "2026-08-27T16:53:47Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "nvidia/nemotron-3-ultra-550b-a55b:batch",
+      "model_slug": "nvidia/nemotron-3-ultra-550b-a55b:batch",
+      "provider_id": "together",
+      "provider_name": "Together",
+      "endpoint_id": "Together | nvidia/nemotron-3-ultra-550b-a55b-20260604:batch",
+      "identity_key": "nvidia/nemotron-3-ultra-550b-a55b:batch:together:Together | nvidia/nemotron-3-ultra-550b-a55b-20260604:batch",
+      "context_tokens": 512288,
+      "pricing": {
+        "input_per_million": 0.6,
+        "output_per_million": 3.5999999999999996,
+        "raw": {
+          "prompt": "0.0000006",
+          "completion": "0.0000036",
+          "input_cache_read": "0.0000002",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": null,
+        "uptime_30m": null,
+        "uptime_1d": null
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "include_reasoning",
+          "logit_bias",
+          "max_tokens",
+          "min_p",
+          "presence_penalty",
+          "reasoning",
+          "reasoning_effort",
+          "repetition_penalty",
+          "response_format",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_k",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-27T16:53:47Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "nvidia/nemotron-3-ultra-550b-a55b:batch",
+        "last_seen": "2026-08-27T16:53:47Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "nvidia/nemotron-3-ultra-550b-a55b:free",
+      "model_slug": "nvidia/nemotron-3-ultra-550b-a55b:free",
+      "provider_id": "nvidia",
+      "provider_name": "Nvidia",
+      "endpoint_id": "Nvidia | nvidia/nemotron-3-ultra-550b-a55b-20260604:free",
+      "identity_key": "nvidia/nemotron-3-ultra-550b-a55b:free:nvidia:Nvidia | nvidia/nemotron-3-ultra-550b-a55b-20260604:free",
+      "context_tokens": 1000000,
+      "pricing": {
+        "input_per_million": 0.0,
+        "output_per_million": 0.0,
+        "raw": {
+          "prompt": "0",
+          "completion": "0",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 98.32655988524982,
+        "uptime_30m": 98.3768097455195,
+        "uptime_1d": 98.71883450040573
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "include_reasoning",
+          "max_tokens",
+          "reasoning",
+          "reasoning_effort",
+          "seed",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-27T16:53:47Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "last_seen": "2026-08-27T16:53:47Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "nvidia/nemotron-3.5-content-safety:free",
+      "model_slug": "nvidia/nemotron-3.5-content-safety:free",
+      "provider_id": "nvidia",
+      "provider_name": "Nvidia",
+      "endpoint_id": "Nvidia | nvidia/nemotron-3.5-content-safety-20260604:free",
+      "identity_key": "nvidia/nemotron-3.5-content-safety:free:nvidia:Nvidia | nvidia/nemotron-3.5-content-safety-20260604:free",
+      "context_tokens": 128000,
+      "pricing": {
+        "input_per_million": 0.0,
+        "output_per_million": 0.0,
+        "raw": {
+          "prompt": "0",
+          "completion": "0",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 100.0,
+        "uptime_30m": 98.47488824612148,
+        "uptime_1d": 97.6958113780477
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "include_reasoning",
+          "max_tokens",
+          "reasoning",
+          "seed",
+          "temperature",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-27T16:53:47Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "nvidia/nemotron-3.5-content-safety:free",
+        "last_seen": "2026-08-27T16:53:47Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "nvidia/nemotron-3.5-lightning",
+      "model_slug": "nvidia/nemotron-3.5-lightning",
+      "provider_id": "coreweave/bf16",
+      "provider_name": "CoreWeave",
+      "endpoint_id": "CoreWeave | nvidia/nemotron-3.5-lightning-20260807",
+      "identity_key": "nvidia/nemotron-3.5-lightning:coreweave/bf16:CoreWeave | nvidia/nemotron-3.5-lightning-20260807",
+      "context_tokens": 262144,
+      "pricing": {
+        "input_per_million": 0.09999999999999999,
+        "output_per_million": 0.25,
+        "raw": {
+          "prompt": "0.0000001",
+          "completion": "0.00000025",
+          "input_cache_read": "0.00000005",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 100.0,
+        "uptime_30m": 100.0,
+        "uptime_1d": 100.0
+      },
+      "quantization": "bf16",
       "capabilities": {
         "supported_parameters": [
           "frequency_penalty",
@@ -32699,44 +34975,45 @@
           "top_p"
         ]
       },
-      "context_tokens": 262144,
-      "endpoint_id": "CoreWeave | nvidia/nemotron-3.5-lightning-20260807",
-      "identity_key": "nvidia/nemotron-3.5-lightning:coreweave/bf16:CoreWeave | nvidia/nemotron-3.5-lightning-20260807",
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-27T16:53:47Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "nvidia/nemotron-3.5-lightning",
+        "last_seen": "2026-08-27T16:53:47Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
       "model_id": "nvidia/nemotron-3.5-lightning",
       "model_slug": "nvidia/nemotron-3.5-lightning",
-      "observation_type": "provider_endpoint",
+      "provider_id": "deepinfra/bf16",
+      "provider_name": "DeepInfra",
+      "endpoint_id": "DeepInfra | nvidia/nemotron-3.5-lightning-20260807",
+      "identity_key": "nvidia/nemotron-3.5-lightning:deepinfra/bf16:DeepInfra | nvidia/nemotron-3.5-lightning-20260807",
+      "context_tokens": 262144,
+      "pricing": {
+        "input_per_million": 0.08,
+        "output_per_million": 0.19999999999999998,
+        "raw": {
+          "prompt": "0.00000008",
+          "completion": "0.0000002",
+          "input_cache_read": "0.00000004",
+          "discount": 0
+        }
+      },
       "performance": {
         "latency_seconds": null,
         "throughput_tps": null
       },
-      "pricing": {
-        "input_per_million": 0.09999999999999999,
-        "output_per_million": 0.25,
-        "raw": {
-          "completion": "0.00000025",
-          "discount": 0,
-          "input_cache_read": "0.00000005",
-          "prompt": "0.0000001"
-        }
-      },
-      "privacy": {},
-      "provenance": {
-        "fetched_at": "2026-08-23T06:09:01Z",
-        "raw_endpoint": "nvidia/nemotron-3.5-lightning",
-        "source": "openrouter",
-        "source_authority": "openrouter"
-      },
-      "provider_id": "coreweave/bf16",
-      "provider_name": "CoreWeave",
-      "quantization": "bf16"
-    },
-    {
       "availability": {
         "status": "available",
-        "uptime_1d": 99.93837642418931,
+        "uptime_5m": 100.0,
         "uptime_30m": 100.0,
-        "uptime_5m": 100.0
+        "uptime_1d": 99.61134347423106
       },
+      "quantization": "bf16",
       "capabilities": {
         "supported_parameters": [
           "frequency_penalty",
@@ -32758,44 +35035,44 @@
           "top_p"
         ]
       },
-      "context_tokens": 262144,
-      "endpoint_id": "DeepInfra | nvidia/nemotron-3.5-lightning-20260807",
-      "identity_key": "nvidia/nemotron-3.5-lightning:deepinfra/bf16:DeepInfra | nvidia/nemotron-3.5-lightning-20260807",
-      "model_id": "nvidia/nemotron-3.5-lightning",
-      "model_slug": "nvidia/nemotron-3.5-lightning",
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-27T16:53:47Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "nvidia/nemotron-3.5-lightning",
+        "last_seen": "2026-08-27T16:53:47Z"
+      }
+    },
+    {
       "observation_type": "provider_endpoint",
+      "model_id": "nvidia/nemotron-3.5-lightning:free",
+      "model_slug": "nvidia/nemotron-3.5-lightning:free",
+      "provider_id": "nvidia/nvfp4",
+      "provider_name": "Nvidia",
+      "endpoint_id": "Nvidia | nvidia/nemotron-3.5-lightning-20260807:free",
+      "identity_key": "nvidia/nemotron-3.5-lightning:free:nvidia/nvfp4:Nvidia | nvidia/nemotron-3.5-lightning-20260807:free",
+      "context_tokens": 1000000,
+      "pricing": {
+        "input_per_million": 0.0,
+        "output_per_million": 0.0,
+        "raw": {
+          "prompt": "0",
+          "completion": "0",
+          "discount": 0
+        }
+      },
       "performance": {
         "latency_seconds": null,
         "throughput_tps": null
       },
-      "pricing": {
-        "input_per_million": 0.08,
-        "output_per_million": 0.19999999999999998,
-        "raw": {
-          "completion": "0.0000002",
-          "discount": 0,
-          "input_cache_read": "0.00000004",
-          "prompt": "0.00000008"
-        }
-      },
-      "privacy": {},
-      "provenance": {
-        "fetched_at": "2026-08-23T06:09:01Z",
-        "raw_endpoint": "nvidia/nemotron-3.5-lightning",
-        "source": "openrouter",
-        "source_authority": "openrouter"
-      },
-      "provider_id": "deepinfra/bf16",
-      "provider_name": "DeepInfra",
-      "quantization": "bf16"
-    },
-    {
       "availability": {
         "status": "available",
-        "uptime_1d": 99.76848195758507,
-        "uptime_30m": 99.92929114371574,
-        "uptime_5m": 99.96081504702194
+        "uptime_5m": 93.90828199863107,
+        "uptime_30m": 96.06920880228456,
+        "uptime_1d": 98.52955800346743
       },
+      "quantization": "nvfp4",
       "capabilities": {
         "supported_parameters": [
           "include_reasoning",
@@ -32808,35 +35085,349 @@
           "top_p"
         ]
       },
-      "context_tokens": 1000000,
-      "endpoint_id": "Nvidia | nvidia/nemotron-3.5-lightning-20260807:free",
-      "identity_key": "nvidia/nemotron-3.5-lightning:free:nvidia/nvfp4:Nvidia | nvidia/nemotron-3.5-lightning-20260807:free",
-      "model_id": "nvidia/nemotron-3.5-lightning:free",
-      "model_slug": "nvidia/nemotron-3.5-lightning:free",
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-27T16:53:47Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "nvidia/nemotron-3.5-lightning:free",
+        "last_seen": "2026-08-27T16:53:47Z"
+      }
+    },
+    {
       "observation_type": "provider_endpoint",
+      "model_id": "openai/gpt-3.5-turbo",
+      "model_slug": "openai/gpt-3.5-turbo",
+      "provider_id": "openai",
+      "provider_name": "OpenAI",
+      "endpoint_id": "OpenAI | openai/gpt-3.5-turbo",
+      "identity_key": "openai/gpt-3.5-turbo:openai:OpenAI | openai/gpt-3.5-turbo",
+      "context_tokens": 16385,
+      "pricing": {
+        "input_per_million": 0.5,
+        "output_per_million": 1.5,
+        "raw": {
+          "prompt": "0.0000005",
+          "completion": "0.0000015",
+          "discount": 0
+        }
+      },
       "performance": {
         "latency_seconds": null,
         "throughput_tps": null
       },
-      "pricing": {
-        "input_per_million": 0.0,
-        "output_per_million": 0.0,
-        "raw": {
-          "completion": "0",
-          "discount": 0,
-          "prompt": "0"
-        }
+      "availability": {
+        "status": "available",
+        "uptime_5m": 100.0,
+        "uptime_30m": 100.0,
+        "uptime_1d": 100.0
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "logit_bias",
+          "logprobs",
+          "max_tokens",
+          "presence_penalty",
+          "response_format",
+          "seed",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_logprobs",
+          "top_p"
+        ]
       },
       "privacy": {},
       "provenance": {
-        "fetched_at": "2026-08-23T06:09:01Z",
-        "raw_endpoint": "nvidia/nemotron-3.5-lightning:free",
         "source": "openrouter",
-        "source_authority": "openrouter"
+        "fetched_at": "2026-08-27T16:53:47Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "openai/gpt-3.5-turbo",
+        "last_seen": "2026-08-27T16:53:47Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "openai/gpt-3.5-turbo-0613",
+      "model_slug": "openai/gpt-3.5-turbo-0613",
+      "provider_id": "azure",
+      "provider_name": "Azure",
+      "endpoint_id": "Azure | openai/gpt-3.5-turbo-0613",
+      "identity_key": "openai/gpt-3.5-turbo-0613:azure:Azure | openai/gpt-3.5-turbo-0613",
+      "context_tokens": 4095,
+      "pricing": {
+        "input_per_million": 1.0,
+        "output_per_million": 2.0,
+        "raw": {
+          "prompt": "0.000001",
+          "completion": "0.000002",
+          "discount": 0
+        }
       },
-      "provider_id": "nvidia/nvfp4",
-      "provider_name": "Nvidia",
-      "quantization": "nvfp4"
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": null,
+        "uptime_30m": null,
+        "uptime_1d": 100.0
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "logit_bias",
+          "logprobs",
+          "max_completion_tokens",
+          "presence_penalty",
+          "response_format",
+          "seed",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_logprobs",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-27T16:53:47Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "openai/gpt-3.5-turbo-0613",
+        "last_seen": "2026-08-27T16:53:47Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "openai/gpt-3.5-turbo-16k",
+      "model_slug": "openai/gpt-3.5-turbo-16k",
+      "provider_id": "azure",
+      "provider_name": "Azure",
+      "endpoint_id": "Azure | openai/gpt-3.5-turbo-16k",
+      "identity_key": "openai/gpt-3.5-turbo-16k:azure:Azure | openai/gpt-3.5-turbo-16k",
+      "context_tokens": 16385,
+      "pricing": {
+        "input_per_million": 3.0,
+        "output_per_million": 4.0,
+        "raw": {
+          "prompt": "0.000003",
+          "completion": "0.000004",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": null,
+        "uptime_30m": null,
+        "uptime_1d": 99.33774834437085
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "logit_bias",
+          "logprobs",
+          "max_completion_tokens",
+          "presence_penalty",
+          "response_format",
+          "seed",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_logprobs",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-27T16:53:47Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "openai/gpt-3.5-turbo-16k",
+        "last_seen": "2026-08-27T16:53:47Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "openai/gpt-3.5-turbo-16k",
+      "model_slug": "openai/gpt-3.5-turbo-16k",
+      "provider_id": "openai",
+      "provider_name": "OpenAI",
+      "endpoint_id": "OpenAI | openai/gpt-3.5-turbo-16k",
+      "identity_key": "openai/gpt-3.5-turbo-16k:openai:OpenAI | openai/gpt-3.5-turbo-16k",
+      "context_tokens": 16385,
+      "pricing": {
+        "input_per_million": 3.0,
+        "output_per_million": 4.0,
+        "raw": {
+          "prompt": "0.000003",
+          "completion": "0.000004",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": null,
+        "uptime_30m": null,
+        "uptime_1d": 100.0
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "logit_bias",
+          "logprobs",
+          "max_tokens",
+          "presence_penalty",
+          "response_format",
+          "seed",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_logprobs",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-27T16:53:47Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "openai/gpt-3.5-turbo-16k",
+        "last_seen": "2026-08-27T16:53:47Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "openai/gpt-3.5-turbo-instruct",
+      "model_slug": "openai/gpt-3.5-turbo-instruct",
+      "provider_id": "openai",
+      "provider_name": "OpenAI",
+      "endpoint_id": "OpenAI | openai/gpt-3.5-turbo-instruct",
+      "identity_key": "openai/gpt-3.5-turbo-instruct:openai:OpenAI | openai/gpt-3.5-turbo-instruct",
+      "context_tokens": 4095,
+      "pricing": {
+        "input_per_million": 1.5,
+        "output_per_million": 2.0,
+        "raw": {
+          "prompt": "0.0000015",
+          "completion": "0.000002",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": null,
+        "uptime_30m": null,
+        "uptime_1d": 100.0
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "logit_bias",
+          "logprobs",
+          "max_tokens",
+          "presence_penalty",
+          "response_format",
+          "seed",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "top_logprobs",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-27T16:53:47Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "openai/gpt-3.5-turbo-instruct",
+        "last_seen": "2026-08-27T16:53:47Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "openai/gpt-3.5-turbo:batch",
+      "model_slug": "openai/gpt-3.5-turbo:batch",
+      "provider_id": "openai",
+      "provider_name": "OpenAI",
+      "endpoint_id": "OpenAI | openai/gpt-3.5-turbo:batch",
+      "identity_key": "openai/gpt-3.5-turbo:batch:openai:OpenAI | openai/gpt-3.5-turbo:batch",
+      "context_tokens": 16385,
+      "pricing": {
+        "input_per_million": 0.25,
+        "output_per_million": 0.75,
+        "raw": {
+          "prompt": "0.00000025",
+          "completion": "0.00000075",
+          "web_search": "0.01",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": null,
+        "uptime_30m": null,
+        "uptime_1d": null
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "logit_bias",
+          "logprobs",
+          "max_tokens",
+          "presence_penalty",
+          "response_format",
+          "seed",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_logprobs",
+          "top_p"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-08-27T16:53:47Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "openai/gpt-3.5-turbo:batch",
+        "last_seen": "2026-08-27T16:53:47Z"
+      }
     },
     {
       "observation_type": "provider_endpoint",
@@ -32848,11 +35439,12 @@
       "identity_key": "openai/gpt-oss-120b:akashml/bf16:AkashML | openai/gpt-oss-120b",
       "context_tokens": 131072,
       "pricing": {
-        "input_per_million": 0.037,
-        "output_per_million": 0.49,
+        "input_per_million": 0.03,
+        "output_per_million": 0.16999999999999998,
         "raw": {
-          "prompt": "0.000000037",
-          "completion": "0.00000049",
+          "prompt": "0.00000003",
+          "completion": "0.00000017",
+          "input_cache_read": "0.00000003",
           "discount": 0
         }
       },
@@ -32862,9 +35454,9 @@
       },
       "availability": {
         "status": "available",
-        "uptime_5m": 99.92826398852223,
-        "uptime_30m": 99.89078633836378,
-        "uptime_1d": 99.91826268390896
+        "uptime_5m": 99.97396850188728,
+        "uptime_30m": 99.95232646834478,
+        "uptime_1d": 98.59329190657297
       },
       "quantization": "bf16",
       "capabilities": {
@@ -32892,10 +35484,10 @@
       "privacy": {},
       "provenance": {
         "source": "openrouter",
-        "fetched_at": "2026-08-24T07:38:57Z",
+        "fetched_at": "2026-08-27T16:53:47Z",
         "source_authority": "openrouter",
         "raw_endpoint": "openai/gpt-oss-120b",
-        "last_seen": "2026-08-24T07:38:57Z"
+        "last_seen": "2026-08-27T16:53:47Z"
       }
     },
     {
@@ -32923,8 +35515,8 @@
       "availability": {
         "status": "available",
         "uptime_5m": 100.0,
-        "uptime_30m": 99.61587708066581,
-        "uptime_1d": 99.36447488810308
+        "uptime_30m": 99.9782667753328,
+        "uptime_1d": 95.87536869515289
       },
       "quantization": "unknown",
       "capabilities": {
@@ -32942,10 +35534,10 @@
       "privacy": {},
       "provenance": {
         "source": "openrouter",
-        "fetched_at": "2026-08-24T07:38:57Z",
+        "fetched_at": "2026-08-27T16:53:47Z",
         "source_authority": "openrouter",
         "raw_endpoint": "openai/gpt-oss-120b",
-        "last_seen": "2026-08-24T07:38:57Z"
+        "last_seen": "2026-08-27T16:53:47Z"
       }
     },
     {
@@ -32992,10 +35584,10 @@
       "privacy": {},
       "provenance": {
         "source": "openrouter",
-        "fetched_at": "2026-08-24T07:38:57Z",
+        "fetched_at": "2026-08-27T16:53:47Z",
         "source_authority": "openrouter",
         "raw_endpoint": "openai/gpt-oss-120b",
-        "last_seen": "2026-08-24T07:38:57Z"
+        "last_seen": "2026-08-27T16:53:47Z"
       }
     },
     {
@@ -33024,8 +35616,8 @@
       "availability": {
         "status": "available",
         "uptime_5m": 100.0,
-        "uptime_30m": 100.0,
-        "uptime_1d": 99.58646060864852
+        "uptime_30m": 99.97035280166024,
+        "uptime_1d": 99.99495676394939
       },
       "quantization": "fp4",
       "capabilities": {
@@ -33048,10 +35640,10 @@
       "privacy": {},
       "provenance": {
         "source": "openrouter",
-        "fetched_at": "2026-08-24T07:38:57Z",
+        "fetched_at": "2026-08-27T16:53:47Z",
         "source_authority": "openrouter",
         "raw_endpoint": "openai/gpt-oss-120b",
-        "last_seen": "2026-08-24T07:38:57Z"
+        "last_seen": "2026-08-27T16:53:47Z"
       }
     },
     {
@@ -33079,9 +35671,9 @@
       },
       "availability": {
         "status": "available",
-        "uptime_5m": 100.0,
-        "uptime_30m": 100.0,
-        "uptime_1d": 99.99388986317581
+        "uptime_5m": 99.86154378677743,
+        "uptime_30m": 99.9681579366343,
+        "uptime_1d": 99.98724615218359
       },
       "quantization": "fp16",
       "capabilities": {
@@ -33108,10 +35700,10 @@
       "privacy": {},
       "provenance": {
         "source": "openrouter",
-        "fetched_at": "2026-08-24T07:38:57Z",
+        "fetched_at": "2026-08-27T16:53:47Z",
         "source_authority": "openrouter",
         "raw_endpoint": "openai/gpt-oss-120b",
-        "last_seen": "2026-08-24T07:38:57Z"
+        "last_seen": "2026-08-27T16:53:47Z"
       }
     },
     {
@@ -33139,9 +35731,9 @@
       },
       "availability": {
         "status": "available",
-        "uptime_5m": 94.85526135272329,
-        "uptime_30m": 96.06673835826246,
-        "uptime_1d": 98.82096110713077
+        "uptime_5m": 99.91888384166126,
+        "uptime_30m": 99.70997377607198,
+        "uptime_1d": 99.82811912883044
       },
       "quantization": "fp4",
       "capabilities": {
@@ -33169,10 +35761,10 @@
       "privacy": {},
       "provenance": {
         "source": "openrouter",
-        "fetched_at": "2026-08-24T07:38:57Z",
+        "fetched_at": "2026-08-27T16:53:47Z",
         "source_authority": "openrouter",
         "raw_endpoint": "openai/gpt-oss-120b",
-        "last_seen": "2026-08-24T07:38:57Z"
+        "last_seen": "2026-08-27T16:53:47Z"
       }
     },
     {
@@ -33198,10 +35790,10 @@
         "throughput_tps": null
       },
       "availability": {
-        "status": "available",
-        "uptime_5m": 99.50057625816365,
-        "uptime_30m": 99.9332363671046,
-        "uptime_1d": 99.6037153973991
+        "status": "unavailable",
+        "uptime_5m": 89.42375263527758,
+        "uptime_30m": 89.4634330233727,
+        "uptime_1d": 98.41641147753101
       },
       "quantization": "bf16",
       "capabilities": {
@@ -33229,10 +35821,10 @@
       "privacy": {},
       "provenance": {
         "source": "openrouter",
-        "fetched_at": "2026-08-24T07:38:57Z",
+        "fetched_at": "2026-08-27T16:53:47Z",
         "source_authority": "openrouter",
         "raw_endpoint": "openai/gpt-oss-120b",
-        "last_seen": "2026-08-24T07:38:57Z"
+        "last_seen": "2026-08-27T16:53:47Z"
       }
     },
     {
@@ -33260,8 +35852,8 @@
       "availability": {
         "status": "available",
         "uptime_5m": 100.0,
-        "uptime_30m": 99.90059642147118,
-        "uptime_1d": 99.91585284915142
+        "uptime_30m": 99.90342829550941,
+        "uptime_1d": 99.92511018624238
       },
       "quantization": "bf16",
       "capabilities": {
@@ -33289,10 +35881,10 @@
       "privacy": {},
       "provenance": {
         "source": "openrouter",
-        "fetched_at": "2026-08-24T07:38:57Z",
+        "fetched_at": "2026-08-27T16:53:47Z",
         "source_authority": "openrouter",
         "raw_endpoint": "openai/gpt-oss-120b",
-        "last_seen": "2026-08-24T07:38:57Z"
+        "last_seen": "2026-08-27T16:53:47Z"
       }
     },
     {
@@ -33320,9 +35912,9 @@
       },
       "availability": {
         "status": "available",
-        "uptime_5m": 100.0,
-        "uptime_30m": 99.96946564885496,
-        "uptime_1d": 99.98074470479382
+        "uptime_5m": 99.96251874062968,
+        "uptime_30m": 99.9862806969406,
+        "uptime_1d": 99.98137468979989
       },
       "quantization": "unknown",
       "capabilities": {
@@ -33340,10 +35932,10 @@
       "privacy": {},
       "provenance": {
         "source": "openrouter",
-        "fetched_at": "2026-08-24T07:38:57Z",
+        "fetched_at": "2026-08-27T16:53:47Z",
         "source_authority": "openrouter",
         "raw_endpoint": "openai/gpt-oss-120b",
-        "last_seen": "2026-08-24T07:38:57Z"
+        "last_seen": "2026-08-27T16:53:47Z"
       }
     },
     {
@@ -33370,9 +35962,9 @@
       },
       "availability": {
         "status": "unavailable",
-        "uptime_5m": 59.53991880920162,
-        "uptime_30m": 74.62916316820599,
-        "uptime_1d": 81.2380556709597
+        "uptime_5m": 91.57318741450068,
+        "uptime_30m": 91.45463891030583,
+        "uptime_1d": 86.76226900827058
       },
       "quantization": "unknown",
       "capabilities": {
@@ -33393,10 +35985,10 @@
       "privacy": {},
       "provenance": {
         "source": "openrouter",
-        "fetched_at": "2026-08-24T07:38:57Z",
+        "fetched_at": "2026-08-27T16:53:47Z",
         "source_authority": "openrouter",
         "raw_endpoint": "openai/gpt-oss-120b",
-        "last_seen": "2026-08-24T07:38:57Z"
+        "last_seen": "2026-08-27T16:53:47Z"
       }
     },
     {
@@ -33424,9 +36016,9 @@
       },
       "availability": {
         "status": "available",
-        "uptime_5m": 99.96899224806202,
-        "uptime_30m": 99.98467936091049,
-        "uptime_1d": 99.97487829241942
+        "uptime_5m": 99.96791100652476,
+        "uptime_30m": 99.98899957220559,
+        "uptime_1d": 99.98583130599745
       },
       "quantization": "unknown",
       "capabilities": {
@@ -33448,10 +36040,10 @@
       "privacy": {},
       "provenance": {
         "source": "openrouter",
-        "fetched_at": "2026-08-24T07:38:57Z",
+        "fetched_at": "2026-08-27T16:53:47Z",
         "source_authority": "openrouter",
         "raw_endpoint": "openai/gpt-oss-120b",
-        "last_seen": "2026-08-24T07:38:57Z"
+        "last_seen": "2026-08-27T16:53:47Z"
       }
     },
     {
@@ -33464,10 +36056,10 @@
       "identity_key": "openai/gpt-oss-120b:mancer/fp8:Mancer 2 | openai/gpt-oss-120b",
       "context_tokens": 131072,
       "pricing": {
-        "input_per_million": 0.08499999999999999,
+        "input_per_million": 0.08,
         "output_per_million": 0.5,
         "raw": {
-          "prompt": "0.000000085",
+          "prompt": "0.00000008",
           "completion": "0.0000005",
           "discount": 0
         }
@@ -33478,9 +36070,9 @@
       },
       "availability": {
         "status": "available",
-        "uptime_5m": 100.0,
-        "uptime_30m": 100.0,
-        "uptime_1d": 99.82307748236833
+        "uptime_5m": 99.79993682215436,
+        "uptime_30m": 98.95922197577205,
+        "uptime_1d": 99.33645333345396
       },
       "quantization": "fp8",
       "capabilities": {
@@ -33511,10 +36103,10 @@
       "privacy": {},
       "provenance": {
         "source": "openrouter",
-        "fetched_at": "2026-08-24T07:38:57Z",
+        "fetched_at": "2026-08-27T16:53:47Z",
         "source_authority": "openrouter",
         "raw_endpoint": "openai/gpt-oss-120b",
-        "last_seen": "2026-08-24T07:38:57Z"
+        "last_seen": "2026-08-27T16:53:47Z"
       }
     },
     {
@@ -33540,10 +36132,10 @@
         "throughput_tps": null
       },
       "availability": {
-        "status": "available",
-        "uptime_5m": 100.0,
-        "uptime_30m": 98.80418535127056,
-        "uptime_1d": 99.63669181283844
+        "status": "unavailable",
+        "uptime_5m": 95.65217391304348,
+        "uptime_30m": 72.04491725768321,
+        "uptime_1d": 81.10232352507737
       },
       "quantization": "unknown",
       "capabilities": {
@@ -33567,10 +36159,10 @@
       "privacy": {},
       "provenance": {
         "source": "openrouter",
-        "fetched_at": "2026-08-24T07:38:57Z",
+        "fetched_at": "2026-08-27T16:53:47Z",
         "source_authority": "openrouter",
         "raw_endpoint": "openai/gpt-oss-120b",
-        "last_seen": "2026-08-24T07:38:57Z"
+        "last_seen": "2026-08-27T16:53:47Z"
       }
     },
     {
@@ -33597,9 +36189,9 @@
       },
       "availability": {
         "status": "available",
-        "uptime_5m": 98.63636363636363,
-        "uptime_30m": 98.82352941176471,
-        "uptime_1d": 98.96644935601844
+        "uptime_5m": 99.99242137173172,
+        "uptime_30m": 98.85572177847331,
+        "uptime_1d": 98.49865188371923
       },
       "quantization": "fp4",
       "capabilities": {
@@ -33626,10 +36218,10 @@
       "privacy": {},
       "provenance": {
         "source": "openrouter",
-        "fetched_at": "2026-08-24T07:38:57Z",
+        "fetched_at": "2026-08-27T16:53:47Z",
         "source_authority": "openrouter",
         "raw_endpoint": "openai/gpt-oss-120b",
-        "last_seen": "2026-08-24T07:38:57Z"
+        "last_seen": "2026-08-27T16:53:47Z"
       }
     },
     {
@@ -33655,10 +36247,10 @@
         "throughput_tps": null
       },
       "availability": {
-        "status": "available",
-        "uptime_5m": 100.0,
-        "uptime_30m": 99.98771196854264,
-        "uptime_1d": 97.08400931460146
+        "status": "unavailable",
+        "uptime_5m": 99.92716678805536,
+        "uptime_30m": 75.5671077504726,
+        "uptime_1d": 93.60221946136978
       },
       "quantization": "fp4",
       "capabilities": {
@@ -33686,10 +36278,10 @@
       "privacy": {},
       "provenance": {
         "source": "openrouter",
-        "fetched_at": "2026-08-24T07:38:57Z",
+        "fetched_at": "2026-08-27T16:53:47Z",
         "source_authority": "openrouter",
         "raw_endpoint": "openai/gpt-oss-120b",
-        "last_seen": "2026-08-24T07:38:57Z"
+        "last_seen": "2026-08-27T16:53:47Z"
       }
     },
     {
@@ -33718,8 +36310,8 @@
       "availability": {
         "status": "available",
         "uptime_5m": 100.0,
-        "uptime_30m": 100.0,
-        "uptime_1d": 99.9861942809809
+        "uptime_30m": 99.99656321957589,
+        "uptime_1d": 99.98203266337885
       },
       "quantization": "fp4",
       "capabilities": {
@@ -33748,10 +36340,10 @@
       "privacy": {},
       "provenance": {
         "source": "openrouter",
-        "fetched_at": "2026-08-24T07:38:57Z",
+        "fetched_at": "2026-08-27T16:53:47Z",
         "source_authority": "openrouter",
         "raw_endpoint": "openai/gpt-oss-120b",
-        "last_seen": "2026-08-24T07:38:57Z"
+        "last_seen": "2026-08-27T16:53:47Z"
       }
     },
     {
@@ -33778,9 +36370,9 @@
       },
       "availability": {
         "status": "available",
-        "uptime_5m": 100.0,
-        "uptime_30m": 99.85315712187959,
-        "uptime_1d": 99.9336782066587
+        "uptime_5m": 99.2,
+        "uptime_30m": 99.87277353689568,
+        "uptime_1d": 99.84098209458385
       },
       "quantization": "unknown",
       "capabilities": {
@@ -33809,10 +36401,10 @@
       "privacy": {},
       "provenance": {
         "source": "openrouter",
-        "fetched_at": "2026-08-24T07:38:57Z",
+        "fetched_at": "2026-08-27T16:53:47Z",
         "source_authority": "openrouter",
         "raw_endpoint": "openai/gpt-oss-120b",
-        "last_seen": "2026-08-24T07:38:57Z"
+        "last_seen": "2026-08-27T16:53:47Z"
       }
     },
     {
@@ -33839,9 +36431,9 @@
       },
       "availability": {
         "status": "available",
-        "uptime_5m": 100.0,
-        "uptime_30m": 100.0,
-        "uptime_1d": 99.67958001448226
+        "uptime_5m": 99.52830188679245,
+        "uptime_30m": 99.80059820538385,
+        "uptime_1d": 99.82140657716468
       },
       "quantization": "unknown",
       "capabilities": {
@@ -33861,10 +36453,10 @@
       "privacy": {},
       "provenance": {
         "source": "openrouter",
-        "fetched_at": "2026-08-24T07:38:57Z",
+        "fetched_at": "2026-08-27T16:53:47Z",
         "source_authority": "openrouter",
         "raw_endpoint": "openai/gpt-oss-120b",
-        "last_seen": "2026-08-24T07:38:57Z"
+        "last_seen": "2026-08-27T16:53:47Z"
       }
     },
     {
@@ -33890,10 +36482,10 @@
         "throughput_tps": null
       },
       "availability": {
-        "status": "available",
-        "uptime_5m": 100.0,
-        "uptime_30m": 95.83083383323336,
-        "uptime_1d": 93.90233399362673
+        "status": "unavailable",
+        "uptime_5m": 2.669823644676682,
+        "uptime_30m": 46.782563570316555,
+        "uptime_1d": 70.67948594136183
       },
       "quantization": "fp8",
       "capabilities": {
@@ -33913,10 +36505,10 @@
       "privacy": {},
       "provenance": {
         "source": "openrouter",
-        "fetched_at": "2026-08-24T07:38:57Z",
+        "fetched_at": "2026-08-27T16:53:47Z",
         "source_authority": "openrouter",
         "raw_endpoint": "openai/gpt-oss-120b",
-        "last_seen": "2026-08-24T07:38:57Z"
+        "last_seen": "2026-08-27T16:53:47Z"
       }
     },
     {
@@ -33942,10 +36534,10 @@
         "throughput_tps": null
       },
       "availability": {
-        "status": "available",
-        "uptime_5m": 100.0,
-        "uptime_30m": 99.90272373540856,
-        "uptime_1d": 98.49445440368443
+        "status": "unavailable",
+        "uptime_5m": 65.66820276497695,
+        "uptime_30m": 47.99635449750062,
+        "uptime_1d": 67.50128347223622
       },
       "quantization": "unknown",
       "capabilities": {
@@ -33972,10 +36564,10 @@
       "privacy": {},
       "provenance": {
         "source": "openrouter",
-        "fetched_at": "2026-08-24T07:38:57Z",
+        "fetched_at": "2026-08-27T16:53:47Z",
         "source_authority": "openrouter",
         "raw_endpoint": "openai/gpt-oss-120b",
-        "last_seen": "2026-08-24T07:38:57Z"
+        "last_seen": "2026-08-27T16:53:47Z"
       }
     },
     {
@@ -35448,46 +38040,46 @@
     }
   ],
   "coverage": {
-    "catalog_models": 422,
-    "models_with_observations": 185,
-    "proportion": 0.4384,
-    "fresh_observations": 92,
-    "retained_observations": 529,
+    "catalog_models": 418,
+    "models_with_observations": 207,
+    "proportion": 0.4952,
+    "fresh_observations": 69,
+    "retained_observations": 598,
     "retention_days": 14
   },
   "selection": {
-    "cursor_before": 150,
-    "cursor_after": 174,
+    "cursor_before": 174,
+    "cursor_after": 198,
     "selected_model_ids": [
       "openai/gpt-oss-120b",
-      "mistralai/ministral-3b-2512",
-      "mistralai/ministral-8b",
-      "mistralai/ministral-8b-2512",
-      "mistralai/mistral-large",
-      "mistralai/mistral-large-2407",
-      "mistralai/mistral-large-2512",
-      "mistralai/mistral-medium-3",
-      "mistralai/mistral-medium-3-5",
-      "mistralai/mistral-medium-3.1",
-      "mistralai/mistral-nemo",
-      "mistralai/mistral-saba",
-      "mistralai/mistral-small-24b-instruct-2501",
-      "mistralai/mistral-small-2603",
-      "mistralai/mistral-small-3.1-24b-instruct",
-      "mistralai/mistral-small-3.2-24b-instruct",
-      "mistralai/mixtral-8x22b-instruct",
-      "mistralai/voxtral-small-24b-2507",
-      "moonshotai/kimi-k2",
-      "moonshotai/kimi-k2-0905",
-      "moonshotai/kimi-k2-thinking",
-      "moonshotai/kimi-k2.5",
-      "moonshotai/kimi-k2.6",
-      "moonshotai/kimi-k2.7-code",
-      "moonshotai/kimi-k2.7-code:batch"
+      "moonshotai/kimi-k3",
+      "morph/morph-v3-fast",
+      "morph/morph-v3-large",
+      "nex-agi/nex-n2-mini",
+      "nex-agi/nex-n2-pro",
+      "nousresearch/hermes-3-llama-3.1-405b",
+      "nousresearch/hermes-3-llama-3.1-70b",
+      "nousresearch/hermes-4-405b",
+      "nousresearch/hermes-4-70b",
+      "nvidia/nemotron-3-nano-30b-a3b",
+      "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
+      "nvidia/nemotron-3-super-120b-a12b",
+      "nvidia/nemotron-3-super-120b-a12b:free",
+      "nvidia/nemotron-3-ultra-550b-a55b",
+      "nvidia/nemotron-3-ultra-550b-a55b:batch",
+      "nvidia/nemotron-3-ultra-550b-a55b:free",
+      "nvidia/nemotron-3.5-content-safety:free",
+      "nvidia/nemotron-3.5-lightning",
+      "nvidia/nemotron-3.5-lightning:free",
+      "openai/gpt-3.5-turbo",
+      "openai/gpt-3.5-turbo-0613",
+      "openai/gpt-3.5-turbo-16k",
+      "openai/gpt-3.5-turbo-instruct",
+      "openai/gpt-3.5-turbo:batch"
     ]
   },
   "next_state": {
-    "cursor": 174,
+    "cursor": 198,
     "priority_ids": [
       "openai/gpt-oss-120b"
     ]

@@ -1,7 +1,7 @@
 {
   "version": "4.1",
   "intelligence_index_version": "4.1",
-  "scraped_at": "2026-08-27T16:35:43Z",
+  "scraped_at": "2026-08-27T16:53:46Z",
   "as_of": "2026-08-27",
   "source_url": "https://artificialanalysis.ai/leaderboards/providers",
   "scrape_method": "AA RSC leaderboard payload via scripts/aa pipeline",
@@ -38,9 +38,9 @@
       },
       "composite": {
         "intelligence_index_v4_1": 62.07,
-        "coding_index": 76.49,
+        "coding_index": 76.5,
         "math_index": null,
-        "agentic_index": 52.81,
+        "agentic_index": 56.6,
         "omniscience_index": 43.3
       },
       "benchmarks": {
@@ -77,7 +77,7 @@
         "cache_hit": null,
         "cache_write": null
       },
-      "intelligence_evaluation_total_cost_usd": 5630.52,
+      "intelligence_evaluation_total_cost_usd": 5455.22,
       "cost_per_intelligence_task_usd": {
         "total": 10.1552,
         "input": null,
@@ -154,9 +154,9 @@
       },
       "composite": {
         "intelligence_index_v4_1": 60.93,
-        "coding_index": 77.39,
+        "coding_index": 77.4,
         "math_index": null,
-        "agentic_index": 54.0,
+        "agentic_index": 57.8,
         "omniscience_index": 22.0
       },
       "benchmarks": {
@@ -193,7 +193,7 @@
         "cache_hit": 0.4,
         "cache_write": 6.25
       },
-      "intelligence_evaluation_total_cost_usd": 2824.18,
+      "intelligence_evaluation_total_cost_usd": 2065.63,
       "cost_per_intelligence_task_usd": {
         "total": 1.0056,
         "input": null,
@@ -260,7 +260,7 @@
       "output_modalities": null,
       "composite": {
         "intelligence_index_v4_1": 59.7,
-        "coding_index": null,
+        "coding_index": 76.2,
         "math_index": null,
         "agentic_index": 54.3,
         "omniscience_index": 19.7
@@ -299,7 +299,7 @@
         "cache_hit": 0.2755,
         "cache_write": null
       },
-      "intelligence_evaluation_total_cost_usd": null,
+      "intelligence_evaluation_total_cost_usd": 2425.11,
       "cost_per_intelligence_task_usd": {
         "total": 1.0348,
         "input": null,
@@ -376,9 +376,9 @@
       },
       "composite": {
         "intelligence_index_v4_1": 57.33,
-        "coding_index": 74.25,
+        "coding_index": 74.3,
         "math_index": null,
-        "agentic_index": 47.18,
+        "agentic_index": 49.4,
         "omniscience_index": 28.8
       },
       "benchmarks": {
@@ -415,7 +415,7 @@
         "cache_hit": 0.5,
         "cache_write": 6.25
       },
-      "intelligence_evaluation_total_cost_usd": 3752.55,
+      "intelligence_evaluation_total_cost_usd": 3752.32,
       "cost_per_intelligence_task_usd": {
         "total": 2.5761,
         "input": null,
@@ -492,9 +492,9 @@
       },
       "composite": {
         "intelligence_index_v4_1": 56.58,
-        "coding_index": 76.66,
+        "coding_index": 76.7,
         "math_index": null,
-        "agentic_index": 47.38,
+        "agentic_index": 50.2,
         "omniscience_index": 0.1
       },
       "benchmarks": {
@@ -531,7 +531,7 @@
         "cache_hit": 0.28,
         "cache_write": 3.44
       },
-      "intelligence_evaluation_total_cost_usd": 1753.94,
+      "intelligence_evaluation_total_cost_usd": 1409.48,
       "cost_per_intelligence_task_usd": {
         "total": 0.7309,
         "input": null,
@@ -608,9 +608,9 @@
       },
       "composite": {
         "intelligence_index_v4_1": 55.76,
-        "coding_index": 72.45,
+        "coding_index": 72.4,
         "math_index": null,
-        "agentic_index": 45.69,
+        "agentic_index": 48.9,
         "omniscience_index": 25.3
       },
       "benchmarks": {
@@ -647,7 +647,7 @@
         "cache_hit": 0.3,
         "cache_write": null
       },
-      "intelligence_evaluation_total_cost_usd": 600.92,
+      "intelligence_evaluation_total_cost_usd": 628.65,
       "cost_per_intelligence_task_usd": {
         "total": 0.4256,
         "input": null,
@@ -724,9 +724,9 @@
       },
       "composite": {
         "intelligence_index_v4_1": 55.26,
-        "coding_index": 71.55,
+        "coding_index": 71.5,
         "math_index": null,
-        "agentic_index": 46.69,
+        "agentic_index": 49.7,
         "omniscience_index": 16.4
       },
       "benchmarks": {
@@ -763,7 +763,7 @@
         "cache_hit": 0.2,
         "cache_write": 2.5
       },
-      "intelligence_evaluation_total_cost_usd": 4010.12,
+      "intelligence_evaluation_total_cost_usd": 4010.51,
       "cost_per_intelligence_task_usd": {
         "total": 1.964,
         "input": null,
@@ -840,9 +840,9 @@
       },
       "composite": {
         "intelligence_index_v4_1": 53.2,
-        "coding_index": 59.36,
+        "coding_index": 68.8,
         "math_index": null,
-        "agentic_index": 36.36,
+        "agentic_index": 49.6,
         "omniscience_index": 0.8
       },
       "benchmarks": {
@@ -879,7 +879,7 @@
         "cache_hit": 0.044,
         "cache_write": null
       },
-      "intelligence_evaluation_total_cost_usd": 176.34,
+      "intelligence_evaluation_total_cost_usd": 616.95,
       "cost_per_intelligence_task_usd": {
         "total": 0.2891,
         "input": null,
@@ -946,9 +946,9 @@
       "output_modalities": null,
       "composite": {
         "intelligence_index_v4_1": 53.2,
-        "coding_index": null,
+        "coding_index": 71.3,
         "math_index": null,
-        "agentic_index": 37.54,
+        "agentic_index": 39.7,
         "omniscience_index": 28.1
       },
       "benchmarks": {
@@ -985,7 +985,7 @@
         "cache_hit": 0.15,
         "cache_write": null
       },
-      "intelligence_evaluation_total_cost_usd": null,
+      "intelligence_evaluation_total_cost_usd": 547.32,
       "cost_per_intelligence_task_usd": {
         "total": 0.2923,
         "input": null,
@@ -1062,9 +1062,9 @@
       },
       "composite": {
         "intelligence_index_v4_1": 52.64,
-        "coding_index": 68.76,
+        "coding_index": 68.8,
         "math_index": null,
-        "agentic_index": 43.06,
+        "agentic_index": 45.7,
         "omniscience_index": 4.4
       },
       "benchmarks": {
@@ -1101,7 +1101,7 @@
         "cache_hit": 0.26,
         "cache_write": null
       },
-      "intelligence_evaluation_total_cost_usd": 820.38,
+      "intelligence_evaluation_total_cost_usd": 843.44,
       "cost_per_intelligence_task_usd": {
         "total": 0.3998,
         "input": null,
@@ -1178,9 +1178,9 @@
       },
       "composite": {
         "intelligence_index_v4_1": 52.32,
-        "coding_index": 71.45,
+        "coding_index": 71.4,
         "math_index": null,
-        "agentic_index": 45.6,
+        "agentic_index": 46.9,
         "omniscience_index": -10.3
       },
       "benchmarks": {
@@ -1217,7 +1217,7 @@
         "cache_hit": 0.11,
         "cache_write": 1.38
       },
-      "intelligence_evaluation_total_cost_usd": 870.3,
+      "intelligence_evaluation_total_cost_usd": 173.85,
       "cost_per_intelligence_task_usd": {
         "total": 0.2733,
         "input": null,
@@ -1294,9 +1294,9 @@
       },
       "composite": {
         "intelligence_index_v4_1": 51.77,
-        "coding_index": 56.17,
+        "coding_index": 69.1,
         "math_index": null,
-        "agentic_index": 31.06,
+        "agentic_index": 48.4,
         "omniscience_index": -14.3
       },
       "benchmarks": {
@@ -1333,7 +1333,7 @@
         "cache_hit": null,
         "cache_write": null
       },
-      "intelligence_evaluation_total_cost_usd": 74.31,
+      "intelligence_evaluation_total_cost_usd": 323.26,
       "cost_per_intelligence_task_usd": {
         "total": 0.1281,
         "input": null,
@@ -1400,7 +1400,7 @@
       "output_modalities": null,
       "composite": {
         "intelligence_index_v4_1": 51.58,
-        "coding_index": null,
+        "coding_index": 69.2,
         "math_index": null,
         "agentic_index": 40.5,
         "omniscience_index": 22.1
@@ -1439,7 +1439,7 @@
         "cache_hit": 0.15,
         "cache_write": null
       },
-      "intelligence_evaluation_total_cost_usd": null,
+      "intelligence_evaluation_total_cost_usd": 412.03,
       "cost_per_intelligence_task_usd": {
         "total": 0.3442,
         "input": null,
@@ -1516,9 +1516,9 @@
       },
       "composite": {
         "intelligence_index_v4_1": 47.74,
-        "coding_index": 68.83,
+        "coding_index": 68.8,
         "math_index": null,
-        "agentic_index": 21.4,
+        "agentic_index": 23,
         "omniscience_index": 31.9
       },
       "benchmarks": {
@@ -1555,7 +1555,7 @@
         "cache_hit": 0.2,
         "cache_write": null
       },
-      "intelligence_evaluation_total_cost_usd": 815.11,
+      "intelligence_evaluation_total_cost_usd": 811.9,
       "cost_per_intelligence_task_usd": {
         "total": 0.4252,
         "input": null,
@@ -1632,9 +1632,9 @@
       },
       "composite": {
         "intelligence_index_v4_1": 46.71,
-        "coding_index": 65.97,
+        "coding_index": 66,
         "math_index": null,
-        "agentic_index": 30.59,
+        "agentic_index": 30.9,
         "omniscience_index": 13.5
       },
       "benchmarks": {
@@ -1671,7 +1671,7 @@
         "cache_hit": 0.5,
         "cache_write": null
       },
-      "intelligence_evaluation_total_cost_usd": 1631.35,
+      "intelligence_evaluation_total_cost_usd": 1164.39,
       "cost_per_intelligence_task_usd": {
         "total": 0.6792,
         "input": null,
@@ -1748,9 +1748,9 @@
       },
       "composite": {
         "intelligence_index_v4_1": 45.4,
-        "coding_index": 58.57,
+        "coding_index": 58.6,
         "math_index": null,
-        "agentic_index": 35.36,
+        "agentic_index": 36.1,
         "omniscience_index": 1.4
       },
       "benchmarks": {
@@ -1787,9 +1787,9 @@
         "cache_hit": 0.048,
         "cache_write": null
       },
-      "intelligence_evaluation_total_cost_usd": 203.86,
+      "intelligence_evaluation_total_cost_usd": 204.82,
       "cost_per_intelligence_task_usd": {
-        "total": null,
+        "total": 0.1387,
         "input": null,
         "output": null,
         "cacheRead": null,
@@ -1825,6 +1825,7 @@
       "short_name": "MiniMax-M3",
       "derived": {
         "value_intelligence_per_dollar_blend": 108.1,
+        "value_intelligence_per_dollar_task": 327.3,
         "safety_composite": 67.1,
         "throughput_tps": 99.08,
         "speed_tier": 1,
@@ -1863,9 +1864,9 @@
       },
       "composite": {
         "intelligence_index_v4_1": 42.88,
-        "coding_index": 60.19,
+        "coding_index": 60.2,
         "math_index": null,
-        "agentic_index": 29.11,
+        "agentic_index": 29.5,
         "omniscience_index": 3.2
       },
       "benchmarks": {
@@ -1902,7 +1903,7 @@
         "cache_hit": 0.0036,
         "cache_write": null
       },
-      "intelligence_evaluation_total_cost_usd": 98.47,
+      "intelligence_evaluation_total_cost_usd": 98.86,
       "cost_per_intelligence_task_usd": {
         "total": 0.0339,
         "input": null,
@@ -1979,9 +1980,9 @@
       },
       "composite": {
         "intelligence_index_v4_1": 39.37,
-        "coding_index": 55.86,
+        "coding_index": 55.9,
         "math_index": null,
-        "agentic_index": 20.81,
+        "agentic_index": 20.7,
         "omniscience_index": 1.1
       },
       "benchmarks": {
@@ -2018,7 +2019,7 @@
         "cache_hit": 0.04,
         "cache_write": 0.5
       },
-      "intelligence_evaluation_total_cost_usd": 320.34,
+      "intelligence_evaluation_total_cost_usd": 274.77,
       "cost_per_intelligence_task_usd": {
         "total": 0.1703,
         "input": null,
@@ -2095,9 +2096,9 @@
       },
       "composite": {
         "intelligence_index_v4_1": 38.04,
-        "coding_index": null,
+        "coding_index": 56.8,
         "math_index": null,
-        "agentic_index": 23.71,
+        "agentic_index": 24.4,
         "omniscience_index": -9.8
       },
       "benchmarks": {
@@ -2134,7 +2135,7 @@
         "cache_hit": 0.0028,
         "cache_write": null
       },
-      "intelligence_evaluation_total_cost_usd": null,
+      "intelligence_evaluation_total_cost_usd": 25.18,
       "cost_per_intelligence_task_usd": {
         "total": 0.0104,
         "input": null,
@@ -2201,7 +2202,7 @@
       "output_modalities": null,
       "composite": {
         "intelligence_index_v4_1": 63.05,
-        "coding_index": null,
+        "coding_index": 78,
         "math_index": null,
         "agentic_index": 59.2,
         "omniscience_index": 37.1
@@ -2240,7 +2241,7 @@
         "cache_hit": 0.5,
         "cache_write": 6.25
       },
-      "intelligence_evaluation_total_cost_usd": null,
+      "intelligence_evaluation_total_cost_usd": 3836.05,
       "cost_per_intelligence_task_usd": {
         "total": 3.312,
         "input": null,
@@ -2307,9 +2308,9 @@
       "output_modalities": null,
       "composite": {
         "intelligence_index_v4_1": 62.52,
-        "coding_index": null,
+        "coding_index": 77,
         "math_index": null,
-        "agentic_index": null,
+        "agentic_index": 58.4,
         "omniscience_index": 35.4
       },
       "benchmarks": {
@@ -2346,7 +2347,7 @@
         "cache_hit": 0.5,
         "cache_write": 6.25
       },
-      "intelligence_evaluation_total_cost_usd": null,
+      "intelligence_evaluation_total_cost_usd": 2909.3,
       "cost_per_intelligence_task_usd": {
         "total": 1.8012,
         "input": null,
@@ -2413,9 +2414,9 @@
       "output_modalities": null,
       "composite": {
         "intelligence_index_v4_1": 61.48,
-        "coding_index": null,
+        "coding_index": 76.5,
         "math_index": null,
-        "agentic_index": null,
+        "agentic_index": 56.1,
         "omniscience_index": 33.7
       },
       "benchmarks": {
@@ -2452,7 +2453,7 @@
         "cache_hit": 0.5,
         "cache_write": 6.25
       },
-      "intelligence_evaluation_total_cost_usd": null,
+      "intelligence_evaluation_total_cost_usd": 1974.35,
       "cost_per_intelligence_task_usd": {
         "total": 1.2268,
         "input": null,
@@ -2519,7 +2520,7 @@
       "output_modalities": null,
       "composite": {
         "intelligence_index_v4_1": 60.92,
-        "coding_index": null,
+        "coding_index": 76.8,
         "math_index": null,
         "agentic_index": 58.7,
         "omniscience_index": 30.5
@@ -2558,7 +2559,7 @@
         "cache_hit": 0.5,
         "cache_write": null
       },
-      "intelligence_evaluation_total_cost_usd": null,
+      "intelligence_evaluation_total_cost_usd": 1157.64,
       "cost_per_intelligence_task_usd": {
         "total": 0.9372,
         "input": null,
@@ -2625,9 +2626,9 @@
       "output_modalities": null,
       "composite": {
         "intelligence_index_v4_1": 60.01,
-        "coding_index": null,
+        "coding_index": 75.9,
         "math_index": null,
-        "agentic_index": null,
+        "agentic_index": 56.6,
         "omniscience_index": 29.3
       },
       "benchmarks": {
@@ -2664,7 +2665,7 @@
         "cache_hit": 0.5,
         "cache_write": null
       },
-      "intelligence_evaluation_total_cost_usd": null,
+      "intelligence_evaluation_total_cost_usd": 1428.64,
       "cost_per_intelligence_task_usd": {
         "total": 1.2304,
         "input": null,
@@ -2731,9 +2732,9 @@
       "output_modalities": null,
       "composite": {
         "intelligence_index_v4_1": 59.51,
-        "coding_index": null,
+        "coding_index": 74.8,
         "math_index": null,
-        "agentic_index": null,
+        "agentic_index": 59.1,
         "omniscience_index": 14.3
       },
       "benchmarks": {
@@ -2770,7 +2771,7 @@
         "cache_hit": 0.26,
         "cache_write": null
       },
-      "intelligence_evaluation_total_cost_usd": null,
+      "intelligence_evaluation_total_cost_usd": 1238.5,
       "cost_per_intelligence_task_usd": {
         "total": 0.6829,
         "input": null,
@@ -2837,9 +2838,9 @@
       "output_modalities": null,
       "composite": {
         "intelligence_index_v4_1": 59.01,
-        "coding_index": null,
+        "coding_index": 74.4,
         "math_index": null,
-        "agentic_index": null,
+        "agentic_index": 56.3,
         "omniscience_index": 28
       },
       "benchmarks": {
@@ -2876,7 +2877,7 @@
         "cache_hit": 0.5,
         "cache_write": null
       },
-      "intelligence_evaluation_total_cost_usd": null,
+      "intelligence_evaluation_total_cost_usd": 929.97,
       "cost_per_intelligence_task_usd": {
         "total": 0.7829,
         "input": null,
@@ -2953,9 +2954,9 @@
       },
       "composite": {
         "intelligence_index_v4_1": 59.01,
-        "coding_index": 78.35,
+        "coding_index": 78.3,
         "math_index": null,
-        "agentic_index": 51.8,
+        "agentic_index": 53.6,
         "omniscience_index": 21.0
       },
       "benchmarks": {
@@ -2992,7 +2993,7 @@
         "cache_hit": 0.4,
         "cache_write": 6.25
       },
-      "intelligence_evaluation_total_cost_usd": 1542.52,
+      "intelligence_evaluation_total_cost_usd": 1145.78,
       "cost_per_intelligence_task_usd": {
         "total": 0.6711,
         "input": null,
@@ -3059,9 +3060,9 @@
       "output_modalities": null,
       "composite": {
         "intelligence_index_v4_1": 58.64,
-        "coding_index": null,
+        "coding_index": 74.3,
         "math_index": null,
-        "agentic_index": null,
+        "agentic_index": 50.4,
         "omniscience_index": 31.0
       },
       "benchmarks": {
@@ -3098,7 +3099,7 @@
         "cache_hit": 0.5,
         "cache_write": 6.25
       },
-      "intelligence_evaluation_total_cost_usd": null,
+      "intelligence_evaluation_total_cost_usd": 1116.24,
       "cost_per_intelligence_task_usd": {
         "total": 0.9513,
         "input": null,
@@ -3165,7 +3166,7 @@
       "output_modalities": null,
       "composite": {
         "intelligence_index_v4_1": 58.08,
-        "coding_index": null,
+        "coding_index": 71.8,
         "math_index": null,
         "agentic_index": 58.4,
         "omniscience_index": 3.4
@@ -3204,7 +3205,7 @@
         "cache_hit": 0.25,
         "cache_write": null
       },
-      "intelligence_evaluation_total_cost_usd": null,
+      "intelligence_evaluation_total_cost_usd": 1532.07,
       "cost_per_intelligence_task_usd": {
         "total": 0.9133,
         "input": null,
@@ -3271,9 +3272,9 @@
       "output_modalities": null,
       "composite": {
         "intelligence_index_v4_1": 57.7,
-        "coding_index": null,
+        "coding_index": 71.9,
         "math_index": null,
-        "agentic_index": null,
+        "agentic_index": 57.1,
         "omniscience_index": 4.3
       },
       "benchmarks": {
@@ -3310,7 +3311,7 @@
         "cache_hit": 0.25,
         "cache_write": null
       },
-      "intelligence_evaluation_total_cost_usd": null,
+      "intelligence_evaluation_total_cost_usd": 1395.05,
       "cost_per_intelligence_task_usd": {
         "total": 0.8071,
         "input": null,
@@ -3377,9 +3378,9 @@
       "output_modalities": null,
       "composite": {
         "intelligence_index_v4_1": 57.46,
-        "coding_index": null,
+        "coding_index": 71.5,
         "math_index": null,
-        "agentic_index": null,
+        "agentic_index": 58.2,
         "omniscience_index": 7.5
       },
       "benchmarks": {
@@ -3416,7 +3417,7 @@
         "cache_hit": 0.026,
         "cache_write": null
       },
-      "intelligence_evaluation_total_cost_usd": null,
+      "intelligence_evaluation_total_cost_usd": 138.02,
       "cost_per_intelligence_task_usd": {
         "total": 0.0869,
         "input": null,
@@ -3493,9 +3494,9 @@
       },
       "composite": {
         "intelligence_index_v4_1": 57.33,
-        "coding_index": 77.16,
+        "coding_index": 77.2,
         "math_index": null,
-        "agentic_index": 48.53,
+        "agentic_index": 50.6,
         "omniscience_index": 20.4
       },
       "benchmarks": {
@@ -3532,7 +3533,7 @@
         "cache_hit": 0.4,
         "cache_write": 6.25
       },
-      "intelligence_evaluation_total_cost_usd": 955.55,
+      "intelligence_evaluation_total_cost_usd": 725.58,
       "cost_per_intelligence_task_usd": {
         "total": 0.456,
         "input": null,
@@ -3599,7 +3600,7 @@
       "output_modalities": null,
       "composite": {
         "intelligence_index_v4_1": 56.76,
-        "coding_index": null,
+        "coding_index": 72.2,
         "math_index": null,
         "agentic_index": 49.3,
         "omniscience_index": 27.2
@@ -3638,7 +3639,7 @@
         "cache_hit": 0.15,
         "cache_write": null
       },
-      "intelligence_evaluation_total_cost_usd": null,
+      "intelligence_evaluation_total_cost_usd": 639.27,
       "cost_per_intelligence_task_usd": {
         "total": 0.3992,
         "input": null,
@@ -3706,9 +3707,9 @@
       },
       "composite": {
         "intelligence_index_v4_1": 56.31,
-        "coding_index": 74.89,
+        "coding_index": 74.9,
         "math_index": null,
-        "agentic_index": 44.87,
+        "agentic_index": 47.4,
         "omniscience_index": 20.5
       },
       "benchmarks": {
@@ -3745,7 +3746,7 @@
         "cache_hit": 0.5,
         "cache_write": null
       },
-      "intelligence_evaluation_total_cost_usd": 2630.04,
+      "intelligence_evaluation_total_cost_usd": 2796.05,
       "cost_per_intelligence_task_usd": {
         "total": 1.191,
         "input": null,
@@ -3812,7 +3813,7 @@
       "output_modalities": null,
       "composite": {
         "intelligence_index_v4_1": 56.03,
-        "coding_index": null,
+        "coding_index": 76.1,
         "math_index": null,
         "agentic_index": 45.1,
         "omniscience_index": 26.5
@@ -3851,7 +3852,7 @@
         "cache_hit": 0.075,
         "cache_write": 0.75
       },
-      "intelligence_evaluation_total_cost_usd": null,
+      "intelligence_evaluation_total_cost_usd": 484.73,
       "cost_per_intelligence_task_usd": {
         "total": 0.4022,
         "input": null,
@@ -3928,9 +3929,9 @@
       },
       "composite": {
         "intelligence_index_v4_1": 55.57,
-        "coding_index": 76.26,
+        "coding_index": 76.3,
         "math_index": null,
-        "agentic_index": 44.55,
+        "agentic_index": 47.9,
         "omniscience_index": 19.4
       },
       "benchmarks": {
@@ -3967,7 +3968,7 @@
         "cache_hit": 0.4,
         "cache_write": 6.25
       },
-      "intelligence_evaluation_total_cost_usd": 593.04,
+      "intelligence_evaluation_total_cost_usd": 448.89,
       "cost_per_intelligence_task_usd": {
         "total": 0.3136,
         "input": null,
@@ -4046,7 +4047,7 @@
         "intelligence_index_v4_1": 54.96,
         "coding_index": 73.6,
         "math_index": null,
-        "agentic_index": 44.39,
+        "agentic_index": 46.3,
         "omniscience_index": 27.3
       },
       "benchmarks": {
@@ -4083,7 +4084,7 @@
         "cache_hit": 0.5,
         "cache_write": 6.25
       },
-      "intelligence_evaluation_total_cost_usd": 3737.82,
+      "intelligence_evaluation_total_cost_usd": 3742.65,
       "cost_per_intelligence_task_usd": {
         "total": 2.2285,
         "input": null,
@@ -4160,9 +4161,9 @@
       },
       "composite": {
         "intelligence_index_v4_1": 54.67,
-        "coding_index": 71.57,
+        "coding_index": 71.6,
         "math_index": null,
-        "agentic_index": 43.46,
+        "agentic_index": 45.9,
         "omniscience_index": 18.8
       },
       "benchmarks": {
@@ -4199,7 +4200,7 @@
         "cache_hit": 0.5,
         "cache_write": null
       },
-      "intelligence_evaluation_total_cost_usd": 1654.59,
+      "intelligence_evaluation_total_cost_usd": 1734.52,
       "cost_per_intelligence_task_usd": {
         "total": 0.8155,
         "input": null,
@@ -4266,9 +4267,9 @@
       "output_modalities": null,
       "composite": {
         "intelligence_index_v4_1": 53.42,
-        "coding_index": null,
+        "coding_index": 71.5,
         "math_index": null,
-        "agentic_index": null,
+        "agentic_index": 45.1,
         "omniscience_index": 23.7
       },
       "benchmarks": {
@@ -4305,7 +4306,7 @@
         "cache_hit": 0.075,
         "cache_write": 0.75
       },
-      "intelligence_evaluation_total_cost_usd": null,
+      "intelligence_evaluation_total_cost_usd": 277.5,
       "cost_per_intelligence_task_usd": {
         "total": 0.2629,
         "input": null,
@@ -4382,9 +4383,9 @@
       },
       "composite": {
         "intelligence_index_v4_1": 53.12,
-        "coding_index": 71.05,
+        "coding_index": 71.1,
         "math_index": null,
-        "agentic_index": 41.08,
+        "agentic_index": 44.2,
         "omniscience_index": 5.8
       },
       "benchmarks": {
@@ -4421,7 +4422,7 @@
         "cache_hit": 0.25,
         "cache_write": null
       },
-      "intelligence_evaluation_total_cost_usd": 2131.77,
+      "intelligence_evaluation_total_cost_usd": 2200.98,
       "cost_per_intelligence_task_usd": {
         "total": 0.9263,
         "input": null,
@@ -4498,9 +4499,9 @@
       },
       "composite": {
         "intelligence_index_v4_1": 52.77,
-        "coding_index": 70.64,
+        "coding_index": 70.6,
         "math_index": null,
-        "agentic_index": 44.7,
+        "agentic_index": 46.5,
         "omniscience_index": -3.0
       },
       "benchmarks": {
@@ -4537,7 +4538,7 @@
         "cache_hit": 0.2,
         "cache_write": 2.5
       },
-      "intelligence_evaluation_total_cost_usd": 740.21,
+      "intelligence_evaluation_total_cost_usd": 604.17,
       "cost_per_intelligence_task_usd": {
         "total": 0.3182,
         "input": null,
@@ -4604,9 +4605,9 @@
       "output_modalities": null,
       "composite": {
         "intelligence_index_v4_1": 52.46,
-        "coding_index": null,
+        "coding_index": 66.9,
         "math_index": null,
-        "agentic_index": null,
+        "agentic_index": 42.1,
         "omniscience_index": 28.6
       },
       "benchmarks": {
@@ -4643,7 +4644,7 @@
         "cache_hit": 0.5,
         "cache_write": 6.25
       },
-      "intelligence_evaluation_total_cost_usd": null,
+      "intelligence_evaluation_total_cost_usd": 555.25,
       "cost_per_intelligence_task_usd": {
         "total": 0.547,
         "input": null,
@@ -4710,9 +4711,9 @@
       "output_modalities": null,
       "composite": {
         "intelligence_index_v4_1": 52.02,
-        "coding_index": null,
+        "coding_index": 68.1,
         "math_index": null,
-        "agentic_index": null,
+        "agentic_index": 50.9,
         "omniscience_index": -10.0
       },
       "benchmarks": {
@@ -4749,7 +4750,7 @@
         "cache_hit": 0.05,
         "cache_write": null
       },
-      "intelligence_evaluation_total_cost_usd": null,
+      "intelligence_evaluation_total_cost_usd": 693.67,
       "cost_per_intelligence_task_usd": {
         "total": 0.369,
         "input": null,
@@ -4826,9 +4827,9 @@
       },
       "composite": {
         "intelligence_index_v4_1": 51.96,
-        "coding_index": 70.14,
+        "coding_index": 70.1,
         "math_index": null,
-        "agentic_index": 37.45,
+        "agentic_index": 39.7,
         "omniscience_index": 21.2
       },
       "benchmarks": {
@@ -4865,7 +4866,7 @@
         "cache_hit": 0.15,
         "cache_write": null
       },
-      "intelligence_evaluation_total_cost_usd": 1040.88,
+      "intelligence_evaluation_total_cost_usd": 1042.43,
       "cost_per_intelligence_task_usd": {
         "total": 0.6934,
         "input": null,
@@ -4932,9 +4933,9 @@
       "output_modalities": null,
       "composite": {
         "intelligence_index_v4_1": 51.68,
-        "coding_index": null,
+        "coding_index": 66.3,
         "math_index": null,
-        "agentic_index": null,
+        "agentic_index": 47.8,
         "omniscience_index": 25.9
       },
       "benchmarks": {
@@ -4971,7 +4972,7 @@
         "cache_hit": 0.5,
         "cache_write": null
       },
-      "intelligence_evaluation_total_cost_usd": null,
+      "intelligence_evaluation_total_cost_usd": 260.34,
       "cost_per_intelligence_task_usd": {
         "total": 0.2545,
         "input": null,
@@ -5038,9 +5039,9 @@
       "output_modalities": null,
       "composite": {
         "intelligence_index_v4_1": 51.47,
-        "coding_index": null,
+        "coding_index": 65,
         "math_index": null,
-        "agentic_index": null,
+        "agentic_index": 52.9,
         "omniscience_index": -17.6
       },
       "benchmarks": {
@@ -5077,7 +5078,7 @@
         "cache_hit": 0.014,
         "cache_write": null
       },
-      "intelligence_evaluation_total_cost_usd": null,
+      "intelligence_evaluation_total_cost_usd": 235.89,
       "cost_per_intelligence_task_usd": {
         "total": 0.1164,
         "input": null,
@@ -5154,9 +5155,9 @@
       },
       "composite": {
         "intelligence_index_v4_1": 51.42,
-        "coding_index": 71.51,
+        "coding_index": 71.5,
         "math_index": null,
-        "agentic_index": 37.79,
+        "agentic_index": 39.2,
         "omniscience_index": 18.1
       },
       "benchmarks": {
@@ -5193,7 +5194,7 @@
         "cache_hit": 0.5,
         "cache_write": null
       },
-      "intelligence_evaluation_total_cost_usd": 869.91,
+      "intelligence_evaluation_total_cost_usd": 947.67,
       "cost_per_intelligence_task_usd": {
         "total": 0.508,
         "input": null,
@@ -5260,9 +5261,9 @@
       "output_modalities": null,
       "composite": {
         "intelligence_index_v4_1": 50.94,
-        "coding_index": null,
+        "coding_index": 71,
         "math_index": null,
-        "agentic_index": null,
+        "agentic_index": 41.6,
         "omniscience_index": 22.1
       },
       "benchmarks": {
@@ -5299,7 +5300,7 @@
         "cache_hit": 0.075,
         "cache_write": 0.75
       },
-      "intelligence_evaluation_total_cost_usd": null,
+      "intelligence_evaluation_total_cost_usd": 165.16,
       "cost_per_intelligence_task_usd": {
         "total": 0.1648,
         "input": null,
@@ -5376,9 +5377,9 @@
       },
       "composite": {
         "intelligence_index_v4_1": 50.73,
-        "coding_index": 69.67,
+        "coding_index": 69.7,
         "math_index": null,
-        "agentic_index": 40.0,
+        "agentic_index": 41.6,
         "omniscience_index": 18.9
       },
       "benchmarks": {
@@ -5415,7 +5416,7 @@
         "cache_hit": 0.4,
         "cache_write": 6.25
       },
-      "intelligence_evaluation_total_cost_usd": 353.49,
+      "intelligence_evaluation_total_cost_usd": 267.53,
       "cost_per_intelligence_task_usd": {
         "total": 0.1948,
         "input": null,
@@ -5492,9 +5493,9 @@
       },
       "composite": {
         "intelligence_index_v4_1": 50.11,
-        "coding_index": 67.14,
+        "coding_index": 67.1,
         "math_index": null,
-        "agentic_index": 41.33,
+        "agentic_index": 43.5,
         "omniscience_index": -3.5
       },
       "benchmarks": {
@@ -5531,7 +5532,7 @@
         "cache_hit": 0.2,
         "cache_write": 2.5
       },
-      "intelligence_evaluation_total_cost_usd": 495.77,
+      "intelligence_evaluation_total_cost_usd": 405.59,
       "cost_per_intelligence_task_usd": {
         "total": 0.2276,
         "input": null,
@@ -5610,7 +5611,7 @@
         "intelligence_index_v4_1": 50.06,
         "coding_index": 68.6,
         "math_index": null,
-        "agentic_index": 42.92,
+        "agentic_index": 44.4,
         "omniscience_index": -10.8
       },
       "benchmarks": {
@@ -5647,7 +5648,7 @@
         "cache_hit": 0.02,
         "cache_write": 0.25
       },
-      "intelligence_evaluation_total_cost_usd": 479.37,
+      "intelligence_evaluation_total_cost_usd": 96.36,
       "cost_per_intelligence_task_usd": {
         "total": 0.0328,
         "input": null,
@@ -5819,9 +5820,9 @@
       "output_modalities": null,
       "composite": {
         "intelligence_index_v4_1": 48.25,
-        "coding_index": null,
+        "coding_index": 72,
         "math_index": null,
-        "agentic_index": null,
+        "agentic_index": 39.6,
         "omniscience_index": 3.9
       },
       "benchmarks": {
@@ -5858,7 +5859,7 @@
         "cache_hit": 0.3,
         "cache_write": null
       },
-      "intelligence_evaluation_total_cost_usd": null,
+      "intelligence_evaluation_total_cost_usd": 282.64,
       "cost_per_intelligence_task_usd": {
         "total": 0.3381,
         "input": null,
@@ -5905,6 +5906,100 @@
       }
     },
     {
+      "name": "Motif 3",
+      "slug": "motif-3",
+      "aa_url": "https://artificialanalysis.ai/models/motif-3",
+      "creator": "Motif Technologies",
+      "released": "2026-08-12",
+      "knowledge_cutoff": null,
+      "is_reasoning": false,
+      "is_open_weights": false,
+      "deprecated": false,
+      "commercial_allowed": null,
+      "license": null,
+      "license_url": null,
+      "size_class": null,
+      "context_tokens": null,
+      "parameters_billions": null,
+      "active_params_billions": null,
+      "input_modalities": null,
+      "output_modalities": null,
+      "composite": {
+        "intelligence_index_v4_1": 47.4,
+        "coding_index": 63.5,
+        "math_index": null,
+        "agentic_index": 37.6,
+        "omniscience_index": null
+      },
+      "benchmarks": {
+        "gpqa_diamond": null,
+        "hle": null,
+        "scicode": null,
+        "ifbench": null,
+        "lcr": null,
+        "tau2_bench": null,
+        "tau3_banking": null,
+        "terminalbench_hard": null,
+        "terminalbench_v2_1": null,
+        "mmlu_pro": null,
+        "livecodebench": null,
+        "math_500": null,
+        "aime": null,
+        "aime25": null,
+        "gdpval_v2": 38.7,
+        "critpt": 6.6,
+        "mmmu_pro": null,
+        "apex_agents_aa": null,
+        "it_bench_sre": null,
+        "omniscience_accuracy": null,
+        "omniscience_hallucination_rate": null,
+        "omniscience_non_halluc": 71.6
+      },
+      "pricing_per_m_tokens": {
+        "input": null,
+        "output": null,
+        "blended_3_1": null,
+        "blended_7_2_1": null,
+        "blended_1_1": null,
+        "cache_hit": null,
+        "cache_write": null
+      },
+      "intelligence_evaluation_total_cost_usd": null,
+      "cost_per_intelligence_task_usd": {
+        "total": null,
+        "input": null,
+        "output": null,
+        "cacheRead": null,
+        "cacheWrite": null,
+        "nonCacheInput": null,
+        "reasoning": null,
+        "answer": null
+      },
+      "cost_per_eval_breakdown_usd": {},
+      "time_per_task_seconds": null,
+      "output_tokens_per_task": null,
+      "performance": {
+        "output_speed_tps": null,
+        "ttft_seconds_total": null,
+        "ttft_seconds_answer": null,
+        "end_to_end_500tok": null
+      },
+      "output_speed_by_prompt_length": [],
+      "featured": false,
+      "openrouter_slug": null,
+      "note": null,
+      "has_rich_data": true,
+      "data_sources": {
+        "documented_free_api": true,
+        "page_enrichment": false,
+        "aa_pipeline": true
+      },
+      "short_name": "Motif 3",
+      "derived": {
+        "safety_composite": 61.9
+      }
+    },
+    {
       "name": "GPT-5.6 Luna (high)",
       "slug": "gpt-5-6-luna-high",
       "aa_url": "https://artificialanalysis.ai/models/gpt-5-6-luna-high",
@@ -5935,9 +6030,9 @@
       },
       "composite": {
         "intelligence_index_v4_1": 46.96,
-        "coding_index": 63.34,
+        "coding_index": 63.3,
         "math_index": null,
-        "agentic_index": 40.07,
+        "agentic_index": 41,
         "omniscience_index": -12
       },
       "benchmarks": {
@@ -5974,7 +6069,7 @@
         "cache_hit": 0.02,
         "cache_write": 0.25
       },
-      "intelligence_evaluation_total_cost_usd": 275.02,
+      "intelligence_evaluation_total_cost_usd": 55.86,
       "cost_per_intelligence_task_usd": {
         "total": 0.0223,
         "input": null,
@@ -6051,9 +6146,9 @@
       },
       "composite": {
         "intelligence_index_v4_1": 46.76,
-        "coding_index": 64.74,
+        "coding_index": 64.7,
         "math_index": null,
-        "agentic_index": 37.04,
+        "agentic_index": 39.1,
         "omniscience_index": -5.1
       },
       "benchmarks": {
@@ -6090,7 +6185,7 @@
         "cache_hit": 0.2,
         "cache_write": 2.5
       },
-      "intelligence_evaluation_total_cost_usd": 240.23,
+      "intelligence_evaluation_total_cost_usd": 196.62,
       "cost_per_intelligence_task_usd": {
         "total": 0.1232,
         "input": null,
@@ -6252,6 +6347,98 @@
       }
     },
     {
+      "name": "Motif 3 (Beta)",
+      "slug": "motif-0714",
+      "aa_url": "https://artificialanalysis.ai/models/motif-0714",
+      "creator": "Motif Technologies",
+      "released": "2026-07-14",
+      "knowledge_cutoff": null,
+      "is_reasoning": false,
+      "is_open_weights": false,
+      "deprecated": false,
+      "commercial_allowed": null,
+      "license": null,
+      "license_url": null,
+      "size_class": null,
+      "context_tokens": null,
+      "parameters_billions": null,
+      "active_params_billions": null,
+      "input_modalities": null,
+      "output_modalities": null,
+      "composite": {
+        "intelligence_index_v4_1": 45.3,
+        "coding_index": 62,
+        "math_index": null,
+        "agentic_index": null,
+        "omniscience_index": null
+      },
+      "benchmarks": {
+        "gpqa_diamond": null,
+        "hle": null,
+        "scicode": null,
+        "ifbench": null,
+        "lcr": null,
+        "tau2_bench": null,
+        "tau3_banking": null,
+        "terminalbench_hard": null,
+        "terminalbench_v2_1": null,
+        "mmlu_pro": null,
+        "livecodebench": null,
+        "math_500": null,
+        "aime": null,
+        "aime25": null,
+        "gdpval_v2": null,
+        "critpt": null,
+        "mmmu_pro": null,
+        "apex_agents_aa": null,
+        "it_bench_sre": null,
+        "omniscience_accuracy": null,
+        "omniscience_hallucination_rate": null,
+        "omniscience_non_halluc": null
+      },
+      "pricing_per_m_tokens": {
+        "input": null,
+        "output": null,
+        "blended_3_1": null,
+        "blended_7_2_1": null,
+        "blended_1_1": null,
+        "cache_hit": null,
+        "cache_write": null
+      },
+      "intelligence_evaluation_total_cost_usd": null,
+      "cost_per_intelligence_task_usd": {
+        "total": null,
+        "input": null,
+        "output": null,
+        "cacheRead": null,
+        "cacheWrite": null,
+        "nonCacheInput": null,
+        "reasoning": null,
+        "answer": null
+      },
+      "cost_per_eval_breakdown_usd": {},
+      "time_per_task_seconds": null,
+      "output_tokens_per_task": null,
+      "performance": {
+        "output_speed_tps": null,
+        "ttft_seconds_total": null,
+        "ttft_seconds_answer": null,
+        "end_to_end_500tok": null
+      },
+      "output_speed_by_prompt_length": [],
+      "featured": false,
+      "openrouter_slug": null,
+      "note": null,
+      "has_rich_data": false,
+      "data_sources": {
+        "documented_free_api": true,
+        "page_enrichment": false,
+        "aa_pipeline": true
+      },
+      "short_name": "Motif 3 (Beta)",
+      "derived": {}
+    },
+    {
       "name": "DeepSeek V4 Pro (max)",
       "slug": "deepseek-v4-pro-0424",
       "aa_url": "https://artificialanalysis.ai/models/deepseek-v4-pro-0424",
@@ -6272,9 +6459,9 @@
       "output_modalities": null,
       "composite": {
         "intelligence_index_v4_1": 45.27,
-        "coding_index": null,
+        "coding_index": 59.4,
         "math_index": null,
-        "agentic_index": null,
+        "agentic_index": 37.8,
         "omniscience_index": -10.7
       },
       "benchmarks": {
@@ -6311,7 +6498,7 @@
         "cache_hit": 0.0036,
         "cache_write": null
       },
-      "intelligence_evaluation_total_cost_usd": null,
+      "intelligence_evaluation_total_cost_usd": 178.12,
       "cost_per_intelligence_task_usd": {
         "total": 0.0498,
         "input": null,
@@ -6388,9 +6575,9 @@
       },
       "composite": {
         "intelligence_index_v4_1": 45.14,
-        "coding_index": 61.77,
+        "coding_index": 61.8,
         "math_index": null,
-        "agentic_index": 30.27,
+        "agentic_index": 31.2,
         "omniscience_index": 5.3
       },
       "benchmarks": {
@@ -6427,7 +6614,7 @@
         "cache_hit": 0.16,
         "cache_write": null
       },
-      "intelligence_evaluation_total_cost_usd": 851.63,
+      "intelligence_evaluation_total_cost_usd": 860.96,
       "cost_per_intelligence_task_usd": {
         "total": 0.3886,
         "input": null,
@@ -6506,7 +6693,7 @@
         "intelligence_index_v4_1": 44.5,
         "coding_index": 60.9,
         "math_index": null,
-        "agentic_index": 30.42,
+        "agentic_index": 31.7,
         "omniscience_index": 15.1
       },
       "benchmarks": {
@@ -6543,7 +6730,7 @@
         "cache_hit": 0.5,
         "cache_write": null
       },
-      "intelligence_evaluation_total_cost_usd": 358.17,
+      "intelligence_evaluation_total_cost_usd": 377.41,
       "cost_per_intelligence_task_usd": {
         "total": 0.2616,
         "input": null,
@@ -6610,9 +6797,9 @@
       "output_modalities": null,
       "composite": {
         "intelligence_index_v4_1": 44.45,
-        "coding_index": null,
+        "coding_index": 56.1,
         "math_index": null,
-        "agentic_index": null,
+        "agentic_index": 49.8,
         "omniscience_index": -36.1
       },
       "benchmarks": {
@@ -6649,7 +6836,7 @@
         "cache_hit": 0.05,
         "cache_write": null
       },
-      "intelligence_evaluation_total_cost_usd": null,
+      "intelligence_evaluation_total_cost_usd": 398.33,
       "cost_per_intelligence_task_usd": {
         "total": 0.284,
         "input": null,
@@ -6693,6 +6880,110 @@
         "speed_tier": 1,
         "latency_ttft_seconds": 41.37,
         "latency_tier": 0
+      }
+    },
+    {
+      "name": "Muse Spark",
+      "slug": "muse-spark",
+      "aa_url": "https://artificialanalysis.ai/models/muse-spark",
+      "creator": "Meta",
+      "released": "2026-04-08",
+      "knowledge_cutoff": null,
+      "is_reasoning": false,
+      "is_open_weights": false,
+      "deprecated": false,
+      "commercial_allowed": null,
+      "license": null,
+      "license_url": null,
+      "size_class": null,
+      "context_tokens": 262144,
+      "parameters_billions": null,
+      "active_params_billions": null,
+      "input_modalities": {
+        "text": true,
+        "image": true,
+        "audio": true,
+        "video": false
+      },
+      "output_modalities": {
+        "text": true,
+        "image": false,
+        "audio": false,
+        "video": false
+      },
+      "composite": {
+        "intelligence_index_v4_1": 44.3,
+        "coding_index": 58.6,
+        "math_index": null,
+        "agentic_index": 28.69,
+        "omniscience_index": 4.1
+      },
+      "benchmarks": {
+        "gpqa_diamond": 88.0,
+        "hle": 40.0,
+        "scicode": 52.0,
+        "ifbench": 76.0,
+        "lcr": 70.0,
+        "tau2_bench": 92.0,
+        "tau3_banking": null,
+        "terminalbench_hard": 45.0,
+        "terminalbench_v2_1": null,
+        "mmlu_pro": null,
+        "livecodebench": null,
+        "math_500": null,
+        "aime": null,
+        "aime25": null,
+        "gdpval_v2": 32.0,
+        "critpt": 11.0,
+        "mmmu_pro": 81.0,
+        "apex_agents_aa": null,
+        "it_bench_sre": null,
+        "omniscience_accuracy": 45.0,
+        "omniscience_hallucination_rate": null,
+        "omniscience_non_halluc": 27.0
+      },
+      "pricing_per_m_tokens": {
+        "input": null,
+        "output": null,
+        "blended_3_1": null,
+        "blended_7_2_1": null,
+        "blended_1_1": null,
+        "cache_hit": null,
+        "cache_write": null
+      },
+      "intelligence_evaluation_total_cost_usd": null,
+      "cost_per_intelligence_task_usd": {
+        "total": null,
+        "input": null,
+        "output": null,
+        "cacheRead": null,
+        "cacheWrite": null,
+        "nonCacheInput": null,
+        "reasoning": null,
+        "answer": null
+      },
+      "cost_per_eval_breakdown_usd": {},
+      "time_per_task_seconds": null,
+      "output_tokens_per_task": null,
+      "performance": {
+        "output_speed_tps": null,
+        "ttft_seconds_total": null,
+        "ttft_seconds_answer": null,
+        "end_to_end_500tok": null
+      },
+      "output_speed_by_prompt_length": [],
+      "featured": false,
+      "openrouter_slug": null,
+      "note": null,
+      "has_rich_data": true,
+      "data_sources": {
+        "documented_free_api": true,
+        "page_enrichment": false,
+        "aa_pipeline": true
+      },
+      "short_name": "Muse Spark",
+      "derived": {
+        "safety_composite": 33.9
       }
     },
     {
@@ -6831,9 +7122,9 @@
       "output_modalities": null,
       "composite": {
         "intelligence_index_v4_1": 43.75,
-        "coding_index": null,
+        "coding_index": 58.7,
         "math_index": null,
-        "agentic_index": null,
+        "agentic_index": 35.3,
         "omniscience_index": -10.6
       },
       "benchmarks": {
@@ -6870,7 +7161,7 @@
         "cache_hit": 0.145,
         "cache_write": null
       },
-      "intelligence_evaluation_total_cost_usd": null,
+      "intelligence_evaluation_total_cost_usd": 108.77,
       "cost_per_intelligence_task_usd": {
         "total": 0.4376,
         "input": null,
@@ -6917,110 +7208,6 @@
       }
     },
     {
-      "name": "Muse Spark",
-      "slug": "muse-spark",
-      "aa_url": "https://artificialanalysis.ai/models/muse-spark",
-      "creator": "Meta",
-      "released": "2026-04-08",
-      "knowledge_cutoff": null,
-      "is_reasoning": false,
-      "is_open_weights": false,
-      "deprecated": false,
-      "commercial_allowed": null,
-      "license": null,
-      "license_url": null,
-      "size_class": null,
-      "context_tokens": 262144,
-      "parameters_billions": null,
-      "active_params_billions": null,
-      "input_modalities": {
-        "text": true,
-        "image": true,
-        "audio": true,
-        "video": false
-      },
-      "output_modalities": {
-        "text": true,
-        "image": false,
-        "audio": false,
-        "video": false
-      },
-      "composite": {
-        "intelligence_index_v4_1": 43.06,
-        "coding_index": 58.62,
-        "math_index": null,
-        "agentic_index": 28.69,
-        "omniscience_index": 4.1
-      },
-      "benchmarks": {
-        "gpqa_diamond": 88.0,
-        "hle": 40.0,
-        "scicode": 52.0,
-        "ifbench": 76.0,
-        "lcr": 70.0,
-        "tau2_bench": 92.0,
-        "tau3_banking": null,
-        "terminalbench_hard": 45.0,
-        "terminalbench_v2_1": null,
-        "mmlu_pro": null,
-        "livecodebench": null,
-        "math_500": null,
-        "aime": null,
-        "aime25": null,
-        "gdpval_v2": 32.0,
-        "critpt": 11.0,
-        "mmmu_pro": 81.0,
-        "apex_agents_aa": null,
-        "it_bench_sre": null,
-        "omniscience_accuracy": 45.0,
-        "omniscience_hallucination_rate": null,
-        "omniscience_non_halluc": 27.0
-      },
-      "pricing_per_m_tokens": {
-        "input": null,
-        "output": null,
-        "blended_3_1": null,
-        "blended_7_2_1": null,
-        "blended_1_1": null,
-        "cache_hit": null,
-        "cache_write": null
-      },
-      "intelligence_evaluation_total_cost_usd": null,
-      "cost_per_intelligence_task_usd": {
-        "total": null,
-        "input": null,
-        "output": null,
-        "cacheRead": null,
-        "cacheWrite": null,
-        "nonCacheInput": null,
-        "reasoning": null,
-        "answer": null
-      },
-      "cost_per_eval_breakdown_usd": {},
-      "time_per_task_seconds": null,
-      "output_tokens_per_task": null,
-      "performance": {
-        "output_speed_tps": null,
-        "ttft_seconds_total": null,
-        "ttft_seconds_answer": null,
-        "end_to_end_500tok": null
-      },
-      "output_speed_by_prompt_length": [],
-      "featured": false,
-      "openrouter_slug": null,
-      "note": null,
-      "has_rich_data": true,
-      "data_sources": {
-        "documented_free_api": false,
-        "page_enrichment": false,
-        "aa_pipeline": true
-      },
-      "short_name": "Muse Spark",
-      "derived": {
-        "safety_composite": 33.4
-      }
-    },
-    {
       "name": "Kimi K2.7 Code",
       "slug": "kimi-k2-7-code",
       "aa_url": "https://artificialanalysis.ai/models/kimi-k2-7-code",
@@ -7051,9 +7238,9 @@
       },
       "composite": {
         "intelligence_index_v4_1": 43.02,
-        "coding_index": 60.76,
+        "coding_index": 60.8,
         "math_index": null,
-        "agentic_index": 29.59,
+        "agentic_index": 30.3,
         "omniscience_index": -10.2
       },
       "benchmarks": {
@@ -7090,7 +7277,7 @@
         "cache_hit": 0.19,
         "cache_write": null
       },
-      "intelligence_evaluation_total_cost_usd": 524.56,
+      "intelligence_evaluation_total_cost_usd": 544.58,
       "cost_per_intelligence_task_usd": {
         "total": 0.222,
         "input": null,
@@ -7157,9 +7344,9 @@
       "output_modalities": null,
       "composite": {
         "intelligence_index_v4_1": 42.87,
-        "coding_index": null,
+        "coding_index": 58.2,
         "math_index": null,
-        "agentic_index": null,
+        "agentic_index": 43.7,
         "omniscience_index": -26.7
       },
       "benchmarks": {
@@ -7196,7 +7383,7 @@
         "cache_hit": 0.05,
         "cache_write": null
       },
-      "intelligence_evaluation_total_cost_usd": null,
+      "intelligence_evaluation_total_cost_usd": 302.62,
       "cost_per_intelligence_task_usd": {
         "total": 0.2649,
         "input": null,
@@ -7273,9 +7460,9 @@
       },
       "composite": {
         "intelligence_index_v4_1": 42.57,
-        "coding_index": 66.39,
+        "coding_index": 66.4,
         "math_index": null,
-        "agentic_index": 33.7,
+        "agentic_index": 34.2,
         "omniscience_index": -0.7
       },
       "benchmarks": {
@@ -7312,7 +7499,7 @@
         "cache_hit": 0.2,
         "cache_write": 3.75
       },
-      "intelligence_evaluation_total_cost_usd": null,
+      "intelligence_evaluation_total_cost_usd": 415.75,
       "cost_per_intelligence_task_usd": {
         "total": 0.6119,
         "input": null,
@@ -7379,7 +7566,7 @@
       "output_modalities": null,
       "composite": {
         "intelligence_index_v4_1": 42.29,
-        "coding_index": null,
+        "coding_index": 52.1,
         "math_index": null,
         "agentic_index": 34.1,
         "omniscience_index": 2
@@ -7418,7 +7605,7 @@
         "cache_hit": 0.17,
         "cache_write": null
       },
-      "intelligence_evaluation_total_cost_usd": null,
+      "intelligence_evaluation_total_cost_usd": 698.28,
       "cost_per_intelligence_task_usd": {
         "total": 0.3389,
         "input": null,
@@ -7495,9 +7682,9 @@
       },
       "composite": {
         "intelligence_index_v4_1": 42.21,
-        "coding_index": null,
+        "coding_index": 58.8,
         "math_index": null,
-        "agentic_index": null,
+        "agentic_index": 31.4,
         "omniscience_index": -18.5
       },
       "benchmarks": {
@@ -7534,7 +7721,7 @@
         "cache_hit": 0.0322,
         "cache_write": null
       },
-      "intelligence_evaluation_total_cost_usd": null,
+      "intelligence_evaluation_total_cost_usd": 93.2,
       "cost_per_intelligence_task_usd": {
         "total": 0.0338,
         "input": null,
@@ -7601,9 +7788,9 @@
       "output_modalities": null,
       "composite": {
         "intelligence_index_v4_1": 42.12,
-        "coding_index": null,
+        "coding_index": 56.2,
         "math_index": null,
-        "agentic_index": null,
+        "agentic_index": 33.7,
         "omniscience_index": -23.9
       },
       "benchmarks": {
@@ -7640,7 +7827,7 @@
         "cache_hit": 0.028,
         "cache_write": null
       },
-      "intelligence_evaluation_total_cost_usd": null,
+      "intelligence_evaluation_total_cost_usd": 95.5,
       "cost_per_intelligence_task_usd": {
         "total": 0.0496,
         "input": null,
@@ -7717,9 +7904,9 @@
       },
       "composite": {
         "intelligence_index_v4_1": 41.88,
-        "coding_index": 65.14,
+        "coding_index": 65.1,
         "math_index": null,
-        "agentic_index": 34.85,
+        "agentic_index": 36,
         "omniscience_index": 1.1
       },
       "benchmarks": {
@@ -7756,7 +7943,7 @@
         "cache_hit": 0.55,
         "cache_write": 6.88
       },
-      "intelligence_evaluation_total_cost_usd": 241.51,
+      "intelligence_evaluation_total_cost_usd": 192.9,
       "cost_per_intelligence_task_usd": {
         "total": 0.3004,
         "input": null,
@@ -7833,9 +8020,9 @@
       },
       "composite": {
         "intelligence_index_v4_1": 41.74,
-        "coding_index": 59.12,
+        "coding_index": 59.1,
         "math_index": null,
-        "agentic_index": 31.03,
+        "agentic_index": 31.2,
         "omniscience_index": -27.1
       },
       "benchmarks": {
@@ -7938,9 +8125,9 @@
       "output_modalities": null,
       "composite": {
         "intelligence_index_v4_1": 41.64,
-        "coding_index": null,
+        "coding_index": 52.7,
         "math_index": null,
-        "agentic_index": null,
+        "agentic_index": 33.6,
         "omniscience_index": -0.8
       },
       "benchmarks": {
@@ -7977,7 +8164,7 @@
         "cache_hit": 0.06,
         "cache_write": null
       },
-      "intelligence_evaluation_total_cost_usd": null,
+      "intelligence_evaluation_total_cost_usd": 380.17,
       "cost_per_intelligence_task_usd": {
         "total": 0.3035,
         "input": null,
@@ -8024,6 +8211,111 @@
       }
     },
     {
+      "name": "MiMo-V2-Pro",
+      "slug": "mimo-v2-pro",
+      "aa_url": "https://artificialanalysis.ai/models/mimo-v2-pro",
+      "creator": "Xiaomi",
+      "released": "2026-03-18",
+      "knowledge_cutoff": null,
+      "is_reasoning": false,
+      "is_open_weights": false,
+      "deprecated": true,
+      "commercial_allowed": null,
+      "license": null,
+      "license_url": null,
+      "size_class": "large",
+      "context_tokens": 1000000,
+      "parameters_billions": null,
+      "active_params_billions": null,
+      "input_modalities": {
+        "text": true,
+        "image": false,
+        "audio": false,
+        "video": false
+      },
+      "output_modalities": {
+        "text": true,
+        "image": false,
+        "audio": false,
+        "video": false
+      },
+      "composite": {
+        "intelligence_index_v4_1": 41.4,
+        "coding_index": null,
+        "math_index": null,
+        "agentic_index": null,
+        "omniscience_index": 4.9
+      },
+      "benchmarks": {
+        "gpqa_diamond": 87.0,
+        "hle": 28.0,
+        "scicode": 42.0,
+        "ifbench": 69.0,
+        "lcr": 61.0,
+        "tau2_bench": 95.0,
+        "tau3_banking": null,
+        "terminalbench_hard": 41.0,
+        "terminalbench_v2_1": null,
+        "mmlu_pro": null,
+        "livecodebench": null,
+        "math_500": null,
+        "aime": null,
+        "aime25": null,
+        "gdpval_v2": null,
+        "critpt": 0.0,
+        "mmmu_pro": null,
+        "apex_agents_aa": null,
+        "it_bench_sre": null,
+        "omniscience_accuracy": 27.0,
+        "omniscience_hallucination_rate": null,
+        "omniscience_non_halluc": 70.0
+      },
+      "pricing_per_m_tokens": {
+        "input": 1,
+        "output": 3,
+        "blended_3_1": 1.5,
+        "blended_7_2_1": 1.3,
+        "blended_1_1": null,
+        "cache_hit": null,
+        "cache_write": null
+      },
+      "intelligence_evaluation_total_cost_usd": null,
+      "cost_per_intelligence_task_usd": {
+        "total": null,
+        "input": null,
+        "output": null,
+        "cacheRead": null,
+        "cacheWrite": null,
+        "nonCacheInput": null,
+        "reasoning": null,
+        "answer": null
+      },
+      "cost_per_eval_breakdown_usd": {},
+      "time_per_task_seconds": null,
+      "output_tokens_per_task": null,
+      "performance": {
+        "output_speed_tps": null,
+        "ttft_seconds_total": null,
+        "ttft_seconds_answer": null,
+        "end_to_end_500tok": null
+      },
+      "output_speed_by_prompt_length": [],
+      "featured": false,
+      "openrouter_slug": null,
+      "note": null,
+      "has_rich_data": true,
+      "data_sources": {
+        "documented_free_api": true,
+        "page_enrichment": false,
+        "aa_pipeline": true
+      },
+      "short_name": "MiMo-V2-Pro",
+      "derived": {
+        "value_intelligence_per_dollar_blend": 27.6,
+        "safety_composite": 58.6
+      }
+    },
+    {
       "name": "GPT-5.6 Terra (low)",
       "slug": "gpt-5-6-terra-low",
       "aa_url": "https://artificialanalysis.ai/models/gpt-5-6-terra-low",
@@ -8054,9 +8346,9 @@
       },
       "composite": {
         "intelligence_index_v4_1": 41.3,
-        "coding_index": 58.09,
+        "coding_index": 58.1,
         "math_index": null,
-        "agentic_index": 30.6,
+        "agentic_index": 31.5,
         "omniscience_index": -6.8
       },
       "benchmarks": {
@@ -8093,7 +8385,7 @@
         "cache_hit": 0.2,
         "cache_write": 2.5
       },
-      "intelligence_evaluation_total_cost_usd": 160.65,
+      "intelligence_evaluation_total_cost_usd": 132.83,
       "cost_per_intelligence_task_usd": {
         "total": 0.0962,
         "input": null,
@@ -8160,9 +8452,9 @@
       "output_modalities": null,
       "composite": {
         "intelligence_index_v4_1": 41.18,
-        "coding_index": null,
+        "coding_index": 52.9,
         "math_index": null,
-        "agentic_index": null,
+        "agentic_index": 31.9,
         "omniscience_index": -8.9
       },
       "benchmarks": {
@@ -8199,7 +8491,7 @@
         "cache_hit": 0.1,
         "cache_write": null
       },
-      "intelligence_evaluation_total_cost_usd": null,
+      "intelligence_evaluation_total_cost_usd": 192.52,
       "cost_per_intelligence_task_usd": {
         "total": 0.0982,
         "input": null,
@@ -8391,9 +8683,9 @@
       },
       "composite": {
         "intelligence_index_v4_1": 40.97,
-        "coding_index": 55.78,
+        "coding_index": 55.8,
         "math_index": null,
-        "agentic_index": 29.87,
+        "agentic_index": 30.6,
         "omniscience_index": 0.8
       },
       "benchmarks": {
@@ -8430,7 +8722,7 @@
         "cache_hit": 0.26,
         "cache_write": null
       },
-      "intelligence_evaluation_total_cost_usd": 658.98,
+      "intelligence_evaluation_total_cost_usd": 685.79,
       "cost_per_intelligence_task_usd": {
         "total": 0.2466,
         "input": null,
@@ -8507,9 +8799,9 @@
       },
       "composite": {
         "intelligence_index_v4_1": 40.94,
-        "coding_index": 56.08,
+        "coding_index": 56.1,
         "math_index": null,
-        "agentic_index": 30.17,
+        "agentic_index": 31.5,
         "omniscience_index": -18.9
       },
       "benchmarks": {
@@ -8546,7 +8838,7 @@
         "cache_hit": 0.075,
         "cache_write": null
       },
-      "intelligence_evaluation_total_cost_usd": 1127.44,
+      "intelligence_evaluation_total_cost_usd": 1095.83,
       "cost_per_intelligence_task_usd": {
         "total": 0.4948,
         "input": null,
@@ -8737,9 +9029,9 @@
       },
       "composite": {
         "intelligence_index_v4_1": 40.65,
-        "coding_index": 51.45,
+        "coding_index": 51.5,
         "math_index": null,
-        "agentic_index": 28.04,
+        "agentic_index": 28.9,
         "omniscience_index": 6.4
       },
       "benchmarks": {
@@ -8776,7 +9068,7 @@
         "cache_hit": 0.2,
         "cache_write": null
       },
-      "intelligence_evaluation_total_cost_usd": 375.01,
+      "intelligence_evaluation_total_cost_usd": 376.79,
       "cost_per_intelligence_task_usd": {
         "total": 0.2252,
         "input": null,
@@ -8853,9 +9145,9 @@
       },
       "composite": {
         "intelligence_index_v4_1": 40.49,
-        "coding_index": 54.53,
+        "coding_index": 54.5,
         "math_index": null,
-        "agentic_index": 27.55,
+        "agentic_index": 29,
         "omniscience_index": 0.9
       },
       "benchmarks": {
@@ -8892,7 +9184,7 @@
         "cache_hit": 0.05,
         "cache_write": 0.625
       },
-      "intelligence_evaluation_total_cost_usd": 525.58,
+      "intelligence_evaluation_total_cost_usd": 525.55,
       "cost_per_intelligence_task_usd": {
         "total": 0.3569,
         "input": null,
@@ -8936,111 +9228,6 @@
         "speed_tier": 1,
         "latency_ttft_seconds": 102.08,
         "latency_tier": 0
-      }
-    },
-    {
-      "name": "MiMo-V2-Pro",
-      "slug": "mimo-v2-pro",
-      "aa_url": "https://artificialanalysis.ai/models/mimo-v2-pro",
-      "creator": "Xiaomi",
-      "released": "2026-03-18",
-      "knowledge_cutoff": null,
-      "is_reasoning": false,
-      "is_open_weights": false,
-      "deprecated": true,
-      "commercial_allowed": null,
-      "license": null,
-      "license_url": null,
-      "size_class": "large",
-      "context_tokens": 1000000,
-      "parameters_billions": null,
-      "active_params_billions": null,
-      "input_modalities": {
-        "text": true,
-        "image": false,
-        "audio": false,
-        "video": false
-      },
-      "output_modalities": {
-        "text": true,
-        "image": false,
-        "audio": false,
-        "video": false
-      },
-      "composite": {
-        "intelligence_index_v4_1": 40.29,
-        "coding_index": null,
-        "math_index": null,
-        "agentic_index": null,
-        "omniscience_index": 4.9
-      },
-      "benchmarks": {
-        "gpqa_diamond": 87.0,
-        "hle": 28.0,
-        "scicode": 42.0,
-        "ifbench": 69.0,
-        "lcr": 61.0,
-        "tau2_bench": 95.0,
-        "tau3_banking": null,
-        "terminalbench_hard": 41.0,
-        "terminalbench_v2_1": null,
-        "mmlu_pro": null,
-        "livecodebench": null,
-        "math_500": null,
-        "aime": null,
-        "aime25": null,
-        "gdpval_v2": null,
-        "critpt": 0.0,
-        "mmmu_pro": null,
-        "apex_agents_aa": null,
-        "it_bench_sre": null,
-        "omniscience_accuracy": 27.0,
-        "omniscience_hallucination_rate": null,
-        "omniscience_non_halluc": 70.0
-      },
-      "pricing_per_m_tokens": {
-        "input": 1,
-        "output": 3,
-        "blended_3_1": 1.5,
-        "blended_7_2_1": 1.3,
-        "blended_1_1": null,
-        "cache_hit": null,
-        "cache_write": null
-      },
-      "intelligence_evaluation_total_cost_usd": null,
-      "cost_per_intelligence_task_usd": {
-        "total": null,
-        "input": null,
-        "output": null,
-        "cacheRead": null,
-        "cacheWrite": null,
-        "nonCacheInput": null,
-        "reasoning": null,
-        "answer": null
-      },
-      "cost_per_eval_breakdown_usd": {},
-      "time_per_task_seconds": null,
-      "output_tokens_per_task": null,
-      "performance": {
-        "output_speed_tps": null,
-        "ttft_seconds_total": null,
-        "ttft_seconds_answer": null,
-        "end_to_end_500tok": null
-      },
-      "output_speed_by_prompt_length": [],
-      "featured": false,
-      "openrouter_slug": null,
-      "note": null,
-      "has_rich_data": true,
-      "data_sources": {
-        "documented_free_api": false,
-        "page_enrichment": false,
-        "aa_pipeline": true
-      },
-      "short_name": "MiMo-V2-Pro",
-      "derived": {
-        "value_intelligence_per_dollar_blend": 26.9,
-        "safety_composite": 58.1
       }
     },
     {
@@ -9159,6 +9346,110 @@
       }
     },
     {
+      "name": "JT-4.1 Flash 236B A21B",
+      "slug": "jt-4-1-flash-236b-a21b",
+      "aa_url": "https://artificialanalysis.ai/models/jt-4-1-flash-236b-a21b",
+      "creator": "China Mobile",
+      "released": "2026-07-09",
+      "knowledge_cutoff": null,
+      "is_reasoning": false,
+      "is_open_weights": false,
+      "deprecated": false,
+      "commercial_allowed": null,
+      "license": null,
+      "license_url": null,
+      "size_class": null,
+      "context_tokens": 256000,
+      "parameters_billions": null,
+      "active_params_billions": null,
+      "input_modalities": {
+        "text": true,
+        "image": false,
+        "audio": false,
+        "video": false
+      },
+      "output_modalities": {
+        "text": true,
+        "image": false,
+        "audio": false,
+        "video": false
+      },
+      "composite": {
+        "intelligence_index_v4_1": 39.9,
+        "coding_index": 52.4,
+        "math_index": null,
+        "agentic_index": 34.91,
+        "omniscience_index": -10.1
+      },
+      "benchmarks": {
+        "gpqa_diamond": 85.0,
+        "hle": 16.0,
+        "scicode": 38.0,
+        "ifbench": null,
+        "lcr": 59.0,
+        "tau2_bench": null,
+        "tau3_banking": null,
+        "terminalbench_hard": null,
+        "terminalbench_v2_1": null,
+        "mmlu_pro": null,
+        "livecodebench": null,
+        "math_500": null,
+        "aime": null,
+        "aime25": null,
+        "gdpval_v2": 38.0,
+        "critpt": 0.0,
+        "mmmu_pro": null,
+        "apex_agents_aa": null,
+        "it_bench_sre": null,
+        "omniscience_accuracy": 23.0,
+        "omniscience_hallucination_rate": null,
+        "omniscience_non_halluc": 57.0
+      },
+      "pricing_per_m_tokens": {
+        "input": null,
+        "output": null,
+        "blended_3_1": null,
+        "blended_7_2_1": null,
+        "blended_1_1": null,
+        "cache_hit": null,
+        "cache_write": null
+      },
+      "intelligence_evaluation_total_cost_usd": null,
+      "cost_per_intelligence_task_usd": {
+        "total": null,
+        "input": null,
+        "output": null,
+        "cacheRead": null,
+        "cacheWrite": null,
+        "nonCacheInput": null,
+        "reasoning": null,
+        "answer": null
+      },
+      "cost_per_eval_breakdown_usd": {},
+      "time_per_task_seconds": null,
+      "output_tokens_per_task": null,
+      "performance": {
+        "output_speed_tps": null,
+        "ttft_seconds_total": null,
+        "ttft_seconds_answer": null,
+        "end_to_end_500tok": null
+      },
+      "output_speed_by_prompt_length": [],
+      "featured": false,
+      "openrouter_slug": null,
+      "note": null,
+      "has_rich_data": true,
+      "data_sources": {
+        "documented_free_api": true,
+        "page_enrichment": false,
+        "aa_pipeline": true
+      },
+      "short_name": "JT-4.1 Flash 236B A21B",
+      "derived": {
+        "safety_composite": 50.2
+      }
+    },
+    {
       "name": "Agnes 2.5 Pro Alpha",
       "slug": "agnes-2-5-pro-alpha",
       "aa_url": "https://artificialanalysis.ai/models/agnes-2-5-pro-alpha",
@@ -9179,9 +9470,9 @@
       "output_modalities": null,
       "composite": {
         "intelligence_index_v4_1": 39.71,
-        "coding_index": null,
+        "coding_index": 58.8,
         "math_index": null,
-        "agentic_index": null,
+        "agentic_index": 25.4,
         "omniscience_index": -25.1
       },
       "benchmarks": {
@@ -9294,9 +9585,9 @@
       },
       "composite": {
         "intelligence_index_v4_1": 39.71,
-        "coding_index": 56.07,
+        "coding_index": 56.1,
         "math_index": null,
-        "agentic_index": 27.54,
+        "agentic_index": 29.7,
         "omniscience_index": -29.5
       },
       "benchmarks": {
@@ -9333,7 +9624,7 @@
         "cache_hit": 0.02,
         "cache_write": null
       },
-      "intelligence_evaluation_total_cost_usd": 271.57,
+      "intelligence_evaluation_total_cost_usd": 276.97,
       "cost_per_intelligence_task_usd": {
         "total": 0.1491,
         "input": null,
@@ -9380,6 +9671,110 @@
       }
     },
     {
+      "name": "GLM-5-Turbo",
+      "slug": "glm-5-turbo",
+      "aa_url": "https://artificialanalysis.ai/models/glm-5-turbo",
+      "creator": "Z AI",
+      "released": "2026-03-15",
+      "knowledge_cutoff": null,
+      "is_reasoning": false,
+      "is_open_weights": false,
+      "deprecated": false,
+      "commercial_allowed": null,
+      "license": null,
+      "license_url": null,
+      "size_class": null,
+      "context_tokens": 200000,
+      "parameters_billions": null,
+      "active_params_billions": null,
+      "input_modalities": {
+        "text": true,
+        "image": false,
+        "audio": false,
+        "video": false
+      },
+      "output_modalities": {
+        "text": true,
+        "image": false,
+        "audio": false,
+        "video": false
+      },
+      "composite": {
+        "intelligence_index_v4_1": 39.1,
+        "coding_index": null,
+        "math_index": null,
+        "agentic_index": null,
+        "omniscience_index": -15.1
+      },
+      "benchmarks": {
+        "gpqa_diamond": 85.0,
+        "hle": 25.0,
+        "scicode": 44.0,
+        "ifbench": 73.0,
+        "lcr": 61.0,
+        "tau2_bench": 99.0,
+        "tau3_banking": null,
+        "terminalbench_hard": 33.0,
+        "terminalbench_v2_1": null,
+        "mmlu_pro": null,
+        "livecodebench": null,
+        "math_500": null,
+        "aime": null,
+        "aime25": null,
+        "gdpval_v2": null,
+        "critpt": 0.0,
+        "mmmu_pro": null,
+        "apex_agents_aa": null,
+        "it_bench_sre": null,
+        "omniscience_accuracy": 29.0,
+        "omniscience_hallucination_rate": null,
+        "omniscience_non_halluc": 38.0
+      },
+      "pricing_per_m_tokens": {
+        "input": null,
+        "output": null,
+        "blended_3_1": null,
+        "blended_7_2_1": null,
+        "blended_1_1": null,
+        "cache_hit": null,
+        "cache_write": null
+      },
+      "intelligence_evaluation_total_cost_usd": null,
+      "cost_per_intelligence_task_usd": {
+        "total": null,
+        "input": null,
+        "output": null,
+        "cacheRead": null,
+        "cacheWrite": null,
+        "nonCacheInput": null,
+        "reasoning": null,
+        "answer": null
+      },
+      "cost_per_eval_breakdown_usd": {},
+      "time_per_task_seconds": null,
+      "output_tokens_per_task": null,
+      "performance": {
+        "output_speed_tps": null,
+        "ttft_seconds_total": null,
+        "ttft_seconds_answer": null,
+        "end_to_end_500tok": null
+      },
+      "output_speed_by_prompt_length": [],
+      "featured": false,
+      "openrouter_slug": null,
+      "note": null,
+      "has_rich_data": true,
+      "data_sources": {
+        "documented_free_api": true,
+        "page_enrichment": false,
+        "aa_pipeline": true
+      },
+      "short_name": "GLM-5-Turbo",
+      "derived": {
+        "safety_composite": 38.4
+      }
+    },
+    {
       "name": "DeepSeek V4 Flash (high)",
       "slug": "deepseek-v4-flash-0420-high",
       "aa_url": "https://artificialanalysis.ai/models/deepseek-v4-flash-0420-high",
@@ -9400,9 +9795,9 @@
       "output_modalities": null,
       "composite": {
         "intelligence_index_v4_1": 39.01,
-        "coding_index": null,
+        "coding_index": 52,
         "math_index": null,
-        "agentic_index": null,
+        "agentic_index": 30.3,
         "omniscience_index": -23.1
       },
       "benchmarks": {
@@ -9439,7 +9834,7 @@
         "cache_hit": 0.028,
         "cache_write": null
       },
-      "intelligence_evaluation_total_cost_usd": null,
+      "intelligence_evaluation_total_cost_usd": 59.86,
       "cost_per_intelligence_task_usd": {
         "total": 0.0354,
         "input": null,
@@ -9516,9 +9911,9 @@
       },
       "composite": {
         "intelligence_index_v4_1": 38.91,
-        "coding_index": 50.73,
+        "coding_index": 50.7,
         "math_index": null,
-        "agentic_index": 30.99,
+        "agentic_index": 31.8,
         "omniscience_index": -13.2
       },
       "benchmarks": {
@@ -9555,7 +9950,7 @@
         "cache_hit": 0.02,
         "cache_write": 0.25
       },
-      "intelligence_evaluation_total_cost_usd": 105.84,
+      "intelligence_evaluation_total_cost_usd": 21.49,
       "cost_per_intelligence_task_usd": {
         "total": 0.0116,
         "input": null,
@@ -9632,9 +10027,9 @@
       },
       "composite": {
         "intelligence_index_v4_1": 38.87,
-        "coding_index": 52.62,
+        "coding_index": 52.6,
         "math_index": null,
-        "agentic_index": 25.58,
+        "agentic_index": 25.9,
         "omniscience_index": 0.8
       },
       "benchmarks": {
@@ -9671,7 +10066,7 @@
         "cache_hit": null,
         "cache_write": null
       },
-      "intelligence_evaluation_total_cost_usd": null,
+      "intelligence_evaluation_total_cost_usd": 142.7,
       "cost_per_intelligence_task_usd": {
         "total": 0.3545,
         "input": null,
@@ -9718,110 +10113,6 @@
       }
     },
     {
-      "name": "JT-4.1 Flash 236B A21B",
-      "slug": "jt-4-1-flash-236b-a21b",
-      "aa_url": "https://artificialanalysis.ai/models/jt-4-1-flash-236b-a21b",
-      "creator": "China Mobile",
-      "released": "2026-07-09",
-      "knowledge_cutoff": null,
-      "is_reasoning": false,
-      "is_open_weights": false,
-      "deprecated": false,
-      "commercial_allowed": null,
-      "license": null,
-      "license_url": null,
-      "size_class": null,
-      "context_tokens": 256000,
-      "parameters_billions": null,
-      "active_params_billions": null,
-      "input_modalities": {
-        "text": true,
-        "image": false,
-        "audio": false,
-        "video": false
-      },
-      "output_modalities": {
-        "text": true,
-        "image": false,
-        "audio": false,
-        "video": false
-      },
-      "composite": {
-        "intelligence_index_v4_1": 38.83,
-        "coding_index": 52.43,
-        "math_index": null,
-        "agentic_index": 34.91,
-        "omniscience_index": -10.1
-      },
-      "benchmarks": {
-        "gpqa_diamond": 85.0,
-        "hle": 16.0,
-        "scicode": 38.0,
-        "ifbench": null,
-        "lcr": 59.0,
-        "tau2_bench": null,
-        "tau3_banking": null,
-        "terminalbench_hard": null,
-        "terminalbench_v2_1": null,
-        "mmlu_pro": null,
-        "livecodebench": null,
-        "math_500": null,
-        "aime": null,
-        "aime25": null,
-        "gdpval_v2": 38.0,
-        "critpt": 0.0,
-        "mmmu_pro": null,
-        "apex_agents_aa": null,
-        "it_bench_sre": null,
-        "omniscience_accuracy": 23.0,
-        "omniscience_hallucination_rate": null,
-        "omniscience_non_halluc": 57.0
-      },
-      "pricing_per_m_tokens": {
-        "input": null,
-        "output": null,
-        "blended_3_1": null,
-        "blended_7_2_1": null,
-        "blended_1_1": null,
-        "cache_hit": null,
-        "cache_write": null
-      },
-      "intelligence_evaluation_total_cost_usd": null,
-      "cost_per_intelligence_task_usd": {
-        "total": null,
-        "input": null,
-        "output": null,
-        "cacheRead": null,
-        "cacheWrite": null,
-        "nonCacheInput": null,
-        "reasoning": null,
-        "answer": null
-      },
-      "cost_per_eval_breakdown_usd": {},
-      "time_per_task_seconds": null,
-      "output_tokens_per_task": null,
-      "performance": {
-        "output_speed_tps": null,
-        "ttft_seconds_total": null,
-        "ttft_seconds_answer": null,
-        "end_to_end_500tok": null
-      },
-      "output_speed_by_prompt_length": [],
-      "featured": false,
-      "openrouter_slug": null,
-      "note": null,
-      "has_rich_data": true,
-      "data_sources": {
-        "documented_free_api": false,
-        "page_enrichment": false,
-        "aa_pipeline": true
-      },
-      "short_name": "JT-4.1 Flash 236B A21B",
-      "derived": {
-        "safety_composite": 49.7
-      }
-    },
-    {
       "name": "Nemotron 3 Ultra",
       "slug": "nvidia-nemotron-3-ultra-550b-a55b",
       "aa_url": "https://artificialanalysis.ai/models/nvidia-nemotron-3-ultra-550b-a55b",
@@ -9852,9 +10143,9 @@
       },
       "composite": {
         "intelligence_index_v4_1": 38.32,
-        "coding_index": 49.27,
+        "coding_index": 49.3,
         "math_index": null,
-        "agentic_index": 27.36,
+        "agentic_index": 27.5,
         "omniscience_index": -0.4
       },
       "benchmarks": {
@@ -9891,7 +10182,7 @@
         "cache_hit": null,
         "cache_write": null
       },
-      "intelligence_evaluation_total_cost_usd": 443.07,
+      "intelligence_evaluation_total_cost_usd": 534.18,
       "cost_per_intelligence_task_usd": {
         "total": 0.1883,
         "input": null,
@@ -9938,110 +10229,6 @@
       }
     },
     {
-      "name": "GLM-5-Turbo",
-      "slug": "glm-5-turbo",
-      "aa_url": "https://artificialanalysis.ai/models/glm-5-turbo",
-      "creator": "Z AI",
-      "released": "2026-03-15",
-      "knowledge_cutoff": null,
-      "is_reasoning": false,
-      "is_open_weights": false,
-      "deprecated": false,
-      "commercial_allowed": null,
-      "license": null,
-      "license_url": null,
-      "size_class": null,
-      "context_tokens": 200000,
-      "parameters_billions": null,
-      "active_params_billions": null,
-      "input_modalities": {
-        "text": true,
-        "image": false,
-        "audio": false,
-        "video": false
-      },
-      "output_modalities": {
-        "text": true,
-        "image": false,
-        "audio": false,
-        "video": false
-      },
-      "composite": {
-        "intelligence_index_v4_1": 38.06,
-        "coding_index": null,
-        "math_index": null,
-        "agentic_index": null,
-        "omniscience_index": -15.1
-      },
-      "benchmarks": {
-        "gpqa_diamond": 85.0,
-        "hle": 25.0,
-        "scicode": 44.0,
-        "ifbench": 73.0,
-        "lcr": 61.0,
-        "tau2_bench": 99.0,
-        "tau3_banking": null,
-        "terminalbench_hard": 33.0,
-        "terminalbench_v2_1": null,
-        "mmlu_pro": null,
-        "livecodebench": null,
-        "math_500": null,
-        "aime": null,
-        "aime25": null,
-        "gdpval_v2": null,
-        "critpt": 0.0,
-        "mmmu_pro": null,
-        "apex_agents_aa": null,
-        "it_bench_sre": null,
-        "omniscience_accuracy": 29.0,
-        "omniscience_hallucination_rate": null,
-        "omniscience_non_halluc": 38.0
-      },
-      "pricing_per_m_tokens": {
-        "input": null,
-        "output": null,
-        "blended_3_1": null,
-        "blended_7_2_1": null,
-        "blended_1_1": null,
-        "cache_hit": null,
-        "cache_write": null
-      },
-      "intelligence_evaluation_total_cost_usd": null,
-      "cost_per_intelligence_task_usd": {
-        "total": null,
-        "input": null,
-        "output": null,
-        "cacheRead": null,
-        "cacheWrite": null,
-        "nonCacheInput": null,
-        "reasoning": null,
-        "answer": null
-      },
-      "cost_per_eval_breakdown_usd": {},
-      "time_per_task_seconds": null,
-      "output_tokens_per_task": null,
-      "performance": {
-        "output_speed_tps": null,
-        "ttft_seconds_total": null,
-        "ttft_seconds_answer": null,
-        "end_to_end_500tok": null
-      },
-      "output_speed_by_prompt_length": [],
-      "featured": false,
-      "openrouter_slug": null,
-      "note": null,
-      "has_rich_data": true,
-      "data_sources": {
-        "documented_free_api": false,
-        "page_enrichment": false,
-        "aa_pipeline": true
-      },
-      "short_name": "GLM-5-Turbo",
-      "derived": {
-        "safety_composite": 38.0
-      }
-    },
-    {
       "name": "Grok 4.3 (high)",
       "slug": "grok-4-3",
       "aa_url": "https://artificialanalysis.ai/models/grok-4-3",
@@ -10072,9 +10259,9 @@
       },
       "composite": {
         "intelligence_index_v4_1": 37.95,
-        "coding_index": 42.25,
+        "coding_index": 42.2,
         "math_index": null,
-        "agentic_index": 24.1,
+        "agentic_index": 24.2,
         "omniscience_index": 18.0
       },
       "benchmarks": {
@@ -10293,9 +10480,9 @@
       "output_modalities": null,
       "composite": {
         "intelligence_index_v4_1": 37.82,
-        "coding_index": null,
+        "coding_index": 50.6,
         "math_index": null,
-        "agentic_index": null,
+        "agentic_index": 29.3,
         "omniscience_index": -17.9
       },
       "benchmarks": {
@@ -10332,7 +10519,7 @@
         "cache_hit": 0.015,
         "cache_write": null
       },
-      "intelligence_evaluation_total_cost_usd": null,
+      "intelligence_evaluation_total_cost_usd": 72.81,
       "cost_per_intelligence_task_usd": {
         "total": 0.0377,
         "input": null,
@@ -10409,9 +10596,9 @@
       },
       "composite": {
         "intelligence_index_v4_1": 37.7,
-        "coding_index": 53.72,
+        "coding_index": 53.7,
         "math_index": null,
-        "agentic_index": 27.03,
+        "agentic_index": 27.5,
         "omniscience_index": -20.0
       },
       "benchmarks": {
@@ -10448,7 +10635,7 @@
         "cache_hit": null,
         "cache_write": null
       },
-      "intelligence_evaluation_total_cost_usd": 668.08,
+      "intelligence_evaluation_total_cost_usd": 667.18,
       "cost_per_intelligence_task_usd": {
         "total": 0.187,
         "input": null,
@@ -10621,7 +10808,7 @@
       "output_modalities": null,
       "composite": {
         "intelligence_index_v4_1": 37.44,
-        "coding_index": null,
+        "coding_index": 49.3,
         "math_index": null,
         "agentic_index": 27.2,
         "omniscience_index": 5.2
@@ -10660,7 +10847,7 @@
         "cache_hit": 0.03,
         "cache_write": null
       },
-      "intelligence_evaluation_total_cost_usd": null,
+      "intelligence_evaluation_total_cost_usd": 153.39,
       "cost_per_intelligence_task_usd": {
         "total": 0.0965,
         "input": null,
@@ -10704,6 +10891,100 @@
         "speed_tier": 2,
         "latency_ttft_seconds": 8.76,
         "latency_tier": 1
+      }
+    },
+    {
+      "name": "Solar Open2 250B",
+      "slug": "solar-open2-250b",
+      "aa_url": "https://artificialanalysis.ai/models/solar-open2-250b",
+      "creator": "Upstage",
+      "released": "2026-08-12",
+      "knowledge_cutoff": null,
+      "is_reasoning": false,
+      "is_open_weights": false,
+      "deprecated": false,
+      "commercial_allowed": null,
+      "license": null,
+      "license_url": null,
+      "size_class": null,
+      "context_tokens": null,
+      "parameters_billions": null,
+      "active_params_billions": null,
+      "input_modalities": null,
+      "output_modalities": null,
+      "composite": {
+        "intelligence_index_v4_1": 37.4,
+        "coding_index": 44.7,
+        "math_index": null,
+        "agentic_index": 27.8,
+        "omniscience_index": null
+      },
+      "benchmarks": {
+        "gpqa_diamond": null,
+        "hle": null,
+        "scicode": null,
+        "ifbench": null,
+        "lcr": null,
+        "tau2_bench": null,
+        "tau3_banking": null,
+        "terminalbench_hard": null,
+        "terminalbench_v2_1": null,
+        "mmlu_pro": null,
+        "livecodebench": null,
+        "math_500": null,
+        "aime": null,
+        "aime25": null,
+        "gdpval_v2": 31.1,
+        "critpt": 5.7,
+        "mmmu_pro": null,
+        "apex_agents_aa": null,
+        "it_bench_sre": null,
+        "omniscience_accuracy": null,
+        "omniscience_hallucination_rate": null,
+        "omniscience_non_halluc": 74.6
+      },
+      "pricing_per_m_tokens": {
+        "input": null,
+        "output": null,
+        "blended_3_1": null,
+        "blended_7_2_1": null,
+        "blended_1_1": null,
+        "cache_hit": null,
+        "cache_write": null
+      },
+      "intelligence_evaluation_total_cost_usd": null,
+      "cost_per_intelligence_task_usd": {
+        "total": null,
+        "input": null,
+        "output": null,
+        "cacheRead": null,
+        "cacheWrite": null,
+        "nonCacheInput": null,
+        "reasoning": null,
+        "answer": null
+      },
+      "cost_per_eval_breakdown_usd": {},
+      "time_per_task_seconds": null,
+      "output_tokens_per_task": null,
+      "performance": {
+        "output_speed_tps": null,
+        "ttft_seconds_total": null,
+        "ttft_seconds_answer": null,
+        "end_to_end_500tok": null
+      },
+      "output_speed_by_prompt_length": [],
+      "featured": false,
+      "openrouter_slug": null,
+      "note": null,
+      "has_rich_data": true,
+      "data_sources": {
+        "documented_free_api": true,
+        "page_enrichment": false,
+        "aa_pipeline": true
+      },
+      "short_name": "Solar Open2 250B",
+      "derived": {
+        "safety_composite": 59.7
       }
     },
     {
@@ -10809,6 +11090,111 @@
       "derived": {
         "value_intelligence_per_dollar_blend": 207.6,
         "safety_composite": 20.9
+      }
+    },
+    {
+      "name": "MiMo-V2-Omni-0327",
+      "slug": "mimo-v2-omni-0327",
+      "aa_url": "https://artificialanalysis.ai/models/mimo-v2-omni-0327",
+      "creator": "Xiaomi",
+      "released": "2026-03-27",
+      "knowledge_cutoff": null,
+      "is_reasoning": false,
+      "is_open_weights": false,
+      "deprecated": false,
+      "commercial_allowed": null,
+      "license": null,
+      "license_url": null,
+      "size_class": "medium",
+      "context_tokens": 256000,
+      "parameters_billions": null,
+      "active_params_billions": null,
+      "input_modalities": {
+        "text": true,
+        "image": true,
+        "audio": false,
+        "video": false
+      },
+      "output_modalities": {
+        "text": true,
+        "image": false,
+        "audio": false,
+        "video": false
+      },
+      "composite": {
+        "intelligence_index_v4_1": 37.3,
+        "coding_index": null,
+        "math_index": null,
+        "agentic_index": null,
+        "omniscience_index": -14.0
+      },
+      "benchmarks": {
+        "gpqa_diamond": 85.0,
+        "hle": 20.0,
+        "scicode": 39.0,
+        "ifbench": 67.0,
+        "lcr": 64.0,
+        "tau2_bench": 88.0,
+        "tau3_banking": null,
+        "terminalbench_hard": 36.0,
+        "terminalbench_v2_1": null,
+        "mmlu_pro": null,
+        "livecodebench": null,
+        "math_500": null,
+        "aime": null,
+        "aime25": null,
+        "gdpval_v2": null,
+        "critpt": 1.0,
+        "mmmu_pro": 74.0,
+        "apex_agents_aa": null,
+        "it_bench_sre": null,
+        "omniscience_accuracy": 18.0,
+        "omniscience_hallucination_rate": null,
+        "omniscience_non_halluc": 60.0
+      },
+      "pricing_per_m_tokens": {
+        "input": 0.4,
+        "output": 2,
+        "blended_3_1": 0.8,
+        "blended_7_2_1": 0.68,
+        "blended_1_1": null,
+        "cache_hit": null,
+        "cache_write": null
+      },
+      "intelligence_evaluation_total_cost_usd": null,
+      "cost_per_intelligence_task_usd": {
+        "total": null,
+        "input": null,
+        "output": null,
+        "cacheRead": null,
+        "cacheWrite": null,
+        "nonCacheInput": null,
+        "reasoning": null,
+        "answer": null
+      },
+      "cost_per_eval_breakdown_usd": {},
+      "time_per_task_seconds": null,
+      "output_tokens_per_task": null,
+      "performance": {
+        "output_speed_tps": null,
+        "ttft_seconds_total": null,
+        "ttft_seconds_answer": null,
+        "end_to_end_500tok": null
+      },
+      "output_speed_by_prompt_length": [],
+      "featured": false,
+      "openrouter_slug": null,
+      "note": null,
+      "has_rich_data": true,
+      "data_sources": {
+        "documented_free_api": true,
+        "page_enrichment": false,
+        "aa_pipeline": true
+      },
+      "short_name": "MiMo-V2-Omni-0327",
+      "derived": {
+        "value_intelligence_per_dollar_blend": 46.6,
+        "safety_composite": 50.9
       }
     },
     {
@@ -10924,111 +11310,6 @@
         "speed_tier": 2,
         "latency_ttft_seconds": 9.07,
         "latency_tier": 1
-      }
-    },
-    {
-      "name": "MiMo-V2-Omni-0327",
-      "slug": "mimo-v2-omni-0327",
-      "aa_url": "https://artificialanalysis.ai/models/mimo-v2-omni-0327",
-      "creator": "Xiaomi",
-      "released": "2026-03-27",
-      "knowledge_cutoff": null,
-      "is_reasoning": false,
-      "is_open_weights": false,
-      "deprecated": false,
-      "commercial_allowed": null,
-      "license": null,
-      "license_url": null,
-      "size_class": "medium",
-      "context_tokens": 256000,
-      "parameters_billions": null,
-      "active_params_billions": null,
-      "input_modalities": {
-        "text": true,
-        "image": true,
-        "audio": false,
-        "video": false
-      },
-      "output_modalities": {
-        "text": true,
-        "image": false,
-        "audio": false,
-        "video": false
-      },
-      "composite": {
-        "intelligence_index_v4_1": 36.39,
-        "coding_index": null,
-        "math_index": null,
-        "agentic_index": null,
-        "omniscience_index": -14.0
-      },
-      "benchmarks": {
-        "gpqa_diamond": 85.0,
-        "hle": 20.0,
-        "scicode": 39.0,
-        "ifbench": 67.0,
-        "lcr": 64.0,
-        "tau2_bench": 88.0,
-        "tau3_banking": null,
-        "terminalbench_hard": 36.0,
-        "terminalbench_v2_1": null,
-        "mmlu_pro": null,
-        "livecodebench": null,
-        "math_500": null,
-        "aime": null,
-        "aime25": null,
-        "gdpval_v2": null,
-        "critpt": 1.0,
-        "mmmu_pro": 74.0,
-        "apex_agents_aa": null,
-        "it_bench_sre": null,
-        "omniscience_accuracy": 18.0,
-        "omniscience_hallucination_rate": null,
-        "omniscience_non_halluc": 60.0
-      },
-      "pricing_per_m_tokens": {
-        "input": 0.4,
-        "output": 2,
-        "blended_3_1": 0.8,
-        "blended_7_2_1": 0.68,
-        "blended_1_1": null,
-        "cache_hit": null,
-        "cache_write": null
-      },
-      "intelligence_evaluation_total_cost_usd": null,
-      "cost_per_intelligence_task_usd": {
-        "total": null,
-        "input": null,
-        "output": null,
-        "cacheRead": null,
-        "cacheWrite": null,
-        "nonCacheInput": null,
-        "reasoning": null,
-        "answer": null
-      },
-      "cost_per_eval_breakdown_usd": {},
-      "time_per_task_seconds": null,
-      "output_tokens_per_task": null,
-      "performance": {
-        "output_speed_tps": null,
-        "ttft_seconds_total": null,
-        "ttft_seconds_answer": null,
-        "end_to_end_500tok": null
-      },
-      "output_speed_by_prompt_length": [],
-      "featured": false,
-      "openrouter_slug": null,
-      "note": null,
-      "has_rich_data": true,
-      "data_sources": {
-        "documented_free_api": false,
-        "page_enrichment": false,
-        "aa_pipeline": true
-      },
-      "short_name": "MiMo-V2-Omni-0327",
-      "derived": {
-        "value_intelligence_per_dollar_blend": 45.5,
-        "safety_composite": 50.6
       }
     },
     {
@@ -11262,6 +11543,110 @@
       }
     },
     {
+      "name": "MiMo-V2-Omni",
+      "slug": "mimo-v2-omni",
+      "aa_url": "https://artificialanalysis.ai/models/mimo-v2-omni",
+      "creator": "Xiaomi",
+      "released": "2026-03-19",
+      "knowledge_cutoff": null,
+      "is_reasoning": false,
+      "is_open_weights": false,
+      "deprecated": false,
+      "commercial_allowed": null,
+      "license": null,
+      "license_url": null,
+      "size_class": null,
+      "context_tokens": 256000,
+      "parameters_billions": null,
+      "active_params_billions": null,
+      "input_modalities": {
+        "text": true,
+        "image": true,
+        "audio": false,
+        "video": false
+      },
+      "output_modalities": {
+        "text": true,
+        "image": false,
+        "audio": false,
+        "video": false
+      },
+      "composite": {
+        "intelligence_index_v4_1": 35.9,
+        "coding_index": null,
+        "math_index": null,
+        "agentic_index": null,
+        "omniscience_index": -17.4
+      },
+      "benchmarks": {
+        "gpqa_diamond": 83.0,
+        "hle": 20.0,
+        "scicode": 37.0,
+        "ifbench": 54.0,
+        "lcr": 67.0,
+        "tau2_bench": 91.0,
+        "tau3_banking": null,
+        "terminalbench_hard": 35.0,
+        "terminalbench_v2_1": null,
+        "mmlu_pro": null,
+        "livecodebench": null,
+        "math_500": null,
+        "aime": null,
+        "aime25": null,
+        "gdpval_v2": null,
+        "critpt": 1.0,
+        "mmmu_pro": 70.0,
+        "apex_agents_aa": null,
+        "it_bench_sre": null,
+        "omniscience_accuracy": 19.0,
+        "omniscience_hallucination_rate": null,
+        "omniscience_non_halluc": 56.0
+      },
+      "pricing_per_m_tokens": {
+        "input": 0,
+        "output": 0,
+        "blended_3_1": 0.0,
+        "blended_7_2_1": 0.0,
+        "blended_1_1": null,
+        "cache_hit": null,
+        "cache_write": null
+      },
+      "intelligence_evaluation_total_cost_usd": null,
+      "cost_per_intelligence_task_usd": {
+        "total": null,
+        "input": null,
+        "output": null,
+        "cacheRead": null,
+        "cacheWrite": null,
+        "nonCacheInput": null,
+        "reasoning": null,
+        "answer": null
+      },
+      "cost_per_eval_breakdown_usd": {},
+      "time_per_task_seconds": null,
+      "output_tokens_per_task": null,
+      "performance": {
+        "output_speed_tps": null,
+        "ttft_seconds_total": null,
+        "ttft_seconds_answer": null,
+        "end_to_end_500tok": null
+      },
+      "output_speed_by_prompt_length": [],
+      "featured": false,
+      "openrouter_slug": null,
+      "note": null,
+      "has_rich_data": true,
+      "data_sources": {
+        "documented_free_api": true,
+        "page_enrichment": false,
+        "aa_pipeline": true
+      },
+      "short_name": "MiMo-V2-Omni",
+      "derived": {
+        "safety_composite": 48.0
+      }
+    },
+    {
       "name": "Gemini 3.5 Flash (minimal) AI Studio",
       "slug": "gemini-3-5-flash-minimal",
       "aa_url": "https://artificialanalysis.ai/models/gemini-3-5-flash-minimal",
@@ -11407,9 +11792,9 @@
       },
       "composite": {
         "intelligence_index_v4_1": 35.75,
-        "coding_index": 56.48,
+        "coding_index": 56.5,
         "math_index": null,
-        "agentic_index": 25.8,
+        "agentic_index": 26.1,
         "omniscience_index": -4.8
       },
       "benchmarks": {
@@ -11446,7 +11831,7 @@
         "cache_hit": 0.55,
         "cache_write": null
       },
-      "intelligence_evaluation_total_cost_usd": 192.91,
+      "intelligence_evaluation_total_cost_usd": 211.75,
       "cost_per_intelligence_task_usd": {
         "total": 0.4017,
         "input": null,
@@ -11608,6 +11993,110 @@
       }
     },
     {
+      "name": "GLM 5V Turbo (Reasoning)",
+      "slug": "glm-5v-turbo",
+      "aa_url": "https://artificialanalysis.ai/models/glm-5v-turbo",
+      "creator": "Z AI",
+      "released": "2026-04-01",
+      "knowledge_cutoff": null,
+      "is_reasoning": false,
+      "is_open_weights": false,
+      "deprecated": false,
+      "commercial_allowed": null,
+      "license": null,
+      "license_url": null,
+      "size_class": null,
+      "context_tokens": 200000,
+      "parameters_billions": null,
+      "active_params_billions": null,
+      "input_modalities": {
+        "text": true,
+        "image": true,
+        "audio": false,
+        "video": true
+      },
+      "output_modalities": {
+        "text": true,
+        "image": false,
+        "audio": false,
+        "video": false
+      },
+      "composite": {
+        "intelligence_index_v4_1": 35.3,
+        "coding_index": null,
+        "math_index": null,
+        "agentic_index": null,
+        "omniscience_index": -19.0
+      },
+      "benchmarks": {
+        "gpqa_diamond": 81.0,
+        "hle": 16.0,
+        "scicode": 44.0,
+        "ifbench": 61.0,
+        "lcr": 61.0,
+        "tau2_bench": 99.0,
+        "tau3_banking": null,
+        "terminalbench_hard": 33.0,
+        "terminalbench_v2_1": null,
+        "mmlu_pro": null,
+        "livecodebench": null,
+        "math_500": null,
+        "aime": null,
+        "aime25": null,
+        "gdpval_v2": null,
+        "critpt": 1.0,
+        "mmmu_pro": 73.0,
+        "apex_agents_aa": null,
+        "it_bench_sre": null,
+        "omniscience_accuracy": 29.0,
+        "omniscience_hallucination_rate": null,
+        "omniscience_non_halluc": 32.0
+      },
+      "pricing_per_m_tokens": {
+        "input": null,
+        "output": null,
+        "blended_3_1": null,
+        "blended_7_2_1": null,
+        "blended_1_1": null,
+        "cache_hit": null,
+        "cache_write": null
+      },
+      "intelligence_evaluation_total_cost_usd": null,
+      "cost_per_intelligence_task_usd": {
+        "total": null,
+        "input": null,
+        "output": null,
+        "cacheRead": null,
+        "cacheWrite": null,
+        "nonCacheInput": null,
+        "reasoning": null,
+        "answer": null
+      },
+      "cost_per_eval_breakdown_usd": {},
+      "time_per_task_seconds": null,
+      "output_tokens_per_task": null,
+      "performance": {
+        "output_speed_tps": null,
+        "ttft_seconds_total": null,
+        "ttft_seconds_answer": null,
+        "end_to_end_500tok": null
+      },
+      "output_speed_by_prompt_length": [],
+      "featured": false,
+      "openrouter_slug": null,
+      "note": null,
+      "has_rich_data": true,
+      "data_sources": {
+        "documented_free_api": true,
+        "page_enrichment": false,
+        "aa_pipeline": true
+      },
+      "short_name": "GLM 5V Turbo",
+      "derived": {
+        "safety_composite": 33.3
+      }
+    },
+    {
       "name": "Muse Glimmer (high)",
       "slug": "muse-glimmer",
       "aa_url": "https://artificialanalysis.ai/models/muse-glimmer",
@@ -11628,7 +12117,7 @@
       "output_modalities": null,
       "composite": {
         "intelligence_index_v4_1": 35.06,
-        "coding_index": null,
+        "coding_index": 49,
         "math_index": null,
         "agentic_index": 22.9,
         "omniscience_index": -32.9
@@ -11667,7 +12156,7 @@
         "cache_hit": 0.04,
         "cache_write": null
       },
-      "intelligence_evaluation_total_cost_usd": null,
+      "intelligence_evaluation_total_cost_usd": 96.48,
       "cost_per_intelligence_task_usd": {
         "total": 0.0428,
         "input": null,
@@ -11714,11 +12203,11 @@
       }
     },
     {
-      "name": "MiMo-V2-Omni",
-      "slug": "mimo-v2-omni",
-      "aa_url": "https://artificialanalysis.ai/models/mimo-v2-omni",
-      "creator": "Xiaomi",
-      "released": "2026-03-19",
+      "name": "A.X-K2",
+      "slug": "a-x-k2",
+      "aa_url": "https://artificialanalysis.ai/models/a-x-k2",
+      "creator": "SK Telecom",
+      "released": "2026-08-12",
       "knowledge_cutoff": null,
       "is_reasoning": false,
       "is_open_weights": false,
@@ -11727,57 +12216,47 @@
       "license": null,
       "license_url": null,
       "size_class": null,
-      "context_tokens": 256000,
+      "context_tokens": null,
       "parameters_billions": null,
       "active_params_billions": null,
-      "input_modalities": {
-        "text": true,
-        "image": true,
-        "audio": false,
-        "video": false
-      },
-      "output_modalities": {
-        "text": true,
-        "image": false,
-        "audio": false,
-        "video": false
-      },
+      "input_modalities": null,
+      "output_modalities": null,
       "composite": {
-        "intelligence_index_v4_1": 34.99,
-        "coding_index": null,
+        "intelligence_index_v4_1": 35,
+        "coding_index": 38.8,
         "math_index": null,
-        "agentic_index": null,
-        "omniscience_index": -17.4
+        "agentic_index": 25.7,
+        "omniscience_index": null
       },
       "benchmarks": {
-        "gpqa_diamond": 83.0,
-        "hle": 20.0,
-        "scicode": 37.0,
-        "ifbench": 54.0,
-        "lcr": 67.0,
-        "tau2_bench": 91.0,
+        "gpqa_diamond": null,
+        "hle": null,
+        "scicode": null,
+        "ifbench": null,
+        "lcr": null,
+        "tau2_bench": null,
         "tau3_banking": null,
-        "terminalbench_hard": 35.0,
+        "terminalbench_hard": null,
         "terminalbench_v2_1": null,
         "mmlu_pro": null,
         "livecodebench": null,
         "math_500": null,
         "aime": null,
         "aime25": null,
-        "gdpval_v2": null,
-        "critpt": 1.0,
-        "mmmu_pro": 70.0,
+        "gdpval_v2": 30.5,
+        "critpt": 8.9,
+        "mmmu_pro": null,
         "apex_agents_aa": null,
         "it_bench_sre": null,
-        "omniscience_accuracy": 19.0,
+        "omniscience_accuracy": null,
         "omniscience_hallucination_rate": null,
-        "omniscience_non_halluc": 56.0
+        "omniscience_non_halluc": 67.0
       },
       "pricing_per_m_tokens": {
-        "input": 0,
-        "output": 0,
-        "blended_3_1": 0.0,
-        "blended_7_2_1": 0.0,
+        "input": null,
+        "output": null,
+        "blended_3_1": null,
+        "blended_7_2_1": null,
         "blended_1_1": null,
         "cache_hit": null,
         "cache_write": null
@@ -11808,13 +12287,13 @@
       "note": null,
       "has_rich_data": true,
       "data_sources": {
-        "documented_free_api": false,
+        "documented_free_api": true,
         "page_enrichment": false,
         "aa_pipeline": true
       },
-      "short_name": "MiMo-V2-Omni",
+      "short_name": "A.X-K2",
       "derived": {
-        "safety_composite": 47.6
+        "safety_composite": 54.2
       }
     },
     {
@@ -11838,9 +12317,9 @@
       "output_modalities": null,
       "composite": {
         "intelligence_index_v4_1": 34.81,
-        "coding_index": null,
+        "coding_index": 46.5,
         "math_index": null,
-        "agentic_index": null,
+        "agentic_index": 35.1,
         "omniscience_index": -6.6
       },
       "benchmarks": {
@@ -11943,9 +12422,9 @@
       "output_modalities": null,
       "composite": {
         "intelligence_index_v4_1": 34.74,
-        "coding_index": null,
+        "coding_index": 44.6,
         "math_index": null,
-        "agentic_index": null,
+        "agentic_index": 30.4,
         "omniscience_index": -8.0
       },
       "benchmarks": {
@@ -11982,7 +12461,7 @@
         "cache_hit": 0.05,
         "cache_write": null
       },
-      "intelligence_evaluation_total_cost_usd": null,
+      "intelligence_evaluation_total_cost_usd": 421.76,
       "cost_per_intelligence_task_usd": {
         "total": 0.426,
         "input": null,
@@ -12059,9 +12538,9 @@
       },
       "composite": {
         "intelligence_index_v4_1": 34.62,
-        "coding_index": 52.31,
+        "coding_index": 52.3,
         "math_index": null,
-        "agentic_index": 29.33,
+        "agentic_index": 30.1,
         "omniscience_index": -23.2
       },
       "benchmarks": {
@@ -12098,7 +12577,7 @@
         "cache_hit": 0.28,
         "cache_write": 3.44
       },
-      "intelligence_evaluation_total_cost_usd": 123.64,
+      "intelligence_evaluation_total_cost_usd": 98.52,
       "cost_per_intelligence_task_usd": {
         "total": 0.1427,
         "input": null,
@@ -12142,110 +12621,6 @@
         "speed_tier": 2,
         "latency_ttft_seconds": 0.74,
         "latency_tier": 2
-      }
-    },
-    {
-      "name": "GLM 5V Turbo (Reasoning)",
-      "slug": "glm-5v-turbo",
-      "aa_url": "https://artificialanalysis.ai/models/glm-5v-turbo",
-      "creator": "Z AI",
-      "released": "2026-04-01",
-      "knowledge_cutoff": null,
-      "is_reasoning": false,
-      "is_open_weights": false,
-      "deprecated": false,
-      "commercial_allowed": null,
-      "license": null,
-      "license_url": null,
-      "size_class": null,
-      "context_tokens": 200000,
-      "parameters_billions": null,
-      "active_params_billions": null,
-      "input_modalities": {
-        "text": true,
-        "image": true,
-        "audio": false,
-        "video": true
-      },
-      "output_modalities": {
-        "text": true,
-        "image": false,
-        "audio": false,
-        "video": false
-      },
-      "composite": {
-        "intelligence_index_v4_1": 34.49,
-        "coding_index": null,
-        "math_index": null,
-        "agentic_index": null,
-        "omniscience_index": -19.0
-      },
-      "benchmarks": {
-        "gpqa_diamond": 81.0,
-        "hle": 16.0,
-        "scicode": 44.0,
-        "ifbench": 61.0,
-        "lcr": 61.0,
-        "tau2_bench": 99.0,
-        "tau3_banking": null,
-        "terminalbench_hard": 33.0,
-        "terminalbench_v2_1": null,
-        "mmlu_pro": null,
-        "livecodebench": null,
-        "math_500": null,
-        "aime": null,
-        "aime25": null,
-        "gdpval_v2": null,
-        "critpt": 1.0,
-        "mmmu_pro": 73.0,
-        "apex_agents_aa": null,
-        "it_bench_sre": null,
-        "omniscience_accuracy": 29.0,
-        "omniscience_hallucination_rate": null,
-        "omniscience_non_halluc": 32.0
-      },
-      "pricing_per_m_tokens": {
-        "input": null,
-        "output": null,
-        "blended_3_1": null,
-        "blended_7_2_1": null,
-        "blended_1_1": null,
-        "cache_hit": null,
-        "cache_write": null
-      },
-      "intelligence_evaluation_total_cost_usd": null,
-      "cost_per_intelligence_task_usd": {
-        "total": null,
-        "input": null,
-        "output": null,
-        "cacheRead": null,
-        "cacheWrite": null,
-        "nonCacheInput": null,
-        "reasoning": null,
-        "answer": null
-      },
-      "cost_per_eval_breakdown_usd": {},
-      "time_per_task_seconds": null,
-      "output_tokens_per_task": null,
-      "performance": {
-        "output_speed_tps": null,
-        "ttft_seconds_total": null,
-        "ttft_seconds_answer": null,
-        "end_to_end_500tok": null
-      },
-      "output_speed_by_prompt_length": [],
-      "featured": false,
-      "openrouter_slug": null,
-      "note": null,
-      "has_rich_data": true,
-      "data_sources": {
-        "documented_free_api": false,
-        "page_enrichment": false,
-        "aa_pipeline": true
-      },
-      "short_name": "GLM 5V Turbo",
-      "derived": {
-        "safety_composite": 33.0
       }
     },
     {
@@ -12471,9 +12846,9 @@
       "output_modalities": null,
       "composite": {
         "intelligence_index_v4_1": 34.02,
-        "coding_index": null,
+        "coding_index": 33.1,
         "math_index": null,
-        "agentic_index": null,
+        "agentic_index": 32.9,
         "omniscience_index": 3.8
       },
       "benchmarks": {
@@ -12510,7 +12885,7 @@
         "cache_hit": null,
         "cache_write": null
       },
-      "intelligence_evaluation_total_cost_usd": null,
+      "intelligence_evaluation_total_cost_usd": 0,
       "cost_per_intelligence_task_usd": {
         "total": 0,
         "input": null,
@@ -12566,9 +12941,9 @@
       "output_modalities": null,
       "composite": {
         "intelligence_index_v4_1": 33.97,
-        "coding_index": null,
+        "coding_index": 45.3,
         "math_index": null,
-        "agentic_index": null,
+        "agentic_index": 22,
         "omniscience_index": -23.4
       },
       "benchmarks": {
@@ -12605,7 +12980,7 @@
         "cache_hit": 0.015,
         "cache_write": null
       },
-      "intelligence_evaluation_total_cost_usd": null,
+      "intelligence_evaluation_total_cost_usd": 441.77,
       "cost_per_intelligence_task_usd": {
         "total": 0.1213,
         "input": null,
@@ -12682,9 +13057,9 @@
       },
       "composite": {
         "intelligence_index_v4_1": 33.85,
-        "coding_index": 44.16,
+        "coding_index": 44.2,
         "math_index": null,
-        "agentic_index": 25.4,
+        "agentic_index": 25.7,
         "omniscience_index": -14.7
       },
       "benchmarks": {
@@ -12721,7 +13096,7 @@
         "cache_hit": 0.02,
         "cache_write": 0.25
       },
-      "intelligence_evaluation_total_cost_usd": 68.8,
+      "intelligence_evaluation_total_cost_usd": 13.94,
       "cost_per_intelligence_task_usd": {
         "total": 0.009,
         "input": null,
@@ -12798,9 +13173,9 @@
       },
       "composite": {
         "intelligence_index_v4_1": 33.73,
-        "coding_index": null,
+        "coding_index": 59.5,
         "math_index": null,
-        "agentic_index": null,
+        "agentic_index": 15.1,
         "omniscience_index": -22.5
       },
       "benchmarks": {
@@ -12913,9 +13288,9 @@
       },
       "composite": {
         "intelligence_index_v4_1": 32.13,
-        "coding_index": 41.88,
+        "coding_index": 41.9,
         "math_index": null,
-        "agentic_index": 21.41,
+        "agentic_index": 21.6,
         "omniscience_index": -22.2
       },
       "benchmarks": {
@@ -12952,7 +13327,7 @@
         "cache_hit": null,
         "cache_write": null
       },
-      "intelligence_evaluation_total_cost_usd": 333.53,
+      "intelligence_evaluation_total_cost_usd": 505.33,
       "cost_per_intelligence_task_usd": {
         "total": 0.1946,
         "input": null,
@@ -13134,9 +13509,9 @@
       },
       "composite": {
         "intelligence_index_v4_1": 31.66,
-        "coding_index": 42.83,
+        "coding_index": 42.8,
         "math_index": null,
-        "agentic_index": 18.86,
+        "agentic_index": 20.1,
         "omniscience_index": -37.7
       },
       "benchmarks": {
@@ -13173,7 +13548,7 @@
         "cache_hit": null,
         "cache_write": null
       },
-      "intelligence_evaluation_total_cost_usd": 459.58,
+      "intelligence_evaluation_total_cost_usd": 455.4,
       "cost_per_intelligence_task_usd": {
         "total": 0.3601,
         "input": null,
@@ -13365,9 +13740,9 @@
       },
       "composite": {
         "intelligence_index_v4_1": 31.33,
-        "coding_index": 46.63,
+        "coding_index": 46.6,
         "math_index": null,
-        "agentic_index": 23.29,
+        "agentic_index": 23.6,
         "omniscience_index": -53.2
       },
       "benchmarks": {
@@ -13404,7 +13779,7 @@
         "cache_hit": null,
         "cache_write": null
       },
-      "intelligence_evaluation_total_cost_usd": 356.13,
+      "intelligence_evaluation_total_cost_usd": 359.14,
       "cost_per_intelligence_task_usd": {
         "total": 0.3982,
         "input": null,
@@ -13565,6 +13940,100 @@
       }
     },
     {
+      "name": "K-EXAONE 2.0 0803",
+      "slug": "k-exaone-2-0-0803",
+      "aa_url": "https://artificialanalysis.ai/models/k-exaone-2-0-0803",
+      "creator": "LG AI Research",
+      "released": "2026-08-12",
+      "knowledge_cutoff": null,
+      "is_reasoning": false,
+      "is_open_weights": false,
+      "deprecated": false,
+      "commercial_allowed": null,
+      "license": null,
+      "license_url": null,
+      "size_class": null,
+      "context_tokens": null,
+      "parameters_billions": null,
+      "active_params_billions": null,
+      "input_modalities": null,
+      "output_modalities": null,
+      "composite": {
+        "intelligence_index_v4_1": 31,
+        "coding_index": 40.6,
+        "math_index": null,
+        "agentic_index": 19.7,
+        "omniscience_index": null
+      },
+      "benchmarks": {
+        "gpqa_diamond": null,
+        "hle": null,
+        "scicode": null,
+        "ifbench": null,
+        "lcr": null,
+        "tau2_bench": null,
+        "tau3_banking": null,
+        "terminalbench_hard": null,
+        "terminalbench_v2_1": null,
+        "mmlu_pro": null,
+        "livecodebench": null,
+        "math_500": null,
+        "aime": null,
+        "aime25": null,
+        "gdpval_v2": 24.0,
+        "critpt": 0.9,
+        "mmmu_pro": null,
+        "apex_agents_aa": null,
+        "it_bench_sre": null,
+        "omniscience_accuracy": null,
+        "omniscience_hallucination_rate": null,
+        "omniscience_non_halluc": 77.4
+      },
+      "pricing_per_m_tokens": {
+        "input": null,
+        "output": null,
+        "blended_3_1": null,
+        "blended_7_2_1": null,
+        "blended_1_1": null,
+        "cache_hit": null,
+        "cache_write": null
+      },
+      "intelligence_evaluation_total_cost_usd": null,
+      "cost_per_intelligence_task_usd": {
+        "total": null,
+        "input": null,
+        "output": null,
+        "cacheRead": null,
+        "cacheWrite": null,
+        "nonCacheInput": null,
+        "reasoning": null,
+        "answer": null
+      },
+      "cost_per_eval_breakdown_usd": {},
+      "time_per_task_seconds": null,
+      "output_tokens_per_task": null,
+      "performance": {
+        "output_speed_tps": null,
+        "ttft_seconds_total": null,
+        "ttft_seconds_answer": null,
+        "end_to_end_500tok": null
+      },
+      "output_speed_by_prompt_length": [],
+      "featured": false,
+      "openrouter_slug": null,
+      "note": null,
+      "has_rich_data": true,
+      "data_sources": {
+        "documented_free_api": true,
+        "page_enrichment": false,
+        "aa_pipeline": true
+      },
+      "short_name": "K-EXAONE 2.0 0803",
+      "derived": {
+        "safety_composite": 58.8
+      }
+    },
+    {
       "name": "Step 3.7 Flash",
       "slug": "step-3-7-flash",
       "aa_url": "https://artificialanalysis.ai/models/step-3-7-flash",
@@ -13595,9 +14064,9 @@
       },
       "composite": {
         "intelligence_index_v4_1": 30.9,
-        "coding_index": 39.57,
+        "coding_index": 39.6,
         "math_index": null,
-        "agentic_index": 21.53,
+        "agentic_index": 21.7,
         "omniscience_index": -37.3
       },
       "benchmarks": {
@@ -13634,9 +14103,9 @@
         "cache_hit": 0.04,
         "cache_write": null
       },
-      "intelligence_evaluation_total_cost_usd": null,
+      "intelligence_evaluation_total_cost_usd": 319.97,
       "cost_per_intelligence_task_usd": {
-        "total": null,
+        "total": 0.0913,
         "input": null,
         "output": null,
         "cacheRead": null,
@@ -13672,6 +14141,7 @@
       "short_name": "Step 3.7 Flash",
       "derived": {
         "value_intelligence_per_dollar_blend": 70.2,
+        "value_intelligence_per_dollar_task": 338.4,
         "safety_composite": 21.4,
         "throughput_tps": 169.95,
         "speed_tier": 2,
@@ -13942,7 +14412,7 @@
         "intelligence_index_v4_1": 30.39,
         "coding_index": 46.9,
         "math_index": null,
-        "agentic_index": 19.0,
+        "agentic_index": 19.2,
         "omniscience_index": -36.8
       },
       "benchmarks": {
@@ -13979,7 +14449,7 @@
         "cache_hit": 0.15,
         "cache_write": null
       },
-      "intelligence_evaluation_total_cost_usd": 1394.6,
+      "intelligence_evaluation_total_cost_usd": 843.2,
       "cost_per_intelligence_task_usd": {
         "total": 0.406,
         "input": null,
@@ -14056,9 +14526,9 @@
       },
       "composite": {
         "intelligence_index_v4_1": 29.69,
-        "coding_index": 43.43,
+        "coding_index": 43.4,
         "math_index": null,
-        "agentic_index": 14.45,
+        "agentic_index": 14.4,
         "omniscience_index": -47.9
       },
       "benchmarks": {
@@ -14095,7 +14565,7 @@
         "cache_hit": null,
         "cache_write": null
       },
-      "intelligence_evaluation_total_cost_usd": null,
+      "intelligence_evaluation_total_cost_usd": 0,
       "cost_per_intelligence_task_usd": {
         "total": 0.1008,
         "input": null,
@@ -14287,9 +14757,9 @@
       },
       "composite": {
         "intelligence_index_v4_1": 29.23,
-        "coding_index": 39.42,
+        "coding_index": 39.4,
         "math_index": null,
-        "agentic_index": 11.02,
+        "agentic_index": 11.1,
         "omniscience_index": 3.7
       },
       "benchmarks": {
@@ -14326,7 +14796,7 @@
         "cache_hit": 0.5,
         "cache_write": null
       },
-      "intelligence_evaluation_total_cost_usd": null,
+      "intelligence_evaluation_total_cost_usd": 424.21,
       "cost_per_intelligence_task_usd": {
         "total": 0.5374,
         "input": null,
@@ -14370,6 +14840,110 @@
         "speed_tier": 2,
         "latency_ttft_seconds": 14.71,
         "latency_tier": 1
+      }
+    },
+    {
+      "name": "JT-35B-Flash",
+      "slug": "jt-35b-flash",
+      "aa_url": "https://artificialanalysis.ai/models/jt-35b-flash",
+      "creator": "China Mobile",
+      "released": "2026-05-14",
+      "knowledge_cutoff": null,
+      "is_reasoning": false,
+      "is_open_weights": false,
+      "deprecated": false,
+      "commercial_allowed": null,
+      "license": null,
+      "license_url": null,
+      "size_class": "small",
+      "context_tokens": 256000,
+      "parameters_billions": 35,
+      "active_params_billions": 35,
+      "input_modalities": {
+        "text": true,
+        "image": false,
+        "audio": false,
+        "video": false
+      },
+      "output_modalities": {
+        "text": true,
+        "image": false,
+        "audio": false,
+        "video": false
+      },
+      "composite": {
+        "intelligence_index_v4_1": 29,
+        "coding_index": null,
+        "math_index": null,
+        "agentic_index": null,
+        "omniscience_index": -23.2
+      },
+      "benchmarks": {
+        "gpqa_diamond": 83.0,
+        "hle": 6.0,
+        "scicode": 29.0,
+        "ifbench": 42.0,
+        "lcr": 55.0,
+        "tau2_bench": 99.0,
+        "tau3_banking": null,
+        "terminalbench_hard": 29.0,
+        "terminalbench_v2_1": null,
+        "mmlu_pro": null,
+        "livecodebench": null,
+        "math_500": null,
+        "aime": null,
+        "aime25": null,
+        "gdpval_v2": null,
+        "critpt": 0.0,
+        "mmmu_pro": null,
+        "apex_agents_aa": null,
+        "it_bench_sre": null,
+        "omniscience_accuracy": 25.0,
+        "omniscience_hallucination_rate": null,
+        "omniscience_non_halluc": 37.0
+      },
+      "pricing_per_m_tokens": {
+        "input": null,
+        "output": null,
+        "blended_3_1": null,
+        "blended_7_2_1": null,
+        "blended_1_1": null,
+        "cache_hit": null,
+        "cache_write": null
+      },
+      "intelligence_evaluation_total_cost_usd": null,
+      "cost_per_intelligence_task_usd": {
+        "total": null,
+        "input": null,
+        "output": null,
+        "cacheRead": null,
+        "cacheWrite": null,
+        "nonCacheInput": null,
+        "reasoning": null,
+        "answer": null
+      },
+      "cost_per_eval_breakdown_usd": {},
+      "time_per_task_seconds": null,
+      "output_tokens_per_task": null,
+      "performance": {
+        "output_speed_tps": null,
+        "ttft_seconds_total": null,
+        "ttft_seconds_answer": null,
+        "end_to_end_500tok": null
+      },
+      "output_speed_by_prompt_length": [],
+      "featured": false,
+      "openrouter_slug": null,
+      "note": null,
+      "has_rich_data": true,
+      "data_sources": {
+        "documented_free_api": true,
+        "page_enrichment": false,
+        "aa_pipeline": true
+      },
+      "short_name": "JT-35B-Flash",
+      "derived": {
+        "safety_composite": 33.8
       }
     },
     {
@@ -14485,110 +15059,6 @@
         "speed_tier": 0,
         "latency_ttft_seconds": 3.25,
         "latency_tier": 2
-      }
-    },
-    {
-      "name": "JT-35B-Flash",
-      "slug": "jt-35b-flash",
-      "aa_url": "https://artificialanalysis.ai/models/jt-35b-flash",
-      "creator": "China Mobile",
-      "released": "2026-05-14",
-      "knowledge_cutoff": null,
-      "is_reasoning": false,
-      "is_open_weights": false,
-      "deprecated": false,
-      "commercial_allowed": null,
-      "license": null,
-      "license_url": null,
-      "size_class": "small",
-      "context_tokens": 256000,
-      "parameters_billions": 35,
-      "active_params_billions": 35,
-      "input_modalities": {
-        "text": true,
-        "image": false,
-        "audio": false,
-        "video": false
-      },
-      "output_modalities": {
-        "text": true,
-        "image": false,
-        "audio": false,
-        "video": false
-      },
-      "composite": {
-        "intelligence_index_v4_1": 28.36,
-        "coding_index": null,
-        "math_index": null,
-        "agentic_index": null,
-        "omniscience_index": -23.2
-      },
-      "benchmarks": {
-        "gpqa_diamond": 83.0,
-        "hle": 6.0,
-        "scicode": 29.0,
-        "ifbench": 42.0,
-        "lcr": 55.0,
-        "tau2_bench": 99.0,
-        "tau3_banking": null,
-        "terminalbench_hard": 29.0,
-        "terminalbench_v2_1": null,
-        "mmlu_pro": null,
-        "livecodebench": null,
-        "math_500": null,
-        "aime": null,
-        "aime25": null,
-        "gdpval_v2": null,
-        "critpt": 0.0,
-        "mmmu_pro": null,
-        "apex_agents_aa": null,
-        "it_bench_sre": null,
-        "omniscience_accuracy": 25.0,
-        "omniscience_hallucination_rate": null,
-        "omniscience_non_halluc": 37.0
-      },
-      "pricing_per_m_tokens": {
-        "input": null,
-        "output": null,
-        "blended_3_1": null,
-        "blended_7_2_1": null,
-        "blended_1_1": null,
-        "cache_hit": null,
-        "cache_write": null
-      },
-      "intelligence_evaluation_total_cost_usd": null,
-      "cost_per_intelligence_task_usd": {
-        "total": null,
-        "input": null,
-        "output": null,
-        "cacheRead": null,
-        "cacheWrite": null,
-        "nonCacheInput": null,
-        "reasoning": null,
-        "answer": null
-      },
-      "cost_per_eval_breakdown_usd": {},
-      "time_per_task_seconds": null,
-      "output_tokens_per_task": null,
-      "performance": {
-        "output_speed_tps": null,
-        "ttft_seconds_total": null,
-        "ttft_seconds_answer": null,
-        "end_to_end_500tok": null
-      },
-      "output_speed_by_prompt_length": [],
-      "featured": false,
-      "openrouter_slug": null,
-      "note": null,
-      "has_rich_data": true,
-      "data_sources": {
-        "documented_free_api": false,
-        "page_enrichment": false,
-        "aa_pipeline": true
-      },
-      "short_name": "JT-35B-Flash",
-      "derived": {
-        "safety_composite": 33.5
       }
     },
     {
@@ -14737,9 +15207,9 @@
       },
       "composite": {
         "intelligence_index_v4_1": 26.84,
-        "coding_index": 39.28,
+        "coding_index": 39.3,
         "math_index": null,
-        "agentic_index": 22.01,
+        "agentic_index": 22.2,
         "omniscience_index": -24.9
       },
       "benchmarks": {
@@ -14776,7 +15246,7 @@
         "cache_hit": 0.11,
         "cache_write": 1.38
       },
-      "intelligence_evaluation_total_cost_usd": 51.41,
+      "intelligence_evaluation_total_cost_usd": 10.21,
       "cost_per_intelligence_task_usd": {
         "total": 0.0665,
         "input": null,
@@ -15189,9 +15659,9 @@
       },
       "composite": {
         "intelligence_index_v4_1": 26.07,
-        "coding_index": 39.32,
+        "coding_index": 39.3,
         "math_index": null,
-        "agentic_index": 10.97,
+        "agentic_index": 11,
         "omniscience_index": -50.8
       },
       "benchmarks": {
@@ -15228,7 +15698,7 @@
         "cache_hit": null,
         "cache_write": null
       },
-      "intelligence_evaluation_total_cost_usd": 51.92,
+      "intelligence_evaluation_total_cost_usd": 53.86,
       "cost_per_intelligence_task_usd": {
         "total": 0.0438,
         "input": null,
@@ -15296,9 +15766,9 @@
       },
       "composite": {
         "intelligence_index_v4_1": 25.67,
-        "coding_index": 37.72,
+        "coding_index": 37.7,
         "math_index": null,
-        "agentic_index": 8.72,
+        "agentic_index": 8.8,
         "omniscience_index": -41.5
       },
       "benchmarks": {
@@ -15335,7 +15805,7 @@
         "cache_hit": null,
         "cache_write": null
       },
-      "intelligence_evaluation_total_cost_usd": 253.84,
+      "intelligence_evaluation_total_cost_usd": 253.65,
       "cost_per_intelligence_task_usd": {
         "total": 0.0988,
         "input": null,
@@ -15412,9 +15882,9 @@
       },
       "composite": {
         "intelligence_index_v4_1": 25.61,
-        "coding_index": 34.69,
+        "coding_index": 34.7,
         "math_index": null,
-        "agentic_index": 6.17,
+        "agentic_index": 6.5,
         "omniscience_index": -16.4
       },
       "benchmarks": {
@@ -15451,7 +15921,7 @@
         "cache_hit": 0.025,
         "cache_write": null
       },
-      "intelligence_evaluation_total_cost_usd": 93.72,
+      "intelligence_evaluation_total_cost_usd": 93.81,
       "cost_per_intelligence_task_usd": {
         "total": 0.0432,
         "input": null,
@@ -15528,9 +15998,9 @@
       },
       "composite": {
         "intelligence_index_v4_1": 25.01,
-        "coding_index": 35.18,
+        "coding_index": 35.2,
         "math_index": null,
-        "agentic_index": 22.81,
+        "agentic_index": 23,
         "omniscience_index": -33.1
       },
       "benchmarks": {
@@ -15567,7 +16037,7 @@
         "cache_hit": 0.2,
         "cache_write": 1.25
       },
-      "intelligence_evaluation_total_cost_usd": 200.76,
+      "intelligence_evaluation_total_cost_usd": 200.93,
       "cost_per_intelligence_task_usd": {
         "total": 0.2947,
         "input": null,
@@ -15644,9 +16114,9 @@
       },
       "composite": {
         "intelligence_index_v4_1": 24.55,
-        "coding_index": null,
+        "coding_index": 28.1,
         "math_index": null,
-        "agentic_index": null,
+        "agentic_index": 19.2,
         "omniscience_index": -60.0
       },
       "benchmarks": {
@@ -15683,7 +16153,7 @@
         "cache_hit": null,
         "cache_write": null
       },
-      "intelligence_evaluation_total_cost_usd": null,
+      "intelligence_evaluation_total_cost_usd": 529.96,
       "cost_per_intelligence_task_usd": {
         "total": 0.63,
         "input": null,
@@ -15750,9 +16220,9 @@
       "output_modalities": null,
       "composite": {
         "intelligence_index_v4_1": 24.52,
-        "coding_index": null,
+        "coding_index": 26.5,
         "math_index": null,
-        "agentic_index": null,
+        "agentic_index": 16,
         "omniscience_index": -19.4
       },
       "benchmarks": {
@@ -15789,7 +16259,7 @@
         "cache_hit": null,
         "cache_write": null
       },
-      "intelligence_evaluation_total_cost_usd": null,
+      "intelligence_evaluation_total_cost_usd": 0,
       "cost_per_intelligence_task_usd": {
         "total": 0,
         "input": null,
@@ -15854,7 +16324,7 @@
       "output_modalities": null,
       "composite": {
         "intelligence_index_v4_1": 23.61,
-        "coding_index": null,
+        "coding_index": 26.8,
         "math_index": null,
         "agentic_index": 13.8,
         "omniscience_index": -17.7
@@ -15893,7 +16363,7 @@
         "cache_hit": 0.01,
         "cache_write": null
       },
-      "intelligence_evaluation_total_cost_usd": null,
+      "intelligence_evaluation_total_cost_usd": 72.11,
       "cost_per_intelligence_task_usd": {
         "total": 0.019,
         "input": null,
@@ -15937,110 +16407,6 @@
         "speed_tier": 2,
         "latency_ttft_seconds": 4.19,
         "latency_tier": 2
-      }
-    },
-    {
-      "name": "EXAONE 4.5 33B",
-      "slug": "exaone-4-5-33b",
-      "aa_url": "https://artificialanalysis.ai/models/exaone-4-5-33b",
-      "creator": "LG AI Research",
-      "released": "2026-04-09",
-      "knowledge_cutoff": null,
-      "is_reasoning": false,
-      "is_open_weights": true,
-      "deprecated": false,
-      "commercial_allowed": false,
-      "license": "EXAONE AI Model License Agreement 1.2 - NC",
-      "license_url": "https://huggingface.co/LGAI-EXAONE/EXAONE-4.0-1.2B/blob/main/LICENSE",
-      "size_class": "small",
-      "context_tokens": 262144,
-      "parameters_billions": 34.4,
-      "active_params_billions": 34.4,
-      "input_modalities": {
-        "text": true,
-        "image": true,
-        "audio": false,
-        "video": false
-      },
-      "output_modalities": {
-        "text": true,
-        "image": false,
-        "audio": false,
-        "video": false
-      },
-      "composite": {
-        "intelligence_index_v4_1": 22.96,
-        "coding_index": null,
-        "math_index": null,
-        "agentic_index": null,
-        "omniscience_index": -51.5
-      },
-      "benchmarks": {
-        "gpqa_diamond": 79.0,
-        "hle": 12.0,
-        "scicode": 28.0,
-        "ifbench": 58.0,
-        "lcr": 49.0,
-        "tau2_bench": 78.0,
-        "tau3_banking": null,
-        "terminalbench_hard": 20.0,
-        "terminalbench_v2_1": null,
-        "mmlu_pro": null,
-        "livecodebench": null,
-        "math_500": null,
-        "aime": null,
-        "aime25": null,
-        "gdpval_v2": null,
-        "critpt": 0.0,
-        "mmmu_pro": 67.0,
-        "apex_agents_aa": null,
-        "it_bench_sre": null,
-        "omniscience_accuracy": 16.0,
-        "omniscience_hallucination_rate": null,
-        "omniscience_non_halluc": 19.0
-      },
-      "pricing_per_m_tokens": {
-        "input": null,
-        "output": null,
-        "blended_3_1": null,
-        "blended_7_2_1": null,
-        "blended_1_1": null,
-        "cache_hit": null,
-        "cache_write": null
-      },
-      "intelligence_evaluation_total_cost_usd": null,
-      "cost_per_intelligence_task_usd": {
-        "total": null,
-        "input": null,
-        "output": null,
-        "cacheRead": null,
-        "cacheWrite": null,
-        "nonCacheInput": null,
-        "reasoning": null,
-        "answer": null
-      },
-      "cost_per_eval_breakdown_usd": {},
-      "time_per_task_seconds": null,
-      "output_tokens_per_task": null,
-      "performance": {
-        "output_speed_tps": null,
-        "ttft_seconds_total": null,
-        "ttft_seconds_answer": null,
-        "end_to_end_500tok": null
-      },
-      "output_speed_by_prompt_length": [],
-      "featured": false,
-      "openrouter_slug": null,
-      "note": null,
-      "has_rich_data": true,
-      "data_sources": {
-        "documented_free_api": false,
-        "page_enrichment": false,
-        "aa_pipeline": true
-      },
-      "short_name": "EXAONE 4.5 33B",
-      "derived": {
-        "safety_composite": 20.6
       }
     },
     {
@@ -16180,9 +16546,9 @@
       },
       "composite": {
         "intelligence_index_v4_1": 22.77,
-        "coding_index": 27.85,
+        "coding_index": 27.8,
         "math_index": null,
-        "agentic_index": 9.16,
+        "agentic_index": 9.2,
         "omniscience_index": -4.0
       },
       "benchmarks": {
@@ -16294,9 +16660,9 @@
       },
       "composite": {
         "intelligence_index_v4_1": 22.25,
-        "coding_index": 33.17,
+        "coding_index": 33.2,
         "math_index": null,
-        "agentic_index": null,
+        "agentic_index": 11.1,
         "omniscience_index": -51.7
       },
       "benchmarks": {
@@ -16333,7 +16699,7 @@
         "cache_hit": null,
         "cache_write": null
       },
-      "intelligence_evaluation_total_cost_usd": null,
+      "intelligence_evaluation_total_cost_usd": 33.84,
       "cost_per_intelligence_task_usd": {
         "total": 0.041,
         "input": null,
@@ -16525,7 +16891,7 @@
       },
       "composite": {
         "intelligence_index_v4_1": 22.16,
-        "coding_index": null,
+        "coding_index": 31,
         "math_index": null,
         "agentic_index": null,
         "omniscience_index": -52.7
@@ -16640,9 +17006,9 @@
       },
       "composite": {
         "intelligence_index_v4_1": 21.79,
-        "coding_index": 28.66,
+        "coding_index": 28.7,
         "math_index": null,
-        "agentic_index": 7.41,
+        "agentic_index": 7,
         "omniscience_index": -53.5
       },
       "benchmarks": {
@@ -16679,7 +17045,7 @@
         "cache_hit": null,
         "cache_write": null
       },
-      "intelligence_evaluation_total_cost_usd": 179.1,
+      "intelligence_evaluation_total_cost_usd": 240.43,
       "cost_per_intelligence_task_usd": {
         "total": 0.3041,
         "input": null,
@@ -16726,110 +17092,6 @@
       }
     },
     {
-      "name": "Nemotron Cascade 2 30B A3B",
-      "slug": "nemotron-cascade-2-30b-a3b",
-      "aa_url": "https://artificialanalysis.ai/models/nemotron-cascade-2-30b-a3b",
-      "creator": "NVIDIA",
-      "released": "2026-03-19",
-      "knowledge_cutoff": null,
-      "is_reasoning": false,
-      "is_open_weights": true,
-      "deprecated": false,
-      "commercial_allowed": true,
-      "license": "Nvidia Open Model License",
-      "license_url": "https://www.nvidia.com/en-us/agreements/enterprise-software/nvidia-open-model-license/",
-      "size_class": "small",
-      "context_tokens": 1000000,
-      "parameters_billions": 31.6,
-      "active_params_billions": 3,
-      "input_modalities": {
-        "text": true,
-        "image": false,
-        "audio": false,
-        "video": false
-      },
-      "output_modalities": {
-        "text": true,
-        "image": false,
-        "audio": false,
-        "video": false
-      },
-      "composite": {
-        "intelligence_index_v4_1": 21.25,
-        "coding_index": null,
-        "math_index": null,
-        "agentic_index": null,
-        "omniscience_index": -52.5
-      },
-      "benchmarks": {
-        "gpqa_diamond": 76.0,
-        "hle": 11.0,
-        "scicode": 35.0,
-        "ifbench": 80.0,
-        "lcr": 34.0,
-        "tau2_bench": 53.0,
-        "tau3_banking": null,
-        "terminalbench_hard": 21.0,
-        "terminalbench_v2_1": null,
-        "mmlu_pro": null,
-        "livecodebench": null,
-        "math_500": null,
-        "aime": null,
-        "aime25": null,
-        "gdpval_v2": null,
-        "critpt": 1.0,
-        "mmmu_pro": null,
-        "apex_agents_aa": null,
-        "it_bench_sre": null,
-        "omniscience_accuracy": 18.0,
-        "omniscience_hallucination_rate": null,
-        "omniscience_non_halluc": 15.0
-      },
-      "pricing_per_m_tokens": {
-        "input": null,
-        "output": null,
-        "blended_3_1": null,
-        "blended_7_2_1": null,
-        "blended_1_1": null,
-        "cache_hit": null,
-        "cache_write": null
-      },
-      "intelligence_evaluation_total_cost_usd": null,
-      "cost_per_intelligence_task_usd": {
-        "total": null,
-        "input": null,
-        "output": null,
-        "cacheRead": null,
-        "cacheWrite": null,
-        "nonCacheInput": null,
-        "reasoning": null,
-        "answer": null
-      },
-      "cost_per_eval_breakdown_usd": {},
-      "time_per_task_seconds": null,
-      "output_tokens_per_task": null,
-      "performance": {
-        "output_speed_tps": null,
-        "ttft_seconds_total": null,
-        "ttft_seconds_answer": null,
-        "end_to_end_500tok": null
-      },
-      "output_speed_by_prompt_length": [],
-      "featured": false,
-      "openrouter_slug": null,
-      "note": null,
-      "has_rich_data": true,
-      "data_sources": {
-        "documented_free_api": false,
-        "page_enrichment": false,
-        "aa_pipeline": true
-      },
-      "short_name": "Nemotron Cascade 2 30B A3B",
-      "derived": {
-        "safety_composite": 17.5
-      }
-    },
-    {
       "name": "Qwen3.5 9B (FP8)",
       "slug": "qwen3-5-9b-non-reasoning",
       "aa_url": "https://artificialanalysis.ai/models/qwen3-5-9b-non-reasoning",
@@ -16860,7 +17122,7 @@
       },
       "composite": {
         "intelligence_index_v4_1": 20.61,
-        "coding_index": 23.46,
+        "coding_index": 23.5,
         "math_index": null,
         "agentic_index": null,
         "omniscience_index": -70.7
@@ -16942,6 +17204,110 @@
         "speed_tier": 1,
         "latency_ttft_seconds": 0.81,
         "latency_tier": 2
+      }
+    },
+    {
+      "name": "EXAONE 4.5 33B",
+      "slug": "exaone-4-5-33b",
+      "aa_url": "https://artificialanalysis.ai/models/exaone-4-5-33b",
+      "creator": "LG AI Research",
+      "released": "2026-04-09",
+      "knowledge_cutoff": null,
+      "is_reasoning": false,
+      "is_open_weights": true,
+      "deprecated": false,
+      "commercial_allowed": false,
+      "license": "EXAONE AI Model License Agreement 1.2 - NC",
+      "license_url": "https://huggingface.co/LGAI-EXAONE/EXAONE-4.0-1.2B/blob/main/LICENSE",
+      "size_class": "small",
+      "context_tokens": 262144,
+      "parameters_billions": 34.4,
+      "active_params_billions": 34.4,
+      "input_modalities": {
+        "text": true,
+        "image": true,
+        "audio": false,
+        "video": false
+      },
+      "output_modalities": {
+        "text": true,
+        "image": false,
+        "audio": false,
+        "video": false
+      },
+      "composite": {
+        "intelligence_index_v4_1": 20.5,
+        "coding_index": 23.6,
+        "math_index": null,
+        "agentic_index": null,
+        "omniscience_index": -51.5
+      },
+      "benchmarks": {
+        "gpqa_diamond": 79.0,
+        "hle": 12.0,
+        "scicode": 28.0,
+        "ifbench": 58.0,
+        "lcr": 49.0,
+        "tau2_bench": 78.0,
+        "tau3_banking": null,
+        "terminalbench_hard": 20.0,
+        "terminalbench_v2_1": null,
+        "mmlu_pro": null,
+        "livecodebench": null,
+        "math_500": null,
+        "aime": null,
+        "aime25": null,
+        "gdpval_v2": null,
+        "critpt": 0.0,
+        "mmmu_pro": 67.0,
+        "apex_agents_aa": null,
+        "it_bench_sre": null,
+        "omniscience_accuracy": 16.0,
+        "omniscience_hallucination_rate": null,
+        "omniscience_non_halluc": 19.0
+      },
+      "pricing_per_m_tokens": {
+        "input": null,
+        "output": null,
+        "blended_3_1": null,
+        "blended_7_2_1": null,
+        "blended_1_1": null,
+        "cache_hit": null,
+        "cache_write": null
+      },
+      "intelligence_evaluation_total_cost_usd": null,
+      "cost_per_intelligence_task_usd": {
+        "total": null,
+        "input": null,
+        "output": null,
+        "cacheRead": null,
+        "cacheWrite": null,
+        "nonCacheInput": null,
+        "reasoning": null,
+        "answer": null
+      },
+      "cost_per_eval_breakdown_usd": {},
+      "time_per_task_seconds": null,
+      "output_tokens_per_task": null,
+      "performance": {
+        "output_speed_tps": null,
+        "ttft_seconds_total": null,
+        "ttft_seconds_answer": null,
+        "end_to_end_500tok": null
+      },
+      "output_speed_by_prompt_length": [],
+      "featured": false,
+      "openrouter_slug": null,
+      "note": null,
+      "has_rich_data": true,
+      "data_sources": {
+        "documented_free_api": true,
+        "page_enrichment": false,
+        "aa_pipeline": true
+      },
+      "short_name": "EXAONE 4.5 33B",
+      "derived": {
+        "safety_composite": 19.6
       }
     },
     {
@@ -17205,9 +17571,9 @@
       },
       "composite": {
         "intelligence_index_v4_1": 20.17,
-        "coding_index": 36.45,
+        "coding_index": 36.5,
         "math_index": null,
-        "agentic_index": null,
+        "agentic_index": 3.1,
         "omniscience_index": -48.6
       },
       "benchmarks": {
@@ -17244,7 +17610,7 @@
         "cache_hit": null,
         "cache_write": null
       },
-      "intelligence_evaluation_total_cost_usd": null,
+      "intelligence_evaluation_total_cost_usd": 0,
       "cost_per_intelligence_task_usd": {
         "total": 0,
         "input": null,
@@ -17319,9 +17685,9 @@
       },
       "composite": {
         "intelligence_index_v4_1": 19.71,
-        "coding_index": 26.64,
+        "coding_index": 26.6,
         "math_index": null,
-        "agentic_index": 4.7,
+        "agentic_index": 4.6,
         "omniscience_index": -30.4
       },
       "benchmarks": {
@@ -17358,7 +17724,7 @@
         "cache_hit": null,
         "cache_write": null
       },
-      "intelligence_evaluation_total_cost_usd": null,
+      "intelligence_evaluation_total_cost_usd": 87.67,
       "cost_per_intelligence_task_usd": {
         "total": 0.1003,
         "input": null,
@@ -17425,9 +17791,9 @@
       "output_modalities": null,
       "composite": {
         "intelligence_index_v4_1": 19.61,
-        "coding_index": null,
+        "coding_index": 22.4,
         "math_index": null,
-        "agentic_index": null,
+        "agentic_index": 9.2,
         "omniscience_index": -17.2
       },
       "benchmarks": {
@@ -17464,7 +17830,7 @@
         "cache_hit": 0.015,
         "cache_write": null
       },
-      "intelligence_evaluation_total_cost_usd": null,
+      "intelligence_evaluation_total_cost_usd": 33.49,
       "cost_per_intelligence_task_usd": {
         "total": 0.0158,
         "input": null,
@@ -17626,122 +17992,6 @@
       }
     },
     {
-      "name": "Trinity Large Thinking (FP8)",
-      "slug": "trinity-large-thinking",
-      "aa_url": "https://artificialanalysis.ai/models/trinity-large-thinking",
-      "creator": "Arcee AI",
-      "released": "2026-04-01",
-      "knowledge_cutoff": null,
-      "is_reasoning": true,
-      "is_open_weights": true,
-      "deprecated": false,
-      "commercial_allowed": true,
-      "license": "Apache 2.0",
-      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
-      "size_class": "large",
-      "context_tokens": 262144,
-      "parameters_billions": 399,
-      "active_params_billions": 13,
-      "input_modalities": {
-        "text": true,
-        "image": false,
-        "audio": false,
-        "video": false
-      },
-      "output_modalities": {
-        "text": true,
-        "image": false,
-        "audio": false,
-        "video": false
-      },
-      "composite": {
-        "intelligence_index_v4_1": 18.66,
-        "coding_index": null,
-        "math_index": null,
-        "agentic_index": null,
-        "omniscience_index": -44.1
-      },
-      "benchmarks": {
-        "gpqa_diamond": 75.2,
-        "hle": 15.8,
-        "scicode": 36.1,
-        "ifbench": 56.3,
-        "lcr": 38.3,
-        "tau2_bench": 90.1,
-        "tau3_banking": 5.8,
-        "terminalbench_hard": 22.7,
-        "terminalbench_v2_1": 20.6,
-        "mmlu_pro": null,
-        "livecodebench": null,
-        "math_500": null,
-        "aime": null,
-        "aime25": null,
-        "gdpval_v2": 3.3,
-        "critpt": 0.9,
-        "mmmu_pro": null,
-        "apex_agents_aa": null,
-        "it_bench_sre": null,
-        "omniscience_accuracy": 22.5,
-        "omniscience_hallucination_rate": null,
-        "omniscience_non_halluc": 14.1,
-        "omniscience": 0
-      },
-      "pricing_per_m_tokens": {
-        "input": 0.22,
-        "output": 0.85,
-        "blended_3_1": 0.38,
-        "blended_7_2_1": 0.32,
-        "blended_1_1": null,
-        "cache_hit": 0.06,
-        "cache_write": null
-      },
-      "intelligence_evaluation_total_cost_usd": null,
-      "cost_per_intelligence_task_usd": {
-        "total": 0.079,
-        "input": null,
-        "output": null,
-        "cacheRead": null,
-        "cacheWrite": null,
-        "nonCacheInput": null,
-        "reasoning": null,
-        "answer": null
-      },
-      "cost_per_eval_breakdown_usd": {},
-      "time_per_task_seconds": null,
-      "output_tokens_per_task": null,
-      "performance": {
-        "output_speed_tps": 166.99,
-        "ttft_seconds_total": 0.86,
-        "ttft_seconds_answer": 12.84,
-        "end_to_end_500tok": {
-          "total": 15.83,
-          "input": null,
-          "reasoning": 0,
-          "answer": null
-        }
-      },
-      "output_speed_by_prompt_length": [],
-      "featured": false,
-      "openrouter_slug": null,
-      "note": null,
-      "has_rich_data": true,
-      "data_sources": {
-        "documented_free_api": false,
-        "page_enrichment": false,
-        "aa_pipeline": true
-      },
-      "short_name": "Trinity Large Thinking (FP8)",
-      "derived": {
-        "value_intelligence_per_dollar_blend": 49.1,
-        "value_intelligence_per_dollar_task": 236.2,
-        "safety_composite": 15.9,
-        "throughput_tps": 166.99,
-        "speed_tier": 2,
-        "latency_ttft_seconds": 12.84,
-        "latency_tier": 1
-      }
-    },
-    {
       "name": "JT-MINI",
       "slug": "jt-mini",
       "aa_url": "https://artificialanalysis.ai/models/jt-mini",
@@ -17771,7 +18021,7 @@
         "video": false
       },
       "composite": {
-        "intelligence_index_v4_1": 18.53,
+        "intelligence_index_v4_1": 18.8,
         "coding_index": null,
         "math_index": null,
         "agentic_index": null,
@@ -17836,13 +18086,129 @@
       "note": null,
       "has_rich_data": true,
       "data_sources": {
-        "documented_free_api": false,
+        "documented_free_api": true,
         "page_enrichment": false,
         "aa_pipeline": true
       },
       "short_name": "JT-MINI",
       "derived": {
-        "safety_composite": 12.8
+        "safety_composite": 12.9
+      }
+    },
+    {
+      "name": "Trinity Large Thinking (FP8)",
+      "slug": "trinity-large-thinking",
+      "aa_url": "https://artificialanalysis.ai/models/trinity-large-thinking",
+      "creator": "Arcee AI",
+      "released": "2026-04-01",
+      "knowledge_cutoff": null,
+      "is_reasoning": true,
+      "is_open_weights": true,
+      "deprecated": false,
+      "commercial_allowed": true,
+      "license": "Apache 2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "size_class": "large",
+      "context_tokens": 262144,
+      "parameters_billions": 399,
+      "active_params_billions": 13,
+      "input_modalities": {
+        "text": true,
+        "image": false,
+        "audio": false,
+        "video": false
+      },
+      "output_modalities": {
+        "text": true,
+        "image": false,
+        "audio": false,
+        "video": false
+      },
+      "composite": {
+        "intelligence_index_v4_1": 18.66,
+        "coding_index": 25.8,
+        "math_index": null,
+        "agentic_index": 3.7,
+        "omniscience_index": -44.1
+      },
+      "benchmarks": {
+        "gpqa_diamond": 75.2,
+        "hle": 15.8,
+        "scicode": 36.1,
+        "ifbench": 56.3,
+        "lcr": 38.3,
+        "tau2_bench": 90.1,
+        "tau3_banking": 5.8,
+        "terminalbench_hard": 22.7,
+        "terminalbench_v2_1": 20.6,
+        "mmlu_pro": null,
+        "livecodebench": null,
+        "math_500": null,
+        "aime": null,
+        "aime25": null,
+        "gdpval_v2": 3.3,
+        "critpt": 0.9,
+        "mmmu_pro": null,
+        "apex_agents_aa": null,
+        "it_bench_sre": null,
+        "omniscience_accuracy": 22.5,
+        "omniscience_hallucination_rate": null,
+        "omniscience_non_halluc": 14.1,
+        "omniscience": 0
+      },
+      "pricing_per_m_tokens": {
+        "input": 0.22,
+        "output": 0.85,
+        "blended_3_1": 0.38,
+        "blended_7_2_1": 0.32,
+        "blended_1_1": null,
+        "cache_hit": 0.06,
+        "cache_write": null
+      },
+      "intelligence_evaluation_total_cost_usd": 254.72,
+      "cost_per_intelligence_task_usd": {
+        "total": 0.079,
+        "input": null,
+        "output": null,
+        "cacheRead": null,
+        "cacheWrite": null,
+        "nonCacheInput": null,
+        "reasoning": null,
+        "answer": null
+      },
+      "cost_per_eval_breakdown_usd": {},
+      "time_per_task_seconds": null,
+      "output_tokens_per_task": null,
+      "performance": {
+        "output_speed_tps": 166.99,
+        "ttft_seconds_total": 0.86,
+        "ttft_seconds_answer": 12.84,
+        "end_to_end_500tok": {
+          "total": 15.83,
+          "input": null,
+          "reasoning": 0,
+          "answer": null
+        }
+      },
+      "output_speed_by_prompt_length": [],
+      "featured": false,
+      "openrouter_slug": null,
+      "note": null,
+      "has_rich_data": true,
+      "data_sources": {
+        "documented_free_api": false,
+        "page_enrichment": false,
+        "aa_pipeline": true
+      },
+      "short_name": "Trinity Large Thinking (FP8)",
+      "derived": {
+        "value_intelligence_per_dollar_blend": 49.1,
+        "value_intelligence_per_dollar_task": 236.2,
+        "safety_composite": 15.9,
+        "throughput_tps": 166.99,
+        "speed_tier": 2,
+        "latency_ttft_seconds": 12.84,
+        "latency_tier": 1
       }
     },
     {
@@ -17876,9 +18242,9 @@
       },
       "composite": {
         "intelligence_index_v4_1": 18.32,
-        "coding_index": 23.23,
+        "coding_index": 23.2,
         "math_index": null,
-        "agentic_index": 6.69,
+        "agentic_index": 6.8,
         "omniscience_index": -54.6
       },
       "benchmarks": {
@@ -17915,7 +18281,7 @@
         "cache_hit": null,
         "cache_write": null
       },
-      "intelligence_evaluation_total_cost_usd": 35.05,
+      "intelligence_evaluation_total_cost_usd": 37.5,
       "cost_per_intelligence_task_usd": {
         "total": 0.0243,
         "input": null,
@@ -17959,6 +18325,110 @@
         "speed_tier": 2,
         "latency_ttft_seconds": 6.27,
         "latency_tier": 1
+      }
+    },
+    {
+      "name": "Nemotron Cascade 2 30B A3B",
+      "slug": "nemotron-cascade-2-30b-a3b",
+      "aa_url": "https://artificialanalysis.ai/models/nemotron-cascade-2-30b-a3b",
+      "creator": "NVIDIA",
+      "released": "2026-03-19",
+      "knowledge_cutoff": null,
+      "is_reasoning": false,
+      "is_open_weights": true,
+      "deprecated": false,
+      "commercial_allowed": true,
+      "license": "Nvidia Open Model License",
+      "license_url": "https://www.nvidia.com/en-us/agreements/enterprise-software/nvidia-open-model-license/",
+      "size_class": "small",
+      "context_tokens": 1000000,
+      "parameters_billions": 31.6,
+      "active_params_billions": 3,
+      "input_modalities": {
+        "text": true,
+        "image": false,
+        "audio": false,
+        "video": false
+      },
+      "output_modalities": {
+        "text": true,
+        "image": false,
+        "audio": false,
+        "video": false
+      },
+      "composite": {
+        "intelligence_index_v4_1": 17.8,
+        "coding_index": 25.3,
+        "math_index": null,
+        "agentic_index": null,
+        "omniscience_index": -52.5
+      },
+      "benchmarks": {
+        "gpqa_diamond": 76.0,
+        "hle": 11.0,
+        "scicode": 35.0,
+        "ifbench": 80.0,
+        "lcr": 34.0,
+        "tau2_bench": 53.0,
+        "tau3_banking": null,
+        "terminalbench_hard": 21.0,
+        "terminalbench_v2_1": null,
+        "mmlu_pro": null,
+        "livecodebench": null,
+        "math_500": null,
+        "aime": null,
+        "aime25": null,
+        "gdpval_v2": null,
+        "critpt": 1.0,
+        "mmmu_pro": null,
+        "apex_agents_aa": null,
+        "it_bench_sre": null,
+        "omniscience_accuracy": 18.0,
+        "omniscience_hallucination_rate": null,
+        "omniscience_non_halluc": 15.0
+      },
+      "pricing_per_m_tokens": {
+        "input": null,
+        "output": null,
+        "blended_3_1": null,
+        "blended_7_2_1": null,
+        "blended_1_1": null,
+        "cache_hit": null,
+        "cache_write": null
+      },
+      "intelligence_evaluation_total_cost_usd": null,
+      "cost_per_intelligence_task_usd": {
+        "total": null,
+        "input": null,
+        "output": null,
+        "cacheRead": null,
+        "cacheWrite": null,
+        "nonCacheInput": null,
+        "reasoning": null,
+        "answer": null
+      },
+      "cost_per_eval_breakdown_usd": {},
+      "time_per_task_seconds": null,
+      "output_tokens_per_task": null,
+      "performance": {
+        "output_speed_tps": null,
+        "ttft_seconds_total": null,
+        "ttft_seconds_answer": null,
+        "end_to_end_500tok": null
+      },
+      "output_speed_by_prompt_length": [],
+      "featured": false,
+      "openrouter_slug": null,
+      "note": null,
+      "has_rich_data": true,
+      "data_sources": {
+        "documented_free_api": true,
+        "page_enrichment": false,
+        "aa_pipeline": true
+      },
+      "short_name": "Nemotron Cascade 2 30B A3B",
+      "derived": {
+        "safety_composite": 16.1
       }
     },
     {
@@ -18212,7 +18682,7 @@
       "output_modalities": null,
       "composite": {
         "intelligence_index_v4_1": 16.18,
-        "coding_index": null,
+        "coding_index": 9.9,
         "math_index": null,
         "agentic_index": null,
         "omniscience_index": -4.4
@@ -18317,7 +18787,7 @@
       },
       "composite": {
         "intelligence_index_v4_1": 16.12,
-        "coding_index": 20.33,
+        "coding_index": 20.3,
         "math_index": null,
         "agentic_index": null,
         "omniscience_index": -74.7
@@ -18432,7 +18902,7 @@
       },
       "composite": {
         "intelligence_index_v4_1": 15.01,
-        "coding_index": null,
+        "coding_index": 13.8,
         "math_index": null,
         "agentic_index": null,
         "omniscience_index": -57.4
@@ -18547,9 +19017,9 @@
       },
       "composite": {
         "intelligence_index_v4_1": 14.49,
-        "coding_index": 16.21,
+        "coding_index": 16.2,
         "math_index": null,
-        "agentic_index": 2.68,
+        "agentic_index": 2.9,
         "omniscience_index": -53.4
       },
       "benchmarks": {
@@ -18586,7 +19056,7 @@
         "cache_hit": 0.015,
         "cache_write": null
       },
-      "intelligence_evaluation_total_cost_usd": null,
+      "intelligence_evaluation_total_cost_usd": 147.93,
       "cost_per_intelligence_task_usd": {
         "total": 0.1316,
         "input": null,
@@ -18653,9 +19123,9 @@
       "output_modalities": null,
       "composite": {
         "intelligence_index_v4_1": 14.28,
-        "coding_index": null,
+        "coding_index": 17.5,
         "math_index": null,
-        "agentic_index": null,
+        "agentic_index": 1.9,
         "omniscience_index": -14.7
       },
       "benchmarks": {
@@ -18692,7 +19162,7 @@
         "cache_hit": 0.0075,
         "cache_write": null
       },
-      "intelligence_evaluation_total_cost_usd": null,
+      "intelligence_evaluation_total_cost_usd": 12.44,
       "cost_per_intelligence_task_usd": {
         "total": 0.0047,
         "input": null,
@@ -18768,10 +19238,10 @@
         "video": false
       },
       "composite": {
-        "intelligence_index_v4_1": 14.05,
-        "coding_index": 25.26,
+        "intelligence_index_v4_1": 14.2,
+        "coding_index": 25.3,
         "math_index": null,
-        "agentic_index": 2.25,
+        "agentic_index": 2.3,
         "omniscience_index": -65.7
       },
       "benchmarks": {
@@ -18838,14 +19308,14 @@
       "note": null,
       "has_rich_data": true,
       "data_sources": {
-        "documented_free_api": false,
+        "documented_free_api": true,
         "page_enrichment": false,
         "aa_pipeline": true
       },
       "short_name": "Ling 2.6 Flash",
       "derived": {
-        "value_intelligence_per_dollar_blend": 93.7,
-        "safety_composite": 8.0,
+        "value_intelligence_per_dollar_blend": 94.7,
+        "safety_composite": 8.1,
         "throughput_tps": 166.85,
         "speed_tier": 2,
         "latency_ttft_seconds": 1.23,
@@ -18882,8 +19352,8 @@
         "video": false
       },
       "composite": {
-        "intelligence_index_v4_1": 13.45,
-        "coding_index": 19.66,
+        "intelligence_index_v4_1": 13.5,
+        "coding_index": 19.7,
         "math_index": null,
         "agentic_index": 2.2,
         "omniscience_index": -59.0
@@ -18947,7 +19417,7 @@
       "note": null,
       "has_rich_data": true,
       "data_sources": {
-        "documented_free_api": false,
+        "documented_free_api": true,
         "page_enrichment": false,
         "aa_pipeline": true
       },
@@ -19207,9 +19677,9 @@
       "output_modalities": null,
       "composite": {
         "intelligence_index_v4_1": 12.35,
-        "coding_index": null,
+        "coding_index": 14.4,
         "math_index": null,
-        "agentic_index": null,
+        "agentic_index": 2.4,
         "omniscience_index": -71.6
       },
       "benchmarks": {
@@ -19246,7 +19716,7 @@
         "cache_hit": null,
         "cache_write": null
       },
-      "intelligence_evaluation_total_cost_usd": null,
+      "intelligence_evaluation_total_cost_usd": 156.79,
       "cost_per_intelligence_task_usd": {
         "total": 0.2582,
         "input": null,
@@ -19323,7 +19793,7 @@
       },
       "composite": {
         "intelligence_index_v4_1": 12.18,
-        "coding_index": null,
+        "coding_index": 9.4,
         "math_index": null,
         "agentic_index": null,
         "omniscience_index": -19.7
@@ -19405,110 +19875,6 @@
         "speed_tier": 0,
         "latency_ttft_seconds": 40.91,
         "latency_tier": 0
-      }
-    },
-    {
-      "name": "MiniCPM5-1B (Reasoning)",
-      "slug": "minicpm5-1b",
-      "aa_url": "https://artificialanalysis.ai/models/minicpm5-1b",
-      "creator": "OpenBMB",
-      "released": "2026-05-25",
-      "knowledge_cutoff": null,
-      "is_reasoning": false,
-      "is_open_weights": true,
-      "deprecated": false,
-      "commercial_allowed": null,
-      "license": "Apache 2.0",
-      "license_url": null,
-      "size_class": "tiny",
-      "context_tokens": 128000,
-      "parameters_billions": 1,
-      "active_params_billions": 1,
-      "input_modalities": {
-        "text": true,
-        "image": false,
-        "audio": false,
-        "video": false
-      },
-      "output_modalities": {
-        "text": true,
-        "image": false,
-        "audio": false,
-        "video": false
-      },
-      "composite": {
-        "intelligence_index_v4_1": 11.96,
-        "coding_index": null,
-        "math_index": null,
-        "agentic_index": null,
-        "omniscience_index": -16.6
-      },
-      "benchmarks": {
-        "gpqa_diamond": 28.0,
-        "hle": 7.0,
-        "scicode": 4.0,
-        "ifbench": 49.0,
-        "lcr": 4.0,
-        "tau2_bench": 81.0,
-        "tau3_banking": null,
-        "terminalbench_hard": 0.0,
-        "terminalbench_v2_1": null,
-        "mmlu_pro": null,
-        "livecodebench": null,
-        "math_500": null,
-        "aime": null,
-        "aime25": null,
-        "gdpval_v2": null,
-        "critpt": 0.0,
-        "mmmu_pro": null,
-        "apex_agents_aa": null,
-        "it_bench_sre": null,
-        "omniscience_accuracy": 2.0,
-        "omniscience_hallucination_rate": null,
-        "omniscience_non_halluc": 81.0
-      },
-      "pricing_per_m_tokens": {
-        "input": null,
-        "output": null,
-        "blended_3_1": null,
-        "blended_7_2_1": null,
-        "blended_1_1": null,
-        "cache_hit": null,
-        "cache_write": null
-      },
-      "intelligence_evaluation_total_cost_usd": null,
-      "cost_per_intelligence_task_usd": {
-        "total": null,
-        "input": null,
-        "output": null,
-        "cacheRead": null,
-        "cacheWrite": null,
-        "nonCacheInput": null,
-        "reasoning": null,
-        "answer": null
-      },
-      "cost_per_eval_breakdown_usd": {},
-      "time_per_task_seconds": null,
-      "output_tokens_per_task": null,
-      "performance": {
-        "output_speed_tps": null,
-        "ttft_seconds_total": null,
-        "ttft_seconds_answer": null,
-        "end_to_end_500tok": null
-      },
-      "output_speed_by_prompt_length": [],
-      "featured": false,
-      "openrouter_slug": null,
-      "note": null,
-      "has_rich_data": true,
-      "data_sources": {
-        "documented_free_api": false,
-        "page_enrichment": false,
-        "aa_pipeline": true
-      },
-      "short_name": "MiniCPM5-1B",
-      "derived": {
-        "safety_composite": 53.4
       }
     },
     {
@@ -19627,6 +19993,110 @@
       }
     },
     {
+      "name": "MiniCPM5-1B (Reasoning)",
+      "slug": "minicpm5-1b",
+      "aa_url": "https://artificialanalysis.ai/models/minicpm5-1b",
+      "creator": "OpenBMB",
+      "released": "2026-05-25",
+      "knowledge_cutoff": null,
+      "is_reasoning": false,
+      "is_open_weights": true,
+      "deprecated": false,
+      "commercial_allowed": null,
+      "license": "Apache 2.0",
+      "license_url": null,
+      "size_class": "tiny",
+      "context_tokens": 128000,
+      "parameters_billions": 1,
+      "active_params_billions": 1,
+      "input_modalities": {
+        "text": true,
+        "image": false,
+        "audio": false,
+        "video": false
+      },
+      "output_modalities": {
+        "text": true,
+        "image": false,
+        "audio": false,
+        "video": false
+      },
+      "composite": {
+        "intelligence_index_v4_1": 11.9,
+        "coding_index": null,
+        "math_index": null,
+        "agentic_index": null,
+        "omniscience_index": -16.6
+      },
+      "benchmarks": {
+        "gpqa_diamond": 28.0,
+        "hle": 7.0,
+        "scicode": 4.0,
+        "ifbench": 49.0,
+        "lcr": 4.0,
+        "tau2_bench": 81.0,
+        "tau3_banking": null,
+        "terminalbench_hard": 0.0,
+        "terminalbench_v2_1": null,
+        "mmlu_pro": null,
+        "livecodebench": null,
+        "math_500": null,
+        "aime": null,
+        "aime25": null,
+        "gdpval_v2": null,
+        "critpt": 0.0,
+        "mmmu_pro": null,
+        "apex_agents_aa": null,
+        "it_bench_sre": null,
+        "omniscience_accuracy": 2.0,
+        "omniscience_hallucination_rate": null,
+        "omniscience_non_halluc": 81.0
+      },
+      "pricing_per_m_tokens": {
+        "input": null,
+        "output": null,
+        "blended_3_1": null,
+        "blended_7_2_1": null,
+        "blended_1_1": null,
+        "cache_hit": null,
+        "cache_write": null
+      },
+      "intelligence_evaluation_total_cost_usd": null,
+      "cost_per_intelligence_task_usd": {
+        "total": null,
+        "input": null,
+        "output": null,
+        "cacheRead": null,
+        "cacheWrite": null,
+        "nonCacheInput": null,
+        "reasoning": null,
+        "answer": null
+      },
+      "cost_per_eval_breakdown_usd": {},
+      "time_per_task_seconds": null,
+      "output_tokens_per_task": null,
+      "performance": {
+        "output_speed_tps": null,
+        "ttft_seconds_total": null,
+        "ttft_seconds_answer": null,
+        "end_to_end_500tok": null
+      },
+      "output_speed_by_prompt_length": [],
+      "featured": false,
+      "openrouter_slug": null,
+      "note": null,
+      "has_rich_data": true,
+      "data_sources": {
+        "documented_free_api": true,
+        "page_enrichment": false,
+        "aa_pipeline": true
+      },
+      "short_name": "MiniCPM5-1B",
+      "derived": {
+        "safety_composite": 53.4
+      }
+    },
+    {
       "name": "MiniCPM5-1B (Non-reasoning)",
       "slug": "minicpm5-1b-non-reasoning",
       "aa_url": "https://artificialanalysis.ai/models/minicpm5-1b-non-reasoning",
@@ -19656,7 +20126,7 @@
         "video": false
       },
       "composite": {
-        "intelligence_index_v4_1": 11.74,
+        "intelligence_index_v4_1": 11.7,
         "coding_index": null,
         "math_index": null,
         "agentic_index": null,
@@ -19721,7 +20191,7 @@
       "note": null,
       "has_rich_data": true,
       "data_sources": {
-        "documented_free_api": false,
+        "documented_free_api": true,
         "page_enrichment": false,
         "aa_pipeline": true
       },
@@ -19751,9 +20221,9 @@
       "output_modalities": null,
       "composite": {
         "intelligence_index_v4_1": 10.99,
-        "coding_index": null,
+        "coding_index": 7.7,
         "math_index": null,
-        "agentic_index": null,
+        "agentic_index": 2.4,
         "omniscience_index": -10.9
       },
       "benchmarks": {
@@ -19790,7 +20260,7 @@
         "cache_hit": null,
         "cache_write": null
       },
-      "intelligence_evaluation_total_cost_usd": null,
+      "intelligence_evaluation_total_cost_usd": 0,
       "cost_per_intelligence_task_usd": {
         "total": 0,
         "input": null,
@@ -19855,8 +20325,8 @@
         "video": false
       },
       "composite": {
-        "intelligence_index_v4_1": 9.26,
-        "coding_index": null,
+        "intelligence_index_v4_1": 9.5,
+        "coding_index": 7.2,
         "math_index": null,
         "agentic_index": null,
         "omniscience_index": -24.0
@@ -19920,117 +20390,13 @@
       "note": null,
       "has_rich_data": true,
       "data_sources": {
-        "documented_free_api": false,
+        "documented_free_api": true,
         "page_enrichment": false,
         "aa_pipeline": true
       },
       "short_name": "Gemma 4 E2B",
       "derived": {
-        "safety_composite": 43.9
-      }
-    },
-    {
-      "name": "Granite 4.1 30B",
-      "slug": "granite-4-1-30b",
-      "aa_url": "https://artificialanalysis.ai/models/granite-4-1-30b",
-      "creator": "IBM",
-      "released": "2026-04-29",
-      "knowledge_cutoff": null,
-      "is_reasoning": false,
-      "is_open_weights": true,
-      "deprecated": false,
-      "commercial_allowed": true,
-      "license": "Apache 2.0",
-      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
-      "size_class": "small",
-      "context_tokens": 131072,
-      "parameters_billions": 30,
-      "active_params_billions": 30,
-      "input_modalities": {
-        "text": true,
-        "image": false,
-        "audio": false,
-        "video": false
-      },
-      "output_modalities": {
-        "text": true,
-        "image": false,
-        "audio": false,
-        "video": false
-      },
-      "composite": {
-        "intelligence_index_v4_1": 8.86,
-        "coding_index": 10.35,
-        "math_index": null,
-        "agentic_index": 1.31,
-        "omniscience_index": -67.8
-      },
-      "benchmarks": {
-        "gpqa_diamond": 48.0,
-        "hle": 4.0,
-        "scicode": 26.0,
-        "ifbench": 44.0,
-        "lcr": 19.0,
-        "tau2_bench": 42.0,
-        "tau3_banking": null,
-        "terminalbench_hard": 2.0,
-        "terminalbench_v2_1": null,
-        "mmlu_pro": null,
-        "livecodebench": null,
-        "math_500": null,
-        "aime": null,
-        "aime25": null,
-        "gdpval_v2": 0.0,
-        "critpt": 0.0,
-        "mmmu_pro": null,
-        "apex_agents_aa": null,
-        "it_bench_sre": null,
-        "omniscience_accuracy": 14.0,
-        "omniscience_hallucination_rate": null,
-        "omniscience_non_halluc": 5.0
-      },
-      "pricing_per_m_tokens": {
-        "input": null,
-        "output": null,
-        "blended_3_1": null,
-        "blended_7_2_1": null,
-        "blended_1_1": null,
-        "cache_hit": null,
-        "cache_write": null
-      },
-      "intelligence_evaluation_total_cost_usd": null,
-      "cost_per_intelligence_task_usd": {
-        "total": null,
-        "input": null,
-        "output": null,
-        "cacheRead": null,
-        "cacheWrite": null,
-        "nonCacheInput": null,
-        "reasoning": null,
-        "answer": null
-      },
-      "cost_per_eval_breakdown_usd": {},
-      "time_per_task_seconds": null,
-      "output_tokens_per_task": null,
-      "performance": {
-        "output_speed_tps": null,
-        "ttft_seconds_total": null,
-        "ttft_seconds_answer": null,
-        "end_to_end_500tok": null
-      },
-      "output_speed_by_prompt_length": [],
-      "featured": false,
-      "openrouter_slug": null,
-      "note": null,
-      "has_rich_data": true,
-      "data_sources": {
-        "documented_free_api": false,
-        "page_enrichment": false,
-        "aa_pipeline": true
-      },
-      "short_name": "Granite 4.1 30B",
-      "derived": {
-        "safety_composite": 6.5
+        "safety_composite": 44.0
       }
     },
     {
@@ -20149,6 +20515,110 @@
       }
     },
     {
+      "name": "Granite 4.1 30B",
+      "slug": "granite-4-1-30b",
+      "aa_url": "https://artificialanalysis.ai/models/granite-4-1-30b",
+      "creator": "IBM",
+      "released": "2026-04-29",
+      "knowledge_cutoff": null,
+      "is_reasoning": false,
+      "is_open_weights": true,
+      "deprecated": false,
+      "commercial_allowed": true,
+      "license": "Apache 2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "size_class": "small",
+      "context_tokens": 131072,
+      "parameters_billions": 30,
+      "active_params_billions": 30,
+      "input_modalities": {
+        "text": true,
+        "image": false,
+        "audio": false,
+        "video": false
+      },
+      "output_modalities": {
+        "text": true,
+        "image": false,
+        "audio": false,
+        "video": false
+      },
+      "composite": {
+        "intelligence_index_v4_1": 8.7,
+        "coding_index": 10.4,
+        "math_index": null,
+        "agentic_index": 1.31,
+        "omniscience_index": -67.8
+      },
+      "benchmarks": {
+        "gpqa_diamond": 48.0,
+        "hle": 4.0,
+        "scicode": 26.0,
+        "ifbench": 44.0,
+        "lcr": 19.0,
+        "tau2_bench": 42.0,
+        "tau3_banking": null,
+        "terminalbench_hard": 2.0,
+        "terminalbench_v2_1": null,
+        "mmlu_pro": null,
+        "livecodebench": null,
+        "math_500": null,
+        "aime": null,
+        "aime25": null,
+        "gdpval_v2": 0.0,
+        "critpt": 0.0,
+        "mmmu_pro": null,
+        "apex_agents_aa": null,
+        "it_bench_sre": null,
+        "omniscience_accuracy": 14.0,
+        "omniscience_hallucination_rate": null,
+        "omniscience_non_halluc": 5.0
+      },
+      "pricing_per_m_tokens": {
+        "input": null,
+        "output": null,
+        "blended_3_1": null,
+        "blended_7_2_1": null,
+        "blended_1_1": null,
+        "cache_hit": null,
+        "cache_write": null
+      },
+      "intelligence_evaluation_total_cost_usd": null,
+      "cost_per_intelligence_task_usd": {
+        "total": null,
+        "input": null,
+        "output": null,
+        "cacheRead": null,
+        "cacheWrite": null,
+        "nonCacheInput": null,
+        "reasoning": null,
+        "answer": null
+      },
+      "cost_per_eval_breakdown_usd": {},
+      "time_per_task_seconds": null,
+      "output_tokens_per_task": null,
+      "performance": {
+        "output_speed_tps": null,
+        "ttft_seconds_total": null,
+        "ttft_seconds_answer": null,
+        "end_to_end_500tok": null
+      },
+      "output_speed_by_prompt_length": [],
+      "featured": false,
+      "openrouter_slug": null,
+      "note": null,
+      "has_rich_data": true,
+      "data_sources": {
+        "documented_free_api": true,
+        "page_enrichment": false,
+        "aa_pipeline": true
+      },
+      "short_name": "Granite 4.1 30B",
+      "derived": {
+        "safety_composite": 6.5
+      }
+    },
+    {
       "name": "NVIDIA Nemotron 3 Nano 4B",
       "slug": "nvidia-nemotron-3-nano-4b",
       "aa_url": "https://artificialanalysis.ai/models/nvidia-nemotron-3-nano-4b",
@@ -20178,8 +20648,8 @@
         "video": false
       },
       "composite": {
-        "intelligence_index_v4_1": 8.73,
-        "coding_index": 7.98,
+        "intelligence_index_v4_1": 8.6,
+        "coding_index": 8,
         "math_index": null,
         "agentic_index": 2.34,
         "omniscience_index": -71.5
@@ -20243,13 +20713,13 @@
       "note": null,
       "has_rich_data": true,
       "data_sources": {
-        "documented_free_api": false,
+        "documented_free_api": true,
         "page_enrichment": false,
         "aa_pipeline": true
       },
       "short_name": "NVIDIA Nemotron 3 Nano 4B",
       "derived": {
-        "safety_composite": 10.1
+        "safety_composite": 10.0
       }
     },
     {
@@ -20396,8 +20866,8 @@
         "video": false
       },
       "composite": {
-        "intelligence_index_v4_1": 7.64,
-        "coding_index": 2.92,
+        "intelligence_index_v4_1": 7.4,
+        "coding_index": 2.9,
         "math_index": null,
         "agentic_index": 0.82,
         "omniscience_index": -47.5
@@ -20461,13 +20931,13 @@
       "note": null,
       "has_rich_data": true,
       "data_sources": {
-        "documented_free_api": false,
+        "documented_free_api": true,
         "page_enrichment": false,
         "aa_pipeline": true
       },
       "short_name": "Qwen3.5 2B",
       "derived": {
-        "safety_composite": 30.1
+        "safety_composite": 30.0
       }
     },
     {
@@ -20586,110 +21056,6 @@
       }
     },
     {
-      "name": "Gemma 4 E2B (Non-reasoning)",
-      "slug": "gemma-4-e2b-non-reasoning",
-      "aa_url": "https://artificialanalysis.ai/models/gemma-4-e2b-non-reasoning",
-      "creator": "Google",
-      "released": "2026-04-02",
-      "knowledge_cutoff": null,
-      "is_reasoning": false,
-      "is_open_weights": true,
-      "deprecated": false,
-      "commercial_allowed": true,
-      "license": "Apache 2.0",
-      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
-      "size_class": "small",
-      "context_tokens": 128000,
-      "parameters_billions": 5.1,
-      "active_params_billions": 2.3,
-      "input_modalities": {
-        "text": true,
-        "image": true,
-        "audio": true,
-        "video": true
-      },
-      "output_modalities": {
-        "text": true,
-        "image": true,
-        "audio": false,
-        "video": false
-      },
-      "composite": {
-        "intelligence_index_v4_1": 6.41,
-        "coding_index": null,
-        "math_index": null,
-        "agentic_index": null,
-        "omniscience_index": -61.4
-      },
-      "benchmarks": {
-        "gpqa_diamond": 41.0,
-        "hle": 4.0,
-        "scicode": 20.0,
-        "ifbench": 34.0,
-        "lcr": 15.0,
-        "tau2_bench": 22.0,
-        "tau3_banking": null,
-        "terminalbench_hard": 2.0,
-        "terminalbench_v2_1": null,
-        "mmlu_pro": null,
-        "livecodebench": null,
-        "math_500": null,
-        "aime": null,
-        "aime25": null,
-        "gdpval_v2": null,
-        "critpt": 0.0,
-        "mmmu_pro": 42.0,
-        "apex_agents_aa": null,
-        "it_bench_sre": null,
-        "omniscience_accuracy": 8.0,
-        "omniscience_hallucination_rate": null,
-        "omniscience_non_halluc": 25.0
-      },
-      "pricing_per_m_tokens": {
-        "input": null,
-        "output": null,
-        "blended_3_1": null,
-        "blended_7_2_1": null,
-        "blended_1_1": null,
-        "cache_hit": null,
-        "cache_write": null
-      },
-      "intelligence_evaluation_total_cost_usd": null,
-      "cost_per_intelligence_task_usd": {
-        "total": null,
-        "input": null,
-        "output": null,
-        "cacheRead": null,
-        "cacheWrite": null,
-        "nonCacheInput": null,
-        "reasoning": null,
-        "answer": null
-      },
-      "cost_per_eval_breakdown_usd": {},
-      "time_per_task_seconds": null,
-      "output_tokens_per_task": null,
-      "performance": {
-        "output_speed_tps": null,
-        "ttft_seconds_total": null,
-        "ttft_seconds_answer": null,
-        "end_to_end_500tok": null
-      },
-      "output_speed_by_prompt_length": [],
-      "featured": false,
-      "openrouter_slug": null,
-      "note": null,
-      "has_rich_data": true,
-      "data_sources": {
-        "documented_free_api": false,
-        "page_enrichment": false,
-        "aa_pipeline": true
-      },
-      "short_name": "Gemma 4 E2B",
-      "derived": {
-        "safety_composite": 17.6
-      }
-    },
-    {
       "name": "Sarvam 30B (high)",
       "slug": "sarvam-30b",
       "aa_url": "https://artificialanalysis.ai/models/sarvam-30b",
@@ -20805,6 +21171,110 @@
       }
     },
     {
+      "name": "Gemma 4 E2B (Non-reasoning)",
+      "slug": "gemma-4-e2b-non-reasoning",
+      "aa_url": "https://artificialanalysis.ai/models/gemma-4-e2b-non-reasoning",
+      "creator": "Google",
+      "released": "2026-04-02",
+      "knowledge_cutoff": null,
+      "is_reasoning": false,
+      "is_open_weights": true,
+      "deprecated": false,
+      "commercial_allowed": true,
+      "license": "Apache 2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "size_class": "small",
+      "context_tokens": 128000,
+      "parameters_billions": 5.1,
+      "active_params_billions": 2.3,
+      "input_modalities": {
+        "text": true,
+        "image": true,
+        "audio": true,
+        "video": true
+      },
+      "output_modalities": {
+        "text": true,
+        "image": true,
+        "audio": false,
+        "video": false
+      },
+      "composite": {
+        "intelligence_index_v4_1": 6.2,
+        "coding_index": null,
+        "math_index": null,
+        "agentic_index": null,
+        "omniscience_index": -61.4
+      },
+      "benchmarks": {
+        "gpqa_diamond": 41.0,
+        "hle": 4.0,
+        "scicode": 20.0,
+        "ifbench": 34.0,
+        "lcr": 15.0,
+        "tau2_bench": 22.0,
+        "tau3_banking": null,
+        "terminalbench_hard": 2.0,
+        "terminalbench_v2_1": null,
+        "mmlu_pro": null,
+        "livecodebench": null,
+        "math_500": null,
+        "aime": null,
+        "aime25": null,
+        "gdpval_v2": null,
+        "critpt": 0.0,
+        "mmmu_pro": 42.0,
+        "apex_agents_aa": null,
+        "it_bench_sre": null,
+        "omniscience_accuracy": 8.0,
+        "omniscience_hallucination_rate": null,
+        "omniscience_non_halluc": 25.0
+      },
+      "pricing_per_m_tokens": {
+        "input": null,
+        "output": null,
+        "blended_3_1": null,
+        "blended_7_2_1": null,
+        "blended_1_1": null,
+        "cache_hit": null,
+        "cache_write": null
+      },
+      "intelligence_evaluation_total_cost_usd": null,
+      "cost_per_intelligence_task_usd": {
+        "total": null,
+        "input": null,
+        "output": null,
+        "cacheRead": null,
+        "cacheWrite": null,
+        "nonCacheInput": null,
+        "reasoning": null,
+        "answer": null
+      },
+      "cost_per_eval_breakdown_usd": {},
+      "time_per_task_seconds": null,
+      "output_tokens_per_task": null,
+      "performance": {
+        "output_speed_tps": null,
+        "ttft_seconds_total": null,
+        "ttft_seconds_answer": null,
+        "end_to_end_500tok": null
+      },
+      "output_speed_by_prompt_length": [],
+      "featured": false,
+      "openrouter_slug": null,
+      "note": null,
+      "has_rich_data": true,
+      "data_sources": {
+        "documented_free_api": true,
+        "page_enrichment": false,
+        "aa_pipeline": true
+      },
+      "short_name": "Gemma 4 E2B",
+      "derived": {
+        "safety_composite": 17.5
+      }
+    },
+    {
       "name": "Qwen3.5 2B (Non-reasoning)",
       "slug": "qwen3-5-2b-non-reasoning",
       "aa_url": "https://artificialanalysis.ai/models/qwen3-5-2b-non-reasoning",
@@ -20834,8 +21304,8 @@
         "video": false
       },
       "composite": {
-        "intelligence_index_v4_1": 5.62,
-        "coding_index": 2.39,
+        "intelligence_index_v4_1": 5.3,
+        "coding_index": 2.4,
         "math_index": null,
         "agentic_index": 0.76,
         "omniscience_index": -82.8
@@ -20899,13 +21369,13 @@
       "note": null,
       "has_rich_data": true,
       "data_sources": {
-        "documented_free_api": false,
+        "documented_free_api": true,
         "page_enrichment": false,
         "aa_pipeline": true
       },
       "short_name": "Qwen3.5 2B",
       "derived": {
-        "safety_composite": 4.0
+        "safety_composite": 3.9
       }
     },
     {
@@ -20938,7 +21408,7 @@
         "video": false
       },
       "composite": {
-        "intelligence_index_v4_1": 5.46,
+        "intelligence_index_v4_1": 5.2,
         "coding_index": 0,
         "math_index": null,
         "agentic_index": 5.7,
@@ -21003,13 +21473,13 @@
       "note": null,
       "has_rich_data": true,
       "data_sources": {
-        "documented_free_api": false,
+        "documented_free_api": true,
         "page_enrichment": false,
         "aa_pipeline": true
       },
       "short_name": "Qwen3.5 0.8B",
       "derived": {
-        "safety_composite": 40.0
+        "safety_composite": 39.9
       }
     },
     {
@@ -21042,7 +21512,7 @@
         "video": false
       },
       "composite": {
-        "intelligence_index_v4_1": 4.95,
+        "intelligence_index_v4_1": 4.6,
         "coding_index": null,
         "math_index": null,
         "agentic_index": null,
@@ -21112,14 +21582,14 @@
       "note": null,
       "has_rich_data": true,
       "data_sources": {
-        "documented_free_api": false,
+        "documented_free_api": true,
         "page_enrichment": false,
         "aa_pipeline": true
       },
       "short_name": "LFM2 24B A2B",
       "derived": {
-        "value_intelligence_per_dollar_blend": 99.0,
-        "safety_composite": 20.0,
+        "value_intelligence_per_dollar_blend": 92.0,
+        "safety_composite": 19.8,
         "throughput_tps": 118.9,
         "speed_tier": 2,
         "latency_ttft_seconds": 0.6,
@@ -21156,8 +21626,8 @@
         "video": false
       },
       "composite": {
-        "intelligence_index_v4_1": 4.7,
-        "coding_index": 4.72,
+        "intelligence_index_v4_1": 4.4,
+        "coding_index": 4.7,
         "math_index": null,
         "agentic_index": 0.41,
         "omniscience_index": -77.4
@@ -21221,117 +21691,13 @@
       "note": null,
       "has_rich_data": true,
       "data_sources": {
-        "documented_free_api": false,
+        "documented_free_api": true,
         "page_enrichment": false,
         "aa_pipeline": true
       },
       "short_name": "Granite 4.1 3B",
       "derived": {
-        "safety_composite": 4.9
-      }
-    },
-    {
-      "name": "Qwen3.5 0.8B (Non-reasoning)",
-      "slug": "qwen3-5-0-8b-non-reasoning",
-      "aa_url": "https://artificialanalysis.ai/models/qwen3-5-0-8b-non-reasoning",
-      "creator": "Alibaba",
-      "released": "2026-03-02",
-      "knowledge_cutoff": null,
-      "is_reasoning": false,
-      "is_open_weights": true,
-      "deprecated": false,
-      "commercial_allowed": true,
-      "license": "Apache 2.0",
-      "license_url": "https://huggingface.co/Qwen/Qwen3.5-122B-A10B/blob/main/LICENSE",
-      "size_class": "tiny",
-      "context_tokens": 262144,
-      "parameters_billions": 0.87,
-      "active_params_billions": 0.87,
-      "input_modalities": {
-        "text": true,
-        "image": true,
-        "audio": false,
-        "video": true
-      },
-      "output_modalities": {
-        "text": true,
-        "image": false,
-        "audio": false,
-        "video": false
-      },
-      "composite": {
-        "intelligence_index_v4_1": 4.42,
-        "coding_index": 1.21,
-        "math_index": null,
-        "agentic_index": null,
-        "omniscience_index": -89
-      },
-      "benchmarks": {
-        "gpqa_diamond": 24.0,
-        "hle": 5.0,
-        "scicode": 3.0,
-        "ifbench": 22.0,
-        "lcr": 7.0,
-        "tau2_bench": 65.0,
-        "tau3_banking": null,
-        "terminalbench_hard": 0.0,
-        "terminalbench_v2_1": null,
-        "mmlu_pro": null,
-        "livecodebench": null,
-        "math_500": null,
-        "aime": null,
-        "aime25": null,
-        "gdpval_v2": 0.0,
-        "critpt": 0.0,
-        "mmmu_pro": 26.0,
-        "apex_agents_aa": null,
-        "it_bench_sre": null,
-        "omniscience_accuracy": 5.0,
-        "omniscience_hallucination_rate": null,
-        "omniscience_non_halluc": 1.0
-      },
-      "pricing_per_m_tokens": {
-        "input": null,
-        "output": null,
-        "blended_3_1": null,
-        "blended_7_2_1": null,
-        "blended_1_1": null,
-        "cache_hit": null,
-        "cache_write": null
-      },
-      "intelligence_evaluation_total_cost_usd": null,
-      "cost_per_intelligence_task_usd": {
-        "total": null,
-        "input": null,
-        "output": null,
-        "cacheRead": null,
-        "cacheWrite": null,
-        "nonCacheInput": null,
-        "reasoning": null,
-        "answer": null
-      },
-      "cost_per_eval_breakdown_usd": {},
-      "time_per_task_seconds": null,
-      "output_tokens_per_task": null,
-      "performance": {
-        "output_speed_tps": null,
-        "ttft_seconds_total": null,
-        "ttft_seconds_answer": null,
-        "end_to_end_500tok": null
-      },
-      "output_speed_by_prompt_length": [],
-      "featured": false,
-      "openrouter_slug": null,
-      "note": null,
-      "has_rich_data": true,
-      "data_sources": {
-        "documented_free_api": false,
-        "page_enrichment": false,
-        "aa_pipeline": true
-      },
-      "short_name": "Qwen3.5 0.8B",
-      "derived": {
-        "safety_composite": 2.4
+        "safety_composite": 4.8
       }
     },
     {
@@ -21364,8 +21730,8 @@
         "video": false
       },
       "composite": {
-        "intelligence_index_v4_1": 4.19,
-        "coding_index": 0.69,
+        "intelligence_index_v4_1": 3.8,
+        "coding_index": 0.7,
         "math_index": null,
         "agentic_index": 1.44,
         "omniscience_index": -84.7
@@ -21429,13 +21795,117 @@
       "note": null,
       "has_rich_data": true,
       "data_sources": {
-        "documented_free_api": false,
+        "documented_free_api": true,
         "page_enrichment": false,
         "aa_pipeline": true
       },
       "short_name": "MiniCPM-V 4.6 1.3B",
       "derived": {
-        "safety_composite": 3.5
+        "safety_composite": 3.3
+      }
+    },
+    {
+      "name": "Qwen3.5 0.8B (Non-reasoning)",
+      "slug": "qwen3-5-0-8b-non-reasoning",
+      "aa_url": "https://artificialanalysis.ai/models/qwen3-5-0-8b-non-reasoning",
+      "creator": "Alibaba",
+      "released": "2026-03-02",
+      "knowledge_cutoff": null,
+      "is_reasoning": false,
+      "is_open_weights": true,
+      "deprecated": false,
+      "commercial_allowed": true,
+      "license": "Apache 2.0",
+      "license_url": "https://huggingface.co/Qwen/Qwen3.5-122B-A10B/blob/main/LICENSE",
+      "size_class": "tiny",
+      "context_tokens": 262144,
+      "parameters_billions": 0.87,
+      "active_params_billions": 0.87,
+      "input_modalities": {
+        "text": true,
+        "image": true,
+        "audio": false,
+        "video": true
+      },
+      "output_modalities": {
+        "text": true,
+        "image": false,
+        "audio": false,
+        "video": false
+      },
+      "composite": {
+        "intelligence_index_v4_1": 2.9,
+        "coding_index": 1.2,
+        "math_index": null,
+        "agentic_index": null,
+        "omniscience_index": -89
+      },
+      "benchmarks": {
+        "gpqa_diamond": 24.0,
+        "hle": 5.0,
+        "scicode": 3.0,
+        "ifbench": 22.0,
+        "lcr": 7.0,
+        "tau2_bench": 65.0,
+        "tau3_banking": null,
+        "terminalbench_hard": 0.0,
+        "terminalbench_v2_1": null,
+        "mmlu_pro": null,
+        "livecodebench": null,
+        "math_500": null,
+        "aime": null,
+        "aime25": null,
+        "gdpval_v2": 0.0,
+        "critpt": 0.0,
+        "mmmu_pro": 26.0,
+        "apex_agents_aa": null,
+        "it_bench_sre": null,
+        "omniscience_accuracy": 5.0,
+        "omniscience_hallucination_rate": null,
+        "omniscience_non_halluc": 1.0
+      },
+      "pricing_per_m_tokens": {
+        "input": null,
+        "output": null,
+        "blended_3_1": null,
+        "blended_7_2_1": null,
+        "blended_1_1": null,
+        "cache_hit": null,
+        "cache_write": null
+      },
+      "intelligence_evaluation_total_cost_usd": null,
+      "cost_per_intelligence_task_usd": {
+        "total": null,
+        "input": null,
+        "output": null,
+        "cacheRead": null,
+        "cacheWrite": null,
+        "nonCacheInput": null,
+        "reasoning": null,
+        "answer": null
+      },
+      "cost_per_eval_breakdown_usd": {},
+      "time_per_task_seconds": null,
+      "output_tokens_per_task": null,
+      "performance": {
+        "output_speed_tps": null,
+        "ttft_seconds_total": null,
+        "ttft_seconds_answer": null,
+        "end_to_end_500tok": null
+      },
+      "output_speed_by_prompt_length": [],
+      "featured": false,
+      "openrouter_slug": null,
+      "note": null,
+      "has_rich_data": true,
+      "data_sources": {
+        "documented_free_api": true,
+        "page_enrichment": false,
+        "aa_pipeline": true
+      },
+      "short_name": "Qwen3.5 0.8B",
+      "derived": {
+        "safety_composite": 1.8
       }
     },
     {
@@ -22083,7 +22553,7 @@
       "note": null,
       "has_rich_data": false,
       "data_sources": {
-        "documented_free_api": false,
+        "documented_free_api": true,
         "page_enrichment": false,
         "aa_pipeline": true
       },
@@ -22185,7 +22655,7 @@
       "note": null,
       "has_rich_data": false,
       "data_sources": {
-        "documented_free_api": false,
+        "documented_free_api": true,
         "page_enrichment": false,
         "aa_pipeline": true
       },
@@ -22194,10 +22664,10 @@
     }
   ],
   "coverage": {
-    "total": 200,
+    "total": 205,
     "featured": 19,
-    "with_rich_metrics": 193,
-    "with_documented_free_api": 0,
+    "with_rich_metrics": 197,
+    "with_documented_free_api": 33,
     "featured_without_rich_metrics": []
   }
 }

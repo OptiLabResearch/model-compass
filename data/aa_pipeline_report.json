@@ -1,32 +1,30 @@
 {
-  "generated_at": "2026-08-27T16:35:43Z",
+  "generated_at": "2026-08-27T16:53:46Z",
   "sources": {
     "rsc": {
       "healthy": true,
       "records": 422,
-      "fetched_at": "2026-08-27T16:35:37Z",
+      "fetched_at": "2026-08-27T16:53:40Z",
       "errors": []
     },
     "official_api": {
-      "healthy": false,
-      "records": 0,
-      "fetched_at": "2026-08-27T16:35:38Z",
-      "errors": [
-        "AA_API_KEY is not set; official API fetch skipped"
-      ]
+      "healthy": true,
+      "records": 621,
+      "fetched_at": "2026-08-27T16:53:41Z",
+      "errors": []
     },
     "snapshot": {
       "healthy": true,
       "records": 570,
-      "fetched_at": "2026-08-27T16:35:38Z",
+      "fetched_at": "2026-08-27T16:53:42Z",
       "errors": []
     }
   },
   "field_coverage": {
-    "intelligence_index": 607,
-    "coding_index": 166,
+    "intelligence_index": 612,
+    "coding_index": 234,
     "math_index": 0,
-    "agentic_index": 150,
+    "agentic_index": 198,
     "omniscience_index": 491,
     "context_tokens": 620,
     "parameters_billions": 338,
@@ -34,15 +32,15 @@
     "is_open_weights": 620,
     "license": 328,
     "size_class": 566,
-    "released": 620,
-    "creator": 620
+    "released": 625,
+    "creator": 625
   },
   "benchmark_coverage": {
     "aime": 0,
     "aime25": 188,
     "apex_agents": 30,
-    "critpt": 494,
-    "gdpval": 209,
+    "critpt": 498,
+    "gdpval": 213,
     "gpqa": 587,
     "gpqa_diamond": 0,
     "hle": 581,
@@ -56,14 +54,14 @@
     "omniscience": 381,
     "omniscience_accuracy": 491,
     "omniscience_hallucination_rate": 0,
-    "omniscience_non_halluc": 491,
+    "omniscience_non_halluc": 495,
     "scicode": 579,
     "tau2": 446,
     "tau_banking": 176,
     "terminalbench_hard": 438,
     "terminalbench_v21": 188
   },
-  "total_models": 620,
+  "total_models": 625,
   "parser_versions": {
     "rsc": "0.2.0",
     "official_api": "0.1.0",
@@ -73,16 +71,17 @@
   "stale": false,
   "freshness": {
     "stale": false,
-    "generated_at": "2026-08-27T16:35:43Z",
+    "generated_at": "2026-08-27T16:53:46Z",
     "cached_sources": [],
     "live_sources": [
       "rsc",
+      "official_api",
       "snapshot"
     ],
     "source_fetched_at": {
-      "rsc": "2026-08-27T16:35:37Z",
-      "official_api": "2026-08-27T16:35:38Z",
-      "snapshot": "2026-08-27T16:35:38Z"
+      "rsc": "2026-08-27T16:53:40Z",
+      "official_api": "2026-08-27T16:53:41Z",
+      "snapshot": "2026-08-27T16:53:42Z"
     }
   }
 }

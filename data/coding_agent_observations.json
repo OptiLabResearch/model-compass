@@ -1,7 +1,7 @@
 {
   "version": 1,
   "parser_version": "0.2.0",
-  "generated_at": "2026-08-24T07:39:00Z",
+  "generated_at": "2026-08-27T16:53:49Z",
   "source": "artificial_analysis_coding_agents",
   "source_url": "https://artificialanalysis.ai/agents/coding-agents",
   "methodology": "public JSON-LD metric views merged by source-declared variant label",
@@ -26,7 +26,7 @@
       "benchmark_suite": "Artificial Analysis Coding Agent Index",
       "benchmark_version": "1.4",
       "scores": {
-        "coding_agent_index": 0.6814975428587517
+        "coding_agent_index": 0.6814975428587521
       },
       "cost_per_task_usd": 8.170783921523503,
       "execution_time_seconds": 1421.8799826175893,
@@ -36,7 +36,7 @@
       "cache_hit_rate": null,
       "provenance": {
         "source": "artificial_analysis_coding_agents",
-        "fetched_at": "2026-08-24T07:39:00Z",
+        "fetched_at": "2026-08-27T16:53:49Z",
         "source_authority": "artificial_analysis_coding_agents",
         "parser_version": "0.2.0"
       }
@@ -53,7 +53,7 @@
       "benchmark_suite": "Artificial Analysis Coding Agent Index",
       "benchmark_version": "1.4",
       "scores": {
-        "coding_agent_index": 0.6717276042685724
+        "coding_agent_index": 0.6717276042685727
       },
       "cost_per_task_usd": 11.687407620910031,
       "execution_time_seconds": 1407.3063016359897,
@@ -63,7 +63,7 @@
       "cache_hit_rate": null,
       "provenance": {
         "source": "artificial_analysis_coding_agents",
-        "fetched_at": "2026-08-24T07:39:00Z",
+        "fetched_at": "2026-08-27T16:53:49Z",
         "source_authority": "artificial_analysis_coding_agents",
         "parser_version": "0.2.0"
       }
@@ -80,9 +80,9 @@
       "benchmark_suite": "Artificial Analysis Coding Agent Index",
       "benchmark_version": "1.4",
       "scores": {
-        "coding_agent_index": 0.6505240024334411
+        "coding_agent_index": 0.6505240024334414
       },
-      "cost_per_task_usd": 6.420249160020451,
+      "cost_per_task_usd": 6.420249160020447,
       "execution_time_seconds": 613.70177198364,
       "tokens": {},
       "total_tokens": null,
@@ -90,7 +90,7 @@
       "cache_hit_rate": null,
       "provenance": {
         "source": "artificial_analysis_coding_agents",
-        "fetched_at": "2026-08-24T07:39:00Z",
+        "fetched_at": "2026-08-27T16:53:49Z",
         "source_authority": "artificial_analysis_coding_agents",
         "parser_version": "0.2.0"
       }
@@ -109,15 +109,15 @@
       "scores": {
         "coding_agent_index": 0.6408998279698193
       },
-      "cost_per_task_usd": 2.4389824437627774,
-      "execution_time_seconds": 929.1851094069541,
+      "cost_per_task_usd": 2.438982443762781,
+      "execution_time_seconds": 929.185109406954,
       "tokens": {},
       "total_tokens": null,
       "turns": null,
       "cache_hit_rate": null,
       "provenance": {
         "source": "artificial_analysis_coding_agents",
-        "fetched_at": "2026-08-24T07:39:00Z",
+        "fetched_at": "2026-08-27T16:53:49Z",
         "source_authority": "artificial_analysis_coding_agents",
         "parser_version": "0.2.0"
       }
@@ -134,17 +134,17 @@
       "benchmark_suite": "Artificial Analysis Coding Agent Index",
       "benchmark_version": "1.4",
       "scores": {
-        "coding_agent_index": 0.6263880112748017
+        "coding_agent_index": 0.6263880112748013
       },
       "cost_per_task_usd": 3.0816355416104315,
-      "execution_time_seconds": 1447.3730531697347,
+      "execution_time_seconds": 1447.3730531697342,
       "tokens": {},
       "total_tokens": null,
       "turns": null,
       "cache_hit_rate": null,
       "provenance": {
         "source": "artificial_analysis_coding_agents",
-        "fetched_at": "2026-08-24T07:39:00Z",
+        "fetched_at": "2026-08-27T16:53:49Z",
         "source_authority": "artificial_analysis_coding_agents",
         "parser_version": "0.2.0"
       }
@@ -171,7 +171,7 @@
       "cache_hit_rate": null,
       "provenance": {
         "source": "artificial_analysis_coding_agents",
-        "fetched_at": "2026-08-24T07:39:00Z",
+        "fetched_at": "2026-08-27T16:53:49Z",
         "source_authority": "artificial_analysis_coding_agents",
         "parser_version": "0.2.0"
       }
@@ -198,7 +198,7 @@
       "cache_hit_rate": null,
       "provenance": {
         "source": "artificial_analysis_coding_agents",
-        "fetched_at": "2026-08-24T07:39:00Z",
+        "fetched_at": "2026-08-27T16:53:49Z",
         "source_authority": "artificial_analysis_coding_agents",
         "parser_version": "0.2.0"
       }
@@ -215,9 +215,9 @@
       "benchmark_suite": "Artificial Analysis Coding Agent Index",
       "benchmark_version": "1.4",
       "scores": {
-        "coding_agent_index": 0.43310157193602167
+        "coding_agent_index": 0.433101571936022
       },
-      "cost_per_task_usd": 6.657531358159519,
+      "cost_per_task_usd": 6.657531358159516,
       "execution_time_seconds": 1507.044470347651,
       "tokens": {},
       "total_tokens": null,
@@ -225,7 +225,7 @@
       "cache_hit_rate": null,
       "provenance": {
         "source": "artificial_analysis_coding_agents",
-        "fetched_at": "2026-08-24T07:39:00Z",
+        "fetched_at": "2026-08-27T16:53:49Z",
         "source_authority": "artificial_analysis_coding_agents",
         "parser_version": "0.2.0"
       }
@@ -244,7 +244,7 @@
       "scores": {
         "coding_agent_index": 0.3830075380367747
       },
-      "cost_per_task_usd": 0.5573437730061347,
+      "cost_per_task_usd": 0.5573437730061354,
       "execution_time_seconds": 472.37220245398754,
       "tokens": {},
       "total_tokens": null,
@@ -252,7 +252,7 @@
       "cache_hit_rate": null,
       "provenance": {
         "source": "artificial_analysis_coding_agents",
-        "fetched_at": "2026-08-24T07:39:00Z",
+        "fetched_at": "2026-08-27T16:53:49Z",
         "source_authority": "artificial_analysis_coding_agents",
         "parser_version": "0.2.0"
       }
