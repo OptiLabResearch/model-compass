@@ -50,8 +50,25 @@ def _num(value: Any) -> float | None:
                      and math.isfinite(value)) else None
 
 
+def _negative_num(value: Any) -> bool:
+    return (_num(value) is not None and value < 0)
+
+
+def _json_safe(value: Any) -> Any:
+    """Convert non-finite floats to unknown values without mutating input."""
+    if isinstance(value, float):
+        return value if math.isfinite(value) else None
+    if isinstance(value, dict):
+        return {key: _json_safe(child) for key, child in value.items()}
+    if isinstance(value, (list, tuple)):
+        return [_json_safe(child) for child in value]
+    return value
+
+
 def _cost(model: dict) -> float | None:
     p = model.get("pricing") or {}
+    if any(_negative_num(p.get(key)) for key in ("input", "output", "blended_3_1")):
+        return None
     b = _num(p.get("blended_3_1"))
     if b is not None:
         return b
@@ -118,9 +135,9 @@ class DecisionEngine:
     def explain(self, model: dict) -> dict:
         return {"slug": model.get("slug"), "name": model.get("name"),
                 "sources": _sources(model), "provenance": model.get("provenance", {}),
-                "coverage": {"intelligence_index": model.get("intelligence_index") is not None,
-                             "coding_index": model.get("coding_index") is not None,
-                             "agentic_index": model.get("agentic_index") is not None,
+                "coverage": {"intelligence_index": _num(model.get("intelligence_index")) is not None,
+                             "coding_index": _num(model.get("coding_index")) is not None,
+                             "agentic_index": _num(model.get("agentic_index")) is not None,
                              "cost": _cost(model) is not None,
                              "speed": _speed(model) is not None},
                 "access": self.access.get(model.get("slug"))}
@@ -152,13 +169,13 @@ class DecisionEngine:
     def _matches(self, model: dict, c: dict[str, Any]) -> tuple[bool, list[str]]:
         reasons: list[str] = []
         checks = {
-            "min_intelligence": (model.get("intelligence_index"), ">="),
-            "min_coding": (model.get("coding_index"), ">="),
-            "min_agentic": (model.get("agentic_index"), ">="),
-            "min_context_tokens": (model.get("context_tokens"), ">="),
+            "min_intelligence": (_num(model.get("intelligence_index")), ">="),
+            "min_coding": (_num(model.get("coding_index")), ">="),
+            "min_agentic": (_num(model.get("agentic_index")), ">="),
+            "min_context_tokens": (_num(model.get("context_tokens")), ">="),
             "min_speed": (_speed(model), ">="),
             "max_cost": (_cost(model), "<="),
-            "max_ttft": ((model.get("performance") or {}).get("median_ttft_seconds"), "<="),
+            "max_ttft": (_num((model.get("performance") or {}).get("median_ttft_seconds")), "<="),
         }
         for key, (actual, op) in checks.items():
             expected = _num(c.get(key))
@@ -312,12 +329,12 @@ class DecisionEngine:
         ranked.sort(key=lambda x: (-x[0], x[1].get("slug", "")))
         output = []
         for score, m, explanation in ranked[:limit]:
-            row = dict(m)
+            row = _json_safe(dict(m))
             row["recommendation_score"] = explanation["score"]
-            row["explanation"] = explanation
+            row["explanation"] = _json_safe(explanation)
             output.append(row)
-        return {"profile": p.name, "profile_version": p.version, "strategy": strategy, "metric": metric,
-                "candidate_count": len(ranked), "recommendations": output}
+        return _json_safe({"profile": p.name, "profile_version": p.version, "strategy": strategy, "metric": metric,
+                           "candidate_count": len(ranked), "recommendations": output})
 
     def pareto(self, dimensions: list[str]) -> list[dict]:
         """Return non-dominated models; dimensions prefixed ``-`` are minimized.

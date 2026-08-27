@@ -45,9 +45,11 @@ def _add_output_options(parser, *, limit=None):
 
 def _emit(payload, args) -> None:
     if args.compact:
-        print(json.dumps(payload, ensure_ascii=False, separators=(",", ":"), sort_keys=True))
+        print(json.dumps(payload, ensure_ascii=False, separators=(",", ":"), sort_keys=True,
+                         allow_nan=False))
     else:
-        print(json.dumps(payload, ensure_ascii=False, indent=2, sort_keys=True))
+        print(json.dumps(payload, ensure_ascii=False, indent=2, sort_keys=True,
+                         allow_nan=False))
 
 
 def _model_summary(model):

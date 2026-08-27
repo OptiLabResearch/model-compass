@@ -98,6 +98,45 @@ def test_weighted_profiles_renormalize_around_unknown_metrics():
     assert row["recommendation_score"] > 0.9
 
 
+def test_nonfinite_constraint_metrics_fail_closed():
+    bad_context = model("bad-context", "B", 90, 1.0, 100)
+    bad_context["context_tokens"] = float("nan")
+    bad_ttft = model("bad-ttft", "T", 90, 1.0, 100)
+    bad_ttft["performance"]["median_ttft_seconds"] = float("nan")
+    bad_index = model("bad-index", "I", 90, 1.0, 100)
+    bad_index["intelligence_index"] = float("inf")
+
+    context_result = DecisionEngine([bad_context]).recommend(
+        {"min_context_tokens": 100000}, limit=10)
+    ttft_result = DecisionEngine([bad_ttft]).recommend(
+        {"max_ttft": 2.0}, limit=10)
+    index_result = DecisionEngine([bad_index]).recommend(
+        {"min_intelligence": 80}, limit=10)
+    assert context_result["candidate_count"] == 0
+    assert ttft_result["candidate_count"] == 0
+    assert index_result["candidate_count"] == 0
+
+
+def test_nonfinite_model_fields_are_unknown_in_recommendation_json():
+    row = model("nonfinite", "N", 90, 1.0, 100)
+    row["performance"]["median_output_speed_tps"] = float("nan")
+    row["provenance"]["extra_metric"] = float("inf")
+    result = DecisionEngine([row]).recommend("best-overall", limit=1)
+    json.dumps(result, allow_nan=False)
+    output = result["recommendations"][0]
+    assert output["performance"]["median_output_speed_tps"] is None
+    assert output["provenance"]["extra_metric"] is None
+
+
+def test_negative_prices_are_unknown_and_never_cost_baselines():
+    negative = model("negative", "N", 99, 1.0, 100)
+    negative["pricing"]["blended_3_1"] = -1.0
+    valid = model("valid", "V", 70, 0.0, 100)
+    result = DecisionEngine([negative, valid]).recommend(
+        "marginal-cost-aware", limit=10)
+    assert [row["slug"] for row in result["recommendations"]] == ["valid"]
+
+
 def test_available_to_me_requires_explicit_boolean_access_evidence():
     access = {
         "alpha": {"available": False, "source": "fixture"},
