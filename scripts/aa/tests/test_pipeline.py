@@ -1,7 +1,6 @@
 """Unit tests for the aa package pipeline (RSC parser, merge, sanity).
 
-Run:   python3.12 -m pytest scripts/aa/tests  -v
-   or: python3.12 scripts/aa/tests/test_pipeline.py
+Run:   python3 scripts/aa/tests/test_pipeline.py [--test NAME]
 
 Uses a minimal synthetic RSC flight payload so tests are deterministic and
 offline (no network, no API key). Verifies the core guarantees we care about:
@@ -25,6 +24,10 @@ from aa import rsc_source
 from aa import schema
 from aa import validate
 from aa.http import atomic_write_json
+try:
+    from _runner import run_tests
+except ModuleNotFoundError:  # pytest imports this module from the repository root
+    from scripts.aa.tests._runner import run_tests
 
 
 def build_flight(rows, extra_after=""):
@@ -181,8 +184,4 @@ def test_merge_preserves_provider_variants_for_same_model():
 
 
 if __name__ == "__main__":
-    for name, fn in sorted(globals().items()):
-        if name.startswith("test_") and callable(fn):
-            fn()
-            print(f"PASS {name}")
-    print("All tests passed.")
+    run_tests(globals(), "All pipeline tests passed.")

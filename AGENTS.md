@@ -17,11 +17,24 @@ dependency-free static comparison site and deterministic data pipelines.
 - `docs/ARCHITECTURE.md` — data flow, source authority, and identity boundaries.
 - `docs/STATUS.md` — current phase, branch, blockers, and next action.
 - `docs/ROADMAP.md` — phase order and acceptance outcomes.
+- `docs/DEVELOPMENT.md` — task routing, safe checks, and validation scopes.
 - `docs/plans/active/` — active implementation plans.
 - `docs/reports/` — accepted evidence; historical reports are archived.
 - `scripts/aa/README.md` — detailed source and pipeline operation.
 
 Read `docs/STATUS.md` and its active plan before roadmap work.
+
+## Task routing and context scope
+
+Read the nearest scoped guidance before working in `scripts/`, `data/`, or
+`docs/`; the public output allowlist prevents an instruction file inside
+`public/`, so its scope is documented here and in `docs/DEVELOPMENT.md`.
+For routine work, start with `docs/DEVELOPMENT.md` and the files named by its
+task matrix. Do not bulk-read `data/aa_cache/`, generated JSON/CSV, fixtures,
+logs, dependencies, or `docs/reports/archive/`; inspect bounded slices only
+when a source, test, or failure requires them. Use `scripts/model_compass.py`
+bounded summaries for diagnostics and pass `--full` only for an explicit
+record-level investigation.
 
 ## Architecture and data sources
 
@@ -59,20 +72,20 @@ ambiguous data.
 Python 3.12+ and Node.js 20+ are used by CI.
 
 - `python3 -m http.server 8000 --directory public`
-- `python3 scripts/validate_site.py`
-- `node scripts/test_browser_security.mjs`
+- `python3 scripts/check.py --scope auto` (read-only, conservative local/CI check)
+- `python3 scripts/check.py --scope quick` (use other scopes from the development guide)
+- `python3 scripts/model_compass.py <command> [--limit N] [--compact]`; use `--full` for complete records
 - `python3 -m scripts.aa.orchestrate [--offline|--no-api|--no-snapshot|--refresh]`
 - `python3 scripts/build_site_from_aa.py [--as-of YYYY-MM-DD]`
 - `python3 scripts/export_history_csv.py [--date YYYY-MM-DD]`
 - `python3 scripts/export_benchmarks_json.py`
 - `python3 -m scripts.aa.phase3_artifacts`
-- `python3 scripts/model_compass.py recommend coding --limit 10`
-- `python3 scripts/aa/tests/test_pipeline.py`
 - `python3 scripts/aa/crossvalidate.py`
 - `python3 scripts/prune_aa_cache.py --max-age-days 30` (dry run)
 
-The full validation command set is in `.github/workflows/ci.yml`. Build/export
-commands write generated artifacts; use temporary output paths for replay tests.
+The canonical validation matrix and test selectors are in
+`docs/DEVELOPMENT.md`; CI invokes `scripts/check.py`. Build/export commands
+write generated artifacts; use temporary output paths for replay tests.
 
 ## Credentials and conventions
 

@@ -50,6 +50,11 @@ fields + bounds), `http.py` (retries/backoff/rate-limit/atomic/cache),
 
 ## Commands
 
+For task routing, safe output boundaries, focused test selectors, and the
+canonical validation matrix, read [`docs/DEVELOPMENT.md`](../../docs/DEVELOPMENT.md).
+The commands below are operational examples; acquisition and generation
+commands may use the network, credentials, caches, or write generated files.
+
 ```bash
 # Build the dataset (RSC + snapshot; API used if AA_API_KEY set)
 python3 -m scripts.aa.orchestrate
@@ -61,8 +66,8 @@ python3 scripts/aa/crossvalidate.py --api
 # Query layer demo (best coding/value/agentic/speed/backup)
 python3 scripts/aa/demo_query.py
 
-# Stable decision CLI (JSON output)
-python3 scripts/model_compass.py recommend coding
+# Stable decision CLI (bounded JSON output by default)
+python3 scripts/model_compass.py recommend coding --limit 10 --compact
 python3 scripts/model_compass.py pareto intelligence_index cost
 python3 scripts/model_compass.py backup <slug>
 python3 scripts/model_compass.py agents
@@ -78,7 +83,7 @@ python3 -m scripts.aa.coding_agent_source
 python3 -m scripts.aa.phase3_artifacts
 
 # Offline unit tests (drift detection, scaling, dedup, merge, NaN)
-python3 scripts/aa/tests/test_pipeline.py
+python3 scripts/aa/tests/test_pipeline.py --test test_rsc_extract_normalize_roundtrip
 ```
 
 ## Using the query layer

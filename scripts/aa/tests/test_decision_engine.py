@@ -10,6 +10,10 @@ sys.path.insert(0, str(REPO / "scripts"))
 
 from aa.decision import DecisionEngine, Profile  # noqa: E402
 from aa import schema  # noqa: E402
+try:
+    from _runner import run_tests  # noqa: E402
+except ModuleNotFoundError:  # pytest imports this module from the repository root
+    from scripts.aa.tests._runner import run_tests  # noqa: E402
 
 
 def model(slug, creator, score, cost, speed, *, context=128000,
@@ -103,8 +107,4 @@ def test_stale_complete_evidence_is_not_high_confidence():
 
 
 if __name__ == "__main__":
-    for name, fn in sorted(globals().items()):
-        if name.startswith("test_") and callable(fn):
-            fn()
-            print(f"PASS {name}")
-    print("All decision tests passed.")
+    run_tests(globals(), "All decision tests passed.")

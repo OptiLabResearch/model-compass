@@ -18,28 +18,12 @@ jobs:
     timeout-minutes: 10
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          fetch-depth: 2
 
       - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
         with:
           python-version: "3.12"
 
-      - name: Validate Python, site, data, and browser security
-        run: |
-          python3 -m compileall -q scripts
-          node -e "if (Number(process.versions.node.split('.')[0]) < 20) throw new Error('Node.js 20+ required')"
-          python3 scripts/test_fetch_aa_models.py
-          python3 scripts/test_public_build.py
-          python3 scripts/test_prune_aa_cache.py
-          python3 scripts/aa/tests/test_pipeline.py
-          python3 scripts/aa/tests/test_decision_engine.py
-          python3 scripts/aa/tests/test_history.py
-          python3 scripts/aa/tests/test_observations.py
-          python3 scripts/aa/tests/test_phase3_observations.py
-          python3 scripts/aa/tests/test_identity_contracts.py
-          python3 -m scripts.aa.phase3_artifacts
-          git diff --exit-code -- data/identity_mappings.json data/phase3_summary.json
-          python3 scripts/validate_site.py
-          node --check public/assets/nav.js
-          node --check public/assets/models.js
-          node --check public/assets/theme-init.js
-          node scripts/test_browser_security.mjs
+      - name: Validate changed scope
+        run: python3 scripts/check.py --scope auto

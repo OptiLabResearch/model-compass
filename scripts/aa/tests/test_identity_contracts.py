@@ -14,6 +14,10 @@ from aa.provider_query import ProviderDB  # noqa: E402
 from aa.schema import model_record_template  # noqa: E402
 from aa.snapshot_source import _normalize as normalize_snapshot  # noqa: E402
 from aa.source_base import SourceResult  # noqa: E402
+try:
+    from _runner import run_tests  # noqa: E402
+except ModuleNotFoundError:  # pytest imports this module from the repository root
+    from scripts.aa.tests._runner import run_tests  # noqa: E402
 
 
 def model(slug, evidence):
@@ -105,8 +109,4 @@ def test_legacy_evidence_is_source_qualified_and_missing_is_empty():
 
 
 if __name__ == "__main__":
-    for name, fn in sorted(globals().items()):
-        if name.startswith("test_") and callable(fn):
-            fn()
-            print(f"PASS {name}")
-    print("All identity contract tests passed.")
+    run_tests(globals(), "All identity contract tests passed.")

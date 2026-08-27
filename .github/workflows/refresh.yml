@@ -62,6 +62,9 @@ jobs:
       - name: Build and validate Phase 3 derived artifacts
         run: python3 -m scripts.aa.phase3_artifacts
 
+      - name: Validate generated refresh
+        run: python3 scripts/check.py --scope all
+
       - name: Commit and push if changed
         run: |
           git config user.name "github-actions[bot]"

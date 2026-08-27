@@ -62,15 +62,22 @@ def main() -> int:
         "--apply", action="store_true",
         help="remove matching files; without this flag the command is a dry run",
     )
+    parser.add_argument(
+        "--quiet", action="store_true",
+        help="print only the number of matching files, not every path",
+    )
     args = parser.parse_args()
     try:
         paths = prune_cache(args.cache_dir, args.max_age_days, apply=args.apply)
     except (OSError, ValueError) as exc:
         parser.error(str(exc))
     action = "Removed" if args.apply else "Would remove"
-    for path in paths:
-        print(f"{action} {path}")
-    if not paths:
+    if args.quiet:
+        print(f"{action.lower()} {len(paths)} aged timestamped debug cache file(s).")
+    else:
+        for path in paths:
+            print(f"{action} {path}")
+    if not paths and not args.quiet:
         print("No aged timestamped debug cache files found.")
     if not args.apply and paths:
         print("Dry run only; pass --apply to remove these files.")
