@@ -10,6 +10,10 @@ from aa.coding_agent_source import parse_datasets  # noqa: E402
 from aa.provider_query import ProviderDB, CodingAgentDB  # noqa: E402
 from aa.openrouter_source import select_cohort, merge_retained_observations  # noqa: E402
 from aa.decision import DecisionEngine  # noqa: E402
+try:
+    from _runner import run_tests  # noqa: E402
+except ModuleNotFoundError:  # pytest imports this module from the repository root
+    from scripts.aa.tests._runner import run_tests  # noqa: E402
 
 
 def test_openrouter_endpoint_preserves_provider_specific_fields():
@@ -115,8 +119,4 @@ def test_retention_preserves_recent_observations_and_expires_old():
 
 
 if __name__ == "__main__":
-    for name, fn in sorted(globals().items()):
-        if name.startswith("test_") and callable(fn):
-            fn()
-            print(f"PASS {name}")
-    print("All observation/confidence tests passed.")
+    run_tests(globals(), "All observation/confidence tests passed.")

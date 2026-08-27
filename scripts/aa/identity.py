@@ -12,6 +12,17 @@ import re
 STATES = {"verified", "candidate", "unresolved", "ambiguous", "conflict", "manual"}
 
 
+def _is_authoritative_openrouter_evidence(evidence: dict) -> bool:
+    """Accept authority only from the explicitly approved official API field."""
+    return (
+        isinstance(evidence, dict)
+        and evidence.get("kind") == "openrouter_model_id"
+        and evidence.get("source") == "official_api"
+        and evidence.get("source_field") == "openrouter_api_id"
+        and evidence.get("authority") == "authoritative"
+    )
+
+
 def normalize_name(value: str | None) -> str:
     return re.sub(r"[^a-z0-9]+", "-", (value or "").lower()).strip("-")
 
@@ -21,6 +32,26 @@ def load_aliases(path: str | Path | None) -> list[dict]:
         return []
     data = json.loads(Path(path).read_text(encoding="utf-8"))
     return data.get("mappings", []) if isinstance(data, dict) else []
+
+
+def model_identity_evidence(model: dict) -> list[dict]:
+    """Return normalized evidence plus source-qualified legacy artifact fields."""
+    evidence = [dict(row) for row in model.get("identity_evidence", []) if isinstance(row, dict)]
+    raw = model.get("raw_fields") or {}
+    snapshot_id = (((raw.get("snapshot_entry") or {}).get("open_weights") or {}).get("openrouter_api_id"))
+    if isinstance(snapshot_id, str) and snapshot_id.strip():
+        evidence.append({"kind": "openrouter_model_id", "entity_id": snapshot_id.strip(),
+                         "source": "snapshot", "source_field": "open_weights.openrouter_api_id",
+                         "authority": "candidate"})
+    for host in model.get("hosts", []):
+        host_id = host.get("hostApiId") if isinstance(host, dict) else None
+        if isinstance(host_id, str) and host_id.strip():
+            evidence.append({"kind": "provider_host_api_id", "entity_id": host_id.strip(),
+                             "source": "rsc", "source_field": "rows.hostApiId",
+                             "authority": "candidate"})
+    unique = {(row.get("kind"), row.get("entity_id"), row.get("source"), row.get("source_field")): row
+              for row in evidence if row.get("kind") and row.get("entity_id")}
+    return [unique[key] for key in sorted(unique, key=lambda item: tuple(str(x or "") for x in item))]
 
 
 def _model_evidence(source_id: str, row: dict, aa_models: list[dict]) -> list[dict]:
@@ -34,6 +65,15 @@ def _model_evidence(source_id: str, row: dict, aa_models: list[dict]) -> list[di
         creator = normalize_name(model.get("creator_slug") or model.get("creator"))
         slug_n, name_n = normalize_name(slug), normalize_name(name)
         score, reasons = 0, []
+        metadata = [e for e in model_identity_evidence(model)
+                    if e.get("entity_id") == source_id]
+        for evidence in metadata:
+            if evidence.get("kind") == "openrouter_model_id":
+                score += 10
+                reasons.append(f"{evidence.get('source')} {evidence.get('source_field')} exactly equals OpenRouter model ID")
+            elif evidence.get("kind") == "provider_host_api_id":
+                score += 6
+                reasons.append("AA RSC hostApiId exactly equals OpenRouter model ID; provider-host corroboration only")
         if portion_n == slug_n:
             score += 4; reasons.append("OpenRouter model portion equals AA slug")
         if portion_n == name_n or source_name_n in {slug_n, name_n}:
@@ -41,8 +81,27 @@ def _model_evidence(source_id: str, row: dict, aa_models: list[dict]) -> list[di
         if creator and namespace and creator == normalize_name(namespace):
             score += 2; reasons.append("OpenRouter namespace agrees with AA creator")
         if score:
-            out.append({"target_entity_id": slug, "score": score, "evidence": reasons})
+            out.append({"target_entity_id": slug, "score": score, "evidence": reasons,
+                        "metadata": metadata})
     return sorted(out, key=lambda x: (-x["score"], x["target_entity_id"]))
+
+
+def _authoritative_model_evidence(source_id: str, aa_models: list[dict]) -> list[dict]:
+    out = []
+    for model in aa_models:
+        for evidence in model_identity_evidence(model):
+            if (_is_authoritative_openrouter_evidence(evidence)
+                    and evidence.get("entity_id") == source_id):
+                out.append({"target_entity_id": model.get("slug"), "evidence": evidence})
+    return sorted(out, key=lambda row: row["target_entity_id"] or "")
+
+
+def _method_counts(rows: list[dict]) -> dict[str, int]:
+    counts: dict[str, int] = {}
+    for row in rows:
+        method = row.get("method") or "unclassified"
+        counts[method] = counts.get(method, 0) + 1
+    return dict(sorted(counts.items()))
 
 
 def _entity_rows(rows: list[dict], key: str) -> dict[str, dict]:
@@ -88,14 +147,49 @@ def resolve(aa_models: list[dict], openrouter: list[dict], endpoint_accuracy: li
             else:
                 mappings.append({"relation": "model_to_model", "source": "openrouter", "source_entity_id": source_id,
                                  "target": "artificial_analysis", "target_entity_id": target, "state": "manual", "confidence": 1.0,
+                                 "method": "manual_alias",
                                  "evidence": explicit.get("evidence", "audited manual alias"),
                                  "last_verified": explicit.get("last_verified") or explicit.get("first_verified") or verified_at})
             continue
+        authoritative = _authoritative_model_evidence(source_id, aa_models)
+        authoritative_targets = sorted({e["target_entity_id"] for e in authoritative})
         evidence = _model_evidence(source_id, row, aa_models)
-        if len(evidence) == 1 and evidence[0]["score"] >= 4:
+        candidate_targets = sorted({item["target_entity_id"] for item in evidence})
+        if len(authoritative_targets) == 1:
+            conflicting_targets = [target for target in candidate_targets if target not in authoritative_targets]
+            if conflicting_targets:
+                conflicts.append({"relation": "model_to_model", "source_entity_id": source_id,
+                                  "candidates": sorted(set(authoritative_targets + conflicting_targets)),
+                                  "reason": "authoritative external ID conflicts with other source metadata"})
+                continue
+            evidence = authoritative[0]["evidence"]
+            mappings.append({"relation": "model_to_model", "source": "openrouter", "source_entity_id": source_id,
+                             "target": "artificial_analysis", "target_entity_id": authoritative_targets[0],
+                             "state": "verified", "confidence": 1.0, "method": "official_openrouter_id",
+                             "evidence": f"{evidence['source']} {evidence['source_field']} exactly equals OpenRouter model ID",
+                             "last_verified": verified_at})
+            continue
+        if len(authoritative_targets) > 1:
+            conflicts.append({"relation": "model_to_model", "source_entity_id": source_id,
+                              "candidates": authoritative_targets, "reason": "authoritative external ID maps to multiple AA variants"})
+            continue
+        metadata_matches = [item for item in evidence if item.get("metadata")]
+        if len(metadata_matches) == 1:
+            item = metadata_matches[0]
+            mappings.append({"relation": "model_to_model", "source": "openrouter", "source_entity_id": source_id,
+                             "target": "artificial_analysis", "target_entity_id": item["target_entity_id"],
+                             "state": "candidate", "confidence": .95, "method": "source_metadata_exact",
+                             "evidence": "; ".join(item["evidence"]) + "; non-authoritative", "last_verified": verified_at})
+        elif len(metadata_matches) > 1:
+            ambiguous.append({"relation": "model_to_model", "source_entity_id": source_id,
+                              "method": "source_metadata_exact",
+                              "candidates": sorted(item["target_entity_id"] for item in metadata_matches),
+                              "evidence": sorted({reason for item in metadata_matches for reason in item["evidence"]})})
+        elif len(evidence) == 1 and evidence[0]["score"] >= 4:
             mappings.append({"relation": "model_to_model", "source": "openrouter", "source_entity_id": source_id,
                              "target": "artificial_analysis", "target_entity_id": evidence[0]["target_entity_id"],
                              "state": "candidate", "confidence": min(.95, .45 + evidence[0]["score"] / 10),
+                             "method": "normalized_heuristic",
                              "evidence": "; ".join(evidence[0]["evidence"]) + "; non-authoritative", "last_verified": verified_at})
         elif len(evidence) > 1 and evidence[0]["score"] == evidence[1]["score"]:
             ambiguous.append({"relation": "model_to_model", "source_entity_id": source_id, "candidates": [x["target_entity_id"] for x in evidence]})
@@ -111,6 +205,7 @@ def resolve(aa_models: list[dict], openrouter: list[dict], endpoint_accuracy: li
             else:
                 mappings.append({"relation": "provider_endpoint_to_endpoint", "source": "openrouter", "source_entity_id": source_id,
                                  "target": "artificial_analysis", "target_entity_id": target, "state": "manual", "confidence": 1.0,
+                                 "method": "manual_alias",
                                  "evidence": explicit.get("evidence", "audited manual provider alias"),
                                  "last_verified": explicit.get("last_verified") or explicit.get("first_verified") or verified_at})
         else:
@@ -123,15 +218,20 @@ def resolve(aa_models: list[dict], openrouter: list[dict], endpoint_accuracy: li
 
     model_maps = [m for m in mappings if m["relation"] == "model_to_model"]
     endpoint_maps = [m for m in mappings if m["relation"] == "provider_endpoint_to_endpoint"]
+    model_resolution_rows = model_maps + ambiguous
     health = {
         "aa_model_count": len(aa_by_slug), "openrouter_model_count": len(or_models),
         "openrouter_endpoint_count": len(openrouter), "aa_endpoint_count": len(aa_endpoints), "aa_provider_count": len(aa_providers),
         "openrouter_provider_count": len(or_providers), "unique_unresolved_model_ids": sorted({x["source_entity_id"] for x in unresolved if x["relation"] == "model_to_model"}),
         "model_mappings": {s: sum(m["state"] == s for m in model_maps) for s in ("verified", "manual", "candidate")},
+        "model_mapping_methods": {method: sum(m.get("method") == method for m in model_maps)
+                                  for method in sorted({m.get("method") for m in model_maps if m.get("method")})},
+        "model_ambiguity_methods": _method_counts(ambiguous),
+        "model_resolution_methods": _method_counts(model_resolution_rows),
         "endpoint_mappings": {s: sum(m["state"] == s for m in endpoint_maps) for s in ("verified", "manual", "candidate")},
         "unresolved_models": sum(x["relation"] == "model_to_model" for x in unresolved),
         "unresolved_endpoints": sum(x["relation"] == "provider_endpoint_to_endpoint" for x in unresolved),
         "ambiguous": len(ambiguous), "conflict": len(conflicts),
     }
-    return {"version": 3, "generated_at": verified_at, "mappings": mappings,
+    return {"version": 4, "generated_at": verified_at, "mappings": mappings,
             "unresolved": unresolved, "ambiguous": ambiguous, "conflicts": conflicts, "health": health}

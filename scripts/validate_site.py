@@ -2,7 +2,6 @@
 """Validate the deployable site, generated data, and public-release boundaries."""
 
 import csv
-import importlib.util
 import json
 import re
 import sys
@@ -11,6 +10,9 @@ from pathlib import Path
 from urllib.parse import urlparse
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(REPO_ROOT / "scripts"))
+
+from public_contract import validate_output_models  # noqa: E402
 PUBLIC_DIR = REPO_ROOT / "public"
 MAX_PUBLIC_BYTES = 25 * 1024 * 1024
 ALLOWED_ROOT_ENTRIES = {
@@ -75,13 +77,6 @@ def fail(message):
     print(f"ERROR: {message}", file=sys.stderr)
     return 1
 
-
-def load_fetch_module():
-    path = REPO_ROOT / "scripts" / "fetch_aa_models.py"
-    spec = importlib.util.spec_from_file_location("fetch_aa_models", path)
-    module = importlib.util.module_from_spec(spec)
-    spec.loader.exec_module(module)
-    return module
 
 
 def validate_public_tree():
@@ -180,9 +175,8 @@ def validate_data():
     data = json.loads(path.read_text(encoding="utf-8"))
     if not isinstance(data, dict) or not isinstance(data.get("models"), list):
         return ["models.json does not contain a models list"]
-    module = load_fetch_module()
     try:
-        module.validate_output_models(data["models"], path)
+        validate_output_models(data["models"], path)
     except RuntimeError as exc:
         return [str(exc)]
     return []

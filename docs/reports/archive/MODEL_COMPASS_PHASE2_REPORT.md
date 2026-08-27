@@ -1,7 +1,13 @@
 # Model Compass Phase 2 Report
 
+> Historical snapshot. This report records repository state and
+> verification from 2026-08-22/23. It is not an active source of
+> truth; see `docs/STATUS.md` and `docs/ARCHITECTURE.md` for current
+> guidance.
+
+
 **Date:** 2026-08-23 UTC
-**Repository:** `/srv/projects/shared/model-compass`
+**Repository:** `OptiLabResearch/model-compass`
 **Validation branch:** `phase2-validation`
 **Draft PR:** `#6`
 **Phase 2 refresh commit:** `92612ed`
@@ -34,8 +40,8 @@ The production hostname diagnosis is also clearer: `models.optiqo.dev` resolves 
 
 Before implementation, the following were read and verified:
 
-- `REPOSITORY_REVIEW_DOSSIER.md`
-- `MODEL_COMPASS_IMPROVEMENT_REPORT.md`
+- `docs/reports/archive/REPOSITORY_REVIEW_DOSSIER.md`
+- `docs/reports/archive/MODEL_COMPASS_IMPROVEMENT_REPORT.md`
 - `README.md`
 - `AGENTS.md`
 - `scripts/aa/README.md`
@@ -354,8 +360,8 @@ A gitignored `.model-compass-access.json` was populated from non-secret local av
 
 | Channel | Status | Evidence |
 |---|---|---|
-| Codex | available | `/home/hermes/.local/bin/codex` exists |
-| Antigravity/AGY | available | `/home/hermes/.local/bin/agy` exists |
+| Codex | available | `the local Codex executable` exists |
+| Antigravity/AGY | available | `the local AGY executable` exists |
 | OpenCode | unavailable locally | `opencode` executable not found |
 | OpenRouter | operational source available | public catalog returned HTTP 200; private credential was not inspected |
 

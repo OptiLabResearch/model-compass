@@ -330,6 +330,12 @@ def normalize_row(row: dict, source_meta: dict) -> dict:
         "logo": host.get("logo"),
         "hostApiId": row.get("hostApiId"),
     }]
+    if isinstance(row.get("hostApiId"), str) and row["hostApiId"].strip():
+        rec["identity_evidence"].append({
+            "kind": "provider_host_api_id", "entity_id": row["hostApiId"].strip(),
+            "source": "rsc", "source_field": "rows.hostApiId",
+            "authority": "candidate",
+        })
     _collect_raw_fields(rec, row)
     return rec
 

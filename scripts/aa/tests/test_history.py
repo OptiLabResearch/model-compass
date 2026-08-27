@@ -7,6 +7,10 @@ import tempfile
 REPO = Path(__file__).resolve().parents[3]
 sys.path.insert(0, str(REPO / "scripts"))
 from aa.history import diff_snapshots, prune_deltas  # noqa: E402
+try:
+    from _runner import run_tests  # noqa: E402
+except ModuleNotFoundError:  # pytest imports this module from the repository root
+    from scripts.aa.tests._runner import run_tests  # noqa: E402
 
 
 def snap(score, *, generated="2026-08-22T00:00:00Z"):
@@ -37,8 +41,4 @@ def test_retention_keeps_newest_files():
 
 
 if __name__ == "__main__":
-    for name, fn in sorted(globals().items()):
-        if name.startswith("test_") and callable(fn):
-            fn()
-            print(f"PASS {name}")
-    print("All history tests passed.")
+    run_tests(globals(), "All history tests passed.")

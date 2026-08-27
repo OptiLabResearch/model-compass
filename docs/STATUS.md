@@ -1,12 +1,12 @@
 # Status
 
-- **Accepted baseline:** Phase 3 engineering baseline at `8cb0105` on PR #7, synchronized with `origin/main` `1fbd925`; acceptance recorded 2026-08-24.
-- **Active phase:** Phase 4 preparation — source contracts and audited identity coverage. No Phase 4 implementation has started.
-- **Active branch / PR:** `feat/model-compass-phase3`, draft PR #7. The repaired branch is mergeable; required `validate` and Cloudflare preview checks passed before the acceptance-state documentation commit.
-- **Verified:** Full local and GitHub CI pass. Live acquisition and deterministic generation reproduce Gate D. Exact endpoint identity prevents DeepInfra Base/Turbo collision; Turbo maps to its 84.4 below-reference row; removing CoreWeave mapping fails closed. Artifact counts/versions and per-identity mixed-version history are tested. Independent Sol review passed after two repair/review cycles.
-- **Blocking findings:** None for Phase 3.
-- **Unfinished:** Push this acceptance-state documentation, require its final-tip CI, merge PR #7, then inspect current source contracts before creating the Phase 4 plan.
-- **Next action:** Push the acceptance-state commit and monitor PR #7 checks; merge only if that exact tip remains green and mergeable.
+- **Accepted baseline:** Phase 3 merged to `main` as `0a7d4b5` through PR #7; acceptance recorded 2026-08-24.
+- **Active phase:** Phase 4 — source contracts and audited identity coverage.
+- **Active branch / PR:** `feat/model-compass-phase4`; no PR yet.
+- **Verified:** Phase 3 is merged and green. Phase 4 contract research confirmed AA Free omits `openrouter_api_id`, AA Pro exposes it, and provider detail is Commercial-only. The current WIP preserves source-qualified official/snapshot/RSC identity evidence, emits exact third-party matches as candidates, and keeps collisions ambiguous. The shared public contract, deterministic `--as-of` builder replay, archive hygiene, and dry-run-first cache policy are now recorded in the Phase 4 report. The token-efficiency cleanup adds scoped agent guidance, bounded CLI diagnostics, named test selection, and a canonical quiet validation runner; local `python3 scripts/check.py --scope all` passed on 2026-08-27.
+- **Blocking findings:** Documented AA `openrouter_api_id` is Pro-only and provider detail is Commercial-only; no paid-tier change is justified. Snapshot/host metadata has useful coverage but one-to-many variant collisions, so it must remain candidate evidence.
+- **Unfinished:** Phase 4 remains open pending synchronization with current `origin/main`, independent Sol review, and explicit acceptance before opening a PR.
+- **Next action:** Synchronize with `origin/main` and obtain the required independent Sol review before explicit acceptance and PR opening. The agent-efficiency cleanup is committed and pushed as `008156b`.
 - **Human input required:** No.
 
-Last verified: 2026-08-24 UTC.
+Last verified: 2026-08-27 UTC.

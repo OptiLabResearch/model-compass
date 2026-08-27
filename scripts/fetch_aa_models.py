@@ -9,7 +9,7 @@ Two sources, merged:
      and index version.
 
   2. The /models page's server-rendered payload. Best-effort. Carries the full
-     metric set, but only for the ~28 models AA renders by default. This is the
+     metric set, but only for the small subset AA renders by default. This is the
      only public source for omniscience / non-hallucination.
 
 The page enriches the API data where it can. If the page scrape breaks, the site
@@ -32,7 +32,6 @@ import os
 import re
 import sys
 import json
-import math
 import argparse
 import tempfile
 from datetime import datetime, timedelta, timezone
@@ -41,6 +40,13 @@ from urllib.error import HTTPError, URLError
 from urllib.request import HTTPRedirectHandler, Request, build_opener
 
 from export_benchmarks_json import export_benchmarks
+from public_contract import (
+    FEATURED_SLUGS,
+    OPENROUTER_SLUGS,
+    RELEASE_WINDOW_DAYS,
+    SLUG_RE,
+    validate_output_models,
+)
 
 FREE_API_URL = "https://artificialanalysis.ai/api/v2/language/models/free"
 PAGE_URL = "https://artificialanalysis.ai/models"
@@ -55,8 +61,9 @@ REPO_ROOT = Path(__file__).resolve().parent.parent
 DEFAULT_OUTPUT = REPO_ROOT / "public" / "data" / "models.json"
 
 # Last-known-good store for the metrics only the page can provide. AA renders
-# ~28 models richly; everything else it has ever rendered is remembered here, so
-# a model dropping off AA's front page doesn't silently strip the non-hallucination
+# A small default subset is rendered richly; everything it has ever rendered
+# is remembered here, so a model dropping off AA's front page does not silently
+# strip the non-hallucination
 # metrics.
 #
 # Safe because these are properties of a *released* model: a frozen checkpoint's
@@ -85,56 +92,12 @@ CACHED_TOP_LEVEL = [
     "input_modalities", "output_modalities",
 ]
 
-# Featured models (a curated subset of whatever AA is currently tracking).
-# Everything else still appears on the All Models page. Add/remove slugs here
-# to change the curated set.
-#
-# Featured models are exempt from the RELEASE_WINDOW_DAYS cutoff: curation, not
-# age, decides exemption. A featured slug that vanishes upstream is a hard
-# error, not a silent drop — see check_featured_slugs().
-# Curated 2026-07-21 from AA intel/coding/non-hallucination + value.
-# Swaps: gpt-5-5→gpt-5-6-{sol,terra,luna}, sonnet-4-6→sonnet-5, k2→k3,
-# grok-4-3→4-5, gemini-3-5-flash→3-6-flash; add muse-spark-1-1; drop
-# gpt-5-5-pro (no scores) and deepseek-v4-flash (nh≈4%, gates always fail).
-FEATURED_SLUGS = {
-    # Frontier
-    'claude-fable-5', 'claude-opus-4-8', 'claude-sonnet-5',
-    'gpt-5-6-sol', 'gpt-5-6-terra', 'gpt-5-6-luna',
-    'kimi-k3', 'grok-4-5',
-    # Strong mid / reliability
-    'glm-5-2', 'muse-spark-1-1',
-    'gemini-3-6-flash', 'gemini-3-1-pro-preview',
-    'qwen3-7-max',
-    # Budget / specialized
-    'minimax-m3', 'qwen3-7-plus',
-    'mimo-v2-5-pro', 'mimo-v2-5-0424',
-    'deepseek-v4-pro', 'deepseek-v4-flash',
-}
-
-# OpenRouter routing slug for models that are available through it (i.e. not
-# a proprietary API you'd call directly). Used only to power the "available
-# via OpenRouter" filter in the UI — optional, purely informational.
-OPENROUTER_SLUGS = {
-    'deepseek-v4-pro': 'deepseek/deepseek-v4-pro',
-    'minimax-m3': 'minimax/minimax-m3',
-    'kimi-k3': 'moonshotai/kimi-k3',
-    'mimo-v2-5-pro': 'xiaomi/mimo-v2.5-pro',
-    'mimo-v2-5-0424': 'xiaomi/mimo-v2-5',
-    'glm-5-2': 'z-ai/glm-5.2',
-    'qwen3-7-max': 'qwen/qwen3.7-max',
-    'qwen3-7-plus': 'qwen/qwen3.7-plus',
-    'muse-spark-1-1': 'meta-llama/muse-spark-1.1',
-    'grok-4-5': 'x-ai/grok-4.5',
-}
-
 NOTES = {
     'mimo-v2-5-0424': 'Non-reasoning budget pick',
     'gpt-5-6-luna': 'OpenAI value tier (cheapest of the 5.6 line)',
     'deepseek-v4-pro': 'Cheap coding; fails unattended/high-stakes nh gates',
     'minimax-m3': 'Best non-hallucination per dollar on the shortlist',
 }
-
-RELEASE_WINDOW_DAYS = 183  # ~6 months
 
 
 # ---------------------------------------------------------------------------
@@ -144,8 +107,6 @@ RELEASE_WINDOW_DAYS = 183  # ~6 months
 MAX_RESPONSE_BYTES = 25 * 1024 * 1024  # 25 MB hard cap on upstream bodies
 MIN_API_MODELS = 100
 MAX_API_MODELS = 5000
-SLUG_RE = re.compile(r"^[a-z0-9][a-z0-9._-]{0,199}$")
-
 
 class _NoRedirectHandler(HTTPRedirectHandler):
     """Fail closed instead of forwarding credentials across redirects."""
@@ -318,65 +279,6 @@ def validate_api_models(models: list) -> None:
                     f"AA API model {slug} has invalid release_date"
                 ) from exc
 
-
-def _check_finite_numbers(value, path: str = 'root') -> None:
-    if isinstance(value, float) and not math.isfinite(value):
-        raise RuntimeError(f"Non-finite number at {path}")
-    if isinstance(value, dict):
-        for key, child in value.items():
-            _check_finite_numbers(child, f"{path}.{key}")
-    elif isinstance(value, list):
-        for index, child in enumerate(value):
-            _check_finite_numbers(child, f"{path}[{index}]")
-
-
-def validate_output_models(models: list, previous_path: Path) -> None:
-    """Enforce invariants that protect the published dataset and browser UI."""
-    if not len(FEATURED_SLUGS) <= len(models) <= MAX_API_MODELS:
-        raise RuntimeError(f"Output model count {len(models)} is implausible")
-
-    seen = set()
-    for model in models:
-        slug = model.get('slug')
-        if not isinstance(slug, str) or not SLUG_RE.fullmatch(slug):
-            raise RuntimeError("Output contains an invalid slug")
-        if slug in seen:
-            raise RuntimeError(f"Output contains duplicate slug: {slug}")
-        seen.add(slug)
-        if model.get('aa_url') != f"https://artificialanalysis.ai/models/{slug}":
-            raise RuntimeError(f"Output contains unexpected AA URL for {slug}")
-        name = model.get('name')
-        creator = model.get('creator')
-        if not isinstance(name, str) or not name or len(name) > 500:
-            raise RuntimeError(f"Output contains invalid name for {slug}")
-        if creator is not None and (not isinstance(creator, str) or len(creator) > 200):
-            raise RuntimeError(f"Output contains invalid creator for {slug}")
-        _check_finite_numbers(model, f"models.{slug}")
-
-        for value in (model.get('benchmarks') or {}).values():
-            if value is not None and (not isinstance(value, (int, float)) or not 0 <= value <= 100):
-                raise RuntimeError(f"Output contains out-of-range benchmark for {slug}")
-        for value in (model.get('pricing_per_m_tokens') or {}).values():
-            if value is not None and (not isinstance(value, (int, float)) or not 0 <= value <= 1_000_000):
-                raise RuntimeError(f"Output contains invalid pricing for {slug}")
-
-    missing_featured = FEATURED_SLUGS - seen
-    if missing_featured:
-        raise RuntimeError(
-            "Output is missing featured slugs: " + ", ".join(sorted(missing_featured))
-        )
-
-    if previous_path.exists():
-        try:
-            previous = json.loads(previous_path.read_text(encoding='utf-8'))
-            previous_count = len(previous.get('models') or [])
-        except (OSError, json.JSONDecodeError, TypeError):
-            previous_count = 0
-        if previous_count and len(models) < math.floor(previous_count * 0.6):
-            raise RuntimeError(
-                f"Output model count dropped from {previous_count} to {len(models)}; "
-                "refusing an automatic destructive refresh"
-            )
 
 
 # ---------------------------------------------------------------------------
@@ -951,7 +853,7 @@ def main():
     today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
     cache = load_cache()
     n_from_cache = sum(1 for m in models if not m['has_rich_data'] and apply_cache(m, cache))
-    validate_output_models(models, args.output)
+    validate_output_models(models, args.output, max_models=MAX_API_MODELS)
     save_cache(cache, models, today)
     if cache:
         print(f"  {n_from_cache} models backfilled from the enrichment cache "

@@ -1,8 +1,14 @@
 # Model Compass — Repository Review Dossier
 
+> Historical snapshot. This report records repository state and
+> verification from 2026-08-22/23. It is not an active source of
+> truth; see `docs/STATUS.md` and `docs/ARCHITECTURE.md` for current
+> guidance.
+
+
 **Audit type:** read-only repository, runtime, data, CI, and security audit
 **Audit date:** 2026-08-22 UTC
-**Repository:** `/srv/projects/shared/model-compass`
+**Repository:** `OptiLabResearch/model-compass`
 **Evidence convention:** repository paths and line ranges refer to the audited checkout at commit `6dd03afb1f17e727abf5a0fcc4a1857e9e31372b`, unless stated otherwise.
 
 ## 1. Executive summary
@@ -36,21 +42,18 @@ The repository has two related surfaces:
 
 ## 2. Repository identity and environment
 
-- Absolute path: `/srv/projects/shared/model-compass`
+- Repository: `OptiLabResearch/model-compass`
 - Repository name: `model-compass`; GitHub remote `https://github.com/OptiLabResearch/model-compass.git`
 - Branch: `main`; `HEAD` and `origin/main`: `6dd03afb1f17e727abf5a0fcc4a1857e9e31372b`
 - Latest commit: `docs: align AGENTS.md with the rich RSC data pipeline`, 2026-08-21 20:58:55 UTC
 - Working tree: clean; no ordinary untracked files. Ignored operational files include `.wrangler/`, `data/aa_cache/`, and Python bytecode caches.
 - Repository disk size: 58 MB (`du -sh .`), including Git objects and generated/raw local artifacts.
-- Runtime audit user: `hermes` (UID 1003), groups `users` and `hermes-projects`.
-- OS: Linux 6.17.0-1020-oracle, ARM64; audit host timestamp 2026-08-22 20:58 UTC.
-- Filesystem containing project: 193 GB total, 111 GB used, 82 GB free (58%).
 - No repository package manifest, requirements file, lockfile, database migration, or container definition was found. The site has no package installation step; scripts use Python standard library and Node's built-ins.
-- `.env` was not present at `/home/hermes/.env`; the repository instructions instead specify an ignored repository-root `.env` containing `AA_API_KEY` with mode `0600` (`AGENTS.md`, Credentials section). No secret value was printed or read.
+- `.env` is intentionally ignored; credentials must remain in the repository-root file with mode `0600` and must never be exposed.
 - `.env.example` exists; GitHub Actions supplies `AA_API_KEY` as a repository secret in `.github/workflows/refresh.yml:38-41`.
-- Important external/runtime locations: Cloudflare Pages is represented by `wrangler.toml`; GitHub Actions provides refresh/CI; local ignored `data/aa_cache/` holds raw payloads; `.wrangler/` contains local Wrangler state. No repo-owned database, queue, or long-running project process was found.
-- Running host services include Docker/containerd, nginx, PostgreSQL 16, Ollama, Hermes gateways/dashboard/web UI, Netdata/Glances, and Syncthing. None is declared as a Model Compass application service in the repository.
-- No user crontab entry was present. System timers observed were host-wide maintenance/backup/CPU-guard timers, not a Model Compass refresh timer. The documented refresh is GitHub Actions.
+- External/runtime locations are described only by repository configuration in this historical snapshot.
+- No repository-owned database, queue, or long-running application service was found.
+- The documented refresh is GitHub Actions; no repository-local scheduler was identified.
 
 ## 3. Repository map
 
@@ -536,7 +539,7 @@ Claims about live external availability are explicitly separated from repository
 ```json
 {
   "project_name": "model-compass",
-  "repo_path": "/srv/projects/shared/model-compass",
+  "repository": "OptiLabResearch/model-compass",
   "branch": "main",
   "commit": "6dd03afb1f17e727abf5a0fcc4a1857e9e31372b",
   "working_tree": "clean",

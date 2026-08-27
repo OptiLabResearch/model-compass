@@ -16,19 +16,22 @@ python3 -m http.server 8000 --directory public
 
 Open [http://localhost:8000](http://localhost:8000). Opening `public/index.html` directly with `file://` will not work because the page fetches `data/models.json`.
 
-Run the repository checks before submitting changes:
+Run the bounded repository check before submitting changes:
 
 ```bash
-python3 scripts/validate_site.py
-node scripts/test_browser_security.mjs
+python3 scripts/check.py --scope auto
 ```
+
+Use `python3 scripts/check.py --scope site` for a UI-only check and read
+[`docs/DEVELOPMENT.md`](docs/DEVELOPMENT.md) for the task matrix and other
+focused scopes.
 
 ## Repository layout
 
 - `public/` is the complete deployable site and the only directory that should be published.
 - `public/data/models.json` is the browser's data source.
 - `scripts/` contains dependency-free refresh, export, validation, and security checks.
-- `data/enrichment_cache.json` is a legacy backfill cache retained for compatibility.
+- `data/enrichment_cache.json` is a transitional backfill input used by the orchestrator; it is not a canonical source.
 - `data/history/` contains dated public CSV snapshots and bounded rich-dataset delta files.
 - `data/openrouter_observations.json` contains bounded provider-endpoint observations.
 - `data/coding_agent_observations.json` contains separate model+harness coding-agent observations.
@@ -36,11 +39,25 @@ node scripts/test_browser_security.mjs
 - `data/identity_mappings.json` contains generated cross-source mapping health; `data/identity_aliases.json` contains the small audited manual mapping set used to generate it.
 - `.github/workflows/` contains read-only pull-request checks and the scheduled refresh.
 
-## Data refresh
+## Project documentation
+
+- [Project scope](docs/PROJECT.md)
+- [Architecture and source authority](docs/ARCHITECTURE.md)
+- [Current status](docs/STATUS.md)
+- [Roadmap](docs/ROADMAP.md)
+- [Development workflow and validation](docs/DEVELOPMENT.md)
+- [Active plans and accepted reports](docs/plans/active/ and docs/reports/)
+- [Pipeline operations](scripts/aa/README.md)
+
+## Data refresh (maintainer-only)
 
 The weekly workflow builds the rich dataset from the Artificial Analysis leaderboard RSC payload, the official Free API when `AA_API_KEY` is available, and the Oolong-Tea snapshot adapter. It validates the merged result, derives the public site JSON, writes dated public CSV/rich delta history, and commits only when data changed. Malformed payloads, duplicate slugs, unexpected URLs, implausible model-count drops, index-version changes, out-of-range values, and missing featured models fail closed. A fallback to an older dataset is explicitly reported as stale.
 
-To refresh locally, copy `.env.example` to `.env`, add your own `AA_API_KEY`, restrict the file to your user, and run:
+Refreshing locally is writeful and may use the network and an API key. Copy
+`.env.example` to `.env`, add your own `AA_API_KEY`, restrict the file to your
+user, and follow the operational commands in
+[`scripts/aa/README.md`](scripts/aa/README.md). Do not run this sequence for a
+normal code or documentation task.
 
 ```bash
 chmod 600 .env
@@ -53,16 +70,19 @@ python3 scripts/aa/openrouter_source.py --max-endpoints 25
 python3 -m scripts.aa.endpoint_accuracy gpt-oss-120b
 python3 -m scripts.aa.coding_agent_source
 python3 -m scripts.aa.phase3_artifacts
-python3 scripts/validate_site.py
+python3 scripts/check.py --scope all
 ```
 
-For deterministic parser work, use `python3 -m scripts.aa.orchestrate --offline` with cached payloads; it never attempts a network request. The legacy `scripts/fetch_aa_models.py` remains for reference/tests and is not the active site refresh path.
+For deterministic parser work, use `python3 -m scripts.aa.orchestrate --offline` with cached payloads; it never attempts a network request. The retained `scripts/fetch_aa_models.py` is a compatibility path for reference/tests; the rich pipeline is the active site refresh path. Use `--as-of YYYY-MM-DD` on the public builder when replaying a historical rich dataset.
 
 Never commit `.env` or paste API keys into issues, logs, screenshots, or pull requests.
 
-The private decision interface also supports provider and coding-agent queries:
+The private decision interface also supports provider and coding-agent queries.
+Agent-facing output is bounded by default; add `--full` only when complete
+records are required and use `--compact` when piping JSON:
 
 ```bash
+python3 scripts/model_compass.py recommend coding --limit 10 --compact
 python3 scripts/model_compass.py providers openai/gpt-5
 python3 scripts/model_compass.py recommend-provider openai/gpt-5 --profile interactive
 python3 scripts/model_compass.py agents
@@ -71,8 +91,11 @@ python3 scripts/model_compass.py access
 python3 scripts/model_compass.py endpoint-accuracy glm-5-2
 python3 scripts/model_compass.py recommend-provider glm-5-2 --profile accuracy-first --require-accuracy-evidence
 python3 scripts/model_compass.py identity-health
-python3 scripts/model_compass.py unresolved-identities
+python3 scripts/model_compass.py unresolved-identities --limit 20
 ```
+
+Use `python3 scripts/model_compass.py recommend coding --full` or
+`unresolved-identities --full` only for an explicit record-level investigation.
 
 Provider observations are operational facts from OpenRouter and do not overwrite Artificial Analysis benchmark fields. Coding-agent observations retain the public agent/harness label and are not flattened into base-model records.
 Endpoint Accuracy observations are separate point-in-time measurements. Their source confidence intervals and classification are preserved; missing coverage is reported as `not_measured`, not as an accuracy failure. The public JSON-LD adapter is intentionally bounded to the audited Gate-D cohort in the weekly process. Endpoint Accuracy failures preserve the prior input artifact; any required-source or identity failure stops derived artifacts from being published.

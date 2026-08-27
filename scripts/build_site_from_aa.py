@@ -1,75 +1,50 @@
 #!/usr/bin/env python3.12
-"""build_site_from_aa.py — Build the public site's models.json from the rich
-private AA dataset (data/aa_models_v2.json) instead of the degraded Free-API
-scrape.
+"""Build the public site's models.json from the rich private AA dataset.
 
 WHY: the AA Free API no longer returns per-benchmark scores (they are now
-Pro-only), and the legacy /models page scrape only enriches the ~28 top models.
-So the old pipeline produced a models.json where ~175 of ~201 models had no
-benchmarks and the latest models were missing. The RSC dataset built by
-scripts/aa/ carries full benchmarks + pricing + performance + the newest models
-for 600+ models, so we source the site from it.
+Pro-only), and the retained legacy /models page scrape only enriches a
+small default subset. The old pipeline therefore left most models without
+benchmarks and could miss the latest models. The RSC dataset built by
+scripts/aa/ carries full benchmarks + pricing + performance, so we source the
+site from it.
 
-This script maps each rich record onto the EXACT legacy site schema that the
-frontend (public/assets/models.js) and the existing validator consume, so no
-UI change is needed.
+This script maps each rich record onto the public site schema consumed by the
+frontend (public/assets/models.js). The shared public contract is defined in
+scripts/public_contract.py.
 
 Usage:
-    python3.12 -m scripts.aa.orchestrate            # first, build rich dataset
-    python3.12 scripts/build_site_from_aa.py        # then, build site models.json
-    python3.12 scripts/build_site_from_aa.py --output public/data/models.json
+    python3 -m scripts.aa.orchestrate            # first, build rich dataset
+    python3 scripts/build_site_from_aa.py            # then, build site models.json
+    python3 scripts/build_site_from_aa.py --output public/data/models.json \
+        --as-of 2026-08-23
 
 Exits non-zero if the rich dataset is missing/stale, or if the output fails the
-same validator the old pipeline used.
+public contract validator.
 """
 
 from __future__ import annotations
 
 import argparse
 import json
-import math
 import os
-import re
 import sys
 import tempfile
-from datetime import datetime, timedelta, timezone
+from datetime import date, datetime, timedelta
 from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(REPO_ROOT / "scripts"))
+
+from public_contract import (  # noqa: E402
+    FEATURED_SLUGS,
+    OPENROUTER_SLUGS,
+    RELEASE_WINDOW_DAYS,
+    validate_output_models,
+)
+
 DEFAULT_RICH = REPO_ROOT / "data" / "aa_models_v2.json"
 DEFAULT_OUTPUT = REPO_ROOT / "public" / "data" / "models.json"
 MIN_RICH_MODELS = 250
-MAX_SITE_MODELS = 8000
-
-SLUG_RE = re.compile(r"^[a-z0-9][a-z0-9._-]{0,199}$")
-
-# Featured + routing + notes shipped alongside the old pipeline. Kept here so
-# this script is self-contained; mirror any edits made to fetch_aa_models.py.
-FEATURED_SLUGS = {
-    'claude-fable-5', 'claude-opus-4-8', 'claude-sonnet-5',
-    'gpt-5-6-sol', 'gpt-5-6-terra', 'gpt-5-6-luna',
-    'kimi-k3', 'grok-4-5',
-    'glm-5-2', 'muse-spark-1-1',
-    'gemini-3-6-flash', 'gemini-3-1-pro-preview',
-    'qwen3-7-max',
-    'minimax-m3', 'qwen3-7-plus',
-    'mimo-v2-5-pro', 'mimo-v2-5-0424',
-    'deepseek-v4-pro', 'deepseek-v4-flash',
-}
-OPENROUTER_SLUGS = {
-    'deepseek-v4-pro': 'deepseek/deepseek-v4-pro',
-    'minimax-m3': 'minimax/minimax-m3',
-    'kimi-k3': 'moonshotai/kimi-k3',
-    'mimo-v2-5-pro': 'xiaomi/mimo-v2.5-pro',
-    'mimo-v2-5-0424': 'xiaomi/mimo-v2-5',
-    'glm-5-2': 'z-ai/glm-5.2',
-    'qwen3-7-max': 'qwen/qwen3.7-max',
-    'qwen3-7-plus': 'qwen/qwen3.7-plus',
-    'muse-spark-1-1': 'meta-llama/muse-spark-1.1',
-    'grok-4-5': 'x-ai/grok-4.5',
-}
-RELEASE_WINDOW_DAYS = 183
-
 
 def _num(v, d=2):
     if isinstance(v, (int, float)) and not isinstance(v, bool):
@@ -254,45 +229,8 @@ def build_derived(m: dict) -> dict:
     return d
 
 
-def validate_output(models: list, prev_path: Path) -> None:
-    """Mirror of fetch_aa_models.validate_output_models (kept self-contained)."""
-    if not len(FEATURED_SLUGS) <= len(models) <= MAX_SITE_MODELS:
-        raise RuntimeError(f"Output model count {len(models)} is implausible")
-    seen = set()
-    for model in models:
-        slug = model.get('slug')
-        if not isinstance(slug, str) or not SLUG_RE.fullmatch(slug) or slug in seen:
-            raise RuntimeError(f"Output contains invalid/duplicate slug: {slug}")
-        seen.add(slug)
-        if model.get('aa_url') != f"https://artificialanalysis.ai/models/{slug}":
-            raise RuntimeError(f"Output contains unexpected AA URL for {slug}")
-        if not model.get('name'):
-            raise RuntimeError(f"Output contains missing name for {slug}")
-        for value in (model.get('benchmarks') or {}).values():
-            if value is not None and (not isinstance(value, (int, float))
-                                      or not 0 <= value <= 100):
-                raise RuntimeError(f"Out-of-range benchmark for {slug}: {value}")
-        for value in (model.get('pricing_per_m_tokens') or {}).values():
-            if value is not None and (not isinstance(value, (int, float))
-                                      or not 0 <= value <= 1_000_000):
-                raise RuntimeError(f"Invalid pricing for {slug}: {value}")
-    missing = FEATURED_SLUGS - seen
-    if missing:
-        raise RuntimeError("Missing featured slugs: " + ", ".join(sorted(missing)))
-    if prev_path.exists():
-        try:
-            prev = json.loads(prev_path.read_text(encoding='utf-8'))
-            prev_count = len(prev.get('models') or [])
-        except (OSError, json.JSONDecodeError, TypeError):
-            prev_count = 0
-        if prev_count and len(models) < math.floor(prev_count * 0.6):
-            raise RuntimeError(
-                f"Model count dropped from {prev_count} to {len(models)}; "
-                "refusing a destructive refresh")
-
-
-def select_models(records: list, days: int) -> list:
-    cutoff = (datetime.now(timezone.utc) - timedelta(days=days)).date()
+def select_models(records: list, days: int, as_of: date) -> list:
+    cutoff = as_of - timedelta(days=days)
     kept = []
     for r in records:
         if r.get('slug') in FEATURED_SLUGS:
@@ -331,6 +269,8 @@ def main() -> int:
     ap.add_argument('--rich', type=Path, default=DEFAULT_RICH)
     ap.add_argument('--output', type=Path, default=DEFAULT_OUTPUT)
     ap.add_argument('--days', type=int, default=RELEASE_WINDOW_DAYS)
+    ap.add_argument('--as-of', type=date.fromisoformat, default=None,
+                    help='UTC selection date (YYYY-MM-DD); defaults to rich dataset date')
     args = ap.parse_args()
 
     if not args.rich.exists():
@@ -344,18 +284,23 @@ def main() -> int:
               f"(min {MIN_RICH_MODELS}).", file=sys.stderr)
         return 1
 
-    # sticky featured-first ordering by intelligence, like the old pipeline
-    kept = select_models(records, args.days)
+    generated_at = data.get('generated_at')
+    default_as_of = generated_at[:10] if isinstance(generated_at, str) and len(generated_at) >= 10 else None
+    as_of = args.as_of or (date.fromisoformat(default_as_of) if default_as_of else date.today())
+
+    # Sticky featured-first ordering by intelligence, with an explicit cutoff.
+    kept = select_models(records, args.days, as_of)
     models = [to_site_model(r) for r in kept]
     models.sort(key=lambda m: (not m['featured'],
                                -(m['composite']['intelligence_index_v4_1'] or 0)))
 
-    validate_output(models, args.output)
+    validate_output_models(models, args.output)
 
     out = {
         "version": data.get('version', '4.1'),
         "intelligence_index_version": "4.1",
-        "scraped_at": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
+        "scraped_at": generated_at or f"{as_of.isoformat()}T00:00:00Z",
+        "as_of": as_of.isoformat(),
         "source_url": "https://artificialanalysis.ai/leaderboards/providers",
         "scrape_method": "AA RSC leaderboard payload via scripts/aa pipeline",
         "intelligence_index_methodology": (
