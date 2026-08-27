@@ -15,6 +15,10 @@ from typing import Any, Iterable
 
 PROFILE_VERSION = "1.0"
 PROFILE_RICH_VERSION = "2.0"
+INDEX_METRICS = frozenset({
+    "intelligence_index", "coding_index", "math_index", "agentic_index",
+    "omniscience_index",
+})
 
 
 PROFILES: dict[str, dict[str, Any]] = {
@@ -46,8 +50,22 @@ PROFILES: dict[str, dict[str, Any]] = {
 
 
 def _num(value: Any) -> float | None:
-    return value if (isinstance(value, (int, float)) and not isinstance(value, bool)
-                     and math.isfinite(value)) else None
+    if not isinstance(value, (int, float)) or isinstance(value, bool):
+        return None
+    try:
+        return value if math.isfinite(value) else None
+    except OverflowError:
+        return None
+
+
+def _bounded_index(value: Any) -> float | None:
+    value = _num(value)
+    return value if value is not None and 0 <= value <= 100 else None
+
+
+def _positive_num(value: Any) -> float | None:
+    value = _num(value)
+    return value if value is not None and value > 0 else None
 
 
 def _negative_num(value: Any) -> bool:
@@ -73,11 +91,17 @@ def _cost(model: dict) -> float | None:
     if b is not None:
         return b
     i, o = _num(p.get("input")), _num(p.get("output"))
-    return round((3 * i + o) / 4, 6) if i is not None and o is not None else None
+    if i is None or o is None:
+        return None
+    try:
+        blended = round((3 * i + o) / 4, 6)
+    except (OverflowError, ValueError):
+        return None
+    return _num(blended)
 
 
 def _speed(model: dict) -> float | None:
-    return _num((model.get("performance") or {}).get("median_output_speed_tps"))
+    return _positive_num((model.get("performance") or {}).get("median_output_speed_tps"))
 
 
 def _sources(model: dict) -> list[str]:
@@ -133,14 +157,15 @@ class DecisionEngine:
         return state
 
     def explain(self, model: dict) -> dict:
-        return {"slug": model.get("slug"), "name": model.get("name"),
-                "sources": _sources(model), "provenance": model.get("provenance", {}),
-                "coverage": {"intelligence_index": _num(model.get("intelligence_index")) is not None,
-                             "coding_index": _num(model.get("coding_index")) is not None,
-                             "agentic_index": _num(model.get("agentic_index")) is not None,
-                             "cost": _cost(model) is not None,
-                             "speed": _speed(model) is not None},
-                "access": self.access.get(model.get("slug"))}
+        return _json_safe({"slug": model.get("slug"), "name": model.get("name"),
+                           "sources": _sources(model),
+                           "provenance": model.get("provenance", {}),
+                           "coverage": {"intelligence_index": self._metric_score(model, "intelligence_index") is not None,
+                                        "coding_index": self._metric_score(model, "coding_index") is not None,
+                                        "agentic_index": self._metric_score(model, "agentic_index") is not None,
+                                        "cost": _cost(model) is not None,
+                                        "speed": _speed(model) is not None},
+                           "access": self.access.get(model.get("slug"))})
 
     def _freshness_state(self, model: dict, max_days: int = 14) -> tuple[str, float | None]:
         prov = model.get("provenance") or {}
@@ -169,13 +194,13 @@ class DecisionEngine:
     def _matches(self, model: dict, c: dict[str, Any]) -> tuple[bool, list[str]]:
         reasons: list[str] = []
         checks = {
-            "min_intelligence": (_num(model.get("intelligence_index")), ">="),
-            "min_coding": (_num(model.get("coding_index")), ">="),
-            "min_agentic": (_num(model.get("agentic_index")), ">="),
+            "min_intelligence": (_bounded_index(model.get("intelligence_index")), ">="),
+            "min_coding": (_bounded_index(model.get("coding_index")), ">="),
+            "min_agentic": (_bounded_index(model.get("agentic_index")), ">="),
             "min_context_tokens": (_num(model.get("context_tokens")), ">="),
             "min_speed": (_speed(model), ">="),
             "max_cost": (_cost(model), "<="),
-            "max_ttft": (_num((model.get("performance") or {}).get("median_ttft_seconds")), "<="),
+            "max_ttft": (_positive_num((model.get("performance") or {}).get("median_ttft_seconds")), "<="),
         }
         for key, (actual, op) in checks.items():
             expected = _num(c.get(key))
@@ -203,7 +228,8 @@ class DecisionEngine:
         return True, reasons
 
     def _metric_score(self, model: dict, metric: str) -> float | None:
-        return _num(model.get(metric))
+        value = model.get(metric)
+        return _bounded_index(value) if metric in INDEX_METRICS else _num(value)
 
     def _confidence(self, model: dict, metric: str, weights: dict[str, float]) -> dict[str, Any]:
         metric_fields = [metric]
@@ -300,6 +326,8 @@ class DecisionEngine:
         for m, quality, cost, speed, reasons in candidates:
             marginal = marginal_details.get(m.get("slug"))
             if strategy == "marginal_cost":
+                if marginal is None:
+                    continue
                 score = marginal["quality_per_cost_delta"]
                 metrics_used = [metric, "pricing.blended_3_1", "marginal_quality_gain_per_cost_delta"]
             else:

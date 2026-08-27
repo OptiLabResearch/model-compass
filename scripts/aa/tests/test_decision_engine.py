@@ -128,6 +128,36 @@ def test_nonfinite_model_fields_are_unknown_in_recommendation_json():
     assert output["provenance"]["extra_metric"] is None
 
 
+def test_oversized_numeric_inputs_are_unknown_and_derived_cost_overflow_is_excluded():
+    huge_index = model("huge-index", "H", 90, 1.0, 100)
+    huge_index["intelligence_index"] = 10 ** 1000
+    assert DecisionEngine([huge_index]).recommend(
+        {"min_intelligence": 80}, limit=10)["candidate_count"] == 0
+
+    overflowed_cost = model("overflowed-cost", "O", 90, 1.0, 100)
+    overflowed_cost["pricing"] = {key: None for key in overflowed_cost["pricing"]}
+    overflowed_cost["pricing"].update({"input": 1e308, "output": 1e308})
+    valid = model("valid", "V", 70, 0.0, 100)
+    result = DecisionEngine([overflowed_cost, valid]).recommend(
+        "marginal-cost-aware", limit=10)
+    assert [row["slug"] for row in result["recommendations"]] == ["valid"]
+
+
+def test_invalid_performance_and_index_values_remain_unknown():
+    bad_speed = model("bad-speed", "S", 90, 1.0, 0.0)
+    bad_ttft = model("bad-ttft", "T", 90, 1.0, 100)
+    bad_ttft["performance"]["median_ttft_seconds"] = -1.0
+    bad_index = model("bad-index", "I", 101, 1.0, 100)
+
+    speed_result = DecisionEngine([bad_speed]).recommend("best-overall", limit=1)
+    assert speed_result["candidate_count"] == 1
+    assert speed_result["recommendations"][0]["explanation"]["missing_metrics"] == ["speed"]
+    assert DecisionEngine([bad_ttft]).recommend(
+        {"max_ttft": 2.0}, limit=10)["candidate_count"] == 0
+    assert DecisionEngine([bad_index]).recommend(
+        {"min_intelligence": 80}, limit=10)["candidate_count"] == 0
+
+
 def test_negative_prices_are_unknown_and_never_cost_baselines():
     negative = model("negative", "N", 99, 1.0, 100)
     negative["pricing"]["blended_3_1"] = -1.0

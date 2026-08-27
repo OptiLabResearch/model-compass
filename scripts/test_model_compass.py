@@ -113,6 +113,16 @@ class ModelCompassCliTests(unittest.TestCase):
         self.assertIsNone(row["performance"]["median_output_speed_tps"])
         self.assertIsNone(row["provenance"]["fetched_at"])
 
+    def test_nonfinite_explain_fields_are_emitted_as_unknown_json(self):
+        data = json.loads(self.data_path.read_text(encoding="utf-8"))
+        data["models"][0]["provenance"]["fetched_at"] = float("nan")
+        self.data_path.write_text(json.dumps(data), encoding="utf-8")
+
+        result = self.invoke(
+            "--data", str(self.data_path), "explain", "fixture/model",
+        )
+        self.assertIsNone(result["provenance"]["fetched_at"])
+
     def test_identity_diagnostics_are_bounded_and_do_not_load_model_data(self):
         missing_data = Path(self.tempdir.name) / "missing-model-data.json"
         summary = self.invoke(
