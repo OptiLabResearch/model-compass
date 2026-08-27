@@ -1,67 +1,69 @@
 {
-  "generated_at": "2026-08-23T19:16:11Z",
+  "generated_at": "2026-08-27T16:35:43Z",
   "sources": {
     "rsc": {
       "healthy": true,
-      "records": 416,
-      "fetched_at": "2026-08-23T19:16:06Z",
+      "records": 422,
+      "fetched_at": "2026-08-27T16:35:37Z",
       "errors": []
     },
     "official_api": {
-      "healthy": true,
-      "records": 609,
-      "fetched_at": "2026-08-23T19:16:06Z",
-      "errors": []
+      "healthy": false,
+      "records": 0,
+      "fetched_at": "2026-08-27T16:35:38Z",
+      "errors": [
+        "AA_API_KEY is not set; official API fetch skipped"
+      ]
     },
     "snapshot": {
       "healthy": true,
       "records": 570,
-      "fetched_at": "2026-08-23T19:16:07Z",
+      "fetched_at": "2026-08-27T16:35:38Z",
       "errors": []
     }
   },
   "field_coverage": {
-    "intelligence_index": 605,
-    "coding_index": 224,
+    "intelligence_index": 607,
+    "coding_index": 166,
     "math_index": 0,
-    "agentic_index": 188,
-    "omniscience_index": 485,
-    "context_tokens": 614,
+    "agentic_index": 150,
+    "omniscience_index": 491,
+    "context_tokens": 620,
     "parameters_billions": 338,
-    "is_reasoning": 416,
-    "is_open_weights": 614,
+    "is_reasoning": 422,
+    "is_open_weights": 620,
     "license": 328,
-    "size_class": 560,
-    "released": 618,
-    "creator": 618
+    "size_class": 566,
+    "released": 620,
+    "creator": 620
   },
   "benchmark_coverage": {
     "aime": 0,
     "aime25": 188,
     "apex_agents": 30,
-    "critpt": 492,
-    "gdpval": 206,
-    "gpqa": 581,
+    "critpt": 494,
+    "gdpval": 209,
+    "gpqa": 587,
     "gpqa_diamond": 0,
-    "hle": 575,
+    "hle": 581,
     "ifbench": 456,
     "it_bench_sre": 28,
-    "lcr": 507,
+    "lcr": 513,
     "livecodebench": 215,
     "math_500": 0,
     "mmlu_pro": 0,
-    "mmmu_pro": 242,
-    "omniscience": 375,
-    "omniscience_accuracy": 485,
+    "mmmu_pro": 245,
+    "omniscience": 381,
+    "omniscience_accuracy": 491,
     "omniscience_hallucination_rate": 0,
-    "omniscience_non_halluc": 489,
-    "scicode": 573,
+    "omniscience_non_halluc": 491,
+    "scicode": 579,
     "tau2": 446,
-    "tau_banking": 170,
+    "tau_banking": 176,
     "terminalbench_hard": 438,
-    "terminalbench_v21": 182
+    "terminalbench_v21": 188
   },
-  "total_models": 618,
+  "total_models": 620,
   "parser_versions": {
     "rsc": "0.2.0",
     "official_api": "0.1.0",
@@ -71,17 +73,16 @@
   "stale": false,
   "freshness": {
     "stale": false,
-    "generated_at": "2026-08-23T19:16:11Z",
+    "generated_at": "2026-08-27T16:35:43Z",
     "cached_sources": [],
     "live_sources": [
       "rsc",
-      "official_api",
       "snapshot"
     ],
     "source_fetched_at": {
-      "rsc": "2026-08-23T19:16:06Z",
-      "official_api": "2026-08-23T19:16:06Z",
-      "snapshot": "2026-08-23T19:16:07Z"
+      "rsc": "2026-08-27T16:35:37Z",
+      "official_api": "2026-08-27T16:35:38Z",
+      "snapshot": "2026-08-27T16:35:38Z"
     }
   }
 }

@@ -1,9 +1,9 @@
 {
   "version": 2,
   "phase": 3,
-  "generated_at": "2026-08-24T07:39:00Z",
+  "generated_at": "2026-08-27T16:35:43Z",
   "sources": {
-    "aa_models": 618,
+    "aa_models": 620,
     "openrouter_observations": 621,
     "endpoint_accuracy_observations": 30,
     "endpoint_accuracy_models": 2,
@@ -14,7 +14,7 @@
     "coding_agent_benchmark_version": "1.4"
   },
   "identity": {
-    "aa_model_count": 618,
+    "aa_model_count": 620,
     "openrouter_model_count": 185,
     "openrouter_endpoint_count": 621,
     "aa_endpoint_count": 30,
@@ -53,6 +53,7 @@
       "mistralai/voxtral-small-24b-2507",
       "moonshotai/kimi-k2.7-code:batch",
       "nvidia/nemotron-3.5-lightning",
+      "qwen/qwen3.8-27b",
       "sakana/sakana-namazu",
       "stealth/ox-alpha",
       "upstage/solar-pro4",
@@ -61,11 +62,11 @@
     "model_mappings": {
       "verified": 0,
       "manual": 1,
-      "candidate": 63
+      "candidate": 62
     },
     "model_mapping_methods": {
       "manual_alias": 1,
-      "normalized_heuristic": 7,
+      "normalized_heuristic": 6,
       "source_metadata_exact": 56
     },
     "model_ambiguity_methods": {
@@ -74,7 +75,7 @@
     },
     "model_resolution_methods": {
       "manual_alias": 1,
-      "normalized_heuristic": 7,
+      "normalized_heuristic": 6,
       "source_metadata_exact": 80,
       "unclassified": 61
     },
@@ -83,7 +84,7 @@
       "manual": 2,
       "candidate": 0
     },
-    "unresolved_models": 36,
+    "unresolved_models": 37,
     "unresolved_endpoints": 619,
     "ambiguous": 85,
     "conflict": 0

@@ -1,6 +1,6 @@
 {
   "version": 4,
-  "generated_at": "2026-08-24T07:39:00Z",
+  "generated_at": "2026-08-27T16:35:43Z",
   "mappings": [
     {
       "relation": "model_to_model",
@@ -12,7 +12,7 @@
       "confidence": 0.95,
       "method": "source_metadata_exact",
       "evidence": "snapshot open_weights.openrouter_api_id exactly equals OpenRouter model ID; non-authoritative",
-      "last_verified": "2026-08-24T07:39:00Z"
+      "last_verified": "2026-08-27T16:35:43Z"
     },
     {
       "relation": "model_to_model",
@@ -24,7 +24,7 @@
       "confidence": 0.95,
       "method": "source_metadata_exact",
       "evidence": "snapshot open_weights.openrouter_api_id exactly equals OpenRouter model ID; non-authoritative",
-      "last_verified": "2026-08-24T07:39:00Z"
+      "last_verified": "2026-08-27T16:35:43Z"
     },
     {
       "relation": "model_to_model",
@@ -36,7 +36,7 @@
       "confidence": 0.95,
       "method": "source_metadata_exact",
       "evidence": "snapshot open_weights.openrouter_api_id exactly equals OpenRouter model ID; non-authoritative",
-      "last_verified": "2026-08-24T07:39:00Z"
+      "last_verified": "2026-08-27T16:35:43Z"
     },
     {
       "relation": "model_to_model",
@@ -48,7 +48,7 @@
       "confidence": 0.95,
       "method": "source_metadata_exact",
       "evidence": "snapshot open_weights.openrouter_api_id exactly equals OpenRouter model ID; non-authoritative",
-      "last_verified": "2026-08-24T07:39:00Z"
+      "last_verified": "2026-08-27T16:35:43Z"
     },
     {
       "relation": "model_to_model",
@@ -60,7 +60,7 @@
       "confidence": 0.95,
       "method": "source_metadata_exact",
       "evidence": "snapshot open_weights.openrouter_api_id exactly equals OpenRouter model ID; OpenRouter model portion equals AA slug; normalized model name/version equality; OpenRouter namespace agrees with AA creator; non-authoritative",
-      "last_verified": "2026-08-24T07:39:00Z"
+      "last_verified": "2026-08-27T16:35:43Z"
     },
     {
       "relation": "model_to_model",
@@ -72,7 +72,7 @@
       "confidence": 0.95,
       "method": "source_metadata_exact",
       "evidence": "snapshot open_weights.openrouter_api_id exactly equals OpenRouter model ID; OpenRouter model portion equals AA slug; normalized model name/version equality; OpenRouter namespace agrees with AA creator; non-authoritative",
-      "last_verified": "2026-08-24T07:39:00Z"
+      "last_verified": "2026-08-27T16:35:43Z"
     },
     {
       "relation": "model_to_model",
@@ -84,7 +84,7 @@
       "confidence": 0.95,
       "method": "source_metadata_exact",
       "evidence": "snapshot open_weights.openrouter_api_id exactly equals OpenRouter model ID; OpenRouter model portion equals AA slug; normalized model name/version equality; OpenRouter namespace agrees with AA creator; non-authoritative",
-      "last_verified": "2026-08-24T07:39:00Z"
+      "last_verified": "2026-08-27T16:35:43Z"
     },
     {
       "relation": "model_to_model",
@@ -96,7 +96,7 @@
       "confidence": 0.95,
       "method": "source_metadata_exact",
       "evidence": "snapshot open_weights.openrouter_api_id exactly equals OpenRouter model ID; OpenRouter model portion equals AA slug; normalized model name/version equality; OpenRouter namespace agrees with AA creator; non-authoritative",
-      "last_verified": "2026-08-24T07:39:00Z"
+      "last_verified": "2026-08-27T16:35:43Z"
     },
     {
       "relation": "model_to_model",
@@ -108,7 +108,7 @@
       "confidence": 0.95,
       "method": "source_metadata_exact",
       "evidence": "snapshot open_weights.openrouter_api_id exactly equals OpenRouter model ID; OpenRouter model portion equals AA slug; normalized model name/version equality; non-authoritative",
-      "last_verified": "2026-08-24T07:39:00Z"
+      "last_verified": "2026-08-27T16:35:43Z"
     },
     {
       "relation": "model_to_model",
@@ -120,7 +120,7 @@
       "confidence": 0.95,
       "method": "source_metadata_exact",
       "evidence": "snapshot open_weights.openrouter_api_id exactly equals OpenRouter model ID; OpenRouter model portion equals AA slug; normalized model name/version equality; OpenRouter namespace agrees with AA creator; non-authoritative",
-      "last_verified": "2026-08-24T07:39:00Z"
+      "last_verified": "2026-08-27T16:35:43Z"
     },
     {
       "relation": "model_to_model",
@@ -132,7 +132,7 @@
       "confidence": 0.95,
       "method": "source_metadata_exact",
       "evidence": "snapshot open_weights.openrouter_api_id exactly equals OpenRouter model ID; OpenRouter namespace agrees with AA creator; non-authoritative",
-      "last_verified": "2026-08-24T07:39:00Z"
+      "last_verified": "2026-08-27T16:35:43Z"
     },
     {
       "relation": "model_to_model",
@@ -144,7 +144,7 @@
       "confidence": 0.95,
       "method": "source_metadata_exact",
       "evidence": "snapshot open_weights.openrouter_api_id exactly equals OpenRouter model ID; OpenRouter namespace agrees with AA creator; non-authoritative",
-      "last_verified": "2026-08-24T07:39:00Z"
+      "last_verified": "2026-08-27T16:35:43Z"
     },
     {
       "relation": "model_to_model",
@@ -156,7 +156,7 @@
       "confidence": 0.95,
       "method": "source_metadata_exact",
       "evidence": "snapshot open_weights.openrouter_api_id exactly equals OpenRouter model ID; OpenRouter namespace agrees with AA creator; non-authoritative",
-      "last_verified": "2026-08-24T07:39:00Z"
+      "last_verified": "2026-08-27T16:35:43Z"
     },
     {
       "relation": "model_to_model",
@@ -168,7 +168,7 @@
       "confidence": 0.95,
       "method": "source_metadata_exact",
       "evidence": "snapshot open_weights.openrouter_api_id exactly equals OpenRouter model ID; normalized model name/version equality; OpenRouter namespace agrees with AA creator; non-authoritative",
-      "last_verified": "2026-08-24T07:39:00Z"
+      "last_verified": "2026-08-27T16:35:43Z"
     },
     {
       "relation": "model_to_model",
@@ -180,7 +180,7 @@
       "confidence": 0.95,
       "method": "source_metadata_exact",
       "evidence": "snapshot open_weights.openrouter_api_id exactly equals OpenRouter model ID; OpenRouter model portion equals AA slug; normalized model name/version equality; OpenRouter namespace agrees with AA creator; non-authoritative",
-      "last_verified": "2026-08-24T07:39:00Z"
+      "last_verified": "2026-08-27T16:35:43Z"
     },
     {
       "relation": "model_to_model",
@@ -192,7 +192,7 @@
       "confidence": 0.95,
       "method": "source_metadata_exact",
       "evidence": "snapshot open_weights.openrouter_api_id exactly equals OpenRouter model ID; OpenRouter model portion equals AA slug; normalized model name/version equality; OpenRouter namespace agrees with AA creator; non-authoritative",
-      "last_verified": "2026-08-24T07:39:00Z"
+      "last_verified": "2026-08-27T16:35:43Z"
     },
     {
       "relation": "model_to_model",
@@ -204,7 +204,7 @@
       "confidence": 0.95,
       "method": "source_metadata_exact",
       "evidence": "snapshot open_weights.openrouter_api_id exactly equals OpenRouter model ID; AA RSC hostApiId exactly equals OpenRouter model ID; provider-host corroboration only; OpenRouter model portion equals AA slug; normalized model name/version equality; OpenRouter namespace agrees with AA creator; non-authoritative",
-      "last_verified": "2026-08-24T07:39:00Z"
+      "last_verified": "2026-08-27T16:35:43Z"
     },
     {
       "relation": "model_to_model",
@@ -216,7 +216,7 @@
       "confidence": 0.95,
       "method": "source_metadata_exact",
       "evidence": "snapshot open_weights.openrouter_api_id exactly equals OpenRouter model ID; OpenRouter namespace agrees with AA creator; non-authoritative",
-      "last_verified": "2026-08-24T07:39:00Z"
+      "last_verified": "2026-08-27T16:35:43Z"
     },
     {
       "relation": "model_to_model",
@@ -228,7 +228,7 @@
       "confidence": 0.95,
       "method": "source_metadata_exact",
       "evidence": "snapshot open_weights.openrouter_api_id exactly equals OpenRouter model ID; AA RSC hostApiId exactly equals OpenRouter model ID; provider-host corroboration only; OpenRouter namespace agrees with AA creator; non-authoritative",
-      "last_verified": "2026-08-24T07:39:00Z"
+      "last_verified": "2026-08-27T16:35:43Z"
     },
     {
       "relation": "model_to_model",
@@ -240,7 +240,7 @@
       "confidence": 0.95,
       "method": "source_metadata_exact",
       "evidence": "snapshot open_weights.openrouter_api_id exactly equals OpenRouter model ID; AA RSC hostApiId exactly equals OpenRouter model ID; provider-host corroboration only; OpenRouter namespace agrees with AA creator; non-authoritative",
-      "last_verified": "2026-08-24T07:39:00Z"
+      "last_verified": "2026-08-27T16:35:43Z"
     },
     {
       "relation": "model_to_model",
@@ -252,7 +252,7 @@
       "confidence": 0.95,
       "method": "source_metadata_exact",
       "evidence": "snapshot open_weights.openrouter_api_id exactly equals OpenRouter model ID; non-authoritative",
-      "last_verified": "2026-08-24T07:39:00Z"
+      "last_verified": "2026-08-27T16:35:43Z"
     },
     {
       "relation": "model_to_model",
@@ -264,7 +264,7 @@
       "confidence": 0.95,
       "method": "source_metadata_exact",
       "evidence": "snapshot open_weights.openrouter_api_id exactly equals OpenRouter model ID; AA RSC hostApiId exactly equals OpenRouter model ID; provider-host corroboration only; OpenRouter model portion equals AA slug; normalized model name/version equality; non-authoritative",
-      "last_verified": "2026-08-24T07:39:00Z"
+      "last_verified": "2026-08-27T16:35:43Z"
     },
     {
       "relation": "model_to_model",
@@ -276,7 +276,7 @@
       "confidence": 0.95,
       "method": "source_metadata_exact",
       "evidence": "snapshot open_weights.openrouter_api_id exactly equals OpenRouter model ID; OpenRouter model portion equals AA slug; normalized model name/version equality; OpenRouter namespace agrees with AA creator; non-authoritative",
-      "last_verified": "2026-08-24T07:39:00Z"
+      "last_verified": "2026-08-27T16:35:43Z"
     },
     {
       "relation": "model_to_model",
@@ -288,7 +288,7 @@
       "confidence": 0.95,
       "method": "source_metadata_exact",
       "evidence": "snapshot open_weights.openrouter_api_id exactly equals OpenRouter model ID; OpenRouter model portion equals AA slug; normalized model name/version equality; OpenRouter namespace agrees with AA creator; non-authoritative",
-      "last_verified": "2026-08-24T07:39:00Z"
+      "last_verified": "2026-08-27T16:35:43Z"
     },
     {
       "relation": "model_to_model",
@@ -299,8 +299,8 @@
       "state": "candidate",
       "confidence": 0.95,
       "method": "source_metadata_exact",
-      "evidence": "snapshot open_weights.openrouter_api_id exactly equals OpenRouter model ID; AA RSC hostApiId exactly equals OpenRouter model ID; provider-host corroboration only; OpenRouter model portion equals AA slug; normalized model name/version equality; OpenRouter namespace agrees with AA creator; non-authoritative",
-      "last_verified": "2026-08-24T07:39:00Z"
+      "evidence": "snapshot open_weights.openrouter_api_id exactly equals OpenRouter model ID; OpenRouter model portion equals AA slug; normalized model name/version equality; OpenRouter namespace agrees with AA creator; non-authoritative",
+      "last_verified": "2026-08-27T16:35:43Z"
     },
     {
       "relation": "model_to_model",
@@ -312,7 +312,7 @@
       "confidence": 0.95,
       "method": "source_metadata_exact",
       "evidence": "snapshot open_weights.openrouter_api_id exactly equals OpenRouter model ID; OpenRouter model portion equals AA slug; normalized model name/version equality; OpenRouter namespace agrees with AA creator; non-authoritative",
-      "last_verified": "2026-08-24T07:39:00Z"
+      "last_verified": "2026-08-27T16:35:43Z"
     },
     {
       "relation": "model_to_model",
@@ -324,7 +324,7 @@
       "confidence": 0.95,
       "method": "normalized_heuristic",
       "evidence": "OpenRouter model portion equals AA slug; normalized model name/version equality; non-authoritative",
-      "last_verified": "2026-08-24T07:39:00Z"
+      "last_verified": "2026-08-27T16:35:43Z"
     },
     {
       "relation": "model_to_model",
@@ -336,7 +336,7 @@
       "confidence": 0.95,
       "method": "normalized_heuristic",
       "evidence": "OpenRouter model portion equals AA slug; normalized model name/version equality; non-authoritative",
-      "last_verified": "2026-08-24T07:39:00Z"
+      "last_verified": "2026-08-27T16:35:43Z"
     },
     {
       "relation": "model_to_model",
@@ -348,7 +348,7 @@
       "confidence": 0.95,
       "method": "source_metadata_exact",
       "evidence": "snapshot open_weights.openrouter_api_id exactly equals OpenRouter model ID; non-authoritative",
-      "last_verified": "2026-08-24T07:39:00Z"
+      "last_verified": "2026-08-27T16:35:43Z"
     },
     {
       "relation": "model_to_model",
@@ -360,7 +360,7 @@
       "confidence": 0.95,
       "method": "source_metadata_exact",
       "evidence": "snapshot open_weights.openrouter_api_id exactly equals OpenRouter model ID; non-authoritative",
-      "last_verified": "2026-08-24T07:39:00Z"
+      "last_verified": "2026-08-27T16:35:43Z"
     },
     {
       "relation": "model_to_model",
@@ -372,7 +372,7 @@
       "confidence": 0.95,
       "method": "source_metadata_exact",
       "evidence": "snapshot open_weights.openrouter_api_id exactly equals OpenRouter model ID; non-authoritative",
-      "last_verified": "2026-08-24T07:39:00Z"
+      "last_verified": "2026-08-27T16:35:43Z"
     },
     {
       "relation": "model_to_model",
@@ -384,7 +384,7 @@
       "confidence": 0.95,
       "method": "source_metadata_exact",
       "evidence": "snapshot open_weights.openrouter_api_id exactly equals OpenRouter model ID; non-authoritative",
-      "last_verified": "2026-08-24T07:39:00Z"
+      "last_verified": "2026-08-27T16:35:43Z"
     },
     {
       "relation": "model_to_model",
@@ -396,7 +396,7 @@
       "confidence": 0.95,
       "method": "source_metadata_exact",
       "evidence": "snapshot open_weights.openrouter_api_id exactly equals OpenRouter model ID; non-authoritative",
-      "last_verified": "2026-08-24T07:39:00Z"
+      "last_verified": "2026-08-27T16:35:43Z"
     },
     {
       "relation": "model_to_model",
@@ -408,7 +408,7 @@
       "confidence": 0.95,
       "method": "source_metadata_exact",
       "evidence": "snapshot open_weights.openrouter_api_id exactly equals OpenRouter model ID; OpenRouter model portion equals AA slug; normalized model name/version equality; non-authoritative",
-      "last_verified": "2026-08-24T07:39:00Z"
+      "last_verified": "2026-08-27T16:35:43Z"
     },
     {
       "relation": "model_to_model",
@@ -420,7 +420,7 @@
       "confidence": 0.95,
       "method": "source_metadata_exact",
       "evidence": "snapshot open_weights.openrouter_api_id exactly equals OpenRouter model ID; OpenRouter model portion equals AA slug; normalized model name/version equality; non-authoritative",
-      "last_verified": "2026-08-24T07:39:00Z"
+      "last_verified": "2026-08-27T16:35:43Z"
     },
     {
       "relation": "model_to_model",
@@ -432,7 +432,7 @@
       "confidence": 0.95,
       "method": "source_metadata_exact",
       "evidence": "AA RSC hostApiId exactly equals OpenRouter model ID; provider-host corroboration only; OpenRouter model portion equals AA slug; normalized model name/version equality; non-authoritative",
-      "last_verified": "2026-08-24T07:39:00Z"
+      "last_verified": "2026-08-27T16:35:43Z"
     },
     {
       "relation": "model_to_model",
@@ -444,7 +444,7 @@
       "confidence": 0.95,
       "method": "source_metadata_exact",
       "evidence": "snapshot open_weights.openrouter_api_id exactly equals OpenRouter model ID; OpenRouter namespace agrees with AA creator; non-authoritative",
-      "last_verified": "2026-08-24T07:39:00Z"
+      "last_verified": "2026-08-27T16:35:43Z"
     },
     {
       "relation": "model_to_model",
@@ -456,7 +456,7 @@
       "confidence": 0.95,
       "method": "source_metadata_exact",
       "evidence": "snapshot open_weights.openrouter_api_id exactly equals OpenRouter model ID; OpenRouter model portion equals AA slug; normalized model name/version equality; OpenRouter namespace agrees with AA creator; non-authoritative",
-      "last_verified": "2026-08-24T07:39:00Z"
+      "last_verified": "2026-08-27T16:35:43Z"
     },
     {
       "relation": "model_to_model",
@@ -468,7 +468,7 @@
       "confidence": 0.95,
       "method": "source_metadata_exact",
       "evidence": "snapshot open_weights.openrouter_api_id exactly equals OpenRouter model ID; AA RSC hostApiId exactly equals OpenRouter model ID; provider-host corroboration only; OpenRouter model portion equals AA slug; normalized model name/version equality; OpenRouter namespace agrees with AA creator; non-authoritative",
-      "last_verified": "2026-08-24T07:39:00Z"
+      "last_verified": "2026-08-27T16:35:43Z"
     },
     {
       "relation": "model_to_model",
@@ -480,7 +480,7 @@
       "confidence": 0.95,
       "method": "source_metadata_exact",
       "evidence": "snapshot open_weights.openrouter_api_id exactly equals OpenRouter model ID; OpenRouter model portion equals AA slug; normalized model name/version equality; OpenRouter namespace agrees with AA creator; non-authoritative",
-      "last_verified": "2026-08-24T07:39:00Z"
+      "last_verified": "2026-08-27T16:35:43Z"
     },
     {
       "relation": "model_to_model",
@@ -492,7 +492,7 @@
       "confidence": 0.95,
       "method": "source_metadata_exact",
       "evidence": "snapshot open_weights.openrouter_api_id exactly equals OpenRouter model ID; OpenRouter model portion equals AA slug; normalized model name/version equality; OpenRouter namespace agrees with AA creator; non-authoritative",
-      "last_verified": "2026-08-24T07:39:00Z"
+      "last_verified": "2026-08-27T16:35:43Z"
     },
     {
       "relation": "model_to_model",
@@ -504,7 +504,7 @@
       "confidence": 0.95,
       "method": "source_metadata_exact",
       "evidence": "snapshot open_weights.openrouter_api_id exactly equals OpenRouter model ID; OpenRouter model portion equals AA slug; normalized model name/version equality; OpenRouter namespace agrees with AA creator; non-authoritative",
-      "last_verified": "2026-08-24T07:39:00Z"
+      "last_verified": "2026-08-27T16:35:43Z"
     },
     {
       "relation": "model_to_model",
@@ -516,7 +516,7 @@
       "confidence": 0.95,
       "method": "source_metadata_exact",
       "evidence": "snapshot open_weights.openrouter_api_id exactly equals OpenRouter model ID; non-authoritative",
-      "last_verified": "2026-08-24T07:39:00Z"
+      "last_verified": "2026-08-27T16:35:43Z"
     },
     {
       "relation": "model_to_model",
@@ -528,7 +528,7 @@
       "confidence": 0.95,
       "method": "source_metadata_exact",
       "evidence": "snapshot open_weights.openrouter_api_id exactly equals OpenRouter model ID; non-authoritative",
-      "last_verified": "2026-08-24T07:39:00Z"
+      "last_verified": "2026-08-27T16:35:43Z"
     },
     {
       "relation": "model_to_model",
@@ -540,7 +540,7 @@
       "confidence": 0.95,
       "method": "source_metadata_exact",
       "evidence": "snapshot open_weights.openrouter_api_id exactly equals OpenRouter model ID; non-authoritative",
-      "last_verified": "2026-08-24T07:39:00Z"
+      "last_verified": "2026-08-27T16:35:43Z"
     },
     {
       "relation": "model_to_model",
@@ -552,7 +552,7 @@
       "confidence": 0.95,
       "method": "source_metadata_exact",
       "evidence": "snapshot open_weights.openrouter_api_id exactly equals OpenRouter model ID; OpenRouter model portion equals AA slug; normalized model name/version equality; non-authoritative",
-      "last_verified": "2026-08-24T07:39:00Z"
+      "last_verified": "2026-08-27T16:35:43Z"
     },
     {
       "relation": "model_to_model",
@@ -564,7 +564,7 @@
       "confidence": 0.95,
       "method": "source_metadata_exact",
       "evidence": "snapshot open_weights.openrouter_api_id exactly equals OpenRouter model ID; non-authoritative",
-      "last_verified": "2026-08-24T07:39:00Z"
+      "last_verified": "2026-08-27T16:35:43Z"
     },
     {
       "relation": "model_to_model",
@@ -576,7 +576,7 @@
       "confidence": 0.95,
       "method": "source_metadata_exact",
       "evidence": "snapshot open_weights.openrouter_api_id exactly equals OpenRouter model ID; OpenRouter model portion equals AA slug; normalized model name/version equality; non-authoritative",
-      "last_verified": "2026-08-24T07:39:00Z"
+      "last_verified": "2026-08-27T16:35:43Z"
     },
     {
       "relation": "model_to_model",
@@ -588,7 +588,7 @@
       "confidence": 0.95,
       "method": "source_metadata_exact",
       "evidence": "snapshot open_weights.openrouter_api_id exactly equals OpenRouter model ID; OpenRouter model portion equals AA slug; normalized model name/version equality; non-authoritative",
-      "last_verified": "2026-08-24T07:39:00Z"
+      "last_verified": "2026-08-27T16:35:43Z"
     },
     {
       "relation": "model_to_model",
@@ -600,7 +600,7 @@
       "confidence": 0.95,
       "method": "source_metadata_exact",
       "evidence": "snapshot open_weights.openrouter_api_id exactly equals OpenRouter model ID; OpenRouter model portion equals AA slug; normalized model name/version equality; non-authoritative",
-      "last_verified": "2026-08-24T07:39:00Z"
+      "last_verified": "2026-08-27T16:35:43Z"
     },
     {
       "relation": "model_to_model",
@@ -612,7 +612,7 @@
       "confidence": 0.95,
       "method": "normalized_heuristic",
       "evidence": "OpenRouter model portion equals AA slug; normalized model name/version equality; non-authoritative",
-      "last_verified": "2026-08-24T07:39:00Z"
+      "last_verified": "2026-08-27T16:35:43Z"
     },
     {
       "relation": "model_to_model",
@@ -624,7 +624,7 @@
       "confidence": 0.95,
       "method": "source_metadata_exact",
       "evidence": "snapshot open_weights.openrouter_api_id exactly equals OpenRouter model ID; non-authoritative",
-      "last_verified": "2026-08-24T07:39:00Z"
+      "last_verified": "2026-08-27T16:35:43Z"
     },
     {
       "relation": "model_to_model",
@@ -636,7 +636,7 @@
       "confidence": 0.95,
       "method": "source_metadata_exact",
       "evidence": "snapshot open_weights.openrouter_api_id exactly equals OpenRouter model ID; non-authoritative",
-      "last_verified": "2026-08-24T07:39:00Z"
+      "last_verified": "2026-08-27T16:35:43Z"
     },
     {
       "relation": "model_to_model",
@@ -648,7 +648,7 @@
       "confidence": 0.95,
       "method": "source_metadata_exact",
       "evidence": "snapshot open_weights.openrouter_api_id exactly equals OpenRouter model ID; non-authoritative",
-      "last_verified": "2026-08-24T07:39:00Z"
+      "last_verified": "2026-08-27T16:35:43Z"
     },
     {
       "relation": "model_to_model",
@@ -660,7 +660,7 @@
       "confidence": 0.95,
       "method": "source_metadata_exact",
       "evidence": "snapshot open_weights.openrouter_api_id exactly equals OpenRouter model ID; normalized model name/version equality; non-authoritative",
-      "last_verified": "2026-08-24T07:39:00Z"
+      "last_verified": "2026-08-27T16:35:43Z"
     },
     {
       "relation": "model_to_model",
@@ -672,7 +672,7 @@
       "confidence": 0.95,
       "method": "source_metadata_exact",
       "evidence": "snapshot open_weights.openrouter_api_id exactly equals OpenRouter model ID; OpenRouter model portion equals AA slug; normalized model name/version equality; non-authoritative",
-      "last_verified": "2026-08-24T07:39:00Z"
+      "last_verified": "2026-08-27T16:35:43Z"
     },
     {
       "relation": "model_to_model",
@@ -684,7 +684,7 @@
       "confidence": 0.95,
       "method": "source_metadata_exact",
       "evidence": "snapshot open_weights.openrouter_api_id exactly equals OpenRouter model ID; AA RSC hostApiId exactly equals OpenRouter model ID; provider-host corroboration only; OpenRouter model portion equals AA slug; normalized model name/version equality; non-authoritative",
-      "last_verified": "2026-08-24T07:39:00Z"
+      "last_verified": "2026-08-27T16:35:43Z"
     },
     {
       "relation": "model_to_model",
@@ -696,7 +696,7 @@
       "confidence": 0.95,
       "method": "source_metadata_exact",
       "evidence": "snapshot open_weights.openrouter_api_id exactly equals OpenRouter model ID; OpenRouter model portion equals AA slug; normalized model name/version equality; non-authoritative",
-      "last_verified": "2026-08-24T07:39:00Z"
+      "last_verified": "2026-08-27T16:35:43Z"
     },
     {
       "relation": "model_to_model",
@@ -708,7 +708,7 @@
       "confidence": 0.95,
       "method": "source_metadata_exact",
       "evidence": "snapshot open_weights.openrouter_api_id exactly equals OpenRouter model ID; OpenRouter model portion equals AA slug; normalized model name/version equality; non-authoritative",
-      "last_verified": "2026-08-24T07:39:00Z"
+      "last_verified": "2026-08-27T16:35:43Z"
     },
     {
       "relation": "model_to_model",
@@ -732,19 +732,7 @@
       "confidence": 0.95,
       "method": "normalized_heuristic",
       "evidence": "OpenRouter model portion equals AA slug; normalized model name/version equality; non-authoritative",
-      "last_verified": "2026-08-24T07:39:00Z"
-    },
-    {
-      "relation": "model_to_model",
-      "source": "openrouter",
-      "source_entity_id": "qwen/qwen3.8-27b",
-      "target": "artificial_analysis",
-      "target_entity_id": "qwen3-8-27b",
-      "state": "candidate",
-      "confidence": 0.95,
-      "method": "normalized_heuristic",
-      "evidence": "OpenRouter model portion equals AA slug; normalized model name/version equality; non-authoritative",
-      "last_verified": "2026-08-24T07:39:00Z"
+      "last_verified": "2026-08-27T16:35:43Z"
     },
     {
       "relation": "model_to_model",
@@ -756,7 +744,7 @@
       "confidence": 0.95,
       "method": "normalized_heuristic",
       "evidence": "OpenRouter model portion equals AA slug; normalized model name/version equality; non-authoritative",
-      "last_verified": "2026-08-24T07:39:00Z"
+      "last_verified": "2026-08-27T16:35:43Z"
     },
     {
       "relation": "model_to_model",
@@ -768,7 +756,7 @@
       "confidence": 0.95,
       "method": "normalized_heuristic",
       "evidence": "OpenRouter model portion equals AA slug; normalized model name/version equality; non-authoritative",
-      "last_verified": "2026-08-24T07:39:00Z"
+      "last_verified": "2026-08-27T16:35:43Z"
     },
     {
       "relation": "provider_endpoint_to_endpoint",
@@ -803,7 +791,7 @@
       "state": "verified",
       "confidence": 1.0,
       "evidence": "same Artificial Analysis stable slug",
-      "last_verified": "2026-08-24T07:39:00Z"
+      "last_verified": "2026-08-27T16:35:43Z"
     },
     {
       "relation": "endpoint_model_to_model",
@@ -814,7 +802,7 @@
       "state": "verified",
       "confidence": 1.0,
       "evidence": "same Artificial Analysis stable slug",
-      "last_verified": "2026-08-24T07:39:00Z"
+      "last_verified": "2026-08-27T16:35:43Z"
     }
   ],
   "unresolved": [
@@ -945,6 +933,10 @@
     {
       "relation": "model_to_model",
       "source_entity_id": "nvidia/nemotron-3.5-lightning"
+    },
+    {
+      "relation": "model_to_model",
+      "source_entity_id": "qwen/qwen3.8-27b"
     },
     {
       "relation": "model_to_model",
@@ -4464,6 +4456,7 @@
         "deepseek-v4-flash-0420-high",
         "deepseek-v4-flash-high",
         "deepseek-v4-flash-non-reasoning",
+        "deepseek-v4-flash-vision",
         "deepseek-v4-pro",
         "deepseek-v4-pro-0424",
         "deepseek-v4-pro-0424-high",
@@ -4506,6 +4499,7 @@
         "deepseek-v4-flash-0420-high",
         "deepseek-v4-flash-high",
         "deepseek-v4-flash-non-reasoning",
+        "deepseek-v4-flash-vision",
         "deepseek-v4-pro",
         "deepseek-v4-pro-0424",
         "deepseek-v4-pro-0424-high",
@@ -4563,6 +4557,7 @@
         "deepseek-v4-flash-0420-high",
         "deepseek-v4-flash-high",
         "deepseek-v4-flash-non-reasoning",
+        "deepseek-v4-flash-vision",
         "deepseek-v4-pro",
         "deepseek-v4-pro-0424",
         "deepseek-v4-pro-0424-high",
@@ -6477,7 +6472,7 @@
   ],
   "conflicts": [],
   "health": {
-    "aa_model_count": 618,
+    "aa_model_count": 620,
     "openrouter_model_count": 185,
     "openrouter_endpoint_count": 621,
     "aa_endpoint_count": 30,
@@ -6516,6 +6511,7 @@
       "mistralai/voxtral-small-24b-2507",
       "moonshotai/kimi-k2.7-code:batch",
       "nvidia/nemotron-3.5-lightning",
+      "qwen/qwen3.8-27b",
       "sakana/sakana-namazu",
       "stealth/ox-alpha",
       "upstage/solar-pro4",
@@ -6524,11 +6520,11 @@
     "model_mappings": {
       "verified": 0,
       "manual": 1,
-      "candidate": 63
+      "candidate": 62
     },
     "model_mapping_methods": {
       "manual_alias": 1,
-      "normalized_heuristic": 7,
+      "normalized_heuristic": 6,
       "source_metadata_exact": 56
     },
     "model_ambiguity_methods": {
@@ -6537,7 +6533,7 @@
     },
     "model_resolution_methods": {
       "manual_alias": 1,
-      "normalized_heuristic": 7,
+      "normalized_heuristic": 6,
       "source_metadata_exact": 80,
       "unclassified": 61
     },
@@ -6546,7 +6542,7 @@
       "manual": 2,
       "candidate": 0
     },
-    "unresolved_models": 36,
+    "unresolved_models": 37,
     "unresolved_endpoints": 619,
     "ambiguous": 85,
     "conflict": 0
