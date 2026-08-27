@@ -1,12 +1,12 @@
 # Phase 5 Decision-Profile Report
 
-Status: implementation and review repairs complete 2026-08-27; acceptance
-pending final independent Luna Max review. The implementation is committed as
-`20023c6`, with repairs in `b511b11`, on `feat/model-compass-phase5`.
+Status: accepted 2026-08-27. The implementation is committed as `20023c6`,
+with review repairs in `b511b11` and final numeric hardening in `6c8aab9`, on
+`feat/model-compass-phase5`.
 
 This report records the durable implementation and verification evidence for
-the three explainable recommendation profiles. The active execution plan is
-[`docs/plans/active/phase-5-decision-profiles.md`](../plans/active/phase-5-decision-profiles.md).
+the three explainable recommendation profiles. The completed execution plan is
+[`docs/plans/completed/phase-5-decision-profiles.md`](../plans/completed/phase-5-decision-profiles.md).
 
 ## Profile contract
 
@@ -30,22 +30,24 @@ network call, paid source, gateway, or router.
   quality per cost delta. Non-finite values cannot enter the result JSON.
 - Weighted scoring renormalizes over known metrics rather than treating a
   missing cost or speed value as a factual zero.
+- Numeric inputs are fail-closed for oversized integers, non-finite/overflowed
+  derived costs, negative prices, non-positive performance values, and
+  out-of-domain index values; direct explanations are JSON-safe as well.
 - Focused tests cover profile selection, access filtering and overlays,
   marginal details, unknown values, finite output, stable ties, and CLI
   exposure.
 
 ## Verification state
 
-`python3 scripts/check.py --scope all` passed on 2026-08-27 at repair commit
-`b511b11`, including Python syntax, CLI, public build/site contracts, pipeline,
-decision, history, observation, identity, deterministic replay, and generated
-artifact comparison checks. `git diff --check origin/main...HEAD` also passed.
-The final documentation-only verification is recorded in the active plan.
+`python3 scripts/check.py --scope all` passed on 2026-08-27 at final repair
+commit `6c8aab9`, including Python syntax, CLI, public build/site contracts,
+pipeline, decision, history, observation, identity, deterministic replay, and
+generated artifact comparison checks. `git diff --check origin/main...HEAD`
+also passed.
 
 Luna Max’s initial independent review found three findings covering non-finite
 constraint values, non-finite recommendation fields, and negative prices. The
-repairs and regression tests are in `b511b11`. A final independent Luna Max
-review has been requested but has not yet issued a verdict, so this report
-intentionally does not mark Phase 5 accepted; the remaining action is to
-record that verdict, address any further findings, and then close the plan and
-update `docs/STATUS.md`.
+repairs and regression tests are in `b511b11`. The final independent review
+identified four additional numeric-boundary cases; they are repaired with
+regression tests in `6c8aab9`. The final Luna Max re-review returned PASS with
+no remaining Phase 5 acceptance blockers.

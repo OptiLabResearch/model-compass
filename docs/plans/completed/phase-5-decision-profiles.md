@@ -1,8 +1,11 @@
 # Phase 5 Decision Profiles Plan
 
-Status: active — implementation and review repairs complete on 2026-08-27;
-acceptance is pending final independent Luna Max review on
-`feat/model-compass-phase5`.
+Status: completed and accepted 2026-08-27. Final numeric hardening is
+`6c8aab9`; see the durable report for review evidence.
+
+## Durable report
+
+See [`docs/reports/phase-5-decision-profiles.md`](../../reports/phase-5-decision-profiles.md) for the implementation, verification, and independent review evidence.
 
 ## Durable scope
 
@@ -52,14 +55,16 @@ current behavior unless a shared correctness fix is required.
 2. Add explicit access-state and marginal-cost scoring helpers with bounded
    explanations.
 3. Add focused decision/CLI tests and update the public decision documentation.
-4. Run full validation, review the final diff, obtain independent Sol review,
-   and update this plan and `docs/STATUS.md` with accepted evidence.
+4. Run full validation, review the final diff, obtain independent Luna Max
+   review, and update this plan and `docs/STATUS.md` with accepted evidence.
 
-## Implementation evidence
+## Verified evidence
 
 - Commit `20023c6` adds the three profiles to `DecisionEngine`, carries the
   contract through `AADB` and the stable CLI, and documents the access overlay
-  and scoring semantics. Review repairs are committed as `b511b11`.
+  and scoring semantics.
+- Review repairs are committed in `b511b11`; final numeric-boundary repairs
+  and regression tests are committed in `6c8aab9`.
 - Focused decision tests, CLI tests, Python compilation, and
   `python3 scripts/check.py --scope all` passed on 2026-08-27. The full matrix
   included pipeline, decision, observation, identity, deterministic replay,
@@ -67,9 +72,7 @@ current behavior unless a shared correctness fix is required.
 - `git diff --check origin/main...HEAD` passed, and bounded CLI smoke checks
   exercised all three profiles. Missing access remains fail-closed for
   `available-to-me`; missing marginal cost is excluded.
-- Luna Max’s initial independent review found three numeric-safety issues:
-  non-finite constraint values, non-finite result fields, and negative prices.
-  They are covered by regression tests and repaired in `b511b11`. A final
-  independent Luna Max re-review has been requested and has not yet returned
-  a verdict, so this plan remains active and Phase 5 is not yet marked
-  accepted.
+- The initial independent Luna Max review found numeric-safety issues covering
+  non-finite constraint/output handling and negative prices. The final
+  independent re-review found no remaining Phase 5 acceptance blocker and
+  returned PASS after the repairs above.
