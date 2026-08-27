@@ -45,9 +45,11 @@ def _add_output_options(parser, *, limit=None):
 
 def _emit(payload, args) -> None:
     if args.compact:
-        print(json.dumps(payload, ensure_ascii=False, separators=(",", ":"), sort_keys=True))
+        print(json.dumps(payload, ensure_ascii=False, separators=(",", ":"), sort_keys=True,
+                         allow_nan=False))
     else:
-        print(json.dumps(payload, ensure_ascii=False, indent=2, sort_keys=True))
+        print(json.dumps(payload, ensure_ascii=False, indent=2, sort_keys=True,
+                         allow_nan=False))
 
 
 def _model_summary(model):
@@ -103,7 +105,7 @@ def _recommendation_view(result, full):
         recommendations.append(row)
     return {
         key: result[key]
-        for key in ("profile", "profile_version", "metric", "candidate_count")
+        for key in ("profile", "profile_version", "strategy", "metric", "candidate_count")
         if key in result
     } | {"recommendations": recommendations}
 

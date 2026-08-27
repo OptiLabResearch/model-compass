@@ -1,6 +1,9 @@
 # Phase 4 Source-Contract Report
 
-Status: implementation evidence recorded; Phase 4 acceptance remains open.
+Status: accepted 2026-08-27. The implementation was synchronized with
+`origin/main`, passed the full local matrix, and received an independent Sol
+re-review with no remaining findings. The focused repair is committed as
+`2f35ee4`.
 
 This report records the source-authority and identity decisions that govern the
 current implementation. It is the durable evidence companion to
@@ -52,10 +55,25 @@ authoritative identity.
   dry-run-first `scripts/prune_aa_cache.py` utility; reusable keyed/latest caches
   are outside its deletion pattern.
 
+## Final identity repairs
+
+- A verified OpenRouter model mapping requires the exact
+  `official_api`/`openrouter_api_id`/`authoritative` evidence tuple. Snapshot,
+  RSC, malformed, and otherwise candidate-labeled evidence cannot promote a
+  mapping.
+- Official evidence that conflicts with candidate metadata produces an
+  explicit conflict and no model mapping, preserving the recommendation
+  fail-closed boundary.
+- Identity health now reports mapping, ambiguity, and combined resolution
+  method counts. The generated artifact records 56 unique metadata mappings and
+  24 metadata ambiguities, reconciling to 80 exact metadata matches.
+
 ## Verification state
 
-The current branch retains the previously generated Phase 3 identity artifacts
-and adds the shared public contract, deterministic builder replay, archive
-hygiene, and workflow date pinning. Full CI, final diff review, synchronization
-with current `origin/main`, and independent Sol review are still required before
-Phase 4 can be marked accepted.
+The Phase 4 branch is based on current `origin/main` (the remote main tip is an
+ancestor), and the final diff is whitespace-clean. `python3 scripts/check.py
+--scope all` passed on 2026-08-27, including identity contracts, variant-safe
+observation checks, deterministic Phase 3 replay, and byte-for-byte generated
+artifact comparison. The first independent Sol review found the authority and
+health gaps above; after repair, a fresh Sol re-review accepted commit
+`2f35ee4` with no Critical, High, Medium, or Low findings.

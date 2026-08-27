@@ -83,6 +83,9 @@ records are required and use `--compact` when piping JSON:
 
 ```bash
 python3 scripts/model_compass.py recommend coding --limit 10 --compact
+python3 scripts/model_compass.py recommend best-overall --limit 10
+python3 scripts/model_compass.py recommend available-to-me --limit 10
+python3 scripts/model_compass.py recommend marginal-cost-aware --limit 10
 python3 scripts/model_compass.py providers openai/gpt-5
 python3 scripts/model_compass.py recommend-provider openai/gpt-5 --profile interactive
 python3 scripts/model_compass.py agents
@@ -96,6 +99,12 @@ python3 scripts/model_compass.py unresolved-identities --limit 20
 
 Use `python3 scripts/model_compass.py recommend coding --full` or
 `unresolved-identities --full` only for an explicit record-level investigation.
+
+The `available-to-me` profile reads the ignored `.model-compass-access.json`
+overlay and includes only models with an explicit boolean `available: true`
+record. `best-overall` uses quality, speed, and blended-cost evidence; the
+`marginal-cost-aware` profile reports quality gained per additional blended 3:1
+cost dollar and excludes models whose cost is unknown.
 
 Provider observations are operational facts from OpenRouter and do not overwrite Artificial Analysis benchmark fields. Coding-agent observations retain the public agent/harness label and are not flattened into base-model records.
 Endpoint Accuracy observations are separate point-in-time measurements. Their source confidence intervals and classification are preserved; missing coverage is reported as `not_measured`, not as an accuracy failure. The public JSON-LD adapter is intentionally bounded to the audited Gate-D cohort in the weekly process. Endpoint Accuracy failures preserve the prior input artifact; any required-source or identity failure stops derived artifacts from being published.

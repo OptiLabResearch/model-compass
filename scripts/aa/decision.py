@@ -9,7 +9,16 @@ from __future__ import annotations
 
 from dataclasses import dataclass, field
 from datetime import datetime, timezone
+import math
 from typing import Any, Iterable
+
+
+PROFILE_VERSION = "1.0"
+PROFILE_RICH_VERSION = "2.0"
+INDEX_METRICS = frozenset({
+    "intelligence_index", "coding_index", "math_index", "agentic_index",
+    "omniscience_index",
+})
 
 
 PROFILES: dict[str, dict[str, Any]] = {
@@ -30,25 +39,69 @@ PROFILES: dict[str, dict[str, Any]] = {
               "weights": {"quality": 0.55, "cost": 0.35, "speed": 0.10}},
     "premium": {"metric": "intelligence_index",
                  "weights": {"quality": 0.85, "cost": 0.05, "speed": 0.10}},
+    "best-overall": {"version": PROFILE_RICH_VERSION, "metric": "intelligence_index",
+                     "weights": {"quality": 0.85, "cost": 0.05, "speed": 0.10}},
+    "available-to-me": {"version": PROFILE_RICH_VERSION, "metric": "intelligence_index",
+                        "available_only": True,
+                        "weights": {"quality": 0.85, "cost": 0.05, "speed": 0.10}},
+    "marginal-cost-aware": {"version": PROFILE_RICH_VERSION, "metric": "intelligence_index",
+                             "strategy": "marginal_cost"},
 }
-PROFILE_VERSION = "1.0"
 
 
 def _num(value: Any) -> float | None:
-    return value if isinstance(value, (int, float)) and not isinstance(value, bool) else None
+    if not isinstance(value, (int, float)) or isinstance(value, bool):
+        return None
+    try:
+        return value if math.isfinite(value) else None
+    except OverflowError:
+        return None
+
+
+def _bounded_index(value: Any) -> float | None:
+    value = _num(value)
+    return value if value is not None and 0 <= value <= 100 else None
+
+
+def _positive_num(value: Any) -> float | None:
+    value = _num(value)
+    return value if value is not None and value > 0 else None
+
+
+def _negative_num(value: Any) -> bool:
+    return (_num(value) is not None and value < 0)
+
+
+def _json_safe(value: Any) -> Any:
+    """Convert non-finite floats to unknown values without mutating input."""
+    if isinstance(value, float):
+        return value if math.isfinite(value) else None
+    if isinstance(value, dict):
+        return {key: _json_safe(child) for key, child in value.items()}
+    if isinstance(value, (list, tuple)):
+        return [_json_safe(child) for child in value]
+    return value
 
 
 def _cost(model: dict) -> float | None:
     p = model.get("pricing") or {}
+    if any(_negative_num(p.get(key)) for key in ("input", "output", "blended_3_1")):
+        return None
     b = _num(p.get("blended_3_1"))
     if b is not None:
         return b
     i, o = _num(p.get("input")), _num(p.get("output"))
-    return round((3 * i + o) / 4, 6) if i is not None and o is not None else None
+    if i is None or o is None:
+        return None
+    try:
+        blended = round((3 * i + o) / 4, 6)
+    except (OverflowError, ValueError):
+        return None
+    return _num(blended)
 
 
 def _speed(model: dict) -> float | None:
-    return _num((model.get("performance") or {}).get("median_output_speed_tps"))
+    return _positive_num((model.get("performance") or {}).get("median_output_speed_tps"))
 
 
 def _sources(model: dict) -> list[str]:
@@ -76,7 +129,9 @@ class Profile:
     def named(cls, name: str) -> "Profile":
         if name not in PROFILES:
             raise ValueError(f"Unknown profile: {name}; choose from {sorted(PROFILES)}")
-        return cls(name=name, constraints=dict(PROFILES[name]), version=PROFILE_VERSION)
+        values = dict(PROFILES[name])
+        version = str(values.pop("version", PROFILE_VERSION))
+        return cls(name=name, constraints=values, version=version)
 
 
 class DecisionEngine:
@@ -88,15 +143,29 @@ class DecisionEngine:
     def get(self, slug: str) -> dict | None:
         return self._by_slug.get(slug)
 
+    def _availability_state(self, model: dict) -> dict[str, Any]:
+        """Return only explicit boolean availability evidence from the local overlay."""
+        record = self.access.get(model.get("slug"))
+        if not isinstance(record, dict):
+            return {"status": "unknown", "available": None}
+        available = record.get("available")
+        status = "available" if available is True else "unavailable" if available is False else "unknown"
+        state = {"status": status, "available": available if isinstance(available, bool) else None}
+        for key in ("source", "checked_at", "expires_at", "reason"):
+            if key in record:
+                state[key] = record[key]
+        return state
+
     def explain(self, model: dict) -> dict:
-        return {"slug": model.get("slug"), "name": model.get("name"),
-                "sources": _sources(model), "provenance": model.get("provenance", {}),
-                "coverage": {"intelligence_index": model.get("intelligence_index") is not None,
-                             "coding_index": model.get("coding_index") is not None,
-                             "agentic_index": model.get("agentic_index") is not None,
-                             "cost": _cost(model) is not None,
-                             "speed": _speed(model) is not None},
-                "access": self.access.get(model.get("slug"))}
+        return _json_safe({"slug": model.get("slug"), "name": model.get("name"),
+                           "sources": _sources(model),
+                           "provenance": model.get("provenance", {}),
+                           "coverage": {"intelligence_index": self._metric_score(model, "intelligence_index") is not None,
+                                        "coding_index": self._metric_score(model, "coding_index") is not None,
+                                        "agentic_index": self._metric_score(model, "agentic_index") is not None,
+                                        "cost": _cost(model) is not None,
+                                        "speed": _speed(model) is not None},
+                           "access": self.access.get(model.get("slug"))})
 
     def _freshness_state(self, model: dict, max_days: int = 14) -> tuple[str, float | None]:
         prov = model.get("provenance") or {}
@@ -125,13 +194,13 @@ class DecisionEngine:
     def _matches(self, model: dict, c: dict[str, Any]) -> tuple[bool, list[str]]:
         reasons: list[str] = []
         checks = {
-            "min_intelligence": (model.get("intelligence_index"), ">="),
-            "min_coding": (model.get("coding_index"), ">="),
-            "min_agentic": (model.get("agentic_index"), ">="),
-            "min_context_tokens": (model.get("context_tokens"), ">="),
+            "min_intelligence": (_bounded_index(model.get("intelligence_index")), ">="),
+            "min_coding": (_bounded_index(model.get("coding_index")), ">="),
+            "min_agentic": (_bounded_index(model.get("agentic_index")), ">="),
+            "min_context_tokens": (_num(model.get("context_tokens")), ">="),
             "min_speed": (_speed(model), ">="),
             "max_cost": (_cost(model), "<="),
-            "max_ttft": ((model.get("performance") or {}).get("median_ttft_seconds"), "<="),
+            "max_ttft": (_positive_num((model.get("performance") or {}).get("median_ttft_seconds")), "<="),
         }
         for key, (actual, op) in checks.items():
             expected = _num(c.get(key))
@@ -148,7 +217,7 @@ class DecisionEngine:
             return False, reasons
         if c.get("creator") and model.get("creator") != c["creator"]:
             return False, reasons
-        if c.get("available_only") and not self.access.get(model.get("slug"), {}).get("available"):
+        if c.get("available_only") and self._availability_state(model)["status"] != "available":
             return False, reasons
         modalities = c.get("modalities") or []
         available = set((model.get("input_modalities") or {}).keys()) | set((model.get("output_modalities") or {}).keys())
@@ -159,7 +228,8 @@ class DecisionEngine:
         return True, reasons
 
     def _metric_score(self, model: dict, metric: str) -> float | None:
-        return _num(model.get(metric))
+        value = model.get(metric)
+        return _bounded_index(value) if metric in INDEX_METRICS else _num(value)
 
     def _confidence(self, model: dict, metric: str, weights: dict[str, float]) -> dict[str, Any]:
         metric_fields = [metric]
@@ -186,6 +256,42 @@ class DecisionEngine:
                 "freshness_days": round(age_days, 2) if age_days is not None else None,
                 "fresh": freshness}
 
+    def _marginal_cost_details(self, candidates: list[tuple]) -> dict[str, dict[str, Any]]:
+        """Calculate quality gained per extra blended-cost dollar.
+
+        Each model is compared with the highest-quality strictly cheaper
+        candidate. The cheapest cost tier uses a zero-quality/zero-cost
+        baseline. Equal-cost candidates therefore remain comparable and all
+        divisions stay finite, including a zero-cost tier.
+        """
+        priced = [candidate for candidate in candidates
+                  if candidate[2] is not None and math.isfinite(candidate[1])
+                  and math.isfinite(candidate[2])]
+        details: dict[str, dict[str, Any]] = {}
+        for model, quality, cost, _speed_value, _reasons in priced:
+            cheaper = [candidate for candidate in priced if candidate[2] < cost]
+            baseline = min(cheaper, key=lambda candidate: (
+                -candidate[1], candidate[2], candidate[0].get("slug", "")
+            )) if cheaper else None
+            baseline_quality = baseline[1] if baseline else 0.0
+            baseline_cost = baseline[2] if baseline else 0.0
+            quality_gain = max(0.0, quality - baseline_quality)
+            cost_delta = cost - baseline_cost
+            if cost_delta > 0:
+                raw_score = quality_gain / cost_delta
+                score = raw_score if math.isfinite(raw_score) else 1e12
+            else:
+                score = quality_gain
+            details[model.get("slug", "")] = {
+                "baseline_slug": baseline[0].get("slug") if baseline else None,
+                "baseline_quality": round(baseline_quality, 6),
+                "baseline_cost": round(baseline_cost, 6),
+                "quality_gain": round(quality_gain, 6),
+                "cost_delta": round(max(0.0, cost_delta), 6),
+                "quality_per_cost_delta": round(score, 6),
+            }
+        return details
+
     def recommend(self, profile: str | Profile | dict[str, Any] | None = None, *, limit: int = 10,
                   available_only: bool = False) -> dict[str, Any]:
         if profile is None:
@@ -200,40 +306,63 @@ class DecisionEngine:
         c["available_only"] = available_only or c.get("available_only", False)
         metric = c.pop("metric", "intelligence_index")
         weights = c.pop("weights", {"quality": 1.0, "cost": 0.0, "speed": 0.0})
+        strategy = c.pop("strategy", "weighted")
+        if strategy not in {"weighted", "marginal_cost"}:
+            raise ValueError(f"Unknown recommendation strategy: {strategy}")
         candidates = []
         for m in self.models:
             ok, constraint_reasons = self._matches(m, c)
             quality = self._metric_score(m, metric)
             cost, speed = _cost(m), _speed(m)
-            if not ok or quality is None:
+            if not ok or quality is None or (strategy == "marginal_cost" and cost is None):
                 continue
             candidates.append((m, quality, cost, speed, constraint_reasons))
         max_quality = max((x[1] for x in candidates), default=1.0)
         max_speed = max((x[3] or 0 for x in candidates), default=1.0)
         min_cost = min((x[2] for x in candidates if x[2] is not None), default=0.0)
         max_cost = max((x[2] for x in candidates if x[2] is not None), default=1.0)
+        marginal_details = self._marginal_cost_details(candidates) if strategy == "marginal_cost" else {}
         ranked = []
         for m, quality, cost, speed, reasons in candidates:
-            q = quality / max_quality if max_quality else 0
-            s = (speed or 0) / max_speed if max_speed else 0
-            cscore = (max_cost - cost) / (max_cost - min_cost) if cost is not None and max_cost > min_cost else (1.0 if cost is not None else 0.0)
-            score = weights.get("quality", 0) * q + weights.get("speed", 0) * s + weights.get("cost", 0) * cscore
-            metrics_used = [metric]
-            if speed is not None: metrics_used.append("performance.median_output_speed_tps")
-            if cost is not None: metrics_used.append("pricing.blended_3_1")
-            ranked.append((score, m, {"score": round(score, 6), "metrics_used": metrics_used,
-                                      "constraints_satisfied": reasons, "missing_metrics": [x for x, v in [("cost", cost), ("speed", speed)] if v is None],
-                                      "sources": _sources(m), "fresh": self._freshness_state(m)[0],
-                                      "confidence": self._confidence(m, metric, weights)}))
+            marginal = marginal_details.get(m.get("slug"))
+            if strategy == "marginal_cost":
+                if marginal is None:
+                    continue
+                score = marginal["quality_per_cost_delta"]
+                metrics_used = [metric, "pricing.blended_3_1", "marginal_quality_gain_per_cost_delta"]
+            else:
+                q = quality / max_quality if max_quality else 0
+                s = (speed or 0) / max_speed if max_speed else 0
+                cscore = (max_cost - cost) / (max_cost - min_cost) if cost is not None and max_cost > min_cost else (1.0 if cost is not None else 0.0)
+                components = [(weights.get("quality", 0), q)]
+                if speed is not None:
+                    components.append((weights.get("speed", 0), s))
+                if cost is not None:
+                    components.append((weights.get("cost", 0), cscore))
+                weight_total = sum(weight for weight, _value in components if weight > 0)
+                score = (sum(weight * value for weight, value in components if weight > 0)
+                         / weight_total if weight_total else 0.0)
+                metrics_used = [metric]
+                if speed is not None: metrics_used.append("performance.median_output_speed_tps")
+                if cost is not None: metrics_used.append("pricing.blended_3_1")
+            explanation = {"score": round(score, 6), "strategy": strategy, "metrics_used": metrics_used,
+                           "constraints_satisfied": reasons,
+                           "missing_metrics": [x for x, v in [("cost", cost), ("speed", speed)] if v is None],
+                           "sources": _sources(m), "fresh": self._freshness_state(m)[0],
+                           "availability": self._availability_state(m),
+                           "confidence": self._confidence(m, metric, weights)}
+            if marginal is not None:
+                explanation["marginal_cost"] = marginal
+            ranked.append((score, m, explanation))
         ranked.sort(key=lambda x: (-x[0], x[1].get("slug", "")))
         output = []
         for score, m, explanation in ranked[:limit]:
-            row = dict(m)
+            row = _json_safe(dict(m))
             row["recommendation_score"] = explanation["score"]
-            row["explanation"] = explanation
+            row["explanation"] = _json_safe(explanation)
             output.append(row)
-        return {"profile": p.name, "profile_version": p.version, "metric": metric,
-                "candidate_count": len(ranked), "recommendations": output}
+        return _json_safe({"profile": p.name, "profile_version": p.version, "strategy": strategy, "metric": metric,
+                           "candidate_count": len(ranked), "recommendations": output})
 
     def pareto(self, dimensions: list[str]) -> list[dict]:
         """Return non-dominated models; dimensions prefixed ``-`` are minimized.

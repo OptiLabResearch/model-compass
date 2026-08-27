@@ -76,6 +76,53 @@ class ModelCompassCliTests(unittest.TestCase):
         self.assertEqual(len(output.getvalue().splitlines()), 1)
         self.assertEqual(json.loads(output.getvalue())[0]["slug"], "fixture/model")
 
+    def test_phase5_profiles_are_cli_exposed_and_access_filtered(self):
+        best = self.invoke(
+            "--data", str(self.data_path), "recommend", "best-overall", "--limit", "1",
+        )
+        self.assertEqual(best["profile"], "best-overall")
+        self.assertEqual(best["strategy"], "weighted")
+
+        access_path = Path(self.tempdir.name) / "access.json"
+        access_path.write_text(json.dumps({
+            "models": {"fixture/model": {"available": True, "source": "fixture"}},
+        }), encoding="utf-8")
+        available = self.invoke(
+            "--data", str(self.data_path), "--access", str(access_path),
+            "recommend", "available-to-me", "--limit", "1",
+        )
+        self.assertEqual(available["profile"], "available-to-me")
+        self.assertEqual(available["recommendations"][0]["explanation"]["availability"]["status"], "available")
+
+        marginal = self.invoke(
+            "--data", str(self.data_path), "recommend", "marginal-cost-aware", "--limit", "1",
+        )
+        self.assertEqual(marginal["profile"], "marginal-cost-aware")
+        self.assertEqual(marginal["strategy"], "marginal_cost")
+
+    def test_nonfinite_recommendation_fields_are_emitted_as_unknown_json(self):
+        data = json.loads(self.data_path.read_text(encoding="utf-8"))
+        data["models"][0]["performance"]["median_output_speed_tps"] = float("nan")
+        data["models"][0]["provenance"]["fetched_at"] = float("inf")
+        self.data_path.write_text(json.dumps(data), encoding="utf-8")
+
+        result = self.invoke(
+            "--data", str(self.data_path), "recommend", "best-overall", "--limit", "1",
+        )
+        row = result["recommendations"][0]
+        self.assertIsNone(row["performance"]["median_output_speed_tps"])
+        self.assertIsNone(row["provenance"]["fetched_at"])
+
+    def test_nonfinite_explain_fields_are_emitted_as_unknown_json(self):
+        data = json.loads(self.data_path.read_text(encoding="utf-8"))
+        data["models"][0]["provenance"]["fetched_at"] = float("nan")
+        self.data_path.write_text(json.dumps(data), encoding="utf-8")
+
+        result = self.invoke(
+            "--data", str(self.data_path), "explain", "fixture/model",
+        )
+        self.assertIsNone(result["provenance"]["fetched_at"])
+
     def test_identity_diagnostics_are_bounded_and_do_not_load_model_data(self):
         missing_data = Path(self.tempdir.name) / "missing-model-data.json"
         summary = self.invoke(
