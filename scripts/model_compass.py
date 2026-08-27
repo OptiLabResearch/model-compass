@@ -103,7 +103,7 @@ def _recommendation_view(result, full):
         recommendations.append(row)
     return {
         key: result[key]
-        for key in ("profile", "profile_version", "metric", "candidate_count")
+        for key in ("profile", "profile_version", "strategy", "metric", "candidate_count")
         if key in result
     } | {"recommendations": recommendations}
 

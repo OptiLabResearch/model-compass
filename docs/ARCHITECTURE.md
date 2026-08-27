@@ -75,6 +75,18 @@ Provider identity includes the endpoint variant whenever variants can carry
 different accuracy evidence; provider namespaces and display names are never
 fallback joins.
 
+## Decision profiles
+
+The dependency-free decision engine exposes named, versioned profiles with
+explanations rather than a single opaque ranking. `best-overall` uses the
+intelligence index with quality/speed/blended-3:1-cost weights of 0.85/0.10/0.05.
+`available-to-me` uses the same ranking but admits only models explicitly
+marked `available: true` in the ignored local access overlay; missing, false,
+and non-boolean values are excluded. `marginal-cost-aware` requires a known
+blended 3:1 token cost and ranks quality gained per additional dollar over the
+best strictly cheaper candidate, exposing its baseline and deltas. Missing
+metrics remain unknown and never become factual zeros.
+
 ## Storage and reproducibility
 
 Committed JSON remains the storage/interchange format while current scale

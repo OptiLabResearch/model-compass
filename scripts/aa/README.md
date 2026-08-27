@@ -68,6 +68,9 @@ python3 scripts/aa/demo_query.py
 
 # Stable decision CLI (bounded JSON output by default)
 python3 scripts/model_compass.py recommend coding --limit 10 --compact
+python3 scripts/model_compass.py recommend best-overall --limit 10
+python3 scripts/model_compass.py recommend available-to-me --limit 10
+python3 scripts/model_compass.py recommend marginal-cost-aware --limit 10
 python3 scripts/model_compass.py pareto intelligence_index cost
 python3 scripts/model_compass.py backup <slug>
 python3 scripts/model_compass.py agents
@@ -86,12 +89,23 @@ python3 -m scripts.aa.phase3_artifacts
 python3 scripts/aa/tests/test_pipeline.py --test test_rsc_extract_normalize_roundtrip
 ```
 
+The `available-to-me` profile is fail-closed: supply an ignored local access
+overlay such as `{"models": {"model-slug": {"available": true}}}` and only
+explicit boolean availability is admitted. `best-overall` uses the
+intelligence index with 0.85 quality, 0.10 speed, and 0.05 blended 3:1 cost
+weights. `marginal-cost-aware` requires a known blended 3:1 cost and explains
+quality gained per extra dollar over the best cheaper candidate.
+
 ## Using the query layer
 
 ```python
 import sys; sys.path.insert(0, 'scripts')
 from aa.query import AADB
 db = AADB('data/aa_models_v2.json')
+
+db.recommend('best-overall', limit=10)   # quality/speed/cost profile
+db.recommend('marginal-cost-aware', limit=10)
+# For local availability, pass {'slug': {'available': True}} as access=...
 
 db.best_coding(10)                       # best coding models
 db.best_agentic(10)                      # best agentic models

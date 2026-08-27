@@ -26,14 +26,15 @@ from .decision import DecisionEngine, Profile, PROFILES
 
 
 class AADB:
-    def __init__(self, path: str | Path = "data/aa_models_v2.json"):
+    def __init__(self, path: str | Path = "data/aa_models_v2.json",
+                 access: dict[str, dict] | None = None):
         self.path = Path(path)
         blob = json.loads(self.path.read_text(encoding="utf-8"))
         self.models = blob.get("models", [])
         self.generated_at = blob.get("generated_at")
         self.coverage = blob.get("coverage", {})
         self._by_slug = {m.get("slug"): m for m in self.models}
-        self.engine = DecisionEngine(self.models)
+        self.engine = DecisionEngine(self.models, access=access)
 
     # -- index lookup ------------------------------------------------------
     def get(self, slug: str) -> dict | None:

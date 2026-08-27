@@ -3,13 +3,15 @@ from __future__ import annotations
 
 import json
 import sys
+import tempfile
 from pathlib import Path
 
 REPO = Path(__file__).resolve().parents[3]
 sys.path.insert(0, str(REPO / "scripts"))
 
-from aa.decision import DecisionEngine, Profile  # noqa: E402
+from aa.decision import DecisionEngine, Profile, PROFILES  # noqa: E402
 from aa import schema  # noqa: E402
+from aa.query import AADB  # noqa: E402
 try:
     from _runner import run_tests  # noqa: E402
 except ModuleNotFoundError:  # pytest imports this module from the repository root
@@ -74,6 +76,76 @@ def test_profiles_are_configuration_not_scattered_logic():
     profile = Profile.from_dict("cheap", {"max_cost": 1.0, "min_intelligence": 65})
     result = engine().recommend(profile, limit=10)
     assert [r["slug"] for r in result["recommendations"]] == ["beta", "gamma"]
+
+
+def test_phase5_named_profiles_expose_version_and_strategy():
+    assert {"best-overall", "available-to-me", "marginal-cost-aware"} <= set(PROFILES)
+    best = engine().recommend("best-overall", limit=1)
+    assert best["profile_version"] == "2.0"
+    assert best["strategy"] == "weighted"
+    assert best["recommendations"][0]["explanation"]["strategy"] == "weighted"
+
+
+def test_weighted_profiles_renormalize_around_unknown_metrics():
+    complete = model("complete", "C", 90, 1.0, 100)
+    partial = model("partial", "P", 88, 1.0, 100)
+    partial["pricing"] = {key: None for key in partial["pricing"]}
+    partial["performance"]["median_output_speed_tps"] = None
+    result = DecisionEngine([complete, partial]).recommend("best-overall", limit=10)
+    row = next(item for item in result["recommendations"] if item["slug"] == "partial")
+    assert row["explanation"]["metrics_used"] == ["intelligence_index"]
+    assert row["explanation"]["missing_metrics"] == ["cost", "speed"]
+    assert row["recommendation_score"] > 0.9
+
+
+def test_available_to_me_requires_explicit_boolean_access_evidence():
+    access = {
+        "alpha": {"available": False, "source": "fixture"},
+        "beta": {"available": True, "source": "fixture"},
+        "gamma": {"available": "true", "source": "fixture"},
+        "delta": {"available": True, "source": "fixture"},
+    }
+    result = DecisionEngine(engine().models, access=access).recommend("available-to-me", limit=10)
+    assert {r["slug"] for r in result["recommendations"]} == {"beta", "delta"}
+    assert all(r["explanation"]["availability"]["status"] == "available"
+               for r in result["recommendations"])
+
+
+def test_aadb_accepts_access_overlay_for_available_profile():
+    with tempfile.TemporaryDirectory() as directory:
+        path = Path(directory) / "models.json"
+        path.write_text(json.dumps({"models": [model("local", "L", 80, 1, 100)]}),
+                        encoding="utf-8")
+        result = AADB(path, access={"local": {"available": True}}).recommend(
+            "available-to-me", limit=1)
+    assert [row["slug"] for row in result["recommendations"]] == ["local"]
+
+
+def test_marginal_cost_profile_explains_gain_and_excludes_unknown_cost():
+    entry = model("entry", "E", 70, 0.1, 100)
+    middle = model("middle", "M", 85, 0.5, 100)
+    top = model("top", "T", 90, 5.0, 100)
+    free = model("free", "F", 75, 0.0, 100)
+    unknown = model("unknown-cost", "U", 95, 1.0, 100)
+    unknown["pricing"] = {key: None for key in unknown["pricing"]}
+
+    result = DecisionEngine([entry, middle, top, free, unknown]).recommend(
+        "marginal-cost-aware", limit=10)
+    rows = {row["slug"]: row for row in result["recommendations"]}
+    assert result["strategy"] == "marginal_cost"
+    assert "unknown-cost" not in rows
+    assert result["recommendations"][0]["slug"] == "free"
+    assert rows["top"]["explanation"]["marginal_cost"]["baseline_slug"] == "middle"
+    assert rows["top"]["explanation"]["marginal_cost"]["quality_gain"] == 5.0
+    assert rows["free"]["explanation"]["marginal_cost"]["cost_delta"] == 0.0
+    json.dumps(result, allow_nan=False)
+
+
+def test_marginal_cost_equal_scores_use_stable_slug_order():
+    first = model("alpha", "A", 75, 0.0, 100)
+    second = model("beta", "B", 75, 0.0, 100)
+    result = DecisionEngine([second, first]).recommend("marginal-cost-aware", limit=10)
+    assert [row["slug"] for row in result["recommendations"]] == ["alpha", "beta"]
 
 
 def test_freshness_is_fresh_stale_or_unknown_not_always_true():
