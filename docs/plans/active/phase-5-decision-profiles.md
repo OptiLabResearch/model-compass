@@ -1,6 +1,7 @@
 # Phase 5 Decision Profiles Plan
 
-Status: active — started 2026-08-27 on `feat/model-compass-phase5`.
+Status: active — implementation complete on 2026-08-27; acceptance is pending
+independent Sol review on `feat/model-compass-phase5`.
 
 ## Durable scope
 
@@ -52,3 +53,20 @@ current behavior unless a shared correctness fix is required.
 3. Add focused decision/CLI tests and update the public decision documentation.
 4. Run full validation, review the final diff, obtain independent Sol review,
    and update this plan and `docs/STATUS.md` with accepted evidence.
+
+## Implementation evidence
+
+- Commit `20023c6` adds the three profiles to `DecisionEngine`, carries the
+  contract through `AADB` and the stable CLI, and documents the access overlay
+  and scoring semantics.
+- Focused decision tests, CLI tests, Python compilation, and
+  `python3 scripts/check.py --scope all` passed on 2026-08-27. The full matrix
+  included pipeline, decision, observation, identity, deterministic replay,
+  and generated-artifact comparison checks.
+- `git diff --check origin/main...HEAD` passed, and bounded CLI smoke checks
+  exercised all three profiles. Missing access remains fail-closed for
+  `available-to-me`; missing marginal cost is excluded.
+- Primary implementation review found no remaining local issue. An
+  independent Sol review was attempted but the reviewer returned a platform
+  usage-limit error before producing a verdict, so this plan remains active
+  and Phase 5 is not yet marked accepted.
