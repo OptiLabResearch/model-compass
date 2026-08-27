@@ -1,5 +1,8 @@
 # Phase 4 Source Contracts Plan
 
+Status: completed and accepted 2026-08-27. The final focused repair is
+`2f35ee4`; see the durable report for review evidence.
+
 ## Durable report
 
 See [`docs/reports/phase-4-source-contracts.md`](../../reports/phase-4-source-contracts.md) for the current source-contract and implementation evidence record.
