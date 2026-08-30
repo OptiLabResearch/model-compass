@@ -1,10 +1,10 @@
 {
   "version": 2,
   "phase": 3,
-  "generated_at": "2026-08-27T16:53:49Z",
+  "generated_at": "2026-08-30T21:45:31Z",
   "sources": {
-    "aa_models": 625,
-    "openrouter_observations": 667,
+    "aa_models": 627,
+    "openrouter_observations": 705,
     "endpoint_accuracy_observations": 30,
     "endpoint_accuracy_models": 2,
     "endpoint_accuracy_index_versions": [
@@ -14,9 +14,9 @@
     "coding_agent_benchmark_version": "1.4"
   },
   "identity": {
-    "aa_model_count": 625,
-    "openrouter_model_count": 207,
-    "openrouter_endpoint_count": 667,
+    "aa_model_count": 627,
+    "openrouter_model_count": 225,
+    "openrouter_endpoint_count": 705,
     "aa_endpoint_count": 30,
     "aa_provider_count": 21,
     "openrouter_provider_count": 70,
@@ -59,6 +59,7 @@
       "nousresearch/hermes-4-405b",
       "nousresearch/hermes-4-70b",
       "nvidia/nemotron-3.5-lightning",
+      "openai/gpt-4o",
       "qwen/qwen3.8-27b",
       "sakana/sakana-namazu",
       "stealth/ox-alpha",
@@ -68,31 +69,31 @@
     "model_mappings": {
       "verified": 0,
       "manual": 1,
-      "candidate": 69
+      "candidate": 78
     },
     "model_mapping_methods": {
       "manual_alias": 1,
       "normalized_heuristic": 9,
-      "source_metadata_exact": 60
+      "source_metadata_exact": 69
     },
     "model_ambiguity_methods": {
-      "source_metadata_exact": 25,
-      "unclassified": 69
+      "source_metadata_exact": 28,
+      "unclassified": 74
     },
     "model_resolution_methods": {
       "manual_alias": 1,
       "normalized_heuristic": 9,
-      "source_metadata_exact": 85,
-      "unclassified": 69
+      "source_metadata_exact": 97,
+      "unclassified": 74
     },
     "endpoint_mappings": {
       "verified": 0,
       "manual": 2,
       "candidate": 0
     },
-    "unresolved_models": 43,
-    "unresolved_endpoints": 665,
-    "ambiguous": 94,
+    "unresolved_models": 44,
+    "unresolved_endpoints": 703,
+    "ambiguous": 102,
     "conflict": 0
   },
   "gate_d": {

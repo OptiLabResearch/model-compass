@@ -1,67 +1,67 @@
 {
-  "generated_at": "2026-08-27T16:53:46Z",
+  "generated_at": "2026-08-30T21:45:28Z",
   "sources": {
     "rsc": {
       "healthy": true,
-      "records": 422,
-      "fetched_at": "2026-08-27T16:53:40Z",
+      "records": 424,
+      "fetched_at": "2026-08-30T21:45:21Z",
       "errors": []
     },
     "official_api": {
       "healthy": true,
-      "records": 621,
-      "fetched_at": "2026-08-27T16:53:41Z",
+      "records": 624,
+      "fetched_at": "2026-08-30T21:45:22Z",
       "errors": []
     },
     "snapshot": {
       "healthy": true,
       "records": 570,
-      "fetched_at": "2026-08-27T16:53:42Z",
+      "fetched_at": "2026-08-30T21:45:23Z",
       "errors": []
     }
   },
   "field_coverage": {
-    "intelligence_index": 612,
-    "coding_index": 234,
+    "intelligence_index": 614,
+    "coding_index": 237,
     "math_index": 0,
-    "agentic_index": 198,
-    "omniscience_index": 491,
-    "context_tokens": 620,
+    "agentic_index": 201,
+    "omniscience_index": 493,
+    "context_tokens": 622,
     "parameters_billions": 338,
-    "is_reasoning": 422,
-    "is_open_weights": 620,
+    "is_reasoning": 424,
+    "is_open_weights": 622,
     "license": 328,
-    "size_class": 566,
-    "released": 625,
-    "creator": 625
+    "size_class": 568,
+    "released": 627,
+    "creator": 627
   },
   "benchmark_coverage": {
     "aime": 0,
     "aime25": 188,
     "apex_agents": 30,
-    "critpt": 498,
-    "gdpval": 213,
-    "gpqa": 587,
+    "critpt": 500,
+    "gdpval": 215,
+    "gpqa": 589,
     "gpqa_diamond": 0,
-    "hle": 581,
+    "hle": 583,
     "ifbench": 456,
     "it_bench_sre": 28,
-    "lcr": 513,
+    "lcr": 515,
     "livecodebench": 215,
     "math_500": 0,
     "mmlu_pro": 0,
-    "mmmu_pro": 245,
-    "omniscience": 381,
-    "omniscience_accuracy": 491,
+    "mmmu_pro": 246,
+    "omniscience": 383,
+    "omniscience_accuracy": 493,
     "omniscience_hallucination_rate": 0,
-    "omniscience_non_halluc": 495,
-    "scicode": 579,
+    "omniscience_non_halluc": 497,
+    "scicode": 581,
     "tau2": 446,
-    "tau_banking": 176,
+    "tau_banking": 178,
     "terminalbench_hard": 438,
-    "terminalbench_v21": 188
+    "terminalbench_v21": 190
   },
-  "total_models": 625,
+  "total_models": 627,
   "parser_versions": {
     "rsc": "0.2.0",
     "official_api": "0.1.0",
@@ -71,7 +71,7 @@
   "stale": false,
   "freshness": {
     "stale": false,
-    "generated_at": "2026-08-27T16:53:46Z",
+    "generated_at": "2026-08-30T21:45:28Z",
     "cached_sources": [],
     "live_sources": [
       "rsc",
@@ -79,9 +79,9 @@
       "snapshot"
     ],
     "source_fetched_at": {
-      "rsc": "2026-08-27T16:53:40Z",
-      "official_api": "2026-08-27T16:53:41Z",
-      "snapshot": "2026-08-27T16:53:42Z"
+      "rsc": "2026-08-30T21:45:21Z",
+      "official_api": "2026-08-30T21:45:22Z",
+      "snapshot": "2026-08-30T21:45:23Z"
     }
   }
 }

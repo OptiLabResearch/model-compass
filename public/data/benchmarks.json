@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-27",
+  "updated_at": "2026-08-30",
   "source": "Artificial Analysis via Model Compass",
   "models": [
     {
@@ -27,9 +27,9 @@
       "terminalbench_2_1": 84.6,
       "scicode": 60.2,
       "mmmu_pro": null,
-      "speed_tps": 70.48,
-      "ttft_seconds": 119.25,
-      "ttfa_seconds": 119.25
+      "speed_tps": 68.0,
+      "ttft_seconds": 131.65,
+      "ttfa_seconds": 131.65
     },
     {
       "slug": "gpt-5-6-sol",
@@ -51,14 +51,14 @@
       "lcr": 77.7,
       "tau2_bench": 85.1,
       "tau3_banking": 44.3,
-      "gdpval": 60.6,
+      "gdpval": 60.5,
       "terminalbench_hard": 65.9,
       "terminalbench_2_1": 88.0,
       "scicode": 56.1,
       "mmmu_pro": 83.4,
-      "speed_tps": 73.86,
-      "ttft_seconds": 122.11,
-      "ttfa_seconds": 122.11
+      "speed_tps": 77.69,
+      "ttft_seconds": 120.41,
+      "ttfa_seconds": 120.41
     },
     {
       "slug": "kimi-k3",
@@ -80,14 +80,14 @@
       "lcr": 82.7,
       "tau2_bench": null,
       "tau3_banking": 46.0,
-      "gdpval": 58.8,
+      "gdpval": 57.2,
       "terminalbench_hard": null,
       "terminalbench_2_1": 85.0,
       "scicode": 58.7,
       "mmmu_pro": 80.5,
-      "speed_tps": 15.76,
-      "ttft_seconds": 3.46,
-      "ttfa_seconds": 130.35
+      "speed_tps": 19.13,
+      "ttft_seconds": 3.75,
+      "ttfa_seconds": 108.27
     },
     {
       "slug": "claude-opus-4-8",
@@ -114,9 +114,9 @@
       "terminalbench_2_1": 84.6,
       "scicode": 53.5,
       "mmmu_pro": null,
-      "speed_tps": 62.52,
-      "ttft_seconds": 38.45,
-      "ttfa_seconds": 38.45
+      "speed_tps": 60.25,
+      "ttft_seconds": 19.26,
+      "ttfa_seconds": 19.26
     },
     {
       "slug": "gpt-5-6-terra",
@@ -138,14 +138,14 @@
       "lcr": 79.7,
       "tau2_bench": 86.3,
       "tau3_banking": 40.2,
-      "gdpval": 53.4,
+      "gdpval": 53.3,
       "terminalbench_hard": 57.6,
       "terminalbench_2_1": 88.0,
       "scicode": 53.9,
       "mmmu_pro": 80.7,
-      "speed_tps": 160.71,
-      "ttft_seconds": 150.04,
-      "ttfa_seconds": 150.04
+      "speed_tps": 135.11,
+      "ttft_seconds": 176.77,
+      "ttfa_seconds": 176.77
     },
     {
       "slug": "grok-4-5",
@@ -172,9 +172,9 @@
       "terminalbench_2_1": 81.7,
       "scicode": 54.0,
       "mmmu_pro": 80.4,
-      "speed_tps": 55.23,
-      "ttft_seconds": 14.21,
-      "ttfa_seconds": 14.21
+      "speed_tps": 52.97,
+      "ttft_seconds": 12.21,
+      "ttfa_seconds": 12.21
     },
     {
       "slug": "claude-sonnet-5",
@@ -196,14 +196,14 @@
       "lcr": 77.0,
       "tau2_bench": null,
       "tau3_banking": 37.3,
-      "gdpval": 54.3,
+      "gdpval": 54.2,
       "terminalbench_hard": null,
       "terminalbench_2_1": 80.5,
       "scicode": 53.6,
       "mmmu_pro": 77.3,
-      "speed_tps": 79.6,
-      "ttft_seconds": 234.18,
-      "ttfa_seconds": 234.18
+      "speed_tps": 66.21,
+      "ttft_seconds": 202.98,
+      "ttfa_seconds": 202.98
     },
     {
       "slug": "deepseek-v4-pro",
@@ -225,14 +225,14 @@
       "lcr": 75.3,
       "tau2_bench": 96.0,
       "tau3_banking": 39.6,
-      "gdpval": 54.1,
+      "gdpval": 53.8,
       "terminalbench_hard": 46.0,
       "terminalbench_2_1": 78.7,
       "scicode": 49.2,
       "mmmu_pro": null,
-      "speed_tps": 63.49,
-      "ttft_seconds": 2.76,
-      "ttfa_seconds": 34.26
+      "speed_tps": 65.19,
+      "ttft_seconds": 2.86,
+      "ttfa_seconds": 33.54
     },
     {
       "slug": "muse-spark-1-1",
@@ -259,9 +259,9 @@
       "terminalbench_2_1": 77.9,
       "scicode": 58.2,
       "mmmu_pro": null,
-      "speed_tps": 205.98,
-      "ttft_seconds": 1.36,
-      "ttfa_seconds": 11.07
+      "speed_tps": 196.61,
+      "ttft_seconds": 1.33,
+      "ttfa_seconds": 11.5
     },
     {
       "slug": "glm-5-2",
@@ -283,14 +283,14 @@
       "lcr": 76.7,
       "tau2_bench": 99.1,
       "tau3_banking": 34.6,
-      "gdpval": 50.1,
+      "gdpval": 49.9,
       "terminalbench_hard": 50.8,
       "terminalbench_2_1": 77.9,
       "scicode": 50.5,
       "mmmu_pro": null,
-      "speed_tps": 97.1,
-      "ttft_seconds": 1.97,
-      "ttfa_seconds": 22.56
+      "speed_tps": 96.92,
+      "ttft_seconds": 2.08,
+      "ttfa_seconds": 22.72
     },
     {
       "slug": "gpt-5-6-luna",
@@ -312,14 +312,14 @@
       "lcr": 78.3,
       "tau2_bench": null,
       "tau3_banking": 31.1,
-      "gdpval": 53.7,
+      "gdpval": 53.5,
       "terminalbench_hard": null,
       "terminalbench_2_1": 80.9,
       "scicode": 52.5,
       "mmmu_pro": 78.5,
-      "speed_tps": 230.43,
-      "ttft_seconds": 83.43,
-      "ttfa_seconds": 83.43
+      "speed_tps": 196.69,
+      "ttft_seconds": 123.21,
+      "ttfa_seconds": 123.21
     },
     {
       "slug": "deepseek-v4-flash",
@@ -341,14 +341,14 @@
       "lcr": 74.3,
       "tau2_bench": 95.0,
       "tau3_banking": 39.4,
-      "gdpval": 52.6,
+      "gdpval": 52.4,
       "terminalbench_hard": 36.0,
       "terminalbench_2_1": 78.7,
       "scicode": 49.9,
       "mmmu_pro": null,
-      "speed_tps": 170.09,
-      "ttft_seconds": 0.92,
-      "ttfa_seconds": 12.68
+      "speed_tps": 146.49,
+      "ttft_seconds": 0.76,
+      "ttfa_seconds": 14.42
     },
     {
       "slug": "gemini-3-6-flash",
@@ -370,14 +370,14 @@
       "lcr": 79.0,
       "tau2_bench": null,
       "tau3_banking": 29.9,
-      "gdpval": 45.9,
+      "gdpval": 45.7,
       "terminalbench_hard": null,
       "terminalbench_2_1": 77.5,
       "scicode": 52.7,
       "mmmu_pro": 83.2,
-      "speed_tps": 189.79,
-      "ttft_seconds": 17.72,
-      "ttfa_seconds": 17.72
+      "speed_tps": 173.07,
+      "ttft_seconds": 18.03,
+      "ttfa_seconds": 18.03
     },
     {
       "slug": "gemini-3-1-pro-preview",
@@ -404,9 +404,9 @@
       "terminalbench_2_1": 73.8,
       "scicode": 58.9,
       "mmmu_pro": 82.4,
-      "speed_tps": 130.43,
-      "ttft_seconds": 29.53,
-      "ttfa_seconds": 29.53
+      "speed_tps": 121.67,
+      "ttft_seconds": 27.4,
+      "ttfa_seconds": 27.4
     },
     {
       "slug": "qwen3-7-max",
@@ -428,14 +428,14 @@
       "lcr": 74.7,
       "tau2_bench": 94.7,
       "tau3_banking": 11.8,
-      "gdpval": 38.3,
+      "gdpval": 38.2,
       "terminalbench_hard": 50.8,
       "terminalbench_2_1": 74.5,
       "scicode": 48.8,
       "mmmu_pro": null,
-      "speed_tps": 201.61,
-      "ttft_seconds": 2.27,
-      "ttfa_seconds": 14.21
+      "speed_tps": 204.84,
+      "ttft_seconds": 2.25,
+      "ttfa_seconds": 14.01
     },
     {
       "slug": "minimax-m3",
@@ -457,7 +457,7 @@
       "lcr": 80.3,
       "tau2_bench": 88.9,
       "tau3_banking": 15.3,
-      "gdpval": 44.1,
+      "gdpval": 44.0,
       "terminalbench_hard": 42.4,
       "terminalbench_2_1": 65.2,
       "scicode": 45.4,
@@ -486,14 +486,14 @@
       "lcr": 77.7,
       "tau2_bench": 94.2,
       "tau3_banking": 9.9,
-      "gdpval": 38.1,
+      "gdpval": 38.0,
       "terminalbench_hard": 43.2,
       "terminalbench_2_1": 65.2,
       "scicode": 50.2,
       "mmmu_pro": null,
-      "speed_tps": 41.85,
-      "ttft_seconds": 4.33,
-      "ttfa_seconds": 52.12
+      "speed_tps": 33.17,
+      "ttft_seconds": 4.76,
+      "ttfa_seconds": 65.06
     },
     {
       "slug": "qwen3-7-plus",
@@ -520,9 +520,9 @@
       "terminalbench_2_1": 61.0,
       "scicode": 45.5,
       "mmmu_pro": 80.5,
-      "speed_tps": 56.36,
-      "ttft_seconds": 2.12,
-      "ttfa_seconds": 37.61
+      "speed_tps": 56.05,
+      "ttft_seconds": 2.16,
+      "ttfa_seconds": 37.84
     },
     {
       "slug": "mimo-v2-5-0424",
@@ -544,14 +544,14 @@
       "lcr": 68.3,
       "tau2_bench": 90.6,
       "tau3_banking": 8.7,
-      "gdpval": 32.4,
+      "gdpval": 32.3,
       "terminalbench_hard": 41.7,
       "terminalbench_2_1": 63.7,
       "scicode": 43.1,
       "mmmu_pro": 75.4,
-      "speed_tps": 69.73,
-      "ttft_seconds": 3.07,
-      "ttfa_seconds": 31.75
+      "speed_tps": 65.16,
+      "ttft_seconds": 2.64,
+      "ttfa_seconds": 33.33
     },
     {
       "slug": "claude-opus-5",
@@ -573,14 +573,14 @@
       "lcr": 75.7,
       "tau2_bench": null,
       "tau3_banking": 42.1,
-      "gdpval": 66.5,
+      "gdpval": 66.2,
       "terminalbench_hard": null,
       "terminalbench_2_1": 89.1,
       "scicode": 55.7,
       "mmmu_pro": 84.7,
-      "speed_tps": 53.06,
-      "ttft_seconds": 58.75,
-      "ttfa_seconds": 58.75
+      "speed_tps": 54.03,
+      "ttft_seconds": 68.26,
+      "ttfa_seconds": 68.26
     },
     {
       "slug": "claude-opus-5-xhigh",
@@ -607,9 +607,9 @@
       "terminalbench_2_1": 88.0,
       "scicode": 55.0,
       "mmmu_pro": 84.0,
-      "speed_tps": 54.2,
-      "ttft_seconds": 29.29,
-      "ttfa_seconds": 29.29
+      "speed_tps": 51.89,
+      "ttft_seconds": 32.65,
+      "ttfa_seconds": 32.65
     },
     {
       "slug": "claude-opus-5-high",
@@ -636,9 +636,9 @@
       "terminalbench_2_1": 87.6,
       "scicode": 54.3,
       "mmmu_pro": 82.4,
-      "speed_tps": 54.9,
-      "ttft_seconds": 19.21,
-      "ttfa_seconds": 19.21
+      "speed_tps": 52.4,
+      "ttft_seconds": 22.28,
+      "ttfa_seconds": 22.28
     },
     {
       "slug": "grok-4-6",
@@ -665,9 +665,9 @@
       "terminalbench_2_1": 88.4,
       "scicode": 53.6,
       "mmmu_pro": null,
-      "speed_tps": 57.75,
-      "ttft_seconds": 42.98,
-      "ttfa_seconds": 42.98
+      "speed_tps": 58.54,
+      "ttft_seconds": 40.28,
+      "ttfa_seconds": 40.28
     },
     {
       "slug": "grok-4-6-xhigh",
@@ -689,14 +689,14 @@
       "lcr": 75.7,
       "tau2_bench": null,
       "tau3_banking": 43.3,
-      "gdpval": 62.8,
+      "gdpval": 62.7,
       "terminalbench_hard": null,
       "terminalbench_2_1": 88.0,
       "scicode": 51.6,
       "mmmu_pro": null,
-      "speed_tps": 58.5,
-      "ttft_seconds": 38.22,
-      "ttfa_seconds": 38.22
+      "speed_tps": 56.78,
+      "ttft_seconds": 39.75,
+      "ttfa_seconds": 39.75
     },
     {
       "slug": "glm-5-3",
@@ -718,14 +718,14 @@
       "lcr": 76.3,
       "tau2_bench": null,
       "tau3_banking": 50.3,
-      "gdpval": 63.1,
+      "gdpval": 62.9,
       "terminalbench_hard": null,
       "terminalbench_2_1": 83.9,
       "scicode": 56.5,
       "mmmu_pro": null,
-      "speed_tps": 66.51,
-      "ttft_seconds": 1.57,
-      "ttfa_seconds": 31.64
+      "speed_tps": 66.62,
+      "ttft_seconds": 1.63,
+      "ttfa_seconds": 31.65
     },
     {
       "slug": "grok-4-6-medium",
@@ -747,14 +747,14 @@
       "lcr": 72.7,
       "tau2_bench": null,
       "tau3_banking": 44.3,
-      "gdpval": 61.8,
+      "gdpval": 61.6,
       "terminalbench_hard": null,
       "terminalbench_2_1": 84.3,
       "scicode": 54.6,
       "mmmu_pro": null,
-      "speed_tps": 57.37,
-      "ttft_seconds": 33.34,
-      "ttfa_seconds": 33.34
+      "speed_tps": 56.63,
+      "ttft_seconds": 34.07,
+      "ttfa_seconds": 34.07
     },
     {
       "slug": "gpt-5-6-sol-xhigh",
@@ -781,9 +781,9 @@
       "terminalbench_2_1": 89.5,
       "scicode": 56.0,
       "mmmu_pro": 82.7,
-      "speed_tps": 72.94,
-      "ttft_seconds": 50.12,
-      "ttfa_seconds": 50.12
+      "speed_tps": 80.65,
+      "ttft_seconds": 52.39,
+      "ttfa_seconds": 52.39
     },
     {
       "slug": "claude-opus-5-medium",
@@ -810,9 +810,9 @@
       "terminalbench_2_1": 86.1,
       "scicode": 50.7,
       "mmmu_pro": 81.6,
-      "speed_tps": 52.95,
-      "ttft_seconds": 4.97,
-      "ttfa_seconds": 4.97
+      "speed_tps": 49.45,
+      "ttft_seconds": 4.12,
+      "ttfa_seconds": 4.12
     },
     {
       "slug": "qwen3-8-max",
@@ -834,14 +834,14 @@
       "lcr": 74.3,
       "tau2_bench": null,
       "tau3_banking": 51.3,
-      "gdpval": 61.2,
+      "gdpval": 61.0,
       "terminalbench_hard": null,
       "terminalbench_2_1": 81.3,
       "scicode": 52.9,
       "mmmu_pro": 82.3,
-      "speed_tps": 20.87,
-      "ttft_seconds": 2.5,
-      "ttfa_seconds": 98.32
+      "speed_tps": 27.86,
+      "ttft_seconds": 2.58,
+      "ttfa_seconds": 74.37
     },
     {
       "slug": "qwen3-8-2-4t-a95b",
@@ -868,9 +868,9 @@
       "terminalbench_2_1": 82.0,
       "scicode": 51.6,
       "mmmu_pro": null,
-      "speed_tps": 23.92,
-      "ttft_seconds": 2.59,
-      "ttfa_seconds": 86.2
+      "speed_tps": 28.64,
+      "ttft_seconds": 2.55,
+      "ttfa_seconds": 72.39
     },
     {
       "slug": "glm-5-3-flash",
@@ -892,14 +892,14 @@
       "lcr": 78.0,
       "tau2_bench": null,
       "tau3_banking": 47.2,
-      "gdpval": 63.5,
+      "gdpval": 63.2,
       "terminalbench_hard": null,
       "terminalbench_2_1": 84.3,
       "scicode": 46.1,
       "mmmu_pro": null,
-      "speed_tps": 49.42,
-      "ttft_seconds": 1.47,
-      "ttfa_seconds": 41.94
+      "speed_tps": 205.51,
+      "ttft_seconds": 0.46,
+      "ttfa_seconds": 10.19
     },
     {
       "slug": "gpt-5-6-sol-high",
@@ -926,9 +926,9 @@
       "terminalbench_2_1": 87.3,
       "scicode": 56.9,
       "mmmu_pro": 81.8,
-      "speed_tps": 74.79,
-      "ttft_seconds": 11.06,
-      "ttfa_seconds": 11.06
+      "speed_tps": 74.28,
+      "ttft_seconds": 13.0,
+      "ttfa_seconds": 13.0
     },
     {
       "slug": "muse-spark-1-2",
@@ -950,7 +950,7 @@
       "lcr": 83.3,
       "tau2_bench": null,
       "tau3_banking": 34.9,
-      "gdpval": 55.6,
+      "gdpval": 55.8,
       "terminalbench_hard": null,
       "terminalbench_2_1": 80.2,
       "scicode": 56.4,
@@ -979,14 +979,14 @@
       "lcr": 79.0,
       "tau2_bench": 93.9,
       "tau3_banking": 39.0,
-      "gdpval": 49.2,
+      "gdpval": 49.1,
       "terminalbench_hard": 60.6,
       "terminalbench_2_1": 84.3,
       "scicode": 56.1,
       "mmmu_pro": 79.9,
-      "speed_tps": 82.69,
-      "ttft_seconds": 66.89,
-      "ttfa_seconds": 66.89
+      "speed_tps": 82.9,
+      "ttft_seconds": 59.21,
+      "ttfa_seconds": 59.21
     },
     {
       "slug": "gemini-3-7-flash",
@@ -1008,14 +1008,43 @@
       "lcr": 80.0,
       "tau2_bench": null,
       "tau3_banking": 32.8,
-      "gdpval": 51.1,
+      "gdpval": 50.8,
       "terminalbench_hard": null,
       "terminalbench_2_1": 85.8,
       "scicode": 56.8,
       "mmmu_pro": 85.5,
       "speed_tps": 329.73,
-      "ttft_seconds": 12.55,
-      "ttfa_seconds": 12.55
+      "ttft_seconds": 9.13,
+      "ttfa_seconds": 9.13
+    },
+    {
+      "slug": "qwen3-8-flash-next",
+      "name": "Qwen3.8-Flash-Next",
+      "creator": "Alibaba",
+      "released": "2026-08-26",
+      "input_price": 0.15,
+      "output_price": 0.47,
+      "blended_price": 0.23,
+      "intelligence": 55.81,
+      "coding": 73.1,
+      "agentic": 56.4,
+      "omniscience": -9.7,
+      "gpqa": 92.3,
+      "hle": 38.0,
+      "critpt": 11.1,
+      "non_hallucination": 54.7,
+      "ifbench": null,
+      "lcr": 77.0,
+      "tau2_bench": null,
+      "tau3_banking": 45.4,
+      "gdpval": 62.1,
+      "terminalbench_hard": null,
+      "terminalbench_2_1": 86.1,
+      "scicode": 46.9,
+      "mmmu_pro": 79.8,
+      "speed_tps": 83.28,
+      "ttft_seconds": 2.74,
+      "ttfa_seconds": 26.75
     },
     {
       "slug": "gpt-5-6-sol-medium",
@@ -1042,9 +1071,9 @@
       "terminalbench_2_1": 86.1,
       "scicode": 56.5,
       "mmmu_pro": 81.4,
-      "speed_tps": 72.88,
-      "ttft_seconds": 4.67,
-      "ttfa_seconds": 4.67
+      "speed_tps": 70.43,
+      "ttft_seconds": 4.73,
+      "ttfa_seconds": 4.73
     },
     {
       "slug": "claude-opus-4-7",
@@ -1071,9 +1100,9 @@
       "terminalbench_2_1": 83.2,
       "scicode": 54.5,
       "mmmu_pro": 78.8,
-      "speed_tps": 51.93,
-      "ttft_seconds": 17.82,
-      "ttfa_seconds": 17.82
+      "speed_tps": 46.15,
+      "ttft_seconds": 21.04,
+      "ttfa_seconds": 21.04
     },
     {
       "slug": "gpt-5-5-high",
@@ -1095,14 +1124,14 @@
       "lcr": 79.0,
       "tau2_bench": 93.0,
       "tau3_banking": 36.7,
-      "gdpval": 48.0,
+      "gdpval": 47.7,
       "terminalbench_hard": 59.9,
       "terminalbench_2_1": 79.4,
       "scicode": 55.9,
       "mmmu_pro": 81.1,
-      "speed_tps": 79.03,
-      "ttft_seconds": 25.78,
-      "ttfa_seconds": 25.78
+      "speed_tps": 81.35,
+      "ttft_seconds": 24.88,
+      "ttfa_seconds": 24.88
     },
     {
       "slug": "gemini-3-7-flash-medium",
@@ -1129,9 +1158,9 @@
       "terminalbench_2_1": 78.3,
       "scicode": 57.9,
       "mmmu_pro": 84.7,
-      "speed_tps": 332.59,
-      "ttft_seconds": 6.87,
-      "ttfa_seconds": 6.87
+      "speed_tps": 332.09,
+      "ttft_seconds": 4.71,
+      "ttfa_seconds": 4.71
     },
     {
       "slug": "gpt-5-4",
@@ -1153,14 +1182,14 @@
       "lcr": 77.7,
       "tau2_bench": 87.1,
       "tau3_banking": 39.6,
-      "gdpval": 44.4,
+      "gdpval": 44.2,
       "terminalbench_hard": 57.6,
       "terminalbench_2_1": 78.3,
       "scicode": 56.6,
       "mmmu_pro": 78.4,
-      "speed_tps": 103.73,
-      "ttft_seconds": 178.71,
-      "ttfa_seconds": 178.71
+      "speed_tps": 109.99,
+      "ttft_seconds": 180.94,
+      "ttfa_seconds": 180.94
     },
     {
       "slug": "gpt-5-6-terra-xhigh",
@@ -1182,14 +1211,14 @@
       "lcr": 75.0,
       "tau2_bench": 80.4,
       "tau3_banking": 29.7,
-      "gdpval": 53.4,
+      "gdpval": 53.1,
       "terminalbench_hard": 62.9,
       "terminalbench_2_1": 80.2,
       "scicode": 51.6,
       "mmmu_pro": 79.5,
-      "speed_tps": 106.3,
-      "ttft_seconds": 20.69,
-      "ttfa_seconds": 20.69
+      "speed_tps": 95.86,
+      "ttft_seconds": 28.84,
+      "ttfa_seconds": 28.84
     },
     {
       "slug": "claude-opus-5-low",
@@ -1216,9 +1245,9 @@
       "terminalbench_2_1": 76.4,
       "scicode": 48.0,
       "mmmu_pro": 79.8,
-      "speed_tps": 56.47,
-      "ttft_seconds": 2.87,
-      "ttfa_seconds": 2.87
+      "speed_tps": 50.1,
+      "ttft_seconds": 3.28,
+      "ttfa_seconds": 3.28
     },
     {
       "slug": "qwen3-8-27b",
@@ -1240,14 +1269,14 @@
       "lcr": 77.3,
       "tau2_bench": null,
       "tau3_banking": 48.0,
-      "gdpval": 52.2,
+      "gdpval": 52.1,
       "terminalbench_hard": null,
       "terminalbench_2_1": 79.8,
       "scicode": 44.7,
       "mmmu_pro": 76.3,
-      "speed_tps": 46.74,
-      "ttft_seconds": 3.59,
-      "ttfa_seconds": 46.38
+      "speed_tps": 45.55,
+      "ttft_seconds": 3.96,
+      "ttfa_seconds": 47.87
     },
     {
       "slug": "gemini-3-5-flash",
@@ -1269,14 +1298,14 @@
       "lcr": 81.0,
       "tau2_bench": 95.3,
       "tau3_banking": 32.2,
-      "gdpval": 42.0,
+      "gdpval": 41.9,
       "terminalbench_hard": 40.9,
       "terminalbench_2_1": 78.7,
       "scicode": 53.1,
       "mmmu_pro": 84.3,
-      "speed_tps": 200.6,
-      "ttft_seconds": 23.29,
-      "ttfa_seconds": 23.29
+      "speed_tps": 205.92,
+      "ttft_seconds": 17.22,
+      "ttfa_seconds": 17.22
     },
     {
       "slug": "grok-4-6-low",
@@ -1303,9 +1332,9 @@
       "terminalbench_2_1": 75.3,
       "scicode": 48.4,
       "mmmu_pro": null,
-      "speed_tps": 55.43,
-      "ttft_seconds": 6.82,
-      "ttfa_seconds": 6.82
+      "speed_tps": 55.76,
+      "ttft_seconds": 7.69,
+      "ttfa_seconds": 7.69
     },
     {
       "slug": "deepseek-v4-flash-vision",
@@ -1327,14 +1356,14 @@
       "lcr": 78.0,
       "tau2_bench": null,
       "tau3_banking": 41.0,
-      "gdpval": 58.1,
+      "gdpval": 58.3,
       "terminalbench_hard": null,
       "terminalbench_2_1": 74.2,
       "scicode": 46.6,
       "mmmu_pro": 74.8,
-      "speed_tps": 118.95,
-      "ttft_seconds": 1.14,
-      "ttfa_seconds": 17.96
+      "speed_tps": 117.63,
+      "ttft_seconds": 1.38,
+      "ttfa_seconds": 18.38
     },
     {
       "slug": "gpt-5-5-medium",
@@ -1356,14 +1385,14 @@
       "lcr": 76.7,
       "tau2_bench": 91.8,
       "tau3_banking": 29.9,
-      "gdpval": 43.6,
+      "gdpval": 43.5,
       "terminalbench_hard": 57.6,
       "terminalbench_2_1": 80.5,
       "scicode": 53.5,
       "mmmu_pro": 81.2,
-      "speed_tps": 82.83,
-      "ttft_seconds": 8.09,
-      "ttfa_seconds": 8.09
+      "speed_tps": 75.96,
+      "ttft_seconds": 7.98,
+      "ttfa_seconds": 7.98
     },
     {
       "slug": "gemini-3-7-flash-low",
@@ -1385,14 +1414,14 @@
       "lcr": 78.3,
       "tau2_bench": null,
       "tau3_banking": 29.5,
-      "gdpval": 47.5,
+      "gdpval": 47.3,
       "terminalbench_hard": null,
       "terminalbench_2_1": 79.8,
       "scicode": 53.6,
       "mmmu_pro": 84.9,
-      "speed_tps": 319.58,
-      "ttft_seconds": 1.03,
-      "ttfa_seconds": 1.03
+      "speed_tps": 314.7,
+      "ttft_seconds": 0.84,
+      "ttfa_seconds": 0.84
     },
     {
       "slug": "gpt-5-6-sol-low",
@@ -1419,9 +1448,9 @@
       "terminalbench_2_1": 76.8,
       "scicode": 55.4,
       "mmmu_pro": 81.0,
-      "speed_tps": 75.17,
-      "ttft_seconds": 2.99,
-      "ttfa_seconds": 2.99
+      "speed_tps": 72.58,
+      "ttft_seconds": 2.67,
+      "ttfa_seconds": 2.67
     },
     {
       "slug": "gpt-5-6-terra-high",
@@ -1443,14 +1472,14 @@
       "lcr": 73.3,
       "tau2_bench": 78.4,
       "tau3_banking": 28.7,
-      "gdpval": 50.3,
+      "gdpval": 50.1,
       "terminalbench_hard": 57.6,
       "terminalbench_2_1": 75.7,
       "scicode": 50.1,
       "mmmu_pro": 79.1,
-      "speed_tps": 101.78,
-      "ttft_seconds": 3.35,
-      "ttfa_seconds": 3.35
+      "speed_tps": 101.83,
+      "ttft_seconds": 3.49,
+      "ttfa_seconds": 3.49
     },
     {
       "slug": "gpt-5-6-luna-xhigh",
@@ -1472,14 +1501,14 @@
       "lcr": 73.3,
       "tau2_bench": null,
       "tau3_banking": 28.7,
-      "gdpval": 50.9,
+      "gdpval": 50.8,
       "terminalbench_hard": null,
       "terminalbench_2_1": 77.9,
       "scicode": 50.0,
       "mmmu_pro": 78.5,
-      "speed_tps": 122.6,
-      "ttft_seconds": 52.48,
-      "ttfa_seconds": 52.48
+      "speed_tps": 122.39,
+      "ttft_seconds": 62.6,
+      "ttfa_seconds": 62.6
     },
     {
       "slug": "agnes-2-5-pro-beta",
@@ -1490,8 +1519,8 @@
       "output_price": 0.3,
       "blended_price": 0.15,
       "intelligence": 49.1,
-      "coding": null,
-      "agentic": null,
+      "coding": 62.3,
+      "agentic": 43.8,
       "omniscience": -10.5,
       "gpqa": 90.5,
       "hle": 37.5,
@@ -1506,9 +1535,9 @@
       "terminalbench_2_1": 69.7,
       "scicode": 47.6,
       "mmmu_pro": 75.4,
-      "speed_tps": 159.75,
-      "ttft_seconds": 2.66,
-      "ttfa_seconds": 15.18
+      "speed_tps": 153.3,
+      "ttft_seconds": 2.46,
+      "ttfa_seconds": 15.51
     },
     {
       "slug": "kimi-k3-low",
@@ -1535,9 +1564,9 @@
       "terminalbench_2_1": 82.4,
       "scicode": 51.2,
       "mmmu_pro": 78.5,
-      "speed_tps": 80.66,
-      "ttft_seconds": 0.76,
-      "ttfa_seconds": 25.56
+      "speed_tps": 102.17,
+      "ttft_seconds": 0.81,
+      "ttfa_seconds": 20.39
     },
     {
       "slug": "motif-3",
@@ -1593,9 +1622,9 @@
       "terminalbench_2_1": 69.7,
       "scicode": 50.7,
       "mmmu_pro": 77.6,
-      "speed_tps": 123.42,
-      "ttft_seconds": 12.54,
-      "ttfa_seconds": 12.54
+      "speed_tps": 120.72,
+      "ttft_seconds": 16.51,
+      "ttfa_seconds": 16.51
     },
     {
       "slug": "gpt-5-6-terra-medium",
@@ -1617,14 +1646,14 @@
       "lcr": 70.3,
       "tau2_bench": 72.8,
       "tau3_banking": 25.6,
-      "gdpval": 45.1,
+      "gdpval": 45.0,
       "terminalbench_hard": null,
       "terminalbench_2_1": 72.3,
       "scicode": 49.6,
       "mmmu_pro": 76.8,
-      "speed_tps": 97.15,
-      "ttft_seconds": 1.73,
-      "ttfa_seconds": 1.73
+      "speed_tps": 95.54,
+      "ttft_seconds": 1.52,
+      "ttfa_seconds": 1.52
     },
     {
       "slug": "gemini-3-5-flash-medium",
@@ -1651,9 +1680,9 @@
       "terminalbench_2_1": null,
       "scicode": 53.0,
       "mmmu_pro": 83.9,
-      "speed_tps": 196.21,
-      "ttft_seconds": 15.75,
-      "ttfa_seconds": 15.75
+      "speed_tps": 206.54,
+      "ttft_seconds": 13.88,
+      "ttfa_seconds": 13.88
     },
     {
       "slug": "motif-0714",
@@ -1704,14 +1733,14 @@
       "lcr": 70.0,
       "tau2_bench": 96.2,
       "tau3_banking": 30.1,
-      "gdpval": 40.0,
+      "gdpval": 39.9,
       "terminalbench_hard": 46.2,
       "terminalbench_2_1": 64.0,
       "scicode": 50.0,
       "mmmu_pro": null,
-      "speed_tps": 65.85,
-      "ttft_seconds": 1.72,
-      "ttfa_seconds": 68.16
+      "speed_tps": 68.37,
+      "ttft_seconds": 1.5,
+      "ttfa_seconds": 65.49
     },
     {
       "slug": "kimi-k2-6",
@@ -1738,9 +1767,9 @@
       "terminalbench_2_1": 65.9,
       "scicode": 53.5,
       "mmmu_pro": 79.4,
-      "speed_tps": 39.46,
-      "ttft_seconds": 2.84,
-      "ttfa_seconds": 115.64
+      "speed_tps": 37.69,
+      "ttft_seconds": 2.83,
+      "ttfa_seconds": 120.94
     },
     {
       "slug": "gpt-5-5-low",
@@ -1762,14 +1791,14 @@
       "lcr": 77.7,
       "tau2_bench": 83.9,
       "tau3_banking": 24.9,
-      "gdpval": 34.3,
+      "gdpval": 34.2,
       "terminalbench_hard": 52.3,
       "terminalbench_2_1": 65.5,
       "scicode": 51.6,
       "mmmu_pro": 79.0,
-      "speed_tps": 80.15,
-      "ttft_seconds": 1.68,
-      "ttfa_seconds": 1.68
+      "speed_tps": 82.19,
+      "ttft_seconds": 1.7,
+      "ttfa_seconds": 1.7
     },
     {
       "slug": "qwen3-8-27b-medium",
@@ -1791,14 +1820,14 @@
       "lcr": 76.3,
       "tau2_bench": null,
       "tau3_banking": 47.4,
-      "gdpval": 50.4,
+      "gdpval": 50.2,
       "terminalbench_hard": null,
       "terminalbench_2_1": 65.2,
       "scicode": 38.1,
       "mmmu_pro": 74.2,
-      "speed_tps": 53.01,
-      "ttft_seconds": 3.65,
-      "ttfa_seconds": 41.37
+      "speed_tps": 51.6,
+      "ttft_seconds": 3.85,
+      "ttfa_seconds": 42.62
     },
     {
       "slug": "muse-spark",
@@ -1854,9 +1883,9 @@
       "terminalbench_2_1": null,
       "scicode": 50.1,
       "mmmu_pro": 76.4,
-      "speed_tps": 67.19,
-      "ttft_seconds": 1.71,
-      "ttfa_seconds": 1.71
+      "speed_tps": 56.44,
+      "ttft_seconds": 1.42,
+      "ttfa_seconds": 1.42
     },
     {
       "slug": "deepseek-v4-pro-0424-high",
@@ -1878,14 +1907,14 @@
       "lcr": 67.0,
       "tau2_bench": 94.2,
       "tau3_banking": 26.2,
-      "gdpval": 39.7,
+      "gdpval": 39.5,
       "terminalbench_hard": 41.7,
       "terminalbench_2_1": 64.8,
       "scicode": 46.4,
       "mmmu_pro": null,
-      "speed_tps": 160.59,
-      "ttft_seconds": 0.58,
-      "ttfa_seconds": 12.98
+      "speed_tps": 156.93,
+      "ttft_seconds": 0.57,
+      "ttfa_seconds": 13.26
     },
     {
       "slug": "kimi-k2-7-code",
@@ -1907,14 +1936,14 @@
       "lcr": 75.0,
       "tau2_bench": 90.1,
       "tau3_banking": 20.2,
-      "gdpval": 34.4,
+      "gdpval": 34.3,
       "terminalbench_hard": 44.7,
       "terminalbench_2_1": 67.4,
       "scicode": 47.5,
       "mmmu_pro": null,
-      "speed_tps": 44.51,
-      "ttft_seconds": 2.91,
-      "ttfa_seconds": 52.99
+      "speed_tps": 44.11,
+      "ttft_seconds": 2.88,
+      "ttfa_seconds": 53.41
     },
     {
       "slug": "qwen3-8-27b-low",
@@ -1936,14 +1965,14 @@
       "lcr": 74.7,
       "tau2_bench": null,
       "tau3_banking": 32.2,
-      "gdpval": 49.5,
+      "gdpval": 49.4,
       "terminalbench_hard": null,
       "terminalbench_2_1": 67.4,
       "scicode": 39.8,
       "mmmu_pro": 73.8,
-      "speed_tps": 58.08,
-      "ttft_seconds": 3.47,
-      "ttfa_seconds": 37.9
+      "speed_tps": 55.91,
+      "ttft_seconds": 3.91,
+      "ttfa_seconds": 39.69
     },
     {
       "slug": "claude-sonnet-5-non-reasoning",
@@ -1965,14 +1994,14 @@
       "lcr": 66.0,
       "tau2_bench": null,
       "tau3_banking": 15.7,
-      "gdpval": 43.2,
+      "gdpval": 43.1,
       "terminalbench_hard": null,
       "terminalbench_2_1": 75.3,
       "scicode": 48.6,
       "mmmu_pro": 71.9,
-      "speed_tps": 66.78,
-      "ttft_seconds": 1.92,
-      "ttfa_seconds": 1.92
+      "speed_tps": 58.85,
+      "ttft_seconds": 2.23,
+      "ttfa_seconds": 2.23
     },
     {
       "slug": "inkling",
@@ -1994,14 +2023,14 @@
       "lcr": 73.3,
       "tau2_bench": null,
       "tau3_banking": 29.1,
-      "gdpval": 36.8,
+      "gdpval": 36.7,
       "terminalbench_hard": null,
       "terminalbench_2_1": 55.1,
       "scicode": 46.1,
       "mmmu_pro": 73.5,
-      "speed_tps": 51.11,
-      "ttft_seconds": 2.77,
-      "ttfa_seconds": 41.9
+      "speed_tps": 75.21,
+      "ttft_seconds": 2.46,
+      "ttfa_seconds": 29.06
     },
     {
       "slug": "hy3",
@@ -2023,14 +2052,14 @@
       "lcr": 74.7,
       "tau2_bench": 93.0,
       "tau3_banking": 22.9,
-      "gdpval": 35.7,
+      "gdpval": 35.6,
       "terminalbench_hard": 34.0,
       "terminalbench_2_1": 64.4,
       "scicode": 47.6,
       "mmmu_pro": null,
-      "speed_tps": 67.04,
-      "ttft_seconds": 3.29,
-      "ttfa_seconds": 33.13
+      "speed_tps": 92.28,
+      "ttft_seconds": 3.25,
+      "ttfa_seconds": 24.92
     },
     {
       "slug": "deepseek-v4-flash-0420",
@@ -2052,14 +2081,14 @@
       "lcr": 70.0,
       "tau2_bench": 95.0,
       "tau3_banking": 30.9,
-      "gdpval": 34.5,
+      "gdpval": 34.4,
       "terminalbench_hard": 35.6,
       "terminalbench_2_1": 61.8,
       "scicode": 44.9,
       "mmmu_pro": null,
-      "speed_tps": 119.64,
-      "ttft_seconds": 1.67,
-      "ttfa_seconds": 48.59
+      "speed_tps": 120.15,
+      "ttft_seconds": 1.78,
+      "ttfa_seconds": 48.49
     },
     {
       "slug": "gpt-5-6-sol-non-reasoning",
@@ -2086,9 +2115,9 @@
       "terminalbench_2_1": 74.2,
       "scicode": 47.1,
       "mmmu_pro": 71.9,
-      "speed_tps": 100.64,
-      "ttft_seconds": 4.65,
-      "ttfa_seconds": 4.65
+      "speed_tps": 92.17,
+      "ttft_seconds": 2.54,
+      "ttfa_seconds": 2.54
     },
     {
       "slug": "nex-n2-pro",
@@ -2115,9 +2144,9 @@
       "terminalbench_2_1": 67.8,
       "scicode": 41.8,
       "mmmu_pro": null,
-      "speed_tps": 130.25,
-      "ttft_seconds": 1.6,
-      "ttfa_seconds": 16.96
+      "speed_tps": 129.64,
+      "ttft_seconds": 1.64,
+      "ttfa_seconds": 17.07
     },
     {
       "slug": "solar-pro4",
@@ -2144,9 +2173,9 @@
       "terminalbench_2_1": 57.3,
       "scicode": 43.6,
       "mmmu_pro": null,
-      "speed_tps": 57.24,
-      "ttft_seconds": 2.17,
-      "ttfa_seconds": 37.11
+      "speed_tps": 44.41,
+      "ttft_seconds": 2.26,
+      "ttfa_seconds": 47.29
     },
     {
       "slug": "mimo-v2-pro",
@@ -2197,14 +2226,14 @@
       "lcr": 68.7,
       "tau2_bench": 60.5,
       "tau3_banking": 18.8,
-      "gdpval": 37.8,
+      "gdpval": 37.6,
       "terminalbench_hard": 43.9,
       "terminalbench_2_1": 62.5,
       "scicode": 49.2,
       "mmmu_pro": 76.1,
-      "speed_tps": 101.76,
-      "ttft_seconds": 1.53,
-      "ttfa_seconds": 1.53
+      "speed_tps": 92.63,
+      "ttft_seconds": 1.65,
+      "ttfa_seconds": 1.65
     },
     {
       "slug": "inkling-small",
@@ -2226,14 +2255,14 @@
       "lcr": 69.3,
       "tau2_bench": null,
       "tau3_banking": 18.8,
-      "gdpval": 38.5,
+      "gdpval": 38.4,
       "terminalbench_hard": null,
       "terminalbench_2_1": 55.1,
       "scicode": 48.7,
       "mmmu_pro": 74.0,
-      "speed_tps": 341.06,
-      "ttft_seconds": 0.53,
-      "ttfa_seconds": 6.39
+      "speed_tps": 336.94,
+      "ttft_seconds": 0.42,
+      "ttfa_seconds": 6.36
     },
     {
       "slug": "qwen3-6-max",
@@ -2260,9 +2289,9 @@
       "terminalbench_2_1": null,
       "scicode": 46.9,
       "mmmu_pro": null,
-      "speed_tps": 37.11,
-      "ttft_seconds": 3.1,
-      "ttfa_seconds": 57.0
+      "speed_tps": 52.3,
+      "ttft_seconds": 3.47,
+      "ttfa_seconds": 41.71
     },
     {
       "slug": "glm-5-1",
@@ -2284,14 +2313,14 @@
       "lcr": 68.0,
       "tau2_bench": 97.7,
       "tau3_banking": 13.6,
-      "gdpval": 37.8,
+      "gdpval": 37.7,
       "terminalbench_hard": 43.2,
       "terminalbench_2_1": 61.8,
       "scicode": 43.8,
       "mmmu_pro": null,
-      "speed_tps": 140.9,
+      "speed_tps": 112.64,
       "ttft_seconds": 0.82,
-      "ttfa_seconds": 27.73
+      "ttfa_seconds": 34.48
     },
     {
       "slug": "gpt-5-4-mini",
@@ -2318,9 +2347,9 @@
       "terminalbench_2_1": 59.2,
       "scicode": 49.9,
       "mmmu_pro": 73.3,
-      "speed_tps": 166.7,
-      "ttft_seconds": 4.23,
-      "ttfa_seconds": 4.23
+      "speed_tps": 168.5,
+      "ttft_seconds": 8.28,
+      "ttfa_seconds": 8.28
     },
     {
       "slug": "deepseek-v4-pro-high",
@@ -2376,9 +2405,9 @@
       "terminalbench_2_1": 52.1,
       "scicode": 50.2,
       "mmmu_pro": 76.5,
-      "speed_tps": 57.46,
-      "ttft_seconds": 0.52,
-      "ttfa_seconds": 35.33
+      "speed_tps": 55.36,
+      "ttft_seconds": 0.53,
+      "ttfa_seconds": 36.66
     },
     {
       "slug": "qwen3-6-plus",
@@ -2400,14 +2429,14 @@
       "lcr": 72.3,
       "tau2_bench": 97.7,
       "tau3_banking": 20.8,
-      "gdpval": 31.9,
+      "gdpval": 31.8,
       "terminalbench_hard": 43.9,
       "terminalbench_2_1": 61.4,
       "scicode": 40.7,
       "mmmu_pro": 78.0,
-      "speed_tps": 55.46,
-      "ttft_seconds": 2.02,
-      "ttfa_seconds": 102.08
+      "speed_tps": 55.98,
+      "ttft_seconds": 2.06,
+      "ttfa_seconds": 101.19
     },
     {
       "slug": "gpt-5-4-low",
@@ -2434,9 +2463,9 @@
       "terminalbench_2_1": null,
       "scicode": 50.4,
       "mmmu_pro": 78.0,
-      "speed_tps": 103.65,
-      "ttft_seconds": 1.79,
-      "ttfa_seconds": 1.79
+      "speed_tps": 101.06,
+      "ttft_seconds": 1.43,
+      "ttfa_seconds": 1.43
     },
     {
       "slug": "jt-4-1-flash-236b-a21b",
@@ -2487,14 +2516,14 @@
       "lcr": 73.0,
       "tau2_bench": null,
       "tau3_banking": 12.4,
-      "gdpval": 33.5,
+      "gdpval": 33.4,
       "terminalbench_hard": null,
       "terminalbench_2_1": 67.0,
       "scicode": 42.2,
       "mmmu_pro": null,
-      "speed_tps": 128.77,
-      "ttft_seconds": 2.04,
-      "ttfa_seconds": 17.57
+      "speed_tps": 126.68,
+      "ttft_seconds": 2.83,
+      "ttfa_seconds": 18.61
     },
     {
       "slug": "gpt-5-4-nano",
@@ -2521,9 +2550,9 @@
       "terminalbench_2_1": 60.7,
       "scicode": 46.9,
       "mmmu_pro": 65.4,
-      "speed_tps": 163.7,
-      "ttft_seconds": 5.35,
-      "ttfa_seconds": 5.35
+      "speed_tps": 171.74,
+      "ttft_seconds": 5.63,
+      "ttfa_seconds": 5.63
     },
     {
       "slug": "glm-5-turbo",
@@ -2574,14 +2603,14 @@
       "lcr": 69.0,
       "tau2_bench": 95.6,
       "tau3_banking": 26.2,
-      "gdpval": 32.7,
+      "gdpval": 32.6,
       "terminalbench_hard": 38.6,
       "terminalbench_2_1": 56.9,
       "scicode": 42.0,
       "mmmu_pro": null,
-      "speed_tps": 125.79,
-      "ttft_seconds": 2.43,
-      "ttfa_seconds": 12.28
+      "speed_tps": 125.94,
+      "ttft_seconds": 1.89,
+      "ttfa_seconds": 11.73
     },
     {
       "slug": "gpt-5-6-luna-medium",
@@ -2608,9 +2637,9 @@
       "terminalbench_2_1": 53.2,
       "scicode": 45.8,
       "mmmu_pro": 75.8,
-      "speed_tps": 122.21,
-      "ttft_seconds": 2.74,
-      "ttfa_seconds": 2.74
+      "speed_tps": 113.47,
+      "ttft_seconds": 2.43,
+      "ttfa_seconds": 2.43
     },
     {
       "slug": "minimax-m2-7",
@@ -2637,9 +2666,9 @@
       "terminalbench_2_1": 55.4,
       "scicode": 47.0,
       "mmmu_pro": null,
-      "speed_tps": 396.5,
-      "ttft_seconds": 2.03,
-      "ttfa_seconds": 8.24
+      "speed_tps": 390.85,
+      "ttft_seconds": 1.87,
+      "ttfa_seconds": 8.17
     },
     {
       "slug": "nvidia-nemotron-3-ultra-550b-a55b",
@@ -2695,9 +2724,9 @@
       "terminalbench_2_1": 39.7,
       "scicode": 47.3,
       "mmmu_pro": 78.1,
-      "speed_tps": 167.88,
-      "ttft_seconds": 18.08,
-      "ttfa_seconds": 18.08
+      "speed_tps": 161.56,
+      "ttft_seconds": 18.4,
+      "ttfa_seconds": 18.4
     },
     {
       "slug": "grok-4-20",
@@ -2724,9 +2753,9 @@
       "terminalbench_2_1": null,
       "scicode": 45.6,
       "mmmu_pro": 74.6,
-      "speed_tps": 218.59,
-      "ttft_seconds": 13.98,
-      "ttfa_seconds": 13.98
+      "speed_tps": 224.55,
+      "ttft_seconds": 12.69,
+      "ttfa_seconds": 12.69
     },
     {
       "slug": "ling-3-0-flash",
@@ -2753,9 +2782,9 @@
       "terminalbench_2_1": 55.4,
       "scicode": 41.1,
       "mmmu_pro": null,
-      "speed_tps": 383.48,
-      "ttft_seconds": 2.59,
-      "ttfa_seconds": 7.8
+      "speed_tps": 358.87,
+      "ttft_seconds": 2.64,
+      "ttfa_seconds": 8.21
     },
     {
       "slug": "qwen3-6-27b",
@@ -2782,9 +2811,9 @@
       "terminalbench_2_1": 60.7,
       "scicode": 39.8,
       "mmmu_pro": 74.6,
-      "speed_tps": 35.29,
-      "ttft_seconds": 3.37,
-      "ttfa_seconds": 164.22
+      "speed_tps": 37.18,
+      "ttft_seconds": 3.42,
+      "ttfa_seconds": 156.09
     },
     {
       "slug": "grok-4-20-0309",
@@ -2840,9 +2869,9 @@
       "terminalbench_2_1": 53.6,
       "scicode": 40.9,
       "mmmu_pro": 79.0,
-      "speed_tps": 365.15,
-      "ttft_seconds": 8.76,
-      "ttfa_seconds": 8.76
+      "speed_tps": 379.41,
+      "ttft_seconds": 9.25,
+      "ttfa_seconds": 9.25
     },
     {
       "slug": "solar-open2-250b",
@@ -2956,9 +2985,9 @@
       "terminalbench_2_1": null,
       "scicode": 44.6,
       "mmmu_pro": 75.8,
-      "speed_tps": 114.8,
-      "ttft_seconds": 9.07,
-      "ttfa_seconds": 9.07
+      "speed_tps": 108.75,
+      "ttft_seconds": 11.61,
+      "ttfa_seconds": 11.61
     },
     {
       "slug": "grok-4-3-low",
@@ -2985,13 +3014,13 @@
       "terminalbench_2_1": null,
       "scicode": 41.9,
       "mmmu_pro": 72.8,
-      "speed_tps": 114.81,
-      "ttft_seconds": 6.44,
-      "ttfa_seconds": 6.44
+      "speed_tps": 113.25,
+      "ttft_seconds": 4.91,
+      "ttfa_seconds": 4.91
     },
     {
       "slug": "glm-5-1-non-reasoning",
-      "name": "GLM-5.1 (FP8, Base)",
+      "name": "GLM-5.1 (Non-reasoning) (FP8, Base)",
       "creator": "Z AI",
       "released": "2026-04-07",
       "input_price": 1.4,
@@ -3014,9 +3043,9 @@
       "terminalbench_2_1": null,
       "scicode": 36.1,
       "mmmu_pro": null,
-      "speed_tps": 30.5,
-      "ttft_seconds": 1.87,
-      "ttfa_seconds": 1.87
+      "speed_tps": 32.61,
+      "ttft_seconds": 1.86,
+      "ttfa_seconds": 1.86
     },
     {
       "slug": "mimo-v2-omni",
@@ -3072,9 +3101,9 @@
       "terminalbench_2_1": null,
       "scicode": 48.8,
       "mmmu_pro": 80.1,
-      "speed_tps": 184.99,
-      "ttft_seconds": 0.94,
-      "ttfa_seconds": 0.94
+      "speed_tps": 201.95,
+      "ttft_seconds": 0.9,
+      "ttfa_seconds": 0.9
     },
     {
       "slug": "gpt-5-5-non-reasoning",
@@ -3101,13 +3130,13 @@
       "terminalbench_2_1": 61.0,
       "scicode": 47.3,
       "mmmu_pro": 71.4,
-      "speed_tps": 115.61,
-      "ttft_seconds": 0.7,
-      "ttfa_seconds": 0.7
+      "speed_tps": 114.12,
+      "ttft_seconds": 0.74,
+      "ttfa_seconds": 0.74
     },
     {
       "slug": "kimi-k2-6-non-reasoning",
-      "name": "Kimi K2.6",
+      "name": "Kimi K2.6 (Non-reasoning)",
       "creator": "Kimi",
       "released": "2026-04-20",
       "input_price": 0.8,
@@ -3130,9 +3159,9 @@
       "terminalbench_2_1": null,
       "scicode": 39.5,
       "mmmu_pro": null,
-      "speed_tps": 51.9,
-      "ttft_seconds": 2.2,
-      "ttfa_seconds": 2.2
+      "speed_tps": 48.3,
+      "ttft_seconds": 2.17,
+      "ttfa_seconds": 2.17
     },
     {
       "slug": "glm-5v-turbo",
@@ -3188,9 +3217,9 @@
       "terminalbench_2_1": 51.7,
       "scicode": 43.6,
       "mmmu_pro": 74.3,
-      "speed_tps": 149.08,
-      "ttft_seconds": 0.88,
-      "ttfa_seconds": 14.3
+      "speed_tps": 34.2,
+      "ttft_seconds": 1.07,
+      "ttfa_seconds": 59.55
     },
     {
       "slug": "a-x-k2",
@@ -3223,7 +3252,7 @@
     },
     {
       "slug": "glm-5-2-non-reasoning",
-      "name": "GLM-5.2",
+      "name": "GLM-5.2 (Non-reasoning)",
       "creator": "Z AI",
       "released": "2026-06-16",
       "input_price": 1.4,
@@ -3241,14 +3270,14 @@
       "lcr": 45.0,
       "tau2_bench": null,
       "tau3_banking": 16.7,
-      "gdpval": 44.6,
+      "gdpval": 44.4,
       "terminalbench_hard": null,
       "terminalbench_2_1": 51.7,
       "scicode": 36.1,
       "mmmu_pro": null,
-      "speed_tps": 81.48,
-      "ttft_seconds": 2.33,
-      "ttfa_seconds": 2.33
+      "speed_tps": 83.42,
+      "ttft_seconds": 1.69,
+      "ttfa_seconds": 1.69
     },
     {
       "slug": "qwen3-8-27b-non-reasoning",
@@ -3270,14 +3299,14 @@
       "lcr": 63.0,
       "tau2_bench": null,
       "tau3_banking": 20.0,
-      "gdpval": 35.6,
+      "gdpval": 35.5,
       "terminalbench_hard": null,
       "terminalbench_2_1": 49.1,
       "scicode": 35.6,
       "mmmu_pro": 69.9,
-      "speed_tps": 55.16,
-      "ttft_seconds": 3.63,
-      "ttfa_seconds": 3.63
+      "speed_tps": 50.66,
+      "ttft_seconds": 4.05,
+      "ttfa_seconds": 4.05
     },
     {
       "slug": "gpt-5-6-terra-non-reasoning",
@@ -3304,9 +3333,9 @@
       "terminalbench_2_1": 56.2,
       "scicode": 44.6,
       "mmmu_pro": 66.7,
-      "speed_tps": 130.78,
-      "ttft_seconds": 0.74,
-      "ttfa_seconds": 0.74
+      "speed_tps": 103.4,
+      "ttft_seconds": 0.72,
+      "ttfa_seconds": 0.72
     },
     {
       "slug": "hy3-preview",
@@ -3386,7 +3415,7 @@
       "lcr": 62.0,
       "tau2_bench": null,
       "tau3_banking": 22.1,
-      "gdpval": 38.2,
+      "gdpval": 38.3,
       "terminalbench_hard": null,
       "terminalbench_2_1": 32.6,
       "scicode": 34.0,
@@ -3420,9 +3449,9 @@
       "terminalbench_2_1": 50.2,
       "scicode": 35.4,
       "mmmu_pro": null,
-      "speed_tps": 41.34,
-      "ttft_seconds": 2.85,
-      "ttfa_seconds": 51.22
+      "speed_tps": 39.5,
+      "ttft_seconds": 2.88,
+      "ttfa_seconds": 53.52
     },
     {
       "slug": "gpt-5-6-luna-low",
@@ -3449,9 +3478,9 @@
       "terminalbench_2_1": 43.5,
       "scicode": 45.6,
       "mmmu_pro": 74.0,
-      "speed_tps": 111.53,
-      "ttft_seconds": 1.5,
-      "ttfa_seconds": 1.5
+      "speed_tps": 108.94,
+      "ttft_seconds": 1.79,
+      "ttfa_seconds": 1.79
     },
     {
       "slug": "kat-coder-pro-v2",
@@ -3473,7 +3502,7 @@
       "lcr": 70.0,
       "tau2_bench": 89.5,
       "tau3_banking": 4.5,
-      "gdpval": 20.4,
+      "gdpval": 20.3,
       "terminalbench_hard": 49.2,
       "terminalbench_2_1": 70.0,
       "scicode": 38.3,
@@ -3507,13 +3536,13 @@
       "terminalbench_2_1": 44.9,
       "scicode": 35.8,
       "mmmu_pro": 75.0,
-      "speed_tps": 125.86,
-      "ttft_seconds": 1.39,
-      "ttfa_seconds": 44.26
+      "speed_tps": 124.8,
+      "ttft_seconds": 1.34,
+      "ttfa_seconds": 44.57
     },
     {
       "slug": "deepseek-v4-pro-0424-non-reasoning",
-      "name": "DeepSeek V4 Pro",
+      "name": "DeepSeek V4 Pro (Non-reasoning)",
       "creator": "DeepSeek",
       "released": "2026-04-24",
       "input_price": 0.435,
@@ -3536,7 +3565,7 @@
       "terminalbench_2_1": null,
       "scicode": 42.4,
       "mmmu_pro": null,
-      "speed_tps": 70.92,
+      "speed_tps": 62.98,
       "ttft_seconds": 1.63,
       "ttfa_seconds": 1.63
     },
@@ -3565,9 +3594,9 @@
       "terminalbench_2_1": 43.1,
       "scicode": 42.4,
       "mmmu_pro": null,
-      "speed_tps": 128.95,
-      "ttft_seconds": 3.86,
-      "ttfa_seconds": 19.37
+      "speed_tps": 124.27,
+      "ttft_seconds": 3.87,
+      "ttfa_seconds": 19.97
     },
     {
       "slug": "qwen3-5-omni-plus",
@@ -3594,13 +3623,13 @@
       "terminalbench_2_1": null,
       "scicode": 40.5,
       "mmmu_pro": 70.5,
-      "speed_tps": 134.06,
-      "ttft_seconds": 2.08,
-      "ttfa_seconds": 2.08
+      "speed_tps": 129.34,
+      "ttft_seconds": 2.03,
+      "ttfa_seconds": 2.03
     },
     {
       "slug": "qwen3-6-27b-non-reasoning",
-      "name": "Qwen3.6 27B",
+      "name": "Qwen3.6 27B (Non-reasoning)",
       "creator": "Alibaba",
       "released": "2026-04-22",
       "input_price": 0.6,
@@ -3623,9 +3652,9 @@
       "terminalbench_2_1": 51.3,
       "scicode": 37.3,
       "mmmu_pro": 71.7,
-      "speed_tps": 54.61,
-      "ttft_seconds": 3.18,
-      "ttfa_seconds": 3.18
+      "speed_tps": 59.79,
+      "ttft_seconds": 3.25,
+      "ttfa_seconds": 3.25
     },
     {
       "slug": "deepseek-v4-pro-non-reasoning",
@@ -3658,7 +3687,7 @@
     },
     {
       "slug": "k-exaone-2-0-0803",
-      "name": "K-EXAONE 2.0 0803",
+      "name": "K-EXAONE 2.0",
       "creator": "LG AI Research",
       "released": "2026-08-12",
       "input_price": null,
@@ -3705,14 +3734,14 @@
       "lcr": 69.7,
       "tau2_bench": 98.5,
       "tau3_banking": 12.0,
-      "gdpval": 26.0,
+      "gdpval": 25.9,
       "terminalbench_hard": 35.6,
       "terminalbench_2_1": 39.3,
       "scicode": 40.0,
       "mmmu_pro": 75.3,
-      "speed_tps": 169.95,
-      "ttft_seconds": 0.64,
-      "ttfa_seconds": 12.41
+      "speed_tps": 179.32,
+      "ttft_seconds": 0.67,
+      "ttfa_seconds": 11.82
     },
     {
       "slug": "gpt-5-4-nano-medium",
@@ -3739,9 +3768,9 @@
       "terminalbench_2_1": null,
       "scicode": 38.4,
       "mmmu_pro": 59.5,
-      "speed_tps": 174.32,
-      "ttft_seconds": 4.21,
-      "ttfa_seconds": 4.21
+      "speed_tps": 173.3,
+      "ttft_seconds": 3.69,
+      "ttfa_seconds": 3.69
     },
     {
       "slug": "gpt-5-4-mini-medium",
@@ -3768,9 +3797,9 @@
       "terminalbench_2_1": null,
       "scicode": 44.2,
       "mmmu_pro": 71.2,
-      "speed_tps": 171.59,
-      "ttft_seconds": 10.81,
-      "ttfa_seconds": 10.81
+      "speed_tps": 189.75,
+      "ttft_seconds": 11.44,
+      "ttfa_seconds": 11.44
     },
     {
       "slug": "mistral-medium-3-5",
@@ -3797,9 +3826,9 @@
       "terminalbench_2_1": 50.6,
       "scicode": 39.6,
       "mmmu_pro": 64.9,
-      "speed_tps": 141.26,
-      "ttft_seconds": 2.24,
-      "ttfa_seconds": 16.4
+      "speed_tps": 151.15,
+      "ttft_seconds": 2.23,
+      "ttfa_seconds": 15.46
     },
     {
       "slug": "gemma-4-31b",
@@ -3821,18 +3850,18 @@
       "lcr": 68.3,
       "tau2_bench": 59.9,
       "tau3_banking": 14.8,
-      "gdpval": 15.6,
+      "gdpval": 15.7,
       "terminalbench_hard": 36.4,
       "terminalbench_2_1": 43.5,
       "scicode": 43.4,
       "mmmu_pro": 73.4,
-      "speed_tps": 47.93,
-      "ttft_seconds": 1.43,
-      "ttfa_seconds": 37.66
+      "speed_tps": 59.3,
+      "ttft_seconds": 1.3,
+      "ttfa_seconds": 30.58
     },
     {
       "slug": "deepseek-v4-flash-non-reasoning",
-      "name": "DeepSeek V4 Flash",
+      "name": "DeepSeek V4 Flash (Non-reasoning)",
       "creator": "DeepSeek",
       "released": "2026-04-24",
       "input_price": 0.14,
@@ -3855,9 +3884,9 @@
       "terminalbench_2_1": null,
       "scicode": 37.3,
       "mmmu_pro": null,
-      "speed_tps": 60.41,
-      "ttft_seconds": 1.59,
-      "ttfa_seconds": 1.59
+      "speed_tps": 68.42,
+      "ttft_seconds": 1.61,
+      "ttfa_seconds": 1.61
     },
     {
       "slug": "gpt-5-5-instant-06-26",
@@ -3884,9 +3913,9 @@
       "terminalbench_2_1": 34.8,
       "scicode": 48.6,
       "mmmu_pro": null,
-      "speed_tps": 147.89,
-      "ttft_seconds": 1.19,
-      "ttfa_seconds": 14.71
+      "speed_tps": 129.86,
+      "ttft_seconds": 1.27,
+      "ttfa_seconds": 16.67
     },
     {
       "slug": "jt-35b-flash",
@@ -3919,7 +3948,7 @@
     },
     {
       "slug": "mimo-v2-5-pro-non-reasoning",
-      "name": "MiMo-V2.5-Pro",
+      "name": "MiMo-V2.5-Pro (Non-reasoning)",
       "creator": "Xiaomi",
       "released": "2026-04-22",
       "input_price": 0.522,
@@ -3942,9 +3971,9 @@
       "terminalbench_2_1": null,
       "scicode": 39.1,
       "mmmu_pro": null,
-      "speed_tps": 44.56,
-      "ttft_seconds": 3.25,
-      "ttfa_seconds": 3.25
+      "speed_tps": 36.82,
+      "ttft_seconds": 2.89,
+      "ttfa_seconds": 2.89
     },
     {
       "slug": "gpt-5-4-non-reasoning",
@@ -3971,9 +4000,9 @@
       "terminalbench_2_1": null,
       "scicode": 47.1,
       "mmmu_pro": 70.6,
-      "speed_tps": 101.09,
-      "ttft_seconds": 0.81,
-      "ttfa_seconds": 0.81
+      "speed_tps": 104.31,
+      "ttft_seconds": 0.9,
+      "ttfa_seconds": 0.9
     },
     {
       "slug": "gpt-5-6-luna-non-reasoning",
@@ -4000,13 +4029,13 @@
       "terminalbench_2_1": 39.0,
       "scicode": 39.9,
       "mmmu_pro": 60.4,
-      "speed_tps": 210.61,
-      "ttft_seconds": 0.76,
-      "ttfa_seconds": 0.76
+      "speed_tps": 181.07,
+      "ttft_seconds": 0.59,
+      "ttfa_seconds": 0.59
     },
     {
       "slug": "hy3-non-reasoning",
-      "name": "Hy3-preview",
+      "name": "Hy3-preview (Non-reasoning)",
       "creator": "Tencent",
       "released": "2026-04-23",
       "input_price": 0.063,
@@ -4087,9 +4116,9 @@
       "terminalbench_2_1": null,
       "scicode": 38.5,
       "mmmu_pro": null,
-      "speed_tps": 217.5,
-      "ttft_seconds": 1.08,
-      "ttfa_seconds": 10.28
+      "speed_tps": 223.74,
+      "ttft_seconds": 1.17,
+      "ttfa_seconds": 10.1
     },
     {
       "slug": "gemma-4-26b-a4b",
@@ -4145,9 +4174,9 @@
       "terminalbench_2_1": 38.6,
       "scicode": 36.0,
       "mmmu_pro": null,
-      "speed_tps": 57.38,
-      "ttft_seconds": 24.23,
-      "ttfa_seconds": 59.09
+      "speed_tps": 61.15,
+      "ttft_seconds": 17.03,
+      "ttfa_seconds": 49.73
     },
     {
       "slug": "gemini-3-1-flash-lite-preview",
@@ -4174,9 +4203,9 @@
       "terminalbench_2_1": 31.1,
       "scicode": 41.9,
       "mmmu_pro": 75.5,
-      "speed_tps": 347.58,
-      "ttft_seconds": 5.92,
-      "ttfa_seconds": 5.92
+      "speed_tps": 309.33,
+      "ttft_seconds": 5.43,
+      "ttfa_seconds": 5.43
     },
     {
       "slug": "grok-4-3-non-reasoning",
@@ -4203,13 +4232,13 @@
       "terminalbench_2_1": 34.1,
       "scicode": 37.4,
       "mmmu_pro": 64.8,
-      "speed_tps": 112.11,
-      "ttft_seconds": 0.72,
-      "ttfa_seconds": 0.72
+      "speed_tps": 105.44,
+      "ttft_seconds": 0.74,
+      "ttfa_seconds": 0.74
     },
     {
       "slug": "qwen3-6-35b-a3b-non-reasoning",
-      "name": "Qwen3.6 35B A3B",
+      "name": "Qwen3.6 35B A3B (Non-reasoning)",
       "creator": "Alibaba",
       "released": "2026-04-16",
       "input_price": 0.375,
@@ -4232,9 +4261,9 @@
       "terminalbench_2_1": 41.6,
       "scicode": 1.3,
       "mmmu_pro": 71.0,
-      "speed_tps": 138.96,
-      "ttft_seconds": 2.04,
-      "ttfa_seconds": 2.04
+      "speed_tps": 135.18,
+      "ttft_seconds": 2.02,
+      "ttfa_seconds": 2.02
     },
     {
       "slug": "ling-3-0-tiny",
@@ -4261,9 +4290,38 @@
       "terminalbench_2_1": 27.7,
       "scicode": 24.2,
       "mmmu_pro": null,
-      "speed_tps": 154.89,
-      "ttft_seconds": 2.68,
-      "ttfa_seconds": 15.59
+      "speed_tps": 167.88,
+      "ttft_seconds": 2.63,
+      "ttfa_seconds": 14.54
+    },
+    {
+      "slug": "granite-4-2-30b",
+      "name": "Granite 4.2 30B",
+      "creator": "IBM",
+      "released": "2026-08-25",
+      "input_price": 0.16,
+      "output_price": 0.65,
+      "blended_price": 0.28,
+      "intelligence": 23.74,
+      "coding": 29.9,
+      "agentic": 13.9,
+      "omniscience": -12.9,
+      "gpqa": 64.4,
+      "hle": 11.2,
+      "critpt": 0.3,
+      "non_hallucination": 74.4,
+      "ifbench": null,
+      "lcr": 46.7,
+      "tau2_bench": null,
+      "tau3_banking": 14.4,
+      "gdpval": 13.8,
+      "terminalbench_hard": null,
+      "terminalbench_2_1": 26.6,
+      "scicode": 36.6,
+      "mmmu_pro": null,
+      "speed_tps": 75.29,
+      "ttft_seconds": 0.84,
+      "ttfa_seconds": 27.4
     },
     {
       "slug": "nemotron-3-5-lightning",
@@ -4290,13 +4348,13 @@
       "terminalbench_2_1": 24.3,
       "scicode": 31.6,
       "mmmu_pro": null,
-      "speed_tps": 541.87,
-      "ttft_seconds": 0.5,
-      "ttfa_seconds": 4.19
+      "speed_tps": 500.71,
+      "ttft_seconds": 0.46,
+      "ttfa_seconds": 4.45
     },
     {
       "slug": "grok-4-20-0309-non-reasoning",
-      "name": "Grok 4.20 0309",
+      "name": "Grok 4.20 0309 (Non-reasoning)",
       "creator": "SpaceXAI",
       "released": "2026-03-10",
       "input_price": 2,
@@ -4348,13 +4406,13 @@
       "terminalbench_2_1": 22.9,
       "scicode": 37.9,
       "mmmu_pro": 63.2,
-      "speed_tps": 251.97,
-      "ttft_seconds": 0.39,
-      "ttfa_seconds": 8.32
+      "speed_tps": 239.47,
+      "ttft_seconds": 0.4,
+      "ttfa_seconds": 8.75
     },
     {
       "slug": "gemma-4-31b-non-reasoning",
-      "name": "Gemma 4 31B",
+      "name": "Gemma 4 31B (Non-reasoning)",
       "creator": "Google",
       "released": "2026-04-02",
       "input_price": 0.14,
@@ -4377,13 +4435,13 @@
       "terminalbench_2_1": 29.2,
       "scicode": 41.1,
       "mmmu_pro": 70.3,
-      "speed_tps": 37.48,
-      "ttft_seconds": 1.45,
-      "ttfa_seconds": 1.45
+      "speed_tps": 32.34,
+      "ttft_seconds": 1.46,
+      "ttfa_seconds": 1.46
     },
     {
       "slug": "grok-4-20-non-reasoning",
-      "name": "Grok 4.20 0309 v2",
+      "name": "Grok 4.20 0309 v2 (Non-reasoning)",
       "creator": "SpaceXAI",
       "released": "2026-04-07",
       "input_price": 1.25,
@@ -4406,9 +4464,9 @@
       "terminalbench_2_1": null,
       "scicode": 32.8,
       "mmmu_pro": 64.9,
-      "speed_tps": 100.28,
-      "ttft_seconds": 0.66,
-      "ttfa_seconds": 0.66
+      "speed_tps": 88.29,
+      "ttft_seconds": 0.6,
+      "ttfa_seconds": 0.6
     },
     {
       "slug": "gemma-4-12b",
@@ -4435,9 +4493,9 @@
       "terminalbench_2_1": 27.3,
       "scicode": 38.2,
       "mmmu_pro": 69.7,
-      "speed_tps": 109.74,
-      "ttft_seconds": 2.28,
-      "ttfa_seconds": 20.51
+      "speed_tps": 112.09,
+      "ttft_seconds": 2.43,
+      "ttfa_seconds": 20.28
     },
     {
       "slug": "qwen3-5-9b",
@@ -4464,13 +4522,13 @@
       "terminalbench_2_1": 29.2,
       "scicode": 27.6,
       "mmmu_pro": 69.2,
-      "speed_tps": 85.26,
-      "ttft_seconds": 0.72,
-      "ttfa_seconds": 24.18
+      "speed_tps": 92.38,
+      "ttft_seconds": 0.79,
+      "ttfa_seconds": 22.44
     },
     {
       "slug": "qwen3-5-9b-non-reasoning",
-      "name": "Qwen3.5 9B (FP8)",
+      "name": "Qwen3.5 9B (Non-reasoning) (FP8)",
       "creator": "Alibaba",
       "released": "2026-03-02",
       "input_price": 0.17,
@@ -4493,9 +4551,9 @@
       "terminalbench_2_1": 21.4,
       "scicode": 27.7,
       "mmmu_pro": 66.8,
-      "speed_tps": 92.89,
-      "ttft_seconds": 0.81,
-      "ttfa_seconds": 0.81
+      "speed_tps": 94.6,
+      "ttft_seconds": 0.72,
+      "ttfa_seconds": 0.72
     },
     {
       "slug": "exaone-4-5-33b",
@@ -4528,7 +4586,7 @@
     },
     {
       "slug": "gemma-4-26b-a4b-non-reasoning",
-      "name": "Gemma 4 26B A4B",
+      "name": "Gemma 4 26B A4B (Non-reasoning)",
       "creator": "Google",
       "released": "2026-04-02",
       "input_price": 0.13,
@@ -4551,9 +4609,9 @@
       "terminalbench_2_1": null,
       "scicode": 37.3,
       "mmmu_pro": 66.7,
-      "speed_tps": 34.83,
-      "ttft_seconds": 1.53,
-      "ttfa_seconds": 1.53
+      "speed_tps": 41.11,
+      "ttft_seconds": 1.59,
+      "ttfa_seconds": 1.59
     },
     {
       "slug": "qwen3-5-4b",
@@ -4580,9 +4638,9 @@
       "terminalbench_2_1": 25.8,
       "scicode": 16.1,
       "mmmu_pro": 65.4,
-      "speed_tps": 43.12,
+      "speed_tps": 34.98,
       "ttft_seconds": 0.65,
-      "ttfa_seconds": 47.03
+      "ttfa_seconds": 57.82
     },
     {
       "slug": "north-mini-code",
@@ -4604,14 +4662,14 @@
       "lcr": 36.0,
       "tau2_bench": 37.4,
       "tau3_banking": 6.4,
-      "gdpval": 2.1,
+      "gdpval": 2.2,
       "terminalbench_hard": 31.1,
       "terminalbench_2_1": 35.6,
       "scicode": 38.2,
       "mmmu_pro": null,
-      "speed_tps": 61.57,
-      "ttft_seconds": 0.48,
-      "ttfa_seconds": 32.97
+      "speed_tps": 104.37,
+      "ttft_seconds": 0.32,
+      "ttfa_seconds": 19.49
     },
     {
       "slug": "mistral-small-4",
@@ -4638,9 +4696,9 @@
       "terminalbench_2_1": 21.0,
       "scicode": 38.0,
       "mmmu_pro": 56.8,
-      "speed_tps": 164.87,
-      "ttft_seconds": 0.87,
-      "ttfa_seconds": 13.0
+      "speed_tps": 149.03,
+      "ttft_seconds": 0.89,
+      "ttfa_seconds": 14.31
     },
     {
       "slug": "granite-4-2-8b",
@@ -4662,14 +4720,14 @@
       "lcr": 43.3,
       "tau2_bench": null,
       "tau3_banking": 7.6,
-      "gdpval": 10.2,
+      "gdpval": 10.1,
       "terminalbench_hard": null,
       "terminalbench_2_1": 18.4,
       "scicode": 30.4,
       "mmmu_pro": null,
-      "speed_tps": 140.27,
-      "ttft_seconds": 0.63,
-      "ttfa_seconds": 14.88
+      "speed_tps": 145.14,
+      "ttft_seconds": 0.61,
+      "ttfa_seconds": 14.39
     },
     {
       "slug": "qwen3-5-omni-flash",
@@ -4696,9 +4754,9 @@
       "terminalbench_2_1": null,
       "scicode": 25.5,
       "mmmu_pro": 64.7,
-      "speed_tps": 253.04,
-      "ttft_seconds": 1.82,
-      "ttfa_seconds": 1.82
+      "speed_tps": 240.27,
+      "ttft_seconds": 1.89,
+      "ttfa_seconds": 1.89
     },
     {
       "slug": "jt-mini",
@@ -4754,9 +4812,9 @@
       "terminalbench_2_1": 20.6,
       "scicode": 36.1,
       "mmmu_pro": null,
-      "speed_tps": 166.99,
-      "ttft_seconds": 0.86,
-      "ttfa_seconds": 12.84
+      "speed_tps": 203.83,
+      "ttft_seconds": 1.01,
+      "ttfa_seconds": 10.82
     },
     {
       "slug": "hypernova-60b",
@@ -4778,14 +4836,14 @@
       "lcr": 35.3,
       "tau2_bench": 63.2,
       "tau3_banking": 5.6,
-      "gdpval": 7.9,
+      "gdpval": 8.0,
       "terminalbench_hard": 23.5,
       "terminalbench_2_1": 18.4,
       "scicode": 33.0,
       "mmmu_pro": null,
-      "speed_tps": 365.71,
-      "ttft_seconds": 0.8,
-      "ttfa_seconds": 6.27
+      "speed_tps": 351.07,
+      "ttft_seconds": 0.98,
+      "ttfa_seconds": 6.68
     },
     {
       "slug": "nemotron-cascade-2-30b-a3b",
@@ -4818,7 +4876,7 @@
     },
     {
       "slug": "gpt-5-4-nano-non-reasoning",
-      "name": "GPT-5.4 nano",
+      "name": "GPT-5.4 nano (Non-reasoning)",
       "creator": "OpenAI",
       "released": "2026-03-17",
       "input_price": 0.2,
@@ -4841,13 +4899,13 @@
       "terminalbench_2_1": null,
       "scicode": 35.2,
       "mmmu_pro": 43.8,
-      "speed_tps": 157.05,
-      "ttft_seconds": 0.64,
-      "ttfa_seconds": 0.64
+      "speed_tps": 167.16,
+      "ttft_seconds": 0.75,
+      "ttfa_seconds": 0.75
     },
     {
       "slug": "gpt-5-4-mini-non-reasoning",
-      "name": "GPT-5.4 mini",
+      "name": "GPT-5.4 mini (Non-reasoning)",
       "creator": "OpenAI",
       "released": "2026-03-17",
       "input_price": 0.75,
@@ -4870,9 +4928,9 @@
       "terminalbench_2_1": null,
       "scicode": 39.6,
       "mmmu_pro": 60.5,
-      "speed_tps": 165.06,
-      "ttft_seconds": 0.74,
-      "ttfa_seconds": 0.74
+      "speed_tps": 168.12,
+      "ttft_seconds": 0.77,
+      "ttfa_seconds": 0.77
     },
     {
       "slug": "g9v3-3b",
@@ -4905,7 +4963,7 @@
     },
     {
       "slug": "qwen3-5-4b-non-reasoning",
-      "name": "Qwen3.5 4B FP8",
+      "name": "Qwen3.5 4B (Non-reasoning) FP8",
       "creator": "Alibaba",
       "released": "2026-03-02",
       "input_price": 0.03,
@@ -4928,9 +4986,9 @@
       "terminalbench_2_1": 21.4,
       "scicode": 18.3,
       "mmmu_pro": 62.1,
-      "speed_tps": 37.27,
-      "ttft_seconds": 0.69,
-      "ttfa_seconds": 0.69
+      "speed_tps": 36.83,
+      "ttft_seconds": 0.68,
+      "ttfa_seconds": 0.68
     },
     {
       "slug": "nemotron-3-nano-omni-30b-a3b",
@@ -4957,9 +5015,9 @@
       "terminalbench_2_1": 6.7,
       "scicode": 27.8,
       "mmmu_pro": 53.2,
-      "speed_tps": 327.68,
-      "ttft_seconds": 0.99,
-      "ttfa_seconds": 7.09
+      "speed_tps": 323.86,
+      "ttft_seconds": 1.01,
+      "ttfa_seconds": 7.19
     },
     {
       "slug": "solar-pro-3",
@@ -4986,9 +5044,9 @@
       "terminalbench_2_1": 12.0,
       "scicode": 24.6,
       "mmmu_pro": null,
-      "speed_tps": 153.55,
-      "ttft_seconds": 2.4,
-      "ttfa_seconds": 15.42
+      "speed_tps": 157.67,
+      "ttft_seconds": 2.54,
+      "ttfa_seconds": 15.23
     },
     {
       "slug": "granite-4-2-3b",
@@ -5015,9 +5073,9 @@
       "terminalbench_2_1": 13.9,
       "scicode": 24.9,
       "mmmu_pro": null,
-      "speed_tps": 215.83,
-      "ttft_seconds": 0.46,
-      "ttfa_seconds": 9.72
+      "speed_tps": 221.23,
+      "ttft_seconds": 0.42,
+      "ttfa_seconds": 9.46
     },
     {
       "slug": "ling-2-6-flash",
@@ -5102,13 +5160,13 @@
       "terminalbench_2_1": null,
       "scicode": 29.8,
       "mmmu_pro": 62.0,
-      "speed_tps": 116.09,
-      "ttft_seconds": 2.33,
-      "ttfa_seconds": 2.33
+      "speed_tps": 111.32,
+      "ttft_seconds": 2.52,
+      "ttfa_seconds": 2.52
     },
     {
       "slug": "mistral-small-4-non-reasoning",
-      "name": "Mistral Small 4",
+      "name": "Mistral Small 4 (Non-reasoning)",
       "creator": "Mistral",
       "released": "2026-03-16",
       "input_price": 0.15,
@@ -5131,9 +5189,9 @@
       "terminalbench_2_1": null,
       "scicode": 28.1,
       "mmmu_pro": 46.5,
-      "speed_tps": 138.54,
-      "ttft_seconds": 0.85,
-      "ttfa_seconds": 0.85
+      "speed_tps": 142.87,
+      "ttft_seconds": 0.78,
+      "ttfa_seconds": 0.78
     },
     {
       "slug": "celeris-1",
@@ -5160,9 +5218,9 @@
       "terminalbench_2_1": 11.2,
       "scicode": 20.7,
       "mmmu_pro": null,
-      "speed_tps": 1574.31,
-      "ttft_seconds": 0.58,
-      "ttfa_seconds": 0.58
+      "speed_tps": 1612.45,
+      "ttft_seconds": 0.62,
+      "ttfa_seconds": 0.62
     },
     {
       "slug": "gemma-4-e4b",
@@ -5189,9 +5247,9 @@
       "terminalbench_2_1": 1.9,
       "scicode": 24.4,
       "mmmu_pro": 51.4,
-      "speed_tps": 49.83,
-      "ttft_seconds": 0.77,
-      "ttfa_seconds": 40.91
+      "speed_tps": 48.01,
+      "ttft_seconds": 0.85,
+      "ttfa_seconds": 42.51
     },
     {
       "slug": "sarvam-105b",
@@ -5340,7 +5398,7 @@
     },
     {
       "slug": "gemma-4-e4b-non-reasoning",
-      "name": "Gemma 4 E4B",
+      "name": "Gemma 4 E4B (Non-reasoning)",
       "creator": "Google",
       "released": "2026-04-03",
       "input_price": 0.02,
@@ -5363,9 +5421,9 @@
       "terminalbench_2_1": null,
       "scicode": 3.9,
       "mmmu_pro": 51.2,
-      "speed_tps": 56.76,
-      "ttft_seconds": 0.72,
-      "ttfa_seconds": 0.72
+      "speed_tps": 46.18,
+      "ttft_seconds": 0.77,
+      "ttfa_seconds": 0.77
     },
     {
       "slug": "granite-4-1-30b",
@@ -5450,9 +5508,9 @@
       "terminalbench_2_1": null,
       "scicode": 7.8,
       "mmmu_pro": null,
-      "speed_tps": 338.1,
-      "ttft_seconds": 1.51,
-      "ttfa_seconds": 7.42
+      "speed_tps": 336.3,
+      "ttft_seconds": 2.22,
+      "ttfa_seconds": 8.17
     },
     {
       "slug": "qwen3-5-2b",
@@ -5508,9 +5566,9 @@
       "terminalbench_2_1": 3.4,
       "scicode": 21.8,
       "mmmu_pro": null,
-      "speed_tps": 116.46,
-      "ttft_seconds": 0.77,
-      "ttfa_seconds": 0.77
+      "speed_tps": 113.48,
+      "ttft_seconds": 0.75,
+      "ttfa_seconds": 0.75
     },
     {
       "slug": "sarvam-30b",
@@ -5629,35 +5687,6 @@
       "ttfa_seconds": null
     },
     {
-      "slug": "lfm2-24b-a2b",
-      "name": "LFM2 24B A2B",
-      "creator": "Liquid AI",
-      "released": "2026-02-25",
-      "input_price": 0.03,
-      "output_price": 0.12,
-      "blended_price": 0.05,
-      "intelligence": 4.6,
-      "coding": null,
-      "agentic": null,
-      "omniscience": -59.1,
-      "gpqa": 47.0,
-      "hle": 4.0,
-      "critpt": 0.0,
-      "non_hallucination": 30.0,
-      "ifbench": 46.0,
-      "lcr": 0.0,
-      "tau2_bench": 11.0,
-      "tau3_banking": null,
-      "gdpval": null,
-      "terminalbench_hard": 0.0,
-      "terminalbench_2_1": null,
-      "scicode": 11.0,
-      "mmmu_pro": null,
-      "speed_tps": 118.9,
-      "ttft_seconds": 0.6,
-      "ttfa_seconds": 0.6
-    },
-    {
       "slug": "granite-4-1-3b",
       "name": "Granite 4.1 3B",
       "creator": "IBM",
@@ -5769,9 +5798,9 @@
       "terminalbench_2_1": null,
       "scicode": null,
       "mmmu_pro": null,
-      "speed_tps": 63.85,
-      "ttft_seconds": 2.09,
-      "ttfa_seconds": 2.09
+      "speed_tps": 61.66,
+      "ttft_seconds": 2.0,
+      "ttfa_seconds": 2.0
     },
     {
       "slug": "gpt-5-4-pro",
@@ -5827,9 +5856,9 @@
       "terminalbench_2_1": null,
       "scicode": null,
       "mmmu_pro": null,
-      "speed_tps": 69.96,
-      "ttft_seconds": 34.65,
-      "ttfa_seconds": 34.65
+      "speed_tps": 67.21,
+      "ttft_seconds": 32.96,
+      "ttfa_seconds": 32.96
     },
     {
       "slug": "claude-sonnet-5-high",
@@ -5856,9 +5885,9 @@
       "terminalbench_2_1": null,
       "scicode": null,
       "mmmu_pro": null,
-      "speed_tps": 67.88,
-      "ttft_seconds": 9.91,
-      "ttfa_seconds": 9.91
+      "speed_tps": 62.91,
+      "ttft_seconds": 9.12,
+      "ttfa_seconds": 9.12
     },
     {
       "slug": "claude-sonnet-5-medium",
@@ -5885,9 +5914,9 @@
       "terminalbench_2_1": null,
       "scicode": null,
       "mmmu_pro": null,
-      "speed_tps": 65.38,
-      "ttft_seconds": 3.31,
-      "ttfa_seconds": 3.31
+      "speed_tps": 64.04,
+      "ttft_seconds": 2.23,
+      "ttfa_seconds": 2.23
     },
     {
       "slug": "exaone-4-5-33b-non-reasoning",

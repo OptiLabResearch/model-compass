@@ -1,8 +1,8 @@
 {
   "version": "4.1",
   "intelligence_index_version": "4.1",
-  "scraped_at": "2026-08-27T16:53:46Z",
-  "as_of": "2026-08-27",
+  "scraped_at": "2026-08-30T21:45:28Z",
+  "as_of": "2026-08-30",
   "source_url": "https://artificialanalysis.ai/leaderboards/providers",
   "scrape_method": "AA RSC leaderboard payload via scripts/aa pipeline",
   "intelligence_index_methodology": "AA Intelligence Index v4.1 = composite of 9 evaluations: GDPval-AA v2, \u03c4\u00b3-Banking, Terminal-Bench v2.1, SciCode, HLE, GPQA Diamond, CritPt, AA-Omniscience, AA-LCR",
@@ -92,11 +92,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 70.48,
-        "ttft_seconds_total": 119.25,
-        "ttft_seconds_answer": 119.25,
+        "output_speed_tps": 68.0,
+        "ttft_seconds_total": 131.65,
+        "ttft_seconds_answer": 131.65,
         "end_to_end_500tok": {
-          "total": 126.35,
+          "total": 139.0,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -117,9 +117,9 @@
         "value_intelligence_per_dollar_blend": 3.1,
         "value_intelligence_per_dollar_task": 6.1,
         "safety_composite": 46.7,
-        "throughput_tps": 70.48,
+        "throughput_tps": 68.0,
         "speed_tier": 1,
-        "latency_ttft_seconds": 119.25,
+        "latency_ttft_seconds": 131.65,
         "latency_tier": 0
       }
     },
@@ -174,7 +174,7 @@
         "math_500": null,
         "aime": null,
         "aime25": null,
-        "gdpval_v2": 60.6,
+        "gdpval_v2": 60.5,
         "critpt": 32.3,
         "mmmu_pro": 83.4,
         "apex_agents_aa": null,
@@ -191,11 +191,11 @@
         "blended_7_2_1": 6.8,
         "blended_1_1": null,
         "cache_hit": 0.4,
-        "cache_write": 6.25
+        "cache_write": 5
       },
-      "intelligence_evaluation_total_cost_usd": 2065.63,
+      "intelligence_evaluation_total_cost_usd": 2017.29,
       "cost_per_intelligence_task_usd": {
-        "total": 1.0056,
+        "total": 0.953,
         "input": null,
         "output": null,
         "cacheRead": null,
@@ -208,11 +208,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 73.86,
-        "ttft_seconds_total": 122.11,
-        "ttft_seconds_answer": 122.11,
+        "output_speed_tps": 77.69,
+        "ttft_seconds_total": 120.41,
+        "ttft_seconds_answer": 120.41,
         "end_to_end_500tok": {
-          "total": 128.88,
+          "total": 126.85,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -231,11 +231,11 @@
       "short_name": "GPT-5.6 Sol (max)",
       "derived": {
         "value_intelligence_per_dollar_blend": 7.6,
-        "value_intelligence_per_dollar_task": 60.6,
+        "value_intelligence_per_dollar_task": 63.9,
         "safety_composite": 29.1,
-        "throughput_tps": 73.86,
+        "throughput_tps": 77.69,
         "speed_tier": 1,
-        "latency_ttft_seconds": 122.11,
+        "latency_ttft_seconds": 120.41,
         "latency_tier": 0
       }
     },
@@ -280,7 +280,7 @@
         "math_500": null,
         "aime": null,
         "aime25": null,
-        "gdpval_v2": 58.8,
+        "gdpval_v2": 57.2,
         "critpt": 23.4,
         "mmmu_pro": 80.5,
         "apex_agents_aa": 41.3,
@@ -314,11 +314,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 15.76,
-        "ttft_seconds_total": 3.46,
-        "ttft_seconds_answer": 130.35,
+        "output_speed_tps": 19.13,
+        "ttft_seconds_total": 3.75,
+        "ttft_seconds_answer": 108.27,
         "end_to_end_500tok": {
-          "total": 162.07,
+          "total": 134.4,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -339,9 +339,9 @@
         "value_intelligence_per_dollar_blend": 11.2,
         "value_intelligence_per_dollar_task": 57.7,
         "safety_composite": 52.0,
-        "throughput_tps": 15.76,
+        "throughput_tps": 19.13,
         "speed_tier": 0,
-        "latency_ttft_seconds": 130.35,
+        "latency_ttft_seconds": 108.27,
         "latency_tier": 0
       }
     },
@@ -430,11 +430,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 62.52,
-        "ttft_seconds_total": 38.45,
-        "ttft_seconds_answer": 38.45,
+        "output_speed_tps": 60.25,
+        "ttft_seconds_total": 19.26,
+        "ttft_seconds_answer": 19.26,
         "end_to_end_500tok": {
-          "total": 46.45,
+          "total": 27.56,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -455,10 +455,10 @@
         "value_intelligence_per_dollar_blend": 5.7,
         "value_intelligence_per_dollar_task": 22.3,
         "safety_composite": 59.4,
-        "throughput_tps": 62.52,
+        "throughput_tps": 60.25,
         "speed_tier": 1,
-        "latency_ttft_seconds": 38.45,
-        "latency_tier": 0
+        "latency_ttft_seconds": 19.26,
+        "latency_tier": 1
       }
     },
     {
@@ -512,7 +512,7 @@
         "math_500": null,
         "aime": null,
         "aime25": null,
-        "gdpval_v2": 53.4,
+        "gdpval_v2": 53.3,
         "critpt": 30.0,
         "mmmu_pro": 80.7,
         "apex_agents_aa": 38.9,
@@ -546,11 +546,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 160.71,
-        "ttft_seconds_total": 150.04,
-        "ttft_seconds_answer": 150.04,
+        "output_speed_tps": 135.11,
+        "ttft_seconds_total": 176.77,
+        "ttft_seconds_answer": 176.77,
         "end_to_end_500tok": {
-          "total": 153.15,
+          "total": 180.47,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -571,9 +571,9 @@
         "value_intelligence_per_dollar_blend": 9.1,
         "value_intelligence_per_dollar_task": 77.4,
         "safety_composite": 29.9,
-        "throughput_tps": 160.71,
+        "throughput_tps": 135.11,
         "speed_tier": 2,
-        "latency_ttft_seconds": 150.04,
+        "latency_ttft_seconds": 176.77,
         "latency_tier": 0
       }
     },
@@ -662,11 +662,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 55.23,
-        "ttft_seconds_total": 14.21,
-        "ttft_seconds_answer": 14.21,
+        "output_speed_tps": 52.97,
+        "ttft_seconds_total": 12.21,
+        "ttft_seconds_answer": 12.21,
         "end_to_end_500tok": {
-          "total": 23.26,
+          "total": 21.65,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -687,9 +687,9 @@
         "value_intelligence_per_dollar_blend": 18.6,
         "value_intelligence_per_dollar_task": 131.0,
         "safety_composite": 49.8,
-        "throughput_tps": 55.23,
+        "throughput_tps": 52.97,
         "speed_tier": 1,
-        "latency_ttft_seconds": 14.21,
+        "latency_ttft_seconds": 12.21,
         "latency_tier": 1
       }
     },
@@ -744,7 +744,7 @@
         "math_500": null,
         "aime": null,
         "aime25": null,
-        "gdpval_v2": 54.3,
+        "gdpval_v2": 54.2,
         "critpt": 16.9,
         "mmmu_pro": 77.3,
         "apex_agents_aa": null,
@@ -778,11 +778,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 79.6,
-        "ttft_seconds_total": 234.18,
-        "ttft_seconds_answer": 234.18,
+        "output_speed_tps": 66.21,
+        "ttft_seconds_total": 202.98,
+        "ttft_seconds_answer": 202.98,
         "end_to_end_500tok": {
-          "total": 240.46,
+          "total": 210.54,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -803,9 +803,9 @@
         "value_intelligence_per_dollar_blend": 13.8,
         "value_intelligence_per_dollar_task": 28.1,
         "safety_composite": 58.5,
-        "throughput_tps": 79.6,
+        "throughput_tps": 66.21,
         "speed_tier": 1,
-        "latency_ttft_seconds": 234.18,
+        "latency_ttft_seconds": 202.98,
         "latency_tier": 0
       }
     },
@@ -860,7 +860,7 @@
         "math_500": null,
         "aime": null,
         "aime25": null,
-        "gdpval_v2": 54.1,
+        "gdpval_v2": 53.8,
         "critpt": 18.0,
         "mmmu_pro": null,
         "apex_agents_aa": 24.0,
@@ -894,11 +894,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 63.49,
-        "ttft_seconds_total": 2.76,
-        "ttft_seconds_answer": 34.26,
+        "output_speed_tps": 65.19,
+        "ttft_seconds_total": 2.86,
+        "ttft_seconds_answer": 33.54,
         "end_to_end_500tok": {
-          "total": 42.14,
+          "total": 41.21,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -919,9 +919,9 @@
         "value_intelligence_per_dollar_blend": 26.9,
         "value_intelligence_per_dollar_task": 184.0,
         "safety_composite": 24.4,
-        "throughput_tps": 63.49,
+        "throughput_tps": 65.19,
         "speed_tier": 1,
-        "latency_ttft_seconds": 34.26,
+        "latency_ttft_seconds": 33.54,
         "latency_tier": 0
       }
     },
@@ -1000,11 +1000,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 205.98,
-        "ttft_seconds_total": 1.36,
-        "ttft_seconds_answer": 11.07,
+        "output_speed_tps": 196.61,
+        "ttft_seconds_total": 1.33,
+        "ttft_seconds_answer": 11.5,
         "end_to_end_500tok": {
-          "total": 13.49,
+          "total": 14.04,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -1025,9 +1025,9 @@
         "value_intelligence_per_dollar_blend": 26.6,
         "value_intelligence_per_dollar_task": 182.0,
         "safety_composite": 51.3,
-        "throughput_tps": 205.98,
+        "throughput_tps": 196.61,
         "speed_tier": 2,
-        "latency_ttft_seconds": 11.07,
+        "latency_ttft_seconds": 11.5,
         "latency_tier": 1
       }
     },
@@ -1082,7 +1082,7 @@
         "math_500": null,
         "aime": null,
         "aime25": null,
-        "gdpval_v2": 50.1,
+        "gdpval_v2": 49.9,
         "critpt": 20.9,
         "mmmu_pro": null,
         "apex_agents_aa": 33.7,
@@ -1116,11 +1116,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 97.1,
-        "ttft_seconds_total": 1.97,
-        "ttft_seconds_answer": 22.56,
+        "output_speed_tps": 96.92,
+        "ttft_seconds_total": 2.08,
+        "ttft_seconds_answer": 22.72,
         "end_to_end_500tok": {
-          "total": 27.71,
+          "total": 27.88,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -1141,9 +1141,9 @@
         "value_intelligence_per_dollar_blend": 26.3,
         "value_intelligence_per_dollar_task": 131.7,
         "safety_composite": 65.3,
-        "throughput_tps": 97.1,
+        "throughput_tps": 96.92,
         "speed_tier": 1,
-        "latency_ttft_seconds": 22.56,
+        "latency_ttft_seconds": 22.72,
         "latency_tier": 0
       }
     },
@@ -1198,7 +1198,7 @@
         "math_500": null,
         "aime": null,
         "aime25": null,
-        "gdpval_v2": 53.7,
+        "gdpval_v2": 53.5,
         "critpt": 20.6,
         "mmmu_pro": 78.5,
         "apex_agents_aa": 35.8,
@@ -1232,11 +1232,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 230.43,
-        "ttft_seconds_total": 83.43,
-        "ttft_seconds_answer": 83.43,
+        "output_speed_tps": 196.69,
+        "ttft_seconds_total": 123.21,
+        "ttft_seconds_answer": 123.21,
         "end_to_end_500tok": {
-          "total": 85.6,
+          "total": 125.75,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -1257,9 +1257,9 @@
         "value_intelligence_per_dollar_blend": 21.1,
         "value_intelligence_per_dollar_task": 191.4,
         "safety_composite": 25.4,
-        "throughput_tps": 230.43,
+        "throughput_tps": 196.69,
         "speed_tier": 2,
-        "latency_ttft_seconds": 83.43,
+        "latency_ttft_seconds": 123.21,
         "latency_tier": 0
       }
     },
@@ -1314,7 +1314,7 @@
         "math_500": null,
         "aime": null,
         "aime25": null,
-        "gdpval_v2": 52.6,
+        "gdpval_v2": 52.4,
         "critpt": 16.6,
         "mmmu_pro": null,
         "apex_agents_aa": null,
@@ -1348,11 +1348,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 170.09,
-        "ttft_seconds_total": 0.92,
-        "ttft_seconds_answer": 12.68,
+        "output_speed_tps": 146.49,
+        "ttft_seconds_total": 0.76,
+        "ttft_seconds_answer": 14.42,
         "end_to_end_500tok": {
-          "total": 15.62,
+          "total": 17.83,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -1373,9 +1373,9 @@
         "value_intelligence_per_dollar_blend": 431.4,
         "value_intelligence_per_dollar_task": 404.1,
         "safety_composite": 25.7,
-        "throughput_tps": 170.09,
+        "throughput_tps": 146.49,
         "speed_tier": 2,
-        "latency_ttft_seconds": 12.68,
+        "latency_ttft_seconds": 14.42,
         "latency_tier": 1
       }
     },
@@ -1420,7 +1420,7 @@
         "math_500": null,
         "aime": null,
         "aime25": null,
-        "gdpval_v2": 45.9,
+        "gdpval_v2": 45.7,
         "critpt": 10.6,
         "mmmu_pro": 83.2,
         "apex_agents_aa": null,
@@ -1454,11 +1454,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 189.79,
-        "ttft_seconds_total": 17.72,
-        "ttft_seconds_answer": 17.72,
+        "output_speed_tps": 173.07,
+        "ttft_seconds_total": 18.03,
+        "ttft_seconds_answer": 18.03,
         "end_to_end_500tok": {
-          "total": 20.36,
+          "total": 20.92,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -1479,9 +1479,9 @@
         "value_intelligence_per_dollar_blend": 34.4,
         "value_intelligence_per_dollar_task": 149.9,
         "safety_composite": 47.3,
-        "throughput_tps": 189.79,
+        "throughput_tps": 173.07,
         "speed_tier": 2,
-        "latency_ttft_seconds": 17.72,
+        "latency_ttft_seconds": 18.03,
         "latency_tier": 1
       }
     },
@@ -1570,11 +1570,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 130.43,
-        "ttft_seconds_total": 29.53,
-        "ttft_seconds_answer": 29.53,
+        "output_speed_tps": 121.67,
+        "ttft_seconds_total": 27.4,
+        "ttft_seconds_answer": 27.4,
         "end_to_end_500tok": {
-          "total": 33.37,
+          "total": 31.51,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -1595,9 +1595,9 @@
         "value_intelligence_per_dollar_blend": 10.6,
         "value_intelligence_per_dollar_task": 112.3,
         "safety_composite": 48.6,
-        "throughput_tps": 130.43,
+        "throughput_tps": 121.67,
         "speed_tier": 2,
-        "latency_ttft_seconds": 29.53,
+        "latency_ttft_seconds": 27.4,
         "latency_tier": 0
       }
     },
@@ -1652,7 +1652,7 @@
         "math_500": null,
         "aime": null,
         "aime25": null,
-        "gdpval_v2": 38.3,
+        "gdpval_v2": 38.2,
         "critpt": 13.4,
         "mmmu_pro": null,
         "apex_agents_aa": null,
@@ -1686,11 +1686,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 201.61,
-        "ttft_seconds_total": 2.27,
-        "ttft_seconds_answer": 14.21,
+        "output_speed_tps": 204.84,
+        "ttft_seconds_total": 2.25,
+        "ttft_seconds_answer": 14.01,
         "end_to_end_500tok": {
-          "total": 16.69,
+          "total": 16.45,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -1711,9 +1711,9 @@
         "value_intelligence_per_dollar_blend": 12.5,
         "value_intelligence_per_dollar_task": 68.8,
         "safety_composite": 63.3,
-        "throughput_tps": 201.61,
+        "throughput_tps": 204.84,
         "speed_tier": 2,
-        "latency_ttft_seconds": 14.21,
+        "latency_ttft_seconds": 14.01,
         "latency_tier": 1
       }
     },
@@ -1768,7 +1768,7 @@
         "math_500": null,
         "aime": null,
         "aime25": null,
-        "gdpval_v2": 44.1,
+        "gdpval_v2": 44.0,
         "critpt": 3.7,
         "mmmu_pro": 78.5,
         "apex_agents_aa": null,
@@ -1884,7 +1884,7 @@
         "math_500": null,
         "aime": null,
         "aime25": null,
-        "gdpval_v2": 38.1,
+        "gdpval_v2": 38.0,
         "critpt": 4.0,
         "mmmu_pro": null,
         "apex_agents_aa": 2.4,
@@ -1918,11 +1918,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 41.85,
-        "ttft_seconds_total": 4.33,
-        "ttft_seconds_answer": 52.12,
+        "output_speed_tps": 33.17,
+        "ttft_seconds_total": 4.76,
+        "ttft_seconds_answer": 65.06,
         "end_to_end_500tok": {
-          "total": 64.07,
+          "total": 80.14,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -1943,9 +1943,9 @@
         "value_intelligence_per_dollar_blend": 79.4,
         "value_intelligence_per_dollar_task": 1264.9,
         "safety_composite": 62.3,
-        "throughput_tps": 41.85,
+        "throughput_tps": 33.17,
         "speed_tier": 0,
-        "latency_ttft_seconds": 52.12,
+        "latency_ttft_seconds": 65.06,
         "latency_tier": 0
       }
     },
@@ -2034,11 +2034,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 56.36,
-        "ttft_seconds_total": 2.12,
-        "ttft_seconds_answer": 37.61,
+        "output_speed_tps": 56.05,
+        "ttft_seconds_total": 2.16,
+        "ttft_seconds_answer": 37.84,
         "end_to_end_500tok": {
-          "total": 46.48,
+          "total": 46.76,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -2059,9 +2059,9 @@
         "value_intelligence_per_dollar_blend": 56.2,
         "value_intelligence_per_dollar_task": 231.2,
         "safety_composite": 59.1,
-        "throughput_tps": 56.36,
+        "throughput_tps": 56.05,
         "speed_tier": 1,
-        "latency_ttft_seconds": 37.61,
+        "latency_ttft_seconds": 37.84,
         "latency_tier": 0
       }
     },
@@ -2116,7 +2116,7 @@
         "math_500": null,
         "aime": null,
         "aime25": null,
-        "gdpval_v2": 32.4,
+        "gdpval_v2": 32.3,
         "critpt": 3.7,
         "mmmu_pro": 75.4,
         "apex_agents_aa": null,
@@ -2150,11 +2150,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 69.73,
-        "ttft_seconds_total": 3.07,
-        "ttft_seconds_answer": 31.75,
+        "output_speed_tps": 65.16,
+        "ttft_seconds_total": 2.64,
+        "ttft_seconds_answer": 33.33,
         "end_to_end_500tok": {
-          "total": 38.92,
+          "total": 41.0,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -2175,9 +2175,9 @@
         "value_intelligence_per_dollar_blend": 211.3,
         "value_intelligence_per_dollar_task": 3657.7,
         "safety_composite": 56.1,
-        "throughput_tps": 69.73,
+        "throughput_tps": 65.16,
         "speed_tier": 1,
-        "latency_ttft_seconds": 31.75,
+        "latency_ttft_seconds": 33.33,
         "latency_tier": 0
       }
     },
@@ -2222,7 +2222,7 @@
         "math_500": null,
         "aime": null,
         "aime25": null,
-        "gdpval_v2": 66.5,
+        "gdpval_v2": 66.2,
         "critpt": 29.1,
         "mmmu_pro": 84.7,
         "apex_agents_aa": null,
@@ -2256,11 +2256,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 53.06,
-        "ttft_seconds_total": 58.75,
-        "ttft_seconds_answer": 58.75,
+        "output_speed_tps": 54.03,
+        "ttft_seconds_total": 68.26,
+        "ttft_seconds_answer": 68.26,
         "end_to_end_500tok": {
-          "total": 68.18,
+          "total": 77.51,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -2281,9 +2281,9 @@
         "value_intelligence_per_dollar_blend": 6.3,
         "value_intelligence_per_dollar_task": 19.0,
         "safety_composite": 48.7,
-        "throughput_tps": 53.06,
+        "throughput_tps": 54.03,
         "speed_tier": 1,
-        "latency_ttft_seconds": 58.75,
+        "latency_ttft_seconds": 68.26,
         "latency_tier": 0
       }
     },
@@ -2362,11 +2362,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 54.2,
-        "ttft_seconds_total": 29.29,
-        "ttft_seconds_answer": 29.29,
+        "output_speed_tps": 51.89,
+        "ttft_seconds_total": 32.65,
+        "ttft_seconds_answer": 32.65,
         "end_to_end_500tok": {
-          "total": 38.52,
+          "total": 42.28,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -2387,9 +2387,9 @@
         "value_intelligence_per_dollar_blend": 6.3,
         "value_intelligence_per_dollar_task": 34.7,
         "safety_composite": 49.3,
-        "throughput_tps": 54.2,
+        "throughput_tps": 51.89,
         "speed_tier": 1,
-        "latency_ttft_seconds": 29.29,
+        "latency_ttft_seconds": 32.65,
         "latency_tier": 0
       }
     },
@@ -2468,11 +2468,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 54.9,
-        "ttft_seconds_total": 19.21,
-        "ttft_seconds_answer": 19.21,
+        "output_speed_tps": 52.4,
+        "ttft_seconds_total": 22.28,
+        "ttft_seconds_answer": 22.28,
         "end_to_end_500tok": {
-          "total": 28.32,
+          "total": 31.82,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -2493,10 +2493,10 @@
         "value_intelligence_per_dollar_blend": 6.1,
         "value_intelligence_per_dollar_task": 50.1,
         "safety_composite": 47.9,
-        "throughput_tps": 54.9,
+        "throughput_tps": 52.4,
         "speed_tier": 1,
-        "latency_ttft_seconds": 19.21,
-        "latency_tier": 1
+        "latency_ttft_seconds": 22.28,
+        "latency_tier": 0
       }
     },
     {
@@ -2574,11 +2574,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 57.75,
-        "ttft_seconds_total": 42.98,
-        "ttft_seconds_answer": 42.98,
+        "output_speed_tps": 58.54,
+        "ttft_seconds_total": 40.28,
+        "ttft_seconds_answer": 40.28,
         "end_to_end_500tok": {
-          "total": 51.64,
+          "total": 48.82,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -2599,9 +2599,9 @@
         "value_intelligence_per_dollar_blend": 20.3,
         "value_intelligence_per_dollar_task": 65.0,
         "safety_composite": 63.8,
-        "throughput_tps": 57.75,
+        "throughput_tps": 58.54,
         "speed_tier": 1,
-        "latency_ttft_seconds": 42.98,
+        "latency_ttft_seconds": 40.28,
         "latency_tier": 0
       }
     },
@@ -2646,7 +2646,7 @@
         "math_500": null,
         "aime": null,
         "aime25": null,
-        "gdpval_v2": 62.8,
+        "gdpval_v2": 62.7,
         "critpt": 19.7,
         "mmmu_pro": null,
         "apex_agents_aa": null,
@@ -2680,11 +2680,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 58.5,
-        "ttft_seconds_total": 38.22,
-        "ttft_seconds_answer": 38.22,
+        "output_speed_tps": 56.78,
+        "ttft_seconds_total": 39.75,
+        "ttft_seconds_answer": 39.75,
         "end_to_end_500tok": {
-          "total": 46.77,
+          "total": 48.56,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -2705,9 +2705,9 @@
         "value_intelligence_per_dollar_blend": 20.0,
         "value_intelligence_per_dollar_task": 48.8,
         "safety_composite": 69.6,
-        "throughput_tps": 58.5,
+        "throughput_tps": 56.78,
         "speed_tier": 1,
-        "latency_ttft_seconds": 38.22,
+        "latency_ttft_seconds": 39.75,
         "latency_tier": 0
       }
     },
@@ -2719,7 +2719,7 @@
       "released": "2026-08-18",
       "knowledge_cutoff": null,
       "is_reasoning": true,
-      "is_open_weights": false,
+      "is_open_weights": true,
       "deprecated": false,
       "commercial_allowed": null,
       "license": null,
@@ -2752,7 +2752,7 @@
         "math_500": null,
         "aime": null,
         "aime25": null,
-        "gdpval_v2": 63.1,
+        "gdpval_v2": 62.9,
         "critpt": 19.1,
         "mmmu_pro": null,
         "apex_agents_aa": null,
@@ -2786,9 +2786,9 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 66.51,
-        "ttft_seconds_total": 1.57,
-        "ttft_seconds_answer": 31.64,
+        "output_speed_tps": 66.62,
+        "ttft_seconds_total": 1.63,
+        "ttft_seconds_answer": 31.65,
         "end_to_end_500tok": {
           "total": 39.15,
           "input": null,
@@ -2811,9 +2811,9 @@
         "value_intelligence_per_dollar_blend": 27.7,
         "value_intelligence_per_dollar_task": 87.1,
         "safety_composite": 66.1,
-        "throughput_tps": 66.51,
+        "throughput_tps": 66.62,
         "speed_tier": 1,
-        "latency_ttft_seconds": 31.64,
+        "latency_ttft_seconds": 31.65,
         "latency_tier": 0
       }
     },
@@ -2858,7 +2858,7 @@
         "math_500": null,
         "aime": null,
         "aime25": null,
-        "gdpval_v2": 61.8,
+        "gdpval_v2": 61.6,
         "critpt": 17.7,
         "mmmu_pro": null,
         "apex_agents_aa": null,
@@ -2892,11 +2892,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 57.37,
-        "ttft_seconds_total": 33.34,
-        "ttft_seconds_answer": 33.34,
+        "output_speed_tps": 56.63,
+        "ttft_seconds_total": 34.07,
+        "ttft_seconds_answer": 34.07,
         "end_to_end_500tok": {
-          "total": 42.05,
+          "total": 42.9,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -2917,9 +2917,9 @@
         "value_intelligence_per_dollar_blend": 19.7,
         "value_intelligence_per_dollar_task": 75.4,
         "safety_composite": 69.2,
-        "throughput_tps": 57.37,
+        "throughput_tps": 56.63,
         "speed_tier": 1,
-        "latency_ttft_seconds": 33.34,
+        "latency_ttft_seconds": 34.07,
         "latency_tier": 0
       }
     },
@@ -2991,11 +2991,11 @@
         "blended_7_2_1": 6.8,
         "blended_1_1": null,
         "cache_hit": 0.4,
-        "cache_write": 6.25
+        "cache_write": 5
       },
-      "intelligence_evaluation_total_cost_usd": 1145.78,
+      "intelligence_evaluation_total_cost_usd": 1107.55,
       "cost_per_intelligence_task_usd": {
-        "total": 0.6711,
+        "total": 0.6279,
         "input": null,
         "output": null,
         "cacheRead": null,
@@ -3008,11 +3008,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 72.94,
-        "ttft_seconds_total": 50.12,
-        "ttft_seconds_answer": 50.12,
+        "output_speed_tps": 80.65,
+        "ttft_seconds_total": 52.39,
+        "ttft_seconds_answer": 52.39,
         "end_to_end_500tok": {
-          "total": 56.98,
+          "total": 58.59,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -3031,11 +3031,11 @@
       "short_name": "GPT-5.6 Sol (xhigh)",
       "derived": {
         "value_intelligence_per_dollar_blend": 7.4,
-        "value_intelligence_per_dollar_task": 87.9,
+        "value_intelligence_per_dollar_task": 94.0,
         "safety_composite": 28.5,
-        "throughput_tps": 72.94,
+        "throughput_tps": 80.65,
         "speed_tier": 1,
-        "latency_ttft_seconds": 50.12,
+        "latency_ttft_seconds": 52.39,
         "latency_tier": 0
       }
     },
@@ -3114,11 +3114,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 52.95,
-        "ttft_seconds_total": 4.97,
-        "ttft_seconds_answer": 4.97,
+        "output_speed_tps": 49.45,
+        "ttft_seconds_total": 4.12,
+        "ttft_seconds_answer": 4.12,
         "end_to_end_500tok": {
-          "total": 14.41,
+          "total": 14.23,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -3139,9 +3139,9 @@
         "value_intelligence_per_dollar_blend": 5.9,
         "value_intelligence_per_dollar_task": 61.6,
         "safety_composite": 47.0,
-        "throughput_tps": 52.95,
-        "speed_tier": 1,
-        "latency_ttft_seconds": 4.97,
+        "throughput_tps": 49.45,
+        "speed_tier": 0,
+        "latency_ttft_seconds": 4.12,
         "latency_tier": 2
       }
     },
@@ -3186,7 +3186,7 @@
         "math_500": null,
         "aime": null,
         "aime25": null,
-        "gdpval_v2": 61.2,
+        "gdpval_v2": 61.0,
         "critpt": 20.0,
         "mmmu_pro": 82.3,
         "apex_agents_aa": null,
@@ -3220,11 +3220,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 20.87,
-        "ttft_seconds_total": 2.5,
-        "ttft_seconds_answer": 98.32,
+        "output_speed_tps": 27.86,
+        "ttft_seconds_total": 2.58,
+        "ttft_seconds_answer": 74.37,
         "end_to_end_500tok": {
-          "total": 122.28,
+          "total": 92.32,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -3245,9 +3245,9 @@
         "value_intelligence_per_dollar_blend": 19.4,
         "value_intelligence_per_dollar_task": 63.6,
         "safety_composite": 58.2,
-        "throughput_tps": 20.87,
+        "throughput_tps": 27.86,
         "speed_tier": 0,
-        "latency_ttft_seconds": 98.32,
+        "latency_ttft_seconds": 74.37,
         "latency_tier": 0
       }
     },
@@ -3326,11 +3326,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 23.92,
-        "ttft_seconds_total": 2.59,
-        "ttft_seconds_answer": 86.2,
+        "output_speed_tps": 28.64,
+        "ttft_seconds_total": 2.55,
+        "ttft_seconds_answer": 72.39,
         "end_to_end_500tok": {
-          "total": 107.11,
+          "total": 89.85,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -3351,9 +3351,9 @@
         "value_intelligence_per_dollar_blend": 19.2,
         "value_intelligence_per_dollar_task": 71.5,
         "safety_composite": 59.6,
-        "throughput_tps": 23.92,
+        "throughput_tps": 28.64,
         "speed_tier": 0,
-        "latency_ttft_seconds": 86.2,
+        "latency_ttft_seconds": 72.39,
         "latency_tier": 0
       }
     },
@@ -3398,7 +3398,7 @@
         "math_500": null,
         "aime": null,
         "aime25": null,
-        "gdpval_v2": 63.5,
+        "gdpval_v2": 63.2,
         "critpt": 15.4,
         "mmmu_pro": null,
         "apex_agents_aa": null,
@@ -3414,12 +3414,12 @@
         "blended_3_1": 0.24,
         "blended_7_2_1": 0.2,
         "blended_1_1": null,
-        "cache_hit": 0.026,
+        "cache_hit": null,
         "cache_write": null
       },
       "intelligence_evaluation_total_cost_usd": 138.02,
       "cost_per_intelligence_task_usd": {
-        "total": 0.0869,
+        "total": 0.3365,
         "input": null,
         "output": null,
         "cacheRead": null,
@@ -3432,11 +3432,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 49.42,
-        "ttft_seconds_total": 1.47,
-        "ttft_seconds_answer": 41.94,
+        "output_speed_tps": 205.51,
+        "ttft_seconds_total": 0.46,
+        "ttft_seconds_answer": 10.19,
         "end_to_end_500tok": {
-          "total": 52.06,
+          "total": 12.63,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -3455,12 +3455,12 @@
       "short_name": "GLM-5.3-Flash",
       "derived": {
         "value_intelligence_per_dollar_blend": 239.4,
-        "value_intelligence_per_dollar_task": 661.2,
+        "value_intelligence_per_dollar_task": 170.8,
         "safety_composite": 66.4,
-        "throughput_tps": 49.42,
-        "speed_tier": 0,
-        "latency_ttft_seconds": 41.94,
-        "latency_tier": 0
+        "throughput_tps": 205.51,
+        "speed_tier": 2,
+        "latency_ttft_seconds": 10.19,
+        "latency_tier": 1
       }
     },
     {
@@ -3531,11 +3531,11 @@
         "blended_7_2_1": 6.8,
         "blended_1_1": null,
         "cache_hit": 0.4,
-        "cache_write": 6.25
+        "cache_write": 5
       },
-      "intelligence_evaluation_total_cost_usd": 725.58,
+      "intelligence_evaluation_total_cost_usd": 699.68,
       "cost_per_intelligence_task_usd": {
-        "total": 0.456,
+        "total": 0.4269,
         "input": null,
         "output": null,
         "cacheRead": null,
@@ -3548,11 +3548,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 74.79,
-        "ttft_seconds_total": 11.06,
-        "ttft_seconds_answer": 11.06,
+        "output_speed_tps": 74.28,
+        "ttft_seconds_total": 13.0,
+        "ttft_seconds_answer": 13.0,
         "end_to_end_500tok": {
-          "total": 17.75,
+          "total": 19.73,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -3571,11 +3571,11 @@
       "short_name": "GPT-5.6 Sol (high)",
       "derived": {
         "value_intelligence_per_dollar_blend": 7.2,
-        "value_intelligence_per_dollar_task": 125.7,
+        "value_intelligence_per_dollar_task": 134.3,
         "safety_composite": 28.2,
-        "throughput_tps": 74.79,
+        "throughput_tps": 74.28,
         "speed_tier": 1,
-        "latency_ttft_seconds": 11.06,
+        "latency_ttft_seconds": 13.0,
         "latency_tier": 1
       }
     },
@@ -3620,7 +3620,7 @@
         "math_500": null,
         "aime": null,
         "aime25": null,
-        "gdpval_v2": 55.6,
+        "gdpval_v2": 55.8,
         "critpt": 17.7,
         "mmmu_pro": null,
         "apex_agents_aa": null,
@@ -3727,7 +3727,7 @@
         "math_500": null,
         "aime": null,
         "aime25": null,
-        "gdpval_v2": 49.2,
+        "gdpval_v2": 49.1,
         "critpt": 27.1,
         "mmmu_pro": 79.9,
         "apex_agents_aa": 37.7,
@@ -3761,11 +3761,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 82.69,
-        "ttft_seconds_total": 66.89,
-        "ttft_seconds_answer": 66.89,
+        "output_speed_tps": 82.9,
+        "ttft_seconds_total": 59.21,
+        "ttft_seconds_answer": 59.21,
         "end_to_end_500tok": {
-          "total": 72.94,
+          "total": 65.24,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -3786,9 +3786,9 @@
         "value_intelligence_per_dollar_blend": 5.0,
         "value_intelligence_per_dollar_task": 47.3,
         "safety_composite": 29.1,
-        "throughput_tps": 82.69,
+        "throughput_tps": 82.9,
         "speed_tier": 1,
-        "latency_ttft_seconds": 66.89,
+        "latency_ttft_seconds": 59.21,
         "latency_tier": 0
       }
     },
@@ -3833,7 +3833,7 @@
         "math_500": null,
         "aime": null,
         "aime25": null,
-        "gdpval_v2": 51.1,
+        "gdpval_v2": 50.8,
         "critpt": 14.3,
         "mmmu_pro": 85.5,
         "apex_agents_aa": null,
@@ -3868,10 +3868,10 @@
       "output_tokens_per_task": null,
       "performance": {
         "output_speed_tps": 329.73,
-        "ttft_seconds_total": 12.55,
-        "ttft_seconds_answer": 12.55,
+        "ttft_seconds_total": 9.13,
+        "ttft_seconds_answer": 9.13,
         "end_to_end_500tok": {
-          "total": 14.07,
+          "total": 10.65,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -3894,8 +3894,114 @@
         "safety_composite": 43.7,
         "throughput_tps": 329.73,
         "speed_tier": 2,
-        "latency_ttft_seconds": 12.55,
+        "latency_ttft_seconds": 9.13,
         "latency_tier": 1
+      }
+    },
+    {
+      "name": "Qwen3.8-Flash-Next",
+      "slug": "qwen3-8-flash-next",
+      "aa_url": "https://artificialanalysis.ai/models/qwen3-8-flash-next",
+      "creator": "Alibaba",
+      "released": "2026-08-26",
+      "knowledge_cutoff": null,
+      "is_reasoning": true,
+      "is_open_weights": true,
+      "deprecated": false,
+      "commercial_allowed": null,
+      "license": null,
+      "license_url": null,
+      "size_class": "large",
+      "context_tokens": 1000000,
+      "parameters_billions": null,
+      "active_params_billions": null,
+      "input_modalities": null,
+      "output_modalities": null,
+      "composite": {
+        "intelligence_index_v4_1": 55.81,
+        "coding_index": 73.1,
+        "math_index": null,
+        "agentic_index": 56.4,
+        "omniscience_index": -9.7
+      },
+      "benchmarks": {
+        "gpqa_diamond": 92.3,
+        "hle": 38.0,
+        "scicode": 46.9,
+        "ifbench": null,
+        "lcr": 77.0,
+        "tau2_bench": null,
+        "tau3_banking": 45.4,
+        "terminalbench_hard": null,
+        "terminalbench_v2_1": 86.1,
+        "mmlu_pro": null,
+        "livecodebench": null,
+        "math_500": null,
+        "aime": null,
+        "aime25": null,
+        "gdpval_v2": 62.1,
+        "critpt": 11.1,
+        "mmmu_pro": 79.8,
+        "apex_agents_aa": null,
+        "it_bench_sre": null,
+        "omniscience_accuracy": 24.5,
+        "omniscience_hallucination_rate": null,
+        "omniscience_non_halluc": 54.7,
+        "omniscience": 0
+      },
+      "pricing_per_m_tokens": {
+        "input": 0.15,
+        "output": 0.47,
+        "blended_3_1": 0.23,
+        "blended_7_2_1": 0.2,
+        "blended_1_1": null,
+        "cache_hit": 0.016,
+        "cache_write": null
+      },
+      "intelligence_evaluation_total_cost_usd": 156.91,
+      "cost_per_intelligence_task_usd": {
+        "total": 0.097,
+        "input": null,
+        "output": null,
+        "cacheRead": null,
+        "cacheWrite": null,
+        "nonCacheInput": null,
+        "reasoning": null,
+        "answer": null
+      },
+      "cost_per_eval_breakdown_usd": {},
+      "time_per_task_seconds": null,
+      "output_tokens_per_task": null,
+      "performance": {
+        "output_speed_tps": 83.28,
+        "ttft_seconds_total": 2.74,
+        "ttft_seconds_answer": 26.75,
+        "end_to_end_500tok": {
+          "total": 32.75,
+          "input": null,
+          "reasoning": 0,
+          "answer": null
+        }
+      },
+      "output_speed_by_prompt_length": [],
+      "featured": false,
+      "openrouter_slug": null,
+      "note": null,
+      "has_rich_data": true,
+      "data_sources": {
+        "documented_free_api": false,
+        "page_enrichment": false,
+        "aa_pipeline": true
+      },
+      "short_name": "Qwen3.8-Flash-Next",
+      "derived": {
+        "value_intelligence_per_dollar_blend": 242.7,
+        "value_intelligence_per_dollar_task": 575.4,
+        "safety_composite": 55.1,
+        "throughput_tps": 83.28,
+        "speed_tier": 1,
+        "latency_ttft_seconds": 26.75,
+        "latency_tier": 0
       }
     },
     {
@@ -3966,11 +4072,11 @@
         "blended_7_2_1": 6.8,
         "blended_1_1": null,
         "cache_hit": 0.4,
-        "cache_write": 6.25
+        "cache_write": 5
       },
-      "intelligence_evaluation_total_cost_usd": 448.89,
+      "intelligence_evaluation_total_cost_usd": 429.35,
       "cost_per_intelligence_task_usd": {
-        "total": 0.3136,
+        "total": 0.2902,
         "input": null,
         "output": null,
         "cacheRead": null,
@@ -3983,11 +4089,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 72.88,
-        "ttft_seconds_total": 4.67,
-        "ttft_seconds_answer": 4.67,
+        "output_speed_tps": 70.43,
+        "ttft_seconds_total": 4.73,
+        "ttft_seconds_answer": 4.73,
         "end_to_end_500tok": {
-          "total": 11.53,
+          "total": 11.83,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -4006,11 +4112,11 @@
       "short_name": "GPT-5.6 Sol (medium)",
       "derived": {
         "value_intelligence_per_dollar_blend": 6.9,
-        "value_intelligence_per_dollar_task": 177.2,
+        "value_intelligence_per_dollar_task": 191.5,
         "safety_composite": 27.7,
-        "throughput_tps": 72.88,
+        "throughput_tps": 70.43,
         "speed_tier": 1,
-        "latency_ttft_seconds": 4.67,
+        "latency_ttft_seconds": 4.73,
         "latency_tier": 2
       }
     },
@@ -4099,11 +4205,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 51.93,
-        "ttft_seconds_total": 17.82,
-        "ttft_seconds_answer": 17.82,
+        "output_speed_tps": 46.15,
+        "ttft_seconds_total": 21.04,
+        "ttft_seconds_answer": 21.04,
         "end_to_end_500tok": {
-          "total": 27.45,
+          "total": 31.87,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -4124,10 +4230,10 @@
         "value_intelligence_per_dollar_blend": 5.5,
         "value_intelligence_per_dollar_task": 24.7,
         "safety_composite": 56.6,
-        "throughput_tps": 51.93,
-        "speed_tier": 1,
-        "latency_ttft_seconds": 17.82,
-        "latency_tier": 1
+        "throughput_tps": 46.15,
+        "speed_tier": 0,
+        "latency_ttft_seconds": 21.04,
+        "latency_tier": 0
       }
     },
     {
@@ -4181,7 +4287,7 @@
         "math_500": null,
         "aime": null,
         "aime25": null,
-        "gdpval_v2": 48.0,
+        "gdpval_v2": 47.7,
         "critpt": 25.4,
         "mmmu_pro": 81.1,
         "apex_agents_aa": null,
@@ -4215,11 +4321,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 79.03,
-        "ttft_seconds_total": 25.78,
-        "ttft_seconds_answer": 25.78,
+        "output_speed_tps": 81.35,
+        "ttft_seconds_total": 24.88,
+        "ttft_seconds_answer": 24.88,
         "end_to_end_500tok": {
-          "total": 32.11,
+          "total": 31.03,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -4240,9 +4346,9 @@
         "value_intelligence_per_dollar_blend": 4.9,
         "value_intelligence_per_dollar_task": 67.0,
         "safety_composite": 28.4,
-        "throughput_tps": 79.03,
+        "throughput_tps": 81.35,
         "speed_tier": 1,
-        "latency_ttft_seconds": 25.78,
+        "latency_ttft_seconds": 24.88,
         "latency_tier": 0
       }
     },
@@ -4321,11 +4427,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 332.59,
-        "ttft_seconds_total": 6.87,
-        "ttft_seconds_answer": 6.87,
+        "output_speed_tps": 332.09,
+        "ttft_seconds_total": 4.71,
+        "ttft_seconds_answer": 4.71,
         "end_to_end_500tok": {
-          "total": 8.37,
+          "total": 6.22,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -4346,10 +4452,10 @@
         "value_intelligence_per_dollar_blend": 35.6,
         "value_intelligence_per_dollar_task": 203.2,
         "safety_composite": 41.8,
-        "throughput_tps": 332.59,
+        "throughput_tps": 332.09,
         "speed_tier": 2,
-        "latency_ttft_seconds": 6.87,
-        "latency_tier": 1
+        "latency_ttft_seconds": 4.71,
+        "latency_tier": 2
       }
     },
     {
@@ -4403,7 +4509,7 @@
         "math_500": null,
         "aime": null,
         "aime25": null,
-        "gdpval_v2": 44.4,
+        "gdpval_v2": 44.2,
         "critpt": 23.4,
         "mmmu_pro": 78.4,
         "apex_agents_aa": 33.3,
@@ -4437,11 +4543,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 103.73,
-        "ttft_seconds_total": 178.71,
-        "ttft_seconds_answer": 178.71,
+        "output_speed_tps": 109.99,
+        "ttft_seconds_total": 180.94,
+        "ttft_seconds_answer": 180.94,
         "end_to_end_500tok": {
-          "total": 183.53,
+          "total": 185.49,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -4462,9 +4568,9 @@
         "value_intelligence_per_dollar_blend": 9.5,
         "value_intelligence_per_dollar_task": 57.3,
         "safety_composite": 26.2,
-        "throughput_tps": 103.73,
+        "throughput_tps": 109.99,
         "speed_tier": 2,
-        "latency_ttft_seconds": 178.71,
+        "latency_ttft_seconds": 180.94,
         "latency_tier": 0
       }
     },
@@ -4519,7 +4625,7 @@
         "math_500": null,
         "aime": null,
         "aime25": null,
-        "gdpval_v2": 53.4,
+        "gdpval_v2": 53.1,
         "critpt": 27.1,
         "mmmu_pro": 79.5,
         "apex_agents_aa": null,
@@ -4553,11 +4659,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 106.3,
-        "ttft_seconds_total": 20.69,
-        "ttft_seconds_answer": 20.69,
+        "output_speed_tps": 95.86,
+        "ttft_seconds_total": 28.84,
+        "ttft_seconds_answer": 28.84,
         "end_to_end_500tok": {
-          "total": 25.4,
+          "total": 34.06,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -4578,9 +4684,9 @@
         "value_intelligence_per_dollar_blend": 11.7,
         "value_intelligence_per_dollar_task": 165.8,
         "safety_composite": 27.7,
-        "throughput_tps": 106.3,
-        "speed_tier": 2,
-        "latency_ttft_seconds": 20.69,
+        "throughput_tps": 95.86,
+        "speed_tier": 1,
+        "latency_ttft_seconds": 28.84,
         "latency_tier": 0
       }
     },
@@ -4659,11 +4765,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 56.47,
-        "ttft_seconds_total": 2.87,
-        "ttft_seconds_answer": 2.87,
+        "output_speed_tps": 50.1,
+        "ttft_seconds_total": 3.28,
+        "ttft_seconds_answer": 3.28,
         "end_to_end_500tok": {
-          "total": 11.72,
+          "total": 13.26,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -4684,9 +4790,9 @@
         "value_intelligence_per_dollar_blend": 5.2,
         "value_intelligence_per_dollar_task": 95.9,
         "safety_composite": 43.7,
-        "throughput_tps": 56.47,
+        "throughput_tps": 50.1,
         "speed_tier": 1,
-        "latency_ttft_seconds": 2.87,
+        "latency_ttft_seconds": 3.28,
         "latency_tier": 2
       }
     },
@@ -4731,7 +4837,7 @@
         "math_500": null,
         "aime": null,
         "aime25": null,
-        "gdpval_v2": 52.2,
+        "gdpval_v2": 52.1,
         "critpt": 5.4,
         "mmmu_pro": 76.3,
         "apex_agents_aa": null,
@@ -4765,11 +4871,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 46.74,
-        "ttft_seconds_total": 3.59,
-        "ttft_seconds_answer": 46.38,
+        "output_speed_tps": 45.55,
+        "ttft_seconds_total": 3.96,
+        "ttft_seconds_answer": 47.87,
         "end_to_end_500tok": {
-          "total": 57.08,
+          "total": 58.85,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -4790,9 +4896,9 @@
         "value_intelligence_per_dollar_blend": 46.4,
         "value_intelligence_per_dollar_task": 141.0,
         "safety_composite": 62.6,
-        "throughput_tps": 46.74,
+        "throughput_tps": 45.55,
         "speed_tier": 0,
-        "latency_ttft_seconds": 46.38,
+        "latency_ttft_seconds": 47.87,
         "latency_tier": 0
       }
     },
@@ -4847,7 +4953,7 @@
         "math_500": null,
         "aime": null,
         "aime25": null,
-        "gdpval_v2": 42.0,
+        "gdpval_v2": 41.9,
         "critpt": 13.1,
         "mmmu_pro": 84.3,
         "apex_agents_aa": 47.0,
@@ -4881,11 +4987,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 200.6,
-        "ttft_seconds_total": 23.29,
-        "ttft_seconds_answer": 23.29,
+        "output_speed_tps": 205.92,
+        "ttft_seconds_total": 17.22,
+        "ttft_seconds_answer": 17.22,
         "end_to_end_500tok": {
-          "total": 25.78,
+          "total": 19.65,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -4906,10 +5012,10 @@
         "value_intelligence_per_dollar_blend": 15.4,
         "value_intelligence_per_dollar_task": 74.9,
         "safety_composite": 43.5,
-        "throughput_tps": 200.6,
+        "throughput_tps": 205.92,
         "speed_tier": 2,
-        "latency_ttft_seconds": 23.29,
-        "latency_tier": 0
+        "latency_ttft_seconds": 17.22,
+        "latency_tier": 1
       }
     },
     {
@@ -4987,11 +5093,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 55.43,
-        "ttft_seconds_total": 6.82,
-        "ttft_seconds_answer": 6.82,
+        "output_speed_tps": 55.76,
+        "ttft_seconds_total": 7.69,
+        "ttft_seconds_answer": 7.69,
         "end_to_end_500tok": {
-          "total": 15.84,
+          "total": 16.65,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -5012,9 +5118,9 @@
         "value_intelligence_per_dollar_blend": 17.2,
         "value_intelligence_per_dollar_task": 203.1,
         "safety_composite": 62.3,
-        "throughput_tps": 55.43,
+        "throughput_tps": 55.76,
         "speed_tier": 1,
-        "latency_ttft_seconds": 6.82,
+        "latency_ttft_seconds": 7.69,
         "latency_tier": 1
       }
     },
@@ -5059,7 +5165,7 @@
         "math_500": null,
         "aime": null,
         "aime25": null,
-        "gdpval_v2": 58.1,
+        "gdpval_v2": 58.3,
         "critpt": 10.9,
         "mmmu_pro": 74.8,
         "apex_agents_aa": null,
@@ -5093,11 +5199,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 118.95,
-        "ttft_seconds_total": 1.14,
-        "ttft_seconds_answer": 17.96,
+        "output_speed_tps": 117.63,
+        "ttft_seconds_total": 1.38,
+        "ttft_seconds_answer": 18.38,
         "end_to_end_500tok": {
-          "total": 22.16,
+          "total": 22.64,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -5118,9 +5224,9 @@
         "value_intelligence_per_dollar_blend": 78.0,
         "value_intelligence_per_dollar_task": 442.2,
         "safety_composite": 25.7,
-        "throughput_tps": 118.95,
+        "throughput_tps": 117.63,
         "speed_tier": 2,
-        "latency_ttft_seconds": 17.96,
+        "latency_ttft_seconds": 18.38,
         "latency_tier": 1
       }
     },
@@ -5175,7 +5281,7 @@
         "math_500": null,
         "aime": null,
         "aime25": null,
-        "gdpval_v2": 43.6,
+        "gdpval_v2": 43.5,
         "critpt": 18.6,
         "mmmu_pro": 81.2,
         "apex_agents_aa": null,
@@ -5209,11 +5315,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 82.83,
-        "ttft_seconds_total": 8.09,
-        "ttft_seconds_answer": 8.09,
+        "output_speed_tps": 75.96,
+        "ttft_seconds_total": 7.98,
+        "ttft_seconds_answer": 7.98,
         "end_to_end_500tok": {
-          "total": 14.13,
+          "total": 14.56,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -5234,9 +5340,9 @@
         "value_intelligence_per_dollar_blend": 4.6,
         "value_intelligence_per_dollar_task": 101.2,
         "safety_composite": 26.8,
-        "throughput_tps": 82.83,
+        "throughput_tps": 75.96,
         "speed_tier": 1,
-        "latency_ttft_seconds": 8.09,
+        "latency_ttft_seconds": 7.98,
         "latency_tier": 1
       }
     },
@@ -5281,7 +5387,7 @@
         "math_500": null,
         "aime": null,
         "aime25": null,
-        "gdpval_v2": 47.5,
+        "gdpval_v2": 47.3,
         "critpt": 5.7,
         "mmmu_pro": 84.9,
         "apex_agents_aa": null,
@@ -5315,11 +5421,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 319.58,
-        "ttft_seconds_total": 1.03,
-        "ttft_seconds_answer": 1.03,
+        "output_speed_tps": 314.7,
+        "ttft_seconds_total": 0.84,
+        "ttft_seconds_answer": 0.84,
         "end_to_end_500tok": {
-          "total": 2.6,
+          "total": 2.43,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -5340,9 +5446,9 @@
         "value_intelligence_per_dollar_blend": 34.0,
         "value_intelligence_per_dollar_task": 309.1,
         "safety_composite": 39.8,
-        "throughput_tps": 319.58,
+        "throughput_tps": 314.7,
         "speed_tier": 2,
-        "latency_ttft_seconds": 1.03,
+        "latency_ttft_seconds": 0.84,
         "latency_tier": 2
       }
     },
@@ -5414,11 +5520,11 @@
         "blended_7_2_1": 6.8,
         "blended_1_1": null,
         "cache_hit": 0.4,
-        "cache_write": 6.25
+        "cache_write": 5
       },
-      "intelligence_evaluation_total_cost_usd": 267.53,
+      "intelligence_evaluation_total_cost_usd": 255.73,
       "cost_per_intelligence_task_usd": {
-        "total": 0.1948,
+        "total": 0.1799,
         "input": null,
         "output": null,
         "cacheRead": null,
@@ -5431,11 +5537,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 75.17,
-        "ttft_seconds_total": 2.99,
-        "ttft_seconds_answer": 2.99,
+        "output_speed_tps": 72.58,
+        "ttft_seconds_total": 2.67,
+        "ttft_seconds_answer": 2.67,
         "end_to_end_500tok": {
-          "total": 9.64,
+          "total": 9.56,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -5454,11 +5560,11 @@
       "short_name": "GPT-5.6 Sol (low)",
       "derived": {
         "value_intelligence_per_dollar_blend": 6.3,
-        "value_intelligence_per_dollar_task": 260.4,
+        "value_intelligence_per_dollar_task": 282.0,
         "safety_composite": 26.7,
-        "throughput_tps": 75.17,
+        "throughput_tps": 72.58,
         "speed_tier": 1,
-        "latency_ttft_seconds": 2.99,
+        "latency_ttft_seconds": 2.67,
         "latency_tier": 2
       }
     },
@@ -5513,7 +5619,7 @@
         "math_500": null,
         "aime": null,
         "aime25": null,
-        "gdpval_v2": 50.3,
+        "gdpval_v2": 50.1,
         "critpt": 22.9,
         "mmmu_pro": 79.1,
         "apex_agents_aa": null,
@@ -5547,11 +5653,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 101.78,
-        "ttft_seconds_total": 3.35,
-        "ttft_seconds_answer": 3.35,
+        "output_speed_tps": 101.83,
+        "ttft_seconds_total": 3.49,
+        "ttft_seconds_answer": 3.49,
         "end_to_end_500tok": {
-          "total": 8.26,
+          "total": 8.4,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -5572,9 +5678,9 @@
         "value_intelligence_per_dollar_blend": 11.1,
         "value_intelligence_per_dollar_task": 220.2,
         "safety_composite": 26.2,
-        "throughput_tps": 101.78,
+        "throughput_tps": 101.83,
         "speed_tier": 2,
-        "latency_ttft_seconds": 3.35,
+        "latency_ttft_seconds": 3.49,
         "latency_tier": 2
       }
     },
@@ -5629,7 +5735,7 @@
         "math_500": null,
         "aime": null,
         "aime25": null,
-        "gdpval_v2": 50.9,
+        "gdpval_v2": 50.8,
         "critpt": 20.6,
         "mmmu_pro": 78.5,
         "apex_agents_aa": null,
@@ -5663,11 +5769,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 122.6,
-        "ttft_seconds_total": 52.48,
-        "ttft_seconds_answer": 52.48,
+        "output_speed_tps": 122.39,
+        "ttft_seconds_total": 62.6,
+        "ttft_seconds_answer": 62.6,
         "end_to_end_500tok": {
-          "total": 56.56,
+          "total": 66.68,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -5688,9 +5794,9 @@
         "value_intelligence_per_dollar_blend": 111.2,
         "value_intelligence_per_dollar_task": 1526.2,
         "safety_composite": 24.5,
-        "throughput_tps": 122.6,
+        "throughput_tps": 122.39,
         "speed_tier": 2,
-        "latency_ttft_seconds": 52.48,
+        "latency_ttft_seconds": 62.6,
         "latency_tier": 0
       }
     },
@@ -5715,9 +5821,9 @@
       "output_modalities": null,
       "composite": {
         "intelligence_index_v4_1": 49.1,
-        "coding_index": null,
+        "coding_index": 62.3,
         "math_index": null,
-        "agentic_index": null,
+        "agentic_index": 43.8,
         "omniscience_index": -10.5
       },
       "benchmarks": {
@@ -5769,11 +5875,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 159.75,
-        "ttft_seconds_total": 2.66,
-        "ttft_seconds_answer": 15.18,
+        "output_speed_tps": 153.3,
+        "ttft_seconds_total": 2.46,
+        "ttft_seconds_answer": 15.51,
         "end_to_end_500tok": {
-          "total": 18.31,
+          "total": 18.77,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -5793,9 +5899,9 @@
       "derived": {
         "value_intelligence_per_dollar_blend": 327.3,
         "safety_composite": 60.0,
-        "throughput_tps": 159.75,
+        "throughput_tps": 153.3,
         "speed_tier": 2,
-        "latency_ttft_seconds": 15.18,
+        "latency_ttft_seconds": 15.51,
         "latency_tier": 1
       }
     },
@@ -5874,11 +5980,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 80.66,
-        "ttft_seconds_total": 0.76,
-        "ttft_seconds_answer": 25.56,
+        "output_speed_tps": 102.17,
+        "ttft_seconds_total": 0.81,
+        "ttft_seconds_answer": 20.39,
         "end_to_end_500tok": {
-          "total": 31.76,
+          "total": 25.28,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -5899,9 +6005,9 @@
         "value_intelligence_per_dollar_blend": 8.0,
         "value_intelligence_per_dollar_task": 142.7,
         "safety_composite": 33.0,
-        "throughput_tps": 80.66,
-        "speed_tier": 1,
-        "latency_ttft_seconds": 25.56,
+        "throughput_tps": 102.17,
+        "speed_tier": 2,
+        "latency_ttft_seconds": 20.39,
         "latency_tier": 0
       }
     },
@@ -6084,11 +6190,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 123.42,
-        "ttft_seconds_total": 12.54,
-        "ttft_seconds_answer": 12.54,
+        "output_speed_tps": 120.72,
+        "ttft_seconds_total": 16.51,
+        "ttft_seconds_answer": 16.51,
         "end_to_end_500tok": {
-          "total": 16.59,
+          "total": 20.65,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -6109,9 +6215,9 @@
         "value_intelligence_per_dollar_blend": 104.4,
         "value_intelligence_per_dollar_task": 2105.8,
         "safety_composite": 23.3,
-        "throughput_tps": 123.42,
+        "throughput_tps": 120.72,
         "speed_tier": 2,
-        "latency_ttft_seconds": 12.54,
+        "latency_ttft_seconds": 16.51,
         "latency_tier": 1
       }
     },
@@ -6166,7 +6272,7 @@
         "math_500": null,
         "aime": null,
         "aime25": null,
-        "gdpval_v2": 45.1,
+        "gdpval_v2": 45.0,
         "critpt": 17.4,
         "mmmu_pro": 76.8,
         "apex_agents_aa": null,
@@ -6200,11 +6306,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 97.15,
-        "ttft_seconds_total": 1.73,
-        "ttft_seconds_answer": 1.73,
+        "output_speed_tps": 95.54,
+        "ttft_seconds_total": 1.52,
+        "ttft_seconds_answer": 1.52,
         "end_to_end_500tok": {
-          "total": 6.88,
+          "total": 6.75,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -6225,9 +6331,9 @@
         "value_intelligence_per_dollar_blend": 10.4,
         "value_intelligence_per_dollar_task": 379.5,
         "safety_composite": 24.8,
-        "throughput_tps": 97.15,
+        "throughput_tps": 95.54,
         "speed_tier": 1,
-        "latency_ttft_seconds": 1.73,
+        "latency_ttft_seconds": 1.52,
         "latency_tier": 2
       }
     },
@@ -6316,11 +6422,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 196.21,
-        "ttft_seconds_total": 15.75,
-        "ttft_seconds_answer": 15.75,
+        "output_speed_tps": 206.54,
+        "ttft_seconds_total": 13.88,
+        "ttft_seconds_answer": 13.88,
         "end_to_end_500tok": {
-          "total": 18.3,
+          "total": 16.3,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -6340,9 +6446,9 @@
       "derived": {
         "value_intelligence_per_dollar_blend": 13.8,
         "safety_composite": 41.6,
-        "throughput_tps": 196.21,
+        "throughput_tps": 206.54,
         "speed_tier": 2,
-        "latency_ttft_seconds": 15.75,
+        "latency_ttft_seconds": 13.88,
         "latency_tier": 1
       }
     },
@@ -6479,7 +6585,7 @@
         "math_500": null,
         "aime": null,
         "aime25": null,
-        "gdpval_v2": 40.0,
+        "gdpval_v2": 39.9,
         "critpt": 12.9,
         "mmmu_pro": null,
         "apex_agents_aa": 24.3,
@@ -6513,11 +6619,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 65.85,
-        "ttft_seconds_total": 1.72,
-        "ttft_seconds_answer": 68.16,
+        "output_speed_tps": 68.37,
+        "ttft_seconds_total": 1.5,
+        "ttft_seconds_answer": 65.49,
         "end_to_end_500tok": {
-          "total": 75.76,
+          "total": 72.8,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -6538,9 +6644,9 @@
         "value_intelligence_per_dollar_blend": 83.8,
         "value_intelligence_per_dollar_task": 909.0,
         "safety_composite": 21.6,
-        "throughput_tps": 65.85,
+        "throughput_tps": 68.37,
         "speed_tier": 1,
-        "latency_ttft_seconds": 68.16,
+        "latency_ttft_seconds": 65.49,
         "latency_tier": 0
       }
     },
@@ -6629,11 +6735,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 39.46,
-        "ttft_seconds_total": 2.84,
-        "ttft_seconds_answer": 115.64,
+        "output_speed_tps": 37.69,
+        "ttft_seconds_total": 2.83,
+        "ttft_seconds_answer": 120.94,
         "end_to_end_500tok": {
-          "total": 128.31,
+          "total": 134.21,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -6654,9 +6760,9 @@
         "value_intelligence_per_dollar_blend": 26.4,
         "value_intelligence_per_dollar_task": 116.2,
         "safety_composite": 53.8,
-        "throughput_tps": 39.46,
+        "throughput_tps": 37.69,
         "speed_tier": 0,
-        "latency_ttft_seconds": 115.64,
+        "latency_ttft_seconds": 120.94,
         "latency_tier": 0
       }
     },
@@ -6711,7 +6817,7 @@
         "math_500": null,
         "aime": null,
         "aime25": null,
-        "gdpval_v2": 34.3,
+        "gdpval_v2": 34.2,
         "critpt": 8.0,
         "mmmu_pro": 79.0,
         "apex_agents_aa": null,
@@ -6745,11 +6851,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 80.15,
-        "ttft_seconds_total": 1.68,
-        "ttft_seconds_answer": 1.68,
+        "output_speed_tps": 82.19,
+        "ttft_seconds_total": 1.7,
+        "ttft_seconds_answer": 1.7,
         "end_to_end_500tok": {
-          "total": 7.92,
+          "total": 7.78,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -6770,9 +6876,9 @@
         "value_intelligence_per_dollar_blend": 4.0,
         "value_intelligence_per_dollar_task": 170.1,
         "safety_composite": 25.0,
-        "throughput_tps": 80.15,
+        "throughput_tps": 82.19,
         "speed_tier": 1,
-        "latency_ttft_seconds": 1.68,
+        "latency_ttft_seconds": 1.7,
         "latency_tier": 2
       }
     },
@@ -6817,7 +6923,7 @@
         "math_500": null,
         "aime": null,
         "aime25": null,
-        "gdpval_v2": 50.4,
+        "gdpval_v2": 50.2,
         "critpt": 0.0,
         "mmmu_pro": 74.2,
         "apex_agents_aa": null,
@@ -6851,11 +6957,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 53.01,
-        "ttft_seconds_total": 3.65,
-        "ttft_seconds_answer": 41.37,
+        "output_speed_tps": 51.6,
+        "ttft_seconds_total": 3.85,
+        "ttft_seconds_answer": 42.62,
         "end_to_end_500tok": {
-          "total": 50.81,
+          "total": 52.31,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -6876,9 +6982,9 @@
         "value_intelligence_per_dollar_blend": 39.7,
         "value_intelligence_per_dollar_task": 156.5,
         "safety_composite": 37.7,
-        "throughput_tps": 53.01,
+        "throughput_tps": 51.6,
         "speed_tier": 1,
-        "latency_ttft_seconds": 41.37,
+        "latency_ttft_seconds": 42.62,
         "latency_tier": 0
       }
     },
@@ -7071,11 +7177,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 67.19,
-        "ttft_seconds_total": 1.71,
-        "ttft_seconds_answer": 1.71,
+        "output_speed_tps": 56.44,
+        "ttft_seconds_total": 1.42,
+        "ttft_seconds_answer": 1.42,
         "end_to_end_500tok": {
-          "total": 9.15,
+          "total": 10.28,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -7095,9 +7201,9 @@
       "derived": {
         "value_intelligence_per_dollar_blend": 4.4,
         "safety_composite": 45.1,
-        "throughput_tps": 67.19,
+        "throughput_tps": 56.44,
         "speed_tier": 1,
-        "latency_ttft_seconds": 1.71,
+        "latency_ttft_seconds": 1.42,
         "latency_tier": 2
       }
     },
@@ -7142,7 +7248,7 @@
         "math_500": null,
         "aime": null,
         "aime25": null,
-        "gdpval_v2": 39.7,
+        "gdpval_v2": 39.5,
         "critpt": 10.0,
         "mmmu_pro": null,
         "apex_agents_aa": null,
@@ -7176,11 +7282,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 160.59,
-        "ttft_seconds_total": 0.58,
-        "ttft_seconds_answer": 12.98,
+        "output_speed_tps": 156.93,
+        "ttft_seconds_total": 0.57,
+        "ttft_seconds_answer": 13.26,
         "end_to_end_500tok": {
-          "total": 16.1,
+          "total": 16.45,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -7201,9 +7307,9 @@
         "value_intelligence_per_dollar_blend": 20.2,
         "value_intelligence_per_dollar_task": 100.0,
         "safety_composite": 24.3,
-        "throughput_tps": 160.59,
+        "throughput_tps": 156.93,
         "speed_tier": 2,
-        "latency_ttft_seconds": 12.98,
+        "latency_ttft_seconds": 13.26,
         "latency_tier": 1
       }
     },
@@ -7258,7 +7364,7 @@
         "math_500": null,
         "aime": null,
         "aime25": null,
-        "gdpval_v2": 34.4,
+        "gdpval_v2": 34.3,
         "critpt": 10.0,
         "mmmu_pro": null,
         "apex_agents_aa": null,
@@ -7292,11 +7398,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 44.51,
-        "ttft_seconds_total": 2.91,
-        "ttft_seconds_answer": 52.99,
+        "output_speed_tps": 44.11,
+        "ttft_seconds_total": 2.88,
+        "ttft_seconds_answer": 53.41,
         "end_to_end_500tok": {
-          "total": 64.22,
+          "total": 64.74,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -7317,9 +7423,9 @@
         "value_intelligence_per_dollar_blend": 25.2,
         "value_intelligence_per_dollar_task": 193.8,
         "safety_composite": 27.8,
-        "throughput_tps": 44.51,
+        "throughput_tps": 44.11,
         "speed_tier": 0,
-        "latency_ttft_seconds": 52.99,
+        "latency_ttft_seconds": 53.41,
         "latency_tier": 0
       }
     },
@@ -7364,7 +7470,7 @@
         "math_500": null,
         "aime": null,
         "aime25": null,
-        "gdpval_v2": 49.5,
+        "gdpval_v2": 49.4,
         "critpt": 0.0,
         "mmmu_pro": 73.8,
         "apex_agents_aa": null,
@@ -7398,11 +7504,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 58.08,
-        "ttft_seconds_total": 3.47,
-        "ttft_seconds_answer": 37.9,
+        "output_speed_tps": 55.91,
+        "ttft_seconds_total": 3.91,
+        "ttft_seconds_answer": 39.69,
         "end_to_end_500tok": {
-          "total": 46.51,
+          "total": 48.63,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -7423,9 +7529,9 @@
         "value_intelligence_per_dollar_blend": 38.3,
         "value_intelligence_per_dollar_task": 161.8,
         "safety_composite": 45.4,
-        "throughput_tps": 58.08,
+        "throughput_tps": 55.91,
         "speed_tier": 1,
-        "latency_ttft_seconds": 37.9,
+        "latency_ttft_seconds": 39.69,
         "latency_tier": 0
       }
     },
@@ -7480,7 +7586,7 @@
         "math_500": null,
         "aime": null,
         "aime25": null,
-        "gdpval_v2": 43.2,
+        "gdpval_v2": 43.1,
         "critpt": 1.1,
         "mmmu_pro": 71.9,
         "apex_agents_aa": null,
@@ -7514,11 +7620,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 66.78,
-        "ttft_seconds_total": 1.92,
-        "ttft_seconds_answer": 1.92,
+        "output_speed_tps": 58.85,
+        "ttft_seconds_total": 2.23,
+        "ttft_seconds_answer": 2.23,
         "end_to_end_500tok": {
-          "total": 9.41,
+          "total": 10.72,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -7539,9 +7645,9 @@
         "value_intelligence_per_dollar_blend": 10.6,
         "value_intelligence_per_dollar_task": 69.6,
         "safety_composite": 45.8,
-        "throughput_tps": 66.78,
+        "throughput_tps": 58.85,
         "speed_tier": 1,
-        "latency_ttft_seconds": 1.92,
+        "latency_ttft_seconds": 2.23,
         "latency_tier": 2
       }
     },
@@ -7586,7 +7692,7 @@
         "math_500": null,
         "aime": null,
         "aime25": null,
-        "gdpval_v2": 36.8,
+        "gdpval_v2": 36.7,
         "critpt": 5.4,
         "mmmu_pro": 73.5,
         "apex_agents_aa": null,
@@ -7620,11 +7726,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 51.11,
-        "ttft_seconds_total": 2.77,
-        "ttft_seconds_answer": 41.9,
+        "output_speed_tps": 75.21,
+        "ttft_seconds_total": 2.46,
+        "ttft_seconds_answer": 29.06,
         "end_to_end_500tok": {
-          "total": 51.68,
+          "total": 35.71,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -7645,9 +7751,9 @@
         "value_intelligence_per_dollar_blend": 24.0,
         "value_intelligence_per_dollar_task": 124.8,
         "safety_composite": 36.3,
-        "throughput_tps": 51.11,
+        "throughput_tps": 75.21,
         "speed_tier": 1,
-        "latency_ttft_seconds": 41.9,
+        "latency_ttft_seconds": 29.06,
         "latency_tier": 0
       }
     },
@@ -7702,7 +7808,7 @@
         "math_500": null,
         "aime": null,
         "aime25": null,
-        "gdpval_v2": 35.7,
+        "gdpval_v2": 35.6,
         "critpt": 4.9,
         "mmmu_pro": null,
         "apex_agents_aa": null,
@@ -7736,11 +7842,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 67.04,
-        "ttft_seconds_total": 3.29,
-        "ttft_seconds_answer": 33.13,
+        "output_speed_tps": 92.28,
+        "ttft_seconds_total": 3.25,
+        "ttft_seconds_answer": 24.92,
         "end_to_end_500tok": {
-          "total": 40.58,
+          "total": 30.34,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -7761,9 +7867,9 @@
         "value_intelligence_per_dollar_blend": 183.5,
         "value_intelligence_per_dollar_task": 1248.8,
         "safety_composite": 32.4,
-        "throughput_tps": 67.04,
+        "throughput_tps": 92.28,
         "speed_tier": 1,
-        "latency_ttft_seconds": 33.13,
+        "latency_ttft_seconds": 24.92,
         "latency_tier": 0
       }
     },
@@ -7808,7 +7914,7 @@
         "math_500": null,
         "aime": null,
         "aime25": null,
-        "gdpval_v2": 34.5,
+        "gdpval_v2": 34.4,
         "critpt": 7.1,
         "mmmu_pro": null,
         "apex_agents_aa": null,
@@ -7842,11 +7948,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 119.64,
-        "ttft_seconds_total": 1.67,
-        "ttft_seconds_answer": 48.59,
+        "output_speed_tps": 120.15,
+        "ttft_seconds_total": 1.78,
+        "ttft_seconds_answer": 48.49,
         "end_to_end_500tok": {
-          "total": 52.77,
+          "total": 52.65,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -7867,9 +7973,9 @@
         "value_intelligence_per_dollar_blend": 234.0,
         "value_intelligence_per_dollar_task": 849.2,
         "safety_composite": 19.2,
-        "throughput_tps": 119.64,
+        "throughput_tps": 120.15,
         "speed_tier": 2,
-        "latency_ttft_seconds": 48.59,
+        "latency_ttft_seconds": 48.49,
         "latency_tier": 0
       }
     },
@@ -7943,7 +8049,7 @@
         "cache_hit": 0.55,
         "cache_write": 6.88
       },
-      "intelligence_evaluation_total_cost_usd": 192.9,
+      "intelligence_evaluation_total_cost_usd": 181.24,
       "cost_per_intelligence_task_usd": {
         "total": 0.3004,
         "input": null,
@@ -7958,11 +8064,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 100.64,
-        "ttft_seconds_total": 4.65,
-        "ttft_seconds_answer": 4.65,
+        "output_speed_tps": 92.17,
+        "ttft_seconds_total": 2.54,
+        "ttft_seconds_answer": 2.54,
         "end_to_end_500tok": {
-          "total": 9.62,
+          "total": 7.96,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -7983,9 +8089,9 @@
         "value_intelligence_per_dollar_blend": 3.4,
         "value_intelligence_per_dollar_task": 139.4,
         "safety_composite": 21.1,
-        "throughput_tps": 100.64,
-        "speed_tier": 2,
-        "latency_ttft_seconds": 4.65,
+        "throughput_tps": 92.17,
+        "speed_tier": 1,
+        "latency_ttft_seconds": 2.54,
         "latency_tier": 2
       }
     },
@@ -8074,11 +8180,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 130.25,
-        "ttft_seconds_total": 1.6,
-        "ttft_seconds_answer": 16.96,
+        "output_speed_tps": 129.64,
+        "ttft_seconds_total": 1.64,
+        "ttft_seconds_answer": 17.07,
         "end_to_end_500tok": {
-          "total": 20.79,
+          "total": 20.92,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -8098,9 +8204,9 @@
       "derived": {
         "value_intelligence_per_dollar_blend": 41.7,
         "safety_composite": 19.8,
-        "throughput_tps": 130.25,
+        "throughput_tps": 129.64,
         "speed_tier": 2,
-        "latency_ttft_seconds": 16.96,
+        "latency_ttft_seconds": 17.07,
         "latency_tier": 1
       }
     },
@@ -8179,11 +8285,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 57.24,
-        "ttft_seconds_total": 2.17,
-        "ttft_seconds_answer": 37.11,
+        "output_speed_tps": 44.41,
+        "ttft_seconds_total": 2.26,
+        "ttft_seconds_answer": 47.29,
         "end_to_end_500tok": {
-          "total": 45.84,
+          "total": 58.55,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -8204,9 +8310,9 @@
         "value_intelligence_per_dollar_blend": 80.1,
         "value_intelligence_per_dollar_task": 137.2,
         "safety_composite": 62.0,
-        "throughput_tps": 57.24,
-        "speed_tier": 1,
-        "latency_ttft_seconds": 37.11,
+        "throughput_tps": 44.41,
+        "speed_tier": 0,
+        "latency_ttft_seconds": 47.29,
         "latency_tier": 0
       }
     },
@@ -8366,7 +8472,7 @@
         "math_500": null,
         "aime": null,
         "aime25": null,
-        "gdpval_v2": 37.8,
+        "gdpval_v2": 37.6,
         "critpt": 9.4,
         "mmmu_pro": 76.1,
         "apex_agents_aa": null,
@@ -8400,11 +8506,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 101.76,
-        "ttft_seconds_total": 1.53,
-        "ttft_seconds_answer": 1.53,
+        "output_speed_tps": 92.63,
+        "ttft_seconds_total": 1.65,
+        "ttft_seconds_answer": 1.65,
         "end_to_end_500tok": {
-          "total": 6.45,
+          "total": 7.04,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -8425,9 +8531,9 @@
         "value_intelligence_per_dollar_blend": 9.2,
         "value_intelligence_per_dollar_task": 429.3,
         "safety_composite": 22.6,
-        "throughput_tps": 101.76,
-        "speed_tier": 2,
-        "latency_ttft_seconds": 1.53,
+        "throughput_tps": 92.63,
+        "speed_tier": 1,
+        "latency_ttft_seconds": 1.65,
         "latency_tier": 2
       }
     },
@@ -8472,7 +8578,7 @@
         "math_500": null,
         "aime": null,
         "aime25": null,
-        "gdpval_v2": 38.5,
+        "gdpval_v2": 38.4,
         "critpt": 8.3,
         "mmmu_pro": 74.0,
         "apex_agents_aa": null,
@@ -8506,11 +8612,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 341.06,
-        "ttft_seconds_total": 0.53,
-        "ttft_seconds_answer": 6.39,
+        "output_speed_tps": 336.94,
+        "ttft_seconds_total": 0.42,
+        "ttft_seconds_answer": 6.36,
         "end_to_end_500tok": {
-          "total": 7.86,
+          "total": 7.84,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -8531,9 +8637,9 @@
         "value_intelligence_per_dollar_blend": 60.6,
         "value_intelligence_per_dollar_task": 419.3,
         "safety_composite": 38.7,
-        "throughput_tps": 341.06,
+        "throughput_tps": 336.94,
         "speed_tier": 2,
-        "latency_ttft_seconds": 6.39,
+        "latency_ttft_seconds": 6.36,
         "latency_tier": 1
       }
     },
@@ -8622,11 +8728,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 37.11,
-        "ttft_seconds_total": 3.1,
-        "ttft_seconds_answer": 57.0,
+        "output_speed_tps": 52.3,
+        "ttft_seconds_total": 3.47,
+        "ttft_seconds_answer": 41.71,
         "end_to_end_500tok": {
-          "total": 70.47,
+          "total": 51.27,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -8646,9 +8752,9 @@
       "derived": {
         "value_intelligence_per_dollar_blend": 14.1,
         "safety_composite": 48.7,
-        "throughput_tps": 37.11,
-        "speed_tier": 0,
-        "latency_ttft_seconds": 57.0,
+        "throughput_tps": 52.3,
+        "speed_tier": 1,
+        "latency_ttft_seconds": 41.71,
         "latency_tier": 0
       }
     },
@@ -8703,7 +8809,7 @@
         "math_500": null,
         "aime": null,
         "aime25": null,
-        "gdpval_v2": 37.8,
+        "gdpval_v2": 37.7,
         "critpt": 4.6,
         "mmmu_pro": null,
         "apex_agents_aa": null,
@@ -8737,11 +8843,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 140.9,
+        "output_speed_tps": 112.64,
         "ttft_seconds_total": 0.82,
-        "ttft_seconds_answer": 27.73,
+        "ttft_seconds_answer": 34.48,
         "end_to_end_500tok": {
-          "total": 31.28,
+          "total": 38.92,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -8762,9 +8868,9 @@
         "value_intelligence_per_dollar_blend": 19.1,
         "value_intelligence_per_dollar_task": 166.1,
         "safety_composite": 58.4,
-        "throughput_tps": 140.9,
+        "throughput_tps": 112.64,
         "speed_tier": 2,
-        "latency_ttft_seconds": 27.73,
+        "latency_ttft_seconds": 34.48,
         "latency_tier": 0
       }
     },
@@ -8853,11 +8959,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 166.7,
-        "ttft_seconds_total": 4.23,
-        "ttft_seconds_answer": 4.23,
+        "output_speed_tps": 168.5,
+        "ttft_seconds_total": 8.28,
+        "ttft_seconds_answer": 8.28,
         "end_to_end_500tok": {
-          "total": 7.23,
+          "total": 11.25,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -8878,10 +8984,10 @@
         "value_intelligence_per_dollar_blend": 24.2,
         "value_intelligence_per_dollar_task": 82.7,
         "safety_composite": 22.3,
-        "throughput_tps": 166.7,
+        "throughput_tps": 168.5,
         "speed_tier": 2,
-        "latency_ttft_seconds": 4.23,
-        "latency_tier": 2
+        "latency_ttft_seconds": 8.28,
+        "latency_tier": 1
       }
     },
     {
@@ -9083,11 +9189,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 57.46,
-        "ttft_seconds_total": 0.52,
-        "ttft_seconds_answer": 35.33,
+        "output_speed_tps": 55.36,
+        "ttft_seconds_total": 0.53,
+        "ttft_seconds_answer": 36.66,
         "end_to_end_500tok": {
-          "total": 44.03,
+          "total": 45.69,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -9108,9 +9214,9 @@
         "value_intelligence_per_dollar_blend": 32.5,
         "value_intelligence_per_dollar_task": 180.5,
         "safety_composite": 20.4,
-        "throughput_tps": 57.46,
+        "throughput_tps": 55.36,
         "speed_tier": 1,
-        "latency_ttft_seconds": 35.33,
+        "latency_ttft_seconds": 36.66,
         "latency_tier": 0
       }
     },
@@ -9165,7 +9271,7 @@
         "math_500": null,
         "aime": null,
         "aime25": null,
-        "gdpval_v2": 31.9,
+        "gdpval_v2": 31.8,
         "critpt": 2.9,
         "mmmu_pro": 78.0,
         "apex_agents_aa": null,
@@ -9199,11 +9305,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 55.46,
-        "ttft_seconds_total": 2.02,
-        "ttft_seconds_answer": 102.08,
+        "output_speed_tps": 55.98,
+        "ttft_seconds_total": 2.06,
+        "ttft_seconds_answer": 101.19,
         "end_to_end_500tok": {
-          "total": 111.1,
+          "total": 110.12,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -9224,9 +9330,9 @@
         "value_intelligence_per_dollar_blend": 36.2,
         "value_intelligence_per_dollar_task": 113.4,
         "safety_composite": 55.4,
-        "throughput_tps": 55.46,
+        "throughput_tps": 55.98,
         "speed_tier": 1,
-        "latency_ttft_seconds": 102.08,
+        "latency_ttft_seconds": 101.19,
         "latency_tier": 0
       }
     },
@@ -9315,11 +9421,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 103.65,
-        "ttft_seconds_total": 1.79,
-        "ttft_seconds_answer": 1.79,
+        "output_speed_tps": 101.06,
+        "ttft_seconds_total": 1.43,
+        "ttft_seconds_answer": 1.43,
         "end_to_end_500tok": {
-          "total": 6.61,
+          "total": 6.38,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -9339,9 +9445,9 @@
       "derived": {
         "value_intelligence_per_dollar_blend": 7.1,
         "safety_composite": 26.5,
-        "throughput_tps": 103.65,
+        "throughput_tps": 101.06,
         "speed_tier": 2,
-        "latency_ttft_seconds": 1.79,
+        "latency_ttft_seconds": 1.43,
         "latency_tier": 2
       }
     },
@@ -9490,7 +9596,7 @@
         "math_500": null,
         "aime": null,
         "aime25": null,
-        "gdpval_v2": 33.5,
+        "gdpval_v2": 33.4,
         "critpt": 10.9,
         "mmmu_pro": null,
         "apex_agents_aa": null,
@@ -9524,11 +9630,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 128.77,
-        "ttft_seconds_total": 2.04,
-        "ttft_seconds_answer": 17.57,
+        "output_speed_tps": 126.68,
+        "ttft_seconds_total": 2.83,
+        "ttft_seconds_answer": 18.61,
         "end_to_end_500tok": {
-          "total": 21.46,
+          "total": 22.56,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -9548,9 +9654,9 @@
       "derived": {
         "value_intelligence_per_dollar_blend": 70.9,
         "safety_composite": 23.0,
-        "throughput_tps": 128.77,
+        "throughput_tps": 126.68,
         "speed_tier": 2,
-        "latency_ttft_seconds": 17.57,
+        "latency_ttft_seconds": 18.61,
         "latency_tier": 1
       }
     },
@@ -9639,11 +9745,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 163.7,
-        "ttft_seconds_total": 5.35,
-        "ttft_seconds_answer": 5.35,
+        "output_speed_tps": 171.74,
+        "ttft_seconds_total": 5.63,
+        "ttft_seconds_answer": 5.63,
         "end_to_end_500tok": {
-          "total": 8.4,
+          "total": 8.54,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -9664,9 +9770,9 @@
         "value_intelligence_per_dollar_blend": 86.3,
         "value_intelligence_per_dollar_task": 266.3,
         "safety_composite": 31.4,
-        "throughput_tps": 163.7,
+        "throughput_tps": 171.74,
         "speed_tier": 2,
-        "latency_ttft_seconds": 5.35,
+        "latency_ttft_seconds": 5.63,
         "latency_tier": 1
       }
     },
@@ -9815,7 +9921,7 @@
         "math_500": null,
         "aime": null,
         "aime25": null,
-        "gdpval_v2": 32.7,
+        "gdpval_v2": 32.6,
         "critpt": 3.4,
         "mmmu_pro": null,
         "apex_agents_aa": null,
@@ -9849,11 +9955,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 125.79,
-        "ttft_seconds_total": 2.43,
-        "ttft_seconds_answer": 12.28,
+        "output_speed_tps": 125.94,
+        "ttft_seconds_total": 1.89,
+        "ttft_seconds_answer": 11.73,
         "end_to_end_500tok": {
-          "total": 16.26,
+          "total": 15.7,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -9874,9 +9980,9 @@
         "value_intelligence_per_dollar_blend": 216.7,
         "value_intelligence_per_dollar_task": 1102.0,
         "safety_composite": 22.2,
-        "throughput_tps": 125.79,
+        "throughput_tps": 125.94,
         "speed_tier": 2,
-        "latency_ttft_seconds": 12.28,
+        "latency_ttft_seconds": 11.73,
         "latency_tier": 1
       }
     },
@@ -9965,11 +10071,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 122.21,
-        "ttft_seconds_total": 2.74,
-        "ttft_seconds_answer": 2.74,
+        "output_speed_tps": 113.47,
+        "ttft_seconds_total": 2.43,
+        "ttft_seconds_answer": 2.43,
         "end_to_end_500tok": {
-          "total": 6.83,
+          "total": 6.84,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -9990,9 +10096,9 @@
         "value_intelligence_per_dollar_blend": 86.5,
         "value_intelligence_per_dollar_task": 3354.3,
         "safety_composite": 21.0,
-        "throughput_tps": 122.21,
+        "throughput_tps": 113.47,
         "speed_tier": 2,
-        "latency_ttft_seconds": 2.74,
+        "latency_ttft_seconds": 2.43,
         "latency_tier": 2
       }
     },
@@ -10081,11 +10187,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 396.5,
-        "ttft_seconds_total": 2.03,
-        "ttft_seconds_answer": 8.24,
+        "output_speed_tps": 390.85,
+        "ttft_seconds_total": 1.87,
+        "ttft_seconds_answer": 8.17,
         "end_to_end_500tok": {
-          "total": 9.5,
+          "total": 9.45,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -10106,9 +10212,9 @@
         "value_intelligence_per_dollar_blend": 37.0,
         "value_intelligence_per_dollar_task": 109.6,
         "safety_composite": 54.2,
-        "throughput_tps": 396.5,
+        "throughput_tps": 390.85,
         "speed_tier": 2,
-        "latency_ttft_seconds": 8.24,
+        "latency_ttft_seconds": 8.17,
         "latency_tier": 1
       }
     },
@@ -10313,11 +10419,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 167.88,
-        "ttft_seconds_total": 18.08,
-        "ttft_seconds_answer": 18.08,
+        "output_speed_tps": 161.56,
+        "ttft_seconds_total": 18.4,
+        "ttft_seconds_answer": 18.4,
         "end_to_end_500tok": {
-          "total": 21.06,
+          "total": 21.5,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -10338,9 +10444,9 @@
         "value_intelligence_per_dollar_blend": 24.3,
         "value_intelligence_per_dollar_task": 78.5,
         "safety_composite": 59.7,
-        "throughput_tps": 167.88,
+        "throughput_tps": 161.56,
         "speed_tier": 2,
-        "latency_ttft_seconds": 18.08,
+        "latency_ttft_seconds": 18.4,
         "latency_tier": 1
       }
     },
@@ -10429,11 +10535,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 218.59,
-        "ttft_seconds_total": 13.98,
-        "ttft_seconds_answer": 13.98,
+        "output_speed_tps": 224.55,
+        "ttft_seconds_total": 12.69,
+        "ttft_seconds_answer": 12.69,
         "end_to_end_500tok": {
-          "total": 16.26,
+          "total": 14.92,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -10453,9 +10559,9 @@
       "derived": {
         "value_intelligence_per_dollar_blend": 12.7,
         "safety_composite": 64.7,
-        "throughput_tps": 218.59,
+        "throughput_tps": 224.55,
         "speed_tier": 2,
-        "latency_ttft_seconds": 13.98,
+        "latency_ttft_seconds": 12.69,
         "latency_tier": 1
       }
     },
@@ -10534,11 +10640,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 383.48,
-        "ttft_seconds_total": 2.59,
-        "ttft_seconds_answer": 7.8,
+        "output_speed_tps": 358.87,
+        "ttft_seconds_total": 2.64,
+        "ttft_seconds_answer": 8.21,
         "end_to_end_500tok": {
-          "total": 9.11,
+          "total": 9.6,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -10559,9 +10665,9 @@
         "value_intelligence_per_dollar_blend": 343.8,
         "value_intelligence_per_dollar_task": 1003.2,
         "safety_composite": 48.7,
-        "throughput_tps": 383.48,
+        "throughput_tps": 358.87,
         "speed_tier": 2,
-        "latency_ttft_seconds": 7.8,
+        "latency_ttft_seconds": 8.21,
         "latency_tier": 1
       }
     },
@@ -10650,11 +10756,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 35.29,
-        "ttft_seconds_total": 3.37,
-        "ttft_seconds_answer": 164.22,
+        "output_speed_tps": 37.18,
+        "ttft_seconds_total": 3.42,
+        "ttft_seconds_answer": 156.09,
         "end_to_end_500tok": {
-          "total": 178.39,
+          "total": 169.54,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -10675,9 +10781,9 @@
         "value_intelligence_per_dollar_blend": 37.0,
         "value_intelligence_per_dollar_task": 201.6,
         "safety_composite": 45.5,
-        "throughput_tps": 35.29,
+        "throughput_tps": 37.18,
         "speed_tier": 0,
-        "latency_ttft_seconds": 164.22,
+        "latency_ttft_seconds": 156.09,
         "latency_tier": 0
       }
     },
@@ -10862,11 +10968,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 365.15,
-        "ttft_seconds_total": 8.76,
-        "ttft_seconds_answer": 8.76,
+        "output_speed_tps": 379.41,
+        "ttft_seconds_total": 9.25,
+        "ttft_seconds_answer": 9.25,
         "end_to_end_500tok": {
-          "total": 10.13,
+          "total": 10.56,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -10887,9 +10993,9 @@
         "value_intelligence_per_dollar_blend": 44.0,
         "value_intelligence_per_dollar_task": 388.0,
         "safety_composite": 54.3,
-        "throughput_tps": 365.15,
+        "throughput_tps": 379.41,
         "speed_tier": 2,
-        "latency_ttft_seconds": 8.76,
+        "latency_ttft_seconds": 9.25,
         "latency_tier": 1
       }
     },
@@ -11282,11 +11388,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 114.8,
-        "ttft_seconds_total": 9.07,
-        "ttft_seconds_answer": 9.07,
+        "output_speed_tps": 108.75,
+        "ttft_seconds_total": 11.61,
+        "ttft_seconds_answer": 11.61,
         "end_to_end_500tok": {
-          "total": 13.42,
+          "total": 16.21,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -11306,9 +11412,9 @@
       "derived": {
         "value_intelligence_per_dollar_blend": 23.7,
         "safety_composite": 64.6,
-        "throughput_tps": 114.8,
+        "throughput_tps": 108.75,
         "speed_tier": 2,
-        "latency_ttft_seconds": 9.07,
+        "latency_ttft_seconds": 11.61,
         "latency_tier": 1
       }
     },
@@ -11397,11 +11503,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 114.81,
-        "ttft_seconds_total": 6.44,
-        "ttft_seconds_answer": 6.44,
+        "output_speed_tps": 113.25,
+        "ttft_seconds_total": 4.91,
+        "ttft_seconds_answer": 4.91,
         "end_to_end_500tok": {
-          "total": 10.79,
+          "total": 9.32,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -11421,14 +11527,14 @@
       "derived": {
         "value_intelligence_per_dollar_blend": 23.3,
         "safety_composite": 64.1,
-        "throughput_tps": 114.81,
+        "throughput_tps": 113.25,
         "speed_tier": 2,
-        "latency_ttft_seconds": 6.44,
-        "latency_tier": 1
+        "latency_ttft_seconds": 4.91,
+        "latency_tier": 2
       }
     },
     {
-      "name": "GLM-5.1 (FP8, Base)",
+      "name": "GLM-5.1 (Non-reasoning) (FP8, Base)",
       "slug": "glm-5-1-non-reasoning",
       "aa_url": "https://artificialanalysis.ai/models/glm-5-1-non-reasoning",
       "creator": "Z AI",
@@ -11512,11 +11618,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 30.5,
-        "ttft_seconds_total": 1.87,
-        "ttft_seconds_answer": 1.87,
+        "output_speed_tps": 32.61,
+        "ttft_seconds_total": 1.86,
+        "ttft_seconds_answer": 1.86,
         "end_to_end_500tok": {
-          "total": 18.26,
+          "total": 17.19,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -11532,13 +11638,13 @@
         "page_enrichment": false,
         "aa_pipeline": true
       },
-      "short_name": "GLM-5.1 (FP8, Base)",
+      "short_name": "GLM-5.1 (Non-reasoning) (FP8, Base)",
       "derived": {
         "value_intelligence_per_dollar_blend": 16.9,
         "safety_composite": 36.3,
-        "throughput_tps": 30.5,
+        "throughput_tps": 32.61,
         "speed_tier": 0,
-        "latency_ttft_seconds": 1.87,
+        "latency_ttft_seconds": 1.86,
         "latency_tier": 2
       }
     },
@@ -11731,11 +11837,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 184.99,
-        "ttft_seconds_total": 0.94,
-        "ttft_seconds_answer": 0.94,
+        "output_speed_tps": 201.95,
+        "ttft_seconds_total": 0.9,
+        "ttft_seconds_answer": 0.9,
         "end_to_end_500tok": {
-          "total": 3.65,
+          "total": 3.38,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -11755,9 +11861,9 @@
       "derived": {
         "value_intelligence_per_dollar_blend": 10.6,
         "safety_composite": 29.7,
-        "throughput_tps": 184.99,
+        "throughput_tps": 201.95,
         "speed_tier": 2,
-        "latency_ttft_seconds": 0.94,
+        "latency_ttft_seconds": 0.9,
         "latency_tier": 2
       }
     },
@@ -11846,11 +11952,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 115.61,
-        "ttft_seconds_total": 0.7,
-        "ttft_seconds_answer": 0.7,
+        "output_speed_tps": 114.12,
+        "ttft_seconds_total": 0.74,
+        "ttft_seconds_answer": 0.74,
         "end_to_end_500tok": {
-          "total": 5.02,
+          "total": 5.12,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -11871,14 +11977,14 @@
         "value_intelligence_per_dollar_blend": 2.9,
         "value_intelligence_per_dollar_task": 89.0,
         "safety_composite": 18.7,
-        "throughput_tps": 115.61,
+        "throughput_tps": 114.12,
         "speed_tier": 2,
-        "latency_ttft_seconds": 0.7,
+        "latency_ttft_seconds": 0.74,
         "latency_tier": 2
       }
     },
     {
-      "name": "Kimi K2.6",
+      "name": "Kimi K2.6 (Non-reasoning)",
       "slug": "kimi-k2-6-non-reasoning",
       "aa_url": "https://artificialanalysis.ai/models/kimi-k2-6-non-reasoning",
       "creator": "Kimi",
@@ -11962,11 +12068,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 51.9,
-        "ttft_seconds_total": 2.2,
-        "ttft_seconds_answer": 2.2,
+        "output_speed_tps": 48.3,
+        "ttft_seconds_total": 2.17,
+        "ttft_seconds_answer": 2.17,
         "end_to_end_500tok": {
-          "total": 11.84,
+          "total": 12.52,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -11982,13 +12088,13 @@
         "page_enrichment": false,
         "aa_pipeline": true
       },
-      "short_name": "Kimi K2.6",
+      "short_name": "Kimi K2.6 (Non-reasoning)",
       "derived": {
         "value_intelligence_per_dollar_blend": 24.4,
         "safety_composite": 47.7,
-        "throughput_tps": 51.9,
-        "speed_tier": 1,
-        "latency_ttft_seconds": 2.2,
+        "throughput_tps": 48.3,
+        "speed_tier": 0,
+        "latency_ttft_seconds": 2.17,
         "latency_tier": 2
       }
     },
@@ -12171,11 +12277,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 149.08,
-        "ttft_seconds_total": 0.88,
-        "ttft_seconds_answer": 14.3,
+        "output_speed_tps": 34.2,
+        "ttft_seconds_total": 1.07,
+        "ttft_seconds_answer": 59.55,
         "end_to_end_500tok": {
-          "total": 17.65,
+          "total": 74.18,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -12196,10 +12302,10 @@
         "value_intelligence_per_dollar_blend": 67.4,
         "value_intelligence_per_dollar_task": 819.2,
         "safety_composite": 24.9,
-        "throughput_tps": 149.08,
-        "speed_tier": 2,
-        "latency_ttft_seconds": 14.3,
-        "latency_tier": 1
+        "throughput_tps": 34.2,
+        "speed_tier": 0,
+        "latency_ttft_seconds": 59.55,
+        "latency_tier": 0
       }
     },
     {
@@ -12297,7 +12403,7 @@
       }
     },
     {
-      "name": "GLM-5.2",
+      "name": "GLM-5.2 (Non-reasoning)",
       "slug": "glm-5-2-non-reasoning",
       "aa_url": "https://artificialanalysis.ai/models/glm-5-2-non-reasoning",
       "creator": "Z AI",
@@ -12337,7 +12443,7 @@
         "math_500": null,
         "aime": null,
         "aime25": null,
-        "gdpval_v2": 44.6,
+        "gdpval_v2": 44.4,
         "critpt": 3.1,
         "mmmu_pro": null,
         "apex_agents_aa": null,
@@ -12371,11 +12477,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 81.48,
-        "ttft_seconds_total": 2.33,
-        "ttft_seconds_answer": 2.33,
+        "output_speed_tps": 83.42,
+        "ttft_seconds_total": 1.69,
+        "ttft_seconds_answer": 1.69,
         "end_to_end_500tok": {
-          "total": 8.47,
+          "total": 7.69,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -12391,13 +12497,13 @@
         "page_enrichment": false,
         "aa_pipeline": true
       },
-      "short_name": "GLM-5.2",
+      "short_name": "GLM-5.2 (Non-reasoning)",
       "derived": {
         "value_intelligence_per_dollar_blend": 16.2,
         "safety_composite": 53.7,
-        "throughput_tps": 81.48,
+        "throughput_tps": 83.42,
         "speed_tier": 1,
-        "latency_ttft_seconds": 2.33,
+        "latency_ttft_seconds": 1.69,
         "latency_tier": 2
       }
     },
@@ -12442,7 +12548,7 @@
         "math_500": null,
         "aime": null,
         "aime25": null,
-        "gdpval_v2": 35.6,
+        "gdpval_v2": 35.5,
         "critpt": 0.3,
         "mmmu_pro": 69.9,
         "apex_agents_aa": null,
@@ -12476,11 +12582,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 55.16,
-        "ttft_seconds_total": 3.63,
-        "ttft_seconds_answer": 3.63,
+        "output_speed_tps": 50.66,
+        "ttft_seconds_total": 4.05,
+        "ttft_seconds_answer": 4.05,
         "end_to_end_500tok": {
-          "total": 12.69,
+          "total": 13.92,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -12501,9 +12607,9 @@
         "value_intelligence_per_dollar_blend": 31.0,
         "value_intelligence_per_dollar_task": 81.5,
         "safety_composite": 63.0,
-        "throughput_tps": 55.16,
+        "throughput_tps": 50.66,
         "speed_tier": 1,
-        "latency_ttft_seconds": 3.63,
+        "latency_ttft_seconds": 4.05,
         "latency_tier": 2
       }
     },
@@ -12592,11 +12698,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 130.78,
-        "ttft_seconds_total": 0.74,
-        "ttft_seconds_answer": 0.74,
+        "output_speed_tps": 103.4,
+        "ttft_seconds_total": 0.72,
+        "ttft_seconds_answer": 0.72,
         "end_to_end_500tok": {
-          "total": 4.56,
+          "total": 5.56,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -12617,9 +12723,9 @@
         "value_intelligence_per_dollar_blend": 5.6,
         "value_intelligence_per_dollar_task": 242.6,
         "safety_composite": 16.8,
-        "throughput_tps": 130.78,
+        "throughput_tps": 103.4,
         "speed_tier": 2,
-        "latency_ttft_seconds": 0.74,
+        "latency_ttft_seconds": 0.72,
         "latency_tier": 2
       }
     },
@@ -12866,7 +12972,7 @@
         "math_500": null,
         "aime": null,
         "aime25": null,
-        "gdpval_v2": 38.2,
+        "gdpval_v2": 38.3,
         "critpt": 0.3,
         "mmmu_pro": null,
         "apex_agents_aa": null,
@@ -12995,11 +13101,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 41.34,
-        "ttft_seconds_total": 2.85,
-        "ttft_seconds_answer": 51.22,
+        "output_speed_tps": 39.5,
+        "ttft_seconds_total": 2.88,
+        "ttft_seconds_answer": 53.52,
         "end_to_end_500tok": {
-          "total": 63.32,
+          "total": 66.18,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -13020,9 +13126,9 @@
         "value_intelligence_per_dollar_blend": 26.1,
         "value_intelligence_per_dollar_task": 280.0,
         "safety_composite": 28.3,
-        "throughput_tps": 41.34,
+        "throughput_tps": 39.5,
         "speed_tier": 0,
-        "latency_ttft_seconds": 51.22,
+        "latency_ttft_seconds": 53.52,
         "latency_tier": 0
       }
     },
@@ -13111,11 +13217,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 111.53,
-        "ttft_seconds_total": 1.5,
-        "ttft_seconds_answer": 1.5,
+        "output_speed_tps": 108.94,
+        "ttft_seconds_total": 1.79,
+        "ttft_seconds_answer": 1.79,
         "end_to_end_500tok": {
-          "total": 5.98,
+          "total": 6.38,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -13136,9 +13242,9 @@
         "value_intelligence_per_dollar_blend": 75.2,
         "value_intelligence_per_dollar_task": 3761.1,
         "safety_composite": 19.6,
-        "throughput_tps": 111.53,
+        "throughput_tps": 108.94,
         "speed_tier": 2,
-        "latency_ttft_seconds": 1.5,
+        "latency_ttft_seconds": 1.79,
         "latency_tier": 2
       }
     },
@@ -13193,7 +13299,7 @@
         "math_500": null,
         "aime": null,
         "aime25": null,
-        "gdpval_v2": 20.4,
+        "gdpval_v2": 20.3,
         "critpt": 0.0,
         "mmmu_pro": null,
         "apex_agents_aa": null,
@@ -13342,11 +13448,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 125.86,
-        "ttft_seconds_total": 1.39,
-        "ttft_seconds_answer": 44.26,
+        "output_speed_tps": 124.8,
+        "ttft_seconds_total": 1.34,
+        "ttft_seconds_answer": 44.57,
         "end_to_end_500tok": {
-          "total": 48.23,
+          "total": 48.58,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -13367,14 +13473,14 @@
         "value_intelligence_per_dollar_blend": 57.4,
         "value_intelligence_per_dollar_task": 165.1,
         "safety_composite": 42.6,
-        "throughput_tps": 125.86,
+        "throughput_tps": 124.8,
         "speed_tier": 2,
-        "latency_ttft_seconds": 44.26,
+        "latency_ttft_seconds": 44.57,
         "latency_tier": 0
       }
     },
     {
-      "name": "DeepSeek V4 Pro",
+      "name": "DeepSeek V4 Pro (Non-reasoning)",
       "slug": "deepseek-v4-pro-0424-non-reasoning",
       "aa_url": "https://artificialanalysis.ai/models/deepseek-v4-pro-0424-non-reasoning",
       "creator": "DeepSeek",
@@ -13448,11 +13554,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 70.92,
+        "output_speed_tps": 62.98,
         "ttft_seconds_total": 1.63,
         "ttft_seconds_answer": 1.63,
         "end_to_end_500tok": {
-          "total": 8.68,
+          "total": 9.57,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -13468,11 +13574,11 @@
         "page_enrichment": false,
         "aa_pipeline": true
       },
-      "short_name": "DeepSeek V4 Pro",
+      "short_name": "DeepSeek V4 Pro (Non-reasoning)",
       "derived": {
         "value_intelligence_per_dollar_blend": 59.1,
         "safety_composite": 20.1,
-        "throughput_tps": 70.92,
+        "throughput_tps": 62.98,
         "speed_tier": 1,
         "latency_ttft_seconds": 1.63,
         "latency_tier": 2
@@ -13563,11 +13669,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 128.95,
-        "ttft_seconds_total": 3.86,
-        "ttft_seconds_answer": 19.37,
+        "output_speed_tps": 124.27,
+        "ttft_seconds_total": 3.87,
+        "ttft_seconds_answer": 19.97,
         "end_to_end_500tok": {
-          "total": 23.25,
+          "total": 23.99,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -13588,9 +13694,9 @@
         "value_intelligence_per_dollar_blend": 37.2,
         "value_intelligence_per_dollar_task": 87.9,
         "safety_composite": 21.5,
-        "throughput_tps": 128.95,
+        "throughput_tps": 124.27,
         "speed_tier": 2,
-        "latency_ttft_seconds": 19.37,
+        "latency_ttft_seconds": 19.97,
         "latency_tier": 1
       }
     },
@@ -13679,11 +13785,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 134.06,
-        "ttft_seconds_total": 2.08,
-        "ttft_seconds_answer": 2.08,
+        "output_speed_tps": 129.34,
+        "ttft_seconds_total": 2.03,
+        "ttft_seconds_answer": 2.03,
         "end_to_end_500tok": {
-          "total": 5.81,
+          "total": 5.89,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -13703,14 +13809,14 @@
       "derived": {
         "value_intelligence_per_dollar_blend": 20.9,
         "safety_composite": 50.3,
-        "throughput_tps": 134.06,
+        "throughput_tps": 129.34,
         "speed_tier": 2,
-        "latency_ttft_seconds": 2.08,
+        "latency_ttft_seconds": 2.03,
         "latency_tier": 2
       }
     },
     {
-      "name": "Qwen3.6 27B",
+      "name": "Qwen3.6 27B (Non-reasoning)",
       "slug": "qwen3-6-27b-non-reasoning",
       "aa_url": "https://artificialanalysis.ai/models/qwen3-6-27b-non-reasoning",
       "creator": "Alibaba",
@@ -13794,11 +13900,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 54.61,
-        "ttft_seconds_total": 3.18,
-        "ttft_seconds_answer": 3.18,
+        "output_speed_tps": 59.79,
+        "ttft_seconds_total": 3.25,
+        "ttft_seconds_answer": 3.25,
         "end_to_end_500tok": {
-          "total": 12.33,
+          "total": 11.62,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -13814,14 +13920,14 @@
         "page_enrichment": false,
         "aa_pipeline": true
       },
-      "short_name": "Qwen3.6 27B",
+      "short_name": "Qwen3.6 27B (Non-reasoning)",
       "derived": {
         "value_intelligence_per_dollar_blend": 23.2,
         "value_intelligence_per_dollar_task": 78.7,
         "safety_composite": 22.2,
-        "throughput_tps": 54.61,
+        "throughput_tps": 59.79,
         "speed_tier": 1,
-        "latency_ttft_seconds": 3.18,
+        "latency_ttft_seconds": 3.25,
         "latency_tier": 2
       }
     },
@@ -13940,7 +14046,7 @@
       }
     },
     {
-      "name": "K-EXAONE 2.0 0803",
+      "name": "K-EXAONE 2.0",
       "slug": "k-exaone-2-0-0803",
       "aa_url": "https://artificialanalysis.ai/models/k-exaone-2-0-0803",
       "creator": "LG AI Research",
@@ -14028,7 +14134,7 @@
         "page_enrichment": false,
         "aa_pipeline": true
       },
-      "short_name": "K-EXAONE 2.0 0803",
+      "short_name": "K-EXAONE 2.0",
       "derived": {
         "safety_composite": 58.8
       }
@@ -14084,7 +14190,7 @@
         "math_500": null,
         "aime": null,
         "aime25": null,
-        "gdpval_v2": 26.0,
+        "gdpval_v2": 25.9,
         "critpt": 2.3,
         "mmmu_pro": 75.3,
         "apex_agents_aa": 14.8,
@@ -14118,11 +14224,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 169.95,
-        "ttft_seconds_total": 0.64,
-        "ttft_seconds_answer": 12.41,
+        "output_speed_tps": 179.32,
+        "ttft_seconds_total": 0.67,
+        "ttft_seconds_answer": 11.82,
         "end_to_end_500tok": {
-          "total": 15.35,
+          "total": 14.61,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -14143,9 +14249,9 @@
         "value_intelligence_per_dollar_blend": 70.2,
         "value_intelligence_per_dollar_task": 338.4,
         "safety_composite": 21.4,
-        "throughput_tps": 169.95,
+        "throughput_tps": 179.32,
         "speed_tier": 2,
-        "latency_ttft_seconds": 12.41,
+        "latency_ttft_seconds": 11.82,
         "latency_tier": 1
       }
     },
@@ -14234,11 +14340,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 174.32,
-        "ttft_seconds_total": 4.21,
-        "ttft_seconds_answer": 4.21,
+        "output_speed_tps": 173.3,
+        "ttft_seconds_total": 3.69,
+        "ttft_seconds_answer": 3.69,
         "end_to_end_500tok": {
-          "total": 7.08,
+          "total": 6.58,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -14258,9 +14364,9 @@
       "derived": {
         "value_intelligence_per_dollar_blend": 67.0,
         "safety_composite": 41.7,
-        "throughput_tps": 174.32,
+        "throughput_tps": 173.3,
         "speed_tier": 2,
-        "latency_ttft_seconds": 4.21,
+        "latency_ttft_seconds": 3.69,
         "latency_tier": 2
       }
     },
@@ -14349,11 +14455,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 171.59,
-        "ttft_seconds_total": 10.81,
-        "ttft_seconds_answer": 10.81,
+        "output_speed_tps": 189.75,
+        "ttft_seconds_total": 11.44,
+        "ttft_seconds_answer": 11.44,
         "end_to_end_500tok": {
-          "total": 13.73,
+          "total": 14.07,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -14373,9 +14479,9 @@
       "derived": {
         "value_intelligence_per_dollar_blend": 18.0,
         "safety_composite": 18.3,
-        "throughput_tps": 171.59,
+        "throughput_tps": 189.75,
         "speed_tier": 2,
-        "latency_ttft_seconds": 10.81,
+        "latency_ttft_seconds": 11.44,
         "latency_tier": 1
       }
     },
@@ -14464,11 +14570,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 141.26,
-        "ttft_seconds_total": 2.24,
-        "ttft_seconds_answer": 16.4,
+        "output_speed_tps": 151.15,
+        "ttft_seconds_total": 2.23,
+        "ttft_seconds_answer": 15.46,
         "end_to_end_500tok": {
-          "total": 19.94,
+          "total": 18.77,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -14489,9 +14595,9 @@
         "value_intelligence_per_dollar_blend": 10.1,
         "value_intelligence_per_dollar_task": 74.9,
         "safety_composite": 23.2,
-        "throughput_tps": 141.26,
+        "throughput_tps": 151.15,
         "speed_tier": 2,
-        "latency_ttft_seconds": 16.4,
+        "latency_ttft_seconds": 15.46,
         "latency_tier": 1
       }
     },
@@ -14546,7 +14652,7 @@
         "math_500": null,
         "aime": null,
         "aime25": null,
-        "gdpval_v2": 15.6,
+        "gdpval_v2": 15.7,
         "critpt": 1.4,
         "mmmu_pro": 73.4,
         "apex_agents_aa": null,
@@ -14580,11 +14686,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 47.93,
-        "ttft_seconds_total": 1.43,
-        "ttft_seconds_answer": 37.66,
+        "output_speed_tps": 59.3,
+        "ttft_seconds_total": 1.3,
+        "ttft_seconds_answer": 30.58,
         "end_to_end_500tok": {
-          "total": 48.09,
+          "total": 39.01,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -14605,14 +14711,14 @@
         "value_intelligence_per_dollar_blend": 56.0,
         "value_intelligence_per_dollar_task": 294.5,
         "safety_composite": 20.9,
-        "throughput_tps": 47.93,
-        "speed_tier": 0,
-        "latency_ttft_seconds": 37.66,
+        "throughput_tps": 59.3,
+        "speed_tier": 1,
+        "latency_ttft_seconds": 30.58,
         "latency_tier": 0
       }
     },
     {
-      "name": "DeepSeek V4 Flash",
+      "name": "DeepSeek V4 Flash (Non-reasoning)",
       "slug": "deepseek-v4-flash-non-reasoning",
       "aa_url": "https://artificialanalysis.ai/models/deepseek-v4-flash-non-reasoning",
       "creator": "DeepSeek",
@@ -14696,11 +14802,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 60.41,
-        "ttft_seconds_total": 1.59,
-        "ttft_seconds_answer": 1.59,
+        "output_speed_tps": 68.42,
+        "ttft_seconds_total": 1.61,
+        "ttft_seconds_answer": 1.61,
         "end_to_end_500tok": {
-          "total": 9.87,
+          "total": 8.91,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -14716,13 +14822,13 @@
         "page_enrichment": false,
         "aa_pipeline": true
       },
-      "short_name": "DeepSeek V4 Flash",
+      "short_name": "DeepSeek V4 Flash (Non-reasoning)",
       "derived": {
         "value_intelligence_per_dollar_blend": 162.7,
         "safety_composite": 15.0,
-        "throughput_tps": 60.41,
+        "throughput_tps": 68.42,
         "speed_tier": 1,
-        "latency_ttft_seconds": 1.59,
+        "latency_ttft_seconds": 1.61,
         "latency_tier": 2
       }
     },
@@ -14811,11 +14917,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 147.89,
-        "ttft_seconds_total": 1.19,
-        "ttft_seconds_answer": 14.71,
+        "output_speed_tps": 129.86,
+        "ttft_seconds_total": 1.27,
+        "ttft_seconds_answer": 16.67,
         "end_to_end_500tok": {
-          "total": 18.09,
+          "total": 20.52,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -14836,9 +14942,9 @@
         "value_intelligence_per_dollar_blend": 2.6,
         "value_intelligence_per_dollar_task": 54.4,
         "safety_composite": 27.8,
-        "throughput_tps": 147.89,
+        "throughput_tps": 129.86,
         "speed_tier": 2,
-        "latency_ttft_seconds": 14.71,
+        "latency_ttft_seconds": 16.67,
         "latency_tier": 1
       }
     },
@@ -14947,7 +15053,7 @@
       }
     },
     {
-      "name": "MiMo-V2.5-Pro",
+      "name": "MiMo-V2.5-Pro (Non-reasoning)",
       "slug": "mimo-v2-5-pro-non-reasoning",
       "aa_url": "https://artificialanalysis.ai/models/mimo-v2-5-pro-non-reasoning",
       "creator": "Xiaomi",
@@ -15031,11 +15137,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 44.56,
-        "ttft_seconds_total": 3.25,
-        "ttft_seconds_answer": 3.25,
+        "output_speed_tps": 36.82,
+        "ttft_seconds_total": 2.89,
+        "ttft_seconds_answer": 2.89,
         "end_to_end_500tok": {
-          "total": 14.47,
+          "total": 16.47,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -15051,13 +15157,13 @@
         "page_enrichment": false,
         "aa_pipeline": true
       },
-      "short_name": "MiMo-V2.5-Pro",
+      "short_name": "MiMo-V2.5-Pro (Non-reasoning)",
       "derived": {
         "value_intelligence_per_dollar_blend": 43.8,
         "safety_composite": 17.9,
-        "throughput_tps": 44.56,
+        "throughput_tps": 36.82,
         "speed_tier": 0,
-        "latency_ttft_seconds": 3.25,
+        "latency_ttft_seconds": 2.89,
         "latency_tier": 2
       }
     },
@@ -15146,11 +15252,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 101.09,
-        "ttft_seconds_total": 0.81,
-        "ttft_seconds_answer": 0.81,
+        "output_speed_tps": 104.31,
+        "ttft_seconds_total": 0.9,
+        "ttft_seconds_answer": 0.9,
         "end_to_end_500tok": {
-          "total": 5.76,
+          "total": 5.69,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -15170,9 +15276,9 @@
       "derived": {
         "value_intelligence_per_dollar_blend": 5.0,
         "safety_composite": 20.5,
-        "throughput_tps": 101.09,
+        "throughput_tps": 104.31,
         "speed_tier": 2,
-        "latency_ttft_seconds": 0.81,
+        "latency_ttft_seconds": 0.9,
         "latency_tier": 2
       }
     },
@@ -15261,11 +15367,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 210.61,
-        "ttft_seconds_total": 0.76,
-        "ttft_seconds_answer": 0.76,
+        "output_speed_tps": 181.07,
+        "ttft_seconds_total": 0.59,
+        "ttft_seconds_answer": 0.59,
         "end_to_end_500tok": {
-          "total": 3.14,
+          "total": 3.35,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -15286,14 +15392,14 @@
         "value_intelligence_per_dollar_blend": 10.8,
         "value_intelligence_per_dollar_task": 403.6,
         "safety_composite": 25.7,
-        "throughput_tps": 210.61,
+        "throughput_tps": 181.07,
         "speed_tier": 2,
-        "latency_ttft_seconds": 0.76,
+        "latency_ttft_seconds": 0.59,
         "latency_tier": 2
       }
     },
     {
-      "name": "Hy3-preview",
+      "name": "Hy3-preview (Non-reasoning)",
       "slug": "hy3-non-reasoning",
       "aa_url": "https://artificialanalysis.ai/models/hy3-non-reasoning",
       "creator": "Tencent",
@@ -15397,7 +15503,7 @@
         "page_enrichment": false,
         "aa_pipeline": true
       },
-      "short_name": "Hy3-preview",
+      "short_name": "Hy3-preview (Non-reasoning)",
       "derived": {
         "value_intelligence_per_dollar_blend": 266.3,
         "safety_composite": 25.2,
@@ -15598,11 +15704,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 217.5,
-        "ttft_seconds_total": 1.08,
-        "ttft_seconds_answer": 10.28,
+        "output_speed_tps": 223.74,
+        "ttft_seconds_total": 1.17,
+        "ttft_seconds_answer": 10.1,
         "end_to_end_500tok": {
-          "total": 12.58,
+          "total": 12.34,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -15622,9 +15728,9 @@
       "derived": {
         "value_intelligence_per_dollar_blend": 176.8,
         "safety_composite": 15.8,
-        "throughput_tps": 217.5,
+        "throughput_tps": 223.74,
         "speed_tier": 2,
-        "latency_ttft_seconds": 10.28,
+        "latency_ttft_seconds": 10.1,
         "latency_tier": 1
       }
     },
@@ -15820,11 +15926,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 57.38,
-        "ttft_seconds_total": 24.23,
-        "ttft_seconds_answer": 59.09,
+        "output_speed_tps": 61.15,
+        "ttft_seconds_total": 17.03,
+        "ttft_seconds_answer": 49.73,
         "end_to_end_500tok": {
-          "total": 67.8,
+          "total": 57.91,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -15845,9 +15951,9 @@
         "value_intelligence_per_dollar_blend": 160.4,
         "value_intelligence_per_dollar_task": 259.8,
         "safety_composite": 18.1,
-        "throughput_tps": 57.38,
+        "throughput_tps": 61.15,
         "speed_tier": 1,
-        "latency_ttft_seconds": 59.09,
+        "latency_ttft_seconds": 49.73,
         "latency_tier": 0
       }
     },
@@ -15936,11 +16042,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 347.58,
-        "ttft_seconds_total": 5.92,
-        "ttft_seconds_answer": 5.92,
+        "output_speed_tps": 309.33,
+        "ttft_seconds_total": 5.43,
+        "ttft_seconds_answer": 5.43,
         "end_to_end_500tok": {
-          "total": 7.36,
+          "total": 7.05,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -15961,9 +16067,9 @@
         "value_intelligence_per_dollar_blend": 45.7,
         "value_intelligence_per_dollar_task": 592.8,
         "safety_composite": 20.6,
-        "throughput_tps": 347.58,
+        "throughput_tps": 309.33,
         "speed_tier": 2,
-        "latency_ttft_seconds": 5.92,
+        "latency_ttft_seconds": 5.43,
         "latency_tier": 1
       }
     },
@@ -16052,11 +16158,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 112.11,
-        "ttft_seconds_total": 0.72,
-        "ttft_seconds_answer": 0.72,
+        "output_speed_tps": 105.44,
+        "ttft_seconds_total": 0.74,
+        "ttft_seconds_answer": 0.74,
         "end_to_end_500tok": {
-          "total": 5.18,
+          "total": 5.49,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -16077,14 +16183,14 @@
         "value_intelligence_per_dollar_blend": 16.0,
         "value_intelligence_per_dollar_task": 84.9,
         "safety_composite": 25.3,
-        "throughput_tps": 112.11,
+        "throughput_tps": 105.44,
         "speed_tier": 2,
-        "latency_ttft_seconds": 0.72,
+        "latency_ttft_seconds": 0.74,
         "latency_tier": 2
       }
     },
     {
-      "name": "Qwen3.6 35B A3B",
+      "name": "Qwen3.6 35B A3B (Non-reasoning)",
       "slug": "qwen3-6-35b-a3b-non-reasoning",
       "aa_url": "https://artificialanalysis.ai/models/qwen3-6-35b-a3b-non-reasoning",
       "creator": "Alibaba",
@@ -16168,11 +16274,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 138.96,
-        "ttft_seconds_total": 2.04,
-        "ttft_seconds_answer": 2.04,
+        "output_speed_tps": 135.18,
+        "ttft_seconds_total": 2.02,
+        "ttft_seconds_answer": 2.02,
         "end_to_end_500tok": {
-          "total": 5.64,
+          "total": 5.72,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -16188,14 +16294,14 @@
         "page_enrichment": false,
         "aa_pipeline": true
       },
-      "short_name": "Qwen3.6 35B A3B",
+      "short_name": "Qwen3.6 35B A3B (Non-reasoning)",
       "derived": {
         "value_intelligence_per_dollar_blend": 29.2,
         "value_intelligence_per_dollar_task": 39.0,
         "safety_composite": 14.6,
-        "throughput_tps": 138.96,
+        "throughput_tps": 135.18,
         "speed_tier": 2,
-        "latency_ttft_seconds": 2.04,
+        "latency_ttft_seconds": 2.02,
         "latency_tier": 2
       }
     },
@@ -16274,11 +16380,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 154.89,
-        "ttft_seconds_total": 2.68,
-        "ttft_seconds_answer": 15.59,
+        "output_speed_tps": 167.88,
+        "ttft_seconds_total": 2.63,
+        "ttft_seconds_answer": 14.54,
         "end_to_end_500tok": {
-          "total": 18.82,
+          "total": 17.52,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -16297,10 +16403,116 @@
       "short_name": "Ling 3.0 Tiny",
       "derived": {
         "safety_composite": 51.5,
-        "throughput_tps": 154.89,
+        "throughput_tps": 167.88,
         "speed_tier": 2,
-        "latency_ttft_seconds": 15.59,
+        "latency_ttft_seconds": 14.54,
         "latency_tier": 1
+      }
+    },
+    {
+      "name": "Granite 4.2 30B",
+      "slug": "granite-4-2-30b",
+      "aa_url": "https://artificialanalysis.ai/models/granite-4-2-30b",
+      "creator": "IBM",
+      "released": "2026-08-25",
+      "knowledge_cutoff": null,
+      "is_reasoning": true,
+      "is_open_weights": true,
+      "deprecated": false,
+      "commercial_allowed": null,
+      "license": null,
+      "license_url": null,
+      "size_class": "small",
+      "context_tokens": 131072,
+      "parameters_billions": null,
+      "active_params_billions": null,
+      "input_modalities": null,
+      "output_modalities": null,
+      "composite": {
+        "intelligence_index_v4_1": 23.74,
+        "coding_index": 29.9,
+        "math_index": null,
+        "agentic_index": 13.9,
+        "omniscience_index": -12.9
+      },
+      "benchmarks": {
+        "gpqa_diamond": 64.4,
+        "hle": 11.2,
+        "scicode": 36.6,
+        "ifbench": null,
+        "lcr": 46.7,
+        "tau2_bench": null,
+        "tau3_banking": 14.4,
+        "terminalbench_hard": null,
+        "terminalbench_v2_1": 26.6,
+        "mmlu_pro": null,
+        "livecodebench": null,
+        "math_500": null,
+        "aime": null,
+        "aime25": null,
+        "gdpval_v2": 13.8,
+        "critpt": 0.3,
+        "mmmu_pro": null,
+        "apex_agents_aa": null,
+        "it_bench_sre": null,
+        "omniscience_accuracy": 10.1,
+        "omniscience_hallucination_rate": null,
+        "omniscience_non_halluc": 74.4,
+        "omniscience": 0
+      },
+      "pricing_per_m_tokens": {
+        "input": 0.16,
+        "output": 0.65,
+        "blended_3_1": 0.28,
+        "blended_7_2_1": 0.24,
+        "blended_1_1": null,
+        "cache_hit": 0.04,
+        "cache_write": null
+      },
+      "intelligence_evaluation_total_cost_usd": 55.58,
+      "cost_per_intelligence_task_usd": {
+        "total": 0.029,
+        "input": null,
+        "output": null,
+        "cacheRead": null,
+        "cacheWrite": null,
+        "nonCacheInput": null,
+        "reasoning": null,
+        "answer": null
+      },
+      "cost_per_eval_breakdown_usd": {},
+      "time_per_task_seconds": null,
+      "output_tokens_per_task": null,
+      "performance": {
+        "output_speed_tps": 75.29,
+        "ttft_seconds_total": 0.84,
+        "ttft_seconds_answer": 27.4,
+        "end_to_end_500tok": {
+          "total": 34.05,
+          "input": null,
+          "reasoning": 0,
+          "answer": null
+        }
+      },
+      "output_speed_by_prompt_length": [],
+      "featured": false,
+      "openrouter_slug": null,
+      "note": null,
+      "has_rich_data": true,
+      "data_sources": {
+        "documented_free_api": false,
+        "page_enrichment": false,
+        "aa_pipeline": true
+      },
+      "short_name": "Granite 4.2 30B",
+      "derived": {
+        "value_intelligence_per_dollar_blend": 84.8,
+        "value_intelligence_per_dollar_task": 818.6,
+        "safety_composite": 54.1,
+        "throughput_tps": 75.29,
+        "speed_tier": 1,
+        "latency_ttft_seconds": 27.4,
+        "latency_tier": 0
       }
     },
     {
@@ -16378,11 +16590,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 541.87,
-        "ttft_seconds_total": 0.5,
-        "ttft_seconds_answer": 4.19,
+        "output_speed_tps": 500.71,
+        "ttft_seconds_total": 0.46,
+        "ttft_seconds_answer": 4.45,
         "end_to_end_500tok": {
-          "total": 5.11,
+          "total": 5.45,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -16403,14 +16615,14 @@
         "value_intelligence_per_dollar_blend": 262.3,
         "value_intelligence_per_dollar_task": 1242.6,
         "safety_composite": 46.9,
-        "throughput_tps": 541.87,
+        "throughput_tps": 500.71,
         "speed_tier": 2,
-        "latency_ttft_seconds": 4.19,
+        "latency_ttft_seconds": 4.45,
         "latency_tier": 2
       }
     },
     {
-      "name": "Grok 4.20 0309",
+      "name": "Grok 4.20 0309 (Non-reasoning)",
       "slug": "grok-4-20-0309-non-reasoning",
       "aa_url": "https://artificialanalysis.ai/models/grok-4-20-0309-non-reasoning",
       "creator": "SpaceXAI",
@@ -16509,7 +16721,7 @@
         "page_enrichment": false,
         "aa_pipeline": true
       },
-      "short_name": "Grok 4.20 0309",
+      "short_name": "Grok 4.20 0309 (Non-reasoning)",
       "derived": {
         "value_intelligence_per_dollar_blend": 7.6,
         "safety_composite": 13.5
@@ -16600,11 +16812,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 251.97,
-        "ttft_seconds_total": 0.39,
-        "ttft_seconds_answer": 8.32,
+        "output_speed_tps": 239.47,
+        "ttft_seconds_total": 0.4,
+        "ttft_seconds_answer": 8.75,
         "end_to_end_500tok": {
-          "total": 10.31,
+          "total": 10.84,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -16623,14 +16835,14 @@
       "short_name": "Command A+",
       "derived": {
         "safety_composite": 60.6,
-        "throughput_tps": 251.97,
+        "throughput_tps": 239.47,
         "speed_tier": 2,
-        "latency_ttft_seconds": 8.32,
+        "latency_ttft_seconds": 8.75,
         "latency_tier": 1
       }
     },
     {
-      "name": "Gemma 4 31B",
+      "name": "Gemma 4 31B (Non-reasoning)",
       "slug": "gemma-4-31b-non-reasoning",
       "aa_url": "https://artificialanalysis.ai/models/gemma-4-31b-non-reasoning",
       "creator": "Google",
@@ -16714,11 +16926,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 37.48,
-        "ttft_seconds_total": 1.45,
-        "ttft_seconds_answer": 1.45,
+        "output_speed_tps": 32.34,
+        "ttft_seconds_total": 1.46,
+        "ttft_seconds_answer": 1.46,
         "end_to_end_500tok": {
-          "total": 14.79,
+          "total": 16.92,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -16734,19 +16946,19 @@
         "page_enrichment": false,
         "aa_pipeline": true
       },
-      "short_name": "Gemma 4 31B",
+      "short_name": "Gemma 4 31B (Non-reasoning)",
       "derived": {
         "value_intelligence_per_dollar_blend": 106.0,
         "value_intelligence_per_dollar_task": 542.7,
         "safety_composite": 19.8,
-        "throughput_tps": 37.48,
+        "throughput_tps": 32.34,
         "speed_tier": 0,
-        "latency_ttft_seconds": 1.45,
+        "latency_ttft_seconds": 1.46,
         "latency_tier": 2
       }
     },
     {
-      "name": "Grok 4.20 0309 v2",
+      "name": "Grok 4.20 0309 v2 (Non-reasoning)",
       "slug": "grok-4-20-non-reasoning",
       "aa_url": "https://artificialanalysis.ai/models/grok-4-20-non-reasoning",
       "creator": "SpaceXAI",
@@ -16830,11 +17042,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 100.28,
-        "ttft_seconds_total": 0.66,
-        "ttft_seconds_answer": 0.66,
+        "output_speed_tps": 88.29,
+        "ttft_seconds_total": 0.6,
+        "ttft_seconds_answer": 0.6,
         "end_to_end_500tok": {
-          "total": 5.65,
+          "total": 6.27,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -16850,13 +17062,13 @@
         "page_enrichment": false,
         "aa_pipeline": true
       },
-      "short_name": "Grok 4.20 0309 v2",
+      "short_name": "Grok 4.20 0309 v2 (Non-reasoning)",
       "derived": {
         "value_intelligence_per_dollar_blend": 14.2,
         "safety_composite": 10.5,
-        "throughput_tps": 100.28,
-        "speed_tier": 2,
-        "latency_ttft_seconds": 0.66,
+        "throughput_tps": 88.29,
+        "speed_tier": 1,
+        "latency_ttft_seconds": 0.6,
         "latency_tier": 2
       }
     },
@@ -16945,11 +17157,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 109.74,
-        "ttft_seconds_total": 2.28,
-        "ttft_seconds_answer": 20.51,
+        "output_speed_tps": 112.09,
+        "ttft_seconds_total": 2.43,
+        "ttft_seconds_answer": 20.28,
         "end_to_end_500tok": {
-          "total": 25.06,
+          "total": 24.74,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -16969,9 +17181,9 @@
       "derived": {
         "value_intelligence_per_dollar_blend": 147.7,
         "safety_composite": 20.3,
-        "throughput_tps": 109.74,
+        "throughput_tps": 112.09,
         "speed_tier": 2,
-        "latency_ttft_seconds": 20.51,
+        "latency_ttft_seconds": 20.28,
         "latency_tier": 0
       }
     },
@@ -17060,11 +17272,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 85.26,
-        "ttft_seconds_total": 0.72,
-        "ttft_seconds_answer": 24.18,
+        "output_speed_tps": 92.38,
+        "ttft_seconds_total": 0.79,
+        "ttft_seconds_answer": 22.44,
         "end_to_end_500tok": {
-          "total": 30.05,
+          "total": 27.85,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -17085,14 +17297,14 @@
         "value_intelligence_per_dollar_blend": 114.7,
         "value_intelligence_per_dollar_task": 71.7,
         "safety_composite": 18.6,
-        "throughput_tps": 85.26,
+        "throughput_tps": 92.38,
         "speed_tier": 1,
-        "latency_ttft_seconds": 24.18,
+        "latency_ttft_seconds": 22.44,
         "latency_tier": 0
       }
     },
     {
-      "name": "Qwen3.5 9B (FP8)",
+      "name": "Qwen3.5 9B (Non-reasoning) (FP8)",
       "slug": "qwen3-5-9b-non-reasoning",
       "aa_url": "https://artificialanalysis.ai/models/qwen3-5-9b-non-reasoning",
       "creator": "Alibaba",
@@ -17176,11 +17388,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 92.89,
-        "ttft_seconds_total": 0.81,
-        "ttft_seconds_answer": 0.81,
+        "output_speed_tps": 94.6,
+        "ttft_seconds_total": 0.72,
+        "ttft_seconds_answer": 0.72,
         "end_to_end_500tok": {
-          "total": 6.19,
+          "total": 6.01,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -17196,13 +17408,13 @@
         "page_enrichment": false,
         "aa_pipeline": true
       },
-      "short_name": "Qwen3.5 9B (FP8)",
+      "short_name": "Qwen3.5 9B (Non-reasoning) (FP8)",
       "derived": {
         "value_intelligence_per_dollar_blend": 108.5,
         "safety_composite": 9.2,
-        "throughput_tps": 92.89,
+        "throughput_tps": 94.6,
         "speed_tier": 1,
-        "latency_ttft_seconds": 0.81,
+        "latency_ttft_seconds": 0.72,
         "latency_tier": 2
       }
     },
@@ -17311,7 +17523,7 @@
       }
     },
     {
-      "name": "Gemma 4 26B A4B",
+      "name": "Gemma 4 26B A4B (Non-reasoning)",
       "slug": "gemma-4-26b-a4b-non-reasoning",
       "aa_url": "https://artificialanalysis.ai/models/gemma-4-26b-a4b-non-reasoning",
       "creator": "Google",
@@ -17395,11 +17607,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 34.83,
-        "ttft_seconds_total": 1.53,
-        "ttft_seconds_answer": 1.53,
+        "output_speed_tps": 41.11,
+        "ttft_seconds_total": 1.59,
+        "ttft_seconds_answer": 1.59,
         "end_to_end_500tok": {
-          "total": 15.89,
+          "total": 13.75,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -17415,13 +17627,13 @@
         "page_enrichment": false,
         "aa_pipeline": true
       },
-      "short_name": "Gemma 4 26B A4B",
+      "short_name": "Gemma 4 26B A4B (Non-reasoning)",
       "derived": {
         "value_intelligence_per_dollar_blend": 101.9,
         "safety_composite": 13.0,
-        "throughput_tps": 34.83,
+        "throughput_tps": 41.11,
         "speed_tier": 0,
-        "latency_ttft_seconds": 1.53,
+        "latency_ttft_seconds": 1.59,
         "latency_tier": 2
       }
     },
@@ -17510,11 +17722,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 43.12,
+        "output_speed_tps": 34.98,
         "ttft_seconds_total": 0.65,
-        "ttft_seconds_answer": 47.03,
+        "ttft_seconds_answer": 57.82,
         "end_to_end_500tok": {
-          "total": 58.63,
+          "total": 72.11,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -17534,9 +17746,9 @@
       "derived": {
         "value_intelligence_per_dollar_blend": 339.5,
         "safety_composite": 16.2,
-        "throughput_tps": 43.12,
+        "throughput_tps": 34.98,
         "speed_tier": 0,
-        "latency_ttft_seconds": 47.03,
+        "latency_ttft_seconds": 57.82,
         "latency_tier": 0
       }
     },
@@ -17591,7 +17803,7 @@
         "math_500": null,
         "aime": null,
         "aime25": null,
-        "gdpval_v2": 2.1,
+        "gdpval_v2": 2.2,
         "critpt": 0.3,
         "mmmu_pro": null,
         "apex_agents_aa": null,
@@ -17625,11 +17837,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 61.57,
-        "ttft_seconds_total": 0.48,
-        "ttft_seconds_answer": 32.97,
+        "output_speed_tps": 104.37,
+        "ttft_seconds_total": 0.32,
+        "ttft_seconds_answer": 19.49,
         "end_to_end_500tok": {
-          "total": 41.09,
+          "total": 24.28,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -17648,10 +17860,10 @@
       "short_name": "North Mini Code",
       "derived": {
         "safety_composite": 18.1,
-        "throughput_tps": 61.57,
-        "speed_tier": 1,
-        "latency_ttft_seconds": 32.97,
-        "latency_tier": 0
+        "throughput_tps": 104.37,
+        "speed_tier": 2,
+        "latency_ttft_seconds": 19.49,
+        "latency_tier": 1
       }
     },
     {
@@ -17739,11 +17951,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 164.87,
-        "ttft_seconds_total": 0.87,
-        "ttft_seconds_answer": 13.0,
+        "output_speed_tps": 149.03,
+        "ttft_seconds_total": 0.89,
+        "ttft_seconds_answer": 14.31,
         "end_to_end_500tok": {
-          "total": 16.03,
+          "total": 17.66,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -17764,9 +17976,9 @@
         "value_intelligence_per_dollar_blend": 75.8,
         "value_intelligence_per_dollar_task": 196.5,
         "safety_composite": 28.0,
-        "throughput_tps": 164.87,
+        "throughput_tps": 149.03,
         "speed_tier": 2,
-        "latency_ttft_seconds": 13.0,
+        "latency_ttft_seconds": 14.31,
         "latency_tier": 1
       }
     },
@@ -17811,7 +18023,7 @@
         "math_500": null,
         "aime": null,
         "aime25": null,
-        "gdpval_v2": 10.2,
+        "gdpval_v2": 10.1,
         "critpt": 0.3,
         "mmmu_pro": null,
         "apex_agents_aa": null,
@@ -17845,11 +18057,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 140.27,
-        "ttft_seconds_total": 0.63,
-        "ttft_seconds_answer": 14.88,
+        "output_speed_tps": 145.14,
+        "ttft_seconds_total": 0.61,
+        "ttft_seconds_answer": 14.39,
         "end_to_end_500tok": {
-          "total": 18.45,
+          "total": 17.84,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -17870,9 +18082,9 @@
         "value_intelligence_per_dollar_blend": 178.3,
         "value_intelligence_per_dollar_task": 1241.1,
         "safety_composite": 48.6,
-        "throughput_tps": 140.27,
+        "throughput_tps": 145.14,
         "speed_tier": 2,
-        "latency_ttft_seconds": 14.88,
+        "latency_ttft_seconds": 14.39,
         "latency_tier": 1
       }
     },
@@ -17961,11 +18173,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 253.04,
-        "ttft_seconds_total": 1.82,
-        "ttft_seconds_answer": 1.82,
+        "output_speed_tps": 240.27,
+        "ttft_seconds_total": 1.89,
+        "ttft_seconds_answer": 1.89,
         "end_to_end_500tok": {
-          "total": 3.79,
+          "total": 3.97,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -17985,9 +18197,9 @@
       "derived": {
         "value_intelligence_per_dollar_blend": 68.7,
         "safety_composite": 11.7,
-        "throughput_tps": 253.04,
+        "throughput_tps": 240.27,
         "speed_tier": 2,
-        "latency_ttft_seconds": 1.82,
+        "latency_ttft_seconds": 1.89,
         "latency_tier": 2
       }
     },
@@ -18180,11 +18392,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 166.99,
-        "ttft_seconds_total": 0.86,
-        "ttft_seconds_answer": 12.84,
+        "output_speed_tps": 203.83,
+        "ttft_seconds_total": 1.01,
+        "ttft_seconds_answer": 10.82,
         "end_to_end_500tok": {
-          "total": 15.83,
+          "total": 13.27,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -18205,9 +18417,9 @@
         "value_intelligence_per_dollar_blend": 49.1,
         "value_intelligence_per_dollar_task": 236.2,
         "safety_composite": 15.9,
-        "throughput_tps": 166.99,
+        "throughput_tps": 203.83,
         "speed_tier": 2,
-        "latency_ttft_seconds": 12.84,
+        "latency_ttft_seconds": 10.82,
         "latency_tier": 1
       }
     },
@@ -18262,7 +18474,7 @@
         "math_500": null,
         "aime": null,
         "aime25": null,
-        "gdpval_v2": 7.9,
+        "gdpval_v2": 8.0,
         "critpt": 0.9,
         "mmmu_pro": null,
         "apex_agents_aa": null,
@@ -18296,11 +18508,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 365.71,
-        "ttft_seconds_total": 0.8,
-        "ttft_seconds_answer": 6.27,
+        "output_speed_tps": 351.07,
+        "ttft_seconds_total": 0.98,
+        "ttft_seconds_answer": 6.68,
         "end_to_end_500tok": {
-          "total": 7.64,
+          "total": 8.1,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -18321,9 +18533,9 @@
         "value_intelligence_per_dollar_blend": 261.7,
         "value_intelligence_per_dollar_task": 753.9,
         "safety_composite": 17.9,
-        "throughput_tps": 365.71,
+        "throughput_tps": 351.07,
         "speed_tier": 2,
-        "latency_ttft_seconds": 6.27,
+        "latency_ttft_seconds": 6.68,
         "latency_tier": 1
       }
     },
@@ -18432,7 +18644,7 @@
       }
     },
     {
-      "name": "GPT-5.4 nano",
+      "name": "GPT-5.4 nano (Non-reasoning)",
       "slug": "gpt-5-4-nano-non-reasoning",
       "aa_url": "https://artificialanalysis.ai/models/gpt-5-4-nano-non-reasoning",
       "creator": "OpenAI",
@@ -18516,11 +18728,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 157.05,
-        "ttft_seconds_total": 0.64,
-        "ttft_seconds_answer": 0.64,
+        "output_speed_tps": 167.16,
+        "ttft_seconds_total": 0.75,
+        "ttft_seconds_answer": 0.75,
         "end_to_end_500tok": {
-          "total": 3.82,
+          "total": 3.74,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -18536,18 +18748,18 @@
         "page_enrichment": false,
         "aa_pipeline": true
       },
-      "short_name": "GPT-5.4 nano",
+      "short_name": "GPT-5.4 nano (Non-reasoning)",
       "derived": {
         "value_intelligence_per_dollar_blend": 38.7,
         "safety_composite": 30.2,
-        "throughput_tps": 157.05,
+        "throughput_tps": 167.16,
         "speed_tier": 2,
-        "latency_ttft_seconds": 0.64,
+        "latency_ttft_seconds": 0.75,
         "latency_tier": 2
       }
     },
     {
-      "name": "GPT-5.4 mini",
+      "name": "GPT-5.4 mini (Non-reasoning)",
       "slug": "gpt-5-4-mini-non-reasoning",
       "aa_url": "https://artificialanalysis.ai/models/gpt-5-4-mini-non-reasoning",
       "creator": "OpenAI",
@@ -18631,11 +18843,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 165.06,
-        "ttft_seconds_total": 0.74,
-        "ttft_seconds_answer": 0.74,
+        "output_speed_tps": 168.12,
+        "ttft_seconds_total": 0.77,
+        "ttft_seconds_answer": 0.77,
         "end_to_end_500tok": {
-          "total": 3.76,
+          "total": 3.74,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -18651,13 +18863,13 @@
         "page_enrichment": false,
         "aa_pipeline": true
       },
-      "short_name": "GPT-5.4 mini",
+      "short_name": "GPT-5.4 mini (Non-reasoning)",
       "derived": {
         "value_intelligence_per_dollar_blend": 9.9,
         "safety_composite": 9.3,
-        "throughput_tps": 165.06,
+        "throughput_tps": 168.12,
         "speed_tier": 2,
-        "latency_ttft_seconds": 0.74,
+        "latency_ttft_seconds": 0.77,
         "latency_tier": 2
       }
     },
@@ -18757,7 +18969,7 @@
       }
     },
     {
-      "name": "Qwen3.5 4B FP8",
+      "name": "Qwen3.5 4B (Non-reasoning) FP8",
       "slug": "qwen3-5-4b-non-reasoning",
       "aa_url": "https://artificialanalysis.ai/models/qwen3-5-4b-non-reasoning",
       "creator": "Alibaba",
@@ -18841,11 +19053,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 37.27,
-        "ttft_seconds_total": 0.69,
-        "ttft_seconds_answer": 0.69,
+        "output_speed_tps": 36.83,
+        "ttft_seconds_total": 0.68,
+        "ttft_seconds_answer": 0.68,
         "end_to_end_500tok": {
-          "total": 14.11,
+          "total": 14.26,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -18861,13 +19073,13 @@
         "page_enrichment": false,
         "aa_pipeline": true
       },
-      "short_name": "Qwen3.5 4B FP8",
+      "short_name": "Qwen3.5 4B (Non-reasoning) FP8",
       "derived": {
         "value_intelligence_per_dollar_blend": 268.7,
         "safety_composite": 8.4,
-        "throughput_tps": 37.27,
+        "throughput_tps": 36.83,
         "speed_tier": 0,
-        "latency_ttft_seconds": 0.69,
+        "latency_ttft_seconds": 0.68,
         "latency_tier": 2
       }
     },
@@ -18956,11 +19168,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 327.68,
-        "ttft_seconds_total": 0.99,
-        "ttft_seconds_answer": 7.09,
+        "output_speed_tps": 323.86,
+        "ttft_seconds_total": 1.01,
+        "ttft_seconds_answer": 7.19,
         "end_to_end_500tok": {
-          "total": 8.62,
+          "total": 8.73,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -18980,9 +19192,9 @@
       "derived": {
         "value_intelligence_per_dollar_blend": 150.1,
         "safety_composite": 14.6,
-        "throughput_tps": 327.68,
+        "throughput_tps": 323.86,
         "speed_tier": 2,
-        "latency_ttft_seconds": 7.09,
+        "latency_ttft_seconds": 7.19,
         "latency_tier": 1
       }
     },
@@ -19071,11 +19283,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 153.55,
-        "ttft_seconds_total": 2.4,
-        "ttft_seconds_answer": 15.42,
+        "output_speed_tps": 157.67,
+        "ttft_seconds_total": 2.54,
+        "ttft_seconds_answer": 15.23,
         "end_to_end_500tok": {
-          "total": 18.68,
+          "total": 18.4,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -19096,9 +19308,9 @@
         "value_intelligence_per_dollar_blend": 55.7,
         "value_intelligence_per_dollar_task": 110.1,
         "safety_composite": 12.9,
-        "throughput_tps": 153.55,
+        "throughput_tps": 157.67,
         "speed_tier": 2,
-        "latency_ttft_seconds": 15.42,
+        "latency_ttft_seconds": 15.23,
         "latency_tier": 1
       }
     },
@@ -19177,11 +19389,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 215.83,
-        "ttft_seconds_total": 0.46,
-        "ttft_seconds_answer": 9.72,
+        "output_speed_tps": 221.23,
+        "ttft_seconds_total": 0.42,
+        "ttft_seconds_answer": 9.46,
         "end_to_end_500tok": {
-          "total": 12.04,
+          "total": 11.72,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -19202,9 +19414,9 @@
         "value_intelligence_per_dollar_blend": 285.6,
         "value_intelligence_per_dollar_task": 3038.3,
         "safety_composite": 49.9,
-        "throughput_tps": 215.83,
+        "throughput_tps": 221.23,
         "speed_tier": 2,
-        "latency_ttft_seconds": 9.72,
+        "latency_ttft_seconds": 9.46,
         "latency_tier": 1
       }
     },
@@ -19511,11 +19723,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 116.09,
-        "ttft_seconds_total": 2.33,
-        "ttft_seconds_answer": 2.33,
+        "output_speed_tps": 111.32,
+        "ttft_seconds_total": 2.52,
+        "ttft_seconds_answer": 2.52,
         "end_to_end_500tok": {
-          "total": 6.64,
+          "total": 7.01,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -19535,14 +19747,14 @@
       "derived": {
         "value_intelligence_per_dollar_blend": 88.0,
         "safety_composite": 21.2,
-        "throughput_tps": 116.09,
+        "throughput_tps": 111.32,
         "speed_tier": 2,
-        "latency_ttft_seconds": 2.33,
+        "latency_ttft_seconds": 2.52,
         "latency_tier": 2
       }
     },
     {
-      "name": "Mistral Small 4",
+      "name": "Mistral Small 4 (Non-reasoning)",
       "slug": "mistral-small-4-non-reasoning",
       "aa_url": "https://artificialanalysis.ai/models/mistral-small-4-non-reasoning",
       "creator": "Mistral",
@@ -19626,11 +19838,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 138.54,
-        "ttft_seconds_total": 0.85,
-        "ttft_seconds_answer": 0.85,
+        "output_speed_tps": 142.87,
+        "ttft_seconds_total": 0.78,
+        "ttft_seconds_answer": 0.78,
         "end_to_end_500tok": {
-          "total": 4.45,
+          "total": 4.28,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -19646,13 +19858,13 @@
         "page_enrichment": false,
         "aa_pipeline": true
       },
-      "short_name": "Mistral Small 4",
+      "short_name": "Mistral Small 4 (Non-reasoning)",
       "derived": {
         "value_intelligence_per_dollar_blend": 47.5,
         "safety_composite": 18.1,
-        "throughput_tps": 138.54,
+        "throughput_tps": 142.87,
         "speed_tier": 2,
-        "latency_ttft_seconds": 0.85,
+        "latency_ttft_seconds": 0.78,
         "latency_tier": 2
       }
     },
@@ -19731,11 +19943,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 1574.31,
-        "ttft_seconds_total": 0.58,
-        "ttft_seconds_answer": 0.58,
+        "output_speed_tps": 1612.45,
+        "ttft_seconds_total": 0.62,
+        "ttft_seconds_answer": 0.62,
         "end_to_end_500tok": {
-          "total": 0.89,
+          "total": 0.93,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -19756,9 +19968,9 @@
         "value_intelligence_per_dollar_blend": 37.4,
         "value_intelligence_per_dollar_task": 47.8,
         "safety_composite": 9.3,
-        "throughput_tps": 1574.31,
+        "throughput_tps": 1612.45,
         "speed_tier": 2,
-        "latency_ttft_seconds": 0.58,
+        "latency_ttft_seconds": 0.62,
         "latency_tier": 2
       }
     },
@@ -19847,11 +20059,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 49.83,
-        "ttft_seconds_total": 0.77,
-        "ttft_seconds_answer": 40.91,
+        "output_speed_tps": 48.01,
+        "ttft_seconds_total": 0.85,
+        "ttft_seconds_answer": 42.51,
         "end_to_end_500tok": {
-          "total": 50.95,
+          "total": 52.93,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -19871,9 +20083,9 @@
       "derived": {
         "value_intelligence_per_dollar_blend": 304.5,
         "safety_composite": 46.3,
-        "throughput_tps": 49.83,
+        "throughput_tps": 48.01,
         "speed_tier": 0,
-        "latency_ttft_seconds": 40.91,
+        "latency_ttft_seconds": 42.51,
         "latency_tier": 0
       }
     },
@@ -20400,7 +20612,7 @@
       }
     },
     {
-      "name": "Gemma 4 E4B",
+      "name": "Gemma 4 E4B (Non-reasoning)",
       "slug": "gemma-4-e4b-non-reasoning",
       "aa_url": "https://artificialanalysis.ai/models/gemma-4-e4b-non-reasoning",
       "creator": "Google",
@@ -20484,11 +20696,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 56.76,
-        "ttft_seconds_total": 0.72,
-        "ttft_seconds_answer": 0.72,
+        "output_speed_tps": 46.18,
+        "ttft_seconds_total": 0.77,
+        "ttft_seconds_answer": 0.77,
         "end_to_end_500tok": {
-          "total": 9.53,
+          "total": 11.6,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -20504,13 +20716,13 @@
         "page_enrichment": false,
         "aa_pipeline": true
       },
-      "short_name": "Gemma 4 E4B",
+      "short_name": "Gemma 4 E4B (Non-reasoning)",
       "derived": {
         "value_intelligence_per_dollar_blend": 218.8,
         "safety_composite": 31.2,
-        "throughput_tps": 56.76,
-        "speed_tier": 1,
-        "latency_ttft_seconds": 0.72,
+        "throughput_tps": 46.18,
+        "speed_tier": 0,
+        "latency_ttft_seconds": 0.77,
         "latency_tier": 2
       }
     },
@@ -20807,11 +21019,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 338.1,
-        "ttft_seconds_total": 1.51,
-        "ttft_seconds_answer": 7.42,
+        "output_speed_tps": 336.3,
+        "ttft_seconds_total": 2.22,
+        "ttft_seconds_answer": 8.17,
         "end_to_end_500tok": {
-          "total": 8.9,
+          "total": 9.66,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -20830,9 +21042,9 @@
       "short_name": "LFM2.5-8B-A1B",
       "derived": {
         "safety_composite": 35.1,
-        "throughput_tps": 338.1,
+        "throughput_tps": 336.3,
         "speed_tier": 2,
-        "latency_ttft_seconds": 7.42,
+        "latency_ttft_seconds": 8.17,
         "latency_tier": 1
       }
     },
@@ -21025,11 +21237,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 116.46,
-        "ttft_seconds_total": 0.77,
-        "ttft_seconds_answer": 0.77,
+        "output_speed_tps": 113.48,
+        "ttft_seconds_total": 0.75,
+        "ttft_seconds_answer": 0.75,
         "end_to_end_500tok": {
-          "total": 5.06,
+          "total": 5.15,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -21049,9 +21261,9 @@
       "derived": {
         "value_intelligence_per_dollar_blend": 107.0,
         "safety_composite": 10.3,
-        "throughput_tps": 116.46,
+        "throughput_tps": 113.48,
         "speed_tier": 2,
-        "latency_ttft_seconds": 0.77,
+        "latency_ttft_seconds": 0.75,
         "latency_tier": 2
       }
     },
@@ -21483,120 +21695,6 @@
       }
     },
     {
-      "name": "LFM2 24B A2B",
-      "slug": "lfm2-24b-a2b",
-      "aa_url": "https://artificialanalysis.ai/models/lfm2-24b-a2b",
-      "creator": "Liquid AI",
-      "released": "2026-02-25",
-      "knowledge_cutoff": null,
-      "is_reasoning": false,
-      "is_open_weights": true,
-      "deprecated": false,
-      "commercial_allowed": true,
-      "license": "lfm 1.0",
-      "license_url": "https://huggingface.co/LiquidAI/LFM2-8B-A1B/blob/main/LICENSE",
-      "size_class": "small",
-      "context_tokens": 32768,
-      "parameters_billions": 23.8,
-      "active_params_billions": 2.3,
-      "input_modalities": {
-        "text": true,
-        "image": false,
-        "audio": false,
-        "video": false
-      },
-      "output_modalities": {
-        "text": true,
-        "image": false,
-        "audio": false,
-        "video": false
-      },
-      "composite": {
-        "intelligence_index_v4_1": 4.6,
-        "coding_index": null,
-        "math_index": null,
-        "agentic_index": null,
-        "omniscience_index": -59.1
-      },
-      "benchmarks": {
-        "gpqa_diamond": 47.0,
-        "hle": 4.0,
-        "scicode": 11.0,
-        "ifbench": 46.0,
-        "lcr": 0.0,
-        "tau2_bench": 11.0,
-        "tau3_banking": null,
-        "terminalbench_hard": 0.0,
-        "terminalbench_v2_1": null,
-        "mmlu_pro": null,
-        "livecodebench": null,
-        "math_500": null,
-        "aime": null,
-        "aime25": null,
-        "gdpval_v2": null,
-        "critpt": 0.0,
-        "mmmu_pro": null,
-        "apex_agents_aa": null,
-        "it_bench_sre": null,
-        "omniscience_accuracy": 6.0,
-        "omniscience_hallucination_rate": null,
-        "omniscience_non_halluc": 30.0
-      },
-      "pricing_per_m_tokens": {
-        "input": 0.03,
-        "output": 0.12,
-        "blended_3_1": 0.05,
-        "blended_7_2_1": 0.04,
-        "blended_1_1": null,
-        "cache_hit": null,
-        "cache_write": null
-      },
-      "intelligence_evaluation_total_cost_usd": null,
-      "cost_per_intelligence_task_usd": {
-        "total": null,
-        "input": null,
-        "output": null,
-        "cacheRead": null,
-        "cacheWrite": null,
-        "nonCacheInput": null,
-        "reasoning": null,
-        "answer": null
-      },
-      "cost_per_eval_breakdown_usd": {},
-      "time_per_task_seconds": null,
-      "output_tokens_per_task": null,
-      "performance": {
-        "output_speed_tps": 118.9,
-        "ttft_seconds_total": 0.6,
-        "ttft_seconds_answer": 0.6,
-        "end_to_end_500tok": {
-          "total": 4.81,
-          "input": null,
-          "reasoning": 0,
-          "answer": null
-        }
-      },
-      "output_speed_by_prompt_length": [],
-      "featured": false,
-      "openrouter_slug": null,
-      "note": null,
-      "has_rich_data": true,
-      "data_sources": {
-        "documented_free_api": true,
-        "page_enrichment": false,
-        "aa_pipeline": true
-      },
-      "short_name": "LFM2 24B A2B",
-      "derived": {
-        "value_intelligence_per_dollar_blend": 92.0,
-        "safety_composite": 19.8,
-        "throughput_tps": 118.9,
-        "speed_tier": 2,
-        "latency_ttft_seconds": 0.6,
-        "latency_tier": 2
-      }
-    },
-    {
       "name": "Granite 4.1 3B",
       "slug": "granite-4-1-3b",
       "aa_url": "https://artificialanalysis.ai/models/granite-4-1-3b",
@@ -21992,11 +22090,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 63.85,
-        "ttft_seconds_total": 2.09,
-        "ttft_seconds_answer": 2.09,
+        "output_speed_tps": 61.66,
+        "ttft_seconds_total": 2.0,
+        "ttft_seconds_answer": 2.0,
         "end_to_end_500tok": {
-          "total": 9.92,
+          "total": 10.11,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -22014,9 +22112,9 @@
       },
       "short_name": "Claude Sonnet 5 (low)",
       "derived": {
-        "throughput_tps": 63.85,
+        "throughput_tps": 61.66,
         "speed_tier": 1,
-        "latency_ttft_seconds": 2.09,
+        "latency_ttft_seconds": 2.0,
         "latency_tier": 2
       }
     },
@@ -22206,11 +22304,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 69.96,
-        "ttft_seconds_total": 34.65,
-        "ttft_seconds_answer": 34.65,
+        "output_speed_tps": 67.21,
+        "ttft_seconds_total": 32.96,
+        "ttft_seconds_answer": 32.96,
         "end_to_end_500tok": {
-          "total": 41.8,
+          "total": 40.4,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -22228,9 +22326,9 @@
       },
       "short_name": "Claude Sonnet 5 (xhigh)",
       "derived": {
-        "throughput_tps": 69.96,
+        "throughput_tps": 67.21,
         "speed_tier": 1,
-        "latency_ttft_seconds": 34.65,
+        "latency_ttft_seconds": 32.96,
         "latency_tier": 0
       }
     },
@@ -22318,11 +22416,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 67.88,
-        "ttft_seconds_total": 9.91,
-        "ttft_seconds_answer": 9.91,
+        "output_speed_tps": 62.91,
+        "ttft_seconds_total": 9.12,
+        "ttft_seconds_answer": 9.12,
         "end_to_end_500tok": {
-          "total": 17.27,
+          "total": 17.07,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -22340,9 +22438,9 @@
       },
       "short_name": "Claude Sonnet 5 (high)",
       "derived": {
-        "throughput_tps": 67.88,
+        "throughput_tps": 62.91,
         "speed_tier": 1,
-        "latency_ttft_seconds": 9.91,
+        "latency_ttft_seconds": 9.12,
         "latency_tier": 1
       }
     },
@@ -22430,11 +22528,11 @@
       "time_per_task_seconds": null,
       "output_tokens_per_task": null,
       "performance": {
-        "output_speed_tps": 65.38,
-        "ttft_seconds_total": 3.31,
-        "ttft_seconds_answer": 3.31,
+        "output_speed_tps": 64.04,
+        "ttft_seconds_total": 2.23,
+        "ttft_seconds_answer": 2.23,
         "end_to_end_500tok": {
-          "total": 10.96,
+          "total": 10.04,
           "input": null,
           "reasoning": 0,
           "answer": null
@@ -22452,9 +22550,9 @@
       },
       "short_name": "Claude Sonnet 5 (medium)",
       "derived": {
-        "throughput_tps": 65.38,
+        "throughput_tps": 64.04,
         "speed_tier": 1,
-        "latency_ttft_seconds": 3.31,
+        "latency_ttft_seconds": 2.23,
         "latency_tier": 2
       }
     },
@@ -22664,10 +22762,10 @@
     }
   ],
   "coverage": {
-    "total": 205,
+    "total": 206,
     "featured": 19,
-    "with_rich_metrics": 197,
-    "with_documented_free_api": 33,
+    "with_rich_metrics": 198,
+    "with_documented_free_api": 32,
     "featured_without_rich_metrics": []
   }
 }
