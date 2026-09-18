@@ -550,7 +550,7 @@ function buildRow(m, rank){
 
   function cell(stat, val, isPrice){
     const raw=(val===null||val===undefined)?'':val;
-    if(raw==='') return `<td class="num" data-stat="${esc(stat)}" data-val=""></td>`;
+    if(raw==='') return `<td class="num missing-value" data-stat="${esc(stat)}" data-val="" title="Not measured by Artificial Analysis" aria-label="Not measured">—</td>`;
     let disp=raw;
     if(typeof raw==='number' || (!isNaN(parseFloat(raw)) && isFinite(raw))){
       const num=parseFloat(raw);
