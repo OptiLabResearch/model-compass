@@ -1,0 +1,6020 @@
+{
+  "added": [
+    "agnes-3-0-flash",
+    "apodex-1-1",
+    "claude-fable-5-1",
+    "claude-fable-5-1-high",
+    "claude-fable-5-1-low",
+    "claude-fable-5-1-medium",
+    "claude-fable-5-1-xhigh",
+    "deepseek-v4-1-flash",
+    "deepseek-v4-flash-0420-non-reasoning",
+    "gemini-3-8-flash",
+    "gemini-3-8-flash-low",
+    "gemini-3-8-flash-medium",
+    "gpt-6-astra",
+    "gpt-6-astra-high",
+    "gpt-6-astra-low",
+    "gpt-6-astra-medium",
+    "gpt-6-astra-xhigh",
+    "ling-3-0-flash-fin",
+    "ling-3-0-flash-vl",
+    "muse-spark-1-3",
+    "muse-spark-1-3-xhigh",
+    "quasar-438b",
+    "qwen3-8-max-0803"
+  ],
+  "changed": [
+    {
+      "changes": {
+        "agentic_index": {
+          "after": null,
+          "before": 25.4
+        },
+        "coding_index": {
+          "after": null,
+          "before": 58.8
+        },
+        "intelligence_index": {
+          "after": 27.8,
+          "before": 39.71
+        },
+        "speed_tps": {
+          "after": 167.99,
+          "before": 126.68
+        }
+      },
+      "name": "Agnes 2.5 Pro Alpha",
+      "slug": "agnes-2-5-pro-alpha"
+    },
+    {
+      "changes": {
+        "agentic_index": {
+          "after": null,
+          "before": 43.8
+        },
+        "coding_index": {
+          "after": null,
+          "before": 62.3
+        },
+        "intelligence_index": {
+          "after": 35.24,
+          "before": 49.1
+        },
+        "speed_tps": {
+          "after": null,
+          "before": 153.3
+        }
+      },
+      "name": "Agnes 2.5 Pro Beta",
+      "slug": "agnes-2-5-pro-beta"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 5.11,
+          "before": 1.98
+        }
+      },
+      "name": "Apertus 70B Instruct",
+      "slug": "apertus-70b-instruct"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 4.83,
+          "before": 1
+        }
+      },
+      "name": "Apertus 8B Instruct",
+      "slug": "apertus-8b-instruct"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 13.82,
+          "before": 21.56
+        }
+      },
+      "name": "Apriel-v1.5-15B-Thinker",
+      "slug": "apriel-v1-5-15b-thinker"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 13.4,
+          "before": 20.85
+        }
+      },
+      "name": "Apriel-v1.6-15B-Thinker",
+      "slug": "apriel-v1-6-15b-thinker"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 3.42,
+          "before": 3
+        }
+      },
+      "name": "Arctic Instruct",
+      "slug": "arctic-instruct"
+    },
+    {
+      "changes": {
+        "agentic_index": {
+          "after": null,
+          "before": 2.4
+        },
+        "coding_index": {
+          "after": null,
+          "before": 14.4
+        },
+        "intelligence_index": {
+          "after": 6.35,
+          "before": 12.35
+        },
+        "speed_tps": {
+          "after": 1423.44,
+          "before": 1612.45
+        }
+      },
+      "name": "Celeris-1",
+      "slug": "celeris-1"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 15.27,
+          "before": 23.92
+        }
+      },
+      "name": "Claude 3.7 Sonnet (Non-reasoning) Vertex",
+      "slug": "claude-3-7-sonnet"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 5.58,
+          "before": 3.5
+        },
+        "speed_tps": {
+          "after": 84.36,
+          "before": 76.55
+        }
+      },
+      "name": "Claude 3 Haiku",
+      "slug": "claude-3-haiku"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 8.72,
+          "before": 11.76
+        }
+      },
+      "name": "Claude 3 Opus",
+      "slug": "claude-3-opus"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 7.88,
+          "before": 9.79
+        }
+      },
+      "name": "Claude 3.5 Sonnet (Oct)",
+      "slug": "claude-35-sonnet"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 7.21,
+          "before": 8.12
+        }
+      },
+      "name": "Claude 3.5 Sonnet (June)",
+      "slug": "claude-35-sonnet-june-24"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 18.57,
+          "before": 28.84
+        }
+      },
+      "name": "Claude 4.1 Opus (Non-reasoning)",
+      "slug": "claude-4-1-opus"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 22.85,
+          "before": 34.54
+        }
+      },
+      "name": "Claude 4.1 Opus",
+      "slug": "claude-4-1-opus-thinking"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 15.41,
+          "before": 24.14
+        }
+      },
+      "name": "Claude 4.5 Haiku (Non-reasoning) Vertex",
+      "slug": "claude-4-5-haiku"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 17.59,
+          "before": 29.89
+        },
+        "speed_tps": {
+          "after": 85.36,
+          "before": 93.84
+        }
+      },
+      "name": "Claude 4.5 Haiku",
+      "slug": "claude-4-5-haiku-reasoning"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 19.34,
+          "before": 29.93
+        }
+      },
+      "name": "Claude 4.5 Sonnet (Non-reasoning)",
+      "slug": "claude-4-5-sonnet"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 21.18,
+          "before": 37.39
+        }
+      },
+      "name": "Claude 4.5 Sonnet",
+      "slug": "claude-4-5-sonnet-thinking"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 16.61,
+          "before": 25.99
+        }
+      },
+      "name": "Claude 4 Opus (Non-reasoning) Vertex",
+      "slug": "claude-4-opus"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 20.64,
+          "before": 31.69
+        }
+      },
+      "name": "Claude 4 Opus Vertex",
+      "slug": "claude-4-opus-thinking"
+    },
+    {
+      "changes": {
+        "deprecated": {
+          "after": true,
+          "before": false
+        },
+        "intelligence_index": {
+          "after": 49.7,
+          "before": 62.07
+        },
+        "speed_tps": {
+          "after": 60.97,
+          "before": 68.0
+        }
+      },
+      "name": "Claude Fable 5 (with fallback)",
+      "slug": "claude-fable-5"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 2.14,
+          "before": 1.7
+        }
+      },
+      "name": "Claude Instant",
+      "slug": "claude-instant"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 23.68,
+          "before": 35.57
+        }
+      },
+      "name": "Claude Opus 4.5 (Non-reasoning)",
+      "slug": "claude-opus-4-5"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 29.1,
+          "before": 41.87
+        }
+      },
+      "name": "Claude Opus 4.5",
+      "slug": "claude-opus-4-5-thinking"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 26.35,
+          "before": 38.77
+        }
+      },
+      "name": "Claude Opus 4.6 (Non-reasoning, high)",
+      "slug": "claude-opus-4-6"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 31.95,
+          "before": 44.93
+        }
+      },
+      "name": "Claude Opus 4.6 (max)",
+      "slug": "claude-opus-4-6-adaptive"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 40.69,
+          "before": 54.96
+        }
+      },
+      "name": "Claude Opus 4.7 (max)",
+      "slug": "claude-opus-4-7"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 30.93,
+          "before": 43.86
+        }
+      },
+      "name": "Claude Opus 4.7 (Non-reasoning, high)",
+      "slug": "claude-opus-4-7-non-reasoning"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 41.99,
+          "before": 57.33
+        }
+      },
+      "name": "Claude Opus 4.8 (max)",
+      "slug": "claude-opus-4-8"
+    },
+    {
+      "changes": {
+        "coding_index": {
+          "after": null,
+          "before": 78
+        },
+        "intelligence_index": {
+          "after": 50.7,
+          "before": 63.05
+        },
+        "speed_tps": {
+          "after": 50.95,
+          "before": 54.03
+        }
+      },
+      "name": "Claude Opus 5 (max)",
+      "slug": "claude-opus-5"
+    },
+    {
+      "changes": {
+        "agentic_index": {
+          "after": null,
+          "before": 56.1
+        },
+        "coding_index": {
+          "after": null,
+          "before": 76.5
+        },
+        "intelligence_index": {
+          "after": 48.24,
+          "before": 61.48
+        }
+      },
+      "name": "Claude Opus 5 (high)",
+      "slug": "claude-opus-5-high"
+    },
+    {
+      "changes": {
+        "agentic_index": {
+          "after": null,
+          "before": 42.1
+        },
+        "coding_index": {
+          "after": null,
+          "before": 66.9
+        },
+        "intelligence_index": {
+          "after": 39.79,
+          "before": 52.46
+        }
+      },
+      "name": "Claude Opus 5 (low)",
+      "slug": "claude-opus-5-low"
+    },
+    {
+      "changes": {
+        "agentic_index": {
+          "after": null,
+          "before": 50.4
+        },
+        "coding_index": {
+          "after": null,
+          "before": 74.3
+        },
+        "intelligence_index": {
+          "after": 45.06,
+          "before": 58.64
+        }
+      },
+      "name": "Claude Opus 5 (medium)",
+      "slug": "claude-opus-5-medium"
+    },
+    {
+      "changes": {
+        "agentic_index": {
+          "after": null,
+          "before": 58.4
+        },
+        "coding_index": {
+          "after": null,
+          "before": 77
+        },
+        "intelligence_index": {
+          "after": 49.65,
+          "before": 62.52
+        }
+      },
+      "name": "Claude Opus 5 (xhigh)",
+      "slug": "claude-opus-5-xhigh"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 24.69,
+          "before": 36.8
+        }
+      },
+      "name": "Claude Sonnet 4.6 (Non-reasoning, high)",
+      "slug": "claude-sonnet-4-6"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 30.45,
+          "before": 48.37
+        },
+        "speed_tps": {
+          "after": 47.45,
+          "before": 51.71
+        }
+      },
+      "name": "Claude Sonnet 4.6 (max)",
+      "slug": "claude-sonnet-4-6-adaptive"
+    },
+    {
+      "changes": {
+        "deprecated": {
+          "after": true,
+          "before": false
+        },
+        "intelligence_index": {
+          "after": 23.3,
+          "before": 35.11
+        }
+      },
+      "name": "Claude Sonnet 4.6 (Non-reasoning, low)",
+      "slug": "claude-sonnet-4-6-non-reasoning-low-effort"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 38.36,
+          "before": 55.26
+        },
+        "speed_tps": {
+          "after": 71.09,
+          "before": 66.21
+        }
+      },
+      "name": "Claude Sonnet 5 (max)",
+      "slug": "claude-sonnet-5"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 32.03,
+          "before": null
+        },
+        "omniscience_index": {
+          "after": -3.7,
+          "before": null
+        }
+      },
+      "name": "Claude Sonnet 5 (high)",
+      "slug": "claude-sonnet-5-high"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 24.74,
+          "before": null
+        },
+        "omniscience_index": {
+          "after": -8.2,
+          "before": null
+        }
+      },
+      "name": "Claude Sonnet 5 (low)",
+      "slug": "claude-sonnet-5-low"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 28.44,
+          "before": null
+        },
+        "omniscience_index": {
+          "after": -6.9,
+          "before": null
+        }
+      },
+      "name": "Claude Sonnet 5 (medium)",
+      "slug": "claude-sonnet-5-medium"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 28.94,
+          "before": 42.57
+        }
+      },
+      "name": "Claude Sonnet 5 (Non-reasoning)",
+      "slug": "claude-sonnet-5-non-reasoning"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 34.71,
+          "before": null
+        },
+        "omniscience_index": {
+          "after": 3.2,
+          "before": null
+        }
+      },
+      "name": "Claude Sonnet 5 (xhigh)",
+      "slug": "claude-sonnet-5-xhigh"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 13.92,
+          "before": 22.77
+        }
+      },
+      "name": "Command A+",
+      "slug": "command-a-plus"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 2.14,
+          "before": 1.71
+        },
+        "speed_tps": {
+          "after": null,
+          "before": 67.89
+        }
+      },
+      "name": "Command-R (Mar '24)",
+      "slug": "command-r-03-2024"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 2.99,
+          "before": 2.59
+        },
+        "speed_tps": {
+          "after": null,
+          "before": 36.85
+        }
+      },
+      "name": "Command-R+ (Apr '24)",
+      "slug": "command-r-plus-04-2024"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 2.96,
+          "before": 2.6
+        }
+      },
+      "name": "DBRX Instruct",
+      "slug": "dbrx"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 2.29,
+          "before": 1.9
+        }
+      },
+      "name": "DeepHermes 3 - Llama-3.1 8B Preview (Non-reasoning)",
+      "slug": "deephermes-3-llama-3-1-8b-preview"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 3.11,
+          "before": 2.7
+        }
+      },
+      "name": "DeepSeek Coder V2 Lite Instruct",
+      "slug": "deepseek-coder-v2-lite"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 3.01,
+          "before": 2.6
+        }
+      },
+      "name": "DeepSeek LLM 67B Chat (V1)",
+      "slug": "deepseek-llm-67b-chat"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 13.12,
+          "before": 20.37
+        }
+      },
+      "name": "DeepSeek R1 0528",
+      "slug": "deepseek-r1"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 11.41,
+          "before": 18.59
+        }
+      },
+      "name": "DeepSeek R1 (Jan)",
+      "slug": "deepseek-r1-0120"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 7.89,
+          "before": 9.81
+        }
+      },
+      "name": "DeepSeek R1 Distill Llama 70B",
+      "slug": "deepseek-r1-distill-llama-70b"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 8.49,
+          "before": 14.22
+        },
+        "price_input": {
+          "after": 0.89,
+          "before": 0.4
+        },
+        "price_output": {
+          "after": 0.89,
+          "before": 1.3
+        },
+        "speed_tps": {
+          "after": 36.44,
+          "before": 40.27
+        }
+      },
+      "name": "DeepSeek V3 (Dec)",
+      "slug": "deepseek-v3"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 9.72,
+          "before": 15.23
+        },
+        "speed_tps": {
+          "after": 41.05,
+          "before": null
+        }
+      },
+      "name": "DeepSeek V3 0324",
+      "slug": "deepseek-v3-0324"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 13.71,
+          "before": 21.37
+        }
+      },
+      "name": "DeepSeek V3.1 (Non-reasoning)",
+      "slug": "deepseek-v3-1"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 13.48,
+          "before": 20.97
+        },
+        "speed_tps": {
+          "after": 37.93,
+          "before": 32.46
+        }
+      },
+      "name": "DeepSeek V3.1",
+      "slug": "deepseek-v3-1-reasoning"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 13.93,
+          "before": 21.74
+        },
+        "speed_tps": {
+          "after": 39.38,
+          "before": 33.7
+        }
+      },
+      "name": "DeepSeek V3.1 Terminus (Non-reasoning) (FP8)",
+      "slug": "deepseek-v3-1-terminus"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 15.4,
+          "before": 31.36
+        }
+      },
+      "name": "DeepSeek V3.1 Terminus",
+      "slug": "deepseek-v3-1-terminus-reasoning"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 16.04,
+          "before": 25.13
+        },
+        "speed_tps": {
+          "after": 21.08,
+          "before": 38.83
+        }
+      },
+      "name": "DeepSeek V3.2 (Non-reasoning) (FP8)",
+      "slug": "deepseek-v3-2"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 13.88,
+          "before": 21.66
+        }
+      },
+      "name": "DeepSeek V3.2 Exp (Non-reasoning)",
+      "slug": "deepseek-v3-2-0925"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 21.49,
+          "before": 32.8
+        },
+        "speed_tps": {
+          "after": 21.94,
+          "before": 38.71
+        }
+      },
+      "name": "DeepSeek V3.2 (FP8)",
+      "slug": "deepseek-v3-2-reasoning"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 16.58,
+          "before": 25.94
+        }
+      },
+      "name": "DeepSeek V3.2 Exp",
+      "slug": "deepseek-v3-2-reasoning-0925"
+    },
+    {
+      "changes": {
+        "agentic_index": {
+          "after": 31.06,
+          "before": 48.4
+        },
+        "coding_index": {
+          "after": 56.17,
+          "before": 69.1
+        },
+        "context_tokens": {
+          "after": 1048576,
+          "before": 1000000
+        },
+        "deprecated": {
+          "after": true,
+          "before": false
+        },
+        "intelligence_index": {
+          "after": 34.53,
+          "before": 51.77
+        },
+        "price_input": {
+          "after": 0.14,
+          "before": 0.09
+        },
+        "price_output": {
+          "after": 0.28,
+          "before": 0.195
+        },
+        "speed_tps": {
+          "after": 327.42,
+          "before": 146.49
+        }
+      },
+      "name": "DeepSeek V4 Flash 0731 (max)",
+      "slug": "deepseek-v4-flash"
+    },
+    {
+      "changes": {
+        "agentic_index": {
+          "after": null,
+          "before": 33.7
+        },
+        "coding_index": {
+          "after": null,
+          "before": 56.2
+        },
+        "intelligence_index": {
+          "after": 24.63,
+          "before": 42.12
+        },
+        "speed_tps": {
+          "after": 114.06,
+          "before": 120.15
+        }
+      },
+      "name": "DeepSeek V4 Flash (max)",
+      "slug": "deepseek-v4-flash-0420"
+    },
+    {
+      "changes": {
+        "agentic_index": {
+          "after": null,
+          "before": 30.3
+        },
+        "coding_index": {
+          "after": null,
+          "before": 52
+        },
+        "intelligence_index": {
+          "after": 24.84,
+          "before": 39.01
+        },
+        "speed_tps": {
+          "after": 117.35,
+          "before": 125.94
+        }
+      },
+      "name": "DeepSeek V4 Flash (high)",
+      "slug": "deepseek-v4-flash-0420-high"
+    },
+    {
+      "changes": {
+        "speed_tps": {
+          "after": 105.22,
+          "before": 68.42
+        }
+      },
+      "name": "DeepSeek V4 Flash (Non-reasoning)",
+      "slug": "deepseek-v4-flash-non-reasoning"
+    },
+    {
+      "changes": {
+        "agentic_index": {
+          "after": null,
+          "before": 52.9
+        },
+        "coding_index": {
+          "after": null,
+          "before": 65
+        },
+        "intelligence_index": {
+          "after": 35.01,
+          "before": 51.47
+        },
+        "price_input": {
+          "after": 0.22,
+          "before": 0.44
+        },
+        "price_output": {
+          "after": 0.66,
+          "before": 1.32
+        }
+      },
+      "name": "DeepSeek V4 Flash Vision (max)",
+      "slug": "deepseek-v4-flash-vision"
+    },
+    {
+      "changes": {
+        "agentic_index": {
+          "after": 36.36,
+          "before": 49.6
+        },
+        "coding_index": {
+          "after": 59.36,
+          "before": 68.8
+        },
+        "intelligence_index": {
+          "after": 36.28,
+          "before": 53.2
+        },
+        "speed_tps": {
+          "after": 169.28,
+          "before": 65.19
+        }
+      },
+      "name": "DeepSeek V4 Pro 0813 (max)",
+      "slug": "deepseek-v4-pro"
+    },
+    {
+      "changes": {
+        "agentic_index": {
+          "after": null,
+          "before": 37.8
+        },
+        "coding_index": {
+          "after": null,
+          "before": 59.4
+        },
+        "deprecated": {
+          "after": true,
+          "before": false
+        },
+        "intelligence_index": {
+          "after": 30.87,
+          "before": 45.27
+        },
+        "speed_tps": {
+          "after": 82.8,
+          "before": 68.37
+        }
+      },
+      "name": "DeepSeek V4 Pro (max)",
+      "slug": "deepseek-v4-pro-0424"
+    },
+    {
+      "changes": {
+        "agentic_index": {
+          "after": null,
+          "before": 35.3
+        },
+        "coding_index": {
+          "after": null,
+          "before": 58.7
+        },
+        "deprecated": {
+          "after": true,
+          "before": false
+        },
+        "intelligence_index": {
+          "after": 30.11,
+          "before": 43.75
+        },
+        "speed_tps": {
+          "after": 138.16,
+          "before": 156.93
+        }
+      },
+      "name": "DeepSeek V4 Pro (high)",
+      "slug": "deepseek-v4-pro-0424-high"
+    },
+    {
+      "changes": {
+        "deprecated": {
+          "after": true,
+          "before": false
+        },
+        "intelligence_index": {
+          "after": 20.83,
+          "before": 31.94
+        },
+        "speed_tps": {
+          "after": 82.69,
+          "before": 62.98
+        }
+      },
+      "name": "DeepSeek V4 Pro (Non-reasoning)",
+      "slug": "deepseek-v4-pro-0424-non-reasoning"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 9.41,
+          "before": 19.24
+        },
+        "speed_tps": {
+          "after": 146.41,
+          "before": 44.33
+        }
+      },
+      "name": "Devstral 2",
+      "slug": "devstral-2"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 8.36,
+          "before": 17.72
+        },
+        "speed_tps": {
+          "after": 135.36,
+          "before": 119.31
+        }
+      },
+      "name": "Devstral Small 2",
+      "slug": "devstral-small-2"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 7.5,
+          "before": 8.87
+        }
+      },
+      "name": "ERNIE 4.5 300B A47B",
+      "slug": "ernie-4-5-300b-a47b"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 2.77,
+          "before": 2.4
+        }
+      },
+      "name": "Exaone 4.0 1.2B (Non-reasoning)",
+      "slug": "exaone-4-0-1-2b"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 2.9,
+          "before": 2.5
+        }
+      },
+      "name": "Exaone 4.0 1.2B (Reasoning)",
+      "slug": "exaone-4-0-1-2b-reasoning"
+    },
+    {
+      "changes": {
+        "coding_index": {
+          "after": null,
+          "before": 23.6
+        },
+        "intelligence_index": {
+          "after": 22.96,
+          "before": 20.5
+        }
+      },
+      "name": "EXAONE 4.5 33B",
+      "slug": "exaone-4-5-33b"
+    },
+    {
+      "changes": {
+        "agentic_index": {
+          "after": null,
+          "before": 32.9
+        },
+        "coding_index": {
+          "after": null,
+          "before": 33.1
+        },
+        "intelligence_index": {
+          "after": 21.83,
+          "before": 34.02
+        }
+      },
+      "name": "G9v3-39A5B",
+      "slug": "g9v3-39a5b"
+    },
+    {
+      "changes": {
+        "coding_index": {
+          "after": null,
+          "before": 9.9
+        },
+        "intelligence_index": {
+          "after": 10.84,
+          "before": 16.18
+        }
+      },
+      "name": "G9v3-3B",
+      "slug": "g9v3-3b"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 3.13,
+          "before": 2.7
+        }
+      },
+      "name": "Gemini 1.0 Pro",
+      "slug": "gemini-1-0-pro"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 8.22,
+          "before": 10.59
+        }
+      },
+      "name": "Gemini 2.0 Flash (exp) (AI Studio)",
+      "slug": "gemini-2-0-flash-experimental"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 9.85,
+          "before": 14.19
+        },
+        "speed_tps": {
+          "after": 194.11,
+          "before": 209.82
+        }
+      },
+      "name": "Gemini 2.5 Flash (Non-reasoning) (AI Studio)",
+      "slug": "gemini-2-5-flash"
+    },
+    {
+      "changes": {
+        "speed_tps": {
+          "after": 275.31,
+          "before": 300.26
+        }
+      },
+      "name": "Gemini 2.5 Flash-Lite (Non-reasoning) (AI Studio)",
+      "slug": "gemini-2-5-flash-lite"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 9.34,
+          "before": 13.1
+        }
+      },
+      "name": "Gemini 2.5 Flash-Lite (Sep) (Non-reasoning) (AI Studio)",
+      "slug": "gemini-2-5-flash-lite-preview-09-2025"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 10.35,
+          "before": 15.22
+        },
+        "released": {
+          "after": "2025-09-25",
+          "before": "2025-09-08"
+        }
+      },
+      "name": "Gemini 2.5 Flash-Lite (Sep) (AI Studio)",
+      "slug": "gemini-2-5-flash-lite-preview-09-2025-reasoning"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 8.55,
+          "before": 11.35
+        },
+        "speed_tps": {
+          "after": 336.89,
+          "before": 366.9
+        }
+      },
+      "name": "Gemini 2.5 Flash-Lite (AI Studio)",
+      "slug": "gemini-2-5-flash-lite-reasoning"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 13.11,
+          "before": 20.34
+        }
+      },
+      "name": "Gemini 2.5 Flash (Vertex)",
+      "slug": "gemini-2-5-flash-reasoning"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 16.66,
+          "before": 25.91
+        },
+        "speed_tps": {
+          "after": 121.07,
+          "before": 129.53
+        }
+      },
+      "name": "Gemini 2.5 Pro (AI Studio)",
+      "slug": "gemini-2-5-pro"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 14.52,
+          "before": 22.72
+        }
+      },
+      "name": "Gemini 2.5 Pro (May) (AI Studio)",
+      "slug": "gemini-2-5-pro-05-06"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 16.03,
+          "before": 25.61
+        },
+        "speed_tps": {
+          "after": 266.26,
+          "before": 309.33
+        }
+      },
+      "name": "Gemini 3.1 Flash-Lite (AI Studio)",
+      "slug": "gemini-3-1-flash-lite-preview"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 30.36,
+          "before": 47.74
+        }
+      },
+      "name": "Gemini 3.1 Pro Preview (Vertex)",
+      "slug": "gemini-3-1-pro-preview"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 32.98,
+          "before": 51.96
+        }
+      },
+      "name": "Gemini 3.5 Flash AI Studio",
+      "slug": "gemini-3-5-flash"
+    },
+    {
+      "changes": {
+        "coding_index": {
+          "after": null,
+          "before": 49.3
+        },
+        "intelligence_index": {
+          "after": 22.66,
+          "before": 37.44
+        },
+        "speed_tps": {
+          "after": 357.96,
+          "before": 379.41
+        }
+      },
+      "name": "Gemini 3.5 Flash-Lite AI Studio",
+      "slug": "gemini-3-5-flash-lite"
+    },
+    {
+      "changes": {
+        "deprecated": {
+          "after": true,
+          "before": false
+        },
+        "intelligence_index": {
+          "after": 33.63,
+          "before": 46.67
+        },
+        "speed_tps": {
+          "after": 188.68,
+          "before": 206.54
+        }
+      },
+      "name": "Gemini 3.5 Flash (medium)",
+      "slug": "gemini-3-5-flash-medium"
+    },
+    {
+      "changes": {
+        "deprecated": {
+          "after": true,
+          "before": false
+        },
+        "intelligence_index": {
+          "after": 23.85,
+          "before": 35.78
+        }
+      },
+      "name": "Gemini 3.5 Flash (minimal) AI Studio",
+      "slug": "gemini-3-5-flash-minimal"
+    },
+    {
+      "changes": {
+        "coding_index": {
+          "after": null,
+          "before": 69.2
+        },
+        "deprecated": {
+          "after": true,
+          "before": false
+        },
+        "intelligence_index": {
+          "after": 34.34,
+          "before": 51.58
+        }
+      },
+      "name": "Gemini 3.6 Flash AI Studio",
+      "slug": "gemini-3-6-flash"
+    },
+    {
+      "changes": {
+        "coding_index": {
+          "after": null,
+          "before": 76.1
+        },
+        "deprecated": {
+          "after": true,
+          "before": false
+        },
+        "intelligence_index": {
+          "after": 39.43,
+          "before": 56.03
+        },
+        "speed_tps": {
+          "after": 278.8,
+          "before": 329.73
+        }
+      },
+      "name": "Gemini 3.7 Flash (high) AI Studio",
+      "slug": "gemini-3-7-flash"
+    },
+    {
+      "changes": {
+        "agentic_index": {
+          "after": null,
+          "before": 41.6
+        },
+        "coding_index": {
+          "after": null,
+          "before": 71
+        },
+        "deprecated": {
+          "after": true,
+          "before": false
+        },
+        "intelligence_index": {
+          "after": 36.95,
+          "before": 50.94
+        },
+        "speed_tps": {
+          "after": 260.58,
+          "before": 314.7
+        }
+      },
+      "name": "Gemini 3.7 Flash (low) AI Studio",
+      "slug": "gemini-3-7-flash-low"
+    },
+    {
+      "changes": {
+        "agentic_index": {
+          "after": null,
+          "before": 45.1
+        },
+        "coding_index": {
+          "after": null,
+          "before": 71.5
+        },
+        "deprecated": {
+          "after": true,
+          "before": false
+        },
+        "intelligence_index": {
+          "after": 39.62,
+          "before": 53.42
+        },
+        "speed_tps": {
+          "after": 268.97,
+          "before": 332.09
+        }
+      },
+      "name": "Gemini 3.7 Flash (medium) AI Studio",
+      "slug": "gemini-3-7-flash-medium"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 17.93,
+          "before": 27.94
+        }
+      },
+      "name": "Gemini 3 Flash (Non-reasoning) (AI Studio)",
+      "slug": "gemini-3-flash"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 26.33,
+          "before": 38.74
+        },
+        "speed_tps": {
+          "after": 193.89,
+          "before": 182.1
+        }
+      },
+      "name": "Gemini 3 Flash (AI Studio)",
+      "slug": "gemini-3-flash-reasoning"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 27.96,
+          "before": 40.61
+        }
+      },
+      "name": "Gemini 3 Pro Preview (high) (Vertex)",
+      "slug": "gemini-3-pro"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 22.32,
+          "before": 33.87
+        }
+      },
+      "name": "Gemini 3 Pro Preview (low) (Vertex)",
+      "slug": "gemini-3-pro-low"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 3.75,
+          "before": 5.51
+        }
+      },
+      "name": "Gemma 3 12B (AI Studio)",
+      "slug": "gemma-3-12b"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 4.83,
+          "before": 1
+        }
+      },
+      "name": "Gemma 3 1B (AI Studio)",
+      "slug": "gemma-3-1b"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 2.41,
+          "before": 2
+        }
+      },
+      "name": "Gemma 3 270M",
+      "slug": "gemma-3-270m"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 4.85,
+          "before": 7.36
+        },
+        "speed_tps": {
+          "after": 31.68,
+          "before": 28.31
+        }
+      },
+      "name": "Gemma 3 27B",
+      "slug": "gemma-3-27b"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 4.83,
+          "before": 1
+        },
+        "speed_tps": {
+          "after": 23.6,
+          "before": 47.32
+        }
+      },
+      "name": "Gemma 3 4B",
+      "slug": "gemma-3-4b"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 4.83,
+          "before": 1
+        }
+      },
+      "name": "Gemma 3n E2B (AI Studio)",
+      "slug": "gemma-3n-e2b"
+    },
+    {
+      "changes": {
+        "context_tokens": {
+          "after": 32000,
+          "before": 32768
+        },
+        "intelligence_index": {
+          "after": 1.19,
+          "before": 1
+        },
+        "price_input": {
+          "after": 0.02,
+          "before": 0.06
+        },
+        "price_output": {
+          "after": 0.04,
+          "before": 0.12
+        }
+      },
+      "name": "Gemma 3n E4B Instruct",
+      "slug": "gemma-3n-e4b"
+    },
+    {
+      "changes": {
+        "coding_index": {
+          "after": null,
+          "before": 31
+        },
+        "intelligence_index": {
+          "after": 14.18,
+          "before": 22.16
+        }
+      },
+      "name": "Gemma 4 12B",
+      "slug": "gemma-4-12b"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 9.38,
+          "before": 13.2
+        }
+      },
+      "name": "Gemma 4 12B (Non-reasoning)",
+      "slug": "gemma-4-12b-non-reasoning"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 16.67,
+          "before": 26.07
+        }
+      },
+      "name": "Gemma 4 26B A4B (FP8)",
+      "slug": "gemma-4-26b-a4b"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 13.13,
+          "before": 20.38
+        },
+        "speed_tps": {
+          "after": 38.78,
+          "before": 41.11
+        }
+      },
+      "name": "Gemma 4 26B A4B (Non-reasoning)",
+      "slug": "gemma-4-26b-a4b-non-reasoning"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 15.42,
+          "before": 29.69
+        },
+        "speed_tps": {
+          "after": 37.17,
+          "before": 59.3
+        }
+      },
+      "name": "Gemma 4 31B (FP8)",
+      "slug": "gemma-4-31b"
+    },
+    {
+      "changes": {
+        "agentic_index": {
+          "after": null,
+          "before": 11.1
+        },
+        "intelligence_index": {
+          "after": 13.92,
+          "before": 22.25
+        },
+        "speed_tps": {
+          "after": 18.45,
+          "before": 32.34
+        }
+      },
+      "name": "Gemma 4 31B (Non-reasoning)",
+      "slug": "gemma-4-31b-non-reasoning"
+    },
+    {
+      "changes": {
+        "coding_index": {
+          "after": null,
+          "before": 7.2
+        }
+      },
+      "name": "Gemma 4 E2B (Reasoning)",
+      "slug": "gemma-4-e2b"
+    },
+    {
+      "changes": {
+        "coding_index": {
+          "after": null,
+          "before": 9.4
+        },
+        "intelligence_index": {
+          "after": 8.91,
+          "before": 12.18
+        },
+        "speed_tps": {
+          "after": 42.17,
+          "before": 48.01
+        }
+      },
+      "name": "Gemma 4 E4B",
+      "slug": "gemma-4-e4b"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 7.46,
+          "before": 8.75
+        },
+        "speed_tps": {
+          "after": 39.75,
+          "before": 46.18
+        }
+      },
+      "name": "Gemma 4 E4B (Non-reasoning)",
+      "slug": "gemma-4-e4b-non-reasoning"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 11.09,
+          "before": 16.66
+        },
+        "speed_tps": {
+          "after": 63.47,
+          "before": 45.31
+        }
+      },
+      "name": "GLM-4.5-Air",
+      "slug": "glm-4-5-air"
+    },
+    {
+      "changes": {
+        "speed_tps": {
+          "after": 38.09,
+          "before": 79.14
+        }
+      },
+      "name": "GLM-4.5V (Non-reasoning)",
+      "slug": "glm-4-5v"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 7.56,
+          "before": 9.0
+        },
+        "speed_tps": {
+          "after": 37.75,
+          "before": 77.69
+        }
+      },
+      "name": "GLM-4.5V",
+      "slug": "glm-4-5v-reasoning"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 14.93,
+          "before": 23.38
+        },
+        "speed_tps": {
+          "after": 33.73,
+          "before": 65.77
+        }
+      },
+      "name": "GLM-4.6 (Non-reasoning)",
+      "slug": "glm-4-6"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 18.53,
+          "before": 29.3
+        },
+        "speed_tps": {
+          "after": 35.32,
+          "before": 58.23
+        }
+      },
+      "name": "GLM-4.6",
+      "slug": "glm-4-6-reasoning"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 8.35,
+          "before": 10.9
+        },
+        "speed_tps": {
+          "after": 68.53,
+          "before": 72.41
+        }
+      },
+      "name": "GLM-4.6V (Non-reasoning)",
+      "slug": "glm-4-6v"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 11.22,
+          "before": 16.9
+        }
+      },
+      "name": "GLM-4.6V",
+      "slug": "glm-4-6v-reasoning"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 22.24,
+          "before": 34.46
+        },
+        "speed_tps": {
+          "after": 169.85,
+          "before": 181.31
+        }
+      },
+      "name": "GLM-4.7",
+      "slug": "glm-4-7"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 14.87,
+          "before": 23.28
+        }
+      },
+      "name": "GLM-4.7-Flash",
+      "slug": "glm-4-7-flash"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 10.56,
+          "before": 15.62
+        },
+        "speed_tps": {
+          "after": 65.15,
+          "before": 69.79
+        }
+      },
+      "name": "GLM-4.7-Flash (Non-reasoning)",
+      "slug": "glm-4-7-flash-non-reasoning"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 17.36,
+          "before": 27.1
+        },
+        "speed_tps": {
+          "after": 154.22,
+          "before": 167.35
+        }
+      },
+      "name": "GLM-4.7 (Non-reasoning)",
+      "slug": "glm-4-7-non-reasoning"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 27.91,
+          "before": 40.55
+        },
+        "speed_tps": {
+          "after": 63.26,
+          "before": 79.41
+        }
+      },
+      "name": "GLM-5 FP8",
+      "slug": "glm-5"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 26.45,
+          "before": 40.97
+        }
+      },
+      "name": "GLM-5.1",
+      "slug": "glm-5-1"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 24.24,
+          "before": 36.26
+        },
+        "speed_tps": {
+          "after": 25.33,
+          "before": 32.61
+        }
+      },
+      "name": "GLM-5.1 (Non-reasoning) (FP8, Base)",
+      "slug": "glm-5-1-non-reasoning"
+    },
+    {
+      "changes": {
+        "deprecated": {
+          "after": true,
+          "before": false
+        },
+        "intelligence_index": {
+          "after": 34.01,
+          "before": 52.64
+        }
+      },
+      "name": "GLM-5.2 (max) (FP8)",
+      "slug": "glm-5-2"
+    },
+    {
+      "changes": {
+        "agentic_index": {
+          "after": null,
+          "before": 35.1
+        },
+        "coding_index": {
+          "after": null,
+          "before": 46.5
+        },
+        "context_tokens": {
+          "after": 1000000,
+          "before": 1048576
+        },
+        "deprecated": {
+          "after": true,
+          "before": false
+        },
+        "intelligence_index": {
+          "after": 22.43,
+          "before": 34.81
+        },
+        "speed_tps": {
+          "after": 195.77,
+          "before": 83.42
+        }
+      },
+      "name": "GLM-5.2 (Non-reasoning)",
+      "slug": "glm-5-2-non-reasoning"
+    },
+    {
+      "changes": {
+        "agentic_index": {
+          "after": null,
+          "before": 59.1
+        },
+        "coding_index": {
+          "after": null,
+          "before": 74.8
+        },
+        "intelligence_index": {
+          "after": 44.86,
+          "before": 59.51
+        },
+        "speed_tps": {
+          "after": 70.33,
+          "before": 66.62
+        }
+      },
+      "name": "GLM-5.3 (max)",
+      "slug": "glm-5-3"
+    },
+    {
+      "changes": {
+        "agentic_index": {
+          "after": null,
+          "before": 58.2
+        },
+        "coding_index": {
+          "after": null,
+          "before": 71.5
+        },
+        "intelligence_index": {
+          "after": 41.91,
+          "before": 57.46
+        },
+        "speed_tps": {
+          "after": 79.98,
+          "before": 205.51
+        }
+      },
+      "name": "GLM-5.3-Flash",
+      "slug": "glm-5-3-flash"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 21.78,
+          "before": 33.18
+        },
+        "speed_tps": {
+          "after": 33.4,
+          "before": 52.8
+        }
+      },
+      "name": "GLM-5 (Non-reasoning) (FP8)",
+      "slug": "glm-5-non-reasoning"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 5.49,
+          "before": 3.2
+        }
+      },
+      "name": "GPT-3.5 Turbo",
+      "slug": "gpt-35-turbo"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 12.69,
+          "before": 19.61
+        },
+        "speed_tps": {
+          "after": 135.01,
+          "before": 166.03
+        }
+      },
+      "name": "GPT-4.1",
+      "slug": "gpt-4-1"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 10.16,
+          "before": 14.82
+        },
+        "speed_tps": {
+          "after": 105.56,
+          "before": 95.48
+        }
+      },
+      "name": "GPT-4.1 mini",
+      "slug": "gpt-4-1-mini"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 7.82,
+          "before": 9.64
+        }
+      },
+      "name": "GPT-4.1 nano",
+      "slug": "gpt-4-1-nano"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 8.44,
+          "before": 11.11
+        },
+        "speed_tps": {
+          "after": 112.5,
+          "before": 131.18
+        }
+      },
+      "name": "GPT-4o (Nov)",
+      "slug": "gpt-4o"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 7.33,
+          "before": 8.43
+        },
+        "speed_tps": {
+          "after": 79.57,
+          "before": 71.27
+        }
+      },
+      "name": "GPT-4o (May)",
+      "slug": "gpt-4o-2024-05-13"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 7.74,
+          "before": 9.45
+        }
+      },
+      "name": "GPT-4o (Aug)",
+      "slug": "gpt-4o-2024-08-06"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 22.98,
+          "before": 35.31
+        },
+        "speed_tps": {
+          "after": 81.15,
+          "before": 102.81
+        }
+      },
+      "name": "GPT-5 (high)",
+      "slug": "gpt-5"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 24.74,
+          "before": 37.47
+        },
+        "speed_tps": {
+          "after": 91.85,
+          "before": 156.93
+        }
+      },
+      "name": "GPT-5.1 (high)",
+      "slug": "gpt-5-1"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 23.7,
+          "before": 35.6
+        }
+      },
+      "name": "GPT-5.1 Codex (high)",
+      "slug": "gpt-5-1-codex"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 20.38,
+          "before": 31.33
+        }
+      },
+      "name": "GPT-5.1 Codex mini (high)",
+      "slug": "gpt-5-1-codex-mini"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 13.31,
+          "before": 20.7
+        }
+      },
+      "name": "GPT-5.1 (Non-reasoning)",
+      "slug": "gpt-5-1-non-reasoning"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 30.45,
+          "before": 43.34
+        }
+      },
+      "name": "GPT-5.2 (xhigh)",
+      "slug": "gpt-5-2"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 28.5,
+          "before": 41.22
+        },
+        "speed_tps": {
+          "after": 104.88,
+          "before": 124.24
+        }
+      },
+      "name": "GPT-5.2 Codex (xhigh)",
+      "slug": "gpt-5-2-codex"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 26.5,
+          "before": 38.94
+        },
+        "speed_tps": {
+          "after": 76.3,
+          "before": 81.63
+        }
+      },
+      "name": "GPT-5.2 (medium)",
+      "slug": "gpt-5-2-medium"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 16.98,
+          "before": 26.54
+        },
+        "speed_tps": {
+          "after": 62.13,
+          "before": 66.67
+        }
+      },
+      "name": "GPT-5.2 (Non-reasoning)",
+      "slug": "gpt-5-2-non-reasoning"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 32.5,
+          "before": 45.51
+        }
+      },
+      "name": "GPT-5.3 Codex (xhigh)",
+      "slug": "gpt-5-3-codex"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 38.98,
+          "before": 53.12
+        },
+        "speed_tps": {
+          "after": 94.56,
+          "before": 109.99
+        }
+      },
+      "name": "GPT-5.4 (xhigh)",
+      "slug": "gpt-5-4"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 27.58,
+          "before": 40.18
+        },
+        "speed_tps": {
+          "after": 81.84,
+          "before": 101.06
+        }
+      },
+      "name": "GPT-5.4 (low)",
+      "slug": "gpt-5-4-low"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 24.58,
+          "before": 40.94
+        },
+        "speed_tps": {
+          "after": 184.53,
+          "before": 168.5
+        }
+      },
+      "name": "GPT-5.4 mini (xhigh)",
+      "slug": "gpt-5-4-mini"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 19.75,
+          "before": 30.48
+        }
+      },
+      "name": "GPT-5.4 mini (medium)",
+      "slug": "gpt-5-4-mini-medium"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 11.14,
+          "before": 16.77
+        }
+      },
+      "name": "GPT-5.4 mini (Non-reasoning)",
+      "slug": "gpt-5-4-mini-non-reasoning"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 21.24,
+          "before": 39.71
+        }
+      },
+      "name": "GPT-5.4 nano (xhigh)",
+      "slug": "gpt-5-4-nano"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 20.01,
+          "before": 30.84
+        },
+        "speed_tps": {
+          "after": 157.38,
+          "before": 173.3
+        }
+      },
+      "name": "GPT-5.4 nano",
+      "slug": "gpt-5-4-nano-medium"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 11.69,
+          "before": 17.79
+        },
+        "speed_tps": {
+          "after": 153.83,
+          "before": 167.16
+        }
+      },
+      "name": "GPT-5.4 nano (Non-reasoning)",
+      "slug": "gpt-5-4-nano-non-reasoning"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 18.16,
+          "before": 28.26
+        },
+        "speed_tps": {
+          "after": 83.65,
+          "before": 104.31
+        }
+      },
+      "name": "GPT-5.4 (Non-reasoning)",
+      "slug": "gpt-5-4-non-reasoning"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 38.63,
+          "before": 56.31
+        },
+        "speed_tps": {
+          "after": 76.67,
+          "before": 82.9
+        }
+      },
+      "name": "GPT-5.5 (xhigh)",
+      "slug": "gpt-5-5"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 37.29,
+          "before": 54.67
+        }
+      },
+      "name": "GPT-5.5 (high)",
+      "slug": "gpt-5-5-high"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 22.69,
+          "before": 34.34
+        }
+      },
+      "name": "GPT-5.5 Instant (May 2026)",
+      "slug": "gpt-5-5-instant-05-26"
+    },
+    {
+      "changes": {
+        "speed_tps": {
+          "after": 113.03,
+          "before": 129.86
+        }
+      },
+      "name": "GPT-5.5 Instant (June 2026)",
+      "slug": "gpt-5-5-instant-06-26"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 30.71,
+          "before": 44.5
+        },
+        "speed_tps": {
+          "after": 75.19,
+          "before": 82.19
+        }
+      },
+      "name": "GPT-5.5 (low)",
+      "slug": "gpt-5-5-low"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 34.15,
+          "before": 51.42
+        }
+      },
+      "name": "GPT-5.5 (medium)",
+      "slug": "gpt-5-5-medium"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 23.17,
+          "before": 35.75
+        },
+        "speed_tps": {
+          "after": 99.76,
+          "before": 114.12
+        }
+      },
+      "name": "GPT-5.5 (Non-reasoning)",
+      "slug": "gpt-5-5-non-reasoning"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 37.5,
+          "before": 52.32
+        },
+        "speed_tps": {
+          "after": 210.24,
+          "before": 196.69
+        }
+      },
+      "name": "GPT-5.6 Luna (max)",
+      "slug": "gpt-5-6-luna"
+    },
+    {
+      "changes": {
+        "context_tokens": {
+          "after": 524288,
+          "before": 1000000
+        },
+        "intelligence_index": {
+          "after": 32.41,
+          "before": 46.96
+        }
+      },
+      "name": "GPT-5.6 Luna (high)",
+      "slug": "gpt-5-6-luna-high"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 21.55,
+          "before": 33.85
+        }
+      },
+      "name": "GPT-5.6 Luna (low)",
+      "slug": "gpt-5-6-luna-low"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 25.48,
+          "before": 38.91
+        }
+      },
+      "name": "GPT-5.6 Luna (medium)",
+      "slug": "gpt-5-6-luna-medium"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 16.05,
+          "before": 26.84
+        },
+        "speed_tps": {
+          "after": 190.97,
+          "before": 181.07
+        }
+      },
+      "name": "GPT-5.6 Luna (Non-reasoning)",
+      "slug": "gpt-5-6-luna-non-reasoning"
+    },
+    {
+      "changes": {
+        "context_tokens": {
+          "after": 524288,
+          "before": 1000000
+        },
+        "intelligence_index": {
+          "after": 34.77,
+          "before": 50.06
+        }
+      },
+      "name": "GPT-5.6 Luna (xhigh)",
+      "slug": "gpt-5-6-luna-xhigh"
+    },
+    {
+      "changes": {
+        "context_tokens": {
+          "after": 524288,
+          "before": 1000000
+        },
+        "intelligence_index": {
+          "after": 47.06,
+          "before": 60.93
+        },
+        "speed_tps": {
+          "after": 91.39,
+          "before": 77.69
+        }
+      },
+      "name": "GPT-5.6 Sol (max)",
+      "slug": "gpt-5-6-sol"
+    },
+    {
+      "changes": {
+        "context_tokens": {
+          "after": 524288,
+          "before": 1000000
+        },
+        "intelligence_index": {
+          "after": 42.5,
+          "before": 57.33
+        },
+        "speed_tps": {
+          "after": 79.92,
+          "before": 74.28
+        }
+      },
+      "name": "GPT-5.6 Sol (high)",
+      "slug": "gpt-5-6-sol-high"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 33.8,
+          "before": 50.73
+        },
+        "speed_tps": {
+          "after": 61.87,
+          "before": 72.58
+        }
+      },
+      "name": "GPT-5.6 Sol (low)",
+      "slug": "gpt-5-6-sol-low"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 39.48,
+          "before": 55.57
+        },
+        "speed_tps": {
+          "after": 59.68,
+          "before": 70.43
+        }
+      },
+      "name": "GPT-5.6 Sol (medium)",
+      "slug": "gpt-5-6-sol-medium"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 28.33,
+          "before": 41.88
+        }
+      },
+      "name": "GPT-5.6 Sol (Non-reasoning)",
+      "slug": "gpt-5-6-sol-non-reasoning"
+    },
+    {
+      "changes": {
+        "context_tokens": {
+          "after": 524288,
+          "before": 1000000
+        },
+        "intelligence_index": {
+          "after": 44.14,
+          "before": 59.01
+        },
+        "speed_tps": {
+          "after": 85.38,
+          "before": 80.65
+        }
+      },
+      "name": "GPT-5.6 Sol (xhigh)",
+      "slug": "gpt-5-6-sol-xhigh"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 42.25,
+          "before": 56.58
+        },
+        "speed_tps": {
+          "after": 116.85,
+          "before": 135.11
+        }
+      },
+      "name": "GPT-5.6 Terra (max)",
+      "slug": "gpt-5-6-terra"
+    },
+    {
+      "changes": {
+        "context_tokens": {
+          "after": 524288,
+          "before": 1000000
+        },
+        "intelligence_index": {
+          "after": 34.49,
+          "before": 50.11
+        }
+      },
+      "name": "GPT-5.6 Terra (high)",
+      "slug": "gpt-5-6-terra-high"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 27.92,
+          "before": 41.3
+        },
+        "speed_tps": {
+          "after": 68.82,
+          "before": 92.63
+        }
+      },
+      "name": "GPT-5.6 Terra (low)",
+      "slug": "gpt-5-6-terra-low"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 30.42,
+          "before": 46.76
+        },
+        "speed_tps": {
+          "after": 68.12,
+          "before": 95.54
+        }
+      },
+      "name": "GPT-5.6 Terra (medium)",
+      "slug": "gpt-5-6-terra-medium"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 21.21,
+          "before": 34.62
+        }
+      },
+      "name": "GPT-5.6 Terra (Non-reasoning)",
+      "slug": "gpt-5-6-terra-non-reasoning"
+    },
+    {
+      "changes": {
+        "context_tokens": {
+          "after": 524288,
+          "before": 1000000
+        },
+        "intelligence_index": {
+          "after": 38.19,
+          "before": 52.77
+        },
+        "speed_tps": {
+          "after": 101.81,
+          "before": 95.86
+        }
+      },
+      "name": "GPT-5.6 Terra (xhigh)",
+      "slug": "gpt-5-6-terra-xhigh"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 24.88,
+          "before": 37.04
+        }
+      },
+      "name": "GPT-5 Codex (high)",
+      "slug": "gpt-5-codex"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 20.79,
+          "before": 31.88
+        }
+      },
+      "name": "GPT-5 (low)",
+      "slug": "gpt-5-low"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 22.87,
+          "before": 34.57
+        },
+        "speed_tps": {
+          "after": 79.88,
+          "before": 92.96
+        }
+      },
+      "name": "GPT-5 (medium)",
+      "slug": "gpt-5-medium"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 17.41,
+          "before": 25.8
+        }
+      },
+      "name": "GPT-5 mini (high)",
+      "slug": "gpt-5-mini"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 20.6,
+          "before": 31.63
+        },
+        "speed_tps": {
+          "after": 70.23,
+          "before": 106.05
+        }
+      },
+      "name": "GPT-5 mini (medium)",
+      "slug": "gpt-5-mini-medium"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 9.91,
+          "before": 14.3
+        }
+      },
+      "name": "GPT-5 mini (minimal) East US 2 - Global Standard",
+      "slug": "gpt-5-mini-minimal"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 11.45,
+          "before": 17.34
+        }
+      },
+      "name": "GPT-5 (minimal)",
+      "slug": "gpt-5-minimal"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 12.99,
+          "before": 20.14
+        },
+        "speed_tps": {
+          "after": 175.05,
+          "before": 158.52
+        }
+      },
+      "name": "GPT-5 nano (high)",
+      "slug": "gpt-5-nano"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 12.48,
+          "before": 19.24
+        }
+      },
+      "name": "GPT-5 nano (medium)",
+      "slug": "gpt-5-nano-medium"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 12.35,
+          "before": 24.13
+        },
+        "speed_tps": {
+          "after": 90.87,
+          "before": 107.63
+        }
+      },
+      "name": "gpt-oss-120b (high)",
+      "slug": "gpt-oss-120b"
+    },
+    {
+      "changes": {
+        "agentic_index": {
+          "after": null,
+          "before": 1
+        },
+        "coding_index": {
+          "after": null,
+          "before": 21.2
+        },
+        "intelligence_index": {
+          "after": 10.21,
+          "before": 14.93
+        },
+        "speed_tps": {
+          "after": 87.54,
+          "before": 106.13
+        }
+      },
+      "name": "gpt-oss-120b (low)",
+      "slug": "gpt-oss-120b-low"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 9.04,
+          "before": 15.23
+        }
+      },
+      "name": "gpt-oss-20b (high)",
+      "slug": "gpt-oss-20b"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 9.95,
+          "before": 14.4
+        },
+        "speed_tps": {
+          "after": 362.13,
+          "before": 157.53
+        }
+      },
+      "name": "gpt-oss-20b (low) Vertex",
+      "slug": "gpt-oss-20b-low"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 4.92,
+          "before": 1.31
+        },
+        "speed_tps": {
+          "after": 39.47,
+          "before": 15.04
+        }
+      },
+      "name": "Granite 3.3 8B",
+      "slug": "granite-3-3-8b-instruct"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 2.66,
+          "before": 2.2
+        }
+      },
+      "name": "Granite 4.0 H 1B",
+      "slug": "granite-4-0-h-nano-1b"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 6.05,
+          "before": 4.93
+        }
+      },
+      "name": "Granite 4.0 H Small",
+      "slug": "granite-4-0-h-small"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 2.37,
+          "before": 2
+        }
+      },
+      "name": "Granite 4.0 Micro",
+      "slug": "granite-4-0-micro"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 2.07,
+          "before": 1.6
+        }
+      },
+      "name": "Granite 4.0 1B",
+      "slug": "granite-4-0-nano-1b"
+    },
+    {
+      "changes": {
+        "deprecated": {
+          "after": true,
+          "before": false
+        },
+        "speed_tps": {
+          "after": 82.68,
+          "before": 113.48
+        }
+      },
+      "name": "Granite 4.1 8B",
+      "slug": "granite-4-1-8b"
+    },
+    {
+      "changes": {
+        "agentic_index": {
+          "after": null,
+          "before": 13.9
+        },
+        "coding_index": {
+          "after": null,
+          "before": 29.9
+        },
+        "intelligence_index": {
+          "after": 14.83,
+          "before": 23.74
+        }
+      },
+      "name": "Granite 4.2 30B",
+      "slug": "granite-4-2-30b"
+    },
+    {
+      "changes": {
+        "agentic_index": {
+          "after": null,
+          "before": 1.9
+        },
+        "coding_index": {
+          "after": null,
+          "before": 17.5
+        },
+        "intelligence_index": {
+          "after": 9.06,
+          "before": 14.28
+        },
+        "speed_tps": {
+          "after": 209.91,
+          "before": 221.23
+        }
+      },
+      "name": "Granite 4.2 3B",
+      "slug": "granite-4-2-3b"
+    },
+    {
+      "changes": {
+        "agentic_index": {
+          "after": null,
+          "before": 9.2
+        },
+        "coding_index": {
+          "after": null,
+          "before": 22.4
+        },
+        "intelligence_index": {
+          "after": 11.81,
+          "before": 19.61
+        },
+        "speed_tps": {
+          "after": 93.42,
+          "before": 145.14
+        }
+      },
+      "name": "Granite 4.2 8B",
+      "slug": "granite-4-2-8b"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 12.11,
+          "before": 18.56
+        }
+      },
+      "name": "Grok 3",
+      "slug": "grok-3"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 14.62,
+          "before": 22.88
+        }
+      },
+      "name": "Grok 3 mini Reasoning (high)",
+      "slug": "grok-3-mini-reasoning"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 22.49,
+          "before": 34.08
+        },
+        "speed_tps": {
+          "after": 74.16,
+          "before": 68.34
+        }
+      },
+      "name": "Grok 4",
+      "slug": "grok-4"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 25.66,
+          "before": 37.95
+        }
+      },
+      "name": "Grok 4.20 0309 v2",
+      "slug": "grok-4-20"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 25.22,
+          "before": 37.44
+        }
+      },
+      "name": "Grok 4.20 0309",
+      "slug": "grok-4-20-0309"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 14.61,
+          "before": 22.86
+        }
+      },
+      "name": "Grok 4.20 0309 (Non-reasoning)",
+      "slug": "grok-4-20-0309-non-reasoning"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 14.2,
+          "before": 22.19
+        },
+        "speed_tps": {
+          "after": 97.18,
+          "before": 88.29
+        }
+      },
+      "name": "Grok 4.20 0309 v2 (Non-reasoning)",
+      "slug": "grok-4-20-non-reasoning"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 25.39,
+          "before": 37.95
+        }
+      },
+      "name": "Grok 4.3 (high)",
+      "slug": "grok-4-3"
+    },
+    {
+      "changes": {
+        "deprecated": {
+          "after": true,
+          "before": false
+        },
+        "intelligence_index": {
+          "after": 24.3,
+          "before": 36.33
+        },
+        "speed_tps": {
+          "after": 96.94,
+          "before": 113.25
+        }
+      },
+      "name": "Grok 4.3 (low)",
+      "slug": "grok-4-3-low"
+    },
+    {
+      "changes": {
+        "deprecated": {
+          "after": true,
+          "before": false
+        },
+        "intelligence_index": {
+          "after": 24.78,
+          "before": 36.92
+        },
+        "speed_tps": {
+          "after": 100.59,
+          "before": 108.75
+        }
+      },
+      "name": "Grok 4.3 (medium)",
+      "slug": "grok-4-3-medium"
+    },
+    {
+      "changes": {
+        "deprecated": {
+          "after": true,
+          "before": false
+        },
+        "intelligence_index": {
+          "after": 14.54,
+          "before": 25.01
+        },
+        "speed_tps": {
+          "after": 92.06,
+          "before": 105.44
+        }
+      },
+      "name": "Grok 4.3 (Non-reasoning)",
+      "slug": "grok-4-3-non-reasoning"
+    },
+    {
+      "changes": {
+        "deprecated": {
+          "after": true,
+          "before": false
+        },
+        "intelligence_index": {
+          "after": 39.08,
+          "before": 55.76
+        }
+      },
+      "name": "Grok 4.5 (high)",
+      "slug": "grok-4-5"
+    },
+    {
+      "changes": {
+        "coding_index": {
+          "after": null,
+          "before": 76.8
+        },
+        "intelligence_index": {
+          "after": 44.41,
+          "before": 60.92
+        }
+      },
+      "name": "Grok 4.6 (high)",
+      "slug": "grok-4-6"
+    },
+    {
+      "changes": {
+        "agentic_index": {
+          "after": null,
+          "before": 47.8
+        },
+        "coding_index": {
+          "after": null,
+          "before": 66.3
+        },
+        "intelligence_index": {
+          "after": 35.41,
+          "before": 51.68
+        }
+      },
+      "name": "Grok 4.6 (low)",
+      "slug": "grok-4-6-low"
+    },
+    {
+      "changes": {
+        "agentic_index": {
+          "after": null,
+          "before": 56.3
+        },
+        "coding_index": {
+          "after": null,
+          "before": 74.4
+        },
+        "intelligence_index": {
+          "after": 43.01,
+          "before": 59.01
+        }
+      },
+      "name": "Grok 4.6 (medium)",
+      "slug": "grok-4-6-medium"
+    },
+    {
+      "changes": {
+        "agentic_index": {
+          "after": null,
+          "before": 56.6
+        },
+        "coding_index": {
+          "after": null,
+          "before": 75.9
+        },
+        "intelligence_index": {
+          "after": 44.27,
+          "before": 60.01
+        }
+      },
+      "name": "Grok 4.6 (xhigh)",
+      "slug": "grok-4-6-xhigh"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 11.06,
+          "before": 16.61
+        }
+      },
+      "name": "Grok 4 Fast (Non-reasoning)",
+      "slug": "grok-4-fast"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 17.94,
+          "before": 27.95
+        }
+      },
+      "name": "Grok 4 Fast",
+      "slug": "grok-4-fast-reasoning"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 27.17,
+          "before": 40.65
+        },
+        "speed_tps": {
+          "after": 48.48,
+          "before": 55.36
+        }
+      },
+      "name": "Grok Build 0.1 0616",
+      "slug": "grok-build-0-1-06-16"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 6.0,
+          "before": 4.78
+        },
+        "speed_tps": {
+          "after": 29.98,
+          "before": 33.94
+        }
+      },
+      "name": "Hermes 3 - Llama-3.1 70B",
+      "slug": "hermes-3-llama-3-1-70b"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 7.41,
+          "before": 8.64
+        },
+        "speed_tps": {
+          "after": 44.96,
+          "before": 36.79
+        }
+      },
+      "name": "Hermes 4 405B (Non-reasoning) (FP8)",
+      "slug": "hermes-4-llama-3-1-405b"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 7.49,
+          "before": 8.84
+        },
+        "speed_tps": {
+          "after": 44.47,
+          "before": 35.53
+        }
+      },
+      "name": "Hermes 4 405B (FP8)",
+      "slug": "hermes-4-llama-3-1-405b-reasoning"
+    },
+    {
+      "changes": {
+        "speed_tps": {
+          "after": 90.54,
+          "before": 85.85
+        }
+      },
+      "name": "Hermes 4 - Llama-3.1 70B (Non-reasoning)",
+      "slug": "hermes-4-llama-3-1-70b"
+    },
+    {
+      "changes": {
+        "agentic_index": {
+          "after": null,
+          "before": 31.4
+        },
+        "coding_index": {
+          "after": null,
+          "before": 58.8
+        },
+        "intelligence_index": {
+          "after": 25.77,
+          "before": 42.21
+        },
+        "price_input": {
+          "after": 0.14,
+          "before": 0.126
+        },
+        "price_output": {
+          "after": 0.58,
+          "before": 0.522
+        }
+      },
+      "name": "Hy3",
+      "slug": "hy3"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 17.04,
+          "before": 26.63
+        }
+      },
+      "name": "Hy3-preview (Non-reasoning)",
+      "slug": "hy3-non-reasoning"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 22.74,
+          "before": 34.4
+        }
+      },
+      "name": "Hy3-preview",
+      "slug": "hy3-preview"
+    },
+    {
+      "changes": {
+        "coding_index": {
+          "after": null,
+          "before": 52.1
+        },
+        "context_tokens": {
+          "after": 1000000,
+          "before": 262144
+        },
+        "intelligence_index": {
+          "after": 25.54,
+          "before": 42.29
+        },
+        "speed_tps": {
+          "after": 207.0,
+          "before": 75.21
+        }
+      },
+      "name": "Inkling",
+      "slug": "inkling"
+    },
+    {
+      "changes": {
+        "agentic_index": {
+          "after": null,
+          "before": 31.9
+        },
+        "coding_index": {
+          "after": null,
+          "before": 52.9
+        },
+        "intelligence_index": {
+          "after": 26.09,
+          "before": 41.18
+        },
+        "speed_tps": {
+          "after": 318.61,
+          "before": 336.94
+        }
+      },
+      "name": "Inkling Small",
+      "slug": "inkling-small"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 6.01,
+          "before": 4.82
+        }
+      },
+      "name": "Jamba 1.5 Large",
+      "slug": "jamba-1-5-large"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 5.21,
+          "before": 2.29
+        }
+      },
+      "name": "Jamba 1.5 Mini",
+      "slug": "jamba-1-5-mini"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 2.55,
+          "before": 2.1
+        }
+      },
+      "name": "Jamba 1.6 Mini",
+      "slug": "jamba-1-6-mini"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 2.73,
+          "before": 2.3
+        }
+      },
+      "name": "Jamba 1.7 Mini",
+      "slug": "jamba-1-7-mini"
+    },
+    {
+      "changes": {
+        "coding_index": {
+          "after": null,
+          "before": 32.1
+        }
+      },
+      "name": "K-EXAONE (Reasoning)",
+      "slug": "k-exaone"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 34.62,
+          "before": 28.9
+        }
+      },
+      "name": "KAT-Coder-Pro V1",
+      "slug": "kat-coder-pro-v1"
+    },
+    {
+      "changes": {
+        "agentic_index": {
+          "after": null,
+          "before": 15.1
+        },
+        "coding_index": {
+          "after": null,
+          "before": 59.5
+        },
+        "intelligence_index": {
+          "after": 21.7,
+          "before": 33.73
+        }
+      },
+      "name": "KAT-Coder-Pro V2",
+      "slug": "kat-coder-pro-v2"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 12.72,
+          "before": 19.65
+        }
+      },
+      "name": "Kimi K2",
+      "slug": "kimi-k2"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 15.29,
+          "before": 23.96
+        }
+      },
+      "name": "Kimi K2 0905",
+      "slug": "kimi-k2-0905"
+    },
+    {
+      "changes": {
+        "agentic_index": {
+          "after": null,
+          "before": 21.7
+        },
+        "coding_index": {
+          "after": null,
+          "before": 46.8
+        },
+        "intelligence_index": {
+          "after": 23.46,
+          "before": 36.02
+        }
+      },
+      "name": "Kimi K2.5",
+      "slug": "kimi-k2-5"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 19.43,
+          "before": 30.05
+        }
+      },
+      "name": "Kimi K2.5 (Non-reasoning)",
+      "slug": "kimi-k2-5-non-reasoning"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 27.46,
+          "before": 45.14
+        },
+        "speed_tps": {
+          "after": 35.58,
+          "before": 37.69
+        }
+      },
+      "name": "Kimi K2.6",
+      "slug": "kimi-k2-6"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 23.57,
+          "before": 35.44
+        },
+        "speed_tps": {
+          "after": 37.45,
+          "before": 48.3
+        }
+      },
+      "name": "Kimi K2.6 (Non-reasoning)",
+      "slug": "kimi-k2-6-non-reasoning"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 26.27,
+          "before": 43.02
+        },
+        "speed_tps": {
+          "after": 57.36,
+          "before": 44.11
+        }
+      },
+      "name": "Kimi K2.7 Code",
+      "slug": "kimi-k2-7-code"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 22.02,
+          "before": 33.49
+        },
+        "speed_tps": {
+          "after": 201.6,
+          "before": 232.49
+        }
+      },
+      "name": "Kimi K2 Thinking Vertex",
+      "slug": "kimi-k2-thinking"
+    },
+    {
+      "changes": {
+        "coding_index": {
+          "after": null,
+          "before": 76.2
+        },
+        "context_tokens": {
+          "after": 1048576,
+          "before": 262144
+        },
+        "intelligence_index": {
+          "after": 43.78,
+          "before": 59.7
+        },
+        "price_input": {
+          "after": 5.6,
+          "before": 2.66
+        },
+        "price_output": {
+          "after": 28,
+          "before": 13.3
+        },
+        "speed_tps": {
+          "after": 232.26,
+          "before": 19.13
+        }
+      },
+      "name": "Kimi K3 (max) (ULTRA)",
+      "slug": "kimi-k3"
+    },
+    {
+      "changes": {
+        "agentic_index": {
+          "after": null,
+          "before": 39.6
+        },
+        "coding_index": {
+          "after": null,
+          "before": 72
+        },
+        "intelligence_index": {
+          "after": 30.48,
+          "before": 48.25
+        },
+        "speed_tps": {
+          "after": 108.05,
+          "before": 102.17
+        }
+      },
+      "name": "Kimi K3 (low)",
+      "slug": "kimi-k3-low"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 3.37,
+          "before": 3
+        }
+      },
+      "name": "LFM 40B",
+      "slug": "lfm-40b"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 1.15,
+          "before": 1
+        }
+      },
+      "name": "LFM2 1.2B",
+      "slug": "lfm2-1-2b"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 2.71,
+          "before": 2.3
+        }
+      },
+      "name": "LFM2 2.6B",
+      "slug": "lfm2-2-6b"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 2.71,
+          "before": 2.3
+        }
+      },
+      "name": "LFM2.5-1.2B-Instruct",
+      "slug": "lfm2-5-1-2b-instruct"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 2.75,
+          "before": 2.3
+        }
+      },
+      "name": "LFM2.5-1.2B-Thinking",
+      "slug": "lfm2-5-1-2b-thinking"
+    },
+    {
+      "changes": {
+        "agentic_index": {
+          "after": null,
+          "before": 2.4
+        },
+        "coding_index": {
+          "after": null,
+          "before": 7.7
+        },
+        "intelligence_index": {
+          "after": 8.39,
+          "before": 10.99
+        }
+      },
+      "name": "LFM2.5-2.6B",
+      "slug": "lfm2-5-2-6b"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 7.22,
+          "before": 8.14
+        }
+      },
+      "name": "LFM2.5-8B-A1B",
+      "slug": "lfm2-5-8b-a1b"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 4.83,
+          "before": 1
+        },
+        "speed_tps": {
+          "after": 426.89,
+          "before": 342.45
+        }
+      },
+      "name": "LFM2.5-VL-1.6B",
+      "slug": "lfm2-5-vl-1-6b"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 1.78,
+          "before": 1.3
+        }
+      },
+      "name": "LFM2 8B A1B",
+      "slug": "lfm2-8b-a1b"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 17.0,
+          "before": 26.57
+        }
+      },
+      "name": "Ling-2.6-1T",
+      "slug": "ling-2-6-1t"
+    },
+    {
+      "changes": {
+        "agentic_index": {
+          "after": null,
+          "before": 29.3
+        },
+        "coding_index": {
+          "after": null,
+          "before": 50.6
+        },
+        "intelligence_index": {
+          "after": 20.63,
+          "before": 37.82
+        },
+        "speed_tps": {
+          "after": 310.22,
+          "before": 358.87
+        }
+      },
+      "name": "Ling 3.0 Flash",
+      "slug": "ling-3-0-flash"
+    },
+    {
+      "changes": {
+        "agentic_index": {
+          "after": null,
+          "before": 16
+        },
+        "coding_index": {
+          "after": null,
+          "before": 26.5
+        },
+        "intelligence_index": {
+          "after": 11.87,
+          "before": 24.52
+        },
+        "speed_tps": {
+          "after": 156.41,
+          "before": 167.88
+        }
+      },
+      "name": "Ling 3.0 Tiny",
+      "slug": "ling-3-0-tiny"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 7.81,
+          "before": 9.61
+        },
+        "speed_tps": {
+          "after": 7.01,
+          "before": 52.75
+        }
+      },
+      "name": "Ling-flash-2.0",
+      "slug": "ling-flash-2-0"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 3.0,
+          "before": 2.6
+        }
+      },
+      "name": "Llama 2 Chat 13B",
+      "slug": "llama-2-chat-13b"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 3.01,
+          "before": 2.6
+        }
+      },
+      "name": "Llama 2 Chat 70B",
+      "slug": "llama-2-chat-70b"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 5.71,
+          "before": 3.91
+        }
+      },
+      "name": "Llama 2 Chat 7B",
+      "slug": "llama-2-chat-7b"
+    },
+    {
+      "changes": {
+        "speed_tps": {
+          "after": 27.87,
+          "before": 24.96
+        }
+      },
+      "name": "Llama 3.1 8B",
+      "slug": "llama-3-1-instruct-8b"
+    },
+    {
+      "changes": {
+        "context_tokens": {
+          "after": 128000,
+          "before": 131072
+        }
+      },
+      "name": "Llama 3.1 Nemotron Ultra 253B v1 (Reasoning)",
+      "slug": "llama-3-1-nemotron-ultra-253b-v1-reasoning"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 5.41,
+          "before": 2.95
+        },
+        "speed_tps": {
+          "after": 17.92,
+          "before": 28.95
+        }
+      },
+      "name": "Llama 3.2 11B (Vision)",
+      "slug": "llama-3-2-instruct-11b-vision"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 7.66,
+          "before": 9.26
+        },
+        "speed_tps": {
+          "after": 78.26,
+          "before": 83.06
+        }
+      },
+      "name": "Llama 3.3 70B",
+      "slug": "llama-3-3-instruct-70b"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 5.45,
+          "before": 3.1
+        }
+      },
+      "name": "Llama 3 70B",
+      "slug": "llama-3-instruct-70b"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 4.83,
+          "before": 1
+        }
+      },
+      "name": "Llama 3 8B",
+      "slug": "llama-3-instruct-8b"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 9.3,
+          "before": 14.48
+        },
+        "speed_tps": {
+          "after": 53.45,
+          "before": 82.8
+        }
+      },
+      "name": "Llama 4 Maverick (FP8)",
+      "slug": "llama-4-maverick"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 6.45,
+          "before": 10.26
+        },
+        "price_input": {
+          "after": 0.18,
+          "before": 0.11
+        },
+        "price_output": {
+          "after": 0.59,
+          "before": 0.34
+        },
+        "speed_tps": {
+          "after": 33.24,
+          "before": 446.06
+        }
+      },
+      "name": "Llama 4 Scout",
+      "slug": "llama-4-scout"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 2.14,
+          "before": 1.7
+        }
+      },
+      "name": "Llama 65B",
+      "slug": "llama-65b"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 7.36,
+          "before": 8.51
+        },
+        "speed_tps": {
+          "after": 37.91,
+          "before": 42.08
+        }
+      },
+      "name": "Llama Nemotron Super 49B v1.5 (Non-reasoning)",
+      "slug": "llama-nemotron-super-49b-v1-5"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 9.01,
+          "before": 12.4
+        }
+      },
+      "name": "Llama Nemotron Super 49B v1.5",
+      "slug": "llama-nemotron-super-49b-v1-5-reasoning"
+    },
+    {
+      "changes": {
+        "agentic_index": {
+          "after": null,
+          "before": 22
+        },
+        "coding_index": {
+          "after": null,
+          "before": 45.3
+        },
+        "context_tokens": {
+          "after": 262144,
+          "before": 1000000
+        },
+        "intelligence_index": {
+          "after": 19.69,
+          "before": 33.97
+        },
+        "speed_tps": {
+          "after": 51.54,
+          "before": 39.5
+        }
+      },
+      "name": "LongCat 2.0 (FP8)",
+      "slug": "longcat-2-0"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 8.59,
+          "before": 11.46
+        }
+      },
+      "name": "Magistral Small 1.2",
+      "slug": "magistral-small-2509"
+    },
+    {
+      "changes": {
+        "agentic_index": {
+          "after": null,
+          "before": 9.5
+        },
+        "coding_index": {
+          "after": null,
+          "before": 31.1
+        },
+        "intelligence_index": {
+          "after": 11.51,
+          "before": 21.9
+        },
+        "speed_tps": {
+          "after": 479.63,
+          "before": 770.33
+        }
+      },
+      "name": "Mercury 2",
+      "slug": "mercury-2"
+    },
+    {
+      "changes": {
+        "coding_index": {
+          "after": null,
+          "before": 56.8
+        },
+        "intelligence_index": {
+          "after": 22.3,
+          "before": 38.04
+        },
+        "speed_tps": {
+          "after": 38.13,
+          "before": 65.16
+        }
+      },
+      "name": "MiMo-V2.5",
+      "slug": "mimo-v2-5-0424"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 26.41,
+          "before": 42.88
+        },
+        "speed_tps": {
+          "after": 51.76,
+          "before": 33.17
+        }
+      },
+      "name": "MiMo-V2.5-Pro",
+      "slug": "mimo-v2-5-pro"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 18.29,
+          "before": 28.45
+        },
+        "speed_tps": {
+          "after": 47.26,
+          "before": 36.82
+        }
+      },
+      "name": "MiMo-V2.5-Pro (Non-reasoning)",
+      "slug": "mimo-v2-5-pro-non-reasoning"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 20.82,
+          "before": 31.92
+        }
+      },
+      "name": "MiMo-V2-Flash",
+      "slug": "mimo-v2-flash-reasoning"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 11.73,
+          "before": 17.86
+        },
+        "speed_tps": {
+          "after": 81.21,
+          "before": 96.57
+        }
+      },
+      "name": "MiniMax M1 80k",
+      "slug": "minimax-m1-80k"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 18.63,
+          "before": 28.92
+        }
+      },
+      "name": "MiniMax-M2 Vertex",
+      "slug": "minimax-m2"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 20.95,
+          "before": 32.09
+        },
+        "speed_tps": {
+          "after": 87.99,
+          "before": 94.85
+        }
+      },
+      "name": "MiniMax-M2.1",
+      "slug": "minimax-m2-1"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 22.8,
+          "before": 34.47
+        },
+        "speed_tps": {
+          "after": 159.96,
+          "before": 172.75
+        }
+      },
+      "name": "MiniMax-M2.5",
+      "slug": "minimax-m2-5"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 23.22,
+          "before": 38.87
+        }
+      },
+      "name": "MiniMax-M2.7",
+      "slug": "minimax-m2-7"
+    },
+    {
+      "changes": {
+        "context_tokens": {
+          "after": 524288,
+          "before": 1048576
+        },
+        "intelligence_index": {
+          "after": 29.61,
+          "before": 45.4
+        },
+        "price_input": {
+          "after": 0.3,
+          "before": 0.24
+        },
+        "price_output": {
+          "after": 1.2,
+          "before": 0.96
+        },
+        "speed_tps": {
+          "after": 175.43,
+          "before": 99.08
+        }
+      },
+      "name": "MiniMax-M3",
+      "slug": "minimax-m3"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 6.04,
+          "before": 11.24
+        },
+        "speed_tps": {
+          "after": 240.05,
+          "before": 198.66
+        }
+      },
+      "name": "Ministral 3 14B",
+      "slug": "ministral-3-14b"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 4.84,
+          "before": 7.07
+        },
+        "speed_tps": {
+          "after": 221.28,
+          "before": 198.04
+        }
+      },
+      "name": "Ministral 3 3B",
+      "slug": "ministral-3-3b"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 5.48,
+          "before": 8.97
+        },
+        "speed_tps": {
+          "after": 100.06,
+          "before": 130.31
+        }
+      },
+      "name": "Ministral 3 8B",
+      "slug": "ministral-3-8b"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 5.03,
+          "before": 1.71
+        },
+        "speed_tps": {
+          "after": 98.01,
+          "before": 124.78
+        }
+      },
+      "name": "Mistral 7B",
+      "slug": "mistral-7b-instruct"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 5.76,
+          "before": 4.07
+        }
+      },
+      "name": "Mistral Large (Feb)",
+      "slug": "mistral-large"
+    },
+    {
+      "changes": {
+        "speed_tps": {
+          "after": 31.77,
+          "before": 29.8
+        }
+      },
+      "name": "Mistral Large 2 (Jul)",
+      "slug": "mistral-large-2407"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 9.71,
+          "before": 15.92
+        },
+        "speed_tps": {
+          "after": 75.37,
+          "before": 32.2
+        }
+      },
+      "name": "Mistral Large 3",
+      "slug": "mistral-large-3"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 5.49,
+          "before": 3.22
+        }
+      },
+      "name": "Mistral Medium",
+      "slug": "mistral-medium"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 9.05,
+          "before": 12.47
+        },
+        "speed_tps": {
+          "after": 133.97,
+          "before": 57.12
+        }
+      },
+      "name": "Mistral Medium 3",
+      "slug": "mistral-medium-3"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 9.53,
+          "before": 14.73
+        },
+        "speed_tps": {
+          "after": 140.21,
+          "before": 108.52
+        }
+      },
+      "name": "Mistral Medium 3.1",
+      "slug": "mistral-medium-3-1"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 14.89,
+          "before": 30.39
+        }
+      },
+      "name": "Mistral Medium 3.5",
+      "slug": "mistral-medium-3-5"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 5.85,
+          "before": 4.33
+        }
+      },
+      "name": "Mistral Small (Sep)",
+      "slug": "mistral-small"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 5.5,
+          "before": 3.25
+        },
+        "speed_tps": {
+          "after": 143.69,
+          "before": 133.74
+        }
+      },
+      "name": "Mistral Small (Feb)",
+      "slug": "mistral-small-2402"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 7.37,
+          "before": 14.87
+        }
+      },
+      "name": "Mistral Small 3.1",
+      "slug": "mistral-small-3-1"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 6.96,
+          "before": 10.66
+        },
+        "speed_tps": {
+          "after": 149.62,
+          "before": 128.18
+        }
+      },
+      "name": "Mistral Small 3.2",
+      "slug": "mistral-small-3-2"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 11.45,
+          "before": 19.71
+        },
+        "speed_tps": {
+          "after": 175.67,
+          "before": 149.03
+        }
+      },
+      "name": "Mistral Small 4",
+      "slug": "mistral-small-4"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 8.99,
+          "before": 12.35
+        },
+        "speed_tps": {
+          "after": 156.93,
+          "before": 142.87
+        }
+      },
+      "name": "Mistral Small 4 (Non-reasoning)",
+      "slug": "mistral-small-4-non-reasoning"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 5.12,
+          "before": 2.01
+        },
+        "speed_tps": {
+          "after": 25.28,
+          "before": 23.76
+        }
+      },
+      "name": "Mixtral 8x7B",
+      "slug": "mixtral-8x7b-instruct"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 3.81,
+          "before": 3.4
+        }
+      },
+      "name": "Molmo 7B-D",
+      "slug": "molmo-7b-d"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 2.03,
+          "before": 1.6
+        }
+      },
+      "name": "Molmo2-8B",
+      "slug": "molmo2-8b"
+    },
+    {
+      "changes": {
+        "coding_index": {
+          "after": null,
+          "before": 49
+        },
+        "intelligence_index": {
+          "after": 18.07,
+          "before": 35.06
+        },
+        "price_input": {
+          "after": 0.35,
+          "before": 0.3
+        },
+        "price_output": {
+          "after": 1.5,
+          "before": 1.2
+        },
+        "speed_tps": {
+          "after": 62.86,
+          "before": 34.2
+        }
+      },
+      "name": "Muse Glimmer (high)",
+      "slug": "muse-glimmer"
+    },
+    {
+      "changes": {
+        "coding_index": {
+          "after": null,
+          "before": 71.3
+        },
+        "intelligence_index": {
+          "after": 34.27,
+          "before": 53.2
+        },
+        "speed_tps": {
+          "after": null,
+          "before": 196.61
+        }
+      },
+      "name": "Muse Spark 1.1 (xhigh)",
+      "slug": "muse-spark-1-1"
+    },
+    {
+      "changes": {
+        "coding_index": {
+          "after": null,
+          "before": 72.2
+        },
+        "deprecated": {
+          "after": true,
+          "before": false
+        },
+        "intelligence_index": {
+          "after": 39.8,
+          "before": 56.76
+        },
+        "speed_tps": {
+          "after": 198.18,
+          "before": null
+        }
+      },
+      "name": "Muse Spark 1.2 (xhigh)",
+      "slug": "muse-spark-1-2"
+    },
+    {
+      "changes": {
+        "coding_index": {
+          "after": null,
+          "before": 26.8
+        },
+        "intelligence_index": {
+          "after": 13.64,
+          "before": 23.61
+        },
+        "speed_tps": {
+          "after": 305.24,
+          "before": 500.71
+        }
+      },
+      "name": "Nemotron 3.5 Lightning (BF16)",
+      "slug": "nemotron-3-5-lightning"
+    },
+    {
+      "changes": {
+        "coding_index": {
+          "after": null,
+          "before": 13.8
+        },
+        "context_tokens": {
+          "after": 256000,
+          "before": 65536
+        },
+        "price_input": {
+          "after": 0.075,
+          "before": 0.06
+        },
+        "price_output": {
+          "after": 0.3,
+          "before": 0.24
+        },
+        "speed_tps": {
+          "after": 298.66,
+          "before": 323.86
+        }
+      },
+      "name": "Nemotron 3 Nano Omni 30B A3B Reasoning",
+      "slug": "nemotron-3-nano-omni-30b-a3b"
+    },
+    {
+      "changes": {
+        "coding_index": {
+          "after": null,
+          "before": 25.3
+        },
+        "intelligence_index": {
+          "after": 21.25,
+          "before": 17.8
+        }
+      },
+      "name": "Nemotron Cascade 2 30B A3B",
+      "slug": "nemotron-cascade-2-30b-a3b"
+    },
+    {
+      "changes": {
+        "context_tokens": {
+          "after": 262000,
+          "before": 262144
+        }
+      },
+      "name": "Nex-N2-Pro",
+      "slug": "nex-n2-pro"
+    },
+    {
+      "changes": {
+        "agentic_index": {
+          "after": null,
+          "before": 3.1
+        },
+        "intelligence_index": {
+          "after": 9.91,
+          "before": 20.17
+        },
+        "speed_tps": {
+          "after": 73.09,
+          "before": 104.37
+        }
+      },
+      "name": "North Mini Code",
+      "slug": "north-mini-code"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 8.74,
+          "before": 11.78
+        }
+      },
+      "name": "Nova 2.0 Lite (Non-reasoning)",
+      "slug": "nova-2-0-lite"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 13.37,
+          "before": 20.8
+        }
+      },
+      "name": "Nova 2.0 Lite (high)",
+      "slug": "nova-2-0-lite-reasoning"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 11.8,
+          "before": 18.01
+        }
+      },
+      "name": "Nova 2.0 Lite (low)",
+      "slug": "nova-2-0-lite-reasoning-low"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 12.48,
+          "before": 19.24
+        }
+      },
+      "name": "Nova 2.0 Lite (medium)",
+      "slug": "nova-2-0-lite-reasoning-medium"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 8.15,
+          "before": 10.44
+        }
+      },
+      "name": "Nova 2.0 Omni (Non-reasoning)",
+      "slug": "nova-2-0-omni"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 11.11,
+          "before": 16.71
+        }
+      },
+      "name": "Nova 2.0 Omni (low)",
+      "slug": "nova-2-0-omni-reasoning-low"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 13.65,
+          "before": 21.26
+        }
+      },
+      "name": "Nova 2.0 Omni (medium)",
+      "slug": "nova-2-0-omni-reasoning-medium"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 9.96,
+          "before": 14.41
+        }
+      },
+      "name": "Nova 2.0 Pro Preview (Non-reasoning)",
+      "slug": "nova-2-0-pro"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 12.78,
+          "before": 19.76
+        }
+      },
+      "name": "Nova 2.0 Pro Preview (low)",
+      "slug": "nova-2-0-pro-reasoning-low"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 14.16,
+          "before": 22.12
+        }
+      },
+      "name": "Nova 2.0 Pro Preview (medium)",
+      "slug": "nova-2-0-pro-reasoning-medium"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 5.88,
+          "before": 4.42
+        }
+      },
+      "name": "Nova Micro",
+      "slug": "nova-micro"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 9.16,
+          "before": 12.72
+        }
+      },
+      "name": "Nova Premier",
+      "slug": "nova-premier"
+    },
+    {
+      "changes": {
+        "speed_tps": {
+          "after": 95.78,
+          "before": 240.91
+        }
+      },
+      "name": "Nemotron 3 Nano (Non-reasoning)",
+      "slug": "nvidia-nemotron-3-nano-30b-a3b"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 8.9,
+          "before": 14.54
+        },
+        "speed_tps": {
+          "after": 83.93,
+          "before": 199.26
+        }
+      },
+      "name": "Nemotron 3 Nano",
+      "slug": "nvidia-nemotron-3-nano-30b-a3b-reasoning"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 13.55,
+          "before": 25.67
+        },
+        "speed_tps": {
+          "after": 88.15,
+          "before": 61.15
+        }
+      },
+      "name": "Nemotron 3 Super",
+      "slug": "nvidia-nemotron-3-super-120b-a12b"
+    },
+    {
+      "changes": {
+        "context_tokens": {
+          "after": 262144,
+          "before": 262000
+        },
+        "intelligence_index": {
+          "after": 23.41,
+          "before": 38.32
+        },
+        "price_input": {
+          "after": 0.6,
+          "before": 0.32
+        },
+        "price_output": {
+          "after": 2.4,
+          "before": 0.8
+        },
+        "speed_tps": {
+          "after": 153.89,
+          "before": 168.88
+        }
+      },
+      "name": "Nemotron 3 Ultra",
+      "slug": "nvidia-nemotron-3-ultra-550b-a55b"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 5.82,
+          "before": 4.25
+        },
+        "speed_tps": {
+          "after": 41.35,
+          "before": 29.21
+        }
+      },
+      "name": "NVIDIA Nemotron Nano 12B v2 VL (Non-reasoning) (FP8)",
+      "slug": "nvidia-nemotron-nano-12b-v2-vl"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 7.48,
+          "before": 8.8
+        },
+        "speed_tps": {
+          "after": 45.75,
+          "before": 35.93
+        }
+      },
+      "name": "NVIDIA Nemotron Nano 12B v2 VL (FP8)",
+      "slug": "nvidia-nemotron-nano-12b-v2-vl-reasoning"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 7.43,
+          "before": 8.68
+        },
+        "speed_tps": {
+          "after": 98.86,
+          "before": 190.0
+        }
+      },
+      "name": "NVIDIA Nemotron Nano 9B V2",
+      "slug": "nvidia-nemotron-nano-9b-v2-reasoning"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 15.23,
+          "before": 23.86
+        }
+      },
+      "name": "o1",
+      "slug": "o1"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 11.38,
+          "before": 17.21
+        }
+      },
+      "name": "o1-preview",
+      "slug": "o1-preview"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 12.42,
+          "before": 19.12
+        }
+      },
+      "name": "o1-pro",
+      "slug": "o1-pro"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 20.2,
+          "before": 31.1
+        }
+      },
+      "name": "o3",
+      "slug": "o3"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 12.47,
+          "before": 19.22
+        }
+      },
+      "name": "o3-mini",
+      "slug": "o3-mini"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 10.96,
+          "before": 15.7
+        },
+        "speed_tps": {
+          "after": 246.99,
+          "before": 234.34
+        }
+      },
+      "name": "o3-mini (high)",
+      "slug": "o3-mini-high"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 21.87,
+          "before": 33.29
+        }
+      },
+      "name": "o3-pro",
+      "slug": "o3-pro"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 16.65,
+          "before": 26.05
+        },
+        "speed_tps": {
+          "after": 144.98,
+          "before": 159.89
+        }
+      },
+      "name": "o4-mini (high)",
+      "slug": "o4-mini"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 5.24,
+          "before": 2.4
+        }
+      },
+      "name": "Olmo 3 7B",
+      "slug": "olmo-3-7b-instruct"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 2.96,
+          "before": 2.6
+        }
+      },
+      "name": "OpenChat 3.5 (1210)",
+      "slug": "openchat-35"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 3.21,
+          "before": 2.8
+        }
+      },
+      "name": "PALM-2",
+      "slug": "palm-2"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 5.92,
+          "before": 4.55
+        },
+        "speed_tps": {
+          "after": 66.85,
+          "before": 75.81
+        }
+      },
+      "name": "Phi-4",
+      "slug": "phi-4"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 5.81,
+          "before": 4.2
+        }
+      },
+      "name": "Phi-4 Multimodal",
+      "slug": "phi-4-multimodal"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 2.14,
+          "before": 1.7
+        }
+      },
+      "name": "Qwen Chat 14B",
+      "slug": "qwen-chat-14b"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 3.42,
+          "before": 3
+        }
+      },
+      "name": "Qwen Chat 72B",
+      "slug": "qwen-chat-72b"
+    },
+    {
+      "changes": {
+        "speed_tps": {
+          "after": 108.55,
+          "before": 101.75
+        }
+      },
+      "name": "Qwen2.5 Turbo",
+      "slug": "qwen-turbo"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 7.73,
+          "before": 9.44
+        },
+        "speed_tps": {
+          "after": 27.75,
+          "before": 30.72
+        }
+      },
+      "name": "Qwen2.5 72B",
+      "slug": "qwen2-5-72b-instruct"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 1.28,
+          "before": 1
+        }
+      },
+      "name": "Qwen3 0.6B (Reasoning)",
+      "slug": "qwen3-0.6b-instruct-reasoning"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 1.53,
+          "before": 1.1
+        }
+      },
+      "name": "Qwen3 1.7B (Non-reasoning)",
+      "slug": "qwen3-1.7b-instruct"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 2.63,
+          "before": 2.2
+        }
+      },
+      "name": "Qwen3 1.7B (Reasoning)",
+      "slug": "qwen3-1.7b-instruct-reasoning"
+    },
+    {
+      "changes": {
+        "speed_tps": {
+          "after": 63.42,
+          "before": 58.76
+        }
+      },
+      "name": "Qwen3 14B (Non-reasoning)",
+      "slug": "qwen3-14b-instruct"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 6.39,
+          "before": 10.44
+        },
+        "speed_tps": {
+          "after": 36.32,
+          "before": 69.96
+        }
+      },
+      "name": "Qwen3 14B (FP8)",
+      "slug": "qwen3-14b-instruct-reasoning"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 8.29,
+          "before": 10.77
+        }
+      },
+      "name": "Qwen3 235B (Non-reasoning)",
+      "slug": "qwen3-235b-a22b-instruct"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 12.0,
+          "before": 18.36
+        }
+      },
+      "name": "Qwen3 235B 2507 Vertex",
+      "slug": "qwen3-235b-a22b-instruct-2507"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 12.71,
+          "before": 19.89
+        },
+        "speed_tps": {
+          "after": 72.3,
+          "before": 61.2
+        }
+      },
+      "name": "Qwen3 235B A22B 2507",
+      "slug": "qwen3-235b-a22b-instruct-2507-reasoning"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 9.5,
+          "before": 13.45
+        }
+      },
+      "name": "Qwen3 235B",
+      "slug": "qwen3-235b-a22b-instruct-reasoning"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 7.52,
+          "before": 8.91
+        },
+        "speed_tps": {
+          "after": 163.54,
+          "before": 84.52
+        }
+      },
+      "name": "Qwen3 30B A3B 2507 (Non-reasoning)",
+      "slug": "qwen3-30b-a3b-2507"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 9.81,
+          "before": 14.57
+        },
+        "speed_tps": {
+          "after": 141.69,
+          "before": 129.5
+        }
+      },
+      "name": "Qwen3 30B A3B 2507",
+      "slug": "qwen3-30b-a3b-2507-reasoning"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 7.63,
+          "before": 9.17
+        },
+        "speed_tps": {
+          "after": 108.91,
+          "before": 100.8
+        }
+      },
+      "name": "Qwen3 30B",
+      "slug": "qwen3-30b-a3b-instruct-reasoning"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 7.34,
+          "before": 8.46
+        }
+      },
+      "name": "Qwen3 32B (Non-reasoning)",
+      "slug": "qwen3-32b-instruct"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 7.22,
+          "before": 11.45
+        }
+      },
+      "name": "Qwen3 32B",
+      "slug": "qwen3-32b-instruct-reasoning"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 4.42,
+          "before": 2.9
+        }
+      },
+      "name": "Qwen3.5 0.8B (Non-reasoning)",
+      "slug": "qwen3-5-0-8b-non-reasoning"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 16.19,
+          "before": 32.85
+        },
+        "speed_tps": {
+          "after": 88.45,
+          "before": 94.79
+        }
+      },
+      "name": "Qwen3.5 122B A10B",
+      "slug": "qwen3-5-122b-a10b"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 17.75,
+          "before": 28.18
+        }
+      },
+      "name": "Qwen3.5 122B A10B (Non-reasoning)",
+      "slug": "qwen3-5-122b-a10b-non-reasoning"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 22.9,
+          "before": 34.6
+        },
+        "speed_tps": {
+          "after": 53.14,
+          "before": 56.92
+        }
+      },
+      "name": "Qwen3.5 27B",
+      "slug": "qwen3-5-27b"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 19.37,
+          "before": 29.96
+        }
+      },
+      "name": "Qwen3.5 27B (Non-reasoning)",
+      "slug": "qwen3-5-27b-non-reasoning"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 19.33,
+          "before": 29.91
+        },
+        "speed_tps": {
+          "after": 75.68,
+          "before": 97.19
+        }
+      },
+      "name": "Qwen3.5 35B A3B",
+      "slug": "qwen3-5-35b-a3b"
+    },
+    {
+      "changes": {
+        "agentic_index": {
+          "after": null,
+          "before": 11.8
+        },
+        "coding_index": {
+          "after": null,
+          "before": 37
+        },
+        "deprecated": {
+          "after": true,
+          "before": false
+        },
+        "intelligence_index": {
+          "after": 15.12,
+          "before": 24.32
+        },
+        "price_output": {
+          "after": 1.25,
+          "before": 2
+        },
+        "speed_tps": {
+          "after": 231.29,
+          "before": 160.34
+        }
+      },
+      "name": "Qwen3.5 35B A3B (Non-reasoning) (FP8)",
+      "slug": "qwen3-5-35b-a3b-non-reasoning"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 19.11,
+          "before": 34.26
+        }
+      },
+      "name": "Qwen3.5 397B A17B",
+      "slug": "qwen3-5-397b-a17b"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 21.44,
+          "before": 32.73
+        }
+      },
+      "name": "Qwen3.5 397B A17B (Non-reasoning)",
+      "slug": "qwen3-5-397b-a17b-non-reasoning"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 13.12,
+          "before": 20.37
+        },
+        "speed_tps": {
+          "after": 15.95,
+          "before": 34.98
+        }
+      },
+      "name": "Qwen3.5 4B (FP8)",
+      "slug": "qwen3-5-4b"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 10.81,
+          "before": 16.12
+        },
+        "speed_tps": {
+          "after": 13.12,
+          "before": 36.83
+        }
+      },
+      "name": "Qwen3.5 4B (Non-reasoning) FP8",
+      "slug": "qwen3-5-4b-non-reasoning"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 13.65,
+          "before": 21.79
+        }
+      },
+      "name": "Qwen3.5 9B (FP8)",
+      "slug": "qwen3-5-9b"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 13.27,
+          "before": 20.61
+        }
+      },
+      "name": "Qwen3.5 9B (Non-reasoning) (FP8)",
+      "slug": "qwen3-5-9b-non-reasoning"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 12.47,
+          "before": 19.23
+        },
+        "speed_tps": {
+          "after": 205.01,
+          "before": 240.27
+        }
+      },
+      "name": "Qwen3.5 Omni Flash",
+      "slug": "qwen3-5-omni-flash"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 20.38,
+          "before": 31.34
+        },
+        "speed_tps": {
+          "after": 89.4,
+          "before": 129.34
+        }
+      },
+      "name": "Qwen3.5 Omni Plus",
+      "slug": "qwen3-5-omni-plus"
+    },
+    {
+      "changes": {
+        "deprecated": {
+          "after": true,
+          "before": false
+        },
+        "intelligence_index": {
+          "after": 21.91,
+          "before": 37.7
+        },
+        "speed_tps": {
+          "after": 43.26,
+          "before": 37.18
+        }
+      },
+      "name": "Qwen3.6 27B (FP8)",
+      "slug": "qwen3-6-27b"
+    },
+    {
+      "changes": {
+        "deprecated": {
+          "after": true,
+          "before": false
+        },
+        "intelligence_index": {
+          "after": 19.83,
+          "before": 31.33
+        }
+      },
+      "name": "Qwen3.6 27B (Non-reasoning)",
+      "slug": "qwen3-6-27b-non-reasoning"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 18.81,
+          "before": 32.13
+        },
+        "speed_tps": {
+          "after": 101.65,
+          "before": 124.8
+        }
+      },
+      "name": "Qwen3.6 35B A3B",
+      "slug": "qwen3-6-35b-a3b"
+    },
+    {
+      "changes": {
+        "agentic_index": {
+          "after": null,
+          "before": 19.2
+        },
+        "coding_index": {
+          "after": null,
+          "before": 28.1
+        },
+        "intelligence_index": {
+          "after": 15.23,
+          "before": 24.55
+        },
+        "speed_tps": {
+          "after": 114.88,
+          "before": 135.18
+        }
+      },
+      "name": "Qwen3.6 35B A3B (Non-reasoning)",
+      "slug": "qwen3-6-35b-a3b-non-reasoning"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 28.37,
+          "before": 41.07
+        },
+        "speed_tps": {
+          "after": 61.84,
+          "before": 52.3
+        }
+      },
+      "name": "Qwen3.6 Max Preview",
+      "slug": "qwen3-6-max"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 27.01,
+          "before": 40.49
+        }
+      },
+      "name": "Qwen3.6 Plus",
+      "slug": "qwen3-6-plus"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 29.87,
+          "before": 46.71
+        },
+        "speed_tps": {
+          "after": 187.37,
+          "before": 204.84
+        }
+      },
+      "name": "Qwen3.7 Max",
+      "slug": "qwen3-7-max"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 25.82,
+          "before": 39.37
+        },
+        "speed_tps": {
+          "after": 67.2,
+          "before": 56.05
+        }
+      },
+      "name": "Qwen3.7 Plus",
+      "slug": "qwen3-7-plus"
+    },
+    {
+      "changes": {
+        "agentic_index": {
+          "after": null,
+          "before": 57.1
+        },
+        "coding_index": {
+          "after": null,
+          "before": 71.9
+        },
+        "intelligence_index": {
+          "after": 40.04,
+          "before": 57.7
+        },
+        "speed_tps": {
+          "after": 38.74,
+          "before": 28.64
+        }
+      },
+      "name": "Qwen3.8 2.4T A95B",
+      "slug": "qwen3-8-2-4t-a95b"
+    },
+    {
+      "changes": {
+        "agentic_index": {
+          "after": null,
+          "before": 50.9
+        },
+        "coding_index": {
+          "after": null,
+          "before": 68.1
+        },
+        "context_tokens": {
+          "after": 262144,
+          "before": 1000000
+        },
+        "intelligence_index": {
+          "after": 33.9,
+          "before": 52.02
+        },
+        "price_input": {
+          "after": 0.4,
+          "before": 0.5
+        },
+        "price_output": {
+          "after": 2,
+          "before": 3
+        },
+        "speed_tps": {
+          "after": 188.92,
+          "before": 45.55
+        }
+      },
+      "name": "Qwen3.8 27B (xhigh)",
+      "slug": "qwen3-8-27b"
+    },
+    {
+      "changes": {
+        "agentic_index": {
+          "after": null,
+          "before": 43.7
+        },
+        "coding_index": {
+          "after": null,
+          "before": 58.2
+        },
+        "context_tokens": {
+          "after": 262144,
+          "before": 1000000
+        },
+        "intelligence_index": {
+          "after": 26.49,
+          "before": 42.87
+        },
+        "price_input": {
+          "after": 0.4,
+          "before": 0.5
+        },
+        "price_output": {
+          "after": 2,
+          "before": 3
+        },
+        "speed_tps": {
+          "after": 199.14,
+          "before": 55.91
+        }
+      },
+      "name": "Qwen3.8 27B (low)",
+      "slug": "qwen3-8-27b-low"
+    },
+    {
+      "changes": {
+        "agentic_index": {
+          "after": null,
+          "before": 49.8
+        },
+        "coding_index": {
+          "after": null,
+          "before": 56.1
+        },
+        "context_tokens": {
+          "after": 262144,
+          "before": 1000000
+        },
+        "intelligence_index": {
+          "after": 27.81,
+          "before": 44.45
+        },
+        "price_input": {
+          "after": 0.4,
+          "before": 0.5
+        },
+        "price_output": {
+          "after": 2,
+          "before": 3
+        },
+        "speed_tps": {
+          "after": 200.62,
+          "before": 51.6
+        }
+      },
+      "name": "Qwen3.8 27B (medium)",
+      "slug": "qwen3-8-27b-medium"
+    },
+    {
+      "changes": {
+        "agentic_index": {
+          "after": null,
+          "before": 30.4
+        },
+        "coding_index": {
+          "after": null,
+          "before": 44.6
+        },
+        "context_tokens": {
+          "after": 262144,
+          "before": 1000000
+        },
+        "intelligence_index": {
+          "after": 22.42,
+          "before": 34.74
+        },
+        "price_input": {
+          "after": 0.4,
+          "before": 0.5
+        },
+        "price_output": {
+          "after": 2,
+          "before": 3
+        },
+        "speed_tps": {
+          "after": 216.63,
+          "before": 50.66
+        }
+      },
+      "name": "Qwen3.8 27B",
+      "slug": "qwen3-8-27b-non-reasoning"
+    },
+    {
+      "changes": {
+        "agentic_index": {
+          "after": null,
+          "before": 56.4
+        },
+        "coding_index": {
+          "after": null,
+          "before": 73.1
+        },
+        "intelligence_index": {
+          "after": 39.91,
+          "before": 55.81
+        },
+        "speed_tps": {
+          "after": 51.97,
+          "before": 83.28
+        }
+      },
+      "name": "Qwen3.8-Flash-Next",
+      "slug": "qwen3-8-flash-next"
+    },
+    {
+      "changes": {
+        "coding_index": {
+          "after": null,
+          "before": 71.8
+        },
+        "context_tokens": {
+          "after": 983616,
+          "before": 1000000
+        },
+        "intelligence_index": {
+          "after": 45.44,
+          "before": 58.08
+        },
+        "omniscience_index": {
+          "after": 12.0,
+          "before": 3.4
+        },
+        "released": {
+          "after": "2026-09-02",
+          "before": "2026-08-03"
+        },
+        "speed_tps": {
+          "after": 39.57,
+          "before": 27.86
+        }
+      },
+      "name": "Qwen3.8 Max (0902)",
+      "slug": "qwen3-8-max"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 5.99,
+          "before": 4.76
+        }
+      },
+      "name": "Qwen3 8B (Non-reasoning)",
+      "slug": "qwen3-8b-instruct"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 5.16,
+          "before": 8.29
+        }
+      },
+      "name": "Qwen3 8B",
+      "slug": "qwen3-8b-instruct-reasoning"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 9.59,
+          "before": 13.63
+        }
+      },
+      "name": "Qwen3 Coder 30B A3B",
+      "slug": "qwen3-coder-30b-a3b-instruct"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 11.9,
+          "before": 18.18
+        },
+        "speed_tps": {
+          "after": 48.14,
+          "before": 59.92
+        }
+      },
+      "name": "Qwen3 Coder 480B",
+      "slug": "qwen3-coder-480b-a35b-instruct"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 10.05,
+          "before": 21.29
+        }
+      },
+      "name": "Qwen3 Coder Next (FP8)",
+      "slug": "qwen3-coder-next"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 15.61,
+          "before": 24.45
+        }
+      },
+      "name": "Qwen3 Max",
+      "slug": "qwen3-max"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 12.59,
+          "before": 19.43
+        }
+      },
+      "name": "Qwen3 Max (Preview)",
+      "slug": "qwen3-max-preview"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 16.29,
+          "before": 25.5
+        }
+      },
+      "name": "Qwen3 Max Thinking (Preview)",
+      "slug": "qwen3-max-thinking-preview"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 9.64,
+          "before": 13.75
+        }
+      },
+      "name": "Qwen3 Next 80B A3B",
+      "slug": "qwen3-next-80b-a3b-instruct"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 11.2,
+          "before": 16.87
+        }
+      },
+      "name": "Qwen3 Next 80B A3B (Reasoning)",
+      "slug": "qwen3-next-80b-a3b-reasoning"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 6.01,
+          "before": 4.8
+        }
+      },
+      "name": "Qwen3 Omni 30B A3B",
+      "slug": "qwen3-omni-30b-a3b-instruct"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 7.76,
+          "before": 9.5
+        }
+      },
+      "name": "Qwen3 Omni 30B A3B (Reasoning)",
+      "slug": "qwen3-omni-30b-a3b-reasoning"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 9.94,
+          "before": 14.37
+        },
+        "speed_tps": {
+          "after": 30.15,
+          "before": 35.72
+        }
+      },
+      "name": "Qwen3 VL 235B A22B (FP8)",
+      "slug": "qwen3-vl-235b-a22b-instruct"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 13.44,
+          "before": 20.91
+        }
+      },
+      "name": "Qwen3 VL 235B A22B (Reasoning)",
+      "slug": "qwen3-vl-235b-a22b-reasoning"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 7.93,
+          "before": 9.9
+        }
+      },
+      "name": "Qwen3 VL 30B A3B",
+      "slug": "qwen3-vl-30b-a3b-instruct"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 9.45,
+          "before": 13.35
+        }
+      },
+      "name": "Qwen3 VL 30B A3B (Reasoning)",
+      "slug": "qwen3-vl-30b-a3b-reasoning"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 8.39,
+          "before": 10.99
+        },
+        "speed_tps": {
+          "after": 59.76,
+          "before": 63.91
+        }
+      },
+      "name": "Qwen3 VL 32B",
+      "slug": "qwen3-vl-32b-instruct"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 11.87,
+          "before": 18.13
+        }
+      },
+      "name": "Qwen3 VL 32B (Reasoning)",
+      "slug": "qwen3-vl-32b-reasoning"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 7.26,
+          "before": 8.24
+        }
+      },
+      "name": "Qwen3 VL 8B",
+      "slug": "qwen3-vl-8b-instruct"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 8.17,
+          "before": 10.49
+        }
+      },
+      "name": "Qwen3 VL 8B (Reasoning)",
+      "slug": "qwen3-vl-8b-reasoning"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 9.47,
+          "before": 13.39
+        }
+      },
+      "name": "QwQ-32B",
+      "slug": "qwq-32b"
+    },
+    {
+      "changes": {
+        "speed_tps": {
+          "after": 57.37,
+          "before": 6.54
+        }
+      },
+      "name": "Reka Flash",
+      "slug": "reka-flash"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 5.65,
+          "before": 3.71
+        }
+      },
+      "name": "Reka Flash 3",
+      "slug": "reka-flash-3"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 17.28,
+          "before": 31.66
+        }
+      },
+      "name": "Ring-2.6-1T",
+      "slug": "ring-2-6-1t"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 7.15,
+          "before": 7.97
+        }
+      },
+      "name": "Ring-flash-2.0",
+      "slug": "ring-flash-2-0"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 8.79,
+          "before": 11.9
+        }
+      },
+      "name": "Sarvam 105B (high)",
+      "slug": "sarvam-105b"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 5.31,
+          "before": 2.63
+        }
+      },
+      "name": "Sarvam M",
+      "slug": "sarvam-m-reasoning"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 12.1,
+          "before": 18.55
+        },
+        "speed_tps": {
+          "after": 37.79,
+          "before": 34.39
+        }
+      },
+      "name": "Seed-OSS-36B-Instruct",
+      "slug": "seed-oss-36b-instruct"
+    },
+    {
+      "changes": {
+        "deprecated": {
+          "after": true,
+          "before": false
+        },
+        "intelligence_index": {
+          "after": 7.82,
+          "before": 14.49
+        }
+      },
+      "name": "Solar Pro 3",
+      "slug": "solar-pro-3"
+    },
+    {
+      "changes": {
+        "agentic_index": {
+          "after": null,
+          "before": 33.6
+        },
+        "coding_index": {
+          "after": null,
+          "before": 52.7
+        },
+        "intelligence_index": {
+          "after": 28.15,
+          "before": 41.64
+        },
+        "speed_tps": {
+          "after": 71.32,
+          "before": 44.41
+        }
+      },
+      "name": "Solar Pro 4",
+      "slug": "solar-pro4"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 16.96,
+          "before": 26.52
+        },
+        "speed_tps": {
+          "after": 116.14,
+          "before": 223.74
+        }
+      },
+      "name": "Step 3.5 Flash 2603",
+      "slug": "step-3-5-flash"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 16.62,
+          "before": 26.0
+        }
+      },
+      "name": "Step 3.5 Flash (FP8)",
+      "slug": "step-3-5-flash-0202"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 19.48,
+          "before": 30.9
+        },
+        "speed_tps": {
+          "after": 169.26,
+          "before": 179.32
+        }
+      },
+      "name": "Step 3.7 Flash",
+      "slug": "step-3-7-flash"
+    },
+    {
+      "changes": {
+        "intelligence_index": {
+          "after": 4.83,
+          "before": 1
+        }
+      },
+      "name": "Tiny Aya Global",
+      "slug": "tiny-aya-global"
+    },
+    {
+      "changes": {
+        "agentic_index": {
+          "after": null,
+          "before": 3.7
+        },
+        "coding_index": {
+          "after": null,
+          "before": 25.8
+        },
+        "intelligence_index": {
+          "after": 10.88,
+          "before": 18.66
+        },
+        "price_input": {
+          "after": 0.25,
+          "before": 0.22
+        },
+        "price_output": {
+          "after": 0.9,
+          "before": 0.85
+        },
+        "speed_tps": {
+          "after": 309.18,
+          "before": 203.83
+        }
+      },
+      "name": "Trinity Large Thinking",
+      "slug": "trinity-large-thinking"
+    }
+  ],
+  "counts": {
+    "added": 23,
+    "changed": 441,
+    "current": 645,
+    "previous": 627,
+    "removed": 5
+  },
+  "generated_at": "2026-09-18T07:57:49Z",
+  "previous_generated_at": "2026-08-30T21:45:28Z",
+  "removed": [
+    "a-x-k2",
+    "k-exaone-2-0-0803",
+    "motif-0714",
+    "motif-3",
+    "solar-open2-250b"
+  ],
+  "version": 1
+}
