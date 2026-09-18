@@ -1,98 +1,54 @@
 {
   "version": 2,
   "phase": 3,
-  "generated_at": "2026-08-27T16:53:49Z",
+  "generated_at": "2026-09-18T07:42:00Z",
   "sources": {
-    "aa_models": 625,
-    "openrouter_observations": 667,
-    "endpoint_accuracy_observations": 30,
-    "endpoint_accuracy_models": 2,
+    "aa_models": 645,
+    "openrouter_observations": 63,
+    "endpoint_accuracy_observations": 16,
+    "endpoint_accuracy_models": 1,
     "endpoint_accuracy_index_versions": [
       "1.0"
     ],
-    "coding_agent_observations": 9,
-    "coding_agent_benchmark_version": "1.4"
+    "coding_agent_observations": 12,
+    "coding_agent_benchmark_version": "1.5"
   },
   "identity": {
-    "aa_model_count": 625,
-    "openrouter_model_count": 207,
-    "openrouter_endpoint_count": 667,
-    "aa_endpoint_count": 30,
-    "aa_provider_count": 21,
-    "openrouter_provider_count": 70,
+    "aa_model_count": 645,
+    "openrouter_model_count": 25,
+    "openrouter_endpoint_count": 63,
+    "aa_endpoint_count": 16,
+    "aa_provider_count": 15,
+    "openrouter_provider_count": 25,
     "unique_unresolved_model_ids": [
-      "aion-labs/aion-2.0",
-      "aion-labs/aion-3.0",
-      "aion-labs/aion-3.0-mini",
-      "aion-labs/aion-rp-llama-3.1-8b",
-      "anthracite-org/magnum-v4-72b",
-      "anthropic/claude-opus-4.7",
-      "anthropic/claude-opus-5",
-      "arcee-ai/virtuoso-large",
-      "bytedance/ui-tars-1.5-7b",
-      "cognitivecomputations/dolphin-mistral-24b-venice-edition",
-      "dots-studio/dots-3-note-preview:free",
-      "google/gemini-2.5-flash-lite",
-      "google/gemini-2.5-pro",
-      "google/gemini-3.5-flash-lite",
-      "google/gemini-3.6-flash",
-      "google/gemini-3.7-flash",
-      "gryphe/mythomax-l2-13b",
-      "inclusionai/ling-3.0-flash",
-      "kwaipilot/kat-coder-air-v2.5",
-      "kwaipilot/kat-coder-pro-v2.5",
-      "liquid/lfm-2.5-2.6b:free",
-      "mancer/weaver",
-      "meta-llama/llama-guard-4-12b",
-      "meta/muse-spark-1.1",
-      "meta/muse-spark-1.2",
-      "microsoft/wizardlm-2-8x22b",
-      "mistralai/codestral-2508",
-      "mistralai/ministral-8b",
-      "mistralai/mistral-nemo",
-      "mistralai/voxtral-small-24b-2507",
-      "moonshotai/kimi-k2.7-code:batch",
-      "morph/morph-v3-fast",
-      "morph/morph-v3-large",
-      "nex-agi/nex-n2-mini",
-      "nousresearch/hermes-3-llama-3.1-405b",
-      "nousresearch/hermes-4-405b",
-      "nousresearch/hermes-4-70b",
       "nvidia/nemotron-3.5-lightning",
-      "qwen/qwen3.8-27b",
-      "sakana/sakana-namazu",
-      "stealth/ox-alpha",
-      "upstage/solar-pro4",
-      "z-ai/glm-5.3"
+      "openai/gpt-4o"
     ],
     "model_mappings": {
       "verified": 0,
       "manual": 1,
-      "candidate": 69
+      "candidate": 9
     },
     "model_mapping_methods": {
       "manual_alias": 1,
-      "normalized_heuristic": 9,
-      "source_metadata_exact": 60
+      "source_metadata_exact": 9
     },
     "model_ambiguity_methods": {
-      "source_metadata_exact": 25,
-      "unclassified": 69
+      "unclassified": 13
     },
     "model_resolution_methods": {
       "manual_alias": 1,
-      "normalized_heuristic": 9,
-      "source_metadata_exact": 85,
-      "unclassified": 69
+      "source_metadata_exact": 9,
+      "unclassified": 13
     },
     "endpoint_mappings": {
       "verified": 0,
       "manual": 2,
       "candidate": 0
     },
-    "unresolved_models": 43,
-    "unresolved_endpoints": 665,
-    "ambiguous": 94,
+    "unresolved_models": 2,
+    "unresolved_endpoints": 61,
+    "ambiguous": 13,
     "conflict": 0
   },
   "gate_d": {
