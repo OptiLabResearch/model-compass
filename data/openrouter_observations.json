@@ -1,12 +1,12 @@
 {
   "version": 1,
   "parser_version": "0.1.0",
-  "generated_at": "2026-09-18T07:58:15Z",
+  "generated_at": "2026-09-18T08:15:47Z",
   "source": "openrouter",
   "source_url": "https://openrouter.ai/api/v1/models",
   "model_catalog_count": 445,
   "endpoint_models_requested": 25,
-  "endpoint_observation_count": 65,
+  "endpoint_observation_count": 133,
   "endpoint_errors": [],
   "observations": [
     {
@@ -2292,6 +2292,4048 @@
     },
     {
       "observation_type": "provider_endpoint",
+      "model_id": "openai/gpt-5.2-pro:batch",
+      "model_slug": "openai/gpt-5.2-pro:batch",
+      "provider_id": "openai",
+      "provider_name": "OpenAI",
+      "endpoint_id": "OpenAI | openai/gpt-5.2-pro-20251211:batch",
+      "identity_key": "openai/gpt-5.2-pro:batch:openai:OpenAI | openai/gpt-5.2-pro-20251211:batch",
+      "context_tokens": 400000,
+      "pricing": {
+        "input_per_million": 10.5,
+        "output_per_million": 84.0,
+        "raw": {
+          "prompt": "0.0000105",
+          "completion": "0.000084",
+          "web_search": "0.01",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": null,
+        "uptime_30m": null,
+        "uptime_1d": null
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "include_reasoning",
+          "max_tokens",
+          "reasoning",
+          "reasoning_effort",
+          "response_format",
+          "seed",
+          "structured_outputs",
+          "tool_choice",
+          "tools"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-09-18T08:15:47Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "openai/gpt-5.2-pro:batch",
+        "last_seen": "2026-09-18T08:15:47Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "openai/gpt-5.2:batch",
+      "model_slug": "openai/gpt-5.2:batch",
+      "provider_id": "openai",
+      "provider_name": "OpenAI",
+      "endpoint_id": "OpenAI | openai/gpt-5.2-20251211:batch",
+      "identity_key": "openai/gpt-5.2:batch:openai:OpenAI | openai/gpt-5.2-20251211:batch",
+      "context_tokens": 400000,
+      "pricing": {
+        "input_per_million": 0.875,
+        "output_per_million": 7.0,
+        "raw": {
+          "prompt": "0.000000875",
+          "completion": "0.000007",
+          "web_search": "0.01",
+          "input_cache_read": "0.0000000875",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": null,
+        "uptime_30m": null,
+        "uptime_1d": null
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "include_reasoning",
+          "max_tokens",
+          "reasoning",
+          "reasoning_effort",
+          "response_format",
+          "seed",
+          "structured_outputs",
+          "tool_choice",
+          "tools"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-09-18T08:15:47Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "openai/gpt-5.2:batch",
+        "last_seen": "2026-09-18T08:15:47Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "openai/gpt-5.3-codex",
+      "model_slug": "openai/gpt-5.3-codex",
+      "provider_id": "azure",
+      "provider_name": "Azure",
+      "endpoint_id": "Azure | openai/gpt-5.3-codex-20260224",
+      "identity_key": "openai/gpt-5.3-codex:azure:Azure | openai/gpt-5.3-codex-20260224",
+      "context_tokens": 400000,
+      "pricing": {
+        "input_per_million": 1.75,
+        "output_per_million": 14.0,
+        "raw": {
+          "prompt": "0.00000175",
+          "completion": "0.000014",
+          "web_search": "0.01",
+          "input_cache_read": "0.000000175",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 100.0,
+        "uptime_30m": 100.0,
+        "uptime_1d": 100.0
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "include_reasoning",
+          "max_completion_tokens",
+          "reasoning",
+          "reasoning_effort",
+          "response_format",
+          "seed",
+          "structured_outputs",
+          "tool_choice",
+          "tools"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-09-18T08:15:47Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "openai/gpt-5.3-codex",
+        "last_seen": "2026-09-18T08:15:47Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "openai/gpt-5.3-codex",
+      "model_slug": "openai/gpt-5.3-codex",
+      "provider_id": "openai",
+      "provider_name": "OpenAI",
+      "endpoint_id": "OpenAI | openai/gpt-5.3-codex-20260224",
+      "identity_key": "openai/gpt-5.3-codex:openai:OpenAI | openai/gpt-5.3-codex-20260224",
+      "context_tokens": 400000,
+      "pricing": {
+        "input_per_million": 1.75,
+        "output_per_million": 14.0,
+        "raw": {
+          "prompt": "0.00000175",
+          "completion": "0.000014",
+          "web_search": "0.01",
+          "input_cache_read": "0.000000175",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 100.0,
+        "uptime_30m": 100.0,
+        "uptime_1d": 99.9960866672754
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "include_reasoning",
+          "max_tokens",
+          "reasoning",
+          "reasoning_effort",
+          "response_format",
+          "seed",
+          "structured_outputs",
+          "tool_choice",
+          "tools"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-09-18T08:15:47Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "openai/gpt-5.3-codex",
+        "last_seen": "2026-09-18T08:15:47Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "openai/gpt-5.3-codex",
+      "model_slug": "openai/gpt-5.3-codex",
+      "provider_id": "openai/fast",
+      "provider_name": "OpenAI",
+      "endpoint_id": "OpenAI | openai/gpt-5.3-codex-20260224",
+      "identity_key": "openai/gpt-5.3-codex:openai/fast:OpenAI | openai/gpt-5.3-codex-20260224",
+      "context_tokens": 400000,
+      "pricing": {
+        "input_per_million": 3.5,
+        "output_per_million": 28.0,
+        "raw": {
+          "prompt": "0.0000035",
+          "completion": "0.000028",
+          "web_search": "0.01",
+          "input_cache_read": "0.00000035",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": null,
+        "uptime_30m": null,
+        "uptime_1d": null
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "include_reasoning",
+          "max_tokens",
+          "reasoning",
+          "reasoning_effort",
+          "response_format",
+          "seed",
+          "structured_outputs",
+          "tool_choice",
+          "tools"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-09-18T08:15:47Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "openai/gpt-5.3-codex",
+        "last_seen": "2026-09-18T08:15:47Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "openai/gpt-5.4",
+      "model_slug": "openai/gpt-5.4",
+      "provider_id": "amazon-bedrock/us-east-1",
+      "provider_name": "Amazon Bedrock",
+      "endpoint_id": "Amazon Bedrock | openai/gpt-5.4-20260305",
+      "identity_key": "openai/gpt-5.4:amazon-bedrock/us-east-1:Amazon Bedrock | openai/gpt-5.4-20260305",
+      "context_tokens": 1050000,
+      "pricing": {
+        "input_per_million": 2.75,
+        "output_per_million": 16.5,
+        "raw": {
+          "prompt": "0.00000275",
+          "completion": "0.0000165",
+          "web_search": "0.01",
+          "input_cache_read": "0.000000275",
+          "discount": 0,
+          "overrides": [
+            {
+              "min_prompt_tokens": 272000,
+              "prompt": "0.0000055",
+              "completion": "0.00002475",
+              "input_cache_read": "0.00000055"
+            }
+          ]
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": null,
+        "uptime_30m": null,
+        "uptime_1d": null
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "include_reasoning",
+          "max_tokens",
+          "reasoning",
+          "reasoning_effort",
+          "tool_choice",
+          "tools"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-09-18T08:15:47Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "openai/gpt-5.4",
+        "last_seen": "2026-09-18T08:15:47Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "openai/gpt-5.4",
+      "model_slug": "openai/gpt-5.4",
+      "provider_id": "azure",
+      "provider_name": "Azure",
+      "endpoint_id": "Azure | openai/gpt-5.4-20260305",
+      "identity_key": "openai/gpt-5.4:azure:Azure | openai/gpt-5.4-20260305",
+      "context_tokens": 1050000,
+      "pricing": {
+        "input_per_million": 2.5,
+        "output_per_million": 15.0,
+        "raw": {
+          "prompt": "0.0000025",
+          "completion": "0.000015",
+          "web_search": "0.01",
+          "input_cache_read": "0.00000025",
+          "discount": 0,
+          "overrides": [
+            {
+              "min_prompt_tokens": 272000,
+              "prompt": "0.000005",
+              "completion": "0.0000225",
+              "input_cache_read": "0.0000005"
+            }
+          ]
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 100.0,
+        "uptime_30m": 100.0,
+        "uptime_1d": 99.9774289524982
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "include_reasoning",
+          "max_completion_tokens",
+          "reasoning",
+          "reasoning_effort",
+          "response_format",
+          "seed",
+          "structured_outputs",
+          "tool_choice",
+          "tools"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-09-18T08:15:47Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "openai/gpt-5.4",
+        "last_seen": "2026-09-18T08:15:47Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "openai/gpt-5.4",
+      "model_slug": "openai/gpt-5.4",
+      "provider_id": "azure/eu",
+      "provider_name": "Azure",
+      "endpoint_id": "Azure | openai/gpt-5.4-20260305",
+      "identity_key": "openai/gpt-5.4:azure/eu:Azure | openai/gpt-5.4-20260305",
+      "context_tokens": 1050000,
+      "pricing": {
+        "input_per_million": 2.75,
+        "output_per_million": 16.5,
+        "raw": {
+          "prompt": "0.00000275",
+          "completion": "0.0000165",
+          "web_search": "0.01",
+          "input_cache_read": "0.000000275",
+          "discount": 0,
+          "overrides": [
+            {
+              "min_prompt_tokens": 272000,
+              "prompt": "0.0000055",
+              "completion": "0.00002475",
+              "input_cache_read": "0.00000055"
+            }
+          ]
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": null,
+        "uptime_30m": null,
+        "uptime_1d": 100.0
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "include_reasoning",
+          "max_completion_tokens",
+          "reasoning",
+          "reasoning_effort",
+          "response_format",
+          "seed",
+          "structured_outputs",
+          "tool_choice",
+          "tools"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-09-18T08:15:47Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "openai/gpt-5.4",
+        "last_seen": "2026-09-18T08:15:47Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "openai/gpt-5.4",
+      "model_slug": "openai/gpt-5.4",
+      "provider_id": "azure/us",
+      "provider_name": "Azure",
+      "endpoint_id": "Azure | openai/gpt-5.4-20260305",
+      "identity_key": "openai/gpt-5.4:azure/us:Azure | openai/gpt-5.4-20260305",
+      "context_tokens": 1050000,
+      "pricing": {
+        "input_per_million": 2.75,
+        "output_per_million": 16.5,
+        "raw": {
+          "prompt": "0.00000275",
+          "completion": "0.0000165",
+          "web_search": "0.01",
+          "input_cache_read": "0.000000275",
+          "discount": 0,
+          "overrides": [
+            {
+              "min_prompt_tokens": 272000,
+              "prompt": "0.0000055",
+              "completion": "0.00002475",
+              "input_cache_read": "0.00000055"
+            }
+          ]
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": null,
+        "uptime_30m": null,
+        "uptime_1d": null
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "include_reasoning",
+          "max_completion_tokens",
+          "reasoning",
+          "reasoning_effort",
+          "response_format",
+          "seed",
+          "structured_outputs",
+          "tool_choice",
+          "tools"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-09-18T08:15:47Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "openai/gpt-5.4",
+        "last_seen": "2026-09-18T08:15:47Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "openai/gpt-5.4",
+      "model_slug": "openai/gpt-5.4",
+      "provider_id": "openai",
+      "provider_name": "OpenAI",
+      "endpoint_id": "OpenAI | openai/gpt-5.4-20260305",
+      "identity_key": "openai/gpt-5.4:openai:OpenAI | openai/gpt-5.4-20260305",
+      "context_tokens": 1050000,
+      "pricing": {
+        "input_per_million": 2.5,
+        "output_per_million": 15.0,
+        "raw": {
+          "prompt": "0.0000025",
+          "completion": "0.000015",
+          "web_search": "0.01",
+          "input_cache_read": "0.00000025",
+          "discount": 0,
+          "overrides": [
+            {
+              "min_prompt_tokens": 272000,
+              "prompt": "0.000005",
+              "completion": "0.0000225",
+              "input_cache_read": "0.0000005"
+            }
+          ]
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 100.0,
+        "uptime_30m": 99.98613133624575,
+        "uptime_1d": 99.94465091550725
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "include_reasoning",
+          "max_tokens",
+          "reasoning",
+          "reasoning_effort",
+          "response_format",
+          "seed",
+          "structured_outputs",
+          "tool_choice",
+          "tools"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-09-18T08:15:47Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "openai/gpt-5.4",
+        "last_seen": "2026-09-18T08:15:47Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "openai/gpt-5.4",
+      "model_slug": "openai/gpt-5.4",
+      "provider_id": "openai/fast",
+      "provider_name": "OpenAI",
+      "endpoint_id": "OpenAI | openai/gpt-5.4-20260305",
+      "identity_key": "openai/gpt-5.4:openai/fast:OpenAI | openai/gpt-5.4-20260305",
+      "context_tokens": 1050000,
+      "pricing": {
+        "input_per_million": 5.0,
+        "output_per_million": 30.0,
+        "raw": {
+          "prompt": "0.000005",
+          "completion": "0.00003",
+          "web_search": "0.01",
+          "input_cache_read": "0.0000005",
+          "discount": 0,
+          "overrides": [
+            {
+              "min_prompt_tokens": 272000,
+              "prompt": "0.00001",
+              "completion": "0.000045",
+              "input_cache_read": "0.000001"
+            }
+          ]
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": null,
+        "uptime_30m": null,
+        "uptime_1d": 100.0
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "include_reasoning",
+          "max_tokens",
+          "reasoning",
+          "reasoning_effort",
+          "response_format",
+          "seed",
+          "structured_outputs",
+          "tool_choice",
+          "tools"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-09-18T08:15:47Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "openai/gpt-5.4",
+        "last_seen": "2026-09-18T08:15:47Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "openai/gpt-5.4",
+      "model_slug": "openai/gpt-5.4",
+      "provider_id": "openai/flex",
+      "provider_name": "OpenAI",
+      "endpoint_id": "OpenAI | openai/gpt-5.4-20260305",
+      "identity_key": "openai/gpt-5.4:openai/flex:OpenAI | openai/gpt-5.4-20260305",
+      "context_tokens": 1050000,
+      "pricing": {
+        "input_per_million": 1.25,
+        "output_per_million": 7.5,
+        "raw": {
+          "prompt": "0.00000125",
+          "completion": "0.0000075",
+          "web_search": "0.01",
+          "input_cache_read": "0.000000125",
+          "discount": 0,
+          "overrides": [
+            {
+              "min_prompt_tokens": 272000,
+              "prompt": "0.0000025",
+              "completion": "0.00001125",
+              "input_cache_read": "0.00000025"
+            }
+          ]
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 56.81818181818182,
+        "uptime_30m": null,
+        "uptime_1d": 46.4075165806927
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "include_reasoning",
+          "max_tokens",
+          "reasoning",
+          "reasoning_effort",
+          "response_format",
+          "seed",
+          "structured_outputs",
+          "tool_choice",
+          "tools"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-09-18T08:15:47Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "openai/gpt-5.4",
+        "last_seen": "2026-09-18T08:15:47Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "openai/gpt-5.4-image-2",
+      "model_slug": "openai/gpt-5.4-image-2",
+      "provider_id": "openai",
+      "provider_name": "OpenAI",
+      "endpoint_id": "OpenAI | openai/gpt-5.4-image-2-20260421",
+      "identity_key": "openai/gpt-5.4-image-2:openai:OpenAI | openai/gpt-5.4-image-2-20260421",
+      "context_tokens": 272000,
+      "pricing": {
+        "input_per_million": 8.0,
+        "output_per_million": 15.0,
+        "raw": {
+          "prompt": "0.000008",
+          "completion": "0.000015",
+          "image_output": "0.00003",
+          "web_search": "0.01",
+          "input_cache_read": "0.000002",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 100.0,
+        "uptime_30m": 100.0,
+        "uptime_1d": 99.99601799864612
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "frequency_penalty",
+          "include_reasoning",
+          "logit_bias",
+          "logprobs",
+          "max_tokens",
+          "presence_penalty",
+          "reasoning",
+          "reasoning_effort",
+          "response_format",
+          "seed",
+          "stop",
+          "structured_outputs",
+          "top_logprobs"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-09-18T08:15:47Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "openai/gpt-5.4-image-2",
+        "last_seen": "2026-09-18T08:15:47Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "openai/gpt-5.4-mini",
+      "model_slug": "openai/gpt-5.4-mini",
+      "provider_id": "azure",
+      "provider_name": "Azure",
+      "endpoint_id": "Azure | openai/gpt-5.4-mini-20260317",
+      "identity_key": "openai/gpt-5.4-mini:azure:Azure | openai/gpt-5.4-mini-20260317",
+      "context_tokens": 400000,
+      "pricing": {
+        "input_per_million": 0.75,
+        "output_per_million": 4.5,
+        "raw": {
+          "prompt": "0.00000075",
+          "completion": "0.0000045",
+          "web_search": "0.01",
+          "input_cache_read": "0.000000075",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 100.0,
+        "uptime_30m": 100.0,
+        "uptime_1d": 99.99167336533749
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "include_reasoning",
+          "max_completion_tokens",
+          "reasoning",
+          "reasoning_effort",
+          "response_format",
+          "seed",
+          "structured_outputs",
+          "tool_choice",
+          "tools"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-09-18T08:15:47Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "openai/gpt-5.4-mini",
+        "last_seen": "2026-09-18T08:15:47Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "openai/gpt-5.4-mini",
+      "model_slug": "openai/gpt-5.4-mini",
+      "provider_id": "azure/us",
+      "provider_name": "Azure",
+      "endpoint_id": "Azure | openai/gpt-5.4-mini-20260317",
+      "identity_key": "openai/gpt-5.4-mini:azure/us:Azure | openai/gpt-5.4-mini-20260317",
+      "context_tokens": 400000,
+      "pricing": {
+        "input_per_million": 0.8250000000000001,
+        "output_per_million": 4.95,
+        "raw": {
+          "prompt": "0.000000825",
+          "completion": "0.00000495",
+          "web_search": "0.01",
+          "input_cache_read": "0.0000000825",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": null,
+        "uptime_30m": null,
+        "uptime_1d": null
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "include_reasoning",
+          "max_completion_tokens",
+          "reasoning",
+          "reasoning_effort",
+          "response_format",
+          "seed",
+          "structured_outputs",
+          "tool_choice",
+          "tools"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-09-18T08:15:47Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "openai/gpt-5.4-mini",
+        "last_seen": "2026-09-18T08:15:47Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "openai/gpt-5.4-mini",
+      "model_slug": "openai/gpt-5.4-mini",
+      "provider_id": "openai",
+      "provider_name": "OpenAI",
+      "endpoint_id": "OpenAI | openai/gpt-5.4-mini-20260317",
+      "identity_key": "openai/gpt-5.4-mini:openai:OpenAI | openai/gpt-5.4-mini-20260317",
+      "context_tokens": 400000,
+      "pricing": {
+        "input_per_million": 0.75,
+        "output_per_million": 4.5,
+        "raw": {
+          "prompt": "0.00000075",
+          "completion": "0.0000045",
+          "web_search": "0.01",
+          "input_cache_read": "0.000000075",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 99.97963754836083,
+        "uptime_30m": 99.98184788527863,
+        "uptime_1d": 99.95405493803311
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "include_reasoning",
+          "max_tokens",
+          "reasoning",
+          "reasoning_effort",
+          "response_format",
+          "seed",
+          "structured_outputs",
+          "tool_choice",
+          "tools"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-09-18T08:15:47Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "openai/gpt-5.4-mini",
+        "last_seen": "2026-09-18T08:15:47Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "openai/gpt-5.4-mini",
+      "model_slug": "openai/gpt-5.4-mini",
+      "provider_id": "openai/fast",
+      "provider_name": "OpenAI",
+      "endpoint_id": "OpenAI | openai/gpt-5.4-mini-20260317",
+      "identity_key": "openai/gpt-5.4-mini:openai/fast:OpenAI | openai/gpt-5.4-mini-20260317",
+      "context_tokens": 400000,
+      "pricing": {
+        "input_per_million": 1.5,
+        "output_per_million": 9.0,
+        "raw": {
+          "prompt": "0.0000015",
+          "completion": "0.000009",
+          "web_search": "0.01",
+          "input_cache_read": "0.00000015",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 100.0,
+        "uptime_30m": null,
+        "uptime_1d": 99.92898988105804
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "include_reasoning",
+          "max_tokens",
+          "reasoning",
+          "reasoning_effort",
+          "response_format",
+          "seed",
+          "structured_outputs",
+          "tool_choice",
+          "tools"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-09-18T08:15:47Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "openai/gpt-5.4-mini",
+        "last_seen": "2026-09-18T08:15:47Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "openai/gpt-5.4-mini",
+      "model_slug": "openai/gpt-5.4-mini",
+      "provider_id": "openai/flex",
+      "provider_name": "OpenAI",
+      "endpoint_id": "OpenAI | openai/gpt-5.4-mini-20260317",
+      "identity_key": "openai/gpt-5.4-mini:openai/flex:OpenAI | openai/gpt-5.4-mini-20260317",
+      "context_tokens": 400000,
+      "pricing": {
+        "input_per_million": 0.375,
+        "output_per_million": 2.25,
+        "raw": {
+          "prompt": "0.000000375",
+          "completion": "0.00000225",
+          "web_search": "0.01",
+          "input_cache_read": "0.0000000375",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": null,
+        "uptime_30m": null,
+        "uptime_1d": 97.98657718120806
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "include_reasoning",
+          "max_tokens",
+          "reasoning",
+          "reasoning_effort",
+          "response_format",
+          "seed",
+          "structured_outputs",
+          "tool_choice",
+          "tools"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-09-18T08:15:47Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "openai/gpt-5.4-mini",
+        "last_seen": "2026-09-18T08:15:47Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "openai/gpt-5.4-mini:batch",
+      "model_slug": "openai/gpt-5.4-mini:batch",
+      "provider_id": "openai",
+      "provider_name": "OpenAI",
+      "endpoint_id": "OpenAI | openai/gpt-5.4-mini-20260317:batch",
+      "identity_key": "openai/gpt-5.4-mini:batch:openai:OpenAI | openai/gpt-5.4-mini-20260317:batch",
+      "context_tokens": 400000,
+      "pricing": {
+        "input_per_million": 0.375,
+        "output_per_million": 2.25,
+        "raw": {
+          "prompt": "0.000000375",
+          "completion": "0.00000225",
+          "web_search": "0.01",
+          "input_cache_read": "0.0000000375",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": null,
+        "uptime_30m": null,
+        "uptime_1d": null
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "include_reasoning",
+          "max_tokens",
+          "reasoning",
+          "reasoning_effort",
+          "response_format",
+          "seed",
+          "structured_outputs",
+          "tool_choice",
+          "tools"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-09-18T08:15:47Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "openai/gpt-5.4-mini:batch",
+        "last_seen": "2026-09-18T08:15:47Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "openai/gpt-5.4-nano",
+      "model_slug": "openai/gpt-5.4-nano",
+      "provider_id": "azure",
+      "provider_name": "Azure",
+      "endpoint_id": "Azure | openai/gpt-5.4-nano-20260317",
+      "identity_key": "openai/gpt-5.4-nano:azure:Azure | openai/gpt-5.4-nano-20260317",
+      "context_tokens": 400000,
+      "pricing": {
+        "input_per_million": 0.19999999999999998,
+        "output_per_million": 1.25,
+        "raw": {
+          "prompt": "0.0000002",
+          "completion": "0.00000125",
+          "web_search": "0.01",
+          "input_cache_read": "0.00000002",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 100.0,
+        "uptime_30m": 100.0,
+        "uptime_1d": 99.99402257293819
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "include_reasoning",
+          "max_completion_tokens",
+          "reasoning",
+          "reasoning_effort",
+          "response_format",
+          "seed",
+          "structured_outputs",
+          "tool_choice",
+          "tools"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-09-18T08:15:47Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "openai/gpt-5.4-nano",
+        "last_seen": "2026-09-18T08:15:47Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "openai/gpt-5.4-nano",
+      "model_slug": "openai/gpt-5.4-nano",
+      "provider_id": "azure/us",
+      "provider_name": "Azure",
+      "endpoint_id": "Azure | openai/gpt-5.4-nano-20260317",
+      "identity_key": "openai/gpt-5.4-nano:azure/us:Azure | openai/gpt-5.4-nano-20260317",
+      "context_tokens": 400000,
+      "pricing": {
+        "input_per_million": 0.22,
+        "output_per_million": 1.375,
+        "raw": {
+          "prompt": "0.00000022",
+          "completion": "0.000001375",
+          "web_search": "0.01",
+          "input_cache_read": "0.000000022",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": null,
+        "uptime_30m": null,
+        "uptime_1d": null
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "include_reasoning",
+          "max_completion_tokens",
+          "reasoning",
+          "reasoning_effort",
+          "response_format",
+          "seed",
+          "structured_outputs",
+          "tool_choice",
+          "tools"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-09-18T08:15:47Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "openai/gpt-5.4-nano",
+        "last_seen": "2026-09-18T08:15:47Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "openai/gpt-5.4-nano",
+      "model_slug": "openai/gpt-5.4-nano",
+      "provider_id": "openai",
+      "provider_name": "OpenAI",
+      "endpoint_id": "OpenAI | openai/gpt-5.4-nano-20260317",
+      "identity_key": "openai/gpt-5.4-nano:openai:OpenAI | openai/gpt-5.4-nano-20260317",
+      "context_tokens": 400000,
+      "pricing": {
+        "input_per_million": 0.19999999999999998,
+        "output_per_million": 1.25,
+        "raw": {
+          "prompt": "0.0000002",
+          "completion": "0.00000125",
+          "web_search": "0.01",
+          "input_cache_read": "0.00000002",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 100.0,
+        "uptime_30m": 99.99711532914094,
+        "uptime_1d": 99.98283749137808
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "include_reasoning",
+          "max_tokens",
+          "reasoning",
+          "reasoning_effort",
+          "response_format",
+          "seed",
+          "structured_outputs",
+          "tool_choice",
+          "tools"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-09-18T08:15:47Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "openai/gpt-5.4-nano",
+        "last_seen": "2026-09-18T08:15:47Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "openai/gpt-5.4-nano",
+      "model_slug": "openai/gpt-5.4-nano",
+      "provider_id": "openai/flex",
+      "provider_name": "OpenAI",
+      "endpoint_id": "OpenAI | openai/gpt-5.4-nano-20260317",
+      "identity_key": "openai/gpt-5.4-nano:openai/flex:OpenAI | openai/gpt-5.4-nano-20260317",
+      "context_tokens": 400000,
+      "pricing": {
+        "input_per_million": 0.09999999999999999,
+        "output_per_million": 0.625,
+        "raw": {
+          "prompt": "0.0000001",
+          "completion": "0.000000625",
+          "web_search": "0.01",
+          "input_cache_read": "0.00000001",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": null,
+        "uptime_30m": 100.0,
+        "uptime_1d": 100.0
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "include_reasoning",
+          "max_tokens",
+          "reasoning",
+          "reasoning_effort",
+          "response_format",
+          "seed",
+          "structured_outputs",
+          "tool_choice",
+          "tools"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-09-18T08:15:47Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "openai/gpt-5.4-nano",
+        "last_seen": "2026-09-18T08:15:47Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "openai/gpt-5.4-nano:batch",
+      "model_slug": "openai/gpt-5.4-nano:batch",
+      "provider_id": "openai",
+      "provider_name": "OpenAI",
+      "endpoint_id": "OpenAI | openai/gpt-5.4-nano-20260317:batch",
+      "identity_key": "openai/gpt-5.4-nano:batch:openai:OpenAI | openai/gpt-5.4-nano-20260317:batch",
+      "context_tokens": 400000,
+      "pricing": {
+        "input_per_million": 0.09999999999999999,
+        "output_per_million": 0.625,
+        "raw": {
+          "prompt": "0.0000001",
+          "completion": "0.000000625",
+          "web_search": "0.01",
+          "input_cache_read": "0.00000001",
+          "discount": 0
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": null,
+        "uptime_30m": null,
+        "uptime_1d": null
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "include_reasoning",
+          "max_tokens",
+          "reasoning",
+          "reasoning_effort",
+          "response_format",
+          "seed",
+          "structured_outputs",
+          "tool_choice",
+          "tools"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-09-18T08:15:47Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "openai/gpt-5.4-nano:batch",
+        "last_seen": "2026-09-18T08:15:47Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "openai/gpt-5.4-pro",
+      "model_slug": "openai/gpt-5.4-pro",
+      "provider_id": "azure",
+      "provider_name": "Azure",
+      "endpoint_id": "Azure | openai/gpt-5.4-pro-20260305",
+      "identity_key": "openai/gpt-5.4-pro:azure:Azure | openai/gpt-5.4-pro-20260305",
+      "context_tokens": 1050000,
+      "pricing": {
+        "input_per_million": 30.0,
+        "output_per_million": 180.0,
+        "raw": {
+          "prompt": "0.00003",
+          "completion": "0.00018",
+          "web_search": "0.01",
+          "discount": 0,
+          "overrides": [
+            {
+              "min_prompt_tokens": 272000,
+              "prompt": "0.00006",
+              "completion": "0.00027"
+            }
+          ]
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": null,
+        "uptime_30m": null,
+        "uptime_1d": null
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "include_reasoning",
+          "max_completion_tokens",
+          "reasoning",
+          "reasoning_effort",
+          "response_format",
+          "seed",
+          "structured_outputs",
+          "tool_choice",
+          "tools"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-09-18T08:15:47Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "openai/gpt-5.4-pro",
+        "last_seen": "2026-09-18T08:15:47Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "openai/gpt-5.4-pro",
+      "model_slug": "openai/gpt-5.4-pro",
+      "provider_id": "openai",
+      "provider_name": "OpenAI",
+      "endpoint_id": "OpenAI | openai/gpt-5.4-pro-20260305",
+      "identity_key": "openai/gpt-5.4-pro:openai:OpenAI | openai/gpt-5.4-pro-20260305",
+      "context_tokens": 1050000,
+      "pricing": {
+        "input_per_million": 30.0,
+        "output_per_million": 180.0,
+        "raw": {
+          "prompt": "0.00003",
+          "completion": "0.00018",
+          "web_search": "0.01",
+          "discount": 0,
+          "overrides": [
+            {
+              "min_prompt_tokens": 272000,
+              "prompt": "0.00006",
+              "completion": "0.00027"
+            }
+          ]
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": null,
+        "uptime_30m": null,
+        "uptime_1d": 100.0
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "include_reasoning",
+          "max_tokens",
+          "reasoning",
+          "reasoning_effort",
+          "response_format",
+          "seed",
+          "structured_outputs",
+          "tool_choice",
+          "tools"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-09-18T08:15:47Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "openai/gpt-5.4-pro",
+        "last_seen": "2026-09-18T08:15:47Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "openai/gpt-5.4-pro",
+      "model_slug": "openai/gpt-5.4-pro",
+      "provider_id": "openai/flex",
+      "provider_name": "OpenAI",
+      "endpoint_id": "OpenAI | openai/gpt-5.4-pro-20260305",
+      "identity_key": "openai/gpt-5.4-pro:openai/flex:OpenAI | openai/gpt-5.4-pro-20260305",
+      "context_tokens": 1050000,
+      "pricing": {
+        "input_per_million": 15.0,
+        "output_per_million": 90.0,
+        "raw": {
+          "prompt": "0.000015",
+          "completion": "0.00009",
+          "web_search": "0.01",
+          "discount": 0,
+          "overrides": [
+            {
+              "min_prompt_tokens": 272000,
+              "prompt": "0.00003",
+              "completion": "0.000135"
+            }
+          ]
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": null,
+        "uptime_30m": null,
+        "uptime_1d": null
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "include_reasoning",
+          "max_tokens",
+          "reasoning",
+          "reasoning_effort",
+          "response_format",
+          "seed",
+          "structured_outputs",
+          "tool_choice",
+          "tools"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-09-18T08:15:47Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "openai/gpt-5.4-pro",
+        "last_seen": "2026-09-18T08:15:47Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "openai/gpt-5.4-pro:batch",
+      "model_slug": "openai/gpt-5.4-pro:batch",
+      "provider_id": "openai",
+      "provider_name": "OpenAI",
+      "endpoint_id": "OpenAI | openai/gpt-5.4-pro-20260305:batch",
+      "identity_key": "openai/gpt-5.4-pro:batch:openai:OpenAI | openai/gpt-5.4-pro-20260305:batch",
+      "context_tokens": 1050000,
+      "pricing": {
+        "input_per_million": 15.0,
+        "output_per_million": 90.0,
+        "raw": {
+          "prompt": "0.000015",
+          "completion": "0.00009",
+          "web_search": "0.01",
+          "discount": 0,
+          "overrides": [
+            {
+              "min_prompt_tokens": 272000,
+              "prompt": "0.00003",
+              "completion": "0.000135"
+            }
+          ]
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": null,
+        "uptime_30m": null,
+        "uptime_1d": null
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "include_reasoning",
+          "max_tokens",
+          "reasoning",
+          "reasoning_effort",
+          "response_format",
+          "seed",
+          "structured_outputs",
+          "tool_choice",
+          "tools"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-09-18T08:15:47Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "openai/gpt-5.4-pro:batch",
+        "last_seen": "2026-09-18T08:15:47Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "openai/gpt-5.4:batch",
+      "model_slug": "openai/gpt-5.4:batch",
+      "provider_id": "openai",
+      "provider_name": "OpenAI",
+      "endpoint_id": "OpenAI | openai/gpt-5.4-20260305:batch",
+      "identity_key": "openai/gpt-5.4:batch:openai:OpenAI | openai/gpt-5.4-20260305:batch",
+      "context_tokens": 1050000,
+      "pricing": {
+        "input_per_million": 1.25,
+        "output_per_million": 7.5,
+        "raw": {
+          "prompt": "0.00000125",
+          "completion": "0.0000075",
+          "web_search": "0.01",
+          "input_cache_read": "0.000000125",
+          "discount": 0,
+          "overrides": [
+            {
+              "min_prompt_tokens": 272000,
+              "prompt": "0.0000025",
+              "completion": "0.00001125",
+              "input_cache_read": "0.00000025"
+            }
+          ]
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": null,
+        "uptime_30m": null,
+        "uptime_1d": null
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "include_reasoning",
+          "max_tokens",
+          "reasoning",
+          "reasoning_effort",
+          "response_format",
+          "seed",
+          "structured_outputs",
+          "tool_choice",
+          "tools"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-09-18T08:15:47Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "openai/gpt-5.4:batch",
+        "last_seen": "2026-09-18T08:15:47Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "openai/gpt-5.5",
+      "model_slug": "openai/gpt-5.5",
+      "provider_id": "amazon-bedrock/us-east-1",
+      "provider_name": "Amazon Bedrock",
+      "endpoint_id": "Amazon Bedrock | openai/gpt-5.5-20260423",
+      "identity_key": "openai/gpt-5.5:amazon-bedrock/us-east-1:Amazon Bedrock | openai/gpt-5.5-20260423",
+      "context_tokens": 1050000,
+      "pricing": {
+        "input_per_million": 5.5,
+        "output_per_million": 33.0,
+        "raw": {
+          "prompt": "0.0000055",
+          "completion": "0.000033",
+          "web_search": "0.01",
+          "input_cache_read": "0.00000055",
+          "discount": 0,
+          "overrides": [
+            {
+              "min_prompt_tokens": 272000,
+              "prompt": "0.000011",
+              "completion": "0.0000495",
+              "input_cache_read": "0.0000011"
+            }
+          ]
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": null,
+        "uptime_30m": null,
+        "uptime_1d": null
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "include_reasoning",
+          "max_tokens",
+          "reasoning",
+          "reasoning_effort",
+          "tool_choice",
+          "tools"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-09-18T08:15:47Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "openai/gpt-5.5",
+        "last_seen": "2026-09-18T08:15:47Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "openai/gpt-5.5",
+      "model_slug": "openai/gpt-5.5",
+      "provider_id": "azure",
+      "provider_name": "Azure",
+      "endpoint_id": "Azure | openai/gpt-5.5-20260423",
+      "identity_key": "openai/gpt-5.5:azure:Azure | openai/gpt-5.5-20260423",
+      "context_tokens": 1050000,
+      "pricing": {
+        "input_per_million": 5.0,
+        "output_per_million": 30.0,
+        "raw": {
+          "prompt": "0.000005",
+          "completion": "0.00003",
+          "web_search": "0.01",
+          "input_cache_read": "0.0000005",
+          "discount": 0,
+          "overrides": [
+            {
+              "min_prompt_tokens": 272000,
+              "prompt": "0.00001",
+              "completion": "0.000045",
+              "input_cache_read": "0.000001"
+            }
+          ]
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 100.0,
+        "uptime_30m": 99.6779388083736,
+        "uptime_1d": 99.99507185239213
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "include_reasoning",
+          "max_completion_tokens",
+          "reasoning",
+          "reasoning_effort",
+          "response_format",
+          "seed",
+          "structured_outputs",
+          "tool_choice",
+          "tools"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-09-18T08:15:47Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "openai/gpt-5.5",
+        "last_seen": "2026-09-18T08:15:47Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "openai/gpt-5.5",
+      "model_slug": "openai/gpt-5.5",
+      "provider_id": "azure/eu",
+      "provider_name": "Azure",
+      "endpoint_id": "Azure | openai/gpt-5.5-20260423",
+      "identity_key": "openai/gpt-5.5:azure/eu:Azure | openai/gpt-5.5-20260423",
+      "context_tokens": 1050000,
+      "pricing": {
+        "input_per_million": 5.5,
+        "output_per_million": 33.0,
+        "raw": {
+          "prompt": "0.0000055",
+          "completion": "0.000033",
+          "web_search": "0.01",
+          "input_cache_read": "0.00000055",
+          "discount": 0,
+          "overrides": [
+            {
+              "min_prompt_tokens": 272000,
+              "prompt": "0.000011",
+              "completion": "0.0000495",
+              "input_cache_read": "0.0000011"
+            }
+          ]
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": null,
+        "uptime_30m": null,
+        "uptime_1d": 100.0
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "include_reasoning",
+          "max_completion_tokens",
+          "reasoning",
+          "reasoning_effort",
+          "response_format",
+          "seed",
+          "structured_outputs",
+          "tool_choice",
+          "tools"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-09-18T08:15:47Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "openai/gpt-5.5",
+        "last_seen": "2026-09-18T08:15:47Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "openai/gpt-5.5",
+      "model_slug": "openai/gpt-5.5",
+      "provider_id": "azure/us",
+      "provider_name": "Azure",
+      "endpoint_id": "Azure | openai/gpt-5.5-20260423",
+      "identity_key": "openai/gpt-5.5:azure/us:Azure | openai/gpt-5.5-20260423",
+      "context_tokens": 1050000,
+      "pricing": {
+        "input_per_million": 5.5,
+        "output_per_million": 33.0,
+        "raw": {
+          "prompt": "0.0000055",
+          "completion": "0.000033",
+          "web_search": "0.01",
+          "input_cache_read": "0.00000055",
+          "discount": 0,
+          "overrides": [
+            {
+              "min_prompt_tokens": 272000,
+              "prompt": "0.000011",
+              "completion": "0.0000495",
+              "input_cache_read": "0.0000011"
+            }
+          ]
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": null,
+        "uptime_30m": null,
+        "uptime_1d": 100.0
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "include_reasoning",
+          "max_completion_tokens",
+          "reasoning",
+          "reasoning_effort",
+          "response_format",
+          "seed",
+          "structured_outputs",
+          "tool_choice",
+          "tools"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-09-18T08:15:47Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "openai/gpt-5.5",
+        "last_seen": "2026-09-18T08:15:47Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "openai/gpt-5.5",
+      "model_slug": "openai/gpt-5.5",
+      "provider_id": "openai",
+      "provider_name": "OpenAI",
+      "endpoint_id": "OpenAI | openai/gpt-5.5-20260423",
+      "identity_key": "openai/gpt-5.5:openai:OpenAI | openai/gpt-5.5-20260423",
+      "context_tokens": 1050000,
+      "pricing": {
+        "input_per_million": 5.0,
+        "output_per_million": 30.0,
+        "raw": {
+          "prompt": "0.000005",
+          "completion": "0.00003",
+          "web_search": "0.01",
+          "input_cache_read": "0.0000005",
+          "discount": 0,
+          "overrides": [
+            {
+              "min_prompt_tokens": 272000,
+              "prompt": "0.00001",
+              "completion": "0.000045",
+              "input_cache_read": "0.000001"
+            }
+          ]
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 100.0,
+        "uptime_30m": 99.98529195469922,
+        "uptime_1d": 99.96777250667081
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "include_reasoning",
+          "max_tokens",
+          "reasoning",
+          "reasoning_effort",
+          "response_format",
+          "seed",
+          "structured_outputs",
+          "tool_choice",
+          "tools"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-09-18T08:15:47Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "openai/gpt-5.5",
+        "last_seen": "2026-09-18T08:15:47Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "openai/gpt-5.5",
+      "model_slug": "openai/gpt-5.5",
+      "provider_id": "openai/fast",
+      "provider_name": "OpenAI",
+      "endpoint_id": "OpenAI | openai/gpt-5.5-20260423",
+      "identity_key": "openai/gpt-5.5:openai/fast:OpenAI | openai/gpt-5.5-20260423",
+      "context_tokens": 1050000,
+      "pricing": {
+        "input_per_million": 12.5,
+        "output_per_million": 75.0,
+        "raw": {
+          "prompt": "0.0000125",
+          "completion": "0.000075",
+          "web_search": "0.01",
+          "input_cache_read": "0.00000125",
+          "discount": 0,
+          "overrides": [
+            {
+              "min_prompt_tokens": 272000,
+              "prompt": "0.000025",
+              "completion": "0.0001125",
+              "input_cache_read": "0.0000025"
+            }
+          ]
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": null,
+        "uptime_30m": null,
+        "uptime_1d": 100.0
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "include_reasoning",
+          "max_tokens",
+          "reasoning",
+          "reasoning_effort",
+          "response_format",
+          "seed",
+          "structured_outputs",
+          "tool_choice",
+          "tools"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-09-18T08:15:47Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "openai/gpt-5.5",
+        "last_seen": "2026-09-18T08:15:47Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "openai/gpt-5.5",
+      "model_slug": "openai/gpt-5.5",
+      "provider_id": "openai/flex",
+      "provider_name": "OpenAI",
+      "endpoint_id": "OpenAI | openai/gpt-5.5-20260423",
+      "identity_key": "openai/gpt-5.5:openai/flex:OpenAI | openai/gpt-5.5-20260423",
+      "context_tokens": 1050000,
+      "pricing": {
+        "input_per_million": 2.5,
+        "output_per_million": 15.0,
+        "raw": {
+          "prompt": "0.0000025",
+          "completion": "0.000015",
+          "web_search": "0.01",
+          "input_cache_read": "0.00000025",
+          "discount": 0,
+          "overrides": [
+            {
+              "min_prompt_tokens": 272000,
+              "prompt": "0.000005",
+              "completion": "0.0000225",
+              "input_cache_read": "0.0000005"
+            }
+          ]
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": null,
+        "uptime_30m": null,
+        "uptime_1d": 100.0
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "include_reasoning",
+          "max_tokens",
+          "reasoning",
+          "reasoning_effort",
+          "response_format",
+          "seed",
+          "structured_outputs",
+          "tool_choice",
+          "tools"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-09-18T08:15:47Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "openai/gpt-5.5",
+        "last_seen": "2026-09-18T08:15:47Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "openai/gpt-5.5-pro",
+      "model_slug": "openai/gpt-5.5-pro",
+      "provider_id": "openai",
+      "provider_name": "OpenAI",
+      "endpoint_id": "OpenAI | openai/gpt-5.5-pro-20260423",
+      "identity_key": "openai/gpt-5.5-pro:openai:OpenAI | openai/gpt-5.5-pro-20260423",
+      "context_tokens": 1050000,
+      "pricing": {
+        "input_per_million": 30.0,
+        "output_per_million": 180.0,
+        "raw": {
+          "prompt": "0.00003",
+          "completion": "0.00018",
+          "web_search": "0.01",
+          "discount": 0,
+          "overrides": [
+            {
+              "min_prompt_tokens": 272000,
+              "prompt": "0.00006",
+              "completion": "0.00027"
+            }
+          ]
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 100.0,
+        "uptime_30m": 100.0,
+        "uptime_1d": 100.0
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "include_reasoning",
+          "max_tokens",
+          "reasoning",
+          "reasoning_effort",
+          "response_format",
+          "seed",
+          "structured_outputs",
+          "tool_choice",
+          "tools"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-09-18T08:15:47Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "openai/gpt-5.5-pro",
+        "last_seen": "2026-09-18T08:15:47Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "openai/gpt-5.5-pro",
+      "model_slug": "openai/gpt-5.5-pro",
+      "provider_id": "openai/flex",
+      "provider_name": "OpenAI",
+      "endpoint_id": "OpenAI | openai/gpt-5.5-pro-20260423",
+      "identity_key": "openai/gpt-5.5-pro:openai/flex:OpenAI | openai/gpt-5.5-pro-20260423",
+      "context_tokens": 1050000,
+      "pricing": {
+        "input_per_million": 15.0,
+        "output_per_million": 90.0,
+        "raw": {
+          "prompt": "0.000015",
+          "completion": "0.00009",
+          "web_search": "0.01",
+          "discount": 0,
+          "overrides": [
+            {
+              "min_prompt_tokens": 272000,
+              "prompt": "0.00003",
+              "completion": "0.000135"
+            }
+          ]
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": null,
+        "uptime_30m": null,
+        "uptime_1d": null
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "include_reasoning",
+          "max_tokens",
+          "reasoning",
+          "reasoning_effort",
+          "response_format",
+          "seed",
+          "structured_outputs",
+          "tool_choice",
+          "tools"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-09-18T08:15:47Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "openai/gpt-5.5-pro",
+        "last_seen": "2026-09-18T08:15:47Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "openai/gpt-5.5-pro:batch",
+      "model_slug": "openai/gpt-5.5-pro:batch",
+      "provider_id": "openai",
+      "provider_name": "OpenAI",
+      "endpoint_id": "OpenAI | openai/gpt-5.5-pro-20260423:batch",
+      "identity_key": "openai/gpt-5.5-pro:batch:openai:OpenAI | openai/gpt-5.5-pro-20260423:batch",
+      "context_tokens": 1050000,
+      "pricing": {
+        "input_per_million": 15.0,
+        "output_per_million": 90.0,
+        "raw": {
+          "prompt": "0.000015",
+          "completion": "0.00009",
+          "web_search": "0.01",
+          "discount": 0,
+          "overrides": [
+            {
+              "min_prompt_tokens": 272000,
+              "prompt": "0.00003",
+              "completion": "0.000135"
+            }
+          ]
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": null,
+        "uptime_30m": null,
+        "uptime_1d": null
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "include_reasoning",
+          "max_tokens",
+          "reasoning",
+          "reasoning_effort",
+          "response_format",
+          "seed",
+          "structured_outputs",
+          "tool_choice",
+          "tools"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-09-18T08:15:47Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "openai/gpt-5.5-pro:batch",
+        "last_seen": "2026-09-18T08:15:47Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "openai/gpt-5.5:batch",
+      "model_slug": "openai/gpt-5.5:batch",
+      "provider_id": "openai",
+      "provider_name": "OpenAI",
+      "endpoint_id": "OpenAI | openai/gpt-5.5-20260423:batch",
+      "identity_key": "openai/gpt-5.5:batch:openai:OpenAI | openai/gpt-5.5-20260423:batch",
+      "context_tokens": 1050000,
+      "pricing": {
+        "input_per_million": 2.5,
+        "output_per_million": 15.0,
+        "raw": {
+          "prompt": "0.0000025",
+          "completion": "0.000015",
+          "web_search": "0.01",
+          "input_cache_read": "0.00000025",
+          "discount": 0,
+          "overrides": [
+            {
+              "min_prompt_tokens": 272000,
+              "prompt": "0.000005",
+              "completion": "0.0000225",
+              "input_cache_read": "0.0000005"
+            }
+          ]
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": null,
+        "uptime_30m": null,
+        "uptime_1d": null
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "include_reasoning",
+          "max_tokens",
+          "reasoning",
+          "reasoning_effort",
+          "response_format",
+          "seed",
+          "structured_outputs",
+          "tool_choice",
+          "tools"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-09-18T08:15:47Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "openai/gpt-5.5:batch",
+        "last_seen": "2026-09-18T08:15:47Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "openai/gpt-5.6-luna",
+      "model_slug": "openai/gpt-5.6-luna",
+      "provider_id": "amazon-bedrock/us-east-1",
+      "provider_name": "Amazon Bedrock",
+      "endpoint_id": "Amazon Bedrock | openai/gpt-5.6-luna-20260709",
+      "identity_key": "openai/gpt-5.6-luna:amazon-bedrock/us-east-1:Amazon Bedrock | openai/gpt-5.6-luna-20260709",
+      "context_tokens": 1050000,
+      "pricing": {
+        "input_per_million": 0.22,
+        "output_per_million": 1.32,
+        "raw": {
+          "prompt": "0.00000022",
+          "completion": "0.00000132",
+          "web_search": "0.01",
+          "input_cache_read": "0.000000022",
+          "input_cache_write": "0.000000275",
+          "discount": 0,
+          "overrides": [
+            {
+              "min_prompt_tokens": 272000,
+              "prompt": "0.00000044",
+              "completion": "0.00000198",
+              "input_cache_read": "0.000000044",
+              "input_cache_write": "0.00000055"
+            }
+          ]
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 100.0,
+        "uptime_30m": 99.85096870342772,
+        "uptime_1d": 99.99232009830274
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "include_reasoning",
+          "max_tokens",
+          "reasoning",
+          "reasoning_effort",
+          "tool_choice",
+          "tools"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-09-18T08:15:47Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "openai/gpt-5.6-luna",
+        "last_seen": "2026-09-18T08:15:47Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "openai/gpt-5.6-luna",
+      "model_slug": "openai/gpt-5.6-luna",
+      "provider_id": "azure",
+      "provider_name": "Azure",
+      "endpoint_id": "Azure | openai/gpt-5.6-luna-20260709",
+      "identity_key": "openai/gpt-5.6-luna:azure:Azure | openai/gpt-5.6-luna-20260709",
+      "context_tokens": 1050000,
+      "pricing": {
+        "input_per_million": 0.19999999999999998,
+        "output_per_million": 1.2,
+        "raw": {
+          "prompt": "0.0000002",
+          "completion": "0.0000012",
+          "web_search": "0.01",
+          "input_cache_read": "0.00000002",
+          "input_cache_write": "0.00000025",
+          "discount": 0,
+          "overrides": [
+            {
+              "min_prompt_tokens": 272000,
+              "prompt": "0.0000004",
+              "completion": "0.0000018",
+              "input_cache_read": "0.00000004",
+              "input_cache_write": "0.0000005"
+            }
+          ]
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "unavailable",
+        "uptime_5m": 90.68002428658166,
+        "uptime_30m": 90.34017971758665,
+        "uptime_1d": 88.79601062233561
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "include_reasoning",
+          "max_completion_tokens",
+          "reasoning",
+          "reasoning_effort",
+          "response_format",
+          "seed",
+          "structured_outputs",
+          "tool_choice",
+          "tools"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-09-18T08:15:47Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "openai/gpt-5.6-luna",
+        "last_seen": "2026-09-18T08:15:47Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "openai/gpt-5.6-luna",
+      "model_slug": "openai/gpt-5.6-luna",
+      "provider_id": "azure/eu",
+      "provider_name": "Azure",
+      "endpoint_id": "Azure | openai/gpt-5.6-luna-20260709",
+      "identity_key": "openai/gpt-5.6-luna:azure/eu:Azure | openai/gpt-5.6-luna-20260709",
+      "context_tokens": 1050000,
+      "pricing": {
+        "input_per_million": 0.22,
+        "output_per_million": 1.32,
+        "raw": {
+          "prompt": "0.00000022",
+          "completion": "0.00000132",
+          "web_search": "0.01",
+          "input_cache_read": "0.000000022",
+          "input_cache_write": "0.000000275",
+          "discount": 0,
+          "overrides": [
+            {
+              "min_prompt_tokens": 272000,
+              "prompt": "0.00000044",
+              "completion": "0.00000198",
+              "input_cache_read": "0.000000044",
+              "input_cache_write": "0.00000055"
+            }
+          ]
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 99.31305201177625,
+        "uptime_30m": 99.39955619370839,
+        "uptime_1d": 98.33427278522022
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "include_reasoning",
+          "max_completion_tokens",
+          "reasoning",
+          "reasoning_effort",
+          "response_format",
+          "seed",
+          "structured_outputs",
+          "tool_choice",
+          "tools"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-09-18T08:15:47Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "openai/gpt-5.6-luna",
+        "last_seen": "2026-09-18T08:15:47Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "openai/gpt-5.6-luna",
+      "model_slug": "openai/gpt-5.6-luna",
+      "provider_id": "azure/us",
+      "provider_name": "Azure",
+      "endpoint_id": "Azure | openai/gpt-5.6-luna-20260709",
+      "identity_key": "openai/gpt-5.6-luna:azure/us:Azure | openai/gpt-5.6-luna-20260709",
+      "context_tokens": 1050000,
+      "pricing": {
+        "input_per_million": 0.22,
+        "output_per_million": 1.32,
+        "raw": {
+          "prompt": "0.00000022",
+          "completion": "0.00000132",
+          "web_search": "0.01",
+          "input_cache_read": "0.000000022",
+          "input_cache_write": "0.000000275",
+          "discount": 0,
+          "overrides": [
+            {
+              "min_prompt_tokens": 272000,
+              "prompt": "0.00000044",
+              "completion": "0.00000198",
+              "input_cache_read": "0.000000044",
+              "input_cache_write": "0.00000055"
+            }
+          ]
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 100.0,
+        "uptime_30m": 100.0,
+        "uptime_1d": 99.99453402569007
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "include_reasoning",
+          "max_completion_tokens",
+          "reasoning",
+          "reasoning_effort",
+          "response_format",
+          "seed",
+          "structured_outputs",
+          "tool_choice",
+          "tools"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-09-18T08:15:47Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "openai/gpt-5.6-luna",
+        "last_seen": "2026-09-18T08:15:47Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "openai/gpt-5.6-luna",
+      "model_slug": "openai/gpt-5.6-luna",
+      "provider_id": "openai",
+      "provider_name": "OpenAI",
+      "endpoint_id": "OpenAI | openai/gpt-5.6-luna-20260709",
+      "identity_key": "openai/gpt-5.6-luna:openai:OpenAI | openai/gpt-5.6-luna-20260709",
+      "context_tokens": 1050000,
+      "pricing": {
+        "input_per_million": 0.19999999999999998,
+        "output_per_million": 1.2,
+        "raw": {
+          "prompt": "0.0000002",
+          "completion": "0.0000012",
+          "web_search": "0.01",
+          "input_cache_read": "0.00000002",
+          "input_cache_write": "0.00000025",
+          "discount": 0,
+          "overrides": [
+            {
+              "min_prompt_tokens": 272000,
+              "prompt": "0.0000004",
+              "completion": "0.0000018",
+              "input_cache_read": "0.00000004",
+              "input_cache_write": "0.0000005"
+            }
+          ]
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 99.9956377595533,
+        "uptime_30m": 99.99681468472811,
+        "uptime_1d": 99.98940772586666
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "include_reasoning",
+          "max_tokens",
+          "reasoning",
+          "reasoning_effort",
+          "response_format",
+          "seed",
+          "structured_outputs",
+          "tool_choice",
+          "tools"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-09-18T08:15:47Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "openai/gpt-5.6-luna",
+        "last_seen": "2026-09-18T08:15:47Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "openai/gpt-5.6-luna",
+      "model_slug": "openai/gpt-5.6-luna",
+      "provider_id": "openai/fast",
+      "provider_name": "OpenAI",
+      "endpoint_id": "OpenAI | openai/gpt-5.6-luna-20260709",
+      "identity_key": "openai/gpt-5.6-luna:openai/fast:OpenAI | openai/gpt-5.6-luna-20260709",
+      "context_tokens": 1050000,
+      "pricing": {
+        "input_per_million": 0.39999999999999997,
+        "output_per_million": 2.4,
+        "raw": {
+          "prompt": "0.0000004",
+          "completion": "0.0000024",
+          "web_search": "0.01",
+          "input_cache_read": "0.00000004",
+          "input_cache_write": "0.0000005",
+          "discount": 0,
+          "overrides": [
+            {
+              "min_prompt_tokens": 272000,
+              "prompt": "0.0000008",
+              "completion": "0.0000036",
+              "input_cache_read": "0.00000008",
+              "input_cache_write": "0.000001"
+            }
+          ]
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 100.0,
+        "uptime_30m": 100.0,
+        "uptime_1d": 99.99176476508993
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "include_reasoning",
+          "max_tokens",
+          "reasoning",
+          "reasoning_effort",
+          "response_format",
+          "seed",
+          "structured_outputs",
+          "tool_choice",
+          "tools"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-09-18T08:15:47Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "openai/gpt-5.6-luna",
+        "last_seen": "2026-09-18T08:15:47Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "openai/gpt-5.6-luna",
+      "model_slug": "openai/gpt-5.6-luna",
+      "provider_id": "openai/flex",
+      "provider_name": "OpenAI",
+      "endpoint_id": "OpenAI | openai/gpt-5.6-luna-20260709",
+      "identity_key": "openai/gpt-5.6-luna:openai/flex:OpenAI | openai/gpt-5.6-luna-20260709",
+      "context_tokens": 1050000,
+      "pricing": {
+        "input_per_million": 0.09999999999999999,
+        "output_per_million": 0.6,
+        "raw": {
+          "prompt": "0.0000001",
+          "completion": "0.0000006",
+          "web_search": "0.01",
+          "input_cache_read": "0.00000001",
+          "input_cache_write": "0.000000125",
+          "discount": 0,
+          "overrides": [
+            {
+              "min_prompt_tokens": 272000,
+              "prompt": "0.0000002",
+              "completion": "0.0000009",
+              "input_cache_read": "0.00000002",
+              "input_cache_write": "0.00000025"
+            }
+          ]
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 100.0,
+        "uptime_30m": 99.99550915010666,
+        "uptime_1d": 99.9425212034974
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "include_reasoning",
+          "max_tokens",
+          "reasoning",
+          "reasoning_effort",
+          "response_format",
+          "seed",
+          "structured_outputs",
+          "tool_choice",
+          "tools"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-09-18T08:15:47Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "openai/gpt-5.6-luna",
+        "last_seen": "2026-09-18T08:15:47Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "openai/gpt-5.6-luna-pro",
+      "model_slug": "openai/gpt-5.6-luna-pro",
+      "provider_id": "azure",
+      "provider_name": "Azure",
+      "endpoint_id": "Azure | openai/gpt-5.6-luna-pro-20260709",
+      "identity_key": "openai/gpt-5.6-luna-pro:azure:Azure | openai/gpt-5.6-luna-pro-20260709",
+      "context_tokens": 1050000,
+      "pricing": {
+        "input_per_million": 0.19999999999999998,
+        "output_per_million": 1.2,
+        "raw": {
+          "prompt": "0.0000002",
+          "completion": "0.0000012",
+          "web_search": "0.01",
+          "input_cache_read": "0.00000002",
+          "input_cache_write": "0.00000025",
+          "discount": 0,
+          "overrides": [
+            {
+              "min_prompt_tokens": 272000,
+              "prompt": "0.0000004",
+              "completion": "0.0000018",
+              "input_cache_read": "0.00000004",
+              "input_cache_write": "0.0000005"
+            }
+          ]
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "unavailable",
+        "uptime_5m": null,
+        "uptime_30m": 53.398058252427184,
+        "uptime_1d": 87.1111111111111
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "include_reasoning",
+          "max_completion_tokens",
+          "reasoning",
+          "reasoning_effort",
+          "response_format",
+          "seed",
+          "structured_outputs",
+          "tool_choice",
+          "tools"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-09-18T08:15:47Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "openai/gpt-5.6-luna-pro",
+        "last_seen": "2026-09-18T08:15:47Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "openai/gpt-5.6-luna-pro",
+      "model_slug": "openai/gpt-5.6-luna-pro",
+      "provider_id": "azure/eu",
+      "provider_name": "Azure",
+      "endpoint_id": "Azure | openai/gpt-5.6-luna-pro-20260709",
+      "identity_key": "openai/gpt-5.6-luna-pro:azure/eu:Azure | openai/gpt-5.6-luna-pro-20260709",
+      "context_tokens": 1050000,
+      "pricing": {
+        "input_per_million": 0.22,
+        "output_per_million": 1.32,
+        "raw": {
+          "prompt": "0.00000022",
+          "completion": "0.00000132",
+          "web_search": "0.01",
+          "input_cache_read": "0.000000022",
+          "input_cache_write": "0.000000275",
+          "discount": 0,
+          "overrides": [
+            {
+              "min_prompt_tokens": 272000,
+              "prompt": "0.00000044",
+              "completion": "0.00000198",
+              "input_cache_read": "0.000000044",
+              "input_cache_write": "0.00000055"
+            }
+          ]
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": null,
+        "uptime_30m": null,
+        "uptime_1d": 99.9168744804655
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "include_reasoning",
+          "max_completion_tokens",
+          "reasoning",
+          "reasoning_effort",
+          "response_format",
+          "seed",
+          "structured_outputs",
+          "tool_choice",
+          "tools"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-09-18T08:15:47Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "openai/gpt-5.6-luna-pro",
+        "last_seen": "2026-09-18T08:15:47Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "openai/gpt-5.6-luna-pro",
+      "model_slug": "openai/gpt-5.6-luna-pro",
+      "provider_id": "openai",
+      "provider_name": "OpenAI",
+      "endpoint_id": "OpenAI | openai/gpt-5.6-luna-pro-20260709",
+      "identity_key": "openai/gpt-5.6-luna-pro:openai:OpenAI | openai/gpt-5.6-luna-pro-20260709",
+      "context_tokens": 1050000,
+      "pricing": {
+        "input_per_million": 0.19999999999999998,
+        "output_per_million": 1.2,
+        "raw": {
+          "prompt": "0.0000002",
+          "completion": "0.0000012",
+          "web_search": "0.01",
+          "input_cache_read": "0.00000002",
+          "input_cache_write": "0.00000025",
+          "discount": 0,
+          "overrides": [
+            {
+              "min_prompt_tokens": 272000,
+              "prompt": "0.0000004",
+              "completion": "0.0000018",
+              "input_cache_read": "0.00000004",
+              "input_cache_write": "0.0000005"
+            }
+          ]
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 100.0,
+        "uptime_30m": 100.0,
+        "uptime_1d": 99.97445023247033
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "include_reasoning",
+          "max_tokens",
+          "reasoning",
+          "reasoning_effort",
+          "response_format",
+          "seed",
+          "structured_outputs",
+          "tool_choice",
+          "tools"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-09-18T08:15:47Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "openai/gpt-5.6-luna-pro",
+        "last_seen": "2026-09-18T08:15:47Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "openai/gpt-5.6-luna-pro",
+      "model_slug": "openai/gpt-5.6-luna-pro",
+      "provider_id": "openai/fast",
+      "provider_name": "OpenAI",
+      "endpoint_id": "OpenAI | openai/gpt-5.6-luna-pro-20260709",
+      "identity_key": "openai/gpt-5.6-luna-pro:openai/fast:OpenAI | openai/gpt-5.6-luna-pro-20260709",
+      "context_tokens": 1050000,
+      "pricing": {
+        "input_per_million": 0.39999999999999997,
+        "output_per_million": 2.4,
+        "raw": {
+          "prompt": "0.0000004",
+          "completion": "0.0000024",
+          "web_search": "0.01",
+          "input_cache_read": "0.00000004",
+          "input_cache_write": "0.0000005",
+          "discount": 0,
+          "overrides": [
+            {
+              "min_prompt_tokens": 272000,
+              "prompt": "0.0000008",
+              "completion": "0.0000036",
+              "input_cache_read": "0.00000008",
+              "input_cache_write": "0.000001"
+            }
+          ]
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 100.0,
+        "uptime_30m": 100.0,
+        "uptime_1d": 99.96787406634006
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "include_reasoning",
+          "max_tokens",
+          "reasoning",
+          "reasoning_effort",
+          "response_format",
+          "seed",
+          "structured_outputs",
+          "tool_choice",
+          "tools"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-09-18T08:15:47Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "openai/gpt-5.6-luna-pro",
+        "last_seen": "2026-09-18T08:15:47Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "openai/gpt-5.6-luna-pro",
+      "model_slug": "openai/gpt-5.6-luna-pro",
+      "provider_id": "openai/flex",
+      "provider_name": "OpenAI",
+      "endpoint_id": "OpenAI | openai/gpt-5.6-luna-pro-20260709",
+      "identity_key": "openai/gpt-5.6-luna-pro:openai/flex:OpenAI | openai/gpt-5.6-luna-pro-20260709",
+      "context_tokens": 1050000,
+      "pricing": {
+        "input_per_million": 0.09999999999999999,
+        "output_per_million": 0.6,
+        "raw": {
+          "prompt": "0.0000001",
+          "completion": "0.0000006",
+          "web_search": "0.01",
+          "input_cache_read": "0.00000001",
+          "input_cache_write": "0.000000125",
+          "discount": 0,
+          "overrides": [
+            {
+              "min_prompt_tokens": 272000,
+              "prompt": "0.0000002",
+              "completion": "0.0000009",
+              "input_cache_read": "0.00000002",
+              "input_cache_write": "0.00000025"
+            }
+          ]
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 100.0,
+        "uptime_30m": 100.0,
+        "uptime_1d": 99.9985851125543
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "include_reasoning",
+          "max_tokens",
+          "reasoning",
+          "reasoning_effort",
+          "response_format",
+          "seed",
+          "structured_outputs",
+          "tool_choice",
+          "tools"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-09-18T08:15:47Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "openai/gpt-5.6-luna-pro",
+        "last_seen": "2026-09-18T08:15:47Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "openai/gpt-5.6-luna-pro:batch",
+      "model_slug": "openai/gpt-5.6-luna-pro:batch",
+      "provider_id": "openai",
+      "provider_name": "OpenAI",
+      "endpoint_id": "OpenAI | openai/gpt-5.6-luna-pro-20260709:batch",
+      "identity_key": "openai/gpt-5.6-luna-pro:batch:openai:OpenAI | openai/gpt-5.6-luna-pro-20260709:batch",
+      "context_tokens": 1050000,
+      "pricing": {
+        "input_per_million": 0.09999999999999999,
+        "output_per_million": 0.6,
+        "raw": {
+          "prompt": "0.0000001",
+          "completion": "0.0000006",
+          "web_search": "0.01",
+          "input_cache_read": "0.00000001",
+          "discount": 0,
+          "overrides": [
+            {
+              "min_prompt_tokens": 272000,
+              "prompt": "0.0000002",
+              "completion": "0.0000009",
+              "input_cache_read": "0.00000002"
+            }
+          ]
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": null,
+        "uptime_30m": null,
+        "uptime_1d": null
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "include_reasoning",
+          "max_tokens",
+          "reasoning",
+          "reasoning_effort",
+          "response_format",
+          "seed",
+          "structured_outputs",
+          "tool_choice",
+          "tools"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-09-18T08:15:47Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "openai/gpt-5.6-luna-pro:batch",
+        "last_seen": "2026-09-18T08:15:47Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "openai/gpt-5.6-luna:batch",
+      "model_slug": "openai/gpt-5.6-luna:batch",
+      "provider_id": "openai",
+      "provider_name": "OpenAI",
+      "endpoint_id": "OpenAI | openai/gpt-5.6-luna-20260709:batch",
+      "identity_key": "openai/gpt-5.6-luna:batch:openai:OpenAI | openai/gpt-5.6-luna-20260709:batch",
+      "context_tokens": 1050000,
+      "pricing": {
+        "input_per_million": 0.09999999999999999,
+        "output_per_million": 0.6,
+        "raw": {
+          "prompt": "0.0000001",
+          "completion": "0.0000006",
+          "web_search": "0.01",
+          "input_cache_read": "0.00000001",
+          "discount": 0,
+          "overrides": [
+            {
+              "min_prompt_tokens": 272000,
+              "prompt": "0.0000002",
+              "completion": "0.0000009",
+              "input_cache_read": "0.00000002"
+            }
+          ]
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": null,
+        "uptime_30m": null,
+        "uptime_1d": null
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "include_reasoning",
+          "max_tokens",
+          "reasoning",
+          "reasoning_effort",
+          "response_format",
+          "seed",
+          "structured_outputs",
+          "tool_choice",
+          "tools"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-09-18T08:15:47Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "openai/gpt-5.6-luna:batch",
+        "last_seen": "2026-09-18T08:15:47Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "openai/gpt-5.6-sol",
+      "model_slug": "openai/gpt-5.6-sol",
+      "provider_id": "amazon-bedrock/us-east-1",
+      "provider_name": "Amazon Bedrock",
+      "endpoint_id": "Amazon Bedrock | openai/gpt-5.6-sol-20260709",
+      "identity_key": "openai/gpt-5.6-sol:amazon-bedrock/us-east-1:Amazon Bedrock | openai/gpt-5.6-sol-20260709",
+      "context_tokens": 1050000,
+      "pricing": {
+        "input_per_million": 4.4,
+        "output_per_million": 22.0,
+        "raw": {
+          "prompt": "0.0000044",
+          "completion": "0.000022",
+          "web_search": "0.01",
+          "input_cache_read": "0.00000044",
+          "input_cache_write": "0.0000055",
+          "discount": 0,
+          "overrides": [
+            {
+              "min_prompt_tokens": 272000,
+              "prompt": "0.0000088",
+              "completion": "0.000033",
+              "input_cache_read": "0.00000088",
+              "input_cache_write": "0.000011"
+            }
+          ]
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": null,
+        "uptime_30m": 99.66101694915255,
+        "uptime_1d": 99.9753937007874
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "include_reasoning",
+          "max_tokens",
+          "reasoning",
+          "reasoning_effort",
+          "tool_choice",
+          "tools"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-09-18T08:15:47Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "openai/gpt-5.6-sol",
+        "last_seen": "2026-09-18T08:15:47Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "openai/gpt-5.6-sol",
+      "model_slug": "openai/gpt-5.6-sol",
+      "provider_id": "azure",
+      "provider_name": "Azure",
+      "endpoint_id": "Azure | openai/gpt-5.6-sol-20260709",
+      "identity_key": "openai/gpt-5.6-sol:azure:Azure | openai/gpt-5.6-sol-20260709",
+      "context_tokens": 1050000,
+      "pricing": {
+        "input_per_million": 5.0,
+        "output_per_million": 30.0,
+        "raw": {
+          "prompt": "0.000005",
+          "completion": "0.00003",
+          "web_search": "0.01",
+          "input_cache_read": "0.0000005",
+          "input_cache_write": "0.00000625",
+          "discount": 0,
+          "overrides": [
+            {
+              "min_prompt_tokens": 272000,
+              "prompt": "0.00001",
+              "completion": "0.000045",
+              "input_cache_read": "0.000001",
+              "input_cache_write": "0.0000125"
+            }
+          ]
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 100.0,
+        "uptime_30m": 100.0,
+        "uptime_1d": 99.98812731931437
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "include_reasoning",
+          "max_completion_tokens",
+          "reasoning",
+          "reasoning_effort",
+          "response_format",
+          "seed",
+          "structured_outputs",
+          "tool_choice",
+          "tools"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-09-18T08:15:47Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "openai/gpt-5.6-sol",
+        "last_seen": "2026-09-18T08:15:47Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "openai/gpt-5.6-sol",
+      "model_slug": "openai/gpt-5.6-sol",
+      "provider_id": "azure/eu",
+      "provider_name": "Azure",
+      "endpoint_id": "Azure | openai/gpt-5.6-sol-20260709",
+      "identity_key": "openai/gpt-5.6-sol:azure/eu:Azure | openai/gpt-5.6-sol-20260709",
+      "context_tokens": 1050000,
+      "pricing": {
+        "input_per_million": 5.5,
+        "output_per_million": 33.0,
+        "raw": {
+          "prompt": "0.0000055",
+          "completion": "0.000033",
+          "web_search": "0.01",
+          "input_cache_read": "0.00000055",
+          "input_cache_write": "0.000006875",
+          "discount": 0,
+          "overrides": [
+            {
+              "min_prompt_tokens": 272000,
+              "prompt": "0.000011",
+              "completion": "0.0000495",
+              "input_cache_read": "0.0000011",
+              "input_cache_write": "0.00001375"
+            }
+          ]
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": null,
+        "uptime_30m": null,
+        "uptime_1d": 100.0
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "include_reasoning",
+          "max_completion_tokens",
+          "reasoning",
+          "reasoning_effort",
+          "response_format",
+          "seed",
+          "structured_outputs",
+          "tool_choice",
+          "tools"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-09-18T08:15:47Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "openai/gpt-5.6-sol",
+        "last_seen": "2026-09-18T08:15:47Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "openai/gpt-5.6-sol",
+      "model_slug": "openai/gpt-5.6-sol",
+      "provider_id": "azure/us",
+      "provider_name": "Azure",
+      "endpoint_id": "Azure | openai/gpt-5.6-sol-20260709",
+      "identity_key": "openai/gpt-5.6-sol:azure/us:Azure | openai/gpt-5.6-sol-20260709",
+      "context_tokens": 1050000,
+      "pricing": {
+        "input_per_million": 5.5,
+        "output_per_million": 33.0,
+        "raw": {
+          "prompt": "0.0000055",
+          "completion": "0.000033",
+          "web_search": "0.01",
+          "input_cache_read": "0.00000055",
+          "input_cache_write": "0.000006875",
+          "discount": 0,
+          "overrides": [
+            {
+              "min_prompt_tokens": 272000,
+              "prompt": "0.000011",
+              "completion": "0.0000495",
+              "input_cache_read": "0.0000011",
+              "input_cache_write": "0.00001375"
+            }
+          ]
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": null,
+        "uptime_30m": null,
+        "uptime_1d": 100.0
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "include_reasoning",
+          "max_completion_tokens",
+          "reasoning",
+          "reasoning_effort",
+          "response_format",
+          "seed",
+          "structured_outputs",
+          "tool_choice",
+          "tools"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-09-18T08:15:47Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "openai/gpt-5.6-sol",
+        "last_seen": "2026-09-18T08:15:47Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "openai/gpt-5.6-sol",
+      "model_slug": "openai/gpt-5.6-sol",
+      "provider_id": "openai",
+      "provider_name": "OpenAI",
+      "endpoint_id": "OpenAI | openai/gpt-5.6-sol-20260709",
+      "identity_key": "openai/gpt-5.6-sol:openai:OpenAI | openai/gpt-5.6-sol-20260709",
+      "context_tokens": 1050000,
+      "pricing": {
+        "input_per_million": 2.0,
+        "output_per_million": 10.0,
+        "raw": {
+          "prompt": "0.000002",
+          "completion": "0.00001",
+          "web_search": "0.01",
+          "input_cache_read": "0.0000002",
+          "input_cache_write": "0.0000025",
+          "discount": 0.5,
+          "overrides": [
+            {
+              "min_prompt_tokens": 272000,
+              "prompt": "0.000004",
+              "completion": "0.000015",
+              "input_cache_read": "0.0000004",
+              "input_cache_write": "0.000005"
+            }
+          ]
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 100.0,
+        "uptime_30m": 99.99771046546238,
+        "uptime_1d": 99.93651680650905
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "include_reasoning",
+          "max_tokens",
+          "reasoning",
+          "reasoning_effort",
+          "response_format",
+          "seed",
+          "structured_outputs",
+          "tool_choice",
+          "tools"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-09-18T08:15:47Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "openai/gpt-5.6-sol",
+        "last_seen": "2026-09-18T08:15:47Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "openai/gpt-5.6-sol",
+      "model_slug": "openai/gpt-5.6-sol",
+      "provider_id": "openai/fast",
+      "provider_name": "OpenAI",
+      "endpoint_id": "OpenAI | openai/gpt-5.6-sol-20260709",
+      "identity_key": "openai/gpt-5.6-sol:openai/fast:OpenAI | openai/gpt-5.6-sol-20260709",
+      "context_tokens": 1050000,
+      "pricing": {
+        "input_per_million": 4.0,
+        "output_per_million": 20.0,
+        "raw": {
+          "prompt": "0.000004",
+          "completion": "0.00002",
+          "web_search": "0.01",
+          "input_cache_read": "0.0000004",
+          "input_cache_write": "0.000005",
+          "discount": 0.5,
+          "overrides": [
+            {
+              "min_prompt_tokens": 272000,
+              "prompt": "0.000008",
+              "completion": "0.00003",
+              "input_cache_read": "0.0000008",
+              "input_cache_write": "0.00001"
+            }
+          ]
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 100.0,
+        "uptime_30m": 100.0,
+        "uptime_1d": 99.93778292677695
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "include_reasoning",
+          "max_tokens",
+          "reasoning",
+          "reasoning_effort",
+          "response_format",
+          "seed",
+          "structured_outputs",
+          "tool_choice",
+          "tools"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-09-18T08:15:47Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "openai/gpt-5.6-sol",
+        "last_seen": "2026-09-18T08:15:47Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "openai/gpt-5.6-sol",
+      "model_slug": "openai/gpt-5.6-sol",
+      "provider_id": "openai/flex",
+      "provider_name": "OpenAI",
+      "endpoint_id": "OpenAI | openai/gpt-5.6-sol-20260709",
+      "identity_key": "openai/gpt-5.6-sol:openai/flex:OpenAI | openai/gpt-5.6-sol-20260709",
+      "context_tokens": 1050000,
+      "pricing": {
+        "input_per_million": 1.0,
+        "output_per_million": 5.0,
+        "raw": {
+          "prompt": "0.000001",
+          "completion": "0.000005",
+          "web_search": "0.01",
+          "input_cache_read": "0.0000001",
+          "input_cache_write": "0.00000125",
+          "discount": 0.5,
+          "overrides": [
+            {
+              "min_prompt_tokens": 272000,
+              "prompt": "0.000002",
+              "completion": "0.0000075",
+              "input_cache_read": "0.0000002",
+              "input_cache_write": "0.0000025"
+            }
+          ]
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "unavailable",
+        "uptime_5m": 28.985507246376812,
+        "uptime_30m": 33.20754716981132,
+        "uptime_1d": 82.69784807149577
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "include_reasoning",
+          "max_tokens",
+          "reasoning",
+          "reasoning_effort",
+          "response_format",
+          "seed",
+          "structured_outputs",
+          "tool_choice",
+          "tools"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-09-18T08:15:47Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "openai/gpt-5.6-sol",
+        "last_seen": "2026-09-18T08:15:47Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "openai/gpt-5.6-sol-pro",
+      "model_slug": "openai/gpt-5.6-sol-pro",
+      "provider_id": "azure",
+      "provider_name": "Azure",
+      "endpoint_id": "Azure | openai/gpt-5.6-sol-pro-20260709",
+      "identity_key": "openai/gpt-5.6-sol-pro:azure:Azure | openai/gpt-5.6-sol-pro-20260709",
+      "context_tokens": 1050000,
+      "pricing": {
+        "input_per_million": 5.0,
+        "output_per_million": 30.0,
+        "raw": {
+          "prompt": "0.000005",
+          "completion": "0.00003",
+          "web_search": "0.01",
+          "input_cache_read": "0.0000005",
+          "input_cache_write": "0.00000625",
+          "discount": 0,
+          "overrides": [
+            {
+              "min_prompt_tokens": 272000,
+              "prompt": "0.00001",
+              "completion": "0.000045",
+              "input_cache_read": "0.000001",
+              "input_cache_write": "0.0000125"
+            }
+          ]
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": null,
+        "uptime_30m": 100.0,
+        "uptime_1d": 100.0
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "include_reasoning",
+          "max_completion_tokens",
+          "reasoning",
+          "reasoning_effort",
+          "response_format",
+          "seed",
+          "structured_outputs",
+          "tool_choice",
+          "tools"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-09-18T08:15:47Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "openai/gpt-5.6-sol-pro",
+        "last_seen": "2026-09-18T08:15:47Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "openai/gpt-5.6-sol-pro",
+      "model_slug": "openai/gpt-5.6-sol-pro",
+      "provider_id": "azure/eu",
+      "provider_name": "Azure",
+      "endpoint_id": "Azure | openai/gpt-5.6-sol-pro-20260709",
+      "identity_key": "openai/gpt-5.6-sol-pro:azure/eu:Azure | openai/gpt-5.6-sol-pro-20260709",
+      "context_tokens": 1050000,
+      "pricing": {
+        "input_per_million": 5.5,
+        "output_per_million": 33.0,
+        "raw": {
+          "prompt": "0.0000055",
+          "completion": "0.000033",
+          "web_search": "0.01",
+          "input_cache_read": "0.00000055",
+          "input_cache_write": "0.000006875",
+          "discount": 0,
+          "overrides": [
+            {
+              "min_prompt_tokens": 272000,
+              "prompt": "0.000011",
+              "completion": "0.0000495",
+              "input_cache_read": "0.0000011",
+              "input_cache_write": "0.00001375"
+            }
+          ]
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": null,
+        "uptime_30m": null,
+        "uptime_1d": 100.0
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "include_reasoning",
+          "max_completion_tokens",
+          "reasoning",
+          "reasoning_effort",
+          "response_format",
+          "seed",
+          "structured_outputs",
+          "tool_choice",
+          "tools"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-09-18T08:15:47Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "openai/gpt-5.6-sol-pro",
+        "last_seen": "2026-09-18T08:15:47Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "openai/gpt-5.6-sol-pro",
+      "model_slug": "openai/gpt-5.6-sol-pro",
+      "provider_id": "openai",
+      "provider_name": "OpenAI",
+      "endpoint_id": "OpenAI | openai/gpt-5.6-sol-pro-20260709",
+      "identity_key": "openai/gpt-5.6-sol-pro:openai:OpenAI | openai/gpt-5.6-sol-pro-20260709",
+      "context_tokens": 1050000,
+      "pricing": {
+        "input_per_million": 2.0,
+        "output_per_million": 10.0,
+        "raw": {
+          "prompt": "0.000002",
+          "completion": "0.00001",
+          "web_search": "0.01",
+          "input_cache_read": "0.0000002",
+          "input_cache_write": "0.0000025",
+          "discount": 0.5,
+          "overrides": [
+            {
+              "min_prompt_tokens": 272000,
+              "prompt": "0.000004",
+              "completion": "0.000015",
+              "input_cache_read": "0.0000004",
+              "input_cache_write": "0.000005"
+            }
+          ]
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": 100.0,
+        "uptime_30m": 100.0,
+        "uptime_1d": 99.95914944851756
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "include_reasoning",
+          "max_tokens",
+          "reasoning",
+          "reasoning_effort",
+          "response_format",
+          "seed",
+          "structured_outputs",
+          "tool_choice",
+          "tools"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-09-18T08:15:47Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "openai/gpt-5.6-sol-pro",
+        "last_seen": "2026-09-18T08:15:47Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "openai/gpt-5.6-sol-pro",
+      "model_slug": "openai/gpt-5.6-sol-pro",
+      "provider_id": "openai/fast",
+      "provider_name": "OpenAI",
+      "endpoint_id": "OpenAI | openai/gpt-5.6-sol-pro-20260709",
+      "identity_key": "openai/gpt-5.6-sol-pro:openai/fast:OpenAI | openai/gpt-5.6-sol-pro-20260709",
+      "context_tokens": 1050000,
+      "pricing": {
+        "input_per_million": 4.0,
+        "output_per_million": 20.0,
+        "raw": {
+          "prompt": "0.000004",
+          "completion": "0.00002",
+          "web_search": "0.01",
+          "input_cache_read": "0.0000004",
+          "input_cache_write": "0.000005",
+          "discount": 0.5,
+          "overrides": [
+            {
+              "min_prompt_tokens": 272000,
+              "prompt": "0.000008",
+              "completion": "0.00003",
+              "input_cache_read": "0.0000008",
+              "input_cache_write": "0.00001"
+            }
+          ]
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": null,
+        "uptime_30m": null,
+        "uptime_1d": 99.93872549019608
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "include_reasoning",
+          "max_tokens",
+          "reasoning",
+          "reasoning_effort",
+          "response_format",
+          "seed",
+          "structured_outputs",
+          "tool_choice",
+          "tools"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-09-18T08:15:47Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "openai/gpt-5.6-sol-pro",
+        "last_seen": "2026-09-18T08:15:47Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "openai/gpt-5.6-sol-pro",
+      "model_slug": "openai/gpt-5.6-sol-pro",
+      "provider_id": "openai/flex",
+      "provider_name": "OpenAI",
+      "endpoint_id": "OpenAI | openai/gpt-5.6-sol-pro-20260709",
+      "identity_key": "openai/gpt-5.6-sol-pro:openai/flex:OpenAI | openai/gpt-5.6-sol-pro-20260709",
+      "context_tokens": 1050000,
+      "pricing": {
+        "input_per_million": 1.0,
+        "output_per_million": 5.0,
+        "raw": {
+          "prompt": "0.000001",
+          "completion": "0.000005",
+          "web_search": "0.01",
+          "input_cache_read": "0.0000001",
+          "input_cache_write": "0.00000125",
+          "discount": 0.5,
+          "overrides": [
+            {
+              "min_prompt_tokens": 272000,
+              "prompt": "0.000002",
+              "completion": "0.0000075",
+              "input_cache_read": "0.0000002",
+              "input_cache_write": "0.0000025"
+            }
+          ]
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": null,
+        "uptime_30m": null,
+        "uptime_1d": 50.352112676056336
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "include_reasoning",
+          "max_tokens",
+          "reasoning",
+          "reasoning_effort",
+          "response_format",
+          "seed",
+          "structured_outputs",
+          "tool_choice",
+          "tools"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-09-18T08:15:47Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "openai/gpt-5.6-sol-pro",
+        "last_seen": "2026-09-18T08:15:47Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "openai/gpt-5.6-sol-pro:batch",
+      "model_slug": "openai/gpt-5.6-sol-pro:batch",
+      "provider_id": "openai",
+      "provider_name": "OpenAI",
+      "endpoint_id": "OpenAI | openai/gpt-5.6-sol-pro-20260709:batch",
+      "identity_key": "openai/gpt-5.6-sol-pro:batch:openai:OpenAI | openai/gpt-5.6-sol-pro-20260709:batch",
+      "context_tokens": 1050000,
+      "pricing": {
+        "input_per_million": 1.0,
+        "output_per_million": 5.0,
+        "raw": {
+          "prompt": "0.000001",
+          "completion": "0.000005",
+          "web_search": "0.01",
+          "input_cache_read": "0.0000001",
+          "input_cache_write": "0.00000125",
+          "discount": 0.5,
+          "overrides": [
+            {
+              "min_prompt_tokens": 272000,
+              "prompt": "0.000002",
+              "completion": "0.0000075",
+              "input_cache_read": "0.0000002",
+              "input_cache_write": "0.0000025"
+            }
+          ]
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": null,
+        "uptime_30m": null,
+        "uptime_1d": null
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "include_reasoning",
+          "max_tokens",
+          "reasoning",
+          "reasoning_effort",
+          "response_format",
+          "seed",
+          "structured_outputs",
+          "tool_choice",
+          "tools"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-09-18T08:15:47Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "openai/gpt-5.6-sol-pro:batch",
+        "last_seen": "2026-09-18T08:15:47Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
+      "model_id": "openai/gpt-5.6-sol:batch",
+      "model_slug": "openai/gpt-5.6-sol:batch",
+      "provider_id": "openai",
+      "provider_name": "OpenAI",
+      "endpoint_id": "OpenAI | openai/gpt-5.6-sol-20260709:batch",
+      "identity_key": "openai/gpt-5.6-sol:batch:openai:OpenAI | openai/gpt-5.6-sol-20260709:batch",
+      "context_tokens": 1050000,
+      "pricing": {
+        "input_per_million": 1.0,
+        "output_per_million": 5.0,
+        "raw": {
+          "prompt": "0.000001",
+          "completion": "0.000005",
+          "web_search": "0.01",
+          "input_cache_read": "0.0000001",
+          "input_cache_write": "0.00000125",
+          "discount": 0.5,
+          "overrides": [
+            {
+              "min_prompt_tokens": 272000,
+              "prompt": "0.000002",
+              "completion": "0.0000075",
+              "input_cache_read": "0.0000002",
+              "input_cache_write": "0.0000025"
+            }
+          ]
+        }
+      },
+      "performance": {
+        "latency_seconds": null,
+        "throughput_tps": null
+      },
+      "availability": {
+        "status": "available",
+        "uptime_5m": null,
+        "uptime_30m": null,
+        "uptime_1d": null
+      },
+      "quantization": "unknown",
+      "capabilities": {
+        "supported_parameters": [
+          "include_reasoning",
+          "max_tokens",
+          "reasoning",
+          "reasoning_effort",
+          "response_format",
+          "seed",
+          "structured_outputs",
+          "tool_choice",
+          "tools"
+        ]
+      },
+      "privacy": {},
+      "provenance": {
+        "source": "openrouter",
+        "fetched_at": "2026-09-18T08:15:47Z",
+        "source_authority": "openrouter",
+        "raw_endpoint": "openai/gpt-5.6-sol:batch",
+        "last_seen": "2026-09-18T08:15:47Z"
+      }
+    },
+    {
+      "observation_type": "provider_endpoint",
       "model_id": "openai/gpt-oss-120b",
       "model_slug": "openai/gpt-oss-120b",
       "provider_id": "akashml/bf16",
@@ -2316,8 +6358,8 @@
       "availability": {
         "status": "available",
         "uptime_5m": 100.0,
-        "uptime_30m": 99.92982745810286,
-        "uptime_1d": 99.44617921260644
+        "uptime_30m": 99.9396291504959,
+        "uptime_1d": 99.44533074846692
       },
       "quantization": "bf16",
       "capabilities": {
@@ -2345,10 +6387,10 @@
       "privacy": {},
       "provenance": {
         "source": "openrouter",
-        "fetched_at": "2026-09-18T07:58:15Z",
+        "fetched_at": "2026-09-18T08:15:47Z",
         "source_authority": "openrouter",
         "raw_endpoint": "openai/gpt-oss-120b",
-        "last_seen": "2026-09-18T07:58:15Z"
+        "last_seen": "2026-09-18T08:15:47Z"
       }
     },
     {
@@ -2377,7 +6419,7 @@
         "status": "available",
         "uptime_5m": 100.0,
         "uptime_30m": 100.0,
-        "uptime_1d": 97.98000946022441
+        "uptime_1d": 98.03144118330364
       },
       "quantization": "unknown",
       "capabilities": {
@@ -2395,10 +6437,10 @@
       "privacy": {},
       "provenance": {
         "source": "openrouter",
-        "fetched_at": "2026-09-18T07:58:15Z",
+        "fetched_at": "2026-09-18T08:15:47Z",
         "source_authority": "openrouter",
         "raw_endpoint": "openai/gpt-oss-120b",
-        "last_seen": "2026-09-18T07:58:15Z"
+        "last_seen": "2026-09-18T08:15:47Z"
       }
     },
     {
@@ -2445,10 +6487,10 @@
       "privacy": {},
       "provenance": {
         "source": "openrouter",
-        "fetched_at": "2026-09-18T07:58:15Z",
+        "fetched_at": "2026-09-18T08:15:47Z",
         "source_authority": "openrouter",
         "raw_endpoint": "openai/gpt-oss-120b",
-        "last_seen": "2026-09-18T07:58:15Z"
+        "last_seen": "2026-09-18T08:15:47Z"
       }
     },
     {
@@ -2477,8 +6519,8 @@
       "availability": {
         "status": "available",
         "uptime_5m": 100.0,
-        "uptime_30m": 100.0,
-        "uptime_1d": 99.97471141259075
+        "uptime_30m": 99.94775339602926,
+        "uptime_1d": 99.97393222378183
       },
       "quantization": "fp4",
       "capabilities": {
@@ -2501,10 +6543,10 @@
       "privacy": {},
       "provenance": {
         "source": "openrouter",
-        "fetched_at": "2026-09-18T07:58:15Z",
+        "fetched_at": "2026-09-18T08:15:47Z",
         "source_authority": "openrouter",
         "raw_endpoint": "openai/gpt-oss-120b",
-        "last_seen": "2026-09-18T07:58:15Z"
+        "last_seen": "2026-09-18T08:15:47Z"
       }
     },
     {
@@ -2533,8 +6575,8 @@
       "availability": {
         "status": "available",
         "uptime_5m": 100.0,
-        "uptime_30m": 99.99612177622649,
-        "uptime_1d": 99.99477831663921
+        "uptime_30m": 99.99617912272657,
+        "uptime_1d": 99.9947683143417
       },
       "quantization": "fp16",
       "capabilities": {
@@ -2561,10 +6603,10 @@
       "privacy": {},
       "provenance": {
         "source": "openrouter",
-        "fetched_at": "2026-09-18T07:58:15Z",
+        "fetched_at": "2026-09-18T08:15:47Z",
         "source_authority": "openrouter",
         "raw_endpoint": "openai/gpt-oss-120b",
-        "last_seen": "2026-09-18T07:58:15Z"
+        "last_seen": "2026-09-18T08:15:47Z"
       }
     },
     {
@@ -2592,9 +6634,9 @@
       },
       "availability": {
         "status": "available",
-        "uptime_5m": 100.0,
-        "uptime_30m": 99.9276836158192,
-        "uptime_1d": 99.91623430078315
+        "uptime_5m": 99.97979797979798,
+        "uptime_30m": 99.97439945385501,
+        "uptime_1d": 99.9189506292255
       },
       "quantization": "fp4",
       "capabilities": {
@@ -2622,10 +6664,10 @@
       "privacy": {},
       "provenance": {
         "source": "openrouter",
-        "fetched_at": "2026-09-18T07:58:15Z",
+        "fetched_at": "2026-09-18T08:15:47Z",
         "source_authority": "openrouter",
         "raw_endpoint": "openai/gpt-oss-120b",
-        "last_seen": "2026-09-18T07:58:15Z"
+        "last_seen": "2026-09-18T08:15:47Z"
       }
     },
     {
@@ -2653,9 +6695,9 @@
       },
       "availability": {
         "status": "available",
-        "uptime_5m": 96.24765478424015,
-        "uptime_30m": 98.13570344678084,
-        "uptime_1d": 99.08416978285115
+        "uptime_5m": 98.79725085910653,
+        "uptime_30m": 97.23293263778635,
+        "uptime_1d": 99.06778203562185
       },
       "quantization": "bf16",
       "capabilities": {
@@ -2683,10 +6725,10 @@
       "privacy": {},
       "provenance": {
         "source": "openrouter",
-        "fetched_at": "2026-09-18T07:58:15Z",
+        "fetched_at": "2026-09-18T08:15:47Z",
         "source_authority": "openrouter",
         "raw_endpoint": "openai/gpt-oss-120b",
-        "last_seen": "2026-09-18T07:58:15Z"
+        "last_seen": "2026-09-18T08:15:47Z"
       }
     },
     {
@@ -2714,8 +6756,8 @@
       "availability": {
         "status": "available",
         "uptime_5m": 100.0,
-        "uptime_30m": 100.0,
-        "uptime_1d": 98.41695413315647
+        "uptime_30m": 99.94094322112545,
+        "uptime_1d": 98.41606075232154
       },
       "quantization": "bf16",
       "capabilities": {
@@ -2743,10 +6785,10 @@
       "privacy": {},
       "provenance": {
         "source": "openrouter",
-        "fetched_at": "2026-09-18T07:58:15Z",
+        "fetched_at": "2026-09-18T08:15:47Z",
         "source_authority": "openrouter",
         "raw_endpoint": "openai/gpt-oss-120b",
-        "last_seen": "2026-09-18T07:58:15Z"
+        "last_seen": "2026-09-18T08:15:47Z"
       }
     },
     {
@@ -2774,8 +6816,8 @@
       "availability": {
         "status": "available",
         "uptime_5m": null,
-        "uptime_30m": 99.35483870967742,
-        "uptime_1d": 64.31790174547997
+        "uptime_30m": 100.0,
+        "uptime_1d": 64.33522716825712
       },
       "quantization": "fp8",
       "capabilities": {
@@ -2802,10 +6844,10 @@
       "privacy": {},
       "provenance": {
         "source": "openrouter",
-        "fetched_at": "2026-09-18T07:58:15Z",
+        "fetched_at": "2026-09-18T08:15:47Z",
         "source_authority": "openrouter",
         "raw_endpoint": "openai/gpt-oss-120b",
-        "last_seen": "2026-09-18T07:58:15Z"
+        "last_seen": "2026-09-18T08:15:47Z"
       }
     },
     {
@@ -2834,7 +6876,7 @@
         "status": "available",
         "uptime_5m": 100.0,
         "uptime_30m": 100.0,
-        "uptime_1d": 99.9848601629597
+        "uptime_1d": 99.98487255124424
       },
       "quantization": "bf16",
       "capabilities": {
@@ -2862,10 +6904,10 @@
       "privacy": {},
       "provenance": {
         "source": "openrouter",
-        "fetched_at": "2026-09-18T07:58:15Z",
+        "fetched_at": "2026-09-18T08:15:47Z",
         "source_authority": "openrouter",
         "raw_endpoint": "openai/gpt-oss-120b",
-        "last_seen": "2026-09-18T07:58:15Z"
+        "last_seen": "2026-09-18T08:15:47Z"
       }
     },
     {
@@ -2892,9 +6934,9 @@
       },
       "availability": {
         "status": "available",
-        "uptime_5m": 99.61715160796325,
-        "uptime_30m": 99.71647962197284,
-        "uptime_1d": 99.81690544377373
+        "uptime_5m": 100.0,
+        "uptime_30m": 99.79641175722101,
+        "uptime_1d": 99.81784569879221
       },
       "quantization": "bf16",
       "capabilities": {
@@ -2921,10 +6963,10 @@
       "privacy": {},
       "provenance": {
         "source": "openrouter",
-        "fetched_at": "2026-09-18T07:58:15Z",
+        "fetched_at": "2026-09-18T08:15:47Z",
         "source_authority": "openrouter",
         "raw_endpoint": "openai/gpt-oss-120b",
-        "last_seen": "2026-09-18T07:58:15Z"
+        "last_seen": "2026-09-18T08:15:47Z"
       }
     },
     {
@@ -2953,8 +6995,8 @@
       "availability": {
         "status": "available",
         "uptime_5m": 100.0,
-        "uptime_30m": 99.97348183505702,
-        "uptime_1d": 99.98367340739784
+        "uptime_30m": 100.0,
+        "uptime_1d": 99.98366019280972
       },
       "quantization": "unknown",
       "capabilities": {
@@ -2972,10 +7014,10 @@
       "privacy": {},
       "provenance": {
         "source": "openrouter",
-        "fetched_at": "2026-09-18T07:58:15Z",
+        "fetched_at": "2026-09-18T08:15:47Z",
         "source_authority": "openrouter",
         "raw_endpoint": "openai/gpt-oss-120b",
-        "last_seen": "2026-09-18T07:58:15Z"
+        "last_seen": "2026-09-18T08:15:47Z"
       }
     },
     {
@@ -3002,9 +7044,9 @@
       },
       "availability": {
         "status": "available",
-        "uptime_5m": 96.68081821690467,
-        "uptime_30m": 96.93045299239502,
-        "uptime_1d": 95.18847045805032
+        "uptime_5m": 96.84210526315789,
+        "uptime_30m": 96.54606263301916,
+        "uptime_1d": 95.15641548660416
       },
       "quantization": "unknown",
       "capabilities": {
@@ -3025,10 +7067,10 @@
       "privacy": {},
       "provenance": {
         "source": "openrouter",
-        "fetched_at": "2026-09-18T07:58:15Z",
+        "fetched_at": "2026-09-18T08:15:47Z",
         "source_authority": "openrouter",
         "raw_endpoint": "openai/gpt-oss-120b",
-        "last_seen": "2026-09-18T07:58:15Z"
+        "last_seen": "2026-09-18T08:15:47Z"
       }
     },
     {
@@ -3056,9 +7098,9 @@
       },
       "availability": {
         "status": "available",
-        "uptime_5m": 100.0,
-        "uptime_30m": 99.98224747026453,
-        "uptime_1d": 99.97776115480258
+        "uptime_5m": 99.97449304935596,
+        "uptime_30m": 99.97327060836095,
+        "uptime_1d": 99.97752754881739
       },
       "quantization": "unknown",
       "capabilities": {
@@ -3080,10 +7122,10 @@
       "privacy": {},
       "provenance": {
         "source": "openrouter",
-        "fetched_at": "2026-09-18T07:58:15Z",
+        "fetched_at": "2026-09-18T08:15:47Z",
         "source_authority": "openrouter",
         "raw_endpoint": "openai/gpt-oss-120b",
-        "last_seen": "2026-09-18T07:58:15Z"
+        "last_seen": "2026-09-18T08:15:47Z"
       }
     },
     {
@@ -3111,8 +7153,8 @@
       "availability": {
         "status": "available",
         "uptime_5m": 100.0,
-        "uptime_30m": 99.96481351161154,
-        "uptime_1d": 99.282222519033
+        "uptime_30m": 99.95943204868153,
+        "uptime_1d": 99.28152355496158
       },
       "quantization": "fp8",
       "capabilities": {
@@ -3143,10 +7185,10 @@
       "privacy": {},
       "provenance": {
         "source": "openrouter",
-        "fetched_at": "2026-09-18T07:58:15Z",
+        "fetched_at": "2026-09-18T08:15:47Z",
         "source_authority": "openrouter",
         "raw_endpoint": "openai/gpt-oss-120b",
-        "last_seen": "2026-09-18T07:58:15Z"
+        "last_seen": "2026-09-18T08:15:47Z"
       }
     },
     {
@@ -3173,9 +7215,9 @@
       },
       "availability": {
         "status": "unavailable",
-        "uptime_5m": 85.96491228070175,
-        "uptime_30m": 89.47368421052632,
-        "uptime_1d": 91.26381411164635
+        "uptime_5m": 90.0,
+        "uptime_30m": 85.22427440633246,
+        "uptime_1d": 91.23647078823596
       },
       "quantization": "unknown",
       "capabilities": {
@@ -3199,10 +7241,10 @@
       "privacy": {},
       "provenance": {
         "source": "openrouter",
-        "fetched_at": "2026-09-18T07:58:15Z",
+        "fetched_at": "2026-09-18T08:15:47Z",
         "source_authority": "openrouter",
         "raw_endpoint": "openai/gpt-oss-120b",
-        "last_seen": "2026-09-18T07:58:15Z"
+        "last_seen": "2026-09-18T08:15:47Z"
       }
     },
     {
@@ -3230,8 +7272,8 @@
       "availability": {
         "status": "available",
         "uptime_5m": 100.0,
-        "uptime_30m": 97.28915662650603,
-        "uptime_1d": 99.48209269662921
+        "uptime_30m": 97.49498997995993,
+        "uptime_1d": 99.47910616290362
       },
       "quantization": "fp4",
       "capabilities": {
@@ -3258,10 +7300,10 @@
       "privacy": {},
       "provenance": {
         "source": "openrouter",
-        "fetched_at": "2026-09-18T07:58:15Z",
+        "fetched_at": "2026-09-18T08:15:47Z",
         "source_authority": "openrouter",
         "raw_endpoint": "openai/gpt-oss-120b",
-        "last_seen": "2026-09-18T07:58:15Z"
+        "last_seen": "2026-09-18T08:15:47Z"
       }
     },
     {
@@ -3288,9 +7330,9 @@
       },
       "availability": {
         "status": "unavailable",
-        "uptime_5m": 94.25981873111783,
-        "uptime_30m": 90.67315490673154,
-        "uptime_1d": 89.45277135097072
+        "uptime_5m": 99.63503649635037,
+        "uptime_30m": 94.94692144373673,
+        "uptime_1d": 89.38493633551543
       },
       "quantization": "fp4",
       "capabilities": {
@@ -3317,10 +7359,10 @@
       "privacy": {},
       "provenance": {
         "source": "openrouter",
-        "fetched_at": "2026-09-18T07:58:15Z",
+        "fetched_at": "2026-09-18T08:15:47Z",
         "source_authority": "openrouter",
         "raw_endpoint": "openai/gpt-oss-120b",
-        "last_seen": "2026-09-18T07:58:15Z"
+        "last_seen": "2026-09-18T08:15:47Z"
       }
     },
     {
@@ -3348,9 +7390,9 @@
       },
       "availability": {
         "status": "available",
-        "uptime_5m": 99.78260869565217,
-        "uptime_30m": 99.90864799025579,
-        "uptime_1d": 99.99362497874993
+        "uptime_5m": 100.0,
+        "uptime_30m": 99.96636394214599,
+        "uptime_1d": 99.99383515196351
       },
       "quantization": "fp4",
       "capabilities": {
@@ -3379,10 +7421,10 @@
       "privacy": {},
       "provenance": {
         "source": "openrouter",
-        "fetched_at": "2026-09-18T07:58:15Z",
+        "fetched_at": "2026-09-18T08:15:47Z",
         "source_authority": "openrouter",
         "raw_endpoint": "openai/gpt-oss-120b",
-        "last_seen": "2026-09-18T07:58:15Z"
+        "last_seen": "2026-09-18T08:15:47Z"
       }
     },
     {
@@ -3409,9 +7451,9 @@
       },
       "availability": {
         "status": "unavailable",
-        "uptime_5m": 95.0,
-        "uptime_30m": 91.08527131782945,
-        "uptime_1d": 91.44436765722183
+        "uptime_5m": null,
+        "uptime_30m": 94.5,
+        "uptime_1d": 91.3345851589123
       },
       "quantization": "unknown",
       "capabilities": {
@@ -3440,10 +7482,10 @@
       "privacy": {},
       "provenance": {
         "source": "openrouter",
-        "fetched_at": "2026-09-18T07:58:15Z",
+        "fetched_at": "2026-09-18T08:15:47Z",
         "source_authority": "openrouter",
         "raw_endpoint": "openai/gpt-oss-120b",
-        "last_seen": "2026-09-18T07:58:15Z"
+        "last_seen": "2026-09-18T08:15:47Z"
       }
     },
     {
@@ -3470,9 +7512,9 @@
       },
       "availability": {
         "status": "available",
-        "uptime_5m": 100.0,
-        "uptime_30m": 98.02139037433155,
-        "uptime_1d": 97.33400985792984
+        "uptime_5m": 99.00990099009901,
+        "uptime_30m": 99.47229551451187,
+        "uptime_1d": 97.34741105004339
       },
       "quantization": "unknown",
       "capabilities": {
@@ -3492,10 +7534,10 @@
       "privacy": {},
       "provenance": {
         "source": "openrouter",
-        "fetched_at": "2026-09-18T07:58:15Z",
+        "fetched_at": "2026-09-18T08:15:47Z",
         "source_authority": "openrouter",
         "raw_endpoint": "openai/gpt-oss-120b",
-        "last_seen": "2026-09-18T07:58:15Z"
+        "last_seen": "2026-09-18T08:15:47Z"
       }
     },
     {
@@ -3523,9 +7565,9 @@
       },
       "availability": {
         "status": "unavailable",
-        "uptime_5m": 60.526315789473685,
-        "uptime_30m": 93.90243902439023,
-        "uptime_1d": 93.07989755436147
+        "uptime_5m": 100.0,
+        "uptime_30m": 86.40350877192982,
+        "uptime_1d": 92.98581060682298
       },
       "quantization": "fp8",
       "capabilities": {
@@ -3545,10 +7587,10 @@
       "privacy": {},
       "provenance": {
         "source": "openrouter",
-        "fetched_at": "2026-09-18T07:58:15Z",
+        "fetched_at": "2026-09-18T08:15:47Z",
         "source_authority": "openrouter",
         "raw_endpoint": "openai/gpt-oss-120b",
-        "last_seen": "2026-09-18T07:58:15Z"
+        "last_seen": "2026-09-18T08:15:47Z"
       }
     },
     {
@@ -3576,8 +7618,8 @@
       "availability": {
         "status": "unavailable",
         "uptime_5m": 100.0,
-        "uptime_30m": 90.88050314465409,
-        "uptime_1d": 87.71287000903611
+        "uptime_30m": 94.13833528722158,
+        "uptime_1d": 87.6587570171597
       },
       "quantization": "unknown",
       "capabilities": {
@@ -3604,54 +7646,54 @@
       "privacy": {},
       "provenance": {
         "source": "openrouter",
-        "fetched_at": "2026-09-18T07:58:15Z",
+        "fetched_at": "2026-09-18T08:15:47Z",
         "source_authority": "openrouter",
         "raw_endpoint": "openai/gpt-oss-120b",
-        "last_seen": "2026-09-18T07:58:15Z"
+        "last_seen": "2026-09-18T08:15:47Z"
       }
     }
   ],
   "coverage": {
     "catalog_models": 445,
-    "models_with_observations": 25,
-    "proportion": 0.0562,
-    "fresh_observations": 65,
-    "retained_observations": 0,
+    "models_with_observations": 49,
+    "proportion": 0.1101,
+    "fresh_observations": 91,
+    "retained_observations": 42,
     "retention_days": 14
   },
   "selection": {
-    "cursor_before": 222,
-    "cursor_after": 246,
+    "cursor_before": 246,
+    "cursor_after": 270,
     "selected_model_ids": [
       "openai/gpt-oss-120b",
-      "openai/gpt-4o-2024-08-06",
-      "openai/gpt-4o-2024-11-20",
-      "openai/gpt-4o-mini",
-      "openai/gpt-4o-mini-2024-07-18",
-      "openai/gpt-4o-mini:batch",
-      "openai/gpt-4o:batch",
-      "openai/gpt-5",
-      "openai/gpt-5-image",
-      "openai/gpt-5-image-mini",
-      "openai/gpt-5-mini",
-      "openai/gpt-5-mini:batch",
-      "openai/gpt-5-nano",
-      "openai/gpt-5-nano:batch",
-      "openai/gpt-5-pro",
-      "openai/gpt-5-pro:batch",
-      "openai/gpt-5.1",
-      "openai/gpt-5.1-codex",
-      "openai/gpt-5.1-codex-max",
-      "openai/gpt-5.1-codex-mini",
-      "openai/gpt-5.1:batch",
-      "openai/gpt-5.2",
-      "openai/gpt-5.2-chat",
-      "openai/gpt-5.2-codex",
-      "openai/gpt-5.2-pro"
+      "openai/gpt-5.2-pro:batch",
+      "openai/gpt-5.2:batch",
+      "openai/gpt-5.3-codex",
+      "openai/gpt-5.4",
+      "openai/gpt-5.4-image-2",
+      "openai/gpt-5.4-mini",
+      "openai/gpt-5.4-mini:batch",
+      "openai/gpt-5.4-nano",
+      "openai/gpt-5.4-nano:batch",
+      "openai/gpt-5.4-pro",
+      "openai/gpt-5.4-pro:batch",
+      "openai/gpt-5.4:batch",
+      "openai/gpt-5.5",
+      "openai/gpt-5.5-pro",
+      "openai/gpt-5.5-pro:batch",
+      "openai/gpt-5.5:batch",
+      "openai/gpt-5.6-luna",
+      "openai/gpt-5.6-luna-pro",
+      "openai/gpt-5.6-luna-pro:batch",
+      "openai/gpt-5.6-luna:batch",
+      "openai/gpt-5.6-sol",
+      "openai/gpt-5.6-sol-pro",
+      "openai/gpt-5.6-sol-pro:batch",
+      "openai/gpt-5.6-sol:batch"
     ]
   },
   "next_state": {
-    "cursor": 246,
+    "cursor": 270,
     "priority_ids": [
       "openai/gpt-oss-120b"
     ]
