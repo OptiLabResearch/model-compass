@@ -4,6 +4,7 @@ from __future__ import annotations
 import json
 import sys
 import tempfile
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
 REPO = Path(__file__).resolve().parents[3]
@@ -16,6 +17,13 @@ try:
     from _runner import run_tests  # noqa: E402
 except ModuleNotFoundError:  # pytest imports this module from the repository root
     from scripts.aa.tests._runner import run_tests  # noqa: E402
+
+
+def _fixture_timestamp(days_ago: int, *, naive: bool = False) -> str:
+    value = (datetime.now(timezone.utc) - timedelta(days=days_ago)).replace(microsecond=0)
+    if naive:
+        return value.replace(tzinfo=None).isoformat()
+    return value.isoformat().replace("+00:00", "Z")
 
 
 def model(slug, creator, score, cost, speed, *, context=128000,
@@ -36,7 +44,7 @@ def model(slug, creator, score, cost, speed, *, context=128000,
                          "median_e2e_500tok_seconds": None,
                          "percentiles": None, "by_prompt_length": []},
         "hosts": [{"name": provider, "slug": provider}],
-        "provenance": {"fresh": fresh, "fetched_at": "2026-08-22T00:00:00Z",
+        "provenance": {"fresh": fresh, "fetched_at": _fixture_timestamp(1),
                        "sources": ["fixture"]},
     })
     return row
@@ -219,9 +227,9 @@ def test_marginal_cost_equal_scores_use_stable_slug_order():
 
 def test_freshness_is_fresh_stale_or_unknown_not_always_true():
     fresh = model("fresh", "F", 90, 1, 100)
-    fresh["provenance"]["fetched_at"] = "2026-08-23T00:00:00Z"
+    fresh["provenance"]["fetched_at"] = _fixture_timestamp(1)
     stale = model("stale", "S", 89, 1, 100)
-    stale["provenance"]["fetched_at"] = "2026-07-01T00:00:00Z"
+    stale["provenance"]["fetched_at"] = _fixture_timestamp(30)
     unknown = model("unknown", "U", 88, 1, 100)
     unknown["provenance"].pop("fetched_at")
     rows = engine()
@@ -235,14 +243,14 @@ def test_freshness_is_fresh_stale_or_unknown_not_always_true():
 
 def test_naive_timestamp_is_interpreted_as_utc():
     row = model("naive", "N", 87, 1, 100)
-    row["provenance"]["fetched_at"] = "2026-08-23T00:00:00"
+    row["provenance"]["fetched_at"] = _fixture_timestamp(1, naive=True)
     result = DecisionEngine([row]).recommend("premium")
     assert result["recommendations"][0]["explanation"]["fresh"] == "fresh"
 
 
 def test_stale_complete_evidence_is_not_high_confidence():
     row = model("stale-complete", "S", 87, 1, 100)
-    row["provenance"].update({"fetched_at": "2026-07-01T00:00:00Z", "sources": ["rsc", "api"]})
+    row["provenance"].update({"fetched_at": _fixture_timestamp(30), "sources": ["rsc", "api"]})
     result = DecisionEngine([row]).recommend("premium")
     assert result["recommendations"][0]["explanation"]["confidence"]["level"] != "high"
 
