@@ -1,10 +1,10 @@
 {
   "version": 2,
   "phase": 3,
-  "generated_at": "2026-09-18T08:15:50Z",
+  "generated_at": "2026-09-20T21:07:48Z",
   "sources": {
-    "aa_models": 656,
-    "openrouter_observations": 133,
+    "aa_models": 657,
+    "openrouter_observations": 181,
     "endpoint_accuracy_observations": 16,
     "endpoint_accuracy_models": 1,
     "endpoint_accuracy_index_versions": [
@@ -14,44 +14,47 @@
     "coding_agent_benchmark_version": "1.5"
   },
   "identity": {
-    "aa_model_count": 656,
-    "openrouter_model_count": 49,
-    "openrouter_endpoint_count": 133,
+    "aa_model_count": 657,
+    "openrouter_model_count": 73,
+    "openrouter_endpoint_count": 181,
     "aa_endpoint_count": 16,
     "aa_provider_count": 15,
-    "openrouter_provider_count": 22,
+    "openrouter_provider_count": 23,
     "unique_unresolved_model_ids": [
       "openai/gpt-5.2-codex",
       "openai/gpt-5.4-pro",
       "openai/gpt-5.6-luna",
-      "openai/gpt-5.6-sol"
+      "openai/gpt-5.6-sol",
+      "openai/gpt-6-astra",
+      "openai/o3-mini-high",
+      "openai/o4-mini-high"
     ],
     "model_mappings": {
       "verified": 0,
       "manual": 1,
-      "candidate": 7
+      "candidate": 12
     },
     "model_mapping_methods": {
       "manual_alias": 1,
-      "source_metadata_exact": 7
+      "source_metadata_exact": 12
     },
     "model_ambiguity_methods": {
-      "source_metadata_exact": 9,
-      "unclassified": 28
+      "source_metadata_exact": 11,
+      "unclassified": 42
     },
     "model_resolution_methods": {
       "manual_alias": 1,
-      "source_metadata_exact": 16,
-      "unclassified": 28
+      "source_metadata_exact": 23,
+      "unclassified": 42
     },
     "endpoint_mappings": {
       "verified": 0,
       "manual": 2,
       "candidate": 0
     },
-    "unresolved_models": 4,
-    "unresolved_endpoints": 131,
-    "ambiguous": 37,
+    "unresolved_models": 7,
+    "unresolved_endpoints": 179,
+    "ambiguous": 53,
     "conflict": 0
   },
   "gate_d": {

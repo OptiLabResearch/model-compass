@@ -1,67 +1,67 @@
 {
-  "generated_at": "2026-09-18T08:15:47Z",
+  "generated_at": "2026-09-20T21:07:44Z",
   "sources": {
     "rsc": {
       "healthy": true,
-      "records": 435,
-      "fetched_at": "2026-09-18T08:15:41Z",
+      "records": 436,
+      "fetched_at": "2026-09-20T21:07:39Z",
       "errors": []
     },
     "official_api": {
       "healthy": true,
-      "records": 652,
-      "fetched_at": "2026-09-18T08:15:41Z",
+      "records": 653,
+      "fetched_at": "2026-09-20T21:07:39Z",
       "errors": []
     },
     "snapshot": {
       "healthy": true,
       "records": 570,
-      "fetched_at": "2026-09-18T08:15:42Z",
+      "fetched_at": "2026-09-20T21:07:40Z",
       "errors": []
     }
   },
   "field_coverage": {
-    "intelligence_index": 647,
+    "intelligence_index": 648,
     "coding_index": 262,
     "math_index": 0,
-    "agentic_index": 210,
-    "omniscience_index": 520,
-    "context_tokens": 645,
+    "agentic_index": 205,
+    "omniscience_index": 521,
+    "context_tokens": 646,
     "parameters_billions": 338,
-    "is_reasoning": 435,
-    "is_open_weights": 645,
+    "is_reasoning": 436,
+    "is_open_weights": 646,
     "license": 328,
-    "size_class": 591,
-    "released": 656,
-    "creator": 656
+    "size_class": 592,
+    "released": 657,
+    "creator": 657
   },
   "benchmark_coverage": {
     "aime": 0,
     "aime25": 182,
     "apex_agents": 32,
-    "critpt": 527,
-    "gdpval": 236,
+    "critpt": 528,
+    "gdpval": 227,
     "gpqa": 610,
     "gpqa_diamond": 0,
-    "hle": 610,
+    "hle": 611,
     "ifbench": 457,
     "it_bench_sre": 28,
-    "lcr": 542,
+    "lcr": 543,
     "livecodebench": 207,
     "math_500": 0,
     "mmlu_pro": 0,
-    "mmmu_pro": 259,
-    "omniscience": 400,
-    "omniscience_accuracy": 520,
+    "mmmu_pro": 260,
+    "omniscience": 401,
+    "omniscience_accuracy": 521,
     "omniscience_hallucination_rate": 0,
-    "omniscience_non_halluc": 524,
-    "scicode": 602,
+    "omniscience_non_halluc": 525,
+    "scicode": 603,
     "tau2": 447,
     "tau_banking": 195,
     "terminalbench_hard": 439,
     "terminalbench_v21": 0
   },
-  "total_models": 656,
+  "total_models": 657,
   "parser_versions": {
     "rsc": "0.2.0",
     "official_api": "0.1.0",
@@ -71,7 +71,7 @@
   "stale": false,
   "freshness": {
     "stale": false,
-    "generated_at": "2026-09-18T08:15:47Z",
+    "generated_at": "2026-09-20T21:07:44Z",
     "cached_sources": [],
     "live_sources": [
       "rsc",
@@ -79,9 +79,9 @@
       "snapshot"
     ],
     "source_fetched_at": {
-      "rsc": "2026-09-18T08:15:41Z",
-      "official_api": "2026-09-18T08:15:41Z",
-      "snapshot": "2026-09-18T08:15:42Z"
+      "rsc": "2026-09-20T21:07:39Z",
+      "official_api": "2026-09-20T21:07:39Z",
+      "snapshot": "2026-09-20T21:07:40Z"
     }
   }
 }

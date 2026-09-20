@@ -1,7 +1,7 @@
 {
   "version": 1,
   "parser_version": "0.2.0",
-  "generated_at": "2026-09-18T08:15:50Z",
+  "generated_at": "2026-09-20T21:07:48Z",
   "source": "artificial_analysis_coding_agents",
   "source_url": "https://artificialanalysis.ai/agents/coding-agents",
   "methodology": "public JSON-LD metric views merged by source-declared variant label",
@@ -36,7 +36,7 @@
       "cache_hit_rate": null,
       "provenance": {
         "source": "artificial_analysis_coding_agents",
-        "fetched_at": "2026-09-18T08:15:50Z",
+        "fetched_at": "2026-09-20T21:07:48Z",
         "source_authority": "artificial_analysis_coding_agents",
         "parser_version": "0.2.0"
       }
@@ -63,7 +63,7 @@
       "cache_hit_rate": null,
       "provenance": {
         "source": "artificial_analysis_coding_agents",
-        "fetched_at": "2026-09-18T08:15:50Z",
+        "fetched_at": "2026-09-20T21:07:48Z",
         "source_authority": "artificial_analysis_coding_agents",
         "parser_version": "0.2.0"
       }
@@ -90,7 +90,7 @@
       "cache_hit_rate": null,
       "provenance": {
         "source": "artificial_analysis_coding_agents",
-        "fetched_at": "2026-09-18T08:15:50Z",
+        "fetched_at": "2026-09-20T21:07:48Z",
         "source_authority": "artificial_analysis_coding_agents",
         "parser_version": "0.2.0"
       }
@@ -117,7 +117,7 @@
       "cache_hit_rate": null,
       "provenance": {
         "source": "artificial_analysis_coding_agents",
-        "fetched_at": "2026-09-18T08:15:50Z",
+        "fetched_at": "2026-09-20T21:07:48Z",
         "source_authority": "artificial_analysis_coding_agents",
         "parser_version": "0.2.0"
       }
@@ -144,7 +144,7 @@
       "cache_hit_rate": null,
       "provenance": {
         "source": "artificial_analysis_coding_agents",
-        "fetched_at": "2026-09-18T08:15:50Z",
+        "fetched_at": "2026-09-20T21:07:48Z",
         "source_authority": "artificial_analysis_coding_agents",
         "parser_version": "0.2.0"
       }
@@ -171,7 +171,7 @@
       "cache_hit_rate": null,
       "provenance": {
         "source": "artificial_analysis_coding_agents",
-        "fetched_at": "2026-09-18T08:15:50Z",
+        "fetched_at": "2026-09-20T21:07:48Z",
         "source_authority": "artificial_analysis_coding_agents",
         "parser_version": "0.2.0"
       }
@@ -198,7 +198,7 @@
       "cache_hit_rate": null,
       "provenance": {
         "source": "artificial_analysis_coding_agents",
-        "fetched_at": "2026-09-18T08:15:50Z",
+        "fetched_at": "2026-09-20T21:07:48Z",
         "source_authority": "artificial_analysis_coding_agents",
         "parser_version": "0.2.0"
       }
@@ -225,7 +225,7 @@
       "cache_hit_rate": null,
       "provenance": {
         "source": "artificial_analysis_coding_agents",
-        "fetched_at": "2026-09-18T08:15:50Z",
+        "fetched_at": "2026-09-20T21:07:48Z",
         "source_authority": "artificial_analysis_coding_agents",
         "parser_version": "0.2.0"
       }
@@ -252,7 +252,7 @@
       "cache_hit_rate": null,
       "provenance": {
         "source": "artificial_analysis_coding_agents",
-        "fetched_at": "2026-09-18T08:15:50Z",
+        "fetched_at": "2026-09-20T21:07:48Z",
         "source_authority": "artificial_analysis_coding_agents",
         "parser_version": "0.2.0"
       }
@@ -279,7 +279,7 @@
       "cache_hit_rate": null,
       "provenance": {
         "source": "artificial_analysis_coding_agents",
-        "fetched_at": "2026-09-18T08:15:50Z",
+        "fetched_at": "2026-09-20T21:07:48Z",
         "source_authority": "artificial_analysis_coding_agents",
         "parser_version": "0.2.0"
       }
@@ -304,7 +304,7 @@
       "cache_hit_rate": null,
       "provenance": {
         "source": "artificial_analysis_coding_agents",
-        "fetched_at": "2026-09-18T08:15:50Z",
+        "fetched_at": "2026-09-20T21:07:48Z",
         "source_authority": "artificial_analysis_coding_agents",
         "parser_version": "0.2.0"
       }
@@ -329,7 +329,7 @@
       "cache_hit_rate": null,
       "provenance": {
         "source": "artificial_analysis_coding_agents",
-        "fetched_at": "2026-09-18T08:15:50Z",
+        "fetched_at": "2026-09-20T21:07:48Z",
         "source_authority": "artificial_analysis_coding_agents",
         "parser_version": "0.2.0"
       }
